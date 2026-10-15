@@ -7,6 +7,7 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
 
 - Home con le categorie (Forza esplosiva / massimale / resistente raggruppate sotto "Forza").
 - Tocchi una categoria e vedi **10 esercizi a caso** (523 esercizi in 10 categorie, almeno 50 ciascuna).
+- Ogni esercizio ha il **dosaggio** (ripetizioni, serie, tempo o riprese) e una **descrizione estesa** su come eseguirlo e a cosa serve.
 - **+ Altri 10** aggiunge 10 esercizi non ancora mostrati, fino a esaurire la categoria.
 - **↻ Ricarica** sostituisce la lista con 10 esercizi diversi da quelli a schermo.
 - Le liste restano salvate nel browser (localStorage): nessun database, nessun costo.

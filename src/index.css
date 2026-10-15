@@ -15,6 +15,7 @@
   --border: #dfe0e8;
   --chip: #e9e8f2;
   --chip-text: var(--thai-blue);
+  --dose-bg: var(--thai-blue);
   --flag: linear-gradient(
     to bottom,
     var(--thai-red) 0 16.66%,
@@ -41,6 +42,7 @@
     --border: #34314a;
     --chip: #2d2a4a;
     --chip-text: #d8d6f2;
+    --dose-bg: #4a4680;
   }
 }
 
@@ -134,7 +136,20 @@ button { font: inherit; color: inherit; cursor: pointer; }
   border-radius: 12px;
 }
 .exercise h3 { margin: 0 0 4px; font-size: 1rem; }
-.exercise p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.4; }
+.exercise > div { min-width: 0; }
+.exercise p { margin: 0; font-size: 0.9rem; line-height: 1.45; }
+.exercise .dose {
+  display: inline-block;
+  margin: 2px 0 8px;
+  padding: 3px 10px;
+  border-radius: 8px;
+  background: var(--dose-bg);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.exercise .summary { font-weight: 500; }
+.exercise .details { margin-top: 6px; color: var(--muted); }
 .num {
   flex: none;
   width: 28px;

@@ -158,7 +158,9 @@ function CategoryView({
               <span className="num">{i + 1}</span>
               <div>
                 <h3>{e.name}</h3>
-                <p>{e.description}</p>
+                <p className="dose">{e.dose}</p>
+                <p className="summary">{e.description}</p>
+                <p className="details">{e.details}</p>
                 {e.equipment && <span className="chip">{e.equipment}</span>}
               </div>
             </li>
