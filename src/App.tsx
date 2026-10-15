@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { categoryById, poolFor, toolById } from "./lib/catalog";
 import { DoseContext, setCurrentDoses, type CustomDoses } from "./lib/doses";
 import { DEFAULT_SETTINGS, type LessonSettings } from "./lib/lesson";
-import { availableMinutes, fitDraw, generateLesson } from "./lib/plan";
+import { availableMinutes, fitDraw } from "./lib/plan";
+import { bestLesson } from "./lib/review";
 import { useRoute, type Route } from "./lib/route";
 import { load, save } from "./lib/storage";
 import { CategoriesPage } from "./pages/CategoriesPage";
@@ -59,7 +60,7 @@ export default function App() {
     setSettings(next);
     setLists((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, drawFor(k, next)])));
     if (workout.auto && workout.ids.length) {
-      setWorkout({ ids: generateLesson(next).map((e) => e.id), auto: true });
+      setWorkout({ ids: bestLesson(next).map((e) => e.id), auto: true });
     }
   };
 
@@ -115,7 +116,7 @@ export default function App() {
       <WorkoutPage
         workout={workout}
         onChange={(ids) => setWorkout({ ids, auto: false })}
-        onGenerate={() => setWorkout({ ids: generateLesson(settings).map((e) => e.id), auto: true })}
+        onGenerate={() => setWorkout({ ids: bestLesson(settings).map((e) => e.id), auto: true })}
         {...settingsProps}
       />
     );

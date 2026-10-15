@@ -2,7 +2,7 @@
 import type { CategoryId, Exercise } from "../data/exercises";
 import { doseFor, toolById } from "./catalog";
 import type { LessonSettings } from "./lesson";
-import { availableMinutes } from "./plan";
+import { availableMinutes, generateLesson } from "./plan";
 
 export type Level = "ok" | "warn" | "bad";
 export interface ReviewItem {
@@ -124,4 +124,19 @@ export function reviewWorkout(list: readonly Exercise[], settings: LessonSetting
   const order: Record<Level, number> = { bad: 0, warn: 1, ok: 2 };
   items.sort((a, b) => order[a.level] - order[b.level]);
   return { score, verdict, items };
+}
+
+/**
+ * Lezione automatica con il voto più alto: ne genera fino a 40 e si ferma alla prima da 100
+ * (con i dosaggi personalizzati una singola estrazione potrebbe non bastare).
+ */
+export function bestLesson(settings: LessonSettings): Exercise[] {
+  let best: Exercise[] = [];
+  let bestScore = -1;
+  for (let i = 0; i < 40 && bestScore < 100; i++) {
+    const list = generateLesson(settings);
+    const score = reviewWorkout(list, settings)?.score ?? 0;
+    if (score > bestScore) [best, bestScore] = [list, score];
+  }
+  return best;
 }
