@@ -10,6 +10,7 @@ export function CategoriesPage({ workoutCount }: { workoutCount: number }) {
       <Topbar
         route="categorie"
         workoutCount={workoutCount}
+        showLogo
         title="Allenamento Muay Thai"
         subtitle="Scegli una categoria per vedere gli esercizi."
       />

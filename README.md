@@ -28,6 +28,7 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
   Con **⬇ Scarica PDF dell'allenamento** salvi la lezione completa (impostazioni, riscaldamento, esercizi con dosaggio,
   tempo e descrizione, totale) da stampare o tenere sul telefono.
 - Tutto resta salvato nel browser (localStorage): nessun database, nessun costo. Ogni dispositivo ha i suoi dati.
+- Logo del Team Petrux nella home (anche come icona dell'app sul telefono) e "‹ Categorie" per tornare indietro da ogni pagina.
 - Colori della bandiera thailandese, pensata prima per il telefono (anche tema scuro).
 
 <img src="docs/anteprima-allenamento.png" alt="Pagina Crea allenamento" width="300">

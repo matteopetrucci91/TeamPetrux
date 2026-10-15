@@ -37,6 +37,7 @@ export function WorkoutPage({
   return (
     <div className="page">
       <Topbar
+        back={{ href: hrefFor({ page: "categorie" }), label: "Categorie" }}
         route="allenamento"
         workoutCount={list.length}
         title="Crea allenamento"

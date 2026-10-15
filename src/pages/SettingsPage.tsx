@@ -1,5 +1,6 @@
 import { SettingsPanel, type SettingsProps } from "../components/Settings";
 import { Topbar } from "../components/Topbar";
+import { hrefFor } from "../lib/route";
 import { WARMUP_MIN } from "../lib/plan";
 
 export function SettingsPage({
@@ -10,6 +11,7 @@ export function SettingsPage({
   return (
     <div className="page">
       <Topbar
+        back={{ href: hrefFor({ page: "categorie" }), label: "Categorie" }}
         route="impostazioni"
         workoutCount={workoutCount}
         title="Impostazioni lezione"

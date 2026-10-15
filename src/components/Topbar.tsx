@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import logo from "../assets/logo.webp";
 import { hrefFor, type Route } from "../lib/route";
 
 const PAGES: { route: Route; label: string; icon: string }[] = [
@@ -77,6 +78,7 @@ export function Topbar({
   subtitle,
   back,
   sticky = false,
+  showLogo = false,
 }: {
   route: Route["page"];
   workoutCount: number;
@@ -85,19 +87,22 @@ export function Topbar({
   subtitle?: ReactNode;
   back?: { href: string; label: string };
   sticky?: boolean;
+  /** Logo del team grande, solo nella home. */
+  showLogo?: boolean;
 }) {
   return (
-    <header className={sticky ? "topbar sticky" : "topbar"}>
+    <header className={["topbar", sticky && "sticky", showLogo && "with-logo"].filter(Boolean).join(" ")}>
       <div className="topbar-row">
         {back ? (
           <a className="back" href={back.href}>
             ‹ {back.label}
           </a>
         ) : (
-          <span className="brand">Muay Thai</span>
+          <span className="brand">{showLogo ? "" : "Team Petrux"}</span>
         )}
         <Menu current={route} workoutCount={workoutCount} />
       </div>
+      {showLogo && <img className="team-logo" src={logo} alt="Team Petrux Muay Thai" width={132} height={132} />}
       <h1>
         {eyebrow && <span className="eyebrow">{eyebrow}</span>}
         {title}

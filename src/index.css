@@ -451,3 +451,13 @@ a.chip.link { text-decoration: none; color: var(--blue); font-weight: 600; }
 .quality li.ok .mark { background: #1f7a4d; }
 .quality li.warn .mark { background: #b7791f; }
 .quality li.bad .mark { background: var(--thai-red); }
+
+.team-logo {
+  display: block;
+  width: 132px;
+  height: 132px;
+  margin: 6px auto 10px;
+  border-radius: 50%;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+}
+.topbar.with-logo h1, .topbar.with-logo .subtitle { text-align: center; }

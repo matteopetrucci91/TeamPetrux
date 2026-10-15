@@ -22,6 +22,7 @@ export function ToolsPage({ workoutCount }: { workoutCount: number }) {
   return (
     <div className="page">
       <Topbar
+        back={{ href: hrefFor({ page: "categorie" }), label: "Categorie" }}
         route="attrezzi"
         workoutCount={workoutCount}
         title="Esercizi per attrezzo"
