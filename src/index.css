@@ -385,8 +385,11 @@ a.chip.link { text-decoration: none; color: var(--blue); font-weight: 600; }
 .dose-edit { display: flex; flex-direction: column; gap: 8px; margin: 4px 0 10px; }
 .dose-fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
 .field { display: flex; flex-direction: column; gap: 3px; font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
-.field select {
+.field select,
+.field input,
+.field textarea {
   width: 100%;
+  box-sizing: border-box;
   padding: 9px 8px;
   border-radius: 10px;
   border: 1.5px solid var(--blue);
@@ -482,4 +485,109 @@ a.chip.link { text-decoration: none; color: var(--blue); font-weight: 600; }
   border-radius: 3px;
   background: linear-gradient(var(--thai-red) 0 33%, #fff 33% 66%, var(--thai-red) 66%);
   box-shadow: inset 0 0 0 0 transparent;
+}
+
+/* Calendario lezioni (stile calendario di iPhone) */
+.calendar, .sheet, .attendance, .backup {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+.sheet { display: grid; gap: 10px; }
+.when { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 8px; }
+.when input[type=date] { padding: 8px 6px; min-width: 0; }
+.sheet h3 { margin: 0; font-size: 1rem; }
+.field textarea { font-weight: 500; resize: vertical; }
+.cal-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.cal-head h2 { flex: 1; margin: 0; font-size: 1.35rem; color: var(--red); }
+.cal-head h2 span { color: var(--text); font-weight: 500; }
+.today-btn { margin-left: 4px; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); row-gap: 2px; text-align: center; }
+.cal-wd { font-size: 0.72rem; font-weight: 700; color: var(--muted); padding-bottom: 6px; }
+.cal-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 0 2px;
+  border: 0;
+  border-top: 1px solid var(--border);
+  background: none;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+.cal-day .d {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+.cal-day.out { color: var(--muted); opacity: 0.45; }
+.cal-day.today .d { color: var(--red); font-weight: 800; }
+.cal-day.selected .d { background: var(--text); color: var(--surface); font-weight: 700; }
+.cal-day.selected.today .d { background: var(--red); color: #fff; }
+.cal-day .dots { display: flex; gap: 2px; height: 6px; }
+.cal-day .dots i { width: 5px; height: 5px; border-radius: 50%; background: var(--muted); }
+.day-title { font-size: 1.05rem; margin: 6px 2px 10px; text-transform: capitalize; }
+.events { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 8px; }
+.event {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--red);
+  color: var(--text);
+  text-decoration: none;
+}
+.event-time { display: flex; flex-direction: column; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 48px; }
+.event-time small { color: var(--muted); font-weight: 500; }
+.event-body { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.event-body small { color: var(--muted); }
+.event-body em { color: var(--red); font-style: normal; font-weight: 600; }
+.btn.wide { display: block; width: 100%; }
+.notice { margin-top: 10px; text-align: center; }
+.backup h2, .attendance h2 { margin: 0 0 6px; font-size: 1.05rem; }
+.backup-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.att-summary { margin: 0 0 12px; color: var(--muted); }
+.att-summary .warn { color: var(--red); font-weight: 600; }
+.att-summary .ok { color: #1f7a4d; font-weight: 600; }
+.people { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 10px; }
+.person { display: flex; gap: 10px; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
+.person-body { flex: 1; display: grid; gap: 10px; min-width: 0; }
+.person-fields { display: grid; grid-template-columns: 1fr 1fr 76px; gap: 8px; }
+.person-flags { display: flex; flex-wrap: wrap; gap: 8px; }
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px 7px 7px;
+  border-radius: 999px;
+  border: 1.5px solid;
+  background: transparent;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.toggle .mark { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 0.72rem; }
+.toggle.on { border-color: #1f7a4d; color: #1f7a4d; }
+.toggle.on .mark { background: #1f7a4d; }
+.toggle.off { border-color: var(--red); color: var(--red); }
+.toggle.off .mark { background: var(--red); }
+.person-actions { display: flex; align-items: center; gap: 8px; }
+.add-people { display: grid; gap: 10px; }
+.add-people .pill { justify-self: start; }
+.danger { display: flex; justify-content: center; margin: 4px 0 24px; }
+.danger .pill.remove { margin-left: 0; }
+.cta.secondary { background: var(--surface); color: var(--text); border: 1.5px solid var(--thai-blue); margin-top: 10px; }
+@media (max-width: 360px) {
+  .person-fields { grid-template-columns: 1fr 1fr; }
 }

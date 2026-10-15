@@ -22,6 +22,13 @@ export function CategoriesPage({ workoutCount }: { workoutCount: number }) {
           </span>
           <span aria-hidden="true">›</span>
         </a>
+        <a className="cta secondary" href={hrefFor({ page: "calendario" })}>
+          <span>
+            <strong>Calendario lezioni</strong>
+            <small>Orari delle lezioni e presenze</small>
+          </span>
+          <span aria-hidden="true">›</span>
+        </a>
         <section className="group">
           <h2>Categorie</h2>
           <div className="grid">

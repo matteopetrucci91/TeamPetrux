@@ -6,7 +6,9 @@ import { availableMinutes, fitDraw } from "./lib/plan";
 import { bestLesson } from "./lib/review";
 import { useRoute, type Route } from "./lib/route";
 import { load, save } from "./lib/storage";
+import { CalendarPage } from "./pages/CalendarPage";
 import { CategoriesPage } from "./pages/CategoriesPage";
+import { LessonPage } from "./pages/LessonPage";
 import { ListPage } from "./pages/ListPage";
 import { SettingsPage } from "./pages/SettingsPage";
 import { ToolsPage } from "./pages/ToolsPage";
@@ -120,6 +122,10 @@ export default function App() {
         {...settingsProps}
       />
     );
+  } else if (route.page === "calendario") {
+    page = <CalendarPage key={route.date ?? "oggi"} workoutCount={workoutCount} date={route.date} />;
+  } else if (route.page === "lezione") {
+    page = <LessonPage key={route.id} workoutCount={workoutCount} id={route.id} />;
   } else if (route.page === "impostazioni") {
     page = <SettingsPage workoutCount={workoutCount} {...settingsProps} />;
   } else {

@@ -6,6 +6,7 @@ const PAGES: { route: Route; label: string; icon: string }[] = [
   { route: { page: "categorie" }, label: "Categorie esercizi", icon: "☰" },
   { route: { page: "attrezzi" }, label: "Esercizi per attrezzo", icon: "◉" },
   { route: { page: "allenamento" }, label: "Crea allenamento", icon: "✚" },
+  { route: { page: "calendario" }, label: "Calendario lezioni", icon: "▦" },
   { route: { page: "impostazioni" }, label: "Impostazioni lezione", icon: "⏱" },
 ];
 
@@ -44,7 +45,8 @@ function Menu({ current, workoutCount }: { current: Route["page"]; workoutCount:
             const active =
               p.route.page === current ||
               (p.route.page === "categorie" && current === "categoria") ||
-              (p.route.page === "attrezzi" && current === "attrezzo");
+              (p.route.page === "attrezzi" && current === "attrezzo") ||
+              (p.route.page === "calendario" && current === "lezione");
             return (
               <a
                 key={p.route.page}
