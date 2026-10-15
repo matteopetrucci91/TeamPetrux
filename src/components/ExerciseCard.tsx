@@ -1,57 +1,115 @@
 import { useState, type ReactNode } from "react";
 import type { Exercise } from "../data/exercises";
 import { categoryById, doseFor, toolById } from "../lib/catalog";
+import {
+  AMOUNTS,
+  composeDose,
+  KINDS,
+  parseDose,
+  RESTS,
+  SETS,
+  SIDES,
+  type DoseKind,
+  type DoseParts,
+} from "../lib/doseBuilder";
 import { useDoses } from "../lib/doses";
-import type { RoundMinutes } from "../lib/lesson";
+import { estimateMinutes, type RoundMinutes } from "../lib/lesson";
 import { hrefFor } from "../lib/route";
 
-/** Dosaggio con modifica: l'allenatore può scrivere le sue ripetizioni, serie o tempi. */
+function Select({
+  label,
+  value,
+  options,
+  onChange,
+}: {
+  label: string;
+  value: string;
+  options: { value: string; label: string }[];
+  onChange: (v: string) => void;
+}) {
+  return (
+    <label className="field">
+      <span>{label}</span>
+      <select value={value} onChange={(ev) => onChange(ev.target.value)}>
+        {options.map((o) => (
+          <option key={o.value} value={o.value}>
+            {o.label}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+const opts = (list: string[], empty = "—") =>
+  list.map((v) => ({ value: v, label: v || empty }));
+
+/** Dosaggio con modifica tramite menu a tendina (serie, quantità, lati, recupero). */
 function DoseEditor({ e, round }: { e: Exercise; round: RoundMinutes }) {
   const { setDose } = useDoses();
   const { dose, minutes, custom } = doseFor(e, round);
-  const [draft, setDraft] = useState<string | null>(null);
+  const [parts, setParts] = useState<DoseParts | null>(null);
 
-  if (draft !== null) {
-    const save = () => {
-      setDose(e.id, draft);
-      setDraft(null);
-    };
+  if (parts) {
+    const update = (patch: Partial<DoseParts>) => setParts({ ...parts, ...patch });
+    const preview = composeDose(parts);
     return (
-      <form
-        className="dose-edit"
-        onSubmit={(ev) => {
-          ev.preventDefault();
-          save();
-        }}
-      >
-        <input
-          autoFocus
-          value={draft}
-          onChange={(ev) => setDraft(ev.target.value)}
-          placeholder="es. 4 × 12 ripetizioni, recupero 60 s"
-          aria-label={`Dosaggio per ${e.name}`}
-        />
+      <div className="dose-edit">
+        <div className="dose-fields">
+          <Select
+            label="Tipo"
+            value={parts.kind}
+            options={KINDS}
+            onChange={(v) => {
+              const kind = v as DoseKind;
+              update({ kind, amount: AMOUNTS[kind].includes(parts.amount) ? parts.amount : AMOUNTS[kind][kind === "riprese" ? 2 : 9] ?? AMOUNTS[kind][0] });
+            }}
+          />
+          <Select
+            label={parts.kind === "riprese" ? "Riprese" : "Serie"}
+            value={String(parts.sets)}
+            options={opts(SETS)}
+            onChange={(v) => update({ sets: Number(v) })}
+          />
+          <Select
+            label={parts.kind === "ripetizioni" ? "Ripetizioni" : parts.kind === "riprese" ? "Durata" : parts.kind === "tempo" ? "Tempo" : "Metri"}
+            value={parts.amount}
+            options={opts(AMOUNTS[parts.kind])}
+            onChange={(v) => update({ amount: v })}
+          />
+          <Select label="Lati" value={parts.side} options={opts(SIDES, "nessuno")} onChange={(v) => update({ side: v })} />
+          <Select label="Recupero" value={parts.rest} options={opts(RESTS, "nessuno")} onChange={(v) => update({ rest: v })} />
+        </div>
+        <p className="dose-preview">
+          <span className="dose">{preview}</span>
+          <span className="minutes">≈ {estimateMinutes(preview)} min</span>
+        </p>
         <div className="dose-edit-actions">
-          <button type="submit" className="pill added">
+          <button
+            className="pill added"
+            onClick={() => {
+              setDose(e.id, preview);
+              setParts(null);
+            }}
+          >
             Salva
           </button>
-          <button type="button" className="pill" onClick={() => setDraft(null)}>
+          <button className="pill" onClick={() => setParts(null)}>
             Annulla
           </button>
           {custom && (
             <button
-              type="button"
               className="pill remove"
               onClick={() => {
                 setDose(e.id, null);
-                setDraft(null);
+                setParts(null);
               }}
             >
               Ripristina originale
             </button>
           )}
         </div>
-      </form>
+      </div>
     );
   }
   return (
@@ -60,7 +118,7 @@ function DoseEditor({ e, round }: { e: Exercise; round: RoundMinutes }) {
       <span className="minutes">
         ≈ {minutes} min{custom && " · tuo dosaggio"}
       </span>
-      <button className="edit" onClick={() => setDraft(dose)} aria-label="Modifica ripetizioni">
+      <button className="edit" onClick={() => setParts(parseDose(dose))} aria-label="Modifica dosaggio">
         ✎ Modifica
       </button>
     </p>

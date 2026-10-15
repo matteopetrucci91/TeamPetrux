@@ -383,14 +383,29 @@ a.chip.link { text-decoration: none; color: var(--blue); font-weight: 600; }
   font-size: 0.8rem;
 }
 .dose-edit { display: flex; flex-direction: column; gap: 8px; margin: 4px 0 10px; }
-.dose-edit input {
+.dose-fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
+.field { display: flex; flex-direction: column; gap: 3px; font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.field select {
   width: 100%;
-  padding: 10px 12px;
+  padding: 9px 8px;
   border-radius: 10px;
-  border: 2px solid var(--blue);
+  border: 1.5px solid var(--blue);
   background: var(--bg);
   color: var(--text);
   font: inherit;
   font-size: 16px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 600;
 }
+.dose-preview { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 2px 0 0; }
 .dose-edit-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.btn.pdf {
+  display: block;
+  width: 100%;
+  margin: 16px 0 4px;
+  background: var(--thai-red);
+  color: #fff;
+  border: none;
+}

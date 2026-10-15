@@ -16,17 +16,22 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
   sbarra e parallele, battle rope, sandbag, pneumatico e mazza, coni e scaletta, ognuno con almeno 24 esercizi.
   Funzionano come le categorie (10 a caso nel tempo della lezione, Ricarica, Altri 10, torna indietro).
   Negli esercizi delle categorie, l'attrezzo è un collegamento alla lista di quell'attrezzo.
-- **Dosaggio modificabile**: con "✎ Modifica" scrivi le tue ripetizioni, serie o tempi per ogni esercizio;
+- **Dosaggio modificabile**: con "✎ Modifica" scegli dai menu a tendina tipo (ripetizioni, tempo,
+  riprese, distanza), serie, quantità, lati e recupero, così non si sbaglia a scrivere;
   restano salvati, valgono ovunque e contano nella stima del tempo. "Ripristina originale" torna a quello del catalogo.
 - **Crea allenamento**: aggiungi gli esercizi dalle categorie con "+ Aggiungi all'allenamento", riordinali e toglili;
   oppure **⚡ Crea lezione automatica** compone la lezione in ordine logico: riscaldamento, tecnica, velocità o footwork,
   clinch, condizionamento, forza, core e mobilità per defaticare.
+  Con **⬇ Scarica PDF dell'allenamento** salvi la lezione completa (impostazioni, riscaldamento, esercizi con dosaggio,
+  tempo e descrizione, totale) da stampare o tenere sul telefono.
 - Tutto resta salvato nel browser (localStorage): nessun database, nessun costo. Ogni dispositivo ha i suoi dati.
 - Colori della bandiera thailandese, pensata prima per il telefono (anche tema scuro).
 
 <img src="docs/anteprima-allenamento.png" alt="Pagina Crea allenamento" width="300">
 
 ## Avvio in locale
+
+La cartella `node_modules` non è nel repository: dopo ogni `git pull` che cambia le dipendenze esegui `npm install`.
 
 Serve Node.js 20 o più recente (https://nodejs.org).
 

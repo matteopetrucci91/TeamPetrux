@@ -3,6 +3,7 @@ import { SettingsPanel, type SettingsProps } from "../components/Settings";
 import { TimeSummary } from "../components/TimeSummary";
 import { Topbar } from "../components/Topbar";
 import { toExercises } from "../lib/catalog";
+import { downloadWorkoutPdf } from "../lib/pdf";
 import { totalMinutes, WARMUP_MIN } from "../lib/plan";
 import { hrefFor } from "../lib/route";
 
@@ -97,6 +98,11 @@ export function WorkoutPage({
             <a href={hrefFor({ page: "categorie" })}>categorie</a> con "+ Aggiungi all'allenamento",
             oppure premi "Crea lezione automatica".
           </p>
+        )}
+        {list.length > 0 && (
+          <button className="btn pdf" onClick={() => void downloadWorkoutPdf(list, settings)}>
+            ⬇ Scarica PDF dell'allenamento
+          </button>
         )}
         {list.length > 0 && (
           <p className="more">
