@@ -119,7 +119,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
   border-radius: 12px;
   transition: transform 0.1s ease;
 }
-.group:first-child .cat-card { border-left-color: var(--red); }
 .cat-card:active { transform: scale(0.98); }
 .cat-label { font-weight: 700; font-size: 1.1rem; }
 .cat-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.35; flex: 1; }

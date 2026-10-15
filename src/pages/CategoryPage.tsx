@@ -45,7 +45,6 @@ export function CategoryPage({
         route="categoria"
         workoutCount={workoutCount}
         title={category.label}
-        eyebrow={category.group}
         subtitle={category.description}
         back={{ href: hrefFor({ page: "categorie" }), label: "Categorie" }}
         sticky
