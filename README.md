@@ -7,7 +7,10 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
 
 - Home con le categorie (Forza esplosiva / massimale / resistente raggruppate sotto "Forza").
 - Tocchi una categoria e vedi **10 esercizi a caso** (523 esercizi in 10 categorie, almeno 50 ciascuna).
+- Ogni esercizio ha il **dosaggio** (ripetizioni, serie, tempo o riprese) e una **descrizione estesa** su come eseguirlo e a cosa serve.
 - **+ Altri 10** aggiunge 10 esercizi non ancora mostrati, fino a esaurire la categoria.
+- **Durata lezione** (1 ora o 1 ora e 30) e **durata ripresa** (2 min per un allenamento leggero, 3 min per l'agonistico).
+  I lavori a riprese da 2–3 min si adattano alla durata scelta, e la lista mostra il tempo stimato rispetto alla lezione.
 - **↻ Ricarica** sostituisce la lista con 10 esercizi diversi da quelli a schermo.
 - Le liste restano salvate nel browser (localStorage): nessun database, nessun costo.
   Ogni browser/dispositivo ha le sue liste.
@@ -39,5 +42,6 @@ npm run preview   # la prova in locale
 - `src/App.tsx` – schermate (categorie e lista esercizi)
 - `src/data/exercises.ts` – catalogo esercizi (generato dal catalogo del progetto, non modificarlo a mano)
 - `src/lib/random.ts` – estrazione casuale senza ripetizioni
+- `src/lib/lesson.ts` – impostazioni lezione, adattamento delle riprese e stima dei tempi
 - `src/lib/storage.ts` – salvataggio in localStorage
 - `src/index.css` – stile e colori (rosso `#A51931`, bianco, blu `#2D2A4A`)
