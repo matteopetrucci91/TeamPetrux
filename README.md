@@ -12,7 +12,7 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
   **↻ Ricarica** ne estrae altri diversi, **+ Altri 10** ne aggiunge 10 non ancora visti.
 - Ogni esercizio ha il **dosaggio** (ripetizioni, serie, tempo o riprese), il tempo stimato e una **descrizione estesa**.
   I lavori a riprese da 2–3 min seguono la durata della ripresa scelta.
-- **Esercizi per attrezzo**: palla medica, corda, kettlebell, elastici, sacco, pao, bilanciere, manubri,
+- **Esercizi per attrezzo**: corpo libero, compagno, palla medica, corda, kettlebell, elastici, sacco, pao, bilanciere, manubri,
   sbarra e parallele, battle rope, sandbag, pneumatico e mazza, coni e scaletta, ognuno con almeno 24 esercizi.
   Negli esercizi delle categorie, l'attrezzo è un collegamento all'elenco completo di quell'attrezzo.
 - **Crea allenamento**: aggiungi gli esercizi dalle categorie con "+ Aggiungi all'allenamento", riordinali e toglili;
