@@ -3,11 +3,11 @@ import logo from "../assets/logo.webp";
 import { hrefFor, type Route } from "../lib/route";
 
 const PAGES: { route: Route; label: string; icon: string }[] = [
-  { route: { page: "categorie" }, label: "Categorie esercizi", icon: "☰" },
-  { route: { page: "attrezzi" }, label: "Esercizi per attrezzo", icon: "◉" },
-  { route: { page: "allenamento" }, label: "Crea allenamento", icon: "✚" },
-  { route: { page: "calendario" }, label: "Calendario lezioni", icon: "▦" },
-  { route: { page: "impostazioni" }, label: "Impostazioni lezione", icon: "⏱" },
+  { route: { page: "categorie" }, label: "Categorie esercizi", icon: "📚" },
+  { route: { page: "attrezzi" }, label: "Esercizi per attrezzo", icon: "🧰" },
+  { route: { page: "allenamento" }, label: "Crea allenamento", icon: "✨" },
+  { route: { page: "calendario" }, label: "Calendario lezioni", icon: "📅" },
+  { route: { page: "impostazioni" }, label: "Impostazioni lezione", icon: "⚙️" },
 ];
 
 /** Menu a tendina per spostarsi tra le pagine. */

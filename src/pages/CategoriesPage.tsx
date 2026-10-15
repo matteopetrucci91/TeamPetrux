@@ -1,6 +1,7 @@
 import { categories } from "../data/exercises";
 import { Topbar } from "../components/Topbar";
 import { byCategory } from "../lib/catalog";
+import { CATEGORY_ICON } from "../lib/icons";
 import { hrefFor } from "../lib/route";
 import { ToolGrid } from "./ToolsPage";
 
@@ -34,6 +35,7 @@ export function CategoriesPage({ workoutCount }: { workoutCount: number }) {
           <div className="grid">
             {categories.map((c) => (
               <a key={c.id} className="cat-card" href={hrefFor({ page: "categoria", id: c.id })}>
+                <span className="cat-icon" aria-hidden="true">{CATEGORY_ICON[c.id]}</span>
                 <span className="cat-label">{c.label}</span>
                 <span className="cat-desc">{c.description}</span>
                 <span className="cat-count">{byCategory.get(c.id)?.length ?? 0} esercizi</span>

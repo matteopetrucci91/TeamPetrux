@@ -6,6 +6,8 @@ import { availableMinutes, fitDraw } from "./lib/plan";
 import { bestLesson } from "./lib/review";
 import { useRoute, type Route } from "./lib/route";
 import { load, save } from "./lib/storage";
+import { Toaster } from "./components/Toast";
+import { showToast } from "./lib/toast";
 import { CalendarPage } from "./pages/CalendarPage";
 import { CategoriesPage } from "./pages/CategoriesPage";
 import { LessonPage } from "./pages/LessonPage";
@@ -74,11 +76,13 @@ export default function App() {
       return next;
     });
 
-  const toggleWorkout = (id: string) =>
+  const toggleWorkout = (id: string) => {
+    showToast(workout.ids.includes(id) ? "Tolto dalla lezione" : "Aggiunto alla lezione ✓");
     setWorkout((w) => ({
       ids: w.ids.includes(id) ? w.ids.filter((x) => x !== id) : [...w.ids, id],
       auto: false,
     }));
+  };
 
   const settingsProps = { settings, onSettings: changeSettings };
   const workoutCount = workout.ids.length;
@@ -132,5 +136,10 @@ export default function App() {
     page = <CategoriesPage workoutCount={workoutCount} />;
   }
 
-  return <DoseContext.Provider value={{ custom: doses, setDose }}>{page}</DoseContext.Provider>;
+  return (
+    <DoseContext.Provider value={{ custom: doses, setDose }}>
+      {page}
+      <Toaster />
+    </DoseContext.Provider>
+  );
 }

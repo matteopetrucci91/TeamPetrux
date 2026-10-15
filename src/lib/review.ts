@@ -1,7 +1,8 @@
 // Controllo qualità dell'allenamento: regole da allenatore, calcolate nell'app (gratis, anche offline).
-import type { CategoryId, Exercise } from "../data/exercises";
+import type { Exercise } from "../data/exercises";
 import { doseFor, toolById } from "./catalog";
 import type { LessonSettings } from "./lesson";
+import { PHASE_OF as PHASE, type Phase } from "./phases";
 import { availableMinutes, generateLesson } from "./plan";
 
 export type Level = "ok" | "warn" | "bad";
@@ -14,21 +15,6 @@ export interface Review {
   verdict: string;
   items: ReviewItem[];
 }
-
-type Phase = "tecnica" | "clinch" | "velocita" | "condizionamento" | "forza" | "core" | "mobilita";
-
-const PHASE: Record<CategoryId, Phase> = {
-  tecnica: "tecnica",
-  clinch: "clinch",
-  velocita: "velocita",
-  agilita: "velocita",
-  resistenza: "condizionamento",
-  "forza-esplosiva": "forza",
-  "forza-massimale": "forza",
-  "forza-resistente": "forza",
-  core: "core",
-  mobilita: "mobilita",
-};
 
 /** Lavori che richiedono freschezza e lavori che stancano. */
 const FRESH: Phase[] = ["tecnica", "velocita"];
