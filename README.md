@@ -5,16 +5,20 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
 
 ## Cosa fa
 
-- Home con le categorie (Forza esplosiva / massimale / resistente raggruppate sotto "Forza").
-- Tocchi una categoria e vedi **10 esercizi a caso** (523 esercizi in 10 categorie, almeno 50 ciascuna).
-- Ogni esercizio ha il **dosaggio** (ripetizioni, serie, tempo o riprese) e una **descrizione estesa** su come eseguirlo e a cosa serve.
-- **+ Altri 10** aggiunge 10 esercizi non ancora mostrati, fino a esaurire la categoria.
-- **Durata lezione** (1 ora o 1 ora e 30) e **durata ripresa** (2 min per un allenamento leggero, 3 min per l'agonistico).
-  I lavori a riprese da 2–3 min si adattano alla durata scelta, e la lista mostra il tempo stimato rispetto alla lezione.
-- **↻ Ricarica** sostituisce la lista con 10 esercizi diversi da quelli a schermo.
-- Le liste restano salvate nel browser (localStorage): nessun database, nessun costo.
-  Ogni browser/dispositivo ha le sue liste.
+- **Menu a tendina** in alto per passare tra *Categorie esercizi*, *Crea allenamento* e *Impostazioni lezione*.
+- **Impostazioni**: lezione da 1 ora o 1 ora e 30, ripresa da 2 min (leggero) o 3 min (agonistico).
+  I primi 10 minuti sono sempre di riscaldamento. Cambiando durata, le liste si ricaricano da sole per stare nel tempo.
+- **Categorie**: tocchi una categoria e vedi fino a 10 esercizi a caso che stanno nel tempo della lezione.
+  **↻ Ricarica** ne estrae altri diversi, **+ Altri 10** ne aggiunge 10 non ancora visti.
+- Ogni esercizio ha il **dosaggio** (ripetizioni, serie, tempo o riprese), il tempo stimato e una **descrizione estesa**.
+  I lavori a riprese da 2–3 min seguono la durata della ripresa scelta.
+- **Crea allenamento**: aggiungi gli esercizi dalle categorie con "+ Aggiungi all'allenamento", riordinali e toglili;
+  oppure **⚡ Crea lezione automatica** compone la lezione in ordine logico: riscaldamento, tecnica, velocità o footwork,
+  clinch, condizionamento, forza, core e mobilità per defaticare.
+- Tutto resta salvato nel browser (localStorage): nessun database, nessun costo. Ogni dispositivo ha i suoi dati.
 - Colori della bandiera thailandese, pensata prima per il telefono (anche tema scuro).
+
+<img src="docs/anteprima-allenamento.png" alt="Pagina Crea allenamento" width="300">
 
 ## Avvio in locale
 
@@ -39,7 +43,9 @@ npm run preview   # la prova in locale
 
 ## Struttura
 
-- `src/App.tsx` – schermate (categorie e lista esercizi)
+- `src/App.tsx` – stato dell'app e scelta della pagina (indirizzi `#/`, `#/categoria/...`, `#/allenamento`, `#/impostazioni`)
+- `src/pages/` – le pagine; `src/components/` – menu, impostazioni, riepilogo tempi, scheda esercizio
+- `src/lib/plan.ts` – esercizi che stanno nel tempo e lezione automatica
 - `src/data/exercises.ts` – catalogo esercizi (generato dal catalogo del progetto, non modificarlo a mano)
 - `src/lib/random.ts` – estrazione casuale senza ripetizioni
 - `src/lib/lesson.ts` – impostazioni lezione, adattamento delle riprese e stima dei tempi

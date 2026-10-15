@@ -16,18 +16,3 @@ export function pickRandom<T extends { id: string }>(
 ): T[] {
   return shuffle(pool.filter((x) => !exclude.has(x.id))).slice(0, n);
 }
-
-/**
- * Nuova estrazione di `n` esercizi diversi da quelli mostrati ora.
- * Se la categoria non ne ha abbastanza, completa con quelli già visti.
- */
-export function redraw<T extends { id: string }>(
-  pool: readonly T[],
-  n: number,
-  current: ReadonlySet<string>,
-): T[] {
-  const fresh = pickRandom(pool, n, current);
-  if (fresh.length >= n) return fresh;
-  const freshIds = new Set(fresh.map((x) => x.id));
-  return [...fresh, ...pickRandom(pool, n - fresh.length, freshIds)];
-}

@@ -257,11 +257,116 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .time-text { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
 .time-summary .counter { margin: 0; }
-.time-bar { height: 8px; margin: 8px 0 6px; border-radius: 999px; background: var(--chip); overflow: hidden; }
-.time-bar span { display: block; height: 100%; background: var(--dose-bg); border-radius: inherit; }
+.time-bar { display: flex; height: 8px; margin: 8px 0 6px; border-radius: 999px; background: var(--chip); overflow: hidden; }
+.time-bar span { display: block; height: 100%; background: var(--dose-bg); }
+.time-bar span.warmup, .legend.warmup { background: var(--red); opacity: 0.55; }
 .time-note { margin: 0; font-size: 0.82rem; color: var(--muted); }
 .time-summary.over .time-bar span { background: var(--red); }
 .time-summary.over .time-note { color: var(--red); font-weight: 600; }
 .settings.compact { grid-template-columns: 1fr 1fr; padding: 10px; gap: 10px; }
 .settings.compact .segmented button { padding: 6px 4px; font-size: 0.85rem; }
 .settings.compact .segmented button small { display: none; }
+
+a { color: inherit; }
+a.cat-card, .back, .cta, .menu-list a { text-decoration: none; }
+
+/* Barra in alto: indietro / marchio a sinistra, menu a destra */
+.topbar-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 36px; }
+.brand { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; }
+
+.menu { position: relative; }
+.menu-button {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-weight: 600;
+}
+.menu-list {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  z-index: 10;
+  min-width: 240px;
+  padding: 6px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+.menu-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  color: var(--text);
+  font-weight: 600;
+}
+.menu-list a.active { background: var(--chip); color: var(--chip-text); }
+.menu-icon { width: 20px; text-align: center; color: var(--red); }
+.badge {
+  margin-left: auto;
+  min-width: 22px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--red);
+  color: #fff;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--thai-blue);
+  color: #fff;
+  font-size: 1.4rem;
+}
+.cta span:first-child { display: flex; flex-direction: column; gap: 2px; font-size: 1rem; }
+.cta small { font-size: 0.85rem; opacity: 0.8; }
+
+/* Azioni sulle schede esercizio */
+.card-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.pill {
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--blue);
+  background: transparent;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.pill.added { background: var(--dose-bg); border-color: var(--dose-bg); color: #fff; }
+.pill.remove { border-color: var(--red); color: var(--red); margin-left: auto; }
+.icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--chip);
+  color: var(--chip-text);
+  font-weight: 700;
+}
+.icon:disabled { opacity: 0.35; cursor: default; }
+.eyebrow.cat { color: var(--red); margin-bottom: 2px; }
+
+details summary { margin-top: 6px; color: var(--blue); font-weight: 600; font-size: 0.88rem; cursor: pointer; }
+
+.warmup-card { border-left: 5px solid var(--red); }
+.warmup-card .num { background: var(--thai-blue); }
+
+.legend { display: inline-block; width: 10px; height: 10px; border-radius: 2px; background: var(--dose-bg); vertical-align: -1px; }
+
+.empty, .more, .info { color: var(--muted); font-size: 0.92rem; line-height: 1.5; }
+.empty { padding: 16px; text-align: center; }
+.more { text-align: center; }
+.more a, .empty a { color: var(--blue); font-weight: 600; }
+.info { padding: 4px 4px 0; }
