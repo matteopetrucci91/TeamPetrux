@@ -102,6 +102,11 @@ export function Topbar({
         )}
         <Menu current={route} workoutCount={workoutCount} />
       </div>
+      {showLogo && (
+        <p className="team-title">
+          <span>Team</span> Petrux
+        </p>
+      )}
       {showLogo && <img className="team-logo" src={logo} alt="Team Petrux Muay Thai" width={132} height={132} />}
       <h1>
         {eyebrow && <span className="eyebrow">{eyebrow}</span>}
