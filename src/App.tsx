@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { CategoryId } from "./data/exercises";
-import { byCategory, categoryById } from "./lib/catalog";
+import { byCategory, categoryById, toolById } from "./lib/catalog";
 import { DEFAULT_SETTINGS, type LessonSettings } from "./lib/lesson";
 import { availableMinutes, fitDraw, generateLesson } from "./lib/plan";
 import { useRoute } from "./lib/route";
@@ -8,6 +8,8 @@ import { load, save } from "./lib/storage";
 import { CategoriesPage } from "./pages/CategoriesPage";
 import { CategoryPage } from "./pages/CategoryPage";
 import { SettingsPage } from "./pages/SettingsPage";
+import { ToolPage } from "./pages/ToolPage";
+import { ToolsPage } from "./pages/ToolsPage";
 import { WorkoutPage, type Workout } from "./pages/WorkoutPage";
 
 const LISTS_KEY = "muaythai:liste:v1";
@@ -83,6 +85,19 @@ export default function App() {
         />
       );
     }
+    case "attrezzi":
+      return <ToolsPage workoutCount={workoutCount} />;
+    case "attrezzo":
+      return (
+        <ToolPage
+          key={route.id}
+          tool={toolById.get(route.id)!}
+          round={settings.round}
+          inWorkout={new Set(workout.ids)}
+          onToggleWorkout={toggleWorkout}
+          workoutCount={workoutCount}
+        />
+      );
     case "allenamento":
       return (
         <WorkoutPage

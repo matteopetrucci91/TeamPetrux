@@ -369,3 +369,5 @@ details summary { margin-top: 6px; color: var(--blue); font-weight: 600; font-si
 .more { text-align: center; }
 .more a, .empty a { color: var(--blue); font-weight: 600; }
 .info { padding: 4px 4px 0; }
+.tool-card { border-left-color: var(--red); }
+a.chip.link { text-decoration: none; color: var(--blue); font-weight: 600; }

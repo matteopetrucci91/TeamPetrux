@@ -3,6 +3,7 @@ import { hrefFor, type Route } from "../lib/route";
 
 const PAGES: { route: Route; label: string; icon: string }[] = [
   { route: { page: "categorie" }, label: "Categorie esercizi", icon: "☰" },
+  { route: { page: "attrezzi" }, label: "Esercizi per attrezzo", icon: "◉" },
   { route: { page: "allenamento" }, label: "Crea allenamento", icon: "✚" },
   { route: { page: "impostazioni" }, label: "Impostazioni lezione", icon: "⏱" },
 ];
@@ -40,7 +41,9 @@ function Menu({ current, workoutCount }: { current: Route["page"]; workoutCount:
         <nav className="menu-list" role="menu">
           {PAGES.map((p) => {
             const active =
-              p.route.page === current || (p.route.page === "categorie" && current === "categoria");
+              p.route.page === current ||
+              (p.route.page === "categorie" && current === "categoria") ||
+              (p.route.page === "attrezzi" && current === "attrezzo");
             return (
               <a
                 key={p.route.page}

@@ -2,6 +2,7 @@ import { categories } from "../data/exercises";
 import { Topbar } from "../components/Topbar";
 import { byCategory } from "../lib/catalog";
 import { hrefFor } from "../lib/route";
+import { ToolGrid } from "./ToolsPage";
 
 export function CategoriesPage({ workoutCount }: { workoutCount: number }) {
   return (
@@ -31,6 +32,10 @@ export function CategoriesPage({ workoutCount }: { workoutCount: number }) {
               </a>
             ))}
           </div>
+        </section>
+        <section className="group">
+          <h2>Attrezzi</h2>
+          <ToolGrid />
         </section>
       </main>
     </div>

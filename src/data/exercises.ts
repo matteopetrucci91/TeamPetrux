@@ -1,6 +1,14 @@
-// Catalogo esercizi Muay Thai — generato, 523 esercizi in 10 categorie.
+// Catalogo esercizi Muay Thai — generato, 523 esercizi in 10 categorie e 195 in più per attrezzo.
 
 export type CategoryId = "forza-esplosiva" | "forza-massimale" | "forza-resistente" | "velocita" | "resistenza" | "tecnica" | "mobilita" | "core" | "agilita" | "clinch";
+
+export type ToolId = "palla-medica" | "corda" | "kettlebell" | "elastico" | "sacco" | "pao" | "bilanciere" | "manubri" | "sbarra" | "battle-rope" | "sandbag" | "pneumatico" | "coni-scaletta";
+
+export interface Tool {
+  id: ToolId;
+  label: string;
+  description: string;
+}
 
 export interface Category {
   id: CategoryId;
@@ -21,6 +29,8 @@ export interface Exercise {
   /** Spiegazione estesa: esecuzione, punti chiave e utilità per la Muay Thai. */
   details: string;
   equipment?: string;
+  /** Gruppo per attrezzo (palla medica, corda, ...), se l'esercizio usa uno di quelli. */
+  tool?: ToolId;
 }
 
 export const categories: Category[] = [
@@ -186,7 +196,8 @@ export const exercises: Exercise[] = [
     "description": "Spinta esplosiva della palla dal petto contro il muro o al compagno.",
     "equipment": "Palla medica",
     "dose": "4 × 6 lanci, recupero 60 s",
-    "details": "In guardia o a piedi paralleli, tieni la palla al petto e spingila con forza contro il muro distendendo completamente le braccia e trasferendo il peso in avanti. Riprendila e ripeti senza pause. Sviluppa la potenza di spinta di petto e tricipiti per diretti e uscite dal clinch."
+    "details": "In guardia o a piedi paralleli, tieni la palla al petto e spingila con forza contro il muro distendendo completamente le braccia e trasferendo il peso in avanti. Riprendila e ripeti senza pause. Sviluppa la potenza di spinta di petto e tricipiti per diretti e uscite dal clinch.",
+    "tool": "palla-medica"
   },
   {
     "id": "forza-esplosiva--lancio-palla-medica-rotazionale",
@@ -195,7 +206,8 @@ export const exercises: Exercise[] = [
     "description": "Lancio laterale contro il muro ruotando anca e spalle come in un gancio.",
     "equipment": "Palla medica",
     "dose": "3 × 6 per lato, recupero 60 s",
-    "details": "Di fianco al muro, carica la palla sull'anca posteriore e lanciala ruotando piede, anca e spalle in sequenza, con le braccia che seguono il busto. La forza nasce da terra, non dalle braccia. Trasferisce la potenza rotazionale a ganci, calci circolari e gomitate."
+    "details": "Di fianco al muro, carica la palla sull'anca posteriore e lanciala ruotando piede, anca e spalle in sequenza, con le braccia che seguono il busto. La forza nasce da terra, non dalle braccia. Trasferisce la potenza rotazionale a ganci, calci circolari e gomitate.",
+    "tool": "palla-medica"
   },
   {
     "id": "forza-esplosiva--slam-palla-medica",
@@ -204,7 +216,8 @@ export const exercises: Exercise[] = [
     "description": "Sollevare la palla sopra la testa e schiacciarla a terra con forza.",
     "equipment": "Palla medica",
     "dose": "4 × 8 ripetizioni, recupero 60 s",
-    "details": "Porta la palla sopra la testa salendo sulle punte, poi schiacciala a terra con tutta la forza flettendo anche e addome. Usa una palla che non rimbalza e tieni la schiena neutra. Allena la catena anteriore e la potenza dall'alto verso il basso, utile per gomitate e controllo nel clinch."
+    "details": "Porta la palla sopra la testa salendo sulle punte, poi schiacciala a terra con tutta la forza flettendo anche e addome. Usa una palla che non rimbalza e tieni la schiena neutra. Allena la catena anteriore e la potenza dall'alto verso il basso, utile per gomitate e controllo nel clinch.",
+    "tool": "palla-medica"
   },
   {
     "id": "forza-esplosiva--lancio-palla-medica-da-diretto",
@@ -213,7 +226,8 @@ export const exercises: Exercise[] = [
     "description": "Lancio con una mano imitando il diretto posteriore.",
     "equipment": "Palla medica",
     "dose": "3 × 6 per lato, recupero 60 s",
-    "details": "In guardia, tieni una palla leggera (2-3 kg) all'altezza della spalla posteriore e lanciala contro il muro con un braccio, ruotando il piede e l'anca come nel diretto. Chiudi l'altra mano a protezione del viso. Rende il diretto più esplosivo collegando gambe, anca e braccio."
+    "details": "In guardia, tieni una palla leggera (2-3 kg) all'altezza della spalla posteriore e lanciala contro il muro con un braccio, ruotando il piede e l'anca come nel diretto. Chiudi l'altra mano a protezione del viso. Rende il diretto più esplosivo collegando gambe, anca e braccio.",
+    "tool": "palla-medica"
   },
   {
     "id": "forza-esplosiva--lancio-palla-medica-sopra-la-testa-all-indietro",
@@ -222,7 +236,8 @@ export const exercises: Exercise[] = [
     "description": "Da mezzo squat, lancio esplosivo della palla all'indietro.",
     "equipment": "Palla medica",
     "dose": "4 × 5 lanci, recupero 90 s",
-    "details": "Tieni la palla tra le gambe in mezzo squat, poi estendi esplosivamente anche e ginocchia lanciandola all'indietro sopra la testa il più lontano possibile. Controlla che lo spazio dietro sia libero. Allena l'estensione totale dell'anca, motore di salti, ginocchiate e calci."
+    "details": "Tieni la palla tra le gambe in mezzo squat, poi estendi esplosivamente anche e ginocchia lanciandola all'indietro sopra la testa il più lontano possibile. Controlla che lo spazio dietro sia libero. Allena l'estensione totale dell'anca, motore di salti, ginocchiate e calci.",
+    "tool": "palla-medica"
   },
   {
     "id": "forza-esplosiva--piegamenti-esplosivi",
@@ -249,7 +264,8 @@ export const exercises: Exercise[] = [
     "description": "Piegamento esplosivo cambiando la mano su un rialzo.",
     "equipment": "Palla medica",
     "dose": "3 × 6 ripetizioni, recupero 90 s",
-    "details": "Una mano su una palla medica e l'altra a terra: spingi in modo esplosivo e sposta il corpo lateralmente in volo, scambiando la mano sulla palla. Corpo rigido e core attivo durante tutto il movimento. Allena potenza e coordinazione asimmetrica delle braccia, come nelle combinazioni di pugni."
+    "details": "Una mano su una palla medica e l'altra a terra: spingi in modo esplosivo e sposta il corpo lateralmente in volo, scambiando la mano sulla palla. Corpo rigido e core attivo durante tutto il movimento. Allena potenza e coordinazione asimmetrica delle braccia, come nelle combinazioni di pugni.",
+    "tool": "palla-medica"
   },
   {
     "id": "forza-esplosiva--kettlebell-swing",
@@ -258,7 +274,8 @@ export const exercises: Exercise[] = [
     "description": "Slancio della kettlebell con estensione esplosiva dell'anca.",
     "equipment": "Kettlebell",
     "dose": "4 × 10 ripetizioni, recupero 60 s",
-    "details": "Con piedi oltre la larghezza delle spalle, piega le anche portando la kettlebell tra le gambe e spingi le anche in avanti con forza fino all'altezza del petto. Le braccia accompagnano, il lavoro lo fanno glutei e femorali; schiena sempre neutra. Sviluppa l'estensione d'anca esplosiva alla base di ginocchiate e calci."
+    "details": "Con piedi oltre la larghezza delle spalle, piega le anche portando la kettlebell tra le gambe e spingi le anche in avanti con forza fino all'altezza del petto. Le braccia accompagnano, il lavoro lo fanno glutei e femorali; schiena sempre neutra. Sviluppa l'estensione d'anca esplosiva alla base di ginocchiate e calci.",
+    "tool": "kettlebell"
   },
   {
     "id": "forza-esplosiva--kettlebell-swing-a-un-braccio",
@@ -267,7 +284,8 @@ export const exercises: Exercise[] = [
     "description": "Swing con una mano, controllo della rotazione del tronco.",
     "equipment": "Kettlebell",
     "dose": "3 × 8 per braccio, recupero 60 s",
-    "details": "Esegui lo swing con una sola mano, resistendo alla rotazione del busto e tenendo le spalle squadrate. Spinta d'anca secca e braccio libero che si muove in modo naturale. Rinforza il core anti-rotazione e la potenza unilaterale, utile per stabilità nei colpi e nel clinch."
+    "details": "Esegui lo swing con una sola mano, resistendo alla rotazione del busto e tenendo le spalle squadrate. Spinta d'anca secca e braccio libero che si muove in modo naturale. Rinforza il core anti-rotazione e la potenza unilaterale, utile per stabilità nei colpi e nel clinch.",
+    "tool": "kettlebell"
   },
   {
     "id": "forza-esplosiva--power-clean",
@@ -276,7 +294,8 @@ export const exercises: Exercise[] = [
     "description": "Girata al petto dal pavimento con estensione esplosiva.",
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni, recupero 2 min",
-    "details": "Con il bilanciere a terra e schiena neutra, solleva fino alle ginocchia, poi estendi esplosivamente anche, ginocchia e caviglie e ricevi il bilanciere sulle spalle in mezzo squat. Carico moderato e tecnica perfetta prima di aumentare. Sviluppa potenza totale del corpo, trasferibile a ogni azione esplosiva."
+    "details": "Con il bilanciere a terra e schiena neutra, solleva fino alle ginocchia, poi estendi esplosivamente anche, ginocchia e caviglie e ricevi il bilanciere sulle spalle in mezzo squat. Carico moderato e tecnica perfetta prima di aumentare. Sviluppa potenza totale del corpo, trasferibile a ogni azione esplosiva.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-esplosiva--hang-clean",
@@ -285,7 +304,8 @@ export const exercises: Exercise[] = [
     "description": "Girata al petto partendo dalle ginocchia.",
     "equipment": "Bilanciere",
     "dose": "4 × 3 ripetizioni, recupero 2 min",
-    "details": "Parti in piedi con il bilanciere appena sopra le ginocchia, anche indietro e schiena dritta; estendi in modo esplosivo e ricevi il bilanciere sulle spalle con gomiti alti. È più semplice da imparare del power clean. Allena la tripla estensione rapida, la stessa che dà forza a ginocchiate e calci."
+    "details": "Parti in piedi con il bilanciere appena sopra le ginocchia, anche indietro e schiena dritta; estendi in modo esplosivo e ricevi il bilanciere sulle spalle con gomiti alti. È più semplice da imparare del power clean. Allena la tripla estensione rapida, la stessa che dà forza a ginocchiate e calci.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-esplosiva--push-press",
@@ -294,7 +314,8 @@ export const exercises: Exercise[] = [
     "description": "Spinta sopra la testa aiutata da un piccolo piegamento delle gambe.",
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 90 s",
-    "details": "Con il bilanciere sulle spalle, fai un piccolo piegamento rapido delle ginocchia e usa la spinta delle gambe per portarlo sopra la testa a braccia tese. Core contratto e niente iperestensione della schiena. Insegna a trasferire la forza dalle gambe alle braccia, come nei pugni potenti."
+    "details": "Con il bilanciere sulle spalle, fai un piccolo piegamento rapido delle ginocchia e usa la spinta delle gambe per portarlo sopra la testa a braccia tese. Core contratto e niente iperestensione della schiena. Insegna a trasferire la forza dalle gambe alle braccia, come nei pugni potenti.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-esplosiva--jump-squat-con-carico-leggero",
@@ -303,7 +324,8 @@ export const exercises: Exercise[] = [
     "description": "Squat jump con bilanciere o manubri leggeri.",
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2 min",
-    "details": "Con bilanciere leggero sulle spalle o manubri in mano (20-30% del massimale), scendi a mezzo squat e salta al massimo. Atterra morbido, stabilizzati e riparti. Il carico deve permettere un salto veloce: se rallenti è troppo pesante. Aumenta la potenza delle gambe per calci e spostamenti."
+    "details": "Con bilanciere leggero sulle spalle o manubri in mano (20-30% del massimale), scendi a mezzo squat e salta al massimo. Atterra morbido, stabilizzati e riparti. Il carico deve permettere un salto veloce: se rallenti è troppo pesante. Aumenta la potenza delle gambe per calci e spostamenti.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-esplosiva--snatch-con-manubrio",
@@ -312,7 +334,8 @@ export const exercises: Exercise[] = [
     "description": "Strappo con un manubrio dal pavimento a braccio teso sopra la testa.",
     "equipment": "Manubrio",
     "dose": "3 × 4 per braccio, recupero 90 s",
-    "details": "Con il manubrio a terra tra i piedi, estendi esplosivamente le anche e tira il manubrio vicino al corpo fino a bloccarlo sopra la testa a braccio teso. Ricevi con ginocchia leggermente piegate e polso fermo. Sviluppa potenza unilaterale e coordinazione tra gambe, tronco e spalla."
+    "details": "Con il manubrio a terra tra i piedi, estendi esplosivamente le anche e tira il manubrio vicino al corpo fino a bloccarlo sopra la testa a braccio teso. Ricevi con ginocchia leggermente piegate e polso fermo. Sviluppa potenza unilaterale e coordinazione tra gambe, tronco e spalla.",
+    "tool": "manubri"
   },
   {
     "id": "forza-esplosiva--landmine-press-rotazionale",
@@ -321,7 +344,8 @@ export const exercises: Exercise[] = [
     "description": "Spinta del bilanciere ancorato ruotando il piede come nel diretto.",
     "equipment": "Bilanciere",
     "dose": "3 × 6 per lato, recupero 90 s",
-    "details": "In guardia con l'estremità del bilanciere ancorato alla spalla posteriore, spingi in avanti ruotando il piede e l'anca come in un diretto fino a braccio teso. Il busto ruota insieme, non solo il braccio. Rinforza la catena del diretto posteriore con un carico progressivo e sicuro."
+    "details": "In guardia con l'estremità del bilanciere ancorato alla spalla posteriore, spingi in avanti ruotando il piede e l'anca come in un diretto fino a braccio teso. Il busto ruota insieme, non solo il braccio. Rinforza la catena del diretto posteriore con un carico progressivo e sicuro.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-esplosiva--landmine-rotazioni-esplosive",
@@ -330,7 +354,8 @@ export const exercises: Exercise[] = [
     "description": "Rotazioni rapide del bilanciere ancorato da un fianco all'altro.",
     "equipment": "Bilanciere",
     "dose": "3 × 8 per lato, recupero 60 s",
-    "details": "Tieni l'estremità del bilanciere ancorato con le braccia tese davanti al petto e portalo rapidamente da un fianco all'altro ruotando anche e piedi. Controlla la frenata a fine rotazione senza curvare la schiena. Allena la potenza rotazionale del core per ganci, calci circolari e gomitate."
+    "details": "Tieni l'estremità del bilanciere ancorato con le braccia tese davanti al petto e portalo rapidamente da un fianco all'altro ruotando anche e piedi. Controlla la frenata a fine rotazione senza curvare la schiena. Allena la potenza rotazionale del core per ganci, calci circolari e gomitate.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-esplosiva--spinte-con-elastico-da-diretto",
@@ -339,7 +364,8 @@ export const exercises: Exercise[] = [
     "description": "Diretti esplosivi contro la resistenza di un elastico.",
     "equipment": "Elastico",
     "dose": "3 × 8 per braccio, recupero 60 s",
-    "details": "Con l'elastico ancorato dietro di te e impugnato, in guardia esegui diretti esplosivi contro la resistenza ritornando subito in guardia. Ruota il piede e l'anca a ogni colpo e controlla il ritorno. Aumenta velocità e potenza del pugno lavorando sulla fase di accelerazione."
+    "details": "Con l'elastico ancorato dietro di te e impugnato, in guardia esegui diretti esplosivi contro la resistenza ritornando subito in guardia. Ruota il piede e l'anca a ogni colpo e controlla il ritorno. Aumenta velocità e potenza del pugno lavorando sulla fase di accelerazione.",
+    "tool": "elastico"
   },
   {
     "id": "forza-esplosiva--calci-frontali-con-elastico",
@@ -348,7 +374,8 @@ export const exercises: Exercise[] = [
     "description": "Teep esplosivi con elastico alla caviglia.",
     "equipment": "Elastico",
     "dose": "3 × 8 per gamba, recupero 60 s",
-    "details": "Con l'elastico alla caviglia ancorato dietro, in guardia esegui il teep alzando il ginocchio e spingendo con il tallone in avanti, poi richiama rapidamente. Mantieni l'equilibrio sulla gamba d'appoggio e le mani alte. Rende il teep più esplosivo e rinforza i flessori dell'anca."
+    "details": "Con l'elastico alla caviglia ancorato dietro, in guardia esegui il teep alzando il ginocchio e spingendo con il tallone in avanti, poi richiama rapidamente. Mantieni l'equilibrio sulla gamba d'appoggio e le mani alte. Rende il teep più esplosivo e rinforza i flessori dell'anca.",
+    "tool": "elastico"
   },
   {
     "id": "forza-esplosiva--ginocchiate-con-elastico",
@@ -357,7 +384,8 @@ export const exercises: Exercise[] = [
     "description": "Ginocchiate esplosive contro la resistenza dell'elastico.",
     "equipment": "Elastico",
     "dose": "3 × 10 per gamba, recupero 60 s",
-    "details": "Con l'elastico alla caviglia ancorato dietro, porta la ginocchiata in avanti e in alto spingendo l'anca, come se tirassi a te la testa dell'avversario. Sali sull'avampiede della gamba d'appoggio e richiama controllato. Sviluppa velocità e potenza della ginocchiata."
+    "details": "Con l'elastico alla caviglia ancorato dietro, porta la ginocchiata in avanti e in alto spingendo l'anca, come se tirassi a te la testa dell'avversario. Sali sull'avampiede della gamba d'appoggio e richiama controllato. Sviluppa velocità e potenza della ginocchiata.",
+    "tool": "elastico"
   },
   {
     "id": "forza-esplosiva--calci-circolari-esplosivi-al-sacco",
@@ -366,7 +394,8 @@ export const exercises: Exercise[] = [
     "description": "Serie brevi di calci al massimo della potenza, recupero completo.",
     "equipment": "Sacco",
     "dose": "5 × 5 per gamba, recupero 90 s",
-    "details": "In guardia davanti al sacco, esegui calci circolari alla massima potenza ruotando completamente il piede d'appoggio e l'anca, tornando in guardia tra un calcio e l'altro. Ogni calcio deve essere al 100%: se la qualità cala, fermati. Trasferisce la forza esplosiva direttamente al gesto tecnico."
+    "details": "In guardia davanti al sacco, esegui calci circolari alla massima potenza ruotando completamente il piede d'appoggio e l'anca, tornando in guardia tra un calcio e l'altro. Ogni calcio deve essere al 100%: se la qualità cala, fermati. Trasferisce la forza esplosiva direttamente al gesto tecnico.",
+    "tool": "sacco"
   },
   {
     "id": "forza-esplosiva--ginocchiate-esplosive-al-sacco",
@@ -375,7 +404,8 @@ export const exercises: Exercise[] = [
     "description": "Ginocchiate singole al massimo della potenza con richiamo rapido.",
     "equipment": "Sacco",
     "dose": "5 × 6 per gamba, recupero 90 s",
-    "details": "Al sacco, afferra o simula la presa e porta ginocchiate singole al massimo della potenza spingendo l'anca in avanti, poi richiama subito la gamba. Mantieni il busto alto e l'appoggio sull'avampiede. Allena la potenza della ginocchiata e il rapido ritorno in posizione."
+    "details": "Al sacco, afferra o simula la presa e porta ginocchiate singole al massimo della potenza spingendo l'anca in avanti, poi richiama subito la gamba. Mantieni il busto alto e l'appoggio sull'avampiede. Allena la potenza della ginocchiata e il rapido ritorno in posizione.",
+    "tool": "sacco"
   },
   {
     "id": "forza-esplosiva--diretti-esplosivi-al-sacco",
@@ -384,7 +414,8 @@ export const exercises: Exercise[] = [
     "description": "Diretti singoli alla massima potenza, piede e anca in rotazione.",
     "equipment": "Sacco",
     "dose": "5 × 6 per braccio, recupero 60 s",
-    "details": "In guardia, esegui diretti singoli alla massima potenza ruotando piede e anca e chiudendo il pugno all'impatto, poi torna in guardia. Pausa breve tra un colpo e l'altro per mantenere la qualità al massimo. Allena il trasferimento di forza da terra al pugno."
+    "details": "In guardia, esegui diretti singoli alla massima potenza ruotando piede e anca e chiudendo il pugno all'impatto, poi torna in guardia. Pausa breve tra un colpo e l'altro per mantenere la qualità al massimo. Allena il trasferimento di forza da terra al pugno.",
+    "tool": "sacco"
   },
   {
     "id": "forza-esplosiva--spinta-della-slitta",
@@ -420,7 +451,8 @@ export const exercises: Exercise[] = [
     "description": "Salti con doppio passaggio della corda.",
     "equipment": "Corda",
     "dose": "5 × 20 s, recupero 40 s",
-    "details": "Con la corda, salta leggermente più in alto del normale e fai passare la corda due volte sotto i piedi con un movimento rapido dei polsi. Resta sugli avampiedi, gambe quasi tese e busto composto. Sviluppa reattività dei polpacci, coordinazione e ritmo."
+    "details": "Con la corda, salta leggermente più in alto del normale e fai passare la corda due volte sotto i piedi con un movimento rapido dei polsi. Resta sugli avampiedi, gambe quasi tese e busto composto. Sviluppa reattività dei polpacci, coordinazione e ritmo.",
+    "tool": "corda"
   },
   {
     "id": "forza-esplosiva--salti-con-ostacoli-bassi",
@@ -429,7 +461,8 @@ export const exercises: Exercise[] = [
     "description": "Salti consecutivi a piedi pari oltre ostacoli bassi.",
     "equipment": "Ostacoli",
     "dose": "4 × 5 ostacoli, recupero 90 s",
-    "details": "Disponi 5 ostacoli bassi in fila e saltali a piedi pari uno dopo l'altro, con contatti a terra brevi e reattivi. Le ginocchia salgono, le braccia danno slancio e l'atterraggio resta sugli avampiedi. Migliora la forza elastica delle gambe e la capacità di concatenare azioni esplosive."
+    "details": "Disponi 5 ostacoli bassi in fila e saltali a piedi pari uno dopo l'altro, con contatti a terra brevi e reattivi. Le ginocchia salgono, le braccia danno slancio e l'atterraggio resta sugli avampiedi. Migliora la forza elastica delle gambe e la capacità di concatenare azioni esplosive.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "forza-esplosiva--calci-saltati-jumping-kick",
@@ -438,7 +471,8 @@ export const exercises: Exercise[] = [
     "description": "Calcio circolare con salto, tecnica e potenza.",
     "equipment": "Sacco",
     "dose": "4 × 4 per lato, recupero 90 s",
-    "details": "Da guardia, fai un piccolo passo o una finta, salta e porta il calcio circolare in volo colpendo il sacco con la tibia, poi atterra in guardia. Qualità tecnica prima della potenza; atterra sempre in equilibrio. Sviluppa coordinazione esplosiva e un'arma a sorpresa."
+    "details": "Da guardia, fai un piccolo passo o una finta, salta e porta il calcio circolare in volo colpendo il sacco con la tibia, poi atterra in guardia. Qualità tecnica prima della potenza; atterra sempre in equilibrio. Sviluppa coordinazione esplosiva e un'arma a sorpresa.",
+    "tool": "sacco"
   },
   {
     "id": "forza-esplosiva--ginocchiata-volante",
@@ -447,7 +481,8 @@ export const exercises: Exercise[] = [
     "description": "Ginocchiata saltata al sacco con slancio delle braccia.",
     "equipment": "Sacco",
     "dose": "4 × 4 per lato, recupero 90 s",
-    "details": "Fai uno o due passi di rincorsa, spingi con la gamba d'appoggio e lancia in alto il ginocchio opposto verso il sacco, aiutandoti con lo slancio delle braccia. Atterra in guardia controllando l'equilibrio. Esalta la potenza di salto e il tempismo di una tecnica decisiva della Muay Thai."
+    "details": "Fai uno o due passi di rincorsa, spingi con la gamba d'appoggio e lancia in alto il ginocchio opposto verso il sacco, aiutandoti con lo slancio delle braccia. Atterra in guardia controllando l'equilibrio. Esalta la potenza di salto e il tempismo di una tecnica decisiva della Muay Thai.",
+    "tool": "sacco"
   },
   {
     "id": "forza-esplosiva--gomitata-saltata",
@@ -456,7 +491,8 @@ export const exercises: Exercise[] = [
     "description": "Gomitata dall'alto al sacco con salto.",
     "equipment": "Sacco",
     "dose": "4 × 4 per lato, recupero 90 s",
-    "details": "Avvicinati al sacco, salta e colpisci dall'alto verso il basso con la punta del gomito, sfruttando il peso del corpo nella discesa. Mantieni l'altra mano a protezione del viso e atterra stabile. Allena potenza, coordinazione e tempismo di un colpo spettacolare e pericoloso."
+    "details": "Avvicinati al sacco, salta e colpisci dall'alto verso il basso con la punta del gomito, sfruttando il peso del corpo nella discesa. Mantieni l'altra mano a protezione del viso e atterra stabile. Allena potenza, coordinazione e tempismo di un colpo spettacolare e pericoloso.",
+    "tool": "sacco"
   },
   {
     "id": "forza-esplosiva--superman-punch",
@@ -465,7 +501,8 @@ export const exercises: Exercise[] = [
     "description": "Finta di calcio e diretto saltato al sacco.",
     "equipment": "Sacco",
     "dose": "4 × 4 per lato, recupero 90 s",
-    "details": "Fingi un calcio alzando la gamba posteriore, poi riportala indietro con forza e usala per proiettarti in avanti con un diretto. Il pugno arriva mentre il corpo è in volo. Atterra in guardia con le mani alte. Allena coordinazione esplosiva e la finta per chiudere la distanza."
+    "details": "Fingi un calcio alzando la gamba posteriore, poi riportala indietro con forza e usala per proiettarti in avanti con un diretto. Il pugno arriva mentre il corpo è in volo. Atterra in guardia con le mani alte. Allena coordinazione esplosiva e la finta per chiudere la distanza.",
+    "tool": "sacco"
   },
   {
     "id": "forza-esplosiva--cambio-guardia-saltato",
@@ -501,7 +538,8 @@ export const exercises: Exercise[] = [
     "description": "Onde verticali con la corda pesante al massimo della forza.",
     "equipment": "Battle rope",
     "dose": "5 × 15 s, recupero 45 s",
-    "details": "In mezzo squat con un capo della corda in ogni mano, solleva le braccia sopra la testa e sbatti le corde a terra con tutta la forza, coinvolgendo anche e addome. Tieni la schiena neutra e i piedi ben piantati. Sviluppa potenza della parte alta e del core sotto fatica breve."
+    "details": "In mezzo squat con un capo della corda in ogni mano, solleva le braccia sopra la testa e sbatti le corde a terra con tutta la forza, coinvolgendo anche e addome. Tieni la schiena neutra e i piedi ben piantati. Sviluppa potenza della parte alta e del core sotto fatica breve.",
+    "tool": "battle-rope"
   },
   {
     "id": "forza-esplosiva--lancio-laterale-da-ginocchio",
@@ -510,7 +548,8 @@ export const exercises: Exercise[] = [
     "description": "In ginocchio, lancio rotazionale della palla medica contro il muro.",
     "equipment": "Palla medica",
     "dose": "3 × 6 per lato, recupero 60 s",
-    "details": "In ginocchio di fianco al muro, con il busto eretto, carica la palla sull'anca e lanciala ruotando energicamente il tronco. Senza il contributo delle gambe il lavoro è tutto di core e spalle. Isola la rotazione del tronco, fondamentale per ganci, gomitate e calci circolari."
+    "details": "In ginocchio di fianco al muro, con il busto eretto, carica la palla sull'anca e lanciala ruotando energicamente il tronco. Senza il contributo delle gambe il lavoro è tutto di core e spalle. Isola la rotazione del tronco, fondamentale per ganci, gomitate e calci circolari.",
+    "tool": "palla-medica"
   },
   {
     "id": "forza-esplosiva--spinte-di-palla-medica-in-affondo",
@@ -519,7 +558,8 @@ export const exercises: Exercise[] = [
     "description": "In affondo, lancio dal petto con trasferimento del peso in avanti.",
     "equipment": "Palla medica",
     "dose": "3 × 6 per lato, recupero 60 s",
-    "details": "In posizione di affondo con la palla al petto, spingi la palla in avanti con forza trasferendo il peso dalla gamba posteriore all'anteriore. Mantieni il busto stabile e il ginocchio anteriore allineato. Collega la spinta delle gambe a quella delle braccia, come nell'esecuzione dei pugni."
+    "details": "In posizione di affondo con la palla al petto, spingi la palla in avanti con forza trasferendo il peso dalla gamba posteriore all'anteriore. Mantieni il busto stabile e il ginocchio anteriore allineato. Collega la spinta delle gambe a quella delle braccia, come nell'esecuzione dei pugni.",
+    "tool": "palla-medica"
   },
   {
     "id": "forza-esplosiva--trap-bar-jump",
@@ -528,7 +568,8 @@ export const exercises: Exercise[] = [
     "description": "Salto con trap bar caricata leggera.",
     "equipment": "Trap bar",
     "dose": "4 × 4 ripetizioni, recupero 2 min",
-    "details": "Dentro la trap bar con carico leggero (20-30% del massimale), scendi a mezzo squat con schiena neutra e salta in alto il più possibile. Atterra morbido, stabilizzati e ripeti. La trap bar permette di caricare il salto in modo sicuro: aumenta la potenza degli arti inferiori."
+    "details": "Dentro la trap bar con carico leggero (20-30% del massimale), scendi a mezzo squat con schiena neutra e salta in alto il più possibile. Atterra morbido, stabilizzati e ripeti. La trap bar permette di caricare il salto in modo sicuro: aumenta la potenza degli arti inferiori.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-esplosiva--salti-sul-gradino-a-una-gamba",
@@ -546,7 +587,8 @@ export const exercises: Exercise[] = [
     "description": "Calci di spinta laterali contro la resistenza dell'elastico.",
     "equipment": "Elastico",
     "dose": "3 × 8 per gamba, recupero 60 s",
-    "details": "Con l'elastico alla caviglia, alza il ginocchio e spingi il piede di taglio lateralmente con forza, poi richiama controllato. La gamba d'appoggio resta stabile e le mani in guardia. Allena la potenza dei calci di spinta e la stabilità dell'anca."
+    "details": "Con l'elastico alla caviglia, alza il ginocchio e spingi il piede di taglio lateralmente con forza, poi richiama controllato. La gamba d'appoggio resta stabile e le mani in guardia. Allena la potenza dei calci di spinta e la stabilità dell'anca.",
+    "tool": "elastico"
   },
   {
     "id": "forza-massimale--back-squat",
@@ -555,7 +597,8 @@ export const exercises: Exercise[] = [
     "description": "Squat con bilanciere sulla schiena, 3-5 ripetizioni pesanti.",
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni all'85%, recupero 3 min",
-    "details": "Bilanciere appoggiato sui trapezi, piedi alla larghezza delle spalle: scendi controllando fino a rompere il parallelo e risali spingendo il pavimento. Costruisce la forza di base di gambe e anche da cui nascono calci, ginocchiate e spostamenti potenti. Mantieni il core contratto e le ginocchia in linea con le punte dei piedi."
+    "details": "Bilanciere appoggiato sui trapezi, piedi alla larghezza delle spalle: scendi controllando fino a rompere il parallelo e risali spingendo il pavimento. Costruisce la forza di base di gambe e anche da cui nascono calci, ginocchiate e spostamenti potenti. Mantieni il core contratto e le ginocchia in linea con le punte dei piedi.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--front-squat",
@@ -564,7 +607,8 @@ export const exercises: Exercise[] = [
     "description": "Squat con bilanciere sulle spalle anteriori, busto eretto.",
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni all'80%, recupero 3 min",
-    "details": "Bilanciere sui deltoidi anteriori, gomiti alti e busto verticale: scendi in profondità e risali senza far cadere i gomiti. Rafforza quadricipiti e core anteriore, utili per mantenere la postura eretta in clinch e sotto pressione. Se la presa è scomoda usa la presa incrociata o le cinghie."
+    "details": "Bilanciere sui deltoidi anteriori, gomiti alti e busto verticale: scendi in profondità e risali senza far cadere i gomiti. Rafforza quadricipiti e core anteriore, utili per mantenere la postura eretta in clinch e sotto pressione. Se la presa è scomoda usa la presa incrociata o le cinghie.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--stacco-da-terra",
@@ -573,7 +617,8 @@ export const exercises: Exercise[] = [
     "description": "Stacco classico con bilanciere, schiena neutra.",
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni all'85%, recupero 3-4 min",
-    "details": "Piedi sotto il bilanciere, presa appena fuori dalle gambe: spingi con le gambe e porta le anche avanti mantenendo il bilanciere vicino al corpo. Sviluppa tutta la catena posteriore, fondamentale per la potenza dei colpi e la stabilità nel clinch. Schiena neutra sempre: se si arrotonda, il carico è troppo alto."
+    "details": "Piedi sotto il bilanciere, presa appena fuori dalle gambe: spingi con le gambe e porta le anche avanti mantenendo il bilanciere vicino al corpo. Sviluppa tutta la catena posteriore, fondamentale per la potenza dei colpi e la stabilità nel clinch. Schiena neutra sempre: se si arrotonda, il carico è troppo alto.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--stacco-sumo",
@@ -582,7 +627,8 @@ export const exercises: Exercise[] = [
     "description": "Stacco a gambe larghe, forte richiamo di adduttori e glutei.",
     "equipment": "Bilanciere",
     "dose": "4 × 4 ripetizioni all'80%, recupero 3 min",
-    "details": "Piedi molto larghi e punte extraruotate, presa stretta tra le gambe: spingi le ginocchia in fuori e porta le anche sotto il bilanciere. Rinforza adduttori e glutei, muscoli chiave per la stabilità in guardia e per la potenza delle ginocchiate. Busto il più eretto possibile e bilanciere a contatto con le gambe."
+    "details": "Piedi molto larghi e punte extraruotate, presa stretta tra le gambe: spingi le ginocchia in fuori e porta le anche sotto il bilanciere. Rinforza adduttori e glutei, muscoli chiave per la stabilità in guardia e per la potenza delle ginocchiate. Busto il più eretto possibile e bilanciere a contatto con le gambe.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--stacco-rumeno",
@@ -591,7 +637,8 @@ export const exercises: Exercise[] = [
     "description": "Stacco a gambe semi-tese per femorali e glutei.",
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
-    "details": "Parti in piedi con il bilanciere, ginocchia leggermente flesse: spingi indietro le anche facendo scivolare il bilanciere lungo le cosce fino a sentire i femorali in tensione, poi risali. Protegge i femorali dagli infortuni e potenzia l'estensione d'anca usata nei calci. Controlla la discesa in 2-3 secondi."
+    "details": "Parti in piedi con il bilanciere, ginocchia leggermente flesse: spingi indietro le anche facendo scivolare il bilanciere lungo le cosce fino a sentire i femorali in tensione, poi risali. Protegge i femorali dagli infortuni e potenzia l'estensione d'anca usata nei calci. Controlla la discesa in 2-3 secondi.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--stacco-con-trap-bar",
@@ -600,7 +647,8 @@ export const exercises: Exercise[] = [
     "description": "Stacco con trap bar, più sicuro per la schiena.",
     "equipment": "Trap bar",
     "dose": "5 × 3 ripetizioni pesanti, recupero 3 min",
-    "details": "Entra nella trap bar, impugna le maniglie laterali e solleva spingendo con le gambe, busto inclinato e petto aperto. Permette carichi alti con meno stress sulla zona lombare, ideale per costruire forza generale in periodo di sparring intenso. Blocca in alto contraendo i glutei senza iperestendere la schiena."
+    "details": "Entra nella trap bar, impugna le maniglie laterali e solleva spingendo con le gambe, busto inclinato e petto aperto. Permette carichi alti con meno stress sulla zona lombare, ideale per costruire forza generale in periodo di sparring intenso. Blocca in alto contraendo i glutei senza iperestendere la schiena.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--panca-piana",
@@ -609,7 +657,8 @@ export const exercises: Exercise[] = [
     "description": "Distensione su panca con bilanciere.",
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni all'85%, recupero 3 min",
-    "details": "Sdraiato con scapole addotte e piedi ben piantati, abbassa il bilanciere a metà petto e spingi fino a braccia tese. Aumenta la forza di spinta di petto, spalle e tricipiti, base per pugni pesanti e per allontanare l'avversario. Usa sempre un compagno di assistenza con carichi elevati."
+    "details": "Sdraiato con scapole addotte e piedi ben piantati, abbassa il bilanciere a metà petto e spingi fino a braccia tese. Aumenta la forza di spinta di petto, spalle e tricipiti, base per pugni pesanti e per allontanare l'avversario. Usa sempre un compagno di assistenza con carichi elevati.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--panca-inclinata",
@@ -618,7 +667,8 @@ export const exercises: Exercise[] = [
     "description": "Distensione su panca inclinata per petto alto e spalle.",
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
-    "details": "Panca a 30-45°, scapole retratte: abbassa il bilanciere sulla parte alta del petto e spingi verso l'alto. Lavora l'angolo di spinta simile a quello di diretti e montanti, rinforzando petto alto e deltoidi anteriori. Non staccare i glutei dalla panca e controlla la discesa."
+    "details": "Panca a 30-45°, scapole retratte: abbassa il bilanciere sulla parte alta del petto e spingi verso l'alto. Lavora l'angolo di spinta simile a quello di diretti e montanti, rinforzando petto alto e deltoidi anteriori. Non staccare i glutei dalla panca e controlla la discesa.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--panca-con-manubri",
@@ -627,7 +677,8 @@ export const exercises: Exercise[] = [
     "description": "Distensione su panca con manubri pesanti.",
     "equipment": "Manubri",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
-    "details": "Sdraiato con manubri pesanti, abbassa con gomiti a circa 45° dal busto e spingi unendo leggermente i manubri in alto. Ogni braccio lavora in modo indipendente, correggendo squilibri tra lato forte e lato debole. Porta su i manubri appoggiandoli sulle ginocchia per iniziare in sicurezza."
+    "details": "Sdraiato con manubri pesanti, abbassa con gomiti a circa 45° dal busto e spingi unendo leggermente i manubri in alto. Ogni braccio lavora in modo indipendente, correggendo squilibri tra lato forte e lato debole. Porta su i manubri appoggiandoli sulle ginocchia per iniziare in sicurezza.",
+    "tool": "manubri"
   },
   {
     "id": "forza-massimale--military-press",
@@ -636,7 +687,8 @@ export const exercises: Exercise[] = [
     "description": "Spinta del bilanciere sopra la testa in piedi.",
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni all'80%, recupero 3 min",
-    "details": "In piedi, bilanciere sulle clavicole e glutei contratti: spingi in verticale portando la testa leggermente avanti a fine movimento. Rinforza spalle e tricipiti per tenere la guardia alta a lungo e per pugni più solidi. Evita di inarcare la zona lombare: stringi addome e glutei."
+    "details": "In piedi, bilanciere sulle clavicole e glutei contratti: spingi in verticale portando la testa leggermente avanti a fine movimento. Rinforza spalle e tricipiti per tenere la guardia alta a lungo e per pugni più solidi. Evita di inarcare la zona lombare: stringi addome e glutei.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--distensioni-con-manubri-in-piedi",
@@ -645,7 +697,8 @@ export const exercises: Exercise[] = [
     "description": "Spinta sopra la testa con manubri pesanti.",
     "equipment": "Manubri",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
-    "details": "In piedi, manubri all'altezza delle spalle: spingi sopra la testa senza piegare il busto all'indietro. Sviluppa forza e stabilità delle spalle in modo unilaterale, utile per guardia e clinch. Puoi alternare le braccia per aumentare il lavoro di stabilizzazione del core."
+    "details": "In piedi, manubri all'altezza delle spalle: spingi sopra la testa senza piegare il busto all'indietro. Sviluppa forza e stabilità delle spalle in modo unilaterale, utile per guardia e clinch. Puoi alternare le braccia per aumentare il lavoro di stabilizzazione del core.",
+    "tool": "manubri"
   },
   {
     "id": "forza-massimale--trazioni-zavorrate",
@@ -654,7 +707,8 @@ export const exercises: Exercise[] = [
     "description": "Trazioni alla sbarra con peso aggiuntivo.",
     "equipment": "Sbarra",
     "dose": "5 × 3 ripetizioni con zavorra, recupero 3 min",
-    "details": "Appeso alla sbarra con zavorra a cintura, scapole depresse: tira fino a portare il mento sopra la sbarra e scendi controllato a braccia tese. Costruisce la forza di trazione di dorsali e bicipiti, fondamentale per controllare la testa dell'avversario nel clinch. Niente slanci con le gambe."
+    "details": "Appeso alla sbarra con zavorra a cintura, scapole depresse: tira fino a portare il mento sopra la sbarra e scendi controllato a braccia tese. Costruisce la forza di trazione di dorsali e bicipiti, fondamentale per controllare la testa dell'avversario nel clinch. Niente slanci con le gambe.",
+    "tool": "sbarra"
   },
   {
     "id": "forza-massimale--trazioni-presa-neutra",
@@ -663,7 +717,8 @@ export const exercises: Exercise[] = [
     "description": "Trazioni con presa neutra, lente e pesanti.",
     "equipment": "Sbarra",
     "dose": "4 × 4 ripetizioni lente, recupero 2-3 min",
-    "details": "Impugna le maniglie parallele, sali in 2 secondi e scendi in 3 mantenendo il corpo fermo. La presa neutra è più gentile per gomiti e spalle e richiama molto bicipiti e brachiale, utili per la presa nel clinch. Aggiungi zavorra quando completi le ripetizioni con facilità."
+    "details": "Impugna le maniglie parallele, sali in 2 secondi e scendi in 3 mantenendo il corpo fermo. La presa neutra è più gentile per gomiti e spalle e richiama molto bicipiti e brachiale, utili per la presa nel clinch. Aggiungi zavorra quando completi le ripetizioni con facilità.",
+    "tool": "sbarra"
   },
   {
     "id": "forza-massimale--rematore-con-bilanciere",
@@ -672,7 +727,8 @@ export const exercises: Exercise[] = [
     "description": "Busto flesso, tirata del bilanciere all'ombelico.",
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
-    "details": "Busto inclinato a circa 45°, schiena neutra: tira il bilanciere verso l'ombelico portando i gomiti indietro, poi abbassa controllato. Rinforza dorso e retrattori delle scapole, bilanciando il lavoro di spinta dei pugni e migliorando la postura. Non usare il busto per dare slancio."
+    "details": "Busto inclinato a circa 45°, schiena neutra: tira il bilanciere verso l'ombelico portando i gomiti indietro, poi abbassa controllato. Rinforza dorso e retrattori delle scapole, bilanciando il lavoro di spinta dei pugni e migliorando la postura. Non usare il busto per dare slancio.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--rematore-con-manubrio",
@@ -681,7 +737,8 @@ export const exercises: Exercise[] = [
     "description": "Tirata pesante con un braccio, appoggio su panca.",
     "equipment": "Manubrio",
     "dose": "4 × 5 per lato, recupero 2 min",
-    "details": "Mano e ginocchio su panca, schiena piatta: tira il manubrio verso l'anca con il gomito vicino al corpo. Permette carichi alti su un lato alla volta, rafforzando dorsali e la tirata usata per strappare l'avversario nel clinch. Evita di ruotare il busto per sollevare."
+    "details": "Mano e ginocchio su panca, schiena piatta: tira il manubrio verso l'anca con il gomito vicino al corpo. Permette carichi alti su un lato alla volta, rafforzando dorsali e la tirata usata per strappare l'avversario nel clinch. Evita di ruotare il busto per sollevare.",
+    "tool": "manubri"
   },
   {
     "id": "forza-massimale--pendlay-row",
@@ -690,7 +747,8 @@ export const exercises: Exercise[] = [
     "description": "Rematore esplosivo da terra a ogni ripetizione.",
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni, recupero 2-3 min",
-    "details": "Busto quasi parallelo al pavimento, bilanciere a terra: tira esplosivamente verso il petto basso e riappoggia a terra ad ogni ripetizione. Unisce forza massimale e rapidità di attivazione del dorso, come negli strattoni del clinch. Mantieni la schiena rigida e neutra per tutta la serie."
+    "details": "Busto quasi parallelo al pavimento, bilanciere a terra: tira esplosivamente verso il petto basso e riappoggia a terra ad ogni ripetizione. Unisce forza massimale e rapidità di attivazione del dorso, come negli strattoni del clinch. Mantieni la schiena rigida e neutra per tutta la serie.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--dip-zavorrati",
@@ -699,7 +757,8 @@ export const exercises: Exercise[] = [
     "description": "Piegamenti alle parallele con zavorra.",
     "equipment": "Parallele",
     "dose": "4 × 5 con zavorra, recupero 2-3 min",
-    "details": "Alle parallele con zavorra, scendi finché le spalle arrivano poco sotto i gomiti e risali spingendo forte. Potenzia tricipiti e petto, i motori della distensione completa del braccio nel pugno. Non scendere troppo se hai spalle sensibili e mantieni il busto leggermente inclinato."
+    "details": "Alle parallele con zavorra, scendi finché le spalle arrivano poco sotto i gomiti e risali spingendo forte. Potenzia tricipiti e petto, i motori della distensione completa del braccio nel pugno. Non scendere troppo se hai spalle sensibili e mantieni il busto leggermente inclinato.",
+    "tool": "sbarra"
   },
   {
     "id": "forza-massimale--hip-thrust",
@@ -708,7 +767,8 @@ export const exercises: Exercise[] = [
     "description": "Spinta dell'anca con bilanciere, schiena appoggiata alla panca.",
     "equipment": "Bilanciere",
     "dose": "4 × 6 ripetizioni pesanti, recupero 2 min",
-    "details": "Scapole appoggiate alla panca, bilanciere imbottito sulle anche: spingi il bacino in alto fino ad allineare spalle, anche e ginocchia, poi scendi. Rafforza i glutei, cuore della potenza di calci circolari e ginocchiate. In alto mantieni il mento verso il petto e non iperestendere la lombare."
+    "details": "Scapole appoggiate alla panca, bilanciere imbottito sulle anche: spingi il bacino in alto fino ad allineare spalle, anche e ginocchia, poi scendi. Rafforza i glutei, cuore della potenza di calci circolari e ginocchiate. In alto mantieni il mento verso il petto e non iperestendere la lombare.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--affondi-bulgari",
@@ -717,7 +777,8 @@ export const exercises: Exercise[] = [
     "description": "Squat a una gamba con piede posteriore su panca.",
     "equipment": "Manubri",
     "dose": "4 × 5 per gamba, recupero 2 min",
-    "details": "Piede posteriore sul banco, manubri pesanti in mano: scendi in verticale fino a sfiorare il pavimento con il ginocchio dietro e risali spingendo con la gamba davanti. Sviluppa forza unilaterale ed equilibrio, essenziali per la gamba d'appoggio durante i calci. Ginocchio anteriore stabile, senza collassare verso l'interno."
+    "details": "Piede posteriore sul banco, manubri pesanti in mano: scendi in verticale fino a sfiorare il pavimento con il ginocchio dietro e risali spingendo con la gamba davanti. Sviluppa forza unilaterale ed equilibrio, essenziali per la gamba d'appoggio durante i calci. Ginocchio anteriore stabile, senza collassare verso l'interno.",
+    "tool": "manubri"
   },
   {
     "id": "forza-massimale--affondi-con-bilanciere",
@@ -726,7 +787,8 @@ export const exercises: Exercise[] = [
     "description": "Affondi in camminata o sul posto con bilanciere.",
     "equipment": "Bilanciere",
     "dose": "4 × 5 per gamba, recupero 2 min",
-    "details": "Bilanciere sulla schiena, fai un passo ampio in avanti e scendi fino a 90° con entrambe le ginocchia, poi torna o prosegui in camminata. Rinforza gambe e glutei in un movimento simile a passi e cambi di guardia. Busto eretto e passo abbastanza lungo da non stressare il ginocchio."
+    "details": "Bilanciere sulla schiena, fai un passo ampio in avanti e scendi fino a 90° con entrambe le ginocchia, poi torna o prosegui in camminata. Rinforza gambe e glutei in un movimento simile a passi e cambi di guardia. Busto eretto e passo abbastanza lungo da non stressare il ginocchio.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--step-up-pesante",
@@ -744,7 +806,8 @@ export const exercises: Exercise[] = [
     "description": "Squat su una gamba con peso leggero tenuto davanti.",
     "equipment": "Kettlebell",
     "dose": "4 × 3 per gamba, recupero 2 min",
-    "details": "Su una gamba, l'altra tesa in avanti, kettlebell tenuto al petto come contrappeso: scendi lentamente fino in fondo e risali. Sviluppa forza, equilibrio e controllo della gamba d'appoggio, decisivi quando calci o subisci un calcio. Se la profondità è eccessiva, scendi su un box come supporto."
+    "details": "Su una gamba, l'altra tesa in avanti, kettlebell tenuto al petto come contrappeso: scendi lentamente fino in fondo e risali. Sviluppa forza, equilibrio e controllo della gamba d'appoggio, decisivi quando calci o subisci un calcio. Se la profondità è eccessiva, scendi su un box come supporto.",
+    "tool": "kettlebell"
   },
   {
     "id": "forza-massimale--squat-con-pausa",
@@ -753,7 +816,8 @@ export const exercises: Exercise[] = [
     "description": "Squat con pausa di 2 secondi in basso.",
     "equipment": "Bilanciere",
     "dose": "5 × 3 con pausa di 2 s, recupero 3 min",
-    "details": "Esegui lo squat normale ma fermati 2 secondi nel punto più basso mantenendo la tensione, poi risali con decisione. Elimina il rimbalzo elastico e costruisce forza pura dalla posizione bassa, utile per partenze esplosive. Usa circa il 70-75% del carico massimo e non rilassarti in buca."
+    "details": "Esegui lo squat normale ma fermati 2 secondi nel punto più basso mantenendo la tensione, poi risali con decisione. Elimina il rimbalzo elastico e costruisce forza pura dalla posizione bassa, utile per partenze esplosive. Usa circa il 70-75% del carico massimo e non rilassarti in buca.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--box-squat",
@@ -762,7 +826,8 @@ export const exercises: Exercise[] = [
     "description": "Squat seduti su box, poi spinta esplosiva.",
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni, recupero 2-3 min",
-    "details": "Scendi all'indietro fino a sederti su un box all'altezza del parallelo, fermati un istante senza rilassarti e risali in modo esplosivo. Allena la partenza da fermo e la catena posteriore, come lo scatto in avanti per entrare a colpire. Siediti in modo controllato, mai lasciarti cadere sul box."
+    "details": "Scendi all'indietro fino a sederti su un box all'altezza del parallelo, fermati un istante senza rilassarti e risali in modo esplosivo. Allena la partenza da fermo e la catena posteriore, come lo scatto in avanti per entrare a colpire. Siediti in modo controllato, mai lasciarti cadere sul box.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--good-morning",
@@ -771,7 +836,8 @@ export const exercises: Exercise[] = [
     "description": "Flessione del busto con bilanciere sulle spalle.",
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni moderate, recupero 2 min",
-    "details": "Bilanciere sulla schiena e ginocchia leggermente flesse: spingi le anche indietro abbassando il busto quasi parallelo al pavimento, poi risali. Rinforza lombari e femorali, proteggendo la schiena da clinch e cadute. Usa carichi moderati e schiena sempre neutra: è un esercizio da eseguire con rigore."
+    "details": "Bilanciere sulla schiena e ginocchia leggermente flesse: spingi le anche indietro abbassando il busto quasi parallelo al pavimento, poi risali. Rinforza lombari e femorali, proteggendo la schiena da clinch e cadute. Usa carichi moderati e schiena sempre neutra: è un esercizio da eseguire con rigore.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--floor-press",
@@ -780,7 +846,8 @@ export const exercises: Exercise[] = [
     "description": "Distensione da terra con bilanciere, lavoro sul blocco del colpo.",
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni, recupero 2-3 min",
-    "details": "Sdraiato a terra, abbassa il bilanciere finché i tricipiti toccano il pavimento, pausa breve e spingi in alto. Rafforza la parte finale della spinta, quella che dà forza all'impatto del pugno, con meno stress sulle spalle. Gomiti a circa 45° dal busto e assistenza per carichi elevati."
+    "details": "Sdraiato a terra, abbassa il bilanciere finché i tricipiti toccano il pavimento, pausa breve e spingi in alto. Rafforza la parte finale della spinta, quella che dà forza all'impatto del pugno, con meno stress sulle spalle. Gomiti a circa 45° dal busto e assistenza per carichi elevati.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--close-grip-bench",
@@ -789,7 +856,8 @@ export const exercises: Exercise[] = [
     "description": "Panca presa stretta per tricipiti.",
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
-    "details": "Presa alla larghezza delle spalle, abbassa il bilanciere verso il petto basso tenendo i gomiti vicino al corpo e spingi. Potenzia i tricipiti, muscoli che estendono il braccio nei diretti e nelle gomitate. Non stringere troppo la presa per non sovraccaricare i polsi."
+    "details": "Presa alla larghezza delle spalle, abbassa il bilanciere verso il petto basso tenendo i gomiti vicino al corpo e spingi. Potenzia i tricipiti, muscoli che estendono il braccio nei diretti e nelle gomitate. Non stringere troppo la presa per non sovraccaricare i polsi.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--farmer-walk-pesante",
@@ -798,7 +866,8 @@ export const exercises: Exercise[] = [
     "description": "Camminata con carichi pesanti nelle mani.",
     "equipment": "Manubri",
     "dose": "4 × 30 m, recupero 2 min",
-    "details": "Afferra due manubri o kettlebell pesanti, spalle basse e petto alto, e cammina a passi brevi e veloci. Rafforza presa, trapezi e core, qualità che servono per resistere e dominare nel clinch. Non lasciare che le spalle si chiudano in avanti e respira in modo controllato."
+    "details": "Afferra due manubri o kettlebell pesanti, spalle basse e petto alto, e cammina a passi brevi e veloci. Rafforza presa, trapezi e core, qualità che servono per resistere e dominare nel clinch. Non lasciare che le spalle si chiudano in avanti e respira in modo controllato.",
+    "tool": "manubri"
   },
   {
     "id": "forza-massimale--suitcase-carry",
@@ -807,7 +876,8 @@ export const exercises: Exercise[] = [
     "description": "Camminata con un solo carico, tronco dritto.",
     "equipment": "Kettlebell",
     "dose": "4 × 20 m per lato, recupero 90 s",
-    "details": "Tieni un kettlebell pesante in una sola mano e cammina mantenendo busto perfettamente verticale, senza inclinarti verso il carico. Allena gli obliqui e la stabilità laterale, utili per non farsi sbilanciare nel clinch e durante i calci. Cambia mano a ogni serie."
+    "details": "Tieni un kettlebell pesante in una sola mano e cammina mantenendo busto perfettamente verticale, senza inclinarti verso il carico. Allena gli obliqui e la stabilità laterale, utili per non farsi sbilanciare nel clinch e durante i calci. Cambia mano a ogni serie.",
+    "tool": "kettlebell"
   },
   {
     "id": "forza-massimale--turkish-get-up-pesante",
@@ -816,7 +886,8 @@ export const exercises: Exercise[] = [
     "description": "Alzata turca con kettlebell pesante, lenta e controllata.",
     "equipment": "Kettlebell",
     "dose": "3 × 2 per lato, recupero 2 min",
-    "details": "Da sdraiato con il kettlebell a braccio teso, alzati in piedi passando per gomito, mano, ginocchio, poi torna a terra invertendo le fasi. Costruisce spalle stabili e controllo totale del corpo, utile per rialzarsi e mantenere la guardia sotto fatica. Tieni sempre lo sguardo sul kettlebell e il braccio bloccato."
+    "details": "Da sdraiato con il kettlebell a braccio teso, alzati in piedi passando per gomito, mano, ginocchio, poi torna a terra invertendo le fasi. Costruisce spalle stabili e controllo totale del corpo, utile per rialzarsi e mantenere la guardia sotto fatica. Tieni sempre lo sguardo sul kettlebell e il braccio bloccato.",
+    "tool": "kettlebell"
   },
   {
     "id": "forza-massimale--zercher-squat",
@@ -825,7 +896,8 @@ export const exercises: Exercise[] = [
     "description": "Squat con bilanciere nell'incavo dei gomiti, utile per il clinch.",
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
-    "details": "Bilanciere nell'incavo dei gomiti, mani unite davanti al petto: scendi in squat profondo mantenendo il busto eretto. Simula la tenuta dell'avversario stretto a sé, rafforzando braccia, core e gambe per il clinch. Usa un pad sul bilanciere per proteggere gli avambracci."
+    "details": "Bilanciere nell'incavo dei gomiti, mani unite davanti al petto: scendi in squat profondo mantenendo il busto eretto. Simula la tenuta dell'avversario stretto a sé, rafforzando braccia, core e gambe per il clinch. Usa un pad sul bilanciere per proteggere gli avambracci.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--zercher-carry",
@@ -834,7 +906,8 @@ export const exercises: Exercise[] = [
     "description": "Camminata con bilanciere nell'incavo dei gomiti.",
     "equipment": "Bilanciere",
     "dose": "4 × 20 m, recupero 2 min",
-    "details": "Solleva il bilanciere nell'incavo dei gomiti e cammina con passi corti, busto dritto e addome contratto. Allena la forza di stringere e trasportare un peso davanti al corpo, come quando si controlla l'avversario in clinch. Usa un'imbottitura e non far cadere il bilanciere verso le mani."
+    "details": "Solleva il bilanciere nell'incavo dei gomiti e cammina con passi corti, busto dritto e addome contratto. Allena la forza di stringere e trasportare un peso davanti al corpo, come quando si controlla l'avversario in clinch. Usa un'imbottitura e non far cadere il bilanciere verso le mani.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--stacco-su-una-gamba",
@@ -843,7 +916,8 @@ export const exercises: Exercise[] = [
     "description": "Stacco rumeno su una gamba con kettlebell.",
     "equipment": "Kettlebell",
     "dose": "4 × 5 per gamba, recupero 90 s",
-    "details": "Su una gamba con kettlebell nella mano opposta, porta il busto in avanti e la gamba libera indietro fino ad avere il corpo quasi orizzontale, poi risali. Rinforza femorali e glutei e migliora l'equilibrio della gamba d'appoggio nei calci. Mantieni le anche allineate, senza aprire il bacino."
+    "details": "Su una gamba con kettlebell nella mano opposta, porta il busto in avanti e la gamba libera indietro fino ad avere il corpo quasi orizzontale, poi risali. Rinforza femorali e glutei e migliora l'equilibrio della gamba d'appoggio nei calci. Mantieni le anche allineate, senza aprire il bacino.",
+    "tool": "kettlebell"
   },
   {
     "id": "forza-massimale--nordic-curl",
@@ -861,7 +935,8 @@ export const exercises: Exercise[] = [
     "description": "Sollevamento sulle punte con carico, per caviglie e spinta.",
     "equipment": "Bilanciere",
     "dose": "4 × 8 ripetizioni, recupero 90 s",
-    "details": "Bilanciere sulla schiena, avampiedi su un rialzo: sali sulle punte il più in alto possibile, tieni 1 secondo e scendi lentamente sotto il livello del rialzo. Rafforza polpacci e caviglie per spostamenti sulle punte, rotazioni nei calci e stabilità. Evita rimbalzi e controlla tutta l'ampiezza."
+    "details": "Bilanciere sulla schiena, avampiedi su un rialzo: sali sulle punte il più in alto possibile, tieni 1 secondo e scendi lentamente sotto il livello del rialzo. Rafforza polpacci e caviglie per spostamenti sulle punte, rotazioni nei calci e stabilità. Evita rimbalzi e controlla tutta l'ampiezza.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--shrug-con-bilanciere",
@@ -870,7 +945,8 @@ export const exercises: Exercise[] = [
     "description": "Scrollate di spalle pesanti per trapezi e collo.",
     "equipment": "Bilanciere",
     "dose": "4 × 6 ripetizioni pesanti, recupero 2 min",
-    "details": "In piedi con il bilanciere a braccia tese, solleva le spalle verso le orecchie senza piegare i gomiti, tieni un istante e abbassa. Trapezi forti proteggono il collo dagli impatti e aiutano a resistere alle tirate di testa nel clinch. Non ruotare le spalle: solo movimento verticale."
+    "details": "In piedi con il bilanciere a braccia tese, solleva le spalle verso le orecchie senza piegare i gomiti, tieni un istante e abbassa. Trapezi forti proteggono il collo dagli impatti e aiutano a resistere alle tirate di testa nel clinch. Non ruotare le spalle: solo movimento verticale.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--ponte-per-il-collo",
@@ -906,7 +982,8 @@ export const exercises: Exercise[] = [
     "description": "Spinta isometrica massimale contro le sicure del rack.",
     "equipment": "Rack",
     "dose": "5 × 6 s di spinta massimale, recupero 2 min",
-    "details": "Posiziona il bilanciere sotto le sicure del rack all'altezza di mezzo squat e spingi con tutta la forza contro di esse. Recluta il massimo delle fibre muscolari senza movimento, aumentando la forza nel punto critico. Respira prima, mantieni la schiena neutra e aumenta la spinta in modo progressivo."
+    "details": "Posiziona il bilanciere sotto le sicure del rack all'altezza di mezzo squat e spingi con tutta la forza contro di esse. Recluta il massimo delle fibre muscolari senza movimento, aumentando la forza nel punto critico. Respira prima, mantieni la schiena neutra e aumenta la spinta in modo progressivo.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--isometria-al-rack-stacco",
@@ -915,7 +992,8 @@ export const exercises: Exercise[] = [
     "description": "Tirata isometrica massimale dal blocco.",
     "equipment": "Rack",
     "dose": "5 × 6 s di tirata massimale, recupero 2 min",
-    "details": "Bilanciere bloccato sotto le sicure all'altezza del ginocchio: assumi la posizione di stacco e tira con la massima intensità. Sviluppa la forza della catena posteriore in sicurezza, senza carichi enormi da gestire. Spalle sopra il bilanciere e schiena piatta, nessuno strattone iniziale."
+    "details": "Bilanciere bloccato sotto le sicure all'altezza del ginocchio: assumi la posizione di stacco e tira con la massima intensità. Sviluppa la forza della catena posteriore in sicurezza, senza carichi enormi da gestire. Spalle sopra il bilanciere e schiena piatta, nessuno strattone iniziale.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--spinta-isometrica-al-muro",
@@ -933,7 +1011,8 @@ export const exercises: Exercise[] = [
     "description": "Posizione seduta al muro con peso sulle cosce.",
     "equipment": "Disco",
     "dose": "4 × 40 s con disco, recupero 90 s",
-    "details": "Schiena al muro e cosce parallele al pavimento, appoggia un disco pesante sulle cosce e mantieni la posizione. Rafforza i quadricipiti e la tenuta in posizione flessa, utile per guardia bassa e spostamenti. Ginocchia sopra le caviglie e piedi piatti a terra."
+    "details": "Schiena al muro e cosce parallele al pavimento, appoggia un disco pesante sulle cosce e mantieni la posizione. Rafforza i quadricipiti e la tenuta in posizione flessa, utile per guardia bassa e spostamenti. Ginocchia sopra le caviglie e piedi piatti a terra.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--trazioni-lente-in-eccentrica",
@@ -942,7 +1021,8 @@ export const exercises: Exercise[] = [
     "description": "Discesa di 5 secondi dalla sbarra, zavorrata.",
     "equipment": "Sbarra",
     "dose": "4 × 3 discese da 5 s, recupero 2 min",
-    "details": "Sali sopra la sbarra con un salto o una spinta e scendi in 5 secondi controllati fino a braccia tese, con zavorra se possibile. La fase eccentrica costruisce forza e resistenza dei tendini di dorsali e bicipiti. Mantieni le scapole attive e non lasciarti cadere nell'ultima parte."
+    "details": "Sali sopra la sbarra con un salto o una spinta e scendi in 5 secondi controllati fino a braccia tese, con zavorra se possibile. La fase eccentrica costruisce forza e resistenza dei tendini di dorsali e bicipiti. Mantieni le scapole attive e non lasciarti cadere nell'ultima parte.",
+    "tool": "sbarra"
   },
   {
     "id": "forza-massimale--croci-ai-cavi-pesanti",
@@ -1014,7 +1094,8 @@ export const exercises: Exercise[] = [
     "description": "Flessione dei gomiti pesante per la presa e il clinch.",
     "equipment": "Bilanciere",
     "dose": "4 × 6 ripetizioni, recupero 90 s",
-    "details": "In piedi, gomiti vicino ai fianchi: fletti le braccia portando il bilanciere alle spalle e scendi lentamente. Rafforza bicipiti e flessori dell'avambraccio, utili per tenere e tirare la testa dell'avversario nel clinch. Niente oscillazioni del busto."
+    "details": "In piedi, gomiti vicino ai fianchi: fletti le braccia portando il bilanciere alle spalle e scendi lentamente. Rafforza bicipiti e flessori dell'avambraccio, utili per tenere e tirare la testa dell'avversario nel clinch. Niente oscillazioni del busto.",
+    "tool": "bilanciere"
   },
   {
     "id": "forza-massimale--presa-con-pinze-o-asciugamano",
@@ -1023,7 +1104,8 @@ export const exercises: Exercise[] = [
     "description": "Sospensione alla sbarra con asciugamani per la forza della presa.",
     "equipment": "Sbarra",
     "dose": "4 × 20-30 s di sospensione, recupero 90 s",
-    "details": "Avvolgi due asciugamani sulla sbarra, afferrali e resta appeso a braccia tese, scapole attive. Sviluppa una presa ferrea per controllare collo e braccia dell'avversario nel clinch. Aggiungi zavorra o passa a una sola mano quando superi i 30 secondi."
+    "details": "Avvolgi due asciugamani sulla sbarra, afferrali e resta appeso a braccia tese, scapole attive. Sviluppa una presa ferrea per controllare collo e braccia dell'avversario nel clinch. Aggiungi zavorra o passa a una sola mano quando superi i 30 secondi.",
+    "tool": "sbarra"
   },
   {
     "id": "forza-resistente--piegamenti-a-ripresa",
@@ -1068,7 +1150,8 @@ export const exercises: Exercise[] = [
     "description": "Serie crescenti e decrescenti di trazioni con recupero minimo.",
     "equipment": "Sbarra",
     "dose": "Scala 1-2-3-4-5-4-3-2-1, recupero 15 s",
-    "details": "Esegui una trazione, poi due, fino al picco e poi riscendi, con pause brevissime tra i gradini. Presa prona, scapole depresse e mento sopra la sbarra a ogni ripetizione. Sviluppa la resistenza di dorsali e bicipiti necessaria per controllare l'avversario nel clinch."
+    "details": "Esegui una trazione, poi due, fino al picco e poi riscendi, con pause brevissime tra i gradini. Presa prona, scapole depresse e mento sopra la sbarra a ogni ripetizione. Sviluppa la resistenza di dorsali e bicipiti necessaria per controllare l'avversario nel clinch.",
+    "tool": "sbarra"
   },
   {
     "id": "forza-resistente--dip-a-corpo-libero-ad-alte-ripetizioni",
@@ -1077,7 +1160,8 @@ export const exercises: Exercise[] = [
     "description": "Serie lunghe alle parallele.",
     "equipment": "Parallele",
     "dose": "4 × 15-20 ripetizioni, recupero 45 s",
-    "details": "Dalle braccia tese alle parallele scendi finché i gomiti arrivano a circa 90°, busto leggermente inclinato in avanti, poi risali con controllo. Evita di scendere troppo per non stressare le spalle. Rinforza tricipiti e petto per pugni e gomitate che restano incisivi anche da stanchi."
+    "details": "Dalle braccia tese alle parallele scendi finché i gomiti arrivano a circa 90°, busto leggermente inclinato in avanti, poi risali con controllo. Evita di scendere troppo per non stressare le spalle. Rinforza tricipiti e petto per pugni e gomitate che restano incisivi anche da stanchi.",
+    "tool": "sbarra"
   },
   {
     "id": "forza-resistente--kettlebell-swing-a-tempo",
@@ -1086,7 +1170,8 @@ export const exercises: Exercise[] = [
     "description": "Swing continui per 1-2 minuti.",
     "equipment": "Kettlebell",
     "dose": "5 × 1 min, recupero 30 s",
-    "details": "Con piedi larghi, fletti le anche spingendo indietro il bacino e proietta la kettlebell fino all'altezza del petto con una spinta esplosiva dei glutei. Schiena neutra, le braccia accompagnano soltanto. Allena la catena posteriore a ripetere spinte d'anca, base di ginocchiate e calci potenti."
+    "details": "Con piedi larghi, fletti le anche spingendo indietro il bacino e proietta la kettlebell fino all'altezza del petto con una spinta esplosiva dei glutei. Schiena neutra, le braccia accompagnano soltanto. Allena la catena posteriore a ripetere spinte d'anca, base di ginocchiate e calci potenti.",
+    "tool": "kettlebell"
   },
   {
     "id": "forza-resistente--circuito-kettlebell",
@@ -1095,7 +1180,8 @@ export const exercises: Exercise[] = [
     "description": "Swing, goblet squat e rematore in sequenza senza pausa.",
     "equipment": "Kettlebell",
     "dose": "4 giri × 12 rip. per esercizio, recupero 1 min",
-    "details": "Esegui 12 swing, 12 goblet squat e 12 rematori per lato in sequenza, senza appoggiare la kettlebell tra un esercizio e l'altro. Scegli un carico moderato che ti permetta tecnica pulita fino all'ultimo giro. Lavora tutto il corpo con densità simile a una ripresa intensa."
+    "details": "Esegui 12 swing, 12 goblet squat e 12 rematori per lato in sequenza, senza appoggiare la kettlebell tra un esercizio e l'altro. Scegli un carico moderato che ti permetta tecnica pulita fino all'ultimo giro. Lavora tutto il corpo con densità simile a una ripresa intensa.",
+    "tool": "kettlebell"
   },
   {
     "id": "forza-resistente--goblet-squat-ad-alte-ripetizioni",
@@ -1104,7 +1190,8 @@ export const exercises: Exercise[] = [
     "description": "Squat con kettlebell al petto, 20-30 ripetizioni.",
     "equipment": "Kettlebell",
     "dose": "3 × 25 ripetizioni, recupero 45 s",
-    "details": "Tieni la kettlebell per le maniglie vicino al petto, gomiti all'interno, e scendi in squat profondo mantenendo il busto alto. Risali spingendo con tutto il piede. Rinforza gambe e core in modo stabile, migliorando la tenuta in guardia e la spinta nei calci."
+    "details": "Tieni la kettlebell per le maniglie vicino al petto, gomiti all'interno, e scendi in squat profondo mantenendo il busto alto. Risali spingendo con tutto il piede. Rinforza gambe e core in modo stabile, migliorando la tenuta in guardia e la spinta nei calci.",
+    "tool": "kettlebell"
   },
   {
     "id": "forza-resistente--thruster-con-manubri",
@@ -1113,7 +1200,8 @@ export const exercises: Exercise[] = [
     "description": "Squat e spinta sopra la testa in un unico movimento continuo.",
     "equipment": "Manubri",
     "dose": "4 × 15 ripetizioni, recupero 45 s",
-    "details": "Con i manubri sulle spalle scendi in squat e, risalendo, usa la spinta delle gambe per portarli sopra la testa in un unico gesto fluido. Core contratto per non inarcare la schiena. Insegna a trasferire la forza dalle gambe alle braccia, come nei pugni, sotto affaticamento."
+    "details": "Con i manubri sulle spalle scendi in squat e, risalendo, usa la spinta delle gambe per portarli sopra la testa in un unico gesto fluido. Core contratto per non inarcare la schiena. Insegna a trasferire la forza dalle gambe alle braccia, come nei pugni, sotto affaticamento.",
+    "tool": "manubri"
   },
   {
     "id": "forza-resistente--manubri-in-guardia",
@@ -1122,7 +1210,8 @@ export const exercises: Exercise[] = [
     "description": "Tenere manubri leggeri in guardia per 3 minuti.",
     "equipment": "Manubri",
     "dose": "3 × 2-3 min, recupero 1 min",
-    "details": "In posizione di guardia, con manubri da 1-2 kg, mantieni le mani all'altezza del viso e i gomiti chiusi, muovendoti leggermente sulle gambe. Non abbassare le mani nemmeno a fine serie. Rinforza spalle e trapezi per una guardia che non cede negli ultimi round."
+    "details": "In posizione di guardia, con manubri da 1-2 kg, mantieni le mani all'altezza del viso e i gomiti chiusi, muovendoti leggermente sulle gambe. Non abbassare le mani nemmeno a fine serie. Rinforza spalle e trapezi per una guardia che non cede negli ultimi round.",
+    "tool": "manubri"
   },
   {
     "id": "forza-resistente--shadow-boxing-con-manubri-leggeri",
@@ -1131,7 +1220,8 @@ export const exercises: Exercise[] = [
     "description": "Pugni con manubri da 1-2 kg per una ripresa.",
     "equipment": "Manubri",
     "dose": "3 riprese da 2 min, recupero 1 min",
-    "details": "Esegui combinazioni di pugni in shadow con manubri da 1-2 kg, ritornando sempre in guardia dopo ogni colpo. Non estendere completamente il gomito per proteggere l'articolazione. Allena la resistenza di spalle e braccia mantenendo il gesto tecnico del pugno."
+    "details": "Esegui combinazioni di pugni in shadow con manubri da 1-2 kg, ritornando sempre in guardia dopo ogni colpo. Non estendere completamente il gomito per proteggere l'articolazione. Allena la resistenza di spalle e braccia mantenendo il gesto tecnico del pugno.",
+    "tool": "manubri"
   },
   {
     "id": "forza-resistente--sacco-con-cavigliere",
@@ -1149,7 +1239,8 @@ export const exercises: Exercise[] = [
     "description": "Ginocchiate alternate continue per 3 minuti.",
     "equipment": "Sacco",
     "dose": "3 riprese da 3 min, recupero 1 min",
-    "details": "Afferra il sacco come in un clinch e alterna ginocchiate dritte spingendo l'anca in avanti e salendo sull'avampiede della gamba d'appoggio. Tieni il ritmo costante fino al gong. Allena la resistenza specifica di core, flessori e glutei per vincere le fasi di clinch."
+    "details": "Afferra il sacco come in un clinch e alterna ginocchiate dritte spingendo l'anca in avanti e salendo sull'avampiede della gamba d'appoggio. Tieni il ritmo costante fino al gong. Allena la resistenza specifica di core, flessori e glutei per vincere le fasi di clinch.",
+    "tool": "sacco"
   },
   {
     "id": "forza-resistente--calci-circolari-a-ripresa",
@@ -1158,7 +1249,8 @@ export const exercises: Exercise[] = [
     "description": "Calci alternati al sacco per 3 minuti senza fermarsi.",
     "equipment": "Sacco",
     "dose": "3 riprese da 3 min, recupero 1 min",
-    "details": "Alterna calci circolari destro e sinistro al sacco senza fermarti, ruotando sul piede d'appoggio e colpendo con la tibia. Rientra sempre in guardia tra un calcio e l'altro. Costruisce la resistenza per calciare con potenza anche nelle riprese finali."
+    "details": "Alterna calci circolari destro e sinistro al sacco senza fermarti, ruotando sul piede d'appoggio e colpendo con la tibia. Rientra sempre in guardia tra un calcio e l'altro. Costruisce la resistenza per calciare con potenza anche nelle riprese finali.",
+    "tool": "sacco"
   },
   {
     "id": "forza-resistente--teep-continui-al-sacco",
@@ -1167,7 +1259,8 @@ export const exercises: Exercise[] = [
     "description": "Calci frontali alternati per una ripresa.",
     "equipment": "Sacco",
     "dose": "3 riprese da 2 min, recupero 1 min",
-    "details": "Alterna teep destro e sinistro al sacco, sollevando il ginocchio prima di estendere e spingendo con la pianta del piede attraverso il bersaglio. Mantieni le mani alte. Rinforza flessori dell'anca e core, utili per controllare la distanza per tutto l'incontro."
+    "details": "Alterna teep destro e sinistro al sacco, sollevando il ginocchio prima di estendere e spingendo con la pianta del piede attraverso il bersaglio. Mantieni le mani alte. Rinforza flessori dell'anca e core, utili per controllare la distanza per tutto l'incontro.",
+    "tool": "sacco"
   },
   {
     "id": "forza-resistente--wall-sit-a-tempo",
@@ -1221,7 +1314,8 @@ export const exercises: Exercise[] = [
     "description": "Onde alternate per 3 minuti.",
     "equipment": "Battle rope",
     "dose": "3 riprese da 3 min (30 s on/15 s off)",
-    "details": "In mezzo squat, crea onde alternate con le corde muovendo le braccia dalle spalle, busto stabile e core contratto. Mantieni l'ampiezza delle onde fino alla fine. Allena la resistenza di braccia e spalle sotto stress metabolico, come in una serie di scambi intensi."
+    "details": "In mezzo squat, crea onde alternate con le corde muovendo le braccia dalle spalle, busto stabile e core contratto. Mantieni l'ampiezza delle onde fino alla fine. Allena la resistenza di braccia e spalle sotto stress metabolico, come in una serie di scambi intensi.",
+    "tool": "battle-rope"
   },
   {
     "id": "forza-resistente--spinta-della-slitta-lunga",
@@ -1248,7 +1342,8 @@ export const exercises: Exercise[] = [
     "description": "Camminata con carichi medi su lunga distanza.",
     "equipment": "Manubri",
     "dose": "4 × 50 m, recupero 1 min",
-    "details": "Con un manubrio pesante per mano, cammina a passi regolari mantenendo busto eretto, spalle basse e addome contratto. Non far oscillare i pesi. Rinforza presa, trapezi e core: una presa resistente è fondamentale per controllare l'avversario nel clinch."
+    "details": "Con un manubrio pesante per mano, cammina a passi regolari mantenendo busto eretto, spalle basse e addome contratto. Non far oscillare i pesi. Rinforza presa, trapezi e core: una presa resistente è fondamentale per controllare l'avversario nel clinch.",
+    "tool": "manubri"
   },
   {
     "id": "forza-resistente--sandbag-carry",
@@ -1257,7 +1352,8 @@ export const exercises: Exercise[] = [
     "description": "Trasporto del sacco di sabbia abbracciato al petto.",
     "equipment": "Sandbag",
     "dose": "4 × 40 m, recupero 1 min",
-    "details": "Abbraccia il sandbag stretto al petto, gomiti chiusi, e cammina mantenendo la schiena dritta senza inarcarti all'indietro. Respira con il diaframma nonostante la compressione. Simula la tenuta di un corpo nel clinch, rinforzando braccia, dorso e core."
+    "details": "Abbraccia il sandbag stretto al petto, gomiti chiusi, e cammina mantenendo la schiena dritta senza inarcarti all'indietro. Respira con il diaframma nonostante la compressione. Simula la tenuta di un corpo nel clinch, rinforzando braccia, dorso e core.",
+    "tool": "sandbag"
   },
   {
     "id": "forza-resistente--sandbag-over-the-shoulder",
@@ -1266,7 +1362,8 @@ export const exercises: Exercise[] = [
     "description": "Sollevare il sandbag da terra e lanciarlo sopra la spalla, a ripetizione.",
     "equipment": "Sandbag",
     "dose": "4 × 10 ripetizioni (alternate), recupero 1 min",
-    "details": "Accosciati sopra il sandbag, abbraccialo, portalo sulle cosce e con una spinta d'anca lancialo oltre una spalla, alternando i lati. Solleva con le gambe, non con la schiena. Allena l'estensione dell'anca e la forza da lotta, simile agli sbilanciamenti nel clinch."
+    "details": "Accosciati sopra il sandbag, abbraccialo, portalo sulle cosce e con una spinta d'anca lancialo oltre una spalla, alternando i lati. Solleva con le gambe, non con la schiena. Allena l'estensione dell'anca e la forza da lotta, simile agli sbilanciamenti nel clinch.",
+    "tool": "sandbag"
   },
   {
     "id": "forza-resistente--gomitate-con-elastico-a-tempo",
@@ -1275,7 +1372,8 @@ export const exercises: Exercise[] = [
     "description": "Gomitate continue contro l'elastico per 1 minuto.",
     "equipment": "Elastico",
     "dose": "3 × 1 min per lato, recupero 30 s",
-    "details": "Con l'elastico fissato alle spalle, esegui gomitate orizzontali continue ruotando busto e anca, rientrando ogni volta in guardia. Mantieni il mento basso. Sviluppa la resistenza dei muscoli rotatori e delle spalle per gomitate precise anche a fine ripresa."
+    "details": "Con l'elastico fissato alle spalle, esegui gomitate orizzontali continue ruotando busto e anca, rientrando ogni volta in guardia. Mantieni il mento basso. Sviluppa la resistenza dei muscoli rotatori e delle spalle per gomitate precise anche a fine ripresa.",
+    "tool": "elastico"
   },
   {
     "id": "forza-resistente--pugni-con-elastico-a-tempo",
@@ -1284,7 +1382,8 @@ export const exercises: Exercise[] = [
     "description": "Diretti continui con elastico alla schiena.",
     "equipment": "Elastico",
     "dose": "4 × 45 s, recupero 15 s",
-    "details": "Con l'elastico passato dietro la schiena, alterna diretti veloci contro la resistenza, estendendo il braccio senza bloccare il gomito e ritornando subito in guardia. Ruota leggermente il busto. Allena la resistenza di spalle e petto per pugni rapidi e costanti."
+    "details": "Con l'elastico passato dietro la schiena, alterna diretti veloci contro la resistenza, estendendo il braccio senza bloccare il gomito e ritornando subito in guardia. Ruota leggermente il busto. Allena la resistenza di spalle e petto per pugni rapidi e costanti.",
+    "tool": "elastico"
   },
   {
     "id": "forza-resistente--rematore-inverso",
@@ -1293,7 +1392,8 @@ export const exercises: Exercise[] = [
     "description": "Trazioni orizzontali sotto la sbarra bassa ad alte ripetizioni.",
     "equipment": "Sbarra",
     "dose": "4 × 15 ripetizioni, recupero 45 s",
-    "details": "Sotto una sbarra bassa, corpo rigido come in plank, tira il petto verso la sbarra stringendo le scapole e scendi con controllo. Più i piedi sono avanti, più è difficile. Rinforza dorsali e romboidi per una postura solida e un clinch più forte."
+    "details": "Sotto una sbarra bassa, corpo rigido come in plank, tira il petto verso la sbarra stringendo le scapole e scendi con controllo. Più i piedi sono avanti, più è difficile. Rinforza dorsali e romboidi per una postura solida e un clinch più forte.",
+    "tool": "sbarra"
   },
   {
     "id": "forza-resistente--clean-and-press-con-sandbag",
@@ -1302,7 +1402,8 @@ export const exercises: Exercise[] = [
     "description": "Girata e spinta del sandbag a ripetizione.",
     "equipment": "Sandbag",
     "dose": "4 × 10 ripetizioni, recupero 1 min",
-    "details": "Solleva il sandbag da terra con una girata portandolo al petto, poi spingilo sopra la testa usando anche le gambe. Schiena neutra in ogni fase. Esercizio completo che allena l'intero corpo a generare forza ripetutamente, come richiesto in un match intenso."
+    "details": "Solleva il sandbag da terra con una girata portandolo al petto, poi spingilo sopra la testa usando anche le gambe. Schiena neutra in ogni fase. Esercizio completo che allena l'intero corpo a generare forza ripetutamente, come richiesto in un match intenso.",
+    "tool": "sandbag"
   },
   {
     "id": "forza-resistente--step-up-a-tempo",
@@ -1320,7 +1421,8 @@ export const exercises: Exercise[] = [
     "description": "Corda a ritmo costante con giubbotto zavorrato.",
     "equipment": "Corda, giubbotto",
     "dose": "3 riprese da 3 min, recupero 1 min",
-    "details": "Indossa un giubbotto di 5-10% del peso corporeo e salta la corda sugli avampiedi, con salti bassi e polsi che guidano la rotazione. Mantieni il ritmo costante. Rinforza polpacci e caviglie e migliora la resistenza per un footwork leggero anche da stanco."
+    "details": "Indossa un giubbotto di 5-10% del peso corporeo e salta la corda sugli avampiedi, con salti bassi e polsi che guidano la rotazione. Mantieni il ritmo costante. Rinforza polpacci e caviglie e migliora la resistenza per un footwork leggero anche da stanco.",
+    "tool": "corda"
   },
   {
     "id": "forza-resistente--squat-con-giubbotto-zavorrato",
@@ -1347,7 +1449,8 @@ export const exercises: Exercise[] = [
     "description": "Ribaltare uno pneumatico pesante per serie lunghe.",
     "equipment": "Pneumatico",
     "dose": "4 × 6-8 ribaltamenti, recupero 1 min",
-    "details": "Accosciati, infila le dita sotto lo pneumatico con il petto appoggiato, spingi con le gambe e poi con le braccia per ribaltarlo. Schiena neutra, mai tirare con la schiena curva. Allena forza totale e spinta d'anca in condizioni di fatica."
+    "details": "Accosciati, infila le dita sotto lo pneumatico con il petto appoggiato, spingi con le gambe e poi con le braccia per ribaltarlo. Schiena neutra, mai tirare con la schiena curva. Allena forza totale e spinta d'anca in condizioni di fatica.",
+    "tool": "pneumatico"
   },
   {
     "id": "forza-resistente--martellate-sul-pneumatico",
@@ -1356,7 +1459,8 @@ export const exercises: Exercise[] = [
     "description": "Colpi di mazza sul pneumatico alternando i lati.",
     "equipment": "Mazza",
     "dose": "3 × 1 min (alternando i lati), recupero 45 s",
-    "details": "Impugna la mazza con le mani distanziate, portala sopra la spalla e colpisci il pneumatico ruotando busto e anca, cambiando lato a metà serie. Piedi stabili e sguardo sul bersaglio. Allena la potenza rotazionale di core e spalle per colpi più incisivi."
+    "details": "Impugna la mazza con le mani distanziate, portala sopra la spalla e colpisci il pneumatico ruotando busto e anca, cambiando lato a metà serie. Piedi stabili e sguardo sul bersaglio. Allena la potenza rotazionale di core e spalle per colpi più incisivi.",
+    "tool": "pneumatico"
   },
   {
     "id": "forza-resistente--circuito-corpo-libero-5x3",
@@ -1428,7 +1532,8 @@ export const exercises: Exercise[] = [
     "description": "Resistenza alla rotazione mantenuta per 45 secondi per lato.",
     "equipment": "Elastico",
     "dose": "3 × 45 s per lato, recupero 30 s",
-    "details": "Con l'elastico fissato lateralmente, porta le mani al petto e spingi in avanti mantenendo le braccia tese senza farti ruotare. Bacino fermo e glutei contratti. Rinforza la stabilità anti-rotazione del core, essenziale per assorbire colpi e restare in equilibrio."
+    "details": "Con l'elastico fissato lateralmente, porta le mani al petto e spingi in avanti mantenendo le braccia tese senza farti ruotare. Bacino fermo e glutei contratti. Rinforza la stabilità anti-rotazione del core, essenziale per assorbire colpi e restare in equilibrio.",
+    "tool": "elastico"
   },
   {
     "id": "forza-resistente--sumo-squat-con-kettlebell",
@@ -1437,7 +1542,8 @@ export const exercises: Exercise[] = [
     "description": "Squat largo con kettlebell, serie lunghe.",
     "equipment": "Kettlebell",
     "dose": "3 × 20 ripetizioni, recupero 45 s",
-    "details": "Piedi larghi e punte verso l'esterno, tieni la kettlebell tra le gambe a braccia tese e scendi mantenendo ginocchia aperte e busto alto. Spingi dai talloni per risalire. Rinforza adduttori e glutei, importanti per la stabilità nella guardia e nei calci."
+    "details": "Piedi larghi e punte verso l'esterno, tieni la kettlebell tra le gambe a braccia tese e scendi mantenendo ginocchia aperte e busto alto. Spingi dai talloni per risalire. Rinforza adduttori e glutei, importanti per la stabilità nella guardia e nei calci.",
+    "tool": "kettlebell"
   },
   {
     "id": "forza-resistente--hip-thrust-a-corpo-libero",
@@ -1509,7 +1615,8 @@ export const exercises: Exercise[] = [
     "description": "Uno-due alla massima velocità per 15 secondi.",
     "equipment": "Sacco",
     "dose": "5 × 15 s, recupero 45 s",
-    "details": "A distanza di braccio dal sacco, esegui uno-due continui ruotando anca e piede posteriore sul diretto e richiamando subito ogni pugno in guardia. Sviluppa la combinazione base più usata in gara rendendola esplosiva. Non spingere il sacco: colpisci e ritira, come se toccassi una superficie calda."
+    "details": "A distanza di braccio dal sacco, esegui uno-due continui ruotando anca e piede posteriore sul diretto e richiamando subito ogni pugno in guardia. Sviluppa la combinazione base più usata in gara rendendola esplosiva. Non spingere il sacco: colpisci e ritira, come se toccassi una superficie calda.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--pugni-a-raffica-al-sacco",
@@ -1518,7 +1625,8 @@ export const exercises: Exercise[] = [
     "description": "Raffica di pugni corti e veloci per 10 secondi.",
     "equipment": "Sacco",
     "dose": "6 × 10 s, recupero 50 s",
-    "details": "Molto vicino al sacco, ginocchia leggermente flesse, sferra pugni corti e rapidissimi alternati senza caricare, con spalle rilassate. Migliora la frequenza dei colpi e la capacità di chiudere uno scambio con una raffica finale. Respira a piccoli soffi e mantieni il gomito vicino al corpo."
+    "details": "Molto vicino al sacco, ginocchia leggermente flesse, sferra pugni corti e rapidissimi alternati senza caricare, con spalle rilassate. Migliora la frequenza dei colpi e la capacità di chiudere uno scambio con una raffica finale. Respira a piccoli soffi e mantieni il gomito vicino al corpo.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--ganci-alternati-a-raffica",
@@ -1527,7 +1635,8 @@ export const exercises: Exercise[] = [
     "description": "Ganci veloci alternati al sacco per 10 secondi.",
     "equipment": "Sacco",
     "dose": "5 × 10 s, recupero 50 s",
-    "details": "Alla corta distanza, alterna ganci destro e sinistro ruotando busto e piede dello stesso lato, con gomito all'altezza del pugno. Rende rapidi i ganci in uscita dal clinch o dopo un diretto. Tieni la mano libera alta sul viso e non allargare la traiettoria."
+    "details": "Alla corta distanza, alterna ganci destro e sinistro ruotando busto e piede dello stesso lato, con gomito all'altezza del pugno. Rende rapidi i ganci in uscita dal clinch o dopo un diretto. Tieni la mano libera alta sul viso e non allargare la traiettoria.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--calci-circolari-rapidi",
@@ -1536,7 +1645,8 @@ export const exercises: Exercise[] = [
     "description": "Calci al sacco con ritorno veloce in guardia, 10 secondi.",
     "equipment": "Sacco",
     "dose": "4 × 10 s per lato, recupero 40 s",
-    "details": "Dalla guardia calcia di tibia al sacco ruotando sul piede d'appoggio, poi riporta subito la gamba a terra in posizione di guardia prima del calcio successivo. Insegna a calciare veloce senza rimanere sbilanciati e vulnerabili al contrattacco. Qualità prima della quantità: ogni calcio deve ruotare l'anca."
+    "details": "Dalla guardia calcia di tibia al sacco ruotando sul piede d'appoggio, poi riporta subito la gamba a terra in posizione di guardia prima del calcio successivo. Insegna a calciare veloce senza rimanere sbilanciati e vulnerabili al contrattacco. Qualità prima della quantità: ogni calcio deve ruotare l'anca.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--teep-veloci",
@@ -1545,7 +1655,8 @@ export const exercises: Exercise[] = [
     "description": "Calci frontali con il piede anteriore, ritorno rapido.",
     "equipment": "Sacco",
     "dose": "4 × 8 per lato, recupero 45 s",
-    "details": "Solleva il ginocchio anteriore, spingi di pianta del piede al centro del sacco e richiama la gamba nella stessa traiettoria tornando in guardia. Un teep rapido ferma l'avversario che avanza e crea distanza. Mantieni il busto leggermente indietro e le mani alte durante la spinta."
+    "details": "Solleva il ginocchio anteriore, spingi di pianta del piede al centro del sacco e richiama la gamba nella stessa traiettoria tornando in guardia. Un teep rapido ferma l'avversario che avanza e crea distanza. Mantieni il busto leggermente indietro e le mani alte durante la spinta.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--ginocchiate-rapide-alternate",
@@ -1554,7 +1665,8 @@ export const exercises: Exercise[] = [
     "description": "Ginocchiate veloci alternate per 15 secondi.",
     "equipment": "Sacco",
     "dose": "5 × 15 s, recupero 45 s",
-    "details": "Afferra il sacco o simula la presa, alterna ginocchiate rapide spingendo l'anca in avanti e salendo sull'avampiede della gamba d'appoggio. Allena la velocità nel clinch, dove vince chi colpisce per primo. Non sbilanciarti all'indietro: il bacino va verso il bersaglio."
+    "details": "Afferra il sacco o simula la presa, alterna ginocchiate rapide spingendo l'anca in avanti e salendo sull'avampiede della gamba d'appoggio. Allena la velocità nel clinch, dove vince chi colpisce per primo. Non sbilanciarti all'indietro: il bacino va verso il bersaglio.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--doppio-calcio-circolare",
@@ -1563,7 +1675,8 @@ export const exercises: Exercise[] = [
     "description": "Due calci circolari consecutivi con la stessa gamba senza appoggiare.",
     "equipment": "Sacco",
     "dose": "4 × 6 per lato, recupero 60 s",
-    "details": "Esegui un calcio circolare basso o medio, richiama la gamba senza appoggiarla e scaglia subito un secondo calcio più alto. Sviluppa velocità, controllo dell'equilibrio e capacità di sorprendere l'avversario che para il primo colpo. Stabilizza la gamba d'appoggio e tieni le braccia in guardia."
+    "details": "Esegui un calcio circolare basso o medio, richiama la gamba senza appoggiarla e scaglia subito un secondo calcio più alto. Sviluppa velocità, controllo dell'equilibrio e capacità di sorprendere l'avversario che para il primo colpo. Stabilizza la gamba d'appoggio e tieni le braccia in guardia.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--calcio-basso-veloce",
@@ -1572,7 +1685,8 @@ export const exercises: Exercise[] = [
     "description": "Low kick rapido con richiamo immediato.",
     "equipment": "Sacco",
     "dose": "4 × 8 per lato, recupero 45 s",
-    "details": "Con un piccolo passo d'apertura, calcia di tibia la parte bassa del sacco all'altezza della coscia e richiama subito la gamba in guardia. Il low kick veloce logora l'avversario senza esporti al contrattacco. Ruota bene il piede d'appoggio per proteggere il ginocchio."
+    "details": "Con un piccolo passo d'apertura, calcia di tibia la parte bassa del sacco all'altezza della coscia e richiama subito la gamba in guardia. Il low kick veloce logora l'avversario senza esporti al contrattacco. Ruota bene il piede d'appoggio per proteggere il ginocchio.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--switch-kick-rapido",
@@ -1581,7 +1695,8 @@ export const exercises: Exercise[] = [
     "description": "Cambio guardia e calcio con la gamba anteriore il più veloce possibile.",
     "equipment": "Sacco",
     "dose": "4 × 6 per lato, recupero 60 s",
-    "details": "Con un saltello invertisci le posizioni dei piedi e calcia immediatamente con la gamba che era avanti, senza pause tra cambio e calcio. Rende imprevedibile il calcio della gamba anteriore, ottimo per colpire il fegato o il corpo. Il cambio deve essere piccolo e basso, non un salto alto."
+    "details": "Con un saltello invertisci le posizioni dei piedi e calcia immediatamente con la gamba che era avanti, senza pause tra cambio e calcio. Rende imprevedibile il calcio della gamba anteriore, ottimo per colpire il fegato o il corpo. Il cambio deve essere piccolo e basso, non un salto alto.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--reazione-al-segnale-sonoro",
@@ -1590,7 +1705,8 @@ export const exercises: Exercise[] = [
     "description": "Al fischio del maestro, colpire con la combinazione indicata.",
     "equipment": "Sacco",
     "dose": "6 × 5 segnali, recupero 45 s",
-    "details": "In guardia davanti al sacco, rilassato ma pronto: al fischio esegui subito la combinazione indicata dal maestro e torna in guardia. Riduce il tempo di reazione allo stimolo, fondamentale per sfruttare le aperture in combattimento. Evita di anticipare il segnale: la partenza deve essere una vera reazione."
+    "details": "In guardia davanti al sacco, rilassato ma pronto: al fischio esegui subito la combinazione indicata dal maestro e torna in guardia. Riduce il tempo di reazione allo stimolo, fondamentale per sfruttare le aperture in combattimento. Evita di anticipare il segnale: la partenza deve essere una vera reazione.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--reazione-al-colore",
@@ -1599,7 +1715,8 @@ export const exercises: Exercise[] = [
     "description": "Il maestro mostra un colore, l'allievo esegue il colpo associato.",
     "equipment": "Pao",
     "dose": "5 × 6 stimoli, recupero 45 s",
-    "details": "Associa a ogni colore un colpo (es. rosso jab, blu calcio, bianco ginocchiata); il maestro mostra un cartoncino e tu colpisci il pao il più rapidamente possibile. Allena la reazione di scelta, cioè decidere e colpire in pochi istanti. Cambia le associazioni ogni serie per mantenere alta l'attenzione."
+    "details": "Associa a ogni colore un colpo (es. rosso jab, blu calcio, bianco ginocchiata); il maestro mostra un cartoncino e tu colpisci il pao il più rapidamente possibile. Allena la reazione di scelta, cioè decidere e colpire in pochi istanti. Cambia le associazioni ogni serie per mantenere alta l'attenzione.",
+    "tool": "pao"
   },
   {
     "id": "velocita--reazione-ai-pao",
@@ -1608,7 +1725,8 @@ export const exercises: Exercise[] = [
     "description": "Colpire i pao appena il maestro li mostra.",
     "equipment": "Pao",
     "dose": "3 riprese da 1 min, 1 min recupero",
-    "details": "Il maestro tiene i pao nascosti e li mostra all'improvviso in posizioni diverse; colpisci subito con il colpo adatto a quel bersaglio. Simula le aperture brevi che l'avversario concede in gara. Torna in guardia dopo ogni colpo e non indovinare: aspetta lo stimolo."
+    "details": "Il maestro tiene i pao nascosti e li mostra all'improvviso in posizioni diverse; colpisci subito con il colpo adatto a quel bersaglio. Simula le aperture brevi che l'avversario concede in gara. Torna in guardia dopo ogni colpo e non indovinare: aspetta lo stimolo.",
+    "tool": "pao"
   },
   {
     "id": "velocita--palla-da-tennis-al-muro",
@@ -1653,7 +1771,8 @@ export const exercises: Exercise[] = [
     "description": "Colpi alla palla doppio elastico per tempismo e precisione.",
     "equipment": "Doppia elastica",
     "dose": "3 riprese da 2 min, 1 min recupero",
-    "details": "Colpisci la palla doppio elastico con jab e diretti brevi, schivando o parando quando torna verso di te. Migliora tempismo, precisione e reazione a un bersaglio che si muove come la testa di un avversario. Colpi secchi e richiamati, senza spingere."
+    "details": "Colpisci la palla doppio elastico con jab e diretti brevi, schivando o parando quando torna verso di te. Migliora tempismo, precisione e reazione a un bersaglio che si muove come la testa di un avversario. Colpi secchi e richiamati, senza spingere.",
+    "tool": "elastico"
   },
   {
     "id": "velocita--sprint-10-metri",
@@ -1707,7 +1826,8 @@ export const exercises: Exercise[] = [
     "description": "Appoggi veloci nella scaletta a terra.",
     "equipment": "Scaletta",
     "dose": "6 passaggi, recupero 30 s",
-    "details": "Percorri la scaletta con schemi diversi (due piedi dentro, laterale, in-out) cercando appoggi rapidissimi e precisi. Migliora la frequenza dei piedi e il gioco di gambe per entrare e uscire dalla distanza. Se tocchi i pioli rallenta: precisione prima della velocità."
+    "details": "Percorri la scaletta con schemi diversi (due piedi dentro, laterale, in-out) cercando appoggi rapidissimi e precisi. Migliora la frequenza dei piedi e il gioco di gambe per entrare e uscire dalla distanza. Se tocchi i pioli rallenta: precisione prima della velocità.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "velocita--corda-veloce",
@@ -1716,7 +1836,8 @@ export const exercises: Exercise[] = [
     "description": "20 secondi di corda alla massima velocità.",
     "equipment": "Corda",
     "dose": "6 × 20 s, recupero 40 s",
-    "details": "Salta la corda alla massima velocità con salti bassi, polsi che guidano la rotazione e gomiti vicini al corpo. Allena rapidità e reattività dei piedi oltre al ritmo tipico del pugile. Atterra sugli avampiedi con ginocchia morbide."
+    "details": "Salta la corda alla massima velocità con salti bassi, polsi che guidano la rotazione e gomiti vicini al corpo. Allena rapidità e reattività dei piedi oltre al ritmo tipico del pugile. Atterra sugli avampiedi con ginocchia morbide.",
+    "tool": "corda"
   },
   {
     "id": "velocita--uno-due-con-elastico-e-rilascio",
@@ -1725,7 +1846,8 @@ export const exercises: Exercise[] = [
     "description": "Pugni con elastico seguiti subito da pugni liberi.",
     "equipment": "Elastico",
     "dose": "4 × (10 s elastico + 10 s libero), rec. 60 s",
-    "details": "Con un elastico fissato dietro di te, tira uno-due per 10 secondi contro resistenza, poi toglilo e colpisci libero alla massima velocità. Il contrasto tra carico e scarico aumenta la rapidità percepita dei pugni. Non lasciare che l'elastico ti tiri i gomiti fuori linea."
+    "details": "Con un elastico fissato dietro di te, tira uno-due per 10 secondi contro resistenza, poi toglilo e colpisci libero alla massima velocità. Il contrasto tra carico e scarico aumenta la rapidità percepita dei pugni. Non lasciare che l'elastico ti tiri i gomiti fuori linea.",
+    "tool": "elastico"
   },
   {
     "id": "velocita--shadow-con-contrasto",
@@ -1752,7 +1874,8 @@ export const exercises: Exercise[] = [
     "description": "Gomitate orizzontali alternate alla massima velocità.",
     "equipment": "Sacco",
     "dose": "5 × 10 s, recupero 50 s",
-    "details": "Molto vicino al sacco, alterna gomitate orizzontali ruotando busto e piede, con la mano opposta alta a proteggere il viso. Rende rapide le gomitate nella corta distanza e in uscita dal clinch. Colpisci con la punta del gomito e tieni il mento chiuso."
+    "details": "Molto vicino al sacco, alterna gomitate orizzontali ruotando busto e piede, con la mano opposta alta a proteggere il viso. Rende rapide le gomitate nella corta distanza e in uscita dal clinch. Colpisci con la punta del gomito e tieni il mento chiuso.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--combinazione-1-2-calcio-veloce",
@@ -1761,7 +1884,8 @@ export const exercises: Exercise[] = [
     "description": "Jab, diretto e calcio circolare il più rapido possibile.",
     "equipment": "Sacco",
     "dose": "5 × 6 combinazioni, recupero 45 s",
-    "details": "Jab, diretto e calcio circolare della gamba posteriore concatenati: la rotazione del diretto carica naturalmente il calcio. È una delle combinazioni più efficaci della Muay Thai e la velocità la rende difficile da leggere. Torna sempre in guardia dopo il calcio."
+    "details": "Jab, diretto e calcio circolare della gamba posteriore concatenati: la rotazione del diretto carica naturalmente il calcio. È una delle combinazioni più efficaci della Muay Thai e la velocità la rende difficile da leggere. Torna sempre in guardia dopo il calcio.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--combinazione-1-2-3-veloce",
@@ -1770,7 +1894,8 @@ export const exercises: Exercise[] = [
     "description": "Jab, diretto e gancio con ritorno in guardia.",
     "equipment": "Sacco",
     "dose": "5 × 8 combinazioni, recupero 45 s",
-    "details": "Jab, diretto e gancio anteriore in sequenza fluida, trasferendo il peso da un lato all'altro e richiamando ogni colpo. Allena la combinazione classica di pugni con rapidità e precisione. Il gancio parte corto, senza caricare all'indietro."
+    "details": "Jab, diretto e gancio anteriore in sequenza fluida, trasferendo il peso da un lato all'altro e richiamando ogni colpo. Allena la combinazione classica di pugni con rapidità e precisione. Il gancio parte corto, senza caricare all'indietro.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--cattura-del-teep",
@@ -1851,7 +1976,8 @@ export const exercises: Exercise[] = [
     "description": "Diretto veloce espirando con decisione, singolo e preciso.",
     "equipment": "Sacco",
     "dose": "5 × 6 colpi singoli, recupero 30 s",
-    "details": "Dalla guardia rilassata, scocca un diretto esplosivo espirando con forza nel momento dell'impatto e torna subito in posizione. Insegna a passare da rilassamento a contrazione istantanea, segreto della velocità. Ogni colpo è singolo e perfetto, con una breve pausa tra uno e l'altro."
+    "details": "Dalla guardia rilassata, scocca un diretto esplosivo espirando con forza nel momento dell'impatto e torna subito in posizione. Insegna a passare da rilassamento a contrazione istantanea, segreto della velocità. Ogni colpo è singolo e perfetto, con una breve pausa tra uno e l'altro.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--contrattacco-al-segnale",
@@ -1860,7 +1986,8 @@ export const exercises: Exercise[] = [
     "description": "Il maestro attacca con i pao, l'allievo para e risponde subito.",
     "equipment": "Pao",
     "dose": "3 riprese da 1 min, 1 min recupero",
-    "details": "Il maestro attacca con i pao (swing, calcio, teep); tu pari o schivi e rispondi subito con il colpo indicato. Allena il passaggio immediato da difesa ad attacco, quando l'avversario è scoperto. Il contrattacco deve partire mentre lui rientra, non dopo."
+    "details": "Il maestro attacca con i pao (swing, calcio, teep); tu pari o schivi e rispondi subito con il colpo indicato. Allena il passaggio immediato da difesa ad attacco, quando l'avversario è scoperto. Il contrattacco deve partire mentre lui rientra, non dopo.",
+    "tool": "pao"
   },
   {
     "id": "velocita--calcio-circolare-al-bastone",
@@ -1887,7 +2014,8 @@ export const exercises: Exercise[] = [
     "description": "Serie da quattro pugni rapidissimi, ripetute con recupero.",
     "equipment": "Sacco",
     "dose": "6 × 4 serie, recupero 45 s",
-    "details": "Al segnale esegui quattro pugni alternati il più rapidamente possibile, poi recupera qualche secondo in guardia prima della serie successiva. Sviluppa la velocità massima della raffica breve, utile per finire un'azione. Colpi corti e rilassati, non cercare potenza."
+    "details": "Al segnale esegui quattro pugni alternati il più rapidamente possibile, poi recupera qualche secondo in guardia prima della serie successiva. Sviluppa la velocità massima della raffica breve, utile per finire un'azione. Colpi corti e rilassati, non cercare potenza.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--ginocchiata-e-richiamo",
@@ -1896,7 +2024,8 @@ export const exercises: Exercise[] = [
     "description": "Ginocchiata rapida e ritorno in guardia, una alla volta al segnale.",
     "equipment": "Sacco",
     "dose": "4 × 6 per lato, recupero 40 s",
-    "details": "In guardia, al segnale del maestro scocca una ginocchiata al sacco spingendo l'anca avanti e torna subito in posizione. Allena la ginocchiata come colpo di reazione, efficace sull'avversario che entra. Una ginocchiata alla volta, con massima esplosività."
+    "details": "In guardia, al segnale del maestro scocca una ginocchiata al sacco spingendo l'anca avanti e torna subito in posizione. Allena la ginocchiata come colpo di reazione, efficace sull'avversario che entra. Una ginocchiata alla volta, con massima esplosività.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--pao-rapidi-alternati",
@@ -1905,7 +2034,8 @@ export const exercises: Exercise[] = [
     "description": "Il maestro cambia rapidamente i bersagli dei pao.",
     "equipment": "Pao",
     "dose": "3 riprese da 1 min, 1 min recupero",
-    "details": "Il maestro cambia rapidamente posizione dei pao chiamando colpi diversi (jab, gomito, calcio, ginocchiata) e tu rispondi senza pause. Allena reazione, scelta del colpo e transizioni veloci tra le armi della Muay Thai. Mantieni la guardia tra un colpo e l'altro."
+    "details": "Il maestro cambia rapidamente posizione dei pao chiamando colpi diversi (jab, gomito, calcio, ginocchiata) e tu rispondi senza pause. Allena reazione, scelta del colpo e transizioni veloci tra le armi della Muay Thai. Mantieni la guardia tra un colpo e l'altro.",
+    "tool": "pao"
   },
   {
     "id": "velocita--calci-con-richiamo-veloce-del-piede",
@@ -1914,7 +2044,8 @@ export const exercises: Exercise[] = [
     "description": "Calcio frontale e ritorno del piede prima del contatto con il pavimento.",
     "equipment": "Sacco",
     "dose": "4 × 8 per lato, recupero 40 s",
-    "details": "Esegui un calcio frontale al sacco e riporta il piede indietro alla posizione di partenza prima di appoggiarlo, poi ripeti. Allena il richiamo rapido che impedisce all'avversario di catturare la gamba. Tieni il busto stabile e le mani alte."
+    "details": "Esegui un calcio frontale al sacco e riporta il piede indietro alla posizione di partenza prima di appoggiarlo, poi ripeti. Allena il richiamo rapido che impedisce all'avversario di catturare la gamba. Tieni il busto stabile e le mani alte.",
+    "tool": "sacco"
   },
   {
     "id": "velocita--scatti-laterali-tra-coni",
@@ -1923,7 +2054,8 @@ export const exercises: Exercise[] = [
     "description": "Scatti laterali tra due coni a 3 metri.",
     "equipment": "Coni",
     "dose": "6 × 15 s, recupero 45 s",
-    "details": "Con due coni a 3 metri, spostati lateralmente in passo accostato toccando ogni cono con la mano, senza incrociare i piedi. Migliora i cambi di direzione e gli spostamenti laterali per uscire dalla linea d'attacco. Resta basso con il baricentro tra i piedi."
+    "details": "Con due coni a 3 metri, spostati lateralmente in passo accostato toccando ogni cono con la mano, senza incrociare i piedi. Migliora i cambi di direzione e gli spostamenti laterali per uscire dalla linea d'attacco. Resta basso con il baricentro tra i piedi.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "velocita--mani-rapide-al-muro",
@@ -1995,7 +2127,8 @@ export const exercises: Exercise[] = [
     "description": "Riprese di corda da 3 minuti con 1 minuto di recupero.",
     "equipment": "Corda",
     "dose": "5–6 riprese da 3 min, 1 min recupero",
-    "details": "Salta sugli avampiedi con piccoli rimbalzi, polsi che fanno girare la corda e gomiti vicini al corpo, variando passo alternato, doppio appoggio e spostamenti. Ricrea la struttura a riprese del match e allena leggerezza e ritmo dei piedi. Respira in modo regolare e non saltare più alto del necessario."
+    "details": "Salta sugli avampiedi con piccoli rimbalzi, polsi che fanno girare la corda e gomiti vicini al corpo, variando passo alternato, doppio appoggio e spostamenti. Ricrea la struttura a riprese del match e allena leggerezza e ritmo dei piedi. Respira in modo regolare e non saltare più alto del necessario.",
+    "tool": "corda"
   },
   {
     "id": "resistenza--corda-10-minuti-continui",
@@ -2004,7 +2137,8 @@ export const exercises: Exercise[] = [
     "description": "Corda a ritmo costante per 10 minuti.",
     "equipment": "Corda",
     "dose": "10 min continui a ritmo costante",
-    "details": "Mantieni un ritmo regolare dall'inizio alla fine, alternando salto base e passo corso per gestire la fatica senza mai fermarti. È un classico riscaldamento e allenamento aerobico thailandese che rinforza polpacci e caviglie. Se la corda si blocca riparti subito: la continuità conta più della velocità."
+    "details": "Mantieni un ritmo regolare dall'inizio alla fine, alternando salto base e passo corso per gestire la fatica senza mai fermarti. È un classico riscaldamento e allenamento aerobico thailandese che rinforza polpacci e caviglie. Se la corda si blocca riparti subito: la continuità conta più della velocità.",
+    "tool": "corda"
   },
   {
     "id": "resistenza--sacco-5-riprese",
@@ -2013,7 +2147,8 @@ export const exercises: Exercise[] = [
     "description": "Cinque riprese da 3 minuti al sacco, 1 minuto di pausa.",
     "equipment": "Sacco",
     "dose": "5 × 3 min, 1 min recupero",
-    "details": "Lavora al sacco come in un vero round: combinazioni di pugni, calci, ginocchia e gomiti alternate a movimento e guardia. Allena la resistenza specifica alla durata di un incontro, imparando a distribuire lo sforzo. Mantieni la guardia alta anche negli ultimi secondi di ogni ripresa."
+    "details": "Lavora al sacco come in un vero round: combinazioni di pugni, calci, ginocchia e gomiti alternate a movimento e guardia. Allena la resistenza specifica alla durata di un incontro, imparando a distribuire lo sforzo. Mantieni la guardia alta anche negli ultimi secondi di ogni ripresa.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--pao-5-riprese",
@@ -2022,7 +2157,8 @@ export const exercises: Exercise[] = [
     "description": "Cinque riprese ai pao con il maestro.",
     "equipment": "Pao",
     "dose": "5 × 3 min, 1 min recupero",
-    "details": "Il maestro chiama le combinazioni e l'atleta risponde subito, colpendo con tecnica e tornando in guardia dopo ogni serie. Unisce lavoro tecnico e condizionamento al ritmo di gara, con la pressione di un partner attivo. Chi tiene i pao deve dare anche contrattacchi leggeri per tenere alta l'attenzione."
+    "details": "Il maestro chiama le combinazioni e l'atleta risponde subito, colpendo con tecnica e tornando in guardia dopo ogni serie. Unisce lavoro tecnico e condizionamento al ritmo di gara, con la pressione di un partner attivo. Chi tiene i pao deve dare anche contrattacchi leggeri per tenere alta l'attenzione.",
+    "tool": "pao"
   },
   {
     "id": "resistenza--shadow-boxing-a-ripresa",
@@ -2040,7 +2176,8 @@ export const exercises: Exercise[] = [
     "description": "20 secondi al massimo e 10 di pausa per 8 serie.",
     "equipment": "Sacco",
     "dose": "8 × 20 s / 10 s (4 min), 1–2 blocchi",
-    "details": "Per 20 secondi colpisci il sacco alla massima frequenza con pugni dritti o combinazioni brevi, poi 10 secondi di pausa attiva in guardia. Sviluppa la capacità anaerobica necessaria per le raffiche finali di un round. Fai almeno 10 minuti di riscaldamento prima e non sacrificare la tecnica alla velocità."
+    "details": "Per 20 secondi colpisci il sacco alla massima frequenza con pugni dritti o combinazioni brevi, poi 10 secondi di pausa attiva in guardia. Sviluppa la capacità anaerobica necessaria per le raffiche finali di un round. Fai almeno 10 minuti di riscaldamento prima e non sacrificare la tecnica alla velocità.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--burpee-tabata",
@@ -2058,7 +2195,8 @@ export const exercises: Exercise[] = [
     "description": "20 secondi di calci alternati e 10 di pausa.",
     "equipment": "Sacco",
     "dose": "8 × 20 s / 10 s, calci alternati",
-    "details": "Calcia circolare alternando destro e sinistro con rotazione completa dell'anca e ritorno veloce in guardia, il più rapidamente possibile per 20 secondi. Costruisce la resistenza lattacida tipica delle serie di calci in gara. Ruota sempre l'avampiede d'appoggio per proteggere il ginocchio."
+    "details": "Calcia circolare alternando destro e sinistro con rotazione completa dell'anca e ritorno veloce in guardia, il più rapidamente possibile per 20 secondi. Costruisce la resistenza lattacida tipica delle serie di calci in gara. Ruota sempre l'avampiede d'appoggio per proteggere il ginocchio.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--ripresa-30-30",
@@ -2067,7 +2205,8 @@ export const exercises: Exercise[] = [
     "description": "30 secondi forti e 30 leggeri al sacco per 3 minuti.",
     "equipment": "Sacco",
     "dose": "3–5 riprese da 3 min (30 s forte / 30 s leggero)",
-    "details": "Alterna 30 secondi di attacco intenso al sacco con 30 secondi di lavoro leggero tecnico e movimento, senza mai fermarti. Insegna a cambiare marcia e a recuperare restando attivi, gestendo l'intensità come in un match. Nella fase leggera respira dal naso e cura la guardia."
+    "details": "Alterna 30 secondi di attacco intenso al sacco con 30 secondi di lavoro leggero tecnico e movimento, senza mai fermarti. Insegna a cambiare marcia e a recuperare restando attivi, gestendo l'intensità come in un match. Nella fase leggera respira dal naso e cura la guardia.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--ripresa-a-piramide",
@@ -2076,7 +2215,8 @@ export const exercises: Exercise[] = [
     "description": "Raffiche al sacco da 10, 20, 30 secondi e ritorno.",
     "equipment": "Sacco",
     "dose": "2–3 riprese: 10-20-30-20-10 s, recupero 10 s",
-    "details": "Esegui raffiche al sacco di 10, 20 e 30 secondi e poi ridiscendi, con brevi pause in guardia tra una raffica e l'altra. Allena la tolleranza al lattato in modo progressivo e la capacità di mantenere velocità sotto fatica. Scegli colpi semplici (pugni dritti, ginocchia) per non perdere qualità."
+    "details": "Esegui raffiche al sacco di 10, 20 e 30 secondi e poi ridiscendi, con brevi pause in guardia tra una raffica e l'altra. Allena la tolleranza al lattato in modo progressivo e la capacità di mantenere velocità sotto fatica. Scegli colpi semplici (pugni dritti, ginocchia) per non perdere qualità.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--cyclette-a-intervalli",
@@ -2175,7 +2315,8 @@ export const exercises: Exercise[] = [
     "description": "Corsa avanti e indietro tra due linee a 10 metri.",
     "equipment": "Coni",
     "dose": "6–8 × 30 s di navette, 30 s recupero",
-    "details": "Corri tra due coni distanti 10 metri toccando la linea a terra a ogni cambio di direzione. Allena accelerazione, frenata e cambio di direzione, utili negli spostamenti sul ring. Abbassa il baricentro prima di girare per proteggere ginocchia e caviglie."
+    "details": "Corri tra due coni distanti 10 metri toccando la linea a terra a ogni cambio di direzione. Allena accelerazione, frenata e cambio di direzione, utili negli spostamenti sul ring. Abbassa il baricentro prima di girare per proteggere ginocchia e caviglie.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "resistenza--ripresa-di-ginocchiate",
@@ -2184,7 +2325,8 @@ export const exercises: Exercise[] = [
     "description": "3 minuti di ginocchiate continue al sacco.",
     "equipment": "Sacco",
     "dose": "3 × 3 min, 1 min recupero",
-    "details": "Afferra il sacco come in clinch e porta ginocchiate alternate continue, spingendo l'anca in avanti e salendo sull'avampiede. Allena la resistenza specifica del clinch, dove le ginocchia sono le armi principali. Tieni il busto eretto e tira il sacco verso di te a ogni colpo."
+    "details": "Afferra il sacco come in clinch e porta ginocchiate alternate continue, spingendo l'anca in avanti e salendo sull'avampiede. Allena la resistenza specifica del clinch, dove le ginocchia sono le armi principali. Tieni il busto eretto e tira il sacco verso di te a ogni colpo.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--ripresa-solo-calci",
@@ -2193,7 +2335,8 @@ export const exercises: Exercise[] = [
     "description": "Una ripresa intera di soli calci al sacco.",
     "equipment": "Sacco",
     "dose": "2–3 × 3 min, 1 min recupero",
-    "details": "Una ripresa intera usando solo calci: circolari bassi, medi e alti, teep e cambi di guardia, rientrando sempre in posizione. Costruisce la resistenza delle gambe e del core per sostenere molti calci in gara. Quando arriva la fatica non abbassare le braccia durante il calcio."
+    "details": "Una ripresa intera usando solo calci: circolari bassi, medi e alti, teep e cambi di guardia, rientrando sempre in posizione. Costruisce la resistenza delle gambe e del core per sostenere molti calci in gara. Quando arriva la fatica non abbassare le braccia durante il calcio.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--ripresa-solo-pugni",
@@ -2202,7 +2345,8 @@ export const exercises: Exercise[] = [
     "description": "Una ripresa intera di soli pugni al sacco.",
     "equipment": "Sacco",
     "dose": "2–3 × 3 min, 1 min recupero",
-    "details": "Lavora solo con pugni (diretti, ganci, montanti) in combinazioni varie, muovendoti attorno al sacco. Allena la resistenza di spalle e braccia e la capacità di mantenere velocità di mano sotto fatica. Ricorda di ruotare il piede posteriore e di riportare sempre le mani al viso."
+    "details": "Lavora solo con pugni (diretti, ganci, montanti) in combinazioni varie, muovendoti attorno al sacco. Allena la resistenza di spalle e braccia e la capacità di mantenere velocità di mano sotto fatica. Ricorda di ruotare il piede posteriore e di riportare sempre le mani al viso.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--ripresa-difensiva",
@@ -2220,7 +2364,8 @@ export const exercises: Exercise[] = [
     "description": "Ripresa al sacco da 5 minuti invece di 3.",
     "equipment": "Sacco",
     "dose": "2–3 × 5 min, 1 min recupero",
-    "details": "Una ripresa al sacco da 5 minuti con lo stesso ritmo e la stessa varietà di colpi di un round normale. Crea una riserva di resistenza: se reggi 5 minuti, i 3 della gara sembreranno più gestibili. Dosa l'energia nei primi minuti per non crollare nel finale."
+    "details": "Una ripresa al sacco da 5 minuti con lo stesso ritmo e la stessa varietà di colpi di un round normale. Crea una riserva di resistenza: se reggi 5 minuti, i 3 della gara sembreranno più gestibili. Dosa l'energia nei primi minuti per non crollare nel finale.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--recupero-breve",
@@ -2229,7 +2374,8 @@ export const exercises: Exercise[] = [
     "description": "Riprese da 3 minuti con 30 secondi di recupero.",
     "equipment": "Sacco",
     "dose": "4–5 × 3 min, 30 s recupero",
-    "details": "Riprese al sacco a intensità di gara ma con soli 30 secondi di pausa invece di un minuto. Allena la capacità di recuperare in fretta e abitua a lavorare con fatica accumulata. Nei 30 secondi respira profondamente e resta in piedi, senza piegarti sulle ginocchia."
+    "details": "Riprese al sacco a intensità di gara ma con soli 30 secondi di pausa invece di un minuto. Allena la capacità di recuperare in fretta e abitua a lavorare con fatica accumulata. Nei 30 secondi respira profondamente e resta in piedi, senza piegarti sulle ginocchia.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--emom-burpee-e-calci",
@@ -2238,7 +2384,8 @@ export const exercises: Exercise[] = [
     "description": "Ogni minuto 5 burpee e 10 calci, per 10 minuti.",
     "equipment": "Sacco",
     "dose": "EMOM 10 min: 5 burpee + 10 calci",
-    "details": "All'inizio di ogni minuto esegui 5 burpee e subito 10 calci circolari al sacco, poi riposa per i secondi rimanenti. Combina esplosività e calci sotto fatica, con un recupero che si riduce man mano che rallenti. Se finisci oltre i 40 secondi riduci le ripetizioni per mantenere la qualità."
+    "details": "All'inizio di ogni minuto esegui 5 burpee e subito 10 calci circolari al sacco, poi riposa per i secondi rimanenti. Combina esplosività e calci sotto fatica, con un recupero che si riduce man mano che rallenti. Se finisci oltre i 40 secondi riduci le ripetizioni per mantenere la qualità.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--amrap-10-minuti",
@@ -2283,7 +2430,8 @@ export const exercises: Exercise[] = [
     "description": "3 minuti di teep alternati al sacco.",
     "equipment": "Sacco",
     "dose": "2–3 × 3 min, 1 min recupero",
-    "details": "Esegui teep alternati con gamba anteriore e posteriore, spingendo con l'anca e il tallone al centro del sacco e richiamando subito la gamba. Allena la resistenza del calcio frontale, l'arma principale per gestire la distanza. Sbilancia il busto all'indietro il minimo necessario e tieni le mani alte."
+    "details": "Esegui teep alternati con gamba anteriore e posteriore, spingendo con l'anca e il tallone al centro del sacco e richiamando subito la gamba. Allena la resistenza del calcio frontale, l'arma principale per gestire la distanza. Sbilancia il busto all'indietro il minimo necessario e tieni le mani alte.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--doppia-ripresa-al-sacco",
@@ -2292,7 +2440,8 @@ export const exercises: Exercise[] = [
     "description": "Due riprese di fila senza pausa.",
     "equipment": "Sacco",
     "dose": "2–3 × 6 min (2 riprese senza pausa), 2 min rec.",
-    "details": "Lavora al sacco per due riprese consecutive da 3 minuti senza il minuto di recupero intermedio. Spinge oltre la soglia abituale e aumenta la tolleranza alla fatica prolungata. Mantieni varietà di colpi anche nella seconda metà invece di limitarti a spingere il sacco."
+    "details": "Lavora al sacco per due riprese consecutive da 3 minuti senza il minuto di recupero intermedio. Spinge oltre la soglia abituale e aumenta la tolleranza alla fatica prolungata. Mantieni varietà di colpi anche nella seconda metà invece di limitarti a spingere il sacco.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--gomitate-e-ginocchiate-a-ripresa",
@@ -2301,7 +2450,8 @@ export const exercises: Exercise[] = [
     "description": "Combinazioni di gomiti e ginocchia al sacco per 3 minuti.",
     "equipment": "Sacco",
     "dose": "3 × 3 min, 1 min recupero",
-    "details": "Stai alla corta distanza dal sacco e combina gomitate orizzontali, discendenti e ascendenti con ginocchiate e prese in clinch. Allena la resistenza specifica della corta distanza, dove si decidono molti incontri. Chiudi bene il pugno della mano che colpisce di gomito per proteggere il polso."
+    "details": "Stai alla corta distanza dal sacco e combina gomitate orizzontali, discendenti e ascendenti con ginocchiate e prese in clinch. Allena la resistenza specifica della corta distanza, dove si decidono molti incontri. Chiudi bene il pugno della mano che colpisce di gomito per proteggere il polso.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--uno-contro-sacco-ritmo-gara",
@@ -2310,7 +2460,8 @@ export const exercises: Exercise[] = [
     "description": "Ripresa al sacco simulando il ritmo di un match.",
     "equipment": "Sacco",
     "dose": "5 × 3 min, 2 min recupero (formato gara)",
-    "details": "Simula un match intero: round 1 di studio, round centrali più intensi e ultimo round a tutta, con le pause regolamentari. Insegna a gestire l'energia nell'arco dell'incontro e a seguire una strategia. Il coach può dare indicazioni all'angolo come in gara."
+    "details": "Simula un match intero: round 1 di studio, round centrali più intensi e ultimo round a tutta, con le pause regolamentari. Insegna a gestire l'energia nell'arco dell'incontro e a seguire una strategia. Il coach può dare indicazioni all'angolo come in gara.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--recupero-attivo-con-shadow",
@@ -2328,7 +2479,8 @@ export const exercises: Exercise[] = [
     "description": "30 secondi di salti normali e 10 di doppi.",
     "equipment": "Corda",
     "dose": "5 min: 30 s salti normali / 10 s doppi",
-    "details": "Salta normalmente per 30 secondi e poi esegui 10 secondi di doppi (due giri di corda per salto), senza fermarti. Allena coordinazione, esplosività dei polpacci e resistenza anaerobica. Se non riesci ancora con i doppi, sostituiscili con salti rapidissimi a piedi uniti."
+    "details": "Salta normalmente per 30 secondi e poi esegui 10 secondi di doppi (due giri di corda per salto), senza fermarti. Allena coordinazione, esplosività dei polpacci e resistenza anaerobica. Se non riesci ancora con i doppi, sostituiscili con salti rapidissimi a piedi uniti.",
+    "tool": "corda"
   },
   {
     "id": "resistenza--sacco-con-calci-a-50",
@@ -2337,7 +2489,8 @@ export const exercises: Exercise[] = [
     "description": "Contare 50 calci circolari alternati il più velocemente possibile.",
     "equipment": "Sacco",
     "dose": "2–3 serie da 50 calci, 2 min recupero",
-    "details": "Conta 50 calci circolari alternati al sacco cercando il tempo più basso, con rotazione completa e ritorno in guardia a ogni colpo. Costruisce resistenza lattacida e potenza dei calci sotto fatica, tipica della tradizione thailandese. Non accorciare il calcio quando arriva la stanchezza."
+    "details": "Conta 50 calci circolari alternati al sacco cercando il tempo più basso, con rotazione completa e ritorno in guardia a ogni colpo. Costruisce resistenza lattacida e potenza dei calci sotto fatica, tipica della tradizione thailandese. Non accorciare il calcio quando arriva la stanchezza.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--sacco-con-100-ginocchiate",
@@ -2346,7 +2499,8 @@ export const exercises: Exercise[] = [
     "description": "100 ginocchiate alternate senza fermarsi.",
     "equipment": "Sacco",
     "dose": "1–2 serie da 100 ginocchiate, 2 min recupero",
-    "details": "Tieni il sacco in clinch e porta 100 ginocchiate alternate senza fermarti, contando ad alta voce. Allena la resistenza di anche, core e polpacci per il clinch e la tenuta mentale. Spingi l'anca avanti a ogni ginocchiata e sali sull'avampiede della gamba d'appoggio."
+    "details": "Tieni il sacco in clinch e porta 100 ginocchiate alternate senza fermarti, contando ad alta voce. Allena la resistenza di anche, core e polpacci per il clinch e la tenuta mentale. Spingi l'anca avanti a ogni ginocchiata e sali sull'avampiede della gamba d'appoggio.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--scala-di-pugni",
@@ -2355,7 +2509,8 @@ export const exercises: Exercise[] = [
     "description": "10 pugni, 1 burpee, 20 pugni, 2 burpee, fino a 100 pugni.",
     "equipment": "Sacco",
     "dose": "1 scala completa: da 10 a 100 pugni (550 tot.)",
-    "details": "Esegui 10 pugni veloci al sacco e 1 burpee, poi 20 pugni e 2 burpee, aumentando fino a 100 pugni e 10 burpee. La difficoltà crescente allena la resistenza di braccia e il recupero dopo i cambi di livello. Mantieni i pugni dritti e rapidi, senza spingere con le spalle."
+    "details": "Esegui 10 pugni veloci al sacco e 1 burpee, poi 20 pugni e 2 burpee, aumentando fino a 100 pugni e 10 burpee. La difficoltà crescente allena la resistenza di braccia e il recupero dopo i cambi di livello. Mantieni i pugni dritti e rapidi, senza spingere con le spalle.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--battle-rope-a-intervalli",
@@ -2364,7 +2519,8 @@ export const exercises: Exercise[] = [
     "description": "30 secondi di onde e 30 di recupero per 10 minuti.",
     "equipment": "Battle rope",
     "dose": "10 min: 30 s onde / 30 s recupero",
-    "details": "In semi-squat con schiena neutra, crea onde alternate o simultanee con le corde, usando spalle, braccia e core. Allena la resistenza di spalle e braccia per tenere la guardia alta e colpire nei round finali. Mantieni le ginocchia piegate e non inarcare la zona lombare."
+    "details": "In semi-squat con schiena neutra, crea onde alternate o simultanee con le corde, usando spalle, braccia e core. Allena la resistenza di spalle e braccia per tenere la guardia alta e colpire nei round finali. Mantieni le ginocchia piegate e non inarcare la zona lombare.",
+    "tool": "battle-rope"
   },
   {
     "id": "resistenza--ripresa-di-pao-con-calci-in-serie",
@@ -2373,7 +2529,8 @@ export const exercises: Exercise[] = [
     "description": "Il maestro chiede serie da 10 calci in tutta la ripresa.",
     "equipment": "Pao",
     "dose": "3–4 × 3 min, 1 min recupero",
-    "details": "Durante la ripresa ai pao il maestro chiama più volte serie da 10 calci circolari consecutivi, intervallate da combinazioni normali. Abitua a sostenere raffiche di calci quando si è già stanchi, come nelle fasi decisive di un match. Ogni calcio deve restare potente, non solo veloce."
+    "details": "Durante la ripresa ai pao il maestro chiama più volte serie da 10 calci circolari consecutivi, intervallate da combinazioni normali. Abitua a sostenere raffiche di calci quando si è già stanchi, come nelle fasi decisive di un match. Ogni calcio deve restare potente, non solo veloce.",
+    "tool": "pao"
   },
   {
     "id": "resistenza--corsa-a-intervalli-lunghi",
@@ -2409,7 +2566,8 @@ export const exercises: Exercise[] = [
     "description": "Ogni 30 secondi cambio guardia al sacco.",
     "equipment": "Sacco",
     "dose": "3 × 3 min, cambio ogni 30 s, 1 min rec.",
-    "details": "Lavora al sacco cambiando guardia ogni 30 secondi su comando del coach o del timer, mantenendo ritmo e varietà di colpi. Allena la resistenza in entrambe le guardie e la coordinazione del lato meno forte. Nel cambio guardia resta compatto, senza aprire le mani."
+    "details": "Lavora al sacco cambiando guardia ogni 30 secondi su comando del coach o del timer, mantenendo ritmo e varietà di colpi. Allena la resistenza in entrambe le guardie e la coordinazione del lato meno forte. Nel cambio guardia resta compatto, senza aprire le mani.",
+    "tool": "sacco"
   },
   {
     "id": "resistenza--ultima-ripresa-a-tutta",
@@ -2418,7 +2576,8 @@ export const exercises: Exercise[] = [
     "description": "Dopo l'allenamento, ultima ripresa al massimo dell'intensità.",
     "equipment": "Sacco",
     "dose": "1 ripresa da 2–3 min a fine allenamento",
-    "details": "Al termine della sessione esegui un'ultima ripresa al sacco alla massima intensità, senza risparmiarti. Allena la capacità di dare tutto quando si è già stanchi, come nell'ultimo round di un match combattuto. Anche al massimo, mantieni la guardia e una tecnica corretta."
+    "details": "Al termine della sessione esegui un'ultima ripresa al sacco alla massima intensità, senza risparmiarti. Allena la capacità di dare tutto quando si è già stanchi, come nell'ultimo round di un match combattuto. Anche al massimo, mantieni la guardia e una tecnica corretta.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--jab",
@@ -2481,7 +2640,8 @@ export const exercises: Exercise[] = [
     "description": "Rotazione completa e colpo con il dorso del pugno.",
     "equipment": "Sacco",
     "dose": "4 × 6 per lato al sacco",
-    "details": "Fai un passo pivot, ruota sul piede anteriore guardando il bersaglio sopra la spalla prima di colpire, e impatta con il dorso del pugno a braccio quasi disteso. Colpo a sorpresa utile contro chi si sposta lateralmente. Prima la lentezza e la vista del bersaglio: girarsi alla cieca espone a contrattacchi e perdita di equilibrio."
+    "details": "Fai un passo pivot, ruota sul piede anteriore guardando il bersaglio sopra la spalla prima di colpire, e impatta con il dorso del pugno a braccio quasi disteso. Colpo a sorpresa utile contro chi si sposta lateralmente. Prima la lentezza e la vista del bersaglio: girarsi alla cieca espone a contrattacchi e perdita di equilibrio.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--superman-punch",
@@ -2490,7 +2650,8 @@ export const exercises: Exercise[] = [
     "description": "Finta di calcio e diretto in salto.",
     "equipment": "Sacco",
     "dose": "4 × 6 per lato al sacco",
-    "details": "Accenna un calcio con la gamba posteriore, riportala indietro con decisione e usa la spinta per proiettarti in avanti con il diretto della stessa parte. Sorprende l'avversario che si prepara a parare il calcio. Atterra in guardia, ben bilanciato, e non saltare troppo in alto."
+    "details": "Accenna un calcio con la gamba posteriore, riportala indietro con decisione e usa la spinta per proiettarti in avanti con il diretto della stessa parte. Sorprende l'avversario che si prepara a parare il calcio. Atterra in guardia, ben bilanciato, e non saltare troppo in alto.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--calcio-circolare-al-corpo",
@@ -2499,7 +2660,8 @@ export const exercises: Exercise[] = [
     "description": "Calcio con la tibia al fianco, rotazione sul piede d'appoggio.",
     "equipment": "Sacco",
     "dose": "4 × 10 per gamba al sacco",
-    "details": "Esci leggermente in diagonale, sali sull'avampiede d'appoggio ruotando il tallone verso il bersaglio e colpisci con la tibia, il braccio dello stesso lato che scende a bilanciare. Il calcio principale della Muay Thai, rompe la guardia e consuma fiato. Errore comune: colpire con il collo del piede o non ruotare l'appoggio."
+    "details": "Esci leggermente in diagonale, sali sull'avampiede d'appoggio ruotando il tallone verso il bersaglio e colpisci con la tibia, il braccio dello stesso lato che scende a bilanciare. Il calcio principale della Muay Thai, rompe la guardia e consuma fiato. Errore comune: colpire con il collo del piede o non ruotare l'appoggio.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--calcio-circolare-alto",
@@ -2508,7 +2670,8 @@ export const exercises: Exercise[] = [
     "description": "Calcio alla testa con ampia rotazione dell'anca.",
     "equipment": "Sacco",
     "dose": "4 × 8 per gamba al sacco",
-    "details": "Ruota completamente l'anca e il piede d'appoggio sollevando la gamba in traiettoria ascendente verso testa o collo, mantenendo la mano dello stesso lato a protezione del viso. Colpo da KO quando l'avversario abbassa la guardia. Scalda bene anche adduttori e flessori: richiede mobilità."
+    "details": "Ruota completamente l'anca e il piede d'appoggio sollevando la gamba in traiettoria ascendente verso testa o collo, mantenendo la mano dello stesso lato a protezione del viso. Colpo da KO quando l'avversario abbassa la guardia. Scalda bene anche adduttori e flessori: richiede mobilità.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--low-kick",
@@ -2517,7 +2680,8 @@ export const exercises: Exercise[] = [
     "description": "Calcio circolare alla coscia esterna dell'avversario.",
     "equipment": "Sacco",
     "dose": "4 × 10 per gamba al sacco basso",
-    "details": "Calcio circolare con la tibia diretto alla coscia esterna sopra il ginocchio, con rotazione completa e leggermente discendente. Accumula danni e toglie mobilità e potenza all'avversario. Prepara con pugni per non essere intercettato e torna subito in guardia dopo l'impatto."
+    "details": "Calcio circolare con la tibia diretto alla coscia esterna sopra il ginocchio, con rotazione completa e leggermente discendente. Accumula danni e toglie mobilità e potenza all'avversario. Prepara con pugni per non essere intercettato e torna subito in guardia dopo l'impatto.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--low-kick-interno",
@@ -2526,7 +2690,8 @@ export const exercises: Exercise[] = [
     "description": "Calcio alla coscia interna con la gamba anteriore.",
     "equipment": "Sacco",
     "dose": "3 × 10 per lato",
-    "details": "Con la gamba anteriore, ruota leggermente l'anca e colpisci la coscia interna dell'avversario con tibia o collo del piede, in modo rapido e corto. Sbilancia la guardia avversaria e prepara il diretto. Non alzare troppo il ginocchio: deve partire veloce senza segnali."
+    "details": "Con la gamba anteriore, ruota leggermente l'anca e colpisci la coscia interna dell'avversario con tibia o collo del piede, in modo rapido e corto. Sbilancia la guardia avversaria e prepara il diretto. Non alzare troppo il ginocchio: deve partire veloce senza segnali.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--calcio-al-polpaccio",
@@ -2535,7 +2700,8 @@ export const exercises: Exercise[] = [
     "description": "Calcio basso al polpaccio della gamba anteriore.",
     "equipment": "Sacco",
     "dose": "3 × 10 per lato",
-    "details": "Calcio circolare corto e discendente sul polpaccio della gamba anteriore avversaria, colpendo con la parte bassa della tibia. Molto efficace contro chi carica il peso avanti e difficile da parare. Mira al muscolo, non all'osso, e copri il viso mentre calci."
+    "details": "Calcio circolare corto e discendente sul polpaccio della gamba anteriore avversaria, colpendo con la parte bassa della tibia. Molto efficace contro chi carica il peso avanti e difficile da parare. Mira al muscolo, non all'osso, e copri il viso mentre calci.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--switch-kick",
@@ -2544,7 +2710,8 @@ export const exercises: Exercise[] = [
     "description": "Cambio guardia rapido e calcio con la gamba anteriore.",
     "equipment": "Sacco",
     "dose": "4 × 8 per lato",
-    "details": "Con un piccolo saltello inverti la posizione dei piedi portando avanti la gamba posteriore, poi calcia subito circolare con la gamba che era davanti. Dà potenza al calcio anteriore e confonde l'avversario. Il cambio deve essere piccolo e rapido, con le mani sempre alte."
+    "details": "Con un piccolo saltello inverti la posizione dei piedi portando avanti la gamba posteriore, poi calcia subito circolare con la gamba che era davanti. Dà potenza al calcio anteriore e confonde l'avversario. Il cambio deve essere piccolo e rapido, con le mani sempre alte.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--teep-anteriore",
@@ -2553,7 +2720,8 @@ export const exercises: Exercise[] = [
     "description": "Calcio frontale di spinta con la gamba anteriore.",
     "equipment": "Sacco",
     "dose": "3 × 12 per lato",
-    "details": "Solleva il ginocchio anteriore al petto e distendi la gamba spingendo con la pianta o l'avampiede verso addome o anca, con l'anca che spinge in avanti. Controlla la distanza e interrompe l'attacco avversario. Ritira la gamba dopo l'impatto per non farla afferrare."
+    "details": "Solleva il ginocchio anteriore al petto e distendi la gamba spingendo con la pianta o l'avampiede verso addome o anca, con l'anca che spinge in avanti. Controlla la distanza e interrompe l'attacco avversario. Ritira la gamba dopo l'impatto per non farla afferrare.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--teep-posteriore",
@@ -2562,7 +2730,8 @@ export const exercises: Exercise[] = [
     "description": "Calcio frontale di spinta con la gamba posteriore.",
     "equipment": "Sacco",
     "dose": "3 × 12 per lato",
-    "details": "Porta il ginocchio posteriore in alto e spingi in avanti con tutto il bacino, inclinando leggermente indietro il busto per dare peso al colpo. Più potente dell'anteriore, ideale per allontanare chi pressa. Dopo il colpo rimetti il piede a terra in guardia, non cadere in avanti."
+    "details": "Porta il ginocchio posteriore in alto e spingi in avanti con tutto il bacino, inclinando leggermente indietro il busto per dare peso al colpo. Più potente dell'anteriore, ideale per allontanare chi pressa. Dopo il colpo rimetti il piede a terra in guardia, non cadere in avanti.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--teep-al-viso",
@@ -2571,7 +2740,8 @@ export const exercises: Exercise[] = [
     "description": "Calcio frontale alto, tecnica di dominio e provocazione.",
     "equipment": "Pao",
     "dose": "3 × 6 per lato ai pao",
-    "details": "Teep sollevato all'altezza del viso con la pianta del piede, eseguito con controllo e grande mobilità dell'anca. Oltre a colpire, mostra dominio e destabilizza psicologicamente l'avversario. Richiede tempismo: si tira quando l'avversario è fermo o si sporge in avanti."
+    "details": "Teep sollevato all'altezza del viso con la pianta del piede, eseguito con controllo e grande mobilità dell'anca. Oltre a colpire, mostra dominio e destabilizza psicologicamente l'avversario. Richiede tempismo: si tira quando l'avversario è fermo o si sporge in avanti.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--teep-laterale",
@@ -2580,7 +2750,8 @@ export const exercises: Exercise[] = [
     "description": "Calcio laterale di spinta con il tallone.",
     "equipment": "Sacco",
     "dose": "3 × 10 per lato",
-    "details": "Ruota il piede d'appoggio, porta il ginocchio al petto e spingi lateralmente colpendo con il tallone, busto inclinato e guardia alta. Utile per fermare chi entra di lato o angolato. Errore comune: non ruotare l'appoggio, sforzando il ginocchio."
+    "details": "Ruota il piede d'appoggio, porta il ginocchio al petto e spingi lateralmente colpendo con il tallone, busto inclinato e guardia alta. Utile per fermare chi entra di lato o angolato. Errore comune: non ruotare l'appoggio, sforzando il ginocchio.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--ginocchiata-dritta",
@@ -2589,7 +2760,8 @@ export const exercises: Exercise[] = [
     "description": "Ginocchiata in avanti spingendo l'anca.",
     "equipment": "Sacco",
     "dose": "4 × 12 per gamba",
-    "details": "Spingi l'anca in avanti e colpisci con la punta del ginocchio, alzandoti sull'avampiede della gamba d'appoggio e tirando le braccia verso il basso. Arma fondamentale a corta distanza e nel clinch. Non piegare il busto in avanti: la potenza viene dall'anca."
+    "details": "Spingi l'anca in avanti e colpisci con la punta del ginocchio, alzandoti sull'avampiede della gamba d'appoggio e tirando le braccia verso il basso. Arma fondamentale a corta distanza e nel clinch. Non piegare il busto in avanti: la potenza viene dall'anca.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--ginocchiata-diagonale",
@@ -2598,7 +2770,8 @@ export const exercises: Exercise[] = [
     "description": "Ginocchiata con traiettoria laterale.",
     "equipment": "Sacco",
     "dose": "4 × 10 per gamba",
-    "details": "Fai un piccolo passo di lato e porta il ginocchio in traiettoria diagonale verso costole o fianco, ruotando leggermente l'anca. Supera la guardia frontale dell'avversario. Mantieni l'equilibrio sull'avampiede e torna subito in posizione."
+    "details": "Fai un piccolo passo di lato e porta il ginocchio in traiettoria diagonale verso costole o fianco, ruotando leggermente l'anca. Supera la guardia frontale dell'avversario. Mantieni l'equilibrio sull'avampiede e torna subito in posizione.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--ginocchiata-curva",
@@ -2607,7 +2780,8 @@ export const exercises: Exercise[] = [
     "description": "Ginocchiata circolare al fianco.",
     "equipment": "Sacco",
     "dose": "4 × 10 per gamba",
-    "details": "Solleva il ginocchio lateralmente e ruota l'anca come in un calcio circolare corto, colpendo il fianco con l'interno del ginocchio. Funziona nel clinch quando l'avversario è troppo vicino per una ginocchiata dritta. Tieni il controllo del collo o delle braccia mentre colpisci."
+    "details": "Solleva il ginocchio lateralmente e ruota l'anca come in un calcio circolare corto, colpendo il fianco con l'interno del ginocchio. Funziona nel clinch quando l'avversario è troppo vicino per una ginocchiata dritta. Tieni il controllo del collo o delle braccia mentre colpisci.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--ginocchiata-volante",
@@ -2616,7 +2790,8 @@ export const exercises: Exercise[] = [
     "description": "Ginocchiata in salto con lo slancio della gamba opposta.",
     "equipment": "Sacco",
     "dose": "4 × 5 per gamba al sacco",
-    "details": "Fai uno o due passi, spingi con la gamba opposta e salta portando il ginocchio in avanti e verso l'alto con l'anca. Colpo spettacolare e potente contro chi avanza o abbassa la testa. Atterra in guardia e non saltare se l'avversario è troppo lontano."
+    "details": "Fai uno o due passi, spingi con la gamba opposta e salta portando il ginocchio in avanti e verso l'alto con l'anca. Colpo spettacolare e potente contro chi avanza o abbassa la testa. Atterra in guardia e non saltare se l'avversario è troppo lontano.",
+    "tool": "sacco"
   },
   {
     "id": "tecnica--gomitata-orizzontale",
@@ -2625,7 +2800,8 @@ export const exercises: Exercise[] = [
     "description": "Gomitata laterale con rotazione delle spalle.",
     "equipment": "Pao",
     "dose": "4 × 10 per lato ai pao",
-    "details": "Ruota spalle e anca portando il gomito in orizzontale all'altezza del viso, con il palmo verso il basso e la mano vicino alla testa. Colpo corto e tagliente, devastante a corta distanza. L'altra mano protegge sempre il viso; non allargare il braccio."
+    "details": "Ruota spalle e anca portando il gomito in orizzontale all'altezza del viso, con il palmo verso il basso e la mano vicino alla testa. Colpo corto e tagliente, devastante a corta distanza. L'altra mano protegge sempre il viso; non allargare il braccio.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--gomitata-dall-alto",
@@ -2634,7 +2810,8 @@ export const exercises: Exercise[] = [
     "description": "Gomitata che scende dall'alto verso il basso.",
     "equipment": "Pao",
     "dose": "4 × 10 per lato ai pao",
-    "details": "Solleva il gomito sopra la testa e scendilo verso il bersaglio piegando leggermente le gambe per aggiungere peso. Penetra la guardia alta e colpisce fronte o sopracciglio. Errore comune: alzare troppo il gomito in anticipo segnalando il colpo."
+    "details": "Solleva il gomito sopra la testa e scendilo verso il bersaglio piegando leggermente le gambe per aggiungere peso. Penetra la guardia alta e colpisce fronte o sopracciglio. Errore comune: alzare troppo il gomito in anticipo segnalando il colpo.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--gomitata-montante",
@@ -2643,7 +2820,8 @@ export const exercises: Exercise[] = [
     "description": "Gomitata dal basso verso l'alto.",
     "equipment": "Pao",
     "dose": "4 × 10 per lato ai pao",
-    "details": "Porta il gomito dal basso verso l'alto lungo la linea centrale, spingendo con gambe e anca e tenendo la mano vicino all'orecchio. Passa tra le braccia dell'avversario chiuso in guardia. Mantieni la testa fuori linea durante l'esecuzione."
+    "details": "Porta il gomito dal basso verso l'alto lungo la linea centrale, spingendo con gambe e anca e tenendo la mano vicino all'orecchio. Passa tra le braccia dell'avversario chiuso in guardia. Mantieni la testa fuori linea durante l'esecuzione.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--gomitata-girata",
@@ -2652,7 +2830,8 @@ export const exercises: Exercise[] = [
     "description": "Gomitata con rotazione completa all'indietro.",
     "equipment": "Pao",
     "dose": "4 × 6 per lato ai pao",
-    "details": "Fai un passo pivot, ruota all'indietro guardando il bersaglio sopra la spalla e colpisci con il gomito orizzontale alla fine della rotazione. Colpo sorpresa contro chi gira intorno o esce lateralmente. Allena prima la rotazione lenta per non perdere l'equilibrio."
+    "details": "Fai un passo pivot, ruota all'indietro guardando il bersaglio sopra la spalla e colpisci con il gomito orizzontale alla fine della rotazione. Colpo sorpresa contro chi gira intorno o esce lateralmente. Allena prima la rotazione lenta per non perdere l'equilibrio.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--gomitata-in-diagonale-discendente",
@@ -2661,7 +2840,8 @@ export const exercises: Exercise[] = [
     "description": "Gomitata che taglia in diagonale verso il basso.",
     "equipment": "Pao",
     "dose": "4 × 10 per lato ai pao",
-    "details": "Porta il gomito dall'alto in diagonale verso il basso, attraversando la guardia con rotazione di spalla e leggero affondo sulle gambe. Molto efficace per tagliare e come chiusura delle combinazioni. Tieni il mento basso e l'altra mano alta."
+    "details": "Porta il gomito dall'alto in diagonale verso il basso, attraversando la guardia con rotazione di spalla e leggero affondo sulle gambe. Molto efficace per tagliare e come chiusura delle combinazioni. Tieni il mento basso e l'altra mano alta.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--parata-con-la-tibia",
@@ -2760,7 +2940,8 @@ export const exercises: Exercise[] = [
     "description": "Uno-due e calcio circolare posteriore.",
     "equipment": "Pao",
     "dose": "4 riprese da 2 min ai pao",
-    "details": "Jab e diretto per chiudere la guardia avversaria, poi calcio circolare con la gamba posteriore sfruttando la rotazione del diretto. Combinazione base della Muay Thai, efficace ai pao e in gara. Il calcio deve partire subito dopo il diretto, senza pausa."
+    "details": "Jab e diretto per chiudere la guardia avversaria, poi calcio circolare con la gamba posteriore sfruttando la rotazione del diretto. Combinazione base della Muay Thai, efficace ai pao e in gara. Il calcio deve partire subito dopo il diretto, senza pausa.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--combinazione-jab-calcio-basso",
@@ -2769,7 +2950,8 @@ export const exercises: Exercise[] = [
     "description": "Jab per coprire e low kick posteriore.",
     "equipment": "Pao",
     "dose": "4 riprese da 2 min ai pao",
-    "details": "Il jab copre la visuale e fa alzare la guardia, mentre il low kick posteriore colpisce la coscia esterna. Combinazione semplice e molto efficace per accumulare danni alla gamba. Non abbassare la mano anteriore mentre calci."
+    "details": "Il jab copre la visuale e fa alzare la guardia, mentre il low kick posteriore colpisce la coscia esterna. Combinazione semplice e molto efficace per accumulare danni alla gamba. Non abbassare la mano anteriore mentre calci.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--combinazione-diretto-gancio-calcio",
@@ -2778,7 +2960,8 @@ export const exercises: Exercise[] = [
     "description": "Diretto, gancio anteriore e calcio circolare posteriore.",
     "equipment": "Pao",
     "dose": "4 riprese da 2 min ai pao",
-    "details": "Diretto posteriore, gancio anteriore con rotazione e calcio circolare posteriore caricato dal gancio stesso. Sposta l'attenzione dall'alto al corpo. Mantieni il ritmo fluido e le mani sempre alte tra un colpo e l'altro."
+    "details": "Diretto posteriore, gancio anteriore con rotazione e calcio circolare posteriore caricato dal gancio stesso. Sposta l'attenzione dall'alto al corpo. Mantieni il ritmo fluido e le mani sempre alte tra un colpo e l'altro.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--combinazione-teep-diretto-calcio",
@@ -2787,7 +2970,8 @@ export const exercises: Exercise[] = [
     "description": "Teep anteriore, diretto e calcio circolare.",
     "equipment": "Pao",
     "dose": "4 riprese da 2 min ai pao",
-    "details": "Teep anteriore per controllare la distanza, rientro con diretto e chiusura con calcio circolare. Insegna a passare dalla distanza lunga a quella media. Dopo il teep appoggia il piede in avanti per non perdere l'occasione del diretto."
+    "details": "Teep anteriore per controllare la distanza, rientro con diretto e chiusura con calcio circolare. Insegna a passare dalla distanza lunga a quella media. Dopo il teep appoggia il piede in avanti per non perdere l'occasione del diretto.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--combinazione-pugni-e-ginocchiata",
@@ -2796,7 +2980,8 @@ export const exercises: Exercise[] = [
     "description": "Jab-diretto, presa al collo e ginocchiata.",
     "equipment": "Pao",
     "dose": "4 riprese da 2 min ai pao",
-    "details": "Jab-diretto per accorciare la distanza, poi presa al collo con entrambe le mani e ginocchiata dritta tirando l'avversario verso il basso. Transizione chiave dalla boxe al clinch. La presa va fatta con i gomiti stretti, non con le braccia larghe."
+    "details": "Jab-diretto per accorciare la distanza, poi presa al collo con entrambe le mani e ginocchiata dritta tirando l'avversario verso il basso. Transizione chiave dalla boxe al clinch. La presa va fatta con i gomiti stretti, non con le braccia larghe.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--combinazione-gomitata-e-ginocchiata",
@@ -2805,7 +2990,8 @@ export const exercises: Exercise[] = [
     "description": "Gomitata orizzontale e ginocchiata dritta.",
     "equipment": "Pao",
     "dose": "4 riprese da 2 min ai pao",
-    "details": "Gomitata orizzontale a corta distanza seguita subito da ginocchiata dritta con spinta dell'anca. Combinazione devastante nel corpo a corpo. Mantieni l'equilibrio tra un colpo e l'altro e la guardia chiusa."
+    "details": "Gomitata orizzontale a corta distanza seguita subito da ginocchiata dritta con spinta dell'anca. Combinazione devastante nel corpo a corpo. Mantieni l'equilibrio tra un colpo e l'altro e la guardia chiusa.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--finta-di-calcio-e-diretto",
@@ -2814,7 +3000,8 @@ export const exercises: Exercise[] = [
     "description": "Accennare il calcio e colpire con il diretto.",
     "equipment": "Pao",
     "dose": "3 × 10 per lato ai pao",
-    "details": "Accenna il calcio sollevando leggermente il ginocchio o spostando l'anca, poi colpisci con il diretto mentre l'avversario prepara la parata. Insegna a manipolare le reazioni. La finta deve essere credibile ma breve."
+    "details": "Accenna il calcio sollevando leggermente il ginocchio o spostando l'anca, poi colpisci con il diretto mentre l'avversario prepara la parata. Insegna a manipolare le reazioni. La finta deve essere credibile ma breve.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--finta-di-teep-e-calcio-circolare",
@@ -2823,7 +3010,8 @@ export const exercises: Exercise[] = [
     "description": "Accennare il teep e calciare circolare.",
     "equipment": "Pao",
     "dose": "3 × 10 per lato ai pao",
-    "details": "Solleva il ginocchio come per un teep, poi ruota l'anca e trasforma il movimento in un calcio circolare. Sorprende chi aspetta il teep frontale. Mantieni la rotazione del piede d'appoggio per dare potenza al calcio."
+    "details": "Solleva il ginocchio come per un teep, poi ruota l'anca e trasforma il movimento in un calcio circolare. Sorprende chi aspetta il teep frontale. Mantieni la rotazione del piede d'appoggio per dare potenza al calcio.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--contrattacco-al-calcio-con-calcio",
@@ -2877,7 +3065,8 @@ export const exercises: Exercise[] = [
     "description": "Una ripresa ai pao su un solo colpo o combinazione.",
     "equipment": "Pao",
     "dose": "3 riprese da 3 min, 1 min recupero",
-    "details": "Il maestro o il compagno ai pao chiama un solo colpo o combinazione per l'intera ripresa, correggendo i dettagli. Fissa la tecnica e il tempismo su un obiettivo preciso. Mantieni la qualità anche quando sei stanco."
+    "details": "Il maestro o il compagno ai pao chiama un solo colpo o combinazione per l'intera ripresa, correggendo i dettagli. Fissa la tecnica e il tempismo su un obiettivo preciso. Mantieni la qualità anche quando sei stanco.",
+    "tool": "pao"
   },
   {
     "id": "tecnica--sparring-a-tema",
@@ -2913,7 +3102,8 @@ export const exercises: Exercise[] = [
     "description": "Passo laterale per cambiare angolo e calcio circolare.",
     "equipment": "Pao",
     "dose": "3 × 10 per lato ai pao",
-    "details": "Fai un passo laterale in diagonale per uscire dalla linea dell'avversario, poi calcia subito circolare dal nuovo angolo. Permette di colpire senza essere colpiti e di aggirare la guardia. Mantieni le mani alte durante il passo."
+    "details": "Fai un passo laterale in diagonale per uscire dalla linea dell'avversario, poi calcia subito circolare dal nuovo angolo. Permette di colpire senza essere colpiti e di aggirare la guardia. Mantieni le mani alte durante il passo.",
+    "tool": "pao"
   },
   {
     "id": "mobilita--rotazioni-del-collo",
@@ -3228,7 +3418,8 @@ export const exercises: Exercise[] = [
     "description": "Appesi alla sbarra, rilassare le spalle.",
     "equipment": "Sbarra",
     "dose": "3 × 20-30 s",
-    "details": "Appenditi alla sbarra con presa alla larghezza delle spalle, piedi staccati o appoggiati per alleggerire, e lascia rilassare spalle e schiena. Respira lentamente. Decomprime la colonna e allunga i dorsali, utile dopo sessioni di clinch e sacco; scendi se senti fastidio alle spalle."
+    "details": "Appenditi alla sbarra con presa alla larghezza delle spalle, piedi staccati o appoggiati per alleggerire, e lascia rilassare spalle e schiena. Respira lentamente. Decomprime la colonna e allunga i dorsali, utile dopo sessioni di clinch e sacco; scendi se senti fastidio alle spalle.",
+    "tool": "sbarra"
   },
   {
     "id": "mobilita--mobilita-dei-polsi",
@@ -3282,7 +3473,8 @@ export const exercises: Exercise[] = [
     "description": "Gamba tesa tirata verso il petto con l'elastico.",
     "equipment": "Elastico",
     "dose": "3 × 30 s per gamba",
-    "details": "Supino, passa l'elastico sotto la pianta del piede e solleva la gamba tesa tirandola verso il petto, con l'altra gamba distesa a terra. Espira e avvicina gradualmente, senza strappi. Puoi portare la gamba di lato per gli adduttori. Allungamento sicuro per femorali e calci alti."
+    "details": "Supino, passa l'elastico sotto la pianta del piede e solleva la gamba tesa tirandola verso il petto, con l'altra gamba distesa a terra. Espira e avvicina gradualmente, senza strappi. Puoi portare la gamba di lato per gli adduttori. Allungamento sicuro per femorali e calci alti.",
+    "tool": "elastico"
   },
   {
     "id": "mobilita--rullo-sulle-tibie",
@@ -3471,7 +3663,8 @@ export const exercises: Exercise[] = [
     "description": "Sit-up lanciando la palla al compagno in risalita.",
     "equipment": "Palla medica",
     "dose": "3 × 12 ripetizioni",
-    "details": "Seduto di fronte al compagno, ricevi la palla sopra la testa scendendo e risali lanciandola con petto e addome. Sviluppa forza esplosiva del tronco e coordinazione con le braccia. Controlla la discesa per non battere la schiena e scegli una palla da 3–5 kg."
+    "details": "Seduto di fronte al compagno, ricevi la palla sopra la testa scendendo e risali lanciandola con petto e addome. Sviluppa forza esplosiva del tronco e coordinazione con le braccia. Controlla la discesa per non battere la schiena e scegli una palla da 3–5 kg.",
+    "tool": "palla-medica"
   },
   {
     "id": "core--russian-twist",
@@ -3480,7 +3673,8 @@ export const exercises: Exercise[] = [
     "description": "Seduti, piedi sollevati, rotazioni del busto.",
     "equipment": "Palla medica",
     "dose": "3 × 20 rotazioni (10 per lato)",
-    "details": "Seduto con busto inclinato indietro e piedi sollevati, ruota le spalle portando la palla accanto al fianco, alternando i lati. Rinforza gli obliqui, fondamentali per la rotazione di ganci e calci circolari. Ruota con il busto, non solo con le braccia, e mantieni la schiena dritta."
+    "details": "Seduto con busto inclinato indietro e piedi sollevati, ruota le spalle portando la palla accanto al fianco, alternando i lati. Rinforza gli obliqui, fondamentali per la rotazione di ganci e calci circolari. Ruota con il busto, non solo con le braccia, e mantieni la schiena dritta.",
+    "tool": "palla-medica"
   },
   {
     "id": "core--russian-twist-con-pugni",
@@ -3516,7 +3710,8 @@ export const exercises: Exercise[] = [
     "description": "Appesi, portare le ginocchia o i piedi in alto.",
     "equipment": "Sbarra",
     "dose": "3 × 10 ripetizioni",
-    "details": "Appeso con presa salda e spalle attive, porta le ginocchia al petto (o i piedi in alto) arrotolando il bacino, poi scendi controllato. Sviluppa forza addominale e di presa, con un movimento simile alla ginocchiata in clinch. Evita di dondolare usando lo slancio."
+    "details": "Appeso con presa salda e spalle attive, porta le ginocchia al petto (o i piedi in alto) arrotolando il bacino, poi scendi controllato. Sviluppa forza addominale e di presa, con un movimento simile alla ginocchiata in clinch. Evita di dondolare usando lo slancio.",
+    "tool": "sbarra"
   },
   {
     "id": "core--toes-to-bar",
@@ -3525,7 +3720,8 @@ export const exercises: Exercise[] = [
     "description": "Appesi, piedi a toccare la sbarra.",
     "equipment": "Sbarra",
     "dose": "4 × 6–8 ripetizioni",
-    "details": "Appeso alla sbarra, contrai addome e dorsali e porta le punte dei piedi a toccare la sbarra, scendendo lentamente. Esercizio avanzato che sviluppa grande forza di flessione del tronco e controllo del corpo. Limita il kipping e progredisci dalle ginocchia al petto se necessario."
+    "details": "Appeso alla sbarra, contrai addome e dorsali e porta le punte dei piedi a toccare la sbarra, scendendo lentamente. Esercizio avanzato che sviluppa grande forza di flessione del tronco e controllo del corpo. Limita il kipping e progredisci dalle ginocchia al petto se necessario.",
+    "tool": "sbarra"
   },
   {
     "id": "core--dead-bug",
@@ -3570,7 +3766,8 @@ export const exercises: Exercise[] = [
     "description": "Resistenza alla rotazione con elastico o cavo.",
     "equipment": "Elastico",
     "dose": "3 × 10 per lato, tenuta 2 s",
-    "details": "In piedi di fianco all'ancoraggio, elastico al petto, spingi le mani in avanti e tieni senza lasciare che il busto ruoti verso il punto di attacco. Allena l'anti-rotazione, cioè la capacità di restare stabile quando un colpo o una spinta cerca di girarti. Piedi in larghezza spalle, glutei attivi."
+    "details": "In piedi di fianco all'ancoraggio, elastico al petto, spingi le mani in avanti e tieni senza lasciare che il busto ruoti verso il punto di attacco. Allena l'anti-rotazione, cioè la capacità di restare stabile quando un colpo o una spinta cerca di girarti. Piedi in larghezza spalle, glutei attivi.",
+    "tool": "elastico"
   },
   {
     "id": "core--woodchop-al-cavo",
@@ -3597,7 +3794,8 @@ export const exercises: Exercise[] = [
     "description": "Il compagno lascia cadere la palla sull'addome contratto.",
     "equipment": "Palla medica",
     "dose": "3 × 10 cadute, recupero 30 s",
-    "details": "Supino con addome contratto, il compagno lascia cadere la palla dall'altezza del petto; espira con forza al momento dell'impatto. Condiziona l'addome a ricevere colpi, come tradizione nelle palestre thai. Inizia da altezze basse e palla leggera, evitando lo sterno e le costole basse."
+    "details": "Supino con addome contratto, il compagno lascia cadere la palla dall'altezza del petto; espira con forza al momento dell'impatto. Condiziona l'addome a ricevere colpi, come tradizione nelle palestre thai. Inizia da altezze basse e palla leggera, evitando lo sterno e le costole basse.",
+    "tool": "palla-medica"
   },
   {
     "id": "core--condizionamento-addominale-con-pugni",
@@ -3660,7 +3858,8 @@ export const exercises: Exercise[] = [
     "description": "Camminata con un carico solo da un lato, busto dritto.",
     "equipment": "Kettlebell",
     "dose": "3 × 30 m per lato",
-    "details": "Kettlebell pesante in una mano, cammina a passo normale con spalle livellate e busto perfettamente verticale. Allena gli obliqui a resistere all'inclinazione laterale, utile in clinch quando l'avversario tira da un lato. Non piegarti verso il carico e non alzare la spalla."
+    "details": "Kettlebell pesante in una mano, cammina a passo normale con spalle livellate e busto perfettamente verticale. Allena gli obliqui a resistere all'inclinazione laterale, utile in clinch quando l'avversario tira da un lato. Non piegarti verso il carico e non alzare la spalla.",
+    "tool": "kettlebell"
   },
   {
     "id": "core--bear-plank",
@@ -3687,7 +3886,8 @@ export const exercises: Exercise[] = [
     "description": "Corpo sostenuto sulle mani, gambe tese davanti.",
     "equipment": "Parallele",
     "dose": "4 × 10–20 s",
-    "details": "Mani sulle parallele o a terra, spingi le spalle in basso, solleva il corpo e tieni le gambe tese parallele al suolo. Sviluppa forza isometrica di addome e flessori dell'anca, oltre alla stabilità delle spalle. Se è troppo difficile, tieni le ginocchia piegate (tuck sit)."
+    "details": "Mani sulle parallele o a terra, spingi le spalle in basso, solleva il corpo e tieni le gambe tese parallele al suolo. Sviluppa forza isometrica di addome e flessori dell'anca, oltre alla stabilità delle spalle. Se è troppo difficile, tieni le ginocchia piegate (tuck sit).",
+    "tool": "sbarra"
   },
   {
     "id": "core--dragon-flag",
@@ -3705,7 +3905,8 @@ export const exercises: Exercise[] = [
     "description": "In guardia, rotazione del busto contro l'elastico come nel gancio.",
     "equipment": "Elastico",
     "dose": "3 × 15 per lato",
-    "details": "In guardia con l'elastico ancorato di lato, ruota busto, anca e piede come nel gancio portando l'elastico davanti a te, poi torna controllando. Rinforza la rotazione specifica del colpo. Mantieni la guardia alta con la mano libera e ruota sull'avampiede."
+    "details": "In guardia con l'elastico ancorato di lato, ruota busto, anca e piede come nel gancio portando l'elastico davanti a te, poi torna controllando. Rinforza la rotazione specifica del colpo. Mantieni la guardia alta con la mano libera e ruota sull'avampiede.",
+    "tool": "elastico"
   },
   {
     "id": "core--lancio-palla-medica-dalla-schiena-a-terra",
@@ -3714,7 +3915,8 @@ export const exercises: Exercise[] = [
     "description": "Sdraiati, sit-up e lancio della palla al compagno.",
     "equipment": "Palla medica",
     "dose": "3 × 10 lanci",
-    "details": "Supino con la palla sul petto, sali esplosivo con il sit-up e lancia la palla al compagno in piedi, riprendila e torna giù controllando. Sviluppa potenza del tronco e velocità di risalita. Espira con forza durante il lancio e scegli un peso che permetta un gesto veloce."
+    "details": "Supino con la palla sul petto, sali esplosivo con il sit-up e lancia la palla al compagno in piedi, riprendila e torna giù controllando. Sviluppa potenza del tronco e velocità di risalita. Espira con forza durante il lancio e scegli un peso che permetta un gesto veloce.",
+    "tool": "palla-medica"
   },
   {
     "id": "core--superman",
@@ -3750,7 +3952,8 @@ export const exercises: Exercise[] = [
     "description": "Inclinazione laterale del busto con un manubrio.",
     "equipment": "Manubrio",
     "dose": "3 × 15 per lato",
-    "details": "In piedi con il manubrio in una mano, inclina il busto lateralmente verso il carico e risali contraendo l'obliquo opposto. Rinforza i fianchi, la zona colpita da ganci al corpo e calci circolari. Movimento solo laterale: non ruotare e non piegarti in avanti."
+    "details": "In piedi con il manubrio in una mano, inclina il busto lateralmente verso il carico e risali contraendo l'obliquo opposto. Rinforza i fianchi, la zona colpita da ganci al corpo e calci circolari. Movimento solo laterale: non ruotare e non piegarti in avanti.",
+    "tool": "manubri"
   },
   {
     "id": "core--flutter-kick",
@@ -3831,7 +4034,8 @@ export const exercises: Exercise[] = [
     "description": "Bilanciere ancorato portato da un fianco all'altro.",
     "equipment": "Bilanciere",
     "dose": "3 × 10 per lato",
-    "details": "Bilanciere ancorato a terra, presa con due mani sopra la testa, portalo verso un fianco ruotando busto e piedi e poi verso l'altro, con braccia quasi tese. Sviluppa potenza rotazionale con controllo, trasferibile a ganci e calci. Il movimento parte dalle anche; carico moderato."
+    "details": "Bilanciere ancorato a terra, presa con due mani sopra la testa, portalo verso un fianco ruotando busto e piedi e poi verso l'altro, con braccia quasi tese. Sviluppa potenza rotazionale con controllo, trasferibile a ganci e calci. Il movimento parte dalle anche; carico moderato.",
+    "tool": "bilanciere"
   },
   {
     "id": "core--turkish-get-up",
@@ -3840,7 +4044,8 @@ export const exercises: Exercise[] = [
     "description": "Da sdraiato a in piedi con la kettlebell sopra la testa.",
     "equipment": "Kettlebell",
     "dose": "3 × 3 per lato",
-    "details": "Da sdraiato con la kettlebell a braccio teso sopra la spalla, passa per gomito, mano, ponte e affondo fino in piedi, poi torna giù invertendo i passaggi. Allena stabilità di spalla e core in tutte le posizioni, anche quelle di rialzata da terra. Sguardo sempre sulla kettlebell; movimenti lenti."
+    "details": "Da sdraiato con la kettlebell a braccio teso sopra la spalla, passa per gomito, mano, ponte e affondo fino in piedi, poi torna giù invertendo i passaggi. Allena stabilità di spalla e core in tutte le posizioni, anche quelle di rialzata da terra. Sguardo sempre sulla kettlebell; movimenti lenti.",
+    "tool": "kettlebell"
   },
   {
     "id": "core--respirazione-con-addome-contratto",
@@ -3894,7 +4099,8 @@ export const exercises: Exercise[] = [
     "description": "Pivot per uscire dalla linea e calcio circolare.",
     "equipment": "Sacco",
     "dose": "4 × 10 ripetizioni per lato",
-    "details": "Davanti al sacco esegui un pivot sul piede anteriore per uscire dalla linea, poi carica subito il calcio circolare dal nuovo angolo. Il calcio deve partire senza passi di aggiustamento e con la guardia alta. Insegna a colpire dal lato, dove l'avversario è scoperto e non può rispondere."
+    "details": "Davanti al sacco esegui un pivot sul piede anteriore per uscire dalla linea, poi carica subito il calcio circolare dal nuovo angolo. Il calcio deve partire senza passi di aggiustamento e con la guardia alta. Insegna a colpire dal lato, dove l'avversario è scoperto e non può rispondere.",
+    "tool": "sacco"
   },
   {
     "id": "agilita--uscita-a-45-gradi",
@@ -3948,7 +4154,8 @@ export const exercises: Exercise[] = [
     "description": "Corsa veloce con un appoggio per casella.",
     "equipment": "Scaletta",
     "dose": "6 passaggi, recupero di ritorno camminando",
-    "details": "Corri attraverso la scaletta appoggiando un solo piede per casella, sulle punte e con braccia attive. Guarda avanti, non i piedi, e cerca contatti brevissimi con il suolo. Migliora frequenza dei passi e reattività degli appoggi, utili per entrare e uscire in fretta."
+    "details": "Corri attraverso la scaletta appoggiando un solo piede per casella, sulle punte e con braccia attive. Guarda avanti, non i piedi, e cerca contatti brevissimi con il suolo. Migliora frequenza dei passi e reattività degli appoggi, utili per entrare e uscire in fretta.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "agilita--scaletta-due-piedi-per-quadrato",
@@ -3957,7 +4164,8 @@ export const exercises: Exercise[] = [
     "description": "Due appoggi per casella, ritmo alto.",
     "equipment": "Scaletta",
     "dose": "6 passaggi, recupero 20 s",
-    "details": "Entrambi i piedi toccano ogni casella in rapida successione, ginocchia leggermente flesse e busto stabile. Mantieni un ritmo regolare e appoggi leggeri sugli avampiedi. Allena la velocità dei piedi e la coordinazione, base di un footwork rapido e preciso."
+    "details": "Entrambi i piedi toccano ogni casella in rapida successione, ginocchia leggermente flesse e busto stabile. Mantieni un ritmo regolare e appoggi leggeri sugli avampiedi. Allena la velocità dei piedi e la coordinazione, base di un footwork rapido e preciso.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "agilita--scaletta-laterale",
@@ -3966,7 +4174,8 @@ export const exercises: Exercise[] = [
     "description": "Spostamento laterale nella scaletta.",
     "equipment": "Scaletta",
     "dose": "6 passaggi (3 per lato), recupero 20 s",
-    "details": "Fianco alla scaletta, spostati lateralmente con due appoggi per casella, senza incrociare i piedi e restando bassi. Le mani possono restare in guardia. Rinforza lo spostamento laterale del ring, rendendolo più rapido ed equilibrato."
+    "details": "Fianco alla scaletta, spostati lateralmente con due appoggi per casella, senza incrociare i piedi e restando bassi. Le mani possono restare in guardia. Rinforza lo spostamento laterale del ring, rendendolo più rapido ed equilibrato.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "agilita--scaletta-dentro-fuori",
@@ -3975,7 +4184,8 @@ export const exercises: Exercise[] = [
     "description": "Piedi dentro e fuori dalla casella alternati.",
     "equipment": "Scaletta",
     "dose": "6 passaggi, recupero 20 s",
-    "details": "Frontalmente alla scaletta porta i piedi dentro la casella e poi fuori ai lati, avanzando a ogni ciclo. Resta sulle punte con ritmo costante e busto eretto. Migliora coordinazione e cambi rapidi di appoggio, utili nei cambi di distanza."
+    "details": "Frontalmente alla scaletta porta i piedi dentro la casella e poi fuori ai lati, avanzando a ogni ciclo. Resta sulle punte con ritmo costante e busto eretto. Migliora coordinazione e cambi rapidi di appoggio, utili nei cambi di distanza.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "agilita--scaletta-con-pugni",
@@ -3984,7 +4194,8 @@ export const exercises: Exercise[] = [
     "description": "Scaletta e jab-diretto alla fine di ogni passaggio.",
     "equipment": "Scaletta",
     "dose": "6 passaggi, recupero 30 s",
-    "details": "Esegui un pattern di scaletta a scelta e, all'uscita, chiudi subito in guardia con jab-diretto potente. Il passaggio dal footwork al colpo deve essere immediato e con base stabile. Collega velocità di piedi e attacco, come quando si entra in distanza."
+    "details": "Esegui un pattern di scaletta a scelta e, all'uscita, chiudi subito in guardia con jab-diretto potente. Il passaggio dal footwork al colpo deve essere immediato e con base stabile. Collega velocità di piedi e attacco, come quando si entra in distanza.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "agilita--coni-a-t",
@@ -3993,7 +4204,8 @@ export const exercises: Exercise[] = [
     "description": "Scatto avanti, laterale e indietro sui coni a forma di T.",
     "equipment": "Coni",
     "dose": "6 ripetizioni, recupero 40 s",
-    "details": "Scatta avanti al cono centrale, spostati lateralmente a destra e sinistra toccando i coni, poi torna indietro di schiena. Abbassa il baricentro nei cambi di direzione e resta sugli avampiedi. Sviluppa agilità multidirezionale e frenate rapide."
+    "details": "Scatta avanti al cono centrale, spostati lateralmente a destra e sinistra toccando i coni, poi torna indietro di schiena. Abbassa il baricentro nei cambi di direzione e resta sugli avampiedi. Sviluppa agilità multidirezionale e frenate rapide.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "agilita--coni-a-stella",
@@ -4002,7 +4214,8 @@ export const exercises: Exercise[] = [
     "description": "Dal centro, scatti verso coni disposti a stella.",
     "equipment": "Coni",
     "dose": "4 giri completi, recupero 45 s",
-    "details": "Dal centro raggiungi ogni cono della stella e torna sempre al centro, in guardia o in corsa. Frena con passi corti e riparti esplosivo. Allena i cambi di direzione in ogni angolo, come le uscite e i rientri durante lo scambio."
+    "details": "Dal centro raggiungi ogni cono della stella e torna sempre al centro, in guardia o in corsa. Frena con passi corti e riparti esplosivo. Allena i cambi di direzione in ogni angolo, come le uscite e i rientri durante lo scambio.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "agilita--slalom-tra-i-coni",
@@ -4011,7 +4224,8 @@ export const exercises: Exercise[] = [
     "description": "Corsa a slalom tra coni ravvicinati.",
     "equipment": "Coni",
     "dose": "6 passaggi, recupero di ritorno",
-    "details": "Corri tra coni ravvicinati con passi brevi e rapidi, inclinando leggermente il corpo nei cambi. Spingi sugli avampiedi e guarda avanti. Migliora agilità, controllo del corpo e rapidità nei cambi di traiettoria."
+    "details": "Corri tra coni ravvicinati con passi brevi e rapidi, inclinando leggermente il corpo nei cambi. Spingi sugli avampiedi e guarda avanti. Migliora agilità, controllo del corpo e rapidità nei cambi di traiettoria.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "agilita--slalom-in-guardia",
@@ -4020,7 +4234,8 @@ export const exercises: Exercise[] = [
     "description": "Slalom tra i coni restando in guardia.",
     "equipment": "Coni",
     "dose": "6 passaggi, recupero 20 s",
-    "details": "Percorri lo slalom con passi in guardia, senza correre né incrociare i piedi, mani alte e mento basso. Cambia angolo a ogni cono restando orientato in avanti. Trasferisce l'agilità alla posizione reale di combattimento."
+    "details": "Percorri lo slalom con passi in guardia, senza correre né incrociare i piedi, mani alte e mento basso. Cambia angolo a ogni cono restando orientato in avanti. Trasferisce l'agilità alla posizione reale di combattimento.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "agilita--navette-laterali",
@@ -4029,7 +4244,8 @@ export const exercises: Exercise[] = [
     "description": "Spostamenti laterali rapidi tra due linee.",
     "equipment": "Coni",
     "dose": "6 × 15 s, recupero 30 s",
-    "details": "Spostati lateralmente tra due linee a 3–4 m toccando la linea con la mano o il piede, restando bassi e senza incrociare i piedi. Mantieni il busto stabile durante le frenate. Sviluppa velocità laterale e resistenza nei cambi di direzione."
+    "details": "Spostati lateralmente tra due linee a 3–4 m toccando la linea con la mano o il piede, restando bassi e senza incrociare i piedi. Mantieni il busto stabile durante le frenate. Sviluppa velocità laterale e resistenza nei cambi di direzione.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "agilita--corda-con-cambio-piedi",
@@ -4038,7 +4254,8 @@ export const exercises: Exercise[] = [
     "description": "Saltelli alla corda alternando i piedi.",
     "equipment": "Corda",
     "dose": "3 riprese da 3 min, recupero 1 min",
-    "details": "Salta alternando i piedi come in una corsetta sul posto, sugli avampiedi e con la corda che gira dai polsi. Spalle rilassate e salti bassi. Migliora ritmo, leggerezza dei piedi e coordinazione: è il riscaldamento classico dei campi thai."
+    "details": "Salta alternando i piedi come in una corsetta sul posto, sugli avampiedi e con la corda che gira dai polsi. Spalle rilassate e salti bassi. Migliora ritmo, leggerezza dei piedi e coordinazione: è il riscaldamento classico dei campi thai.",
+    "tool": "corda"
   },
   {
     "id": "agilita--corda-incrociata",
@@ -4047,7 +4264,8 @@ export const exercises: Exercise[] = [
     "description": "Salti con incrocio delle braccia.",
     "equipment": "Corda",
     "dose": "4 × 30 s, recupero 30 s",
-    "details": "Alterna salti normali a salti con le braccia incrociate davanti al corpo, mantenendo il ritmo costante. Salti piccoli e polsi veloci. Allena coordinazione braccia-gambe e concentrazione sotto fatica."
+    "details": "Alterna salti normali a salti con le braccia incrociate davanti al corpo, mantenendo il ritmo costante. Salti piccoli e polsi veloci. Allena coordinazione braccia-gambe e concentrazione sotto fatica.",
+    "tool": "corda"
   },
   {
     "id": "agilita--corda-su-un-piede",
@@ -4056,7 +4274,8 @@ export const exercises: Exercise[] = [
     "description": "Salti alla corda su un solo piede.",
     "equipment": "Corda",
     "dose": "4 × 20 s per piede, recupero 20 s",
-    "details": "Salta su un solo piede, sull'avampiede, con ginocchio morbido e busto stabile. Non lasciare cadere il bacino. Rinforza caviglia e stabilità monopodalica, fondamentali per calciare e restare in equilibrio."
+    "details": "Salta su un solo piede, sull'avampiede, con ginocchio morbido e busto stabile. Non lasciare cadere il bacino. Rinforza caviglia e stabilità monopodalica, fondamentali per calciare e restare in equilibrio.",
+    "tool": "corda"
   },
   {
     "id": "agilita--corda-con-boxer-step",
@@ -4065,7 +4284,8 @@ export const exercises: Exercise[] = [
     "description": "Corda con il passo del pugile, da un piede all'altro.",
     "equipment": "Corda",
     "dose": "3 riprese da 2 min, recupero 45 s",
-    "details": "Sposta il peso da un piede all'altro con un piccolo saltello, come il passo del pugile, mantenendo il ritmo continuo. Restare leggeri e rilassati è la chiave. Insegna a muoversi sulle punte in modo economico, risparmiando energia nelle riprese."
+    "details": "Sposta il peso da un piede all'altro con un piccolo saltello, come il passo del pugile, mantenendo il ritmo continuo. Restare leggeri e rilassati è la chiave. Insegna a muoversi sulle punte in modo economico, risparmiando energia nelle riprese.",
+    "tool": "corda"
   },
   {
     "id": "agilita--corda-con-ginocchia-alte",
@@ -4074,7 +4294,8 @@ export const exercises: Exercise[] = [
     "description": "Corda con skip alto.",
     "equipment": "Corda",
     "dose": "6 × 20 s, recupero 40 s",
-    "details": "Alla corda porta le ginocchia all'altezza dell'anca a ogni salto, busto dritto e ritmo alto. Atterra sugli avampiedi. Allena rapidità e coordinazione e prepara il movimento della ginocchiata."
+    "details": "Alla corda porta le ginocchia all'altezza dell'anca a ogni salto, busto dritto e ritmo alto. Atterra sugli avampiedi. Allena rapidità e coordinazione e prepara il movimento della ginocchiata.",
+    "tool": "corda"
   },
   {
     "id": "agilita--corda-laterale",
@@ -4083,7 +4304,8 @@ export const exercises: Exercise[] = [
     "description": "Salti alla corda spostandosi lateralmente.",
     "equipment": "Corda",
     "dose": "4 × 30 s, recupero 30 s",
-    "details": "Salta alla corda spostandoti a destra e sinistra di circa 20–30 cm, oppure lungo il perimetro di un quadrato. Salti bassi e controllati. Allena gli spostamenti laterali con ritmo e leggerezza."
+    "details": "Salta alla corda spostandoti a destra e sinistra di circa 20–30 cm, oppure lungo il perimetro di un quadrato. Salti bassi e controllati. Allena gli spostamenti laterali con ritmo e leggerezza.",
+    "tool": "corda"
   },
   {
     "id": "agilita--salti-sul-posto-in-guardia",
@@ -4200,7 +4422,8 @@ export const exercises: Exercise[] = [
     "description": "Jab e immediato passo laterale fuori linea.",
     "equipment": "Sacco",
     "dose": "4 × 10 per lato",
-    "details": "Colpisci il sacco con il jab e subito fai un passo laterale fuori dalla linea, pronto a ripartire. Richiama la mano velocemente e non incrociare i piedi. Insegna a colpire e spostarsi, evitando il contrattacco."
+    "details": "Colpisci il sacco con il jab e subito fai un passo laterale fuori dalla linea, pronto a ripartire. Richiama la mano velocemente e non incrociare i piedi. Insegna a colpire e spostarsi, evitando il contrattacco.",
+    "tool": "sacco"
   },
   {
     "id": "agilita--combinazione-e-uscita",
@@ -4209,7 +4432,8 @@ export const exercises: Exercise[] = [
     "description": "Combinazione al sacco e uscita con passo laterale.",
     "equipment": "Sacco",
     "dose": "4 riprese da 2 min al sacco",
-    "details": "Al sacco esegui una combinazione di 2–4 colpi e chiudi con un passo laterale o un pivot per uscire. Guardia alta durante l'uscita e mai fermarsi davanti. Rende sicure le fasi di attacco abituandoti a uscire sempre in angolo."
+    "details": "Al sacco esegui una combinazione di 2–4 colpi e chiudi con un passo laterale o un pivot per uscire. Guardia alta durante l'uscita e mai fermarsi davanti. Rende sicure le fasi di attacco abituandoti a uscire sempre in angolo.",
+    "tool": "sacco"
   },
   {
     "id": "agilita--ingresso-e-uscita-dalla-distanza",
@@ -4245,7 +4469,8 @@ export const exercises: Exercise[] = [
     "description": "Avanzare e chiudere con la ginocchiata.",
     "equipment": "Sacco",
     "dose": "4 × 8 per lato",
-    "details": "Avanza di un passo verso il sacco e chiudi con una ginocchiata, spingendo l'anca in avanti. Le mani controllano o proteggono, e dopo il colpo torni in guardia. Allena l'ingresso a distanza ravvicinata, tipico del clinch."
+    "details": "Avanza di un passo verso il sacco e chiudi con una ginocchiata, spingendo l'anca in avanti. Le mani controllano o proteggono, e dopo il colpo torni in guardia. Allena l'ingresso a distanza ravvicinata, tipico del clinch.",
+    "tool": "sacco"
   },
   {
     "id": "agilita--sprawl-e-ritorno-in-guardia",
@@ -4299,7 +4524,8 @@ export const exercises: Exercise[] = [
     "description": "Salti laterali a piedi pari oltre ostacoli bassi.",
     "equipment": "Ostacoli",
     "dose": "4 × 6 passaggi, recupero 40 s",
-    "details": "Salta lateralmente a piedi pari oltre ostacoli bassi (15–30 cm), atterrando sugli avampiedi in modo morbido. Minimizza il tempo a terra tra un salto e l'altro. Allena esplosività laterale e reattività degli appoggi."
+    "details": "Salta lateralmente a piedi pari oltre ostacoli bassi (15–30 cm), atterrando sugli avampiedi in modo morbido. Minimizza il tempo a terra tra un salto e l'altro. Allena esplosività laterale e reattività degli appoggi.",
+    "tool": "coni-scaletta"
   },
   {
     "id": "agilita--passo-e-cambio-guardia",
@@ -4416,7 +4642,8 @@ export const exercises: Exercise[] = [
     "description": "Ginocchiate alternate al corpo dal plum.",
     "equipment": "Sacco",
     "dose": "5 serie da 20 s, 20 s recupero",
-    "details": "Simula il plum sul sacco e alterna ginocchiate destre e sinistre al massimo ritmo sostenibile, con piccolo saltello di cambio. Tira il sacco verso di te a ogni colpo e mantieni le anche avanti. Sviluppa la resistenza specifica per le fasi di clinch intense. Errore comune: piegarsi in avanti e perdere la postura."
+    "details": "Simula il plum sul sacco e alterna ginocchiate destre e sinistre al massimo ritmo sostenibile, con piccolo saltello di cambio. Tira il sacco verso di te a ogni colpo e mantieni le anche avanti. Sviluppa la resistenza specifica per le fasi di clinch intense. Errore comune: piegarsi in avanti e perdere la postura.",
+    "tool": "sacco"
   },
   {
     "id": "clinch--ginocchiate-al-sacco-da-clinch",
@@ -4425,7 +4652,8 @@ export const exercises: Exercise[] = [
     "description": "Abbracciare il sacco e colpire con ginocchiate.",
     "equipment": "Sacco",
     "dose": "4 riprese da 2 min, 1 min recupero",
-    "details": "Abbraccia il sacco come un avversario, alterna prese al collo e sottoascella e colpisci con ginocchiate dritte e laterali. Lavora sulla potenza mantenendo l'equilibrio e respirando a ogni colpo. Costruisce condizionamento e meccanica del ginocchio senza usurare il compagno. Non colpire con la tibia: impatta con ginocchio e coscia."
+    "details": "Abbraccia il sacco come un avversario, alterna prese al collo e sottoascella e colpisci con ginocchiate dritte e laterali. Lavora sulla potenza mantenendo l'equilibrio e respirando a ogni colpo. Costruisce condizionamento e meccanica del ginocchio senza usurare il compagno. Non colpire con la tibia: impatta con ginocchio e coscia.",
+    "tool": "sacco"
   },
   {
     "id": "clinch--rotazione-dell-avversario",
@@ -4650,7 +4878,8 @@ export const exercises: Exercise[] = [
     "description": "Il compagno tira l'atleta con l'elastico mentre tiene il plum.",
     "equipment": "Elastico",
     "dose": "4 × 45 s, 30 s recupero",
-    "details": "L'atleta tiene il plum su un sacco o su un compagno mentre un altro lo tira indietro con un elastico legato alla vita. Deve mantenere anche avanti e postura contro la resistenza. Rinforza la spinta delle gambe e la capacità di restare dentro il clinch. Controlla che l'elastico sia ben fissato prima di tirare."
+    "details": "L'atleta tiene il plum su un sacco o su un compagno mentre un altro lo tira indietro con un elastico legato alla vita. Deve mantenere anche avanti e postura contro la resistenza. Rinforza la spinta delle gambe e la capacità di restare dentro il clinch. Controlla che l'elastico sia ben fissato prima di tirare.",
+    "tool": "elastico"
   },
   {
     "id": "clinch--clinch-con-giubbotto-zavorrato",
@@ -4677,7 +4906,8 @@ export const exercises: Exercise[] = [
     "description": "Tirare e torcere il sacco come un avversario.",
     "equipment": "Sacco",
     "dose": "3 riprese da 2 min, 1 min recupero",
-    "details": "Afferra il sacco pesante come un avversario: tira, spingi e torci alternando plum e presa sopra-sotto, aggiungendo ginocchiate. Il peso del sacco offre resistenza costante a braccia e dorso. Costruisce forza specifica senza affaticare il compagno. Attenzione a polsi e dita: non intrecciarle sul sacco."
+    "details": "Afferra il sacco pesante come un avversario: tira, spingi e torci alternando plum e presa sopra-sotto, aggiungendo ginocchiate. Il peso del sacco offre resistenza costante a braccia e dorso. Costruisce forza specifica senza affaticare il compagno. Attenzione a polsi e dita: non intrecciarle sul sacco.",
+    "tool": "sacco"
   },
   {
     "id": "clinch--rotazione-del-sacco",
@@ -4686,7 +4916,8 @@ export const exercises: Exercise[] = [
     "description": "Abbracciare il sacco e ruotarlo con ginocchiate.",
     "equipment": "Sacco",
     "dose": "4 × 1 min, 30 s recupero",
-    "details": "Abbraccia il sacco, colpisci con ginocchiata e subito ruotalo con un pivot come se sbilanciassi l'avversario, poi ripeti dall'altro lato. Coordina colpo e rotazione usando le anche. Allena il collegamento tra danno e controllo tipico del clinch thai. Verifica che il sacco sia fissato bene prima di torcerlo."
+    "details": "Abbraccia il sacco, colpisci con ginocchiata e subito ruotalo con un pivot come se sbilanciassi l'avversario, poi ripeti dall'altro lato. Coordina colpo e rotazione usando le anche. Allena il collegamento tra danno e controllo tipico del clinch thai. Verifica che il sacco sia fissato bene prima di torcerlo.",
+    "tool": "sacco"
   },
   {
     "id": "clinch--plum-isometrico",
@@ -4785,7 +5016,2031 @@ export const exercises: Exercise[] = [
     "description": "Dal plum, ginocchiata con piccolo salto.",
     "equipment": "Sacco",
     "dose": "4 × 6 per lato",
-    "details": "Dal plum sul sacco tira la testa verso il basso, fai un piccolo salto e colpisci con ginocchiata dritta, atterrando stabile. L'anca va avanti nel momento dell'impatto. Colpo esplosivo che può chiudere l'incontro. Errore comune: saltare troppo e atterrare sbilanciati; solo sul sacco, mai sul compagno."
+    "details": "Dal plum sul sacco tira la testa verso il basso, fai un piccolo salto e colpisci con ginocchiata dritta, atterrando stabile. L'anca va avanti nel momento dell'impatto. Colpo esplosivo che può chiudere l'incontro. Errore comune: saltare troppo e atterrare sbilanciati; solo sul sacco, mai sul compagno.",
+    "tool": "sacco"
+  }
+];
+
+/** Gruppi per attrezzo. */
+export const tools: Tool[] = [
+  {
+    "id": "palla-medica",
+    "label": "Palla medica",
+    "description": "Lanci, slam e rotazioni con la palla medica per potenza e core."
+  },
+  {
+    "id": "corda",
+    "label": "Corda",
+    "description": "Salto della corda per footwork, ritmo e resistenza."
+  },
+  {
+    "id": "kettlebell",
+    "label": "Kettlebell",
+    "description": "Swing, slanci e lavori a una mano per anche esplosive e presa."
+  },
+  {
+    "id": "elastico",
+    "label": "Elastici",
+    "description": "Bande elastiche per colpi con resistenza, attivazione e prevenzione."
+  },
+  {
+    "id": "sacco",
+    "label": "Sacco",
+    "description": "Lavoro al sacco pesante: colpi, combinazioni e riprese."
+  },
+  {
+    "id": "pao",
+    "label": "Pao",
+    "description": "Lavoro ai pao con il compagno o l'allenatore."
+  },
+  {
+    "id": "bilanciere",
+    "label": "Bilanciere",
+    "description": "Esercizi di forza con il bilanciere."
+  },
+  {
+    "id": "manubri",
+    "label": "Manubri",
+    "description": "Forza e stabilità con i manubri, anche a un braccio."
+  },
+  {
+    "id": "sbarra",
+    "label": "Sbarra e parallele",
+    "description": "Trazioni, dip e sospensioni a corpo libero."
+  },
+  {
+    "id": "battle-rope",
+    "label": "Battle rope",
+    "description": "Onde e slam con le corde pesanti per spalle e fiato."
+  },
+  {
+    "id": "sandbag",
+    "label": "Sandbag",
+    "description": "Sacca zavorrata instabile: forza funzionale e clinch."
+  },
+  {
+    "id": "pneumatico",
+    "label": "Pneumatico e mazza",
+    "description": "Ribaltamenti, colpi di mazza e spinte sul copertone."
+  },
+  {
+    "id": "coni-scaletta",
+    "label": "Coni e scaletta",
+    "description": "Footwork, cambi di direzione e coordinazione con coni, scaletta e ostacoli."
+  }
+];
+
+/** Esercizi in più che compaiono solo nei gruppi per attrezzo, non nelle liste per categoria. */
+export const toolExercises: Exercise[] = [
+  {
+    "id": "palla-medica--wall-ball",
+    "name": "Wall ball",
+    "category": "resistenza",
+    "description": "Accosciata e lancio della palla contro un bersaglio sul muro, senza pause.",
+    "dose": "3 × 20 ripetizioni, recupero 60 s",
+    "details": "In piedi davanti al muro con la palla al petto, scendi in accosciata e risalendo lancia la palla su un bersaglio a 2,5–3 m, riprendila e scendi subito. Allena il motore aerobico-lattacido e la spinta delle gambe tipica delle riprese intense. Mantieni il petto alto e le ginocchia in linea con i piedi.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--tirata-in-clinch-con-ginocchiata",
+    "name": "Tirata in clinch con ginocchiata",
+    "category": "clinch",
+    "description": "Tira la palla dall'alto verso il ginocchio che sale, come in un clinch.",
+    "dose": "3 × 10 per lato, recupero 45 s",
+    "details": "Tieni la palla sopra la testa a braccia tese, poi tirala con forza verso il basso mentre il ginocchio sale a incontrarla, tornando subito in guardia. Riproduce la tirata della testa avversaria in clinch abbinata alla ginocchiata. Spingi l'anca in avanti e resta alto sulla punta del piede d'appoggio.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--lancio-a-una-mano-da-gancio",
+    "name": "Lancio a una mano da gancio",
+    "category": "tecnica",
+    "description": "Lancio laterale a una mano che imita la traiettoria del gancio.",
+    "dose": "3 × 8 per lato, recupero 60 s",
+    "details": "In guardia di lato al muro, palla leggera (2–3 kg) in una mano con il gomito alto all'altezza della spalla: ruota anca e piede e scaricala sul muro con traiettoria a gancio. Insegna a trasmettere la rotazione del bacino nel pugno. Usa una palla leggera e non lanciare solo con il braccio per proteggere la spalla.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--plank-con-mani-sulla-palla",
+    "name": "Plank con mani sulla palla",
+    "category": "core",
+    "description": "Plank a braccia tese con entrambe le mani appoggiate sulla palla medica.",
+    "dose": "3 × 30 s, recupero 30 s",
+    "details": "Appoggia le mani sulla palla sotto le spalle e porta i piedi indietro in posizione di plank a braccia tese, corpo in linea dalla testa ai talloni. L'instabilità costringe addome e spalle a lavorare per stabilizzare, utile per incassare e restare compatti. Non far cedere il bacino e respira in modo controllato.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--mountain-climber-sulla-palla",
+    "name": "Mountain climber sulla palla",
+    "category": "resistenza",
+    "description": "Mountain climber veloci con le mani in appoggio sulla palla medica.",
+    "dose": "3 × 30 s, recupero 30 s",
+    "details": "Dalla posizione di plank con le mani sulla palla, porta alternativamente le ginocchia al petto a ritmo sostenuto mantenendo le spalle sopra la palla. Sviluppa resistenza del core e richiamo rapido delle ginocchia, utile per ginocchiate e ritmo di gara. Mantieni il bacino basso e stabile, senza saltellare con le anche.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--passaggi-rapidi-in-coppia",
+    "name": "Passaggi rapidi in coppia",
+    "category": "velocita",
+    "description": "Passaggi al petto veloci e ravvicinati tra due compagni.",
+    "dose": "4 × 20 s, recupero 40 s",
+    "details": "Due atleti a 2–3 m di distanza, in guardia, si passano una palla leggera al petto il più velocemente possibile, ricevendo e rilanciando in un unico gesto. Migliora la rapidità delle mani e il ciclo di estensione-ritorno del pugno. Ricevi con le mani morbide davanti al viso e non abbassare mai la guardia.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--affondo-con-rotazione",
+    "name": "Affondo con rotazione",
+    "category": "mobilita",
+    "description": "Affondo in avanti con rotazione del busto e palla a braccia tese.",
+    "dose": "3 × 8 per lato",
+    "details": "Tieni la palla al petto, fai un affondo in avanti e ruota il busto verso il lato della gamba avanti estendendo le braccia, poi torna al centro e risali. Migliora la mobilità di anche e colonna toracica necessaria per calci e rotazioni. Muoviti lento e controllato, con il ginocchio anteriore sopra la caviglia.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--squat-abbracciando-la-palla",
+    "name": "Squat abbracciando la palla",
+    "category": "forza-massimale",
+    "description": "Squat con palla medica pesante tenuta abbracciata al petto.",
+    "dose": "5 × 5 ripetizioni, recupero 2 min",
+    "details": "Abbraccia una palla pesante (10–20 kg) contro il petto, piedi alla larghezza delle spalle, e scendi in accosciata profonda risalendo con decisione. Costruisce forza di gambe e tronco utile a spingere in clinch e caricare i calci. Tieni la schiena neutra e il peso su tutta la pianta del piede.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--affondi-camminati-con-palla-sopra-la-testa",
+    "name": "Affondi camminati con palla sopra la testa",
+    "category": "forza-resistente",
+    "description": "Affondi in avanzamento con la palla tenuta a braccia tese sopra la testa.",
+    "dose": "3 × 12 passi per lato, recupero 60 s",
+    "details": "Solleva la palla sopra la testa a braccia tese e avanza con affondi alternati, mantenendo il busto verticale. Allena la resistenza di gambe e spalle e la stabilità del tronco, utile per restare solidi nelle ultime riprese. Non inarcare la zona lombare: tieni l'addome contratto e le costole basse.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--scivolamenti-laterali-con-passaggio",
+    "name": "Scivolamenti laterali con passaggio",
+    "category": "agilita",
+    "description": "Spostamenti laterali in guardia ricevendo e restituendo la palla.",
+    "dose": "4 × 30 s, recupero 30 s",
+    "details": "In guardia, scivola lateralmente tra due coni a 3–4 m mentre un compagno ti passa la palla: ricevi, restituisci e continua a muoverti senza incrociare i piedi. Allena il footwork laterale coordinato con il lavoro delle mani. Resta basso sulle ginocchia e mantieni sempre la distanza corretta tra i piedi.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--v-up-con-passaggio",
+    "name": "V-up con passaggio",
+    "category": "core",
+    "description": "Da supino passa la palla dalle mani ai piedi chiudendo a V.",
+    "dose": "3 × 12 ripetizioni, recupero 45 s",
+    "details": "Supino con palla tra le mani sopra la testa, chiudi braccia e gambe a V e passa la palla ai piedi; ridiscendi, richiudi e riprendila con le mani. Rinforza tutto il core, fondamentale per incassare colpi al corpo e trasmettere forza. Controlla la discesa senza far rimbalzare la schiena a terra.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--lancio-verticale-da-accosciata",
+    "name": "Lancio verticale da accosciata",
+    "category": "forza-esplosiva",
+    "description": "Dall'accosciata lancia la palla il più in alto possibile con estensione totale.",
+    "dose": "4 × 6 ripetizioni, recupero 90 s",
+    "details": "Parti in accosciata con la palla tra le gambe, poi estendi esplosivamente caviglie, ginocchia e anche lanciandola in verticale sopra la testa. Sviluppa la tripla estensione esplosiva che sta alla base di calci e ginocchiate. Fai un passo indietro dopo il lancio e lascia cadere la palla a terra senza riprenderla.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--halo-con-palla-medica",
+    "name": "Halo con palla medica",
+    "category": "mobilita",
+    "description": "Cerchi lenti della palla attorno alla testa per mobilizzare le spalle.",
+    "dose": "3 × 8 per senso",
+    "details": "In piedi o in ginocchio, tieni una palla leggera all'altezza del viso e falla girare lentamente attorno alla testa, passando dietro la nuca e tornando davanti. Migliora la mobilità di spalle e torace, utile per guardia, clinch e scioltezza nei pugni. Tieni il busto fermo e l'addome attivo, senza inarcare la schiena.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--woodchopper-diagonale",
+    "name": "Woodchopper diagonale",
+    "category": "core",
+    "description": "Movimento diagonale dall'alto al basso come un taglio di legna.",
+    "dose": "3 × 10 per lato, recupero 45 s",
+    "details": "Parti con la palla sopra la spalla destra e portala in diagonale verso l'anca sinistra ruotando il busto e piegando le ginocchia, poi risali controllando. Allena la catena obliqua che collega anche e spalle in pugni, gomiti e calci circolari. Fai ruotare il piede posteriore per non torcere le ginocchia.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--presa-reattiva-in-guardia",
+    "name": "Presa reattiva in guardia",
+    "category": "velocita",
+    "description": "Ricevi lanci improvvisi del compagno restando in guardia e rilancia.",
+    "dose": "4 × 30 s, recupero 30 s",
+    "details": "In guardia, il compagno lancia una palla leggera a sorpresa verso viso, petto o fianchi variando ritmo e direzione: afferra e rilancia subito. Allena tempo di reazione, lettura dei movimenti e riflessi difensivi. Usa una palla da 1–2 kg e torna sempre con le mani alte dopo ogni ricezione.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--lotta-per-la-palla-in-coppia",
+    "name": "Lotta per la palla in coppia",
+    "category": "clinch",
+    "description": "Due atleti si contendono la palla con trazioni e spinte come in clinch.",
+    "dose": "4 riprese da 1 min, 1 min recupero",
+    "details": "Entrambi gli atleti afferrano la stessa palla al petto e cercano di strapparla all'altro con trazioni, torsioni e spostamenti dei piedi. Sviluppa la forza di presa, il controllo dell'equilibrio e la spinta delle gambe tipici della lotta in clinch. Niente strattoni al collo o alle braccia: lavora con il corpo intero.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--lancio-e-scatto",
+    "name": "Lancio e scatto",
+    "category": "agilita",
+    "description": "Lancia la palla in avanti, scatta a recuperarla e torna in guardia.",
+    "dose": "5 × 1 ripetizione su 10 m, recupero 60 s",
+    "details": "Lancia la palla in avanti dal petto con esplosività, scatta a riprenderla prima che si fermi, raccoglila con le ginocchia piegate e torna in guardia. Combina potenza, accelerazione e cambio di direzione, utile per entrare e uscire dalla distanza. Raccogli la palla piegando le gambe e non la schiena.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "palla-medica--piegamenti-con-palla-rotolante",
+    "name": "Piegamenti con palla rotolante",
+    "category": "forza-resistente",
+    "description": "Piegamenti alternando una mano sulla palla e facendola rotolare all'altra.",
+    "dose": "3 × 10 ripetizioni, recupero 60 s",
+    "details": "In posizione di piegamento con una mano sulla palla, esegui un piegamento, poi fai rotolare la palla all'altra mano e ripeti dal lato opposto. Costruisce resistenza di petto, spalle e tricipiti con un lavoro di stabilità a ogni ripetizione. Mantieni il corpo rigido in linea e scendi fino a sfiorare il pavimento col petto.",
+    "equipment": "Palla medica",
+    "tool": "palla-medica"
+  },
+  {
+    "id": "corda--corda-a-piedi-alternati-jogging-step",
+    "name": "Corda a piedi alternati (jogging step)",
+    "category": "resistenza",
+    "description": "Corsa sul posto saltando la corda con un piede alla volta.",
+    "dose": "3 riprese da 3 min, 1 min recupero",
+    "details": "In piedi, gomiti vicini ai fianchi, gira la corda con i polsi e atterra alternando i piedi come in una corsa leggera. Costruisce la base aerobica e il ritmo di passo tipico del ring. Resta sugli avampiedi e non alzare i piedi più di pochi centimetri.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-tabata",
+    "name": "Corda Tabata",
+    "category": "resistenza",
+    "description": "8 intervalli massimali di corda veloce con pause brevissime.",
+    "dose": "2 × 8 × 20 s, recupero 10 s",
+    "details": "Salta alla massima velocità sostenibile per 20 secondi, poi fermati 10 secondi tenendo la corda in mano. Simula i picchi di intensità di uno scambio ravvicinato e allena il recupero rapido. Mantieni la tecnica pulita: se inciampi spesso, riduci leggermente la velocità.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-piramide-1-2-3-2-1-min",
+    "name": "Corda piramide 1-2-3-2-1 min",
+    "category": "resistenza",
+    "description": "Blocchi di corda di durata crescente e decrescente.",
+    "dose": "1 serie, recupero 30 s tra i blocchi",
+    "details": "Esegui blocchi di 1, 2, 3, 2 e 1 minuto di salti a ritmo medio-alto con 30 secondi di pausa tra i blocchi. Abitua il corpo a gestire sforzi di durata variabile come nei round reali. Nel blocco da 3 minuti dosa il ritmo per non calare nel finale.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-con-sprint-finale-di-ripresa",
+    "name": "Corda con sprint finale di ripresa",
+    "category": "velocita",
+    "description": "Ripresa a ritmo medio con ultimi 30 s alla massima velocità.",
+    "dose": "3 riprese da 3 min, 1 min recupero",
+    "details": "Salta a ritmo costante per 2 minuti e 30 secondi, poi accelera al massimo per gli ultimi 30 secondi. Allena la capacità di spingere a fine round, quando i giudici valutano il dominio. Durante lo sprint mantieni polsi rapidi e spalle rilassate, senza irrigidire le braccia.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-con-salti-a-forbice",
+    "name": "Corda con salti a forbice",
+    "category": "agilita",
+    "description": "Salti alternando un piede avanti e uno indietro, come in guardia.",
+    "dose": "4 × 45 s, recupero 30 s",
+    "details": "Ad ogni giro di corda alterna rapidamente i piedi avanti e indietro in posizione sfalsata, simile alla guardia. Migliora i cambi di guardia e la coordinazione degli arti inferiori. Tieni il peso centrato tra i piedi e il busto eretto, evitando di sbilanciarti in avanti.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-a-sci-avanti-indietro",
+    "name": "Corda a sci (avanti-indietro)",
+    "category": "agilita",
+    "description": "Salti a piedi uniti avanti e indietro oltre una linea immaginaria.",
+    "dose": "4 × 40 s, recupero 30 s",
+    "details": "A piedi uniti salta alternando un piccolo spostamento in avanti e uno indietro ad ogni giro. Allena l'entrata e l'uscita dalla distanza di colpo con appoggi rapidi. Gli spostamenti devono essere brevi (10-15 cm) e gli atterraggi morbidi sugli avampiedi.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-a-box-quattro-punti",
+    "name": "Corda a box (quattro punti)",
+    "category": "agilita",
+    "description": "Salti a piedi uniti disegnando un quadrato: avanti, destra, dietro, sinistra.",
+    "dose": "4 × 40 s, recupero 30 s",
+    "details": "Immagina un quadrato a terra e salta in sequenza nei quattro angoli a ogni giro di corda. Sviluppa il controllo degli spostamenti multidirezionali usato per angolare l'avversario. Mantieni lo sguardo avanti e cambia verso della sequenza a ogni serie.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-con-skip-calciato",
+    "name": "Corda con skip calciato",
+    "category": "tecnica",
+    "description": "Ad ogni salto un piede si estende in avanti come un piccolo teep.",
+    "dose": "3 × 1 min, recupero 30 s",
+    "details": "Saltando su un piede, estendi l'altra gamba in avanti con un leggero colpo d'avampiede, poi alterna. Rinforza il ritmo e la coordinazione del calcio frontale (teep) senza perdere equilibrio. L'estensione è piccola e controllata: non serve altezza, conta il tempo.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-e-shadow-alternati",
+    "name": "Corda e shadow alternati",
+    "category": "tecnica",
+    "description": "Alternanza di 1 min di corda e 1 min di shadow boxing.",
+    "dose": "4 riprese da 3 min, 1 min recupero",
+    "details": "Ogni ripresa alterna corda e shadow: lascia cadere la corda e passa subito a combinazioni di pugni, calci e ginocchiate. Allena il passaggio dal ritmo di gambe alla tecnica sotto fatica. Nello shadow conserva la stessa leggerezza di piedi usata nei salti.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-con-ginocchiata-ogni-4-salti",
+    "name": "Corda con ginocchiata ogni 4 salti",
+    "category": "clinch",
+    "description": "Dopo 4 salti si ferma la corda e si esegue una ginocchiata.",
+    "dose": "3 × 1 min per lato, recupero 30 s",
+    "details": "Esegui 4 salti, blocca la corda e porta una ginocchiata alta tirando le mani verso il basso come in clinch, poi riparti. Collega il ritmo di gambe all'esplosività della ginocchiata. Spingi l'anca in avanti durante la ginocchiata e mantieni l'equilibrio sul piede d'appoggio.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-doppi-esplosivi-a-serie-brevi",
+    "name": "Corda doppi esplosivi a serie brevi",
+    "category": "forza-esplosiva",
+    "description": "Brevi serie di doppi salti con massima spinta dai polpacci.",
+    "dose": "6 × 10 doppi, recupero 45 s",
+    "details": "Salta in alto con piedi uniti facendo passare la corda due volte sotto i piedi ad ogni salto, per 10 ripetizioni consecutive. Sviluppa la reattività di caviglie e polpacci utile per spinte e calci veloci. Atterra morbido e recupera bene tra le serie per mantenere la qualità.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-con-salti-a-ginocchia-al-petto",
+    "name": "Corda con salti a ginocchia al petto",
+    "category": "forza-esplosiva",
+    "description": "Salti alti portando le ginocchia verso il petto, con giro di corda lento.",
+    "dose": "5 × 8 salti, recupero 60 s",
+    "details": "Ad ogni salto porta le ginocchia verso il petto mentre la corda passa sotto, con uno o due giri. Allena la potenza delle gambe e la rapidità di raccolta delle ginocchia utile per le ginocchiate. Atterra con ginocchia leggermente flesse ed evita di affrettare la serie.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-zavorrata-a-polsi",
+    "name": "Corda zavorrata a polsi",
+    "category": "forza-resistente",
+    "description": "Corda pesante o con impugnature zavorrate per spalle resistenti.",
+    "dose": "3 riprese da 2 min, 1 min recupero",
+    "details": "Usa una corda pesata (circa 0,5-1 kg) o impugnature zavorrate e salta a ritmo moderato. Rinforza spalle, avambracci e presa, utili per tenere la guardia alta per tutto il match. Riduci la durata se le spalle si irrigidiscono e mantieni i gomiti vicini al busto.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-in-mezzo-squat",
+    "name": "Corda in mezzo squat",
+    "category": "forza-resistente",
+    "description": "Salti brevi mantenendo un leggero piegamento delle ginocchia.",
+    "dose": "4 × 45 s, recupero 45 s",
+    "details": "Scendi in mezzo squat con busto eretto e salta pochi centimetri senza mai distendere le gambe. Aumenta la resistenza di quadricipiti e glutei per mantenere una posizione bassa e stabile. Le ginocchia restano allineate con le punte dei piedi e la schiena neutra.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-con-addome-contratto-e-passo-lento",
+    "name": "Corda con addome contratto e passo lento",
+    "category": "core",
+    "description": "Salto lento e controllato mantenendo il core attivo e il bacino stabile.",
+    "dose": "3 × 1 min, recupero 30 s",
+    "details": "Salta a ritmo lento concentrandoti sul tenere addome contratto e bacino fermo, senza oscillazioni del busto. Migliora la stabilità del tronco che serve per assorbire colpi e trasmettere forza. Respira in modo regolare e controlla che le spalle non si sollevino.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-con-rotazione-del-busto",
+    "name": "Corda con rotazione del busto",
+    "category": "core",
+    "description": "Salti alternati con piccole torsioni del busto a ogni appoggio.",
+    "dose": "3 × 45 s, recupero 30 s",
+    "details": "Saltando, ruota leggermente le anche a destra e sinistra mentre spalle e sguardo restano frontali. Allena la dissociazione tra busto e anche, importante per generare potenza nei calci circolari. La rotazione è piccola e controllata: non perdere il ritmo della corda.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-all-indietro",
+    "name": "Corda all'indietro",
+    "category": "mobilita",
+    "description": "Salti con rotazione della corda all'indietro per aprire le spalle.",
+    "dose": "3 × 1 min, recupero 30 s",
+    "details": "Gira la corda all'indietro con movimento fluido dei polsi e salta a piedi uniti. Mobilizza le spalle e bilancia il lavoro anteriore tipico di pugni e guardia. Inizia a ritmo lento per prendere confidenza e tieni il petto aperto durante i giri.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "corda--corda-con-slancio-di-caviglia",
+    "name": "Corda con slancio di caviglia",
+    "category": "mobilita",
+    "description": "Salti leggeri con piede che tocca tallone e punta alternati.",
+    "dose": "2 × 1 min, recupero 30 s",
+    "details": "Ad ogni salto appoggia alternativamente il tallone avanti e la punta dietro con un piede, poi cambia lato. Mobilizza la caviglia e prepara articolazioni e tendini al lavoro di ring. Usalo nel riscaldamento con ritmo lento e movimenti ampi ma senza forzare.",
+    "equipment": "Corda",
+    "tool": "corda"
+  },
+  {
+    "id": "kettlebell--clean-a-un-braccio",
+    "name": "Clean a un braccio",
+    "category": "forza-esplosiva",
+    "description": "Porta la kettlebell in rack con un'estensione esplosiva dell'anca.",
+    "dose": "4 × 6 per lato, recupero 60 s",
+    "details": "Parti con la kettlebell tra i piedi, carica le anche e tirala in rack con un'estensione rapida, lasciandola ruotare attorno al polso. Sviluppa la triplice estensione che dà potenza a ginocchiate e calci. Gomito vicino al corpo e polso dritto per evitare che il peso sbatta sull'avambraccio.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--snatch-con-kettlebell",
+    "name": "Snatch con kettlebell",
+    "category": "forza-esplosiva",
+    "description": "Porta la kettlebell sopra la testa in un unico movimento esplosivo.",
+    "dose": "5 × 5 per lato, recupero 75 s",
+    "details": "Dalla posizione di swing spingi forte con le anche e guida la kettlebell in alto fino a braccio teso sopra la testa, inserendo la mano all'ultimo. Allena l'esplosività di tutta la catena posteriore e la stabilità della spalla. Impara prima clean e press: il peso non deve mai cadere sul polso.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--push-press-con-kettlebell",
+    "name": "Push press con kettlebell",
+    "category": "forza-esplosiva",
+    "description": "Spinta sopra la testa aiutata da un rapido piegamento delle gambe.",
+    "dose": "4 × 6 per lato, recupero 75 s",
+    "details": "Dal rack fai un breve piegamento di ginocchia e spingi esplosivamente con le gambe, completando con il braccio fino al blocco sopra la testa. Insegna a trasferire forza da terra al pugno, come nel diretto e nel montante. Tieni il core contratto e non inarcare la zona lombare.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--military-press-a-un-braccio",
+    "name": "Military press a un braccio",
+    "category": "forza-massimale",
+    "description": "Spinta lenta e controllata sopra la testa dal rack.",
+    "dose": "4 × 5 per lato, recupero 90 s",
+    "details": "In piedi con la kettlebell in rack, glutei e addome contratti, spingi verticalmente fino al blocco e scendi controllando. Rinforza spalle e tricipiti, utili a reggere guardia alta e clinch per tutta la ripresa. Usa un carico pesante ma senza piegare il busto di lato.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--front-squat-doppio",
+    "name": "Front squat doppio",
+    "category": "forza-massimale",
+    "description": "Squat con due kettlebell tenute in rack davanti al petto.",
+    "dose": "4 × 5, recupero 2 min",
+    "details": "Tieni due kettlebell in rack, gomiti stretti, e scendi in squat profondo mantenendo il busto eretto, poi risali spingendo con tutto il piede. Costruisce gambe forti per calci potenti e una base stabile. Respira e blocca l'addome prima di ogni discesa per proteggere la schiena.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--rematore-a-un-braccio",
+    "name": "Rematore a un braccio",
+    "category": "forza-massimale",
+    "description": "Tirata della kettlebell al fianco con busto inclinato in appoggio.",
+    "dose": "4 × 8 per lato, recupero 75 s",
+    "details": "Appoggia una mano e un ginocchio sulla panca, schiena piatta, e tira la kettlebell verso l'anca portando il gomito indietro. Rinforza dorsali e romboidi, fondamentali per tirare e controllare la testa dell'avversario nel clinch. Evita di ruotare il busto per aiutarti.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--gorilla-row",
+    "name": "Gorilla row",
+    "category": "forza-resistente",
+    "description": "Rematore alternato con due kettlebell a terra in posizione di stacco.",
+    "dose": "3 × 10 per lato, recupero 60 s",
+    "details": "Con due kettlebell tra i piedi, anche indietro e schiena piatta, tira alternativamente una kettlebell al fianco mentre l'altra resta a terra in appoggio. Allena la schiena in resistenza e la stabilità anti-rotazione del tronco. Mantieni le anche ferme e il collo in linea con la colonna.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--renegade-row",
+    "name": "Renegade row",
+    "category": "core",
+    "description": "Rematore in posizione di plank appoggiato su due kettlebell.",
+    "dose": "3 × 6 per lato, recupero 60 s",
+    "details": "In plank sulle maniglie di due kettlebell, piedi larghi, tira una kettlebell al fianco senza ruotare il bacino, poi alterna. Allena un core anti-rotazione che resiste a colpi e spinte nel clinch. Usa kettlebell stabili e allarga i piedi se il bacino oscilla.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--halo",
+    "name": "Halo",
+    "category": "mobilita",
+    "description": "Rotazione della kettlebell attorno alla testa per mobilità delle spalle.",
+    "dose": "3 × 8 per direzione",
+    "details": "Tieni la kettlebell capovolta per le corna davanti al petto e falla girare attorno alla testa, passandola vicino a nuca e orecchie. Migliora la mobilità di spalle e dorsale, utile per guardia rilassata e gomitate ampie. Usa un carico leggero e tieni l'addome contratto senza inarcare la schiena.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--windmill",
+    "name": "Windmill",
+    "category": "mobilita",
+    "description": "Flessione laterale con kettlebell sopra la testa e sguardo verso il peso.",
+    "dose": "3 × 5 per lato, recupero 45 s",
+    "details": "Con la kettlebell sopra la testa a braccio teso, spingi l'anca di lato e scendi con l'altra mano lungo la gamba fino a terra, senza perdere il braccio verticale. Migliora mobilità dell'anca e stabilità della spalla, utili per calci alti. Muoviti lento e tieni lo sguardo sulla kettlebell.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--around-the-body",
+    "name": "Around the body",
+    "category": "core",
+    "description": "Passaggio continuo della kettlebell attorno alla vita da una mano all'altra.",
+    "dose": "3 × 30 s per direzione",
+    "details": "In piedi, anche stabili, passa la kettlebell da una mano all'altra attorno alla vita con ritmo costante. Allena il core a resistere alle forze rotazionali e migliora la presa, utile nel clinch. Mantieni il bacino fermo e non lasciare oscillare il busto.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--figure-8",
+    "name": "Figure 8",
+    "category": "agilita",
+    "description": "Passaggio della kettlebell tra le gambe disegnando un otto.",
+    "dose": "3 × 40 s, recupero 20 s",
+    "details": "In mezzo squat, passa la kettlebell tra le gambe da dietro, cambiando mano e girando attorno a ciascuna coscia in un movimento a otto. Migliora coordinazione, rapidità delle mani e posizione bassa. Schiena dritta e sguardo avanti, senza curvarti sul peso.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--bottom-up-press",
+    "name": "Bottom-up press",
+    "category": "tecnica",
+    "description": "Spinta con kettlebell capovolta che richiede presa e polso stabili.",
+    "dose": "3 × 5 per lato, recupero 60 s",
+    "details": "Afferra la kettlebell con il fondo verso l'alto, stringi forte la maniglia e spingila sopra la testa mantenendola in equilibrio. Allinea polso, gomito e spalla come nell'impatto del pugno, rinforzando la presa. Usa un carico leggero e fermati se il peso si inclina.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--double-kettlebell-clean-e-press",
+    "name": "Double kettlebell clean e press",
+    "category": "forza-resistente",
+    "description": "Clean seguito da spinta sopra la testa con due kettlebell.",
+    "dose": "5 × 5, recupero 90 s",
+    "details": "Da due kettlebell a terra esegui un clean in rack e subito una spinta sopra la testa, poi riporta giù con controllo. Costruisce forza su tutto il corpo e capacità di ripetere sforzi intensi come negli scambi. Cura la tecnica del clean prima di aumentare il carico.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--swing-a-mani-alterne",
+    "name": "Swing a mani alterne",
+    "category": "velocita",
+    "description": "Swing con cambio di mano a ogni ripetizione nel punto alto.",
+    "dose": "4 × 20, recupero 45 s",
+    "details": "Esegui lo swing a un braccio e, nel punto più alto quando il peso è leggero, passalo rapidamente all'altra mano. Allena velocità di anche e mani, coordinazione e reattività. Fai il passaggio solo all'altezza del petto e tieni la kettlebell sotto controllo.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--long-cycle-a-tempo",
+    "name": "Long cycle a tempo",
+    "category": "resistenza",
+    "description": "Clean e jerk continui a ritmo costante per un tempo prolungato.",
+    "dose": "3 riprese da 3 min, recupero 1 min",
+    "details": "Ripeti clean e push press a ritmo costante, cambiando mano quando necessario, senza appoggiare il peso. Simula lo sforzo continuo di una ripresa e allena la respirazione sotto carico. Scegli un peso moderato e mantieni ritmo regolare invece di partire troppo veloce.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--farmer-carry-doppio",
+    "name": "Farmer carry doppio",
+    "category": "clinch",
+    "description": "Camminata con due kettlebell pesanti in mano lungo i fianchi.",
+    "dose": "4 × 30 m, recupero 60 s",
+    "details": "Afferra due kettlebell pesanti, spalle basse e indietro, e cammina con passi corti mantenendo il busto eretto. Rinforza presa, trapezi e tronco, essenziali per controllare l'avversario nel clinch. Non lasciare che le spalle salgano verso le orecchie.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "kettlebell--rack-carry-con-affondi",
+    "name": "Rack carry con affondi",
+    "category": "clinch",
+    "description": "Affondi in camminata con due kettlebell in rack davanti al petto.",
+    "dose": "3 × 10 per gamba, recupero 75 s",
+    "details": "Con due kettlebell in rack, avanza in affondo portando il ginocchio posteriore vicino a terra e risali spingendo con la gamba anteriore. Rinforza gambe e tronco per mantenere la postura e spingere nel clinch. Gomiti stretti e busto verticale per tutto il movimento.",
+    "equipment": "Kettlebell",
+    "tool": "kettlebell"
+  },
+  {
+    "id": "elastico--montante-con-elastico",
+    "name": "Montante con elastico",
+    "category": "forza-esplosiva",
+    "description": "Montanti esplosivi contro la resistenza dell'elastico ancorato in basso.",
+    "dose": "3 × 10 per lato, recupero 45 s",
+    "details": "Ancora l'elastico in basso dietro di te e impugnalo in guardia. Spingi dal piede posteriore, ruota l'anca e porta il montante verso l'alto, tornando subito in guardia. Sviluppa potenza nei colpi corti al corpo e al mento; non sbilanciarti in avanti e mantieni il mento protetto.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--gancio-con-elastico",
+    "name": "Gancio con elastico",
+    "category": "forza-esplosiva",
+    "description": "Ganci esplosivi con elastico ancorato lateralmente all'altezza del petto.",
+    "dose": "3 × 10 per lato, recupero 45 s",
+    "details": "In guardia, con l'elastico ancorato di lato all'altezza delle spalle, chiudi il gancio ruotando piede, anca e spalla insieme. Rientra controllando l'elastico. Rinforza la catena rotazionale del gancio; il gomito resta all'altezza del pugno e la mano opposta copre il viso.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--calcio-circolare-con-elastico-alla-caviglia",
+    "name": "Calcio circolare con elastico alla caviglia",
+    "category": "forza-esplosiva",
+    "description": "Calcio circolare contro la resistenza dell'elastico fissato alla caviglia.",
+    "dose": "3 × 8 per lato, recupero 60 s",
+    "details": "Elastico leggero attorno alla caviglia e ancorato dietro di te a terra. Esegui il calcio circolare a media altezza ruotando sul piede d'appoggio e richiama la gamba in guardia. Allena l'anca a calciare con potenza; usa una resistenza leggera per non alterare la traiettoria tecnica.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--teep-posteriore-con-elastico-in-vita",
+    "name": "Teep posteriore con elastico in vita",
+    "category": "forza-esplosiva",
+    "description": "Teep con la gamba dietro mentre l'elastico in vita tira all'indietro.",
+    "dose": "3 × 8 per lato, recupero 60 s",
+    "details": "Cintura elastica in vita trattenuta da un compagno o ancorata alle spalle. Porta il ginocchio al petto e spingi il teep in avanti spostando il bacino, poi rientra in guardia. Insegna a proiettare il peso nel calcio frontale; tieni il busto dritto e non piegarti indietro.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--sprint-in-guardia-con-elastico-in-vita",
+    "name": "Sprint in guardia con elastico in vita",
+    "category": "velocita",
+    "description": "Partenze rapide in avanti con elastico in vita trattenuto dal compagno.",
+    "dose": "6 × 5 s, recupero 40 s",
+    "details": "Il compagno trattiene l'elastico agganciato in vita. Parti dalla guardia con passi corti ed esplosivi in avanti per 3-4 metri, mantenendo le mani alte. Migliora l'entrata per chiudere la distanza sull'avversario; spingi con l'avampiede e non alzare il busto.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--rilascio-rapido-del-jab-con-elastico",
+    "name": "Rilascio rapido del jab con elastico",
+    "category": "velocita",
+    "description": "Jab velocissimi con elastico leggero per allenare il rientro della mano.",
+    "dose": "4 × 15 s per lato, recupero 30 s",
+    "details": "Elastico leggero ancorato davanti a te all'altezza delle spalle, impugnato con la mano anteriore. Esegui jab rapidi concentrandoti sul ritorno veloce della mano in guardia, contro la tensione. Rende il jab più rapido a rientrare e meno contrabile; non lasciar cadere il gomito.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--spostamenti-laterali-con-elastico-alle-ginocchia",
+    "name": "Spostamenti laterali con elastico alle ginocchia",
+    "category": "agilita",
+    "description": "Passi laterali in guardia con miniband sopra le ginocchia.",
+    "dose": "3 × 10 m per lato, recupero 30 s",
+    "details": "Miniband sopra le ginocchia, piedi alla larghezza delle spalle, in guardia bassa. Muoviti lateralmente con passi corti senza unire i piedi e senza perdere tensione. Attiva i glutei e stabilizza le ginocchia nel footwork; non far collassare le ginocchia verso l'interno.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--pivot-con-elastico-in-vita",
+    "name": "Pivot con elastico in vita",
+    "category": "agilita",
+    "description": "Cambi d'angolo e pivot in guardia con elastico in vita tirato di lato.",
+    "dose": "3 × 30 s per lato, recupero 30 s",
+    "details": "Il compagno tiene l'elastico in vita da un lato. Esegui pivot sul piede anteriore e uscite d'angolo contro la tensione, tornando sempre in guardia. Allena gli angoli per uscire dalla linea d'attacco; ruota sull'avampiede e mantieni le mani alte.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--face-pull-con-elastico",
+    "name": "Face pull con elastico",
+    "category": "forza-resistente",
+    "description": "Tirata dell'elastico verso il viso con gomiti alti per le spalle posteriori.",
+    "dose": "3 × 15, recupero 45 s",
+    "details": "Elastico ancorato all'altezza degli occhi, prendilo con presa prona. Tira verso il viso aprendo i gomiti e ruotando le mani verso l'esterno, poi torna lento. Bilancia il lavoro di spinta dei pugni e protegge le spalle; non inarcare la schiena.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--rotazioni-esterne-con-elastico",
+    "name": "Rotazioni esterne con elastico",
+    "category": "mobilita",
+    "description": "Rotazione esterna della spalla con gomito al fianco per prevenire infortuni.",
+    "dose": "3 × 15 per lato, recupero 30 s",
+    "details": "Elastico ancorato all'altezza del gomito, gomito piegato a 90° e attaccato al fianco. Ruota l'avambraccio verso l'esterno e torna lentamente. Rinforza la cuffia dei rotatori, sollecitata da pugni e clinch; usa una resistenza leggera e non staccare il gomito.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--pull-apart-con-elastico",
+    "name": "Pull-apart con elastico",
+    "category": "forza-resistente",
+    "description": "Apertura delle braccia tese contro l'elastico per scapole e spalle.",
+    "dose": "3 × 20, recupero 30 s",
+    "details": "In piedi, elastico tenuto davanti al petto con braccia tese. Aprilo fino a toccare il petto stringendo le scapole, poi torna lento. Migliora la postura in guardia e la tenuta delle spalle nei round lunghi; non alzare le spalle verso le orecchie.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--ponte-glutei-con-miniband",
+    "name": "Ponte glutei con miniband",
+    "category": "mobilita",
+    "description": "Ponte a terra con miniband sopra le ginocchia per attivare i glutei.",
+    "dose": "3 × 15, recupero 30 s",
+    "details": "Supino, piedi a terra, miniband sopra le ginocchia. Spingi le ginocchia verso l'esterno e solleva il bacino stringendo i glutei, pausa di 1 s in alto. Attiva anca e glutei prima di calci e ginocchiate e protegge la zona lombare; non iperestendere la schiena.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--clamshell-con-elastico",
+    "name": "Clamshell con elastico",
+    "category": "mobilita",
+    "description": "Apertura del ginocchio sul fianco con miniband per la stabilità dell'anca.",
+    "dose": "3 × 15 per lato, recupero 30 s",
+    "details": "Sdraiato sul fianco, ginocchia piegate e miniband sopra le ginocchia. Apri il ginocchio superiore mantenendo i piedi uniti e il bacino fermo. Rinforza il medio gluteo, chiave per stabilità sul piede d'appoggio nei calci; il bacino non deve ruotare all'indietro.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--chop-diagonale-con-elastico",
+    "name": "Chop diagonale con elastico",
+    "category": "core",
+    "description": "Rotazione diagonale dall'alto verso il basso contro l'elastico.",
+    "dose": "3 × 10 per lato, recupero 45 s",
+    "details": "Elastico ancorato in alto di lato, prendilo con due mani. Tira in diagonale verso l'anca opposta ruotando busto e piedi, poi risali controllando. Rinforza la rotazione di busto usata in gomitate e ganci; mantieni le braccia quasi tese e il core contratto.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--dead-bug-con-elastico",
+    "name": "Dead bug con elastico",
+    "category": "core",
+    "description": "Dead bug con elastico ancorato dietro la testa per stabilizzare il core.",
+    "dose": "3 × 8 per lato, recupero 30 s",
+    "details": "Supino, elastico ancorato dietro la testa e tenuto a braccia tese sopra il petto. Distendi una gamba alla volta mantenendo le braccia ferme contro la tensione. Allena la stabilità del tronco per incassare e calciare; la zona lombare resta schiacciata a terra.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--tirata-del-collo-in-clinch-con-elastico",
+    "name": "Tirata del collo in clinch con elastico",
+    "category": "clinch",
+    "description": "Tirata delle braccia verso il basso come nel controllo della testa in clinch.",
+    "dose": "3 × 12, recupero 45 s",
+    "details": "Elastico ancorato in alto davanti a te, mani giunte come nella presa al collo. Tira verso il petto con i gomiti stretti, abbassando il baricentro, e risali lento. Rinforza la presa e la tirata per spezzare la postura dell'avversario; tieni i gomiti chiusi e la schiena dritta.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "elastico--ripresa-colpi-con-elastico-in-vita",
+    "name": "Ripresa colpi con elastico in vita",
+    "category": "resistenza",
+    "description": "Combinazioni continue a ombra con elastico in vita trattenuto dal compagno.",
+    "dose": "3 riprese da 3 min, recupero 1 min",
+    "details": "Il compagno trattiene l'elastico in vita mentre esegui combinazioni di pugni, calci e ginocchiate avanzando. Mantieni ritmo costante e pressione per tutta la ripresa. Allena la resistenza alla pressione in avanti tipica della Muay Thai; non sacrificare la tecnica alla fatica.",
+    "equipment": "Elastici",
+    "tool": "elastico"
+  },
+  {
+    "id": "pao--parata-del-calcio-e-risposta",
+    "name": "Parata del calcio e risposta",
+    "category": "tecnica",
+    "description": "Il partner calcia con il pao, l'atleta para con la tibia e risponde subito.",
+    "dose": "3 riprese da 2 min, 1 min recupero",
+    "details": "Il partner simula un calcio basso o al corpo con il pao; l'atleta alza la tibia con guardia chiusa e rientra con diretto-calcio. Allena la risposta automatica dopo la difesa, decisiva per vincere gli scambi. Errore comune: abbassare le mani mentre si alza la gamba.",
+    "equipment": "Pao",
+    "tool": "pao"
+  },
+  {
+    "id": "pao--ginocchiate-dal-clinch-ai-pao",
+    "name": "Ginocchiate dal clinch ai pao",
+    "category": "clinch",
+    "description": "In presa al collo, ginocchiate alternate sui pao tenuti a livello addome.",
+    "dose": "4 × 30 s, 30 s recupero",
+    "details": "L'atleta controlla il collo del partner, che tiene i pao sovrapposti davanti all'addome; tira ginocchiate alternate spingendo le anche avanti e tirando giù la testa. Costruisce potenza e controllo nel corpo a corpo. Il partner protegge bene l'addome; non piegare la schiena all'indietro.",
+    "equipment": "Pao",
+    "tool": "pao"
+  },
+  {
+    "id": "pao--raffica-di-ginocchiate-20-s",
+    "name": "Raffica di ginocchiate 20 s",
+    "category": "forza-resistente",
+    "description": "Ginocchiate dritte alla massima frequenza sui pao per 20 secondi.",
+    "dose": "6 × 20 s, 40 s recupero",
+    "details": "Il partner tiene i pao uniti davanti al busto; l'atleta afferra i bordi e alterna ginocchiate senza fermarsi, mantenendo il ritmo fino all'ultimo secondo. Simula le fasi finali di ripresa in cui si deve continuare a segnare. Errore: perdere l'appoggio sull'avampiede e caricare sul tallone.",
+    "equipment": "Pao",
+    "tool": "pao"
+  },
+  {
+    "id": "pao--calcio-circolare-singolo-esplosivo",
+    "name": "Calcio circolare singolo esplosivo",
+    "category": "forza-esplosiva",
+    "description": "Un solo calcio al corpo alla massima potenza, ripreso da fermo in guardia.",
+    "dose": "5 × 5 per lato, 1 min recupero",
+    "details": "Da guardia ferma l'atleta ruota il piede d'appoggio e calcia attraverso il pao con anca e spalla, poi torna subito in guardia. Ogni calcio è un colpo da KO, con recupero completo tra le serie. Il partner tiene il pao saldo e incassa col corpo; errore comune: caricare il calcio in modo visibile.",
+    "equipment": "Pao",
+    "tool": "pao"
+  },
+  {
+    "id": "pao--schivata-del-pao-e-contro",
+    "name": "Schivata del pao e contro",
+    "category": "tecnica",
+    "description": "Il partner lancia ganci con il pao, l'atleta schiva e contrattacca.",
+    "dose": "3 riprese da 2 min, 1 min recupero",
+    "details": "Il partner fa partire un gancio largo con il pao; l'atleta piega le gambe e passa sotto, poi risale con gancio-diretto sui pao già ripresentati. Insegna a restare a distanza utile dopo la difesa. Errore: piegarsi in avanti col busto invece di flettere le ginocchia, esponendo il viso.",
+    "equipment": "Pao",
+    "tool": "pao"
+  },
+  {
+    "id": "pao--uscita-laterale-e-calcio",
+    "name": "Uscita laterale e calcio",
+    "category": "agilita",
+    "description": "Il partner avanza, l'atleta esce di lato con un passo e calcia subito.",
+    "dose": "4 riprese da 2 min, 1 min recupero",
+    "details": "Il partner avanza spingendo con i pao; l'atleta fa un passo diagonale fuori linea, ruota sul piede avanti e calcia il pao presentato sul fianco aperto. Serve a non farsi chiudere alle corde. Errore comune: indietreggiare in linea retta invece di cambiare angolo.",
+    "equipment": "Pao",
+    "tool": "pao"
+  },
+  {
+    "id": "pao--pressione-all-angolo-ai-pao",
+    "name": "Pressione all'angolo ai pao",
+    "category": "resistenza",
+    "description": "L'atleta spinge indietro il partner con combinazioni continue fino all'angolo.",
+    "dose": "3 riprese da 3 min, 1 min recupero",
+    "details": "Il partner arretra lentamente presentando i pao; l'atleta avanza a passi corti con combinazioni di 3-4 colpi senza pause e chiude con ginocchiata quando arriva all'angolo. Allena il ritmo di pressione tipico dei fighter aggressivi. Errore: avanzare con il mento alto e la guardia aperta.",
+    "equipment": "Pao",
+    "tool": "pao"
+  },
+  {
+    "id": "pao--gancio-al-corpo-e-calcio-basso",
+    "name": "Gancio al corpo e calcio basso",
+    "category": "velocita",
+    "description": "Gancio al fegato seguito subito da calcio basso con la gamba avanti.",
+    "dose": "4 × 10 per lato, 45 s recupero",
+    "details": "Il partner tiene un pao al fianco per il gancio, poi abbassa l'altro sulla coscia; l'atleta lega i due colpi senza riposizionarsi, sfruttando la rotazione del gancio per caricare il calcio. Apre la guardia avversaria in basso. Errore: rialzarsi tra i due colpi perdendo velocità.",
+    "equipment": "Pao",
+    "tool": "pao"
+  },
+  {
+    "id": "manubri--clean-con-manubri",
+    "name": "Clean con manubri",
+    "category": "forza-esplosiva",
+    "description": "Tirata esplosiva dei manubri dal ginocchio alle spalle.",
+    "dose": "4 × 5 ripetizioni, recupero 90 s",
+    "details": "Parti con manubri sopra le ginocchia, anche indietro; estendi di colpo anche e ginocchia e ricevi i pesi sulle spalle con i gomiti avanti. Sviluppa la tripla estensione che spinge ginocchiate e calci. Mantieni la schiena neutra e non tirare con le braccia.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--jump-squat-con-manubri",
+    "name": "Jump squat con manubri",
+    "category": "forza-esplosiva",
+    "description": "Squat con salto verticale tenendo manubri leggeri ai fianchi.",
+    "dose": "4 × 6 ripetizioni, recupero 90 s",
+    "details": "Con manubri leggeri lungo i fianchi scendi a mezzo squat e salta più in alto possibile, atterrando morbido e ripartendo. Migliora la reattività delle gambe per entrare ed uscire dalla distanza. Usa carichi bassi (10-20% del peso corporeo) e ginocchia allineate all'atterraggio.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--push-press-con-manubri",
+    "name": "Push press con manubri",
+    "category": "forza-esplosiva",
+    "description": "Spinta sopra la testa aiutata da un rapido piegamento delle gambe.",
+    "dose": "4 × 6 ripetizioni, recupero 90 s",
+    "details": "Manubri alle spalle, fai un breve piegamento di ginocchia e spingi esplosivo trasferendo la forza dalle gambe alle braccia fino a braccia distese. Insegna a collegare gambe e spalle come nel pugno. Evita di inarcare la zona lombare, glutei e addome contratti.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--swing-con-manubrio",
+    "name": "Swing con manubrio",
+    "category": "forza-esplosiva",
+    "description": "Oscillazione a due mani di un manubrio con spinta d'anca.",
+    "dose": "4 × 15 ripetizioni, recupero 60 s",
+    "details": "Tieni un manubrio per una testa, porta il peso tra le gambe piegando le anche e chiudi di scatto i glutei facendolo salire all'altezza del petto. Allena la spinta d'anca usata in ginocchiate e teep. Il movimento è delle anche, non uno squat né un sollevamento di braccia.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--stacco-rumeno-con-manubri",
+    "name": "Stacco rumeno con manubri",
+    "category": "forza-massimale",
+    "description": "Flessione d'anca a gambe semitese per catena posteriore.",
+    "dose": "4 × 8 ripetizioni, recupero 2 min",
+    "details": "In piedi con manubri davanti alle cosce, spingi le anche indietro facendo scivolare i pesi lungo le gambe fino a metà tibia, poi risali stringendo i glutei. Rinforza femorali e glutei, base di calci potenti e protezione dagli infortuni. Schiena neutra, ginocchia leggermente flesse.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--goblet-squat-pesante",
+    "name": "Goblet squat pesante",
+    "category": "forza-massimale",
+    "description": "Squat profondo con un manubrio tenuto al petto.",
+    "dose": "4 × 6 ripetizioni, recupero 2 min",
+    "details": "Tieni un manubrio pesante verticale contro il petto, scendi tra le ginocchia mantenendo il busto alto e risali spingendo con tutto il piede. Costruisce gambe forti per la base e la stabilità in clinch. Ginocchia in linea con le punte e talloni sempre a terra.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--step-up-con-manubri",
+    "name": "Step-up con manubri",
+    "category": "forza-massimale",
+    "description": "Salita su panca o box con manubri pesanti ai fianchi.",
+    "dose": "4 × 6 per gamba, recupero 90 s",
+    "details": "Appoggia un piede intero sul box, spingi con quella gamba fino in piedi senza darti slancio con la gamba a terra, poi scendi controllato. Sviluppa forza unilaterale per la gamba d'appoggio nei calci. Ginocchio stabile sopra il piede, senza cedimenti verso l'interno.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--rematore-in-plank-con-manubri",
+    "name": "Rematore in plank con manubri",
+    "category": "core",
+    "description": "Plank alto alternando rematori con un manubrio per mano.",
+    "dose": "3 × 8 per lato, recupero 60 s",
+    "details": "In plank alto sulle mani appoggiate ai manubri, piedi larghi, tira un manubrio al fianco senza ruotare il bacino, poi alterna. Allena la stabilità antirotazione del tronco che protegge e trasmette la forza nei colpi. Bacino fermo e parallelo al suolo per tutta la serie.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--dead-bug-con-manubri",
+    "name": "Dead bug con manubri",
+    "category": "core",
+    "description": "Estensione alternata di braccia e gambe da supini con manubri.",
+    "dose": "3 × 10 per lato, recupero 45 s",
+    "details": "Supino con manubri leggeri sopra il petto e anche e ginocchia a 90°, abbassa un braccio e la gamba opposta senza staccare la zona lombare, poi torna. Rinforza il controllo addominale profondo utile per incassare e colpire. Espira durante l'estensione e mantieni la schiena incollata a terra.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--russian-twist-con-manubrio",
+    "name": "Russian twist con manubrio",
+    "category": "core",
+    "description": "Rotazioni del busto da seduti con un manubrio tra le mani.",
+    "dose": "3 × 20 tocchi, recupero 45 s",
+    "details": "Seduto con busto inclinato indietro e piedi sollevati o appoggiati, ruota il tronco portando il manubrio da un fianco all'altro. Allena gli obliqui coinvolti nei ganci e nei calci circolari. Ruota dalle spalle e dal torace, non solo con le braccia, schiena lunga.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--woodchop-con-manubrio",
+    "name": "Woodchop con manubrio",
+    "category": "core",
+    "description": "Diagonale dall'alto in basso con manubrio a due mani.",
+    "dose": "3 × 10 per lato, recupero 60 s",
+    "details": "Parti con il manubrio sopra la spalla, porta il peso in diagonale verso il ginocchio opposto ruotando il busto e piegando le gambe, poi risali controllato. Riproduce la catena di rotazione di gomitate e calci. Pivota il piede posteriore e mantieni la schiena neutra.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--uppercut-con-manubri-leggeri",
+    "name": "Uppercut con manubri leggeri",
+    "category": "velocita",
+    "description": "Serie rapide di montanti alternati con manubri da 1-2 kg.",
+    "dose": "6 × 20 s, recupero 40 s",
+    "details": "In guardia con manubri leggerissimi, esegui montanti alternati rapidi spingendo con gambe e anche, riportando subito le mani al viso. Migliora velocità e resistenza delle spalle nei colpi dal basso. Non bloccare il gomito e non usare carichi elevati per non alterare la tecnica.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--punch-out-a-gancio-con-manubri",
+    "name": "Punch-out a gancio con manubri",
+    "category": "velocita",
+    "description": "Ganci corti e veloci con manubri leggeri e rotazione del busto.",
+    "dose": "6 × 20 s, recupero 40 s",
+    "details": "Con manubri da 1-2 kg in guardia, alterna ganci corti con gomito all'altezza del pugno, ruotando busto e piede. Rinforza la rapidità della rotazione e la tenuta delle spalle nei ganci. Movimento controllato in chiusura per non sovraccaricare il gomito.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--complesso-manubri-a-circuito",
+    "name": "Complesso manubri a circuito",
+    "category": "resistenza",
+    "description": "Sequenza continua di rematore, clean, press e squat senza posare.",
+    "dose": "5 round × 6 per esercizio, 90 s",
+    "details": "Con manubri medi esegui di seguito rematore, clean, distensione e squat senza appoggiare i pesi, poi recupera. Simula lo sforzo continuo di un round con il cuore alto. Scegli un carico che consenta tecnica pulita fino all'ultima ripetizione.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--burpee-con-manubri",
+    "name": "Burpee con manubri",
+    "category": "resistenza",
+    "description": "Burpee con piegamento sui manubri e risalita con distensione.",
+    "dose": "4 × 40 s, recupero 40 s",
+    "details": "Mani sui manubri, porta i piedi indietro, esegui un piegamento, torna in squat e alza i manubri sopra la testa. Allena la capacità di rialzarsi e lavorare sotto fatica come negli ultimi round. Usa manubri esagonali per stabilità e polsi dritti a terra.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--halo-con-manubrio",
+    "name": "Halo con manubrio",
+    "category": "mobilita",
+    "description": "Cerchi del manubrio attorno alla testa per mobilità di spalle.",
+    "dose": "3 × 8 per senso, recupero 30 s",
+    "details": "In piedi o in ginocchio, tieni un manubrio leggero per le testine e descrivi cerchi lenti attorno alla testa, vicino al collo. Mobilizza spalle e scapole sollecitate da guardia e pugni. Addome contratto e busto fermo, senza compensare inarcando la schiena.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--rotazioni-esterne-con-manubrio",
+    "name": "Rotazioni esterne con manubrio",
+    "category": "mobilita",
+    "description": "Extrarotazione della spalla da sdraiati sul fianco con manubrio.",
+    "dose": "3 × 15 per lato, recupero 30 s",
+    "details": "Sdraiato sul fianco con gomito a 90° appoggiato al busto, ruota l'avambraccio verso l'alto sollevando un manubrio leggero, poi torna lento. Rinforza la cuffia dei rotatori e previene infortuni da pugni ripetuti. Carico molto leggero e movimento lento, senza dolore.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "manubri--shrug-e-tirata-in-clinch-con-manubri",
+    "name": "Shrug e tirata in clinch con manubri",
+    "category": "clinch",
+    "description": "Scrollate e tirate al petto per rinforzare la presa e il collo.",
+    "dose": "4 × 12 ripetizioni, recupero 60 s",
+    "details": "Con manubri pesanti ai fianchi esegui una scrollata delle spalle, poi tira i pesi verso il petto con gomiti alti e torna giù controllato. Rinforza trapezi, collo e braccia per controllare la testa dell'avversario nel clinch. Non ruotare le spalle e mantieni il collo neutro.",
+    "equipment": "Manubri",
+    "tool": "manubri"
+  },
+  {
+    "id": "sbarra--pull-up-esplosive-al-petto",
+    "name": "Pull-up esplosive al petto",
+    "category": "forza-esplosiva",
+    "description": "Trazioni rapide portando il petto alla sbarra con massima velocità.",
+    "dose": "5 × 4 ripetizioni, recupero 90 s",
+    "details": "Parti da appeso a braccia tese e tira con la massima intenzione fino a toccare la sbarra con il petto, poi scendi controllato. Sviluppa la potenza di tirata utile per strappare la guardia e controllare la testa in clinch. Interrompi la serie quando la velocità cala.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--trazioni-a-presa-larga",
+    "name": "Trazioni a presa larga",
+    "category": "forza-massimale",
+    "description": "Trazioni prone con presa oltre le spalle per enfatizzare il gran dorsale.",
+    "dose": "4 × 5 ripetizioni, recupero 2 min",
+    "details": "Impugna la sbarra prona con mani più larghe delle spalle, deprimi le scapole e sali fino al mento sopra la sbarra. Rinforza il dorsale che stabilizza la spalla nei pugni e nei gomiti. Evita lo slancio con le gambe e non bloccare il collo in avanti.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--chin-up-presa-supina",
+    "name": "Chin-up presa supina",
+    "category": "forza-massimale",
+    "description": "Trazioni con palmi verso di sé per bicipiti e dorsali.",
+    "dose": "4 × 6 ripetizioni, recupero 2 min",
+    "details": "Appeso con presa supina alla larghezza delle spalle, tira portando il mento sopra la sbarra e i gomiti verso i fianchi. Rinforza i flessori del gomito usati per tirare e trattenere l'avversario in clinch. Scendi fino a braccia tese senza far cedere la spalla di colpo.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--trazioni-isometriche-a-90",
+    "name": "Trazioni isometriche a 90°",
+    "category": "clinch",
+    "description": "Tenuta statica a metà trazione con gomiti flessi a 90 gradi.",
+    "dose": "4 × 20 s, recupero 60 s",
+    "details": "Sali in trazione e fermati con i gomiti a 90 gradi, scapole basse e addome contratto, mantenendo la posizione. Simula lo sforzo statico del tirare e trattenere il collo dell'avversario nel plum. Respira regolarmente e scendi lentamente al termine.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--trazioni-con-asciugamano-doppio",
+    "name": "Trazioni con asciugamano doppio",
+    "category": "clinch",
+    "description": "Trazioni impugnando due asciugamani appesi alla sbarra.",
+    "dose": "4 × 5 ripetizioni, recupero 90 s",
+    "details": "Lancia due asciugamani sulla sbarra, impugnali a pugno chiuso e tira portando le mani all'altezza del mento. Allena la presa da chiusura usata per afferrare collo e braccia in clinch. Controlla che gli asciugamani siano ben fissati e asciutti prima di iniziare.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--appeso-attivo-scapolare",
+    "name": "Appeso attivo scapolare",
+    "category": "mobilita",
+    "description": "Da appeso, deprimi e rilassa le scapole senza piegare i gomiti.",
+    "dose": "3 × 10 ripetizioni lente",
+    "details": "Appeso a braccia tese, abbassa le spalle lontano dalle orecchie sollevando leggermente il corpo, poi torna rilassato. Migliora controllo e salute della spalla, sollecitata da migliaia di pugni e parate. Mantieni i gomiti tesi e il movimento piccolo e controllato.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--dead-hang-a-tempo",
+    "name": "Dead hang a tempo",
+    "category": "forza-resistente",
+    "description": "Rimani appeso alla sbarra a braccia tese il più a lungo possibile.",
+    "dose": "3 × max tempo, recupero 90 s",
+    "details": "Afferra la sbarra prona, lascia il corpo disteso con scapole leggermente attive e resisti fino al cedimento della presa. Costruisce la resistenza della presa necessaria a mantenere il clinch nei round lunghi. Annota il tempo e cerca di migliorarlo settimana dopo settimana.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--appeso-a-un-braccio-alternato",
+    "name": "Appeso a un braccio alternato",
+    "category": "forza-massimale",
+    "description": "Sospensione a un braccio alternando la mano ogni pochi secondi.",
+    "dose": "3 × 30 s totali, recupero 90 s",
+    "details": "Da appeso a due mani, stacca una mano e tieni con l'altra 5 secondi, poi alterna senza toccare terra. Rafforza presa e stabilità della spalla in modo unilaterale, come accade nelle prese asimmetriche del clinch. Attiva la scapola del braccio che lavora per non scaricare sull'articolazione.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--ginocchia-al-petto-con-torsione",
+    "name": "Ginocchia al petto con torsione",
+    "category": "core",
+    "description": "Da appeso porta le ginocchia verso le spalle alternando i lati.",
+    "dose": "3 × 12 ripetizioni, recupero 60 s",
+    "details": "Appeso a braccia tese, solleva le ginocchia ruotando il bacino verso una spalla, scendi controllato e alterna. Rinforza gli obliqui che generano la rotazione nei calci e nelle ginocchiate. Evita di oscillare: fermati un istante in basso prima della ripetizione successiva.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--tergicristallo-alla-sbarra",
+    "name": "Tergicristallo alla sbarra",
+    "category": "core",
+    "description": "Gambe sollevate a 90° ruotate da un lato all'altro come un tergicristallo.",
+    "dose": "3 × 8 per lato, recupero 75 s",
+    "details": "Appeso, porta le gambe tese o piegate a 90 gradi e ruotale lentamente da un lato all'altro mantenendo il busto stabile. Sviluppa forza rotazionale e anti-rotazionale del tronco, utile nei calci circolari. Inizia a ginocchia piegate se la versione tesa compromette il controllo.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--ginocchiate-appese-alternate",
+    "name": "Ginocchiate appese alternate",
+    "category": "velocita",
+    "description": "Da appeso esegui ginocchiate rapide alternate verso il petto.",
+    "dose": "4 × 20 s, recupero 40 s",
+    "details": "Appeso con scapole attive, spingi in modo esplosivo un ginocchio verso il petto e alterna rapidamente le gambe. Allena la velocità di flessione dell'anca della ginocchiata senza l'appoggio dei piedi. Limita l'oscillazione del corpo contraendo l'addome.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--hollow-hold-appeso",
+    "name": "Hollow hold appeso",
+    "category": "core",
+    "description": "Tenuta in posizione a barchetta da appeso alla sbarra.",
+    "dose": "4 × 20 s, recupero 45 s",
+    "details": "Appeso, deprimi le scapole, retroverti il bacino e porta i piedi leggermente avanti formando una linea curva. Insegna la rigidità del tronco che trasferisce forza dalle gambe ai colpi. Non inarcare la zona lombare e mantieni le gambe unite.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--dip-su-parallele-con-pausa",
+    "name": "Dip su parallele con pausa",
+    "category": "forza-massimale",
+    "description": "Dip con fermo di 2 secondi nel punto più basso.",
+    "dose": "4 × 5 ripetizioni, recupero 2 min",
+    "details": "Sulle parallele a braccia tese, scendi finché le spalle arrivano all'altezza dei gomiti, tieni 2 secondi e risali spingendo forte. Rinforza tricipiti e pettorali alla base del pugno diretto e della spinta in clinch. Non scendere oltre il range in cui la spalla resta comoda.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--dip-esplosivi",
+    "name": "Dip esplosivi",
+    "category": "forza-esplosiva",
+    "description": "Dip con spinta rapida, cercando di staccare le mani in alto.",
+    "dose": "5 × 4 ripetizioni, recupero 90 s",
+    "details": "Scendi controllato sulle parallele e spingi con la massima velocità fino a far staccare brevemente le mani, riatterrando a braccia morbide. Migliora l'estensione esplosiva delle braccia per pugni e spinte. Esegui solo se padroneggi i dip classici e atterra sempre in controllo.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--dip-in-appoggio-scapolare",
+    "name": "Dip in appoggio scapolare",
+    "category": "mobilita",
+    "description": "Da appoggio sulle parallele abbassa e alza le spalle a braccia tese.",
+    "dose": "3 × 12 ripetizioni lente",
+    "details": "In appoggio sulle parallele a braccia tese, lascia salire le spalle verso le orecchie e poi spingi in basso allontanandole. Migliora stabilità e controllo scapolare per spalle più resistenti ai colpi e alle parate. Movimento lento e senza piegare i gomiti.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--knee-raise-sulle-parallele",
+    "name": "Knee raise sulle parallele",
+    "category": "core",
+    "description": "In appoggio sulle parallele solleva le ginocchia al petto.",
+    "dose": "3 × 15 ripetizioni, recupero 60 s",
+    "details": "In appoggio sulle parallele con spalle basse e braccia tese, porta le ginocchia al petto arrotondando il bacino e scendi lentamente. Rinforza i flessori dell'anca e l'addome usati nelle ginocchiate e nella guardia della gamba. Evita di far affondare le spalle durante la serie.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--circuito-sbarra-e-parallele",
+    "name": "Circuito sbarra e parallele",
+    "category": "resistenza",
+    "description": "Circuito continuo: trazioni, dip e ginocchia al petto senza pausa.",
+    "dose": "4 giri × 3 min, recupero 1 min",
+    "details": "Alterna 5 trazioni, 8 dip e 10 ginocchia al petto appeso ripetendo il ciclo fino allo scadere dei 3 minuti. Simula la durata di un round mantenendo la parte alta sotto sforzo continuo. Riduci le ripetizioni se la tecnica peggiora.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "sbarra--trazioni-a-ripetizioni-massime-in-1-minuto",
+    "name": "Trazioni a ripetizioni massime in 1 minuto",
+    "category": "forza-resistente",
+    "description": "Il massimo di trazioni pulite in 60 secondi.",
+    "dose": "3 × 1 min, recupero 3 min",
+    "details": "Esegui trazioni complete in 60 secondi, staccandoti dalla sbarra se necessario ma ripartendo subito. Allena la resistenza muscolare del tirare nelle fasi finali del combattimento. Conta solo ripetizioni con mento sopra la sbarra e braccia tese in basso.",
+    "equipment": "Sbarra e parallele",
+    "tool": "sbarra"
+  },
+  {
+    "id": "battle-rope--onde-alternate",
+    "name": "Onde alternate",
+    "category": "resistenza",
+    "description": "Onde alternate continue con braccia e spalle, ritmo costante.",
+    "dose": "4 × 40 s, recupero 20 s",
+    "details": "In mezzo squat atletico, piedi alla larghezza delle spalle, alterna le braccia creando onde regolari fino all'ancoraggio. Costruisce resistenza di spalle per tenere la guardia alta nelle riprese finali. Mantieni il busto fermo e respira in modo ritmico, senza trattenere il fiato.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--onde-doppie",
+    "name": "Onde doppie",
+    "category": "forza-resistente",
+    "description": "Onde simultanee a due braccia per spalle e dorsali.",
+    "dose": "5 × 30 s, recupero 30 s",
+    "details": "Impugna le corde con presa neutra e muovi entrambe le braccia insieme su e giù, generando onde ampie e sincronizzate. Rinforza spalle e dorsali sotto fatica, utile per pugni ripetuti e clinch prolungato. Spingi dai fianchi e non inarcare la zona lombare.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--onde-in-guardia",
+    "name": "Onde in guardia",
+    "category": "tecnica",
+    "description": "Onde alternate corte restando in posizione di guardia da Muay Thai.",
+    "dose": "3 riprese da 3 min, 1 min recupero",
+    "details": "Mettiti in guardia ortodossa o mancina, peso distribuito, e produci onde alternate rapide con le mani vicine al viso. Abitua le spalle a lavorare senza abbassare la guardia e mantiene lo stance specifico del combattimento. Il mento resta basso e i piedi non perdono l'appoggio.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--onde-con-passi-laterali",
+    "name": "Onde con passi laterali",
+    "category": "agilita",
+    "description": "Onde alternate spostandosi lateralmente a passi da combattimento.",
+    "dose": "6 × 30 s, recupero 30 s",
+    "details": "Esegui onde alternate mentre fai due passi a destra e due a sinistra mantenendo lo stance, senza incrociare i piedi. Allena la coordinazione tra lavoro di braccia e footwork, come quando si colpisce in movimento. Mantieni le onde continue anche durante i cambi di direzione.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--onde-con-squat",
+    "name": "Onde con squat",
+    "category": "forza-resistente",
+    "description": "Onde doppie combinate con squat profondi e risalita.",
+    "dose": "4 × 30 s, recupero 40 s",
+    "details": "Esegui onde doppie mentre scendi in squat e risali, mantenendo il ritmo delle corde per tutto il movimento. Sviluppa la resistenza delle gambe insieme a quella di spalle, utile per calciare forte a fine match. Ginocchia allineate alle punte e schiena neutra in discesa.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--onde-con-affondi-alternati",
+    "name": "Onde con affondi alternati",
+    "category": "forza-resistente",
+    "description": "Onde alternate durante affondi indietro alternati.",
+    "dose": "4 × 40 s, recupero 40 s",
+    "details": "Mantieni onde alternate e arretra con un piede alla volta in affondo, tornando in piedi senza fermare le corde. Rinforza la stabilità di anche e ginocchia sotto carico metabolico, base per calci e ginocchiate solide. Il ginocchio anteriore non supera troppo la punta del piede.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--slam-con-salto",
+    "name": "Slam con salto",
+    "category": "forza-esplosiva",
+    "description": "Salto verticale seguito da slam violento delle corde a terra.",
+    "dose": "5 × 6 ripetizioni, recupero 60 s",
+    "details": "Parti in mezzo squat, salta portando le corde sopra la testa e all'atterraggio sbattile a terra con forza massima. Sviluppa la catena di estensione gambe-anche-braccia tipica di ginocchiate e gomitate esplosive. Atterra morbido sugli avampiedi prima di eseguire lo slam.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--slam-laterali",
+    "name": "Slam laterali",
+    "category": "core",
+    "description": "Slam alternati ai lati del corpo con rotazione del busto.",
+    "dose": "4 × 20 s, recupero 40 s",
+    "details": "Unisci le mani sulle corde, portale sopra una spalla e sbattile a terra sul lato opposto ruotando busto e piedi. Allena la rotazione del tronco che genera potenza in ganci, gomitate e calci circolari. Ruota sul piede posteriore e non torcere la colonna con i piedi bloccati.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--cerchi-esterni",
+    "name": "Cerchi esterni",
+    "category": "mobilita",
+    "description": "Cerchi ampi verso l'esterno con entrambe le braccia.",
+    "dose": "3 × 30 s per verso, recupero 30 s",
+    "details": "In piedi in mezzo squat, disegna con le corde grandi cerchi verso l'esterno, poi inverti il verso nella serie successiva. Migliora mobilità e controllo della cuffia dei rotatori, proteggendo le spalle dai colpi ripetuti. Movimenti fluidi e ampi, senza scatti nelle articolazioni.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--cerchi-interni",
+    "name": "Cerchi interni",
+    "category": "mobilita",
+    "description": "Cerchi ampi verso l'interno per controllo della spalla.",
+    "dose": "3 × 30 s, recupero 30 s",
+    "details": "Impugna le corde e traccia cerchi ampi verso l'interno coordinando le due braccia, con il busto stabile. Rinforza la spalla nei piani di movimento usati in clinch e nei colpi circolari. Mantieni le scapole attive e il collo rilassato durante tutto l'esercizio.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--snake-laterale",
+    "name": "Snake laterale",
+    "category": "core",
+    "description": "Onde orizzontali a terra muovendo le corde da lato a lato.",
+    "dose": "4 × 30 s, recupero 30 s",
+    "details": "In mezzo squat, muovi le corde orizzontalmente a terra come due serpenti, allontanando e avvicinando le mani. Allena la stabilità anti-rotazione del core e l'adduzione delle spalle, utili per controllare l'avversario in clinch. Tieni le corde basse e il busto immobile.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--onde-in-ginocchio",
+    "name": "Onde in ginocchio",
+    "category": "forza-resistente",
+    "description": "Onde alternate in ginocchio per isolare spalle e core.",
+    "dose": "4 × 30 s, recupero 30 s",
+    "details": "In ginocchio con busto eretto e glutei contratti, esegui onde alternate senza aiuto delle gambe. Isola spalle e core aumentando la resistenza degli arti superiori per pugni e guardia. Non sederti sui talloni e non inarcare la schiena.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--onde-sprint",
+    "name": "Onde sprint",
+    "category": "velocita",
+    "description": "Onde alternate alla massima frequenza per brevi intervalli.",
+    "dose": "8 × 10 s, recupero 50 s",
+    "details": "In posizione atletica, produci onde alternate piccole e rapidissime alla massima velocità possibile. Sviluppa la frequenza di braccia utile per le combinazioni di pugni veloci. Interrompi la serie se le onde perdono ampiezza o la tecnica si deteriora.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--tabata-battle-rope",
+    "name": "Tabata battle rope",
+    "category": "resistenza",
+    "description": "Protocollo Tabata con onde alternate a intensità massimale.",
+    "dose": "8 × 20 s, recupero 10 s",
+    "details": "Esegui onde alternate a intensità massima per 20 secondi e riposa 10, per otto cicli consecutivi. Allena la capacità anaerobica necessaria per scambi intensi e finali di ripresa. Riscaldati bene prima e mantieni la postura anche quando la fatica cresce.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--pugni-con-corde",
+    "name": "Pugni con corde",
+    "category": "tecnica",
+    "description": "Simulazione di jab e diretto spingendo le corde in avanti.",
+    "dose": "3 riprese da 3 min, 1 min recupero",
+    "details": "In guardia, porta le corde in avanti alternando jab e diretto, ruotando anca e piede come nel pugno reale. Collega la tecnica di pugno alla resistenza di spalle sotto un carico leggero e continuo. Torna sempre in guardia dopo ogni colpo, senza lasciare cadere le mani.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--uppercut-con-corde",
+    "name": "Uppercut con corde",
+    "category": "forza-esplosiva",
+    "description": "Spinte esplosive verso l'alto simulando montanti alternati.",
+    "dose": "5 × 15 s, recupero 45 s",
+    "details": "Da mezzo squat in guardia, solleva le corde con un movimento esplosivo dal basso verso l'alto alternando i lati, spingendo dalle gambe. Rinforza la catena gambe-anca-braccio dei montanti e delle ginocchiate. Il colpo parte dalle gambe e il busto resta compatto.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--onde-con-ginocchiate",
+    "name": "Onde con ginocchiate",
+    "category": "clinch",
+    "description": "Onde alternate intervallate da ginocchiate alternate.",
+    "dose": "4 × 40 s, recupero 40 s",
+    "details": "Esegui onde alternate e ogni 4 onde porta una ginocchiata frontale alternando le gambe, senza fermare le corde. Simula il lavoro di braccia e ginocchia in clinch con stress metabolico elevato. Spingi l'anca avanti sulla ginocchiata e mantieni l'equilibrio sul piede d'appoggio.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--onde-con-sprawl",
+    "name": "Onde con sprawl",
+    "category": "agilita",
+    "description": "Onde doppie alternate a sprawl rapidi con ritorno in guardia.",
+    "dose": "5 × 30 s, recupero 45 s",
+    "details": "Esegui onde doppie, lascia le corde, esegui uno sprawl e rialzati riprendendo subito le onde. Allena il recupero rapido della posizione e i cambi di livello sotto fatica. Atterra con le anche basse e rialzati in guardia, non piegato in avanti.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--slam-alternati",
+    "name": "Slam alternati",
+    "category": "forza-esplosiva",
+    "description": "Slam esplosivi a un braccio alla volta con massima forza.",
+    "dose": "5 × 20 s, recupero 40 s",
+    "details": "In mezzo squat, solleva un braccio sopra la spalla e sbatti la corda a terra con forza, alternando rapidamente i lati. Sviluppa potenza unilaterale e coordinazione destra-sinistra, utile per gomitate dall'alto. Ogni colpo è massimale ma controllato, con core contratto.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--plank-con-onde",
+    "name": "Plank con onde",
+    "category": "core",
+    "description": "In plank alto, onde con un braccio alternando il lato.",
+    "dose": "4 × 20 s per lato, recupero 30 s",
+    "details": "In posizione di plank su mani, afferra una corda e crea onde con un braccio mentre l'altro sostiene il corpo. Allena la stabilità anti-rotazione del core e della spalla d'appoggio, utile in clinch e ai colpi incassati. Bacino fermo e piedi larghi per maggiore stabilità.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--onde-a-una-mano-in-guardia",
+    "name": "Onde a una mano in guardia",
+    "category": "clinch",
+    "description": "Onde con un braccio mentre l'altro simula il controllo del collo.",
+    "dose": "4 × 30 s per lato, recupero 30 s",
+    "details": "In guardia, crea onde con una sola corda mentre l'altro braccio resta alto come per afferrare la nuca dell'avversario. Allena resistenza asimmetrica di spalla e postura di clinch con il tronco stabile. Non ruotare il busto per compensare e alterna il lato ogni serie.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "battle-rope--circuito-finale-ripresa",
+    "name": "Circuito finale ripresa",
+    "category": "resistenza",
+    "description": "Circuito di onde, slam e cerchi a simulare l'ultimo minuto.",
+    "dose": "3 × 60 s, recupero 2 min",
+    "details": "Esegui 20 s di onde alternate, 20 s di slam e 20 s di onde doppie senza pause, simulando l'intensità di fine ripresa. Abitua il fighter a spingere quando la fatica è massima, come negli scambi decisivi. Mantieni la tecnica pulita in ogni fase anche se cala la velocità.",
+    "equipment": "Battle rope",
+    "tool": "battle-rope"
+  },
+  {
+    "id": "sandbag--bear-hug-squat",
+    "name": "Bear hug squat",
+    "category": "forza-massimale",
+    "description": "Squat tenendo il sandbag abbracciato al petto come in un clinch stretto.",
+    "dose": "4 × 6 ripetizioni, recupero 2 min",
+    "details": "Abbraccia il sandbag al petto, piedi alla larghezza delle spalle, scendi in squat profondo e risali spingendo dai talloni. Rinforza gambe e la presa a tutto braccio tipica del clinch. Mantieni il busto alto e non lasciare che la sacca scivoli verso il basso.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--bear-hug-march",
+    "name": "Bear hug march",
+    "category": "clinch",
+    "description": "Marcia sul posto con sandbag abbracciato, ginocchia alte a ogni passo.",
+    "dose": "3 × 40 s, recupero 60 s",
+    "details": "Stringi il sandbag al petto e marcia portando le ginocchia sopra l'anca, alternando le gambe con ritmo costante. Simula il controllo dell'avversario in clinch mentre prepari le ginocchiate. Resta dritto e non inclinarti all'indietro per compensare il peso.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-shouldering-alternato",
+    "name": "Sandbag shouldering alternato",
+    "category": "forza-esplosiva",
+    "description": "Dal pavimento alla spalla con estensione d'anca, alternando i lati.",
+    "dose": "4 × 6 ripetizioni, recupero 90 s",
+    "details": "Parti con il sandbag a terra tra i piedi, afferralo in presa a orso, estendi l'anca in modo esplosivo e caricalo su una spalla, poi riappoggialo e cambia lato. Sviluppa la potenza d'anca usata in ginocchiate e proiezioni. Solleva con le gambe e la schiena neutra, mai tirando con la sola lombare.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-clean",
+    "name": "Sandbag clean",
+    "category": "forza-esplosiva",
+    "description": "Tirata esplosiva da terra fino alla posizione rack sugli avambracci.",
+    "dose": "5 × 4 ripetizioni, recupero 90 s",
+    "details": "Afferra le maniglie o il tessuto, porta il sandbag sopra le ginocchia, poi estendi con forza anche e ginocchia e ricevilo sugli avambracci contro il petto. Allena la tripla estensione che trasferisce forza dal terreno ai colpi. Tieni la sacca vicina al corpo durante tutta la tirata.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-rotational-throw",
+    "name": "Sandbag rotational throw",
+    "category": "forza-esplosiva",
+    "description": "Lancio rotazionale laterale del sandbag ruotando su anca e piede posteriore.",
+    "dose": "4 × 5 per lato, recupero 90 s",
+    "details": "In guardia laterale tieni il sandbag all'altezza dell'anca, carica ruotando verso il lato posteriore e lancialo avanti di lato pivotando sul piede come in un calcio circolare. Trasferisce la rotazione dell'anca a calci e ganci. Usa uno spazio libero e un peso che ti permetta di ruotare veloce.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-lancio-all-indietro",
+    "name": "Sandbag lancio all'indietro",
+    "category": "forza-esplosiva",
+    "description": "Lancio del sandbag sopra la testa all'indietro con estensione totale.",
+    "dose": "4 × 4 ripetizioni, recupero 2 min",
+    "details": "Parti in mezzo squat con il sandbag tra le gambe, estendi esplosivamente anche e caviglie e lancialo dietro di te sopra la testa. Potenzia la catena posteriore per teep e ginocchiate. Controlla che nessuno sia alle tue spalle e non iperestendere la zona lombare.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-slam",
+    "name": "Sandbag slam",
+    "category": "resistenza",
+    "description": "Sollevamento sopra la testa e schianto a terra ripetuto ad alta intensità.",
+    "dose": "4 × 30 s, recupero 30 s",
+    "details": "Solleva il sandbag sopra la testa estendendo il corpo, poi schiaccialo a terra flettendo anche e addome con forza, riprendilo e ripeti. Allena il fiato e la potenza ripetuta come in un round intenso. Riprendilo con le gambe piegate e la schiena neutra, mai curvo.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--zercher-squat-con-sandbag",
+    "name": "Zercher squat con sandbag",
+    "category": "forza-massimale",
+    "description": "Squat con sandbag sostenuto negli incavi dei gomiti.",
+    "dose": "4 × 5 ripetizioni, recupero 2 min",
+    "details": "Con il sandbag nell'incavo dei gomiti, scendi in squat mantenendo il busto eretto e risali spingendo con forza. Sviluppa gambe e parte alta della schiena, utili per spingere e resistere in clinch. Non lasciare che i gomiti cedano e la schiena si arrotondi.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-rotational-lunge",
+    "name": "Sandbag rotational lunge",
+    "category": "core",
+    "description": "Affondo indietro ruotando il busto con il sandbag verso la gamba avanti.",
+    "dose": "3 × 8 per lato, recupero 60 s",
+    "details": "Tieni il sandbag al petto, fai un affondo indietro e ruota il busto portando la sacca sopra la coscia anteriore, poi torna al centro e risali. Allena la stabilità del tronco durante la rotazione richiesta da colpi e difese. Il ginocchio avanti resta allineato al piede.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-around-the-world",
+    "name": "Sandbag around the world",
+    "category": "mobilita",
+    "description": "Rotazione circolare del sandbag attorno alla testa mantenendo il core attivo.",
+    "dose": "3 × 8 per direzione, recupero 45 s",
+    "details": "In piedi con il sandbag tenuto per le maniglie, disegna un cerchio ampio attorno alla testa senza muovere bacino e gambe. Migliora mobilità di spalle e controllo del tronco per la guardia alta. Usa un carico leggero e muoviti lentamente, senza scatti.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-drag-laterale",
+    "name": "Sandbag drag laterale",
+    "category": "clinch",
+    "description": "Trascinamento laterale del sandbag a terra con presa e postura bassa.",
+    "dose": "4 × 15 m per lato, recupero 60 s",
+    "details": "In posizione bassa, afferra il sandbag a terra e trascinalo lateralmente con passi incrociati e spinta delle gambe. Rinforza la presa e la capacità di tirare l'avversario fuori equilibrio. Mantieni il petto aperto e la schiena piatta durante il tiro.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-sbilanciamento-in-clinch",
+    "name": "Sandbag sbilanciamento in clinch",
+    "category": "clinch",
+    "description": "Ruotare il sandbag da un fianco all'altro simulando lo sbilanciamento in clinch.",
+    "dose": "4 × 30 s, recupero 45 s",
+    "details": "Abbraccia il sandbag in alto come in una presa al collo e ruotalo con forza da un lato all'altro pivotando sui piedi. Riproduce i cambi di direzione per sbilanciare l'avversario prima di ginocchiate o proiezioni. Gira con anche e piedi, non solo con le braccia.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-knee-strike",
+    "name": "Sandbag knee strike",
+    "category": "clinch",
+    "description": "Ginocchiate alternate al sandbag tenuto in presa alta davanti al corpo.",
+    "dose": "4 × 20 s, recupero 40 s",
+    "details": "Tieni il sandbag con presa alta davanti al petto, tiralo verso di te e colpiscilo con ginocchiate alternate estendendo l'anca. Allena il tempismo tra tirata delle braccia e ginocchiata come nel clinch reale. Resta sull'avampiede della gamba d'appoggio e controlla l'equilibrio.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-russian-twist",
+    "name": "Sandbag Russian twist",
+    "category": "core",
+    "description": "Rotazioni da seduti passando il sandbag da un fianco all'altro.",
+    "dose": "3 × 20 tocchi, recupero 45 s",
+    "details": "Seduto con busto inclinato indietro e piedi a terra o sollevati, porta il sandbag da un fianco all'altro ruotando il tronco. Rinforza gli obliqui che generano e assorbono i colpi rotazionali. Mantieni la schiena dritta e ruota il busto, non solo le braccia.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-dead-bug",
+    "name": "Sandbag dead bug",
+    "category": "core",
+    "description": "Dead bug supino tenendo il sandbag sollevato a braccia tese.",
+    "dose": "3 × 10 per lato, recupero 45 s",
+    "details": "Supino, tieni il sandbag sopra il petto a braccia tese e abbassa alternatamente le gambe estese verso il pavimento senza staccare la lombare. Costruisce un core anti-estensione stabile per incassare e calciare. Espira mentre allunghi la gamba e fermati prima che la schiena si inarchi.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-getup",
+    "name": "Sandbag getup",
+    "category": "core",
+    "description": "Da supino in piedi tenendo il sandbag su una spalla.",
+    "dose": "3 × 3 per lato, recupero 90 s",
+    "details": "Sdraiato con il sandbag su una spalla, alzati in piedi nel modo più fluido possibile e poi torna giù controllato. Allena stabilità totale e capacità di rialzarsi sotto carico dopo una caduta. Procedi lentamente e usa un peso moderato per proteggere la spalla.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-bent-over-row",
+    "name": "Sandbag bent over row",
+    "category": "forza-resistente",
+    "description": "Rematore a busto flesso con sandbag tirato verso l'ombelico.",
+    "dose": "4 × 10 ripetizioni, recupero 75 s",
+    "details": "Busto inclinato in avanti a schiena piatta, tira il sandbag verso l'ombelico portando i gomiti indietro e poi abbassalo controllato. Rinforza dorsali e presa utili per tirare e controllare in clinch. Non dare slanci con il busto durante la tirata.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-push-press",
+    "name": "Sandbag push press",
+    "category": "forza-esplosiva",
+    "description": "Spinta sopra la testa aiutata da un rapido piegamento delle gambe.",
+    "dose": "4 × 6 ripetizioni, recupero 90 s",
+    "details": "Con il sandbag in posizione rack, piega leggermente le ginocchia e spingi in modo esplosivo portandolo sopra la testa a braccia tese. Collega gambe e spalle come nei pugni dritti con trasferimento di peso. Blocca il core in alto senza inarcare la schiena.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-lateral-step-up",
+    "name": "Sandbag lateral step-up",
+    "category": "agilita",
+    "description": "Salita laterale su un rialzo con sandbag in posizione bear hug.",
+    "dose": "3 × 8 per lato, recupero 60 s",
+    "details": "Con il sandbag abbracciato, sali lateralmente su un box basso spingendo con la gamba vicina e scendi controllato. Migliora forza unilaterale e stabilità per i cambi di direzione sul ring. Il ginocchio non deve crollare verso l'interno.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-shuffle-in-guardia",
+    "name": "Sandbag shuffle in guardia",
+    "category": "agilita",
+    "description": "Spostamenti laterali rapidi in guardia tenendo il sandbag al petto.",
+    "dose": "4 × 20 s, recupero 40 s",
+    "details": "In guardia bassa con il sandbag stretto al petto, esegui passi laterali veloci senza incrociare i piedi, cambiando direzione al comando. Sviluppa gambe reattive e footwork sotto carico. Resta sull'avampiede e mantieni l'altezza del bacino costante.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "sandbag--sandbag-complex-da-round",
+    "name": "Sandbag complex da round",
+    "category": "resistenza",
+    "description": "Circuito continuo di clean, squat e press per la durata di un round.",
+    "dose": "3 × 3 min, recupero 1 min",
+    "details": "Esegui senza sosta un clean, uno squat e un press con il sandbag, ripetendo la sequenza a ritmo sostenuto per tutto il round. Riproduce la fatica muscolare e respiratoria di un match. Scegli un carico leggero e interrompi se la tecnica si deteriora.",
+    "equipment": "Sandbag",
+    "tool": "sandbag"
+  },
+  {
+    "id": "pneumatico--ribaltamento-esplosivo-a-ripetizioni-rapide",
+    "name": "Ribaltamento esplosivo a ripetizioni rapide",
+    "category": "forza-esplosiva",
+    "description": "Ribaltamenti in serie con spinta massima di gambe e anche.",
+    "dose": "5 × 4 ribaltamenti, recupero 90 s",
+    "details": "Parti accosciato con il petto vicino al pneumatico e le mani sotto il bordo, poi estendi anche e ginocchia di scatto e spingi con le mani. Sviluppa la tripla estensione che dà potenza a ginocchiate e calci. Schiena neutra: tira con le gambe, non con la zona lombare.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--ribaltamento-pesante-a-bassa-ripetizione",
+    "name": "Ribaltamento pesante a bassa ripetizione",
+    "category": "forza-massimale",
+    "description": "Ribaltamenti di un pneumatico pesante a ritmo controllato.",
+    "dose": "4 × 3 ribaltamenti, recupero 2 min",
+    "details": "Usa un pneumatico impegnativo e cura l'aggancio: mani in supinazione, petto contro la gomma, piedi larghi come le spalle. Costruisce la forza di base che regge il clinch e la stabilità sui colpi. Fermati se la schiena si arrotonda e recupera completamente tra le serie.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--ribaltamento-piu-sprawl",
+    "name": "Ribaltamento più sprawl",
+    "category": "resistenza",
+    "description": "Ribaltamento seguito da uno sprawl difensivo prima del successivo.",
+    "dose": "4 × 6 ribaltamenti, recupero 60 s",
+    "details": "Ribalta il pneumatico, raggiungilo e fai subito uno sprawl portando le anche a terra, poi rialzati in guardia. Allena il passaggio da sforzo massimale a reazione difensiva, tipico del combattimento. Atterra sullo sprawl con le anche basse e la testa alta, senza crollare sulla schiena.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--ribaltamento-piu-combinazione",
+    "name": "Ribaltamento più combinazione",
+    "category": "tecnica",
+    "description": "Dopo ogni ribaltamento esegui una combinazione a vuoto pulita.",
+    "dose": "4 × 5 ribaltamenti, recupero 60 s",
+    "details": "Ribalta il pneumatico, torna in guardia e lancia jab-diretto-calcio circolare a vuoto con tecnica completa. Insegna a mantenere precisione e guardia anche sotto fatica muscolare. Non sacrificare la forma dei colpi per velocizzare: guardia alta e rientro del calcio.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--martellata-diagonale-alternata",
+    "name": "Martellata diagonale alternata",
+    "category": "core",
+    "description": "Colpi di mazza in diagonale alternando lato destro e sinistro.",
+    "dose": "3 × 10 colpi per lato, recupero 60 s",
+    "details": "In posizione semi-laterale, porta la mazza sopra la spalla e colpisci il pneumatico in diagonale ruotando busto e anche, alternando i lati. Rafforza la catena rotatoria che genera potenza nei ganci e nei calci circolari. Fai scorrere la mano alta sul manico e tieni il core contratto all'impatto.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--martellata-verticale-overhead",
+    "name": "Martellata verticale overhead",
+    "category": "forza-esplosiva",
+    "description": "Colpo dall'alto con la mazza al centro del pneumatico.",
+    "dose": "4 × 8 colpi, recupero 75 s",
+    "details": "Piedi larghi, solleva la mazza sopra la testa e scaricala al centro del pneumatico con anche e addominali, piegando leggermente le ginocchia. Sviluppa la potenza di flessione del tronco utile per gomiti discendenti e ginocchiate. Guarda il punto di impatto e controlla il rimbalzo della mazza.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--martellate-a-tempo-tabata",
+    "name": "Martellate a tempo Tabata",
+    "category": "resistenza",
+    "description": "Intervalli brevi e intensi di martellate continue.",
+    "dose": "8 × 20 s lavoro / 10 s pausa",
+    "details": "Colpisci il pneumatico alternando i lati senza fermarti per 20 secondi, poi recupera 10 secondi tenendo la mazza a terra. Riproduce la richiesta lattacida degli scambi intensi a fine round. Abbassa la velocità se la tecnica peggiora: la mazza deve sempre restare sotto controllo.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--martellata-a-tre-minuti",
+    "name": "Martellata a tre minuti",
+    "category": "forza-resistente",
+    "description": "Martellate continue a ritmo costante per la durata di un round.",
+    "dose": "3 × 3 min, recupero 1 min",
+    "details": "Colpisci a ritmo regolare alternando i lati, cambiando la guardia dei piedi ogni 30 secondi. Costruisce la resistenza di spalle, avambracci e core per mantenere i colpi pesanti per tutto il round. Respira a ogni colpo e mantieni la presa salda ma non contratta.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--martellata-dalla-guardia",
+    "name": "Martellata dalla guardia",
+    "category": "tecnica",
+    "description": "Colpo di mazza laterale partendo dalla posizione di guardia.",
+    "dose": "3 × 8 colpi per lato, recupero 60 s",
+    "details": "Parti in guardia Muay Thai, ruota il piede posteriore e colpisci il pneumatico lateralmente come in un gancio largo, poi torna in guardia. Collega la rotazione dell'anca alla trasmissione di forza tipica dei colpi circolari. Ritorna sempre in posizione bilanciata prima del colpo successivo.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--martellata-in-ginocchio",
+    "name": "Martellata in ginocchio",
+    "category": "core",
+    "description": "Martellate da posizione inginocchiata per isolare il tronco.",
+    "dose": "3 × 10 colpi per lato, recupero 60 s",
+    "details": "Inginocchiati davanti al pneumatico su un tappetino e colpisci in diagonale usando solo la rotazione del busto. Elimina l'aiuto delle gambe e rafforza obliqui e stabilità del core per il clinch e i colpi. Mantieni il busto eretto e non iperestendere la zona lombare.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--salti-dentro-e-fuori-dal-pneumatico",
+    "name": "Salti dentro e fuori dal pneumatico",
+    "category": "agilita",
+    "description": "Salti rapidi a piedi uniti dentro e fuori dal pneumatico.",
+    "dose": "4 × 20 s, recupero 40 s",
+    "details": "Posiziona il pneumatico a terra e salta a piedi uniti dentro il foro e poi fuori, in avanti, lateralmente e indietro. Migliora reattività dei piedi e cambi di direzione utili negli spostamenti sul ring. Atterra sugli avampiedi con ginocchia morbide e tocchi rapidi al suolo.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--box-jump-sul-pneumatico",
+    "name": "Box jump sul pneumatico",
+    "category": "forza-esplosiva",
+    "description": "Salto a piedi uniti sopra il bordo del pneumatico.",
+    "dose": "4 × 6 salti, recupero 75 s",
+    "details": "Da in piedi, carica con un piegamento rapido e salta atterrando sul bordo o al centro di un pneumatico pesante, poi scendi camminando. Sviluppa l'esplosività delle gambe per entrate, ginocchiate in salto e calci. Atterra stabile con le ginocchia allineate alle punte dei piedi.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--step-up-sul-pneumatico-con-ginocchiata",
+    "name": "Step-up sul pneumatico con ginocchiata",
+    "category": "forza-resistente",
+    "description": "Salita sul pneumatico chiudendo con ginocchiata in alto.",
+    "dose": "3 × 10 per gamba, recupero 60 s",
+    "details": "Sali sul bordo del pneumatico con una gamba spingendo col tallone e porta l'altra in ginocchiata alta, tirando le braccia verso il basso. Rafforza la gamba d'appoggio e la catena della ginocchiata. Controlla la discesa e tieni il bacino stabile senza ruotare.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--ginocchiate-sul-pneumatico-verticale",
+    "name": "Ginocchiate sul pneumatico verticale",
+    "category": "clinch",
+    "description": "Ginocchiate su un pneumatico tenuto in verticale come avversario.",
+    "dose": "4 × 30 s, recupero 45 s",
+    "details": "Tieni un pneumatico leggero in verticale contro un muro o un compagno, aggancialo con presa da clinch e alterna ginocchiate dritte con spinta delle anche. Allena il ritmo e la potenza delle ginocchiate in presa. Resta alto sulle punte e tira il bersaglio verso di te mentre colpisci.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--spinta-del-pneumatico-in-clinch",
+    "name": "Spinta del pneumatico in clinch",
+    "category": "clinch",
+    "description": "Spingi il pneumatico sul pavimento in posizione di clinch.",
+    "dose": "4 × 15 m, recupero 60 s",
+    "details": "Abbraccia il pneumatico in piedi, abbassa il baricentro e spingilo a piccoli passi come se portassi l'avversario alle corde. Sviluppa la forza delle gambe e della postura necessaria per dominare il clinch. Tieni la schiena dritta, la testa alta e i passi corti e potenti.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--trascinamento-del-pneumatico-all-indietro",
+    "name": "Trascinamento del pneumatico all'indietro",
+    "category": "forza-resistente",
+    "description": "Trascina il pneumatico con una corda camminando all'indietro.",
+    "dose": "4 × 20 m, recupero 60 s",
+    "details": "Lega una corda al pneumatico, impugnala con le braccia tese e cammina all'indietro a passi brevi spingendo con l'avampiede. Rafforza i quadricipiti e le ginocchia, utili per mantenere la posizione e i teep. Mantieni anche basse e busto leggermente inclinato in avanti.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--sprint-trainando-il-pneumatico",
+    "name": "Sprint trainando il pneumatico",
+    "category": "velocita",
+    "description": "Sprint in avanti con il pneumatico legato in vita.",
+    "dose": "6 × 15 m, recupero 90 s",
+    "details": "Fissa il pneumatico a una cintura con una corda e sprinta in avanti con spinta potente delle braccia e busto inclinato. Migliora la potenza di accelerazione per entrare a distanza di colpo. Usa un pneumatico leggero per non perdere la meccanica di corsa.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--tiro-della-corda-col-pneumatico",
+    "name": "Tiro della corda col pneumatico",
+    "category": "forza-resistente",
+    "description": "Tira a mano il pneumatico con una corda da fermo.",
+    "dose": "4 × 15 m, recupero 60 s",
+    "details": "In semi-squat, tira la corda legata al pneumatico mano dopo mano finché arriva ai tuoi piedi. Rafforza presa, dorsali e bicipiti, fondamentali per controllare la testa dell'avversario nel clinch. Non arrotondare la schiena e tieni le gambe ben piantate.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--calcio-basso-sul-pneumatico",
+    "name": "Calcio basso sul pneumatico",
+    "category": "tecnica",
+    "description": "Calci bassi controllati sul pneumatico tenuto in verticale.",
+    "dose": "3 × 10 per gamba, recupero 60 s",
+    "details": "Fissa un pneumatico in verticale e colpisci con la tibia in calcio basso, ruotando completamente il piede d'appoggio e l'anca. Rinforza il condizionamento e la meccanica del calcio basso. Inizia con intensità moderata e proteggi la tibia con un paratibia se sei principiante.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--teep-sul-pneumatico",
+    "name": "Teep sul pneumatico",
+    "category": "velocita",
+    "description": "Teep rapidi e secchi contro il pneumatico appeso o verticale.",
+    "dose": "4 × 10 per gamba, recupero 45 s",
+    "details": "Da guardia, solleva il ginocchio e spingi il pneumatico con la pianta del piede estendendo l'anca, poi riporta subito la gamba in guardia. Allena velocità e precisione del teep per gestire la distanza. Concentrati sul rientro rapido e non sbilanciarti in avanti.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--plank-con-mani-sul-pneumatico",
+    "name": "Plank con mani sul pneumatico",
+    "category": "core",
+    "description": "Plank con mani sul bordo del pneumatico e tocco alternato.",
+    "dose": "3 × 40 s, recupero 30 s",
+    "details": "Appoggia le mani sul bordo del pneumatico in posizione di plank e tocca alternativamente la spalla opposta senza ruotare il bacino. Rafforza la stabilità del tronco che protegge dai colpi al corpo. Allinea testa, schiena e talloni e respira regolarmente.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "pneumatico--affondi-laterali-con-salto-sul-pneumatico",
+    "name": "Affondi laterali con salto sul pneumatico",
+    "category": "mobilita",
+    "description": "Affondi laterali dinamici scavalcando il bordo del pneumatico.",
+    "dose": "3 × 8 per lato, recupero 45 s",
+    "details": "In piedi accanto al pneumatico, porta una gamba sopra il bordo in affondo laterale profondo, poi scavalca e ripeti dall'altro lato. Migliora la mobilità delle anche e degli adduttori per calci più alti. Scendi lentamente e tieni il ginocchio allineato alla punta del piede.",
+    "equipment": "Pneumatico e mazza",
+    "tool": "pneumatico"
+  },
+  {
+    "id": "coni-scaletta--scaletta-ickey-shuffle",
+    "name": "Scaletta Ickey Shuffle",
+    "category": "agilita",
+    "description": "Schema dentro-dentro-fuori alternato lungo la scaletta.",
+    "dose": "4 passaggi, recupero 30 s",
+    "details": "Avanza lungo la scaletta con due appoggi dentro e uno fuori, alternando lato, sugli avampiedi e con la guardia alta. Allena il ritmo di piedi necessario per cambiare angolo senza perdere equilibrio. Mantieni il busto stabile e lo sguardo avanti, non sui piedi.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--scaletta-in-guardia-avanti-indietro",
+    "name": "Scaletta in guardia avanti-indietro",
+    "category": "agilita",
+    "description": "Entra ed esci dai quadrati in posizione di guardia, avanti e indietro.",
+    "dose": "4 passaggi, recupero 30 s",
+    "details": "In guardia ortodossa, avanza di un quadrato con passo-scivolato e arretra di mezzo, percorrendo tutta la scaletta. Riproduce l'entrata e l'uscita dalla distanza di colpo tipica del ring. Piedi mai incrociati, peso centrato e mani al volto per tutto il tempo.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--scaletta-con-switch-kick",
+    "name": "Scaletta con switch kick",
+    "category": "velocita",
+    "description": "Due appoggi per quadrato, poi switch e calcio circolare a fine scala.",
+    "dose": "5 passaggi per lato, recupero 40 s",
+    "details": "Percorri la scaletta con due appoggi rapidi per quadrato restando in guardia, poi all'uscita esegui uno switch e un calcio circolare al sacco o a vuoto. Collega la rapidità di piedi a un colpo potente, come quando si chiude una sequenza nel ring. Il calcio deve partire senza pause dopo l'ultimo appoggio.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--scaletta-carioca",
+    "name": "Scaletta Carioca",
+    "category": "agilita",
+    "description": "Spostamento laterale incrociando i piedi davanti e dietro.",
+    "dose": "4 passaggi per lato, recupero 30 s",
+    "details": "Muoviti lateralmente lungo la scaletta incrociando il piede davanti e poi dietro, ruotando le anche in modo controllato e restando sugli avampiedi. Migliora la mobilità delle anche e la coordinazione utili per le rotazioni dei calci. Spalle rivolte avanti, sono le anche a lavorare.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--scaletta-pivot-e-jab-cross",
+    "name": "Scaletta pivot e jab-cross",
+    "category": "tecnica",
+    "description": "Ogni due quadrati un pivot di 90° seguito da jab-cross.",
+    "dose": "4 passaggi, recupero 40 s",
+    "details": "Avanza in guardia nella scaletta e ogni due quadrati esegui un pivot sul piede anteriore di 90°, chiudendo con jab-cross. Insegna a cambiare angolo dopo l'attacco per uscire dalla linea dell'avversario. Ruota sull'avampiede, mai sul tallone, e ritrova subito la guardia.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--quadrato-di-coni-con-colpi",
+    "name": "Quadrato di coni con colpi",
+    "category": "velocita",
+    "description": "Sprint tra 4 coni e combinazione di pugni a ogni vertice.",
+    "dose": "4 giri, recupero 45 s",
+    "details": "Disponi quattro coni a quadrato di 4 m; corri da un cono all'altro e a ogni vertice esegui una combinazione da 3 colpi in guardia. Simula il ritmo di spostamento-attacco di un round, abbinando velocità di piedi ed esplosività delle mani. Arriva al cono già in posizione, senza passi di assestamento.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--angoli-a-v-con-calcio",
+    "name": "Angoli a V con calcio",
+    "category": "agilita",
+    "description": "Uscita diagonale a un cono e calcio circolare al rientro.",
+    "dose": "3 × 6 ripetizioni, recupero 45 s",
+    "details": "Posiziona due coni a V a 2-3 m davanti a te; scatta in diagonale verso uno, torna al centro e calcia di circolare dal lato opposto, poi alterna. Allena l'uscita d'angolo e il contrattacco immediato, fondamentale contro un avversario che avanza. Mantieni il baricentro basso nei cambi di direzione.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--reazione-al-cono-chiamato",
+    "name": "Reazione al cono chiamato",
+    "category": "agilita",
+    "description": "Il partner chiama un colore e l'atleta scatta al cono giusto.",
+    "dose": "5 × 20 s, recupero 40 s",
+    "details": "Disponi 4-5 coni colorati attorno all'atleta in guardia; il partner chiama un colore e l'atleta scatta, tocca il cono e torna al centro. Sviluppa il tempo di reazione e la decisione rapida che servono per rispondere agli attacchi. Resta sugli avampiedi pronto a partire in ogni direzione.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--ostacoli-frontali-con-ginocchiata",
+    "name": "Ostacoli frontali con ginocchiata",
+    "category": "forza-esplosiva",
+    "description": "Salti a piedi uniti sugli ostacoli e ginocchiata all'arrivo.",
+    "dose": "4 serie da 5 ostacoli, recupero 60 s",
+    "details": "Salta a piedi uniti una fila di 5 ostacoli bassi con contatti brevi e reattivi, poi all'arrivo esegui una ginocchiata esplosiva tirando le mani verso il basso. Sviluppa la reattività delle caviglie e la potenza delle anche usate nel clinch. Atterra morbido e rimbalza subito, senza fermarti tra un ostacolo e l'altro.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--ostacoli-monopodalici",
+    "name": "Ostacoli monopodalici",
+    "category": "forza-esplosiva",
+    "description": "Saltelli su un piede solo oltre gli ostacoli bassi.",
+    "dose": "3 × 5 ostacoli per gamba, recupero 60 s",
+    "details": "Supera una fila di ostacoli bassi saltando sempre sullo stesso piede, con le braccia in guardia e il ginocchio stabile in atterraggio. Rinforza la gamba d'appoggio, decisiva per stabilità e potenza nei calci. Controlla l'atterraggio: ginocchio allineato al piede, mai verso l'interno.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--ostacoli-in-guardia-laterale-con-step",
+    "name": "Ostacoli in guardia laterale con step",
+    "category": "agilita",
+    "description": "Passi laterali sopra gli ostacoli senza perdere la guardia.",
+    "dose": "4 passaggi per lato, recupero 30 s",
+    "details": "Disponi gli ostacoli in fila e superali lateralmente con passo-scivolato alto, restando in guardia e senza incrociare i piedi. Migliora il controllo degli spostamenti laterali per girare attorno all'avversario. Ginocchia alte ma busto fermo, le mani non devono scendere.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--zig-zag-di-coni-con-teep",
+    "name": "Zig-zag di coni con teep",
+    "category": "tecnica",
+    "description": "Spostamento a zig-zag tra i coni con teep a ogni cono.",
+    "dose": "4 passaggi, recupero 40 s",
+    "details": "Disponi 6 coni a zig-zag a 2 m di distanza; arriva a ogni cono in guardia ed esegui un teep con la gamba anteriore prima di ripartire. Allena a gestire la distanza con il teep mentre ci si muove, come per fermare un avversario aggressivo. Spingi con l'anca e richiama subito la gamba.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--scaletta-con-sprawl",
+    "name": "Scaletta con sprawl",
+    "category": "forza-resistente",
+    "description": "Due appoggi per quadrato e sprawl a comando del partner.",
+    "dose": "4 passaggi, recupero 45 s",
+    "details": "Percorri la scaletta con passi rapidi in guardia; quando il partner batte le mani esegui uno sprawl, rialzati e prosegui. Abitua a reagire a un tentativo di presa o a un cambio di livello mantenendo il ritmo. Rialzati direttamente in guardia, senza appoggiare le ginocchia.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--scaletta-shuffle-dentro-fuori-resistenza",
+    "name": "Scaletta Shuffle dentro-fuori resistenza",
+    "category": "resistenza",
+    "description": "Serie lunghe di passi dentro-fuori a ritmo da round.",
+    "dose": "3 × 2 min, recupero 1 min",
+    "details": "Percorri avanti e indietro la scaletta con passi dentro-fuori continui per tutta la durata, guardia alta e respirazione regolare. Costruisce la resistenza delle gambe a restare leggere fino alla fine del round. Mantieni lo stesso ritmo dall'inizio alla fine, senza appesantire l'appoggio.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
+  },
+  {
+    "id": "coni-scaletta--cerchio-di-coni-in-clinch",
+    "name": "Cerchio di coni in clinch",
+    "category": "clinch",
+    "description": "Coppia in clinch che si sposta attorno a un cerchio di coni.",
+    "dose": "4 × 30 s, recupero 45 s",
+    "details": "Disponi i coni in cerchio di circa 3 m; in clinch con un partner, guida lo spostamento attorno al cerchio ruotando e sbilanciando senza uscire dai coni. Allena il controllo del corpo e i passi corti necessari per dominare il clinch. Gomiti stretti, testa alta e passi brevi sotto il baricentro.",
+    "equipment": "Coni e scaletta",
+    "tool": "coni-scaletta"
   }
 ];
 

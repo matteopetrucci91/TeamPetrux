@@ -12,6 +12,9 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
   **↻ Ricarica** ne estrae altri diversi, **+ Altri 10** ne aggiunge 10 non ancora visti.
 - Ogni esercizio ha il **dosaggio** (ripetizioni, serie, tempo o riprese), il tempo stimato e una **descrizione estesa**.
   I lavori a riprese da 2–3 min seguono la durata della ripresa scelta.
+- **Esercizi per attrezzo**: palla medica, corda, kettlebell, elastici, sacco, pao, bilanciere, manubri,
+  sbarra e parallele, battle rope, sandbag, pneumatico e mazza, coni e scaletta, ognuno con almeno 24 esercizi.
+  Negli esercizi delle categorie, l'attrezzo è un collegamento all'elenco completo di quell'attrezzo.
 - **Crea allenamento**: aggiungi gli esercizi dalle categorie con "+ Aggiungi all'allenamento", riordinali e toglili;
   oppure **⚡ Crea lezione automatica** compone la lezione in ordine logico: riscaldamento, tecnica, velocità o footwork,
   clinch, condizionamento, forza, core e mobilità per defaticare.
@@ -44,7 +47,7 @@ npm run preview   # la prova in locale
 ## Struttura
 
 - `src/App.tsx` – stato dell'app e scelta della pagina (indirizzi `#/`, `#/categoria/...`, `#/allenamento`, `#/impostazioni`)
-- `src/pages/` – le pagine; `src/components/` – menu, impostazioni, riepilogo tempi, scheda esercizio
+- `src/pages/` – le pagine (anche `#/attrezzi` e `#/attrezzo/...`); `src/components/` – menu, impostazioni, riepilogo tempi, scheda esercizio
 - `src/lib/plan.ts` – esercizi che stanno nel tempo e lezione automatica
 - `src/data/exercises.ts` – catalogo esercizi (generato dal catalogo del progetto, non modificarlo a mano)
 - `src/lib/random.ts` – estrazione casuale senza ripetizioni
