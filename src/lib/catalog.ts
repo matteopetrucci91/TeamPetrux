@@ -7,6 +7,7 @@ import {
   type Exercise,
   type ToolId,
 } from "../data/exercises";
+import { customDoseOf } from "./doses";
 import { adaptDose, estimateMinutes, type RoundMinutes } from "./lesson";
 
 export const byId = new Map([...exercises, ...toolExercises].map((e) => [e.id, e]));
@@ -25,10 +26,20 @@ export const isToolId = (v: unknown): v is ToolId => tools.some((t) => t.id === 
 export const isCategoryId = (v: unknown): v is CategoryId =>
   categories.some((c) => c.id === v);
 
-/** Dosaggio adattato alla ripresa scelta e minuti stimati. */
+/**
+ * Dosaggio e minuti stimati: quello scelto dall'allenatore se c'è,
+ * altrimenti quello del catalogo adattato alla ripresa scelta.
+ */
 export function doseFor(e: Exercise, round: RoundMinutes) {
-  const dose = adaptDose(e.dose, round);
-  return { dose, minutes: estimateMinutes(dose) };
+  const custom = customDoseOf(e.id);
+  const dose = custom ?? adaptDose(e.dose, round);
+  return { dose, minutes: estimateMinutes(dose), custom: custom !== undefined };
+}
+
+/** Esercizi di una lista: una categoria oppure un attrezzo ("attrezzo:<id>"). */
+export function poolFor(key: string): Exercise[] {
+  if (key.startsWith("attrezzo:")) return byTool.get(key.slice(9) as ToolId) ?? [];
+  return byCategory.get(key as CategoryId) ?? [];
 }
 
 /** Converte una lista di id in esercizi, scartando quelli non più presenti. */

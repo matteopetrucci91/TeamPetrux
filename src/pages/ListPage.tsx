@@ -1,33 +1,47 @@
-import type { Category } from "../data/exercises";
+import type { Exercise } from "../data/exercises";
 import { ExerciseCard } from "../components/ExerciseCard";
 import { SettingsPanel, type SettingsProps } from "../components/Settings";
 import { TimeSummary } from "../components/TimeSummary";
 import { Topbar } from "../components/Topbar";
-import { byCategory, toExercises } from "../lib/catalog";
+import { toExercises } from "../lib/catalog";
 import { availableMinutes, fitDraw, totalMinutes } from "../lib/plan";
 import { pickRandom } from "../lib/random";
-import { hrefFor } from "../lib/route";
+import { hrefFor, type Route } from "../lib/route";
 
 const PAGE = 10;
 
-export function CategoryPage({
-  category,
+/**
+ * Lista di esercizi di una categoria o di un attrezzo: 10 a caso che stanno
+ * nel tempo della lezione, con "Ricarica" e "Altri 10".
+ */
+export function ListPage({
+  route,
+  title,
+  eyebrow,
+  subtitle,
+  pool,
   ids,
   onChange,
   inWorkout,
   onToggleWorkout,
   workoutCount,
+  showCategory = false,
   settings,
   onSettings,
 }: {
-  category: Category;
+  route: Route["page"];
+  title: string;
+  eyebrow?: string;
+  subtitle: string;
+  pool: Exercise[];
   ids: string[];
   onChange: (ids: string[]) => void;
   inWorkout: ReadonlySet<string>;
   onToggleWorkout: (id: string) => void;
   workoutCount: number;
+  /** Negli attrezzi si mostra la qualità allenata sopra il nome. */
+  showCategory?: boolean;
 } & SettingsProps) {
-  const pool = byCategory.get(category.id) ?? [];
   const shown = toExercises(ids);
   const shownIds = new Set(shown.map((e) => e.id));
   const remaining = pool.length - shown.length;
@@ -42,10 +56,11 @@ export function CategoryPage({
   return (
     <div className="page">
       <Topbar
-        route="categoria"
+        route={route}
         workoutCount={workoutCount}
-        title={category.label}
-        subtitle={category.description}
+        title={title}
+        eyebrow={eyebrow}
+        subtitle={subtitle}
         back={{ href: hrefFor({ page: "categorie" }), label: "Categorie" }}
         sticky
       />
@@ -63,6 +78,8 @@ export function CategoryPage({
               exercise={e}
               index={i + 1}
               round={settings.round}
+              showCategory={showCategory}
+              hideToolLink={showCategory}
               actions={
                 <button
                   className={inWorkout.has(e.id) ? "pill added" : "pill"}

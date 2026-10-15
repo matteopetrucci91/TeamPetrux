@@ -1,28 +1,32 @@
 import { useEffect, useState } from "react";
-import type { CategoryId } from "./data/exercises";
-import { byCategory, categoryById, toolById } from "./lib/catalog";
+import { categoryById, poolFor, toolById } from "./lib/catalog";
+import { DoseContext, setCurrentDoses, type CustomDoses } from "./lib/doses";
 import { DEFAULT_SETTINGS, type LessonSettings } from "./lib/lesson";
 import { availableMinutes, fitDraw, generateLesson } from "./lib/plan";
-import { useRoute } from "./lib/route";
+import { useRoute, type Route } from "./lib/route";
 import { load, save } from "./lib/storage";
 import { CategoriesPage } from "./pages/CategoriesPage";
-import { CategoryPage } from "./pages/CategoryPage";
+import { ListPage } from "./pages/ListPage";
 import { SettingsPage } from "./pages/SettingsPage";
-import { ToolPage } from "./pages/ToolPage";
 import { ToolsPage } from "./pages/ToolsPage";
 import { WorkoutPage, type Workout } from "./pages/WorkoutPage";
 
 const LISTS_KEY = "muaythai:liste:v1";
 const SETTINGS_KEY = "muaythai:lezione:v1";
 const WORKOUT_KEY = "muaythai:allenamento:v1";
+const DOSES_KEY = "muaythai:dosi:v1";
 const PAGE = 10;
 
-/** Esercizi mostrati per ogni categoria (solo gli id, in ordine). */
-type Lists = Partial<Record<CategoryId, string[]>>;
+/** Esercizi mostrati per ogni lista (categoria o "attrezzo:<id>"), solo gli id. */
+type Lists = Record<string, string[]>;
 
-/** 10 esercizi a caso della categoria che stanno nel tempo della lezione. */
-const drawFor = (id: CategoryId, s: LessonSettings) =>
-  fitDraw(byCategory.get(id) ?? [], availableMinutes(s), s.round, PAGE).map((e) => e.id);
+/** Chiave della lista mostrata nella pagina corrente, se è una lista. */
+const listKey = (r: Route) =>
+  r.page === "categoria" ? r.id : r.page === "attrezzo" ? `attrezzo:${r.id}` : null;
+
+/** 10 esercizi a caso della lista che stanno nel tempo della lezione. */
+const drawFor = (key: string, s: LessonSettings) =>
+  fitDraw(poolFor(key), availableMinutes(s), s.round, PAGE).map((e) => e.id);
 
 export default function App() {
   const route = useRoute();
@@ -34,31 +38,38 @@ export default function App() {
   const [workout, setWorkout] = useState<Workout>(() =>
     load<Workout>(WORKOUT_KEY, { ids: [], auto: false }),
   );
+  const [doses, setDoses] = useState<CustomDoses>(() => load<CustomDoses>(DOSES_KEY, {}));
+  setCurrentDoses(doses);
 
   useEffect(() => save(LISTS_KEY, lists), [lists]);
   useEffect(() => save(SETTINGS_KEY, settings), [settings]);
   useEffect(() => save(WORKOUT_KEY, workout), [workout]);
+  useEffect(() => save(DOSES_KEY, doses), [doses]);
 
-  // Alla prima apertura di una categoria si estraggono gli esercizi.
-  const currentCategory = route.page === "categoria" ? route.id : null;
+  // Alla prima apertura di una lista si estraggono gli esercizi.
+  const key = listKey(route);
   useEffect(() => {
-    if (currentCategory && !lists[currentCategory]?.length) {
-      setLists((prev) => ({ ...prev, [currentCategory]: drawFor(currentCategory, settings) }));
+    if (key && !lists[key]?.length) {
+      setLists((prev) => ({ ...prev, [key]: drawFor(key, settings) }));
     }
-  }, [currentCategory, lists, settings]);
+  }, [key, lists, settings]);
 
   /** Cambiando durata, liste e lezione automatica si ricaricano per stare nel tempo. */
   const changeSettings = (next: LessonSettings) => {
     setSettings(next);
-    setLists((prev) => {
-      const out: Lists = {};
-      for (const id of Object.keys(prev) as CategoryId[]) out[id] = drawFor(id, next);
-      return out;
-    });
+    setLists((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, drawFor(k, next)])));
     if (workout.auto && workout.ids.length) {
       setWorkout({ ids: generateLesson(next).map((e) => e.id), auto: true });
     }
   };
+
+  const setDose = (id: string, dose: string | null) =>
+    setDoses((prev) => {
+      const next = { ...prev };
+      if (dose && dose.trim()) next[id] = dose.trim();
+      else delete next[id];
+      return next;
+    });
 
   const toggleWorkout = (id: string) =>
     setWorkout((w) => ({
@@ -68,50 +79,51 @@ export default function App() {
 
   const settingsProps = { settings, onSettings: changeSettings };
   const workoutCount = workout.ids.length;
+  const listProps = key && {
+    ids: lists[key] ?? [],
+    onChange: (ids: string[]) => setLists((prev) => ({ ...prev, [key]: ids })),
+    pool: poolFor(key),
+    inWorkout: new Set(workout.ids),
+    onToggleWorkout: toggleWorkout,
+    workoutCount,
+    ...settingsProps,
+  };
 
-  switch (route.page) {
-    case "categoria": {
-      const category = categoryById.get(route.id)!;
-      return (
-        <CategoryPage
-          key={route.id}
-          category={category}
-          ids={lists[route.id] ?? []}
-          onChange={(ids) => setLists((prev) => ({ ...prev, [route.id]: ids }))}
-          inWorkout={new Set(workout.ids)}
-          onToggleWorkout={toggleWorkout}
-          workoutCount={workoutCount}
-          {...settingsProps}
-        />
-      );
-    }
-    case "attrezzi":
-      return <ToolsPage workoutCount={workoutCount} />;
-    case "attrezzo":
-      return (
-        <ToolPage
-          key={route.id}
-          tool={toolById.get(route.id)!}
-          round={settings.round}
-          inWorkout={new Set(workout.ids)}
-          onToggleWorkout={toggleWorkout}
-          workoutCount={workoutCount}
-        />
-      );
-    case "allenamento":
-      return (
-        <WorkoutPage
-          workout={workout}
-          onChange={(ids) => setWorkout({ ids, auto: false })}
-          onGenerate={() =>
-            setWorkout({ ids: generateLesson(settings).map((e) => e.id), auto: true })
-          }
-          {...settingsProps}
-        />
-      );
-    case "impostazioni":
-      return <SettingsPage workoutCount={workoutCount} {...settingsProps} />;
-    default:
-      return <CategoriesPage workoutCount={workoutCount} />;
+  let page;
+  if (route.page === "categoria" && listProps) {
+    const c = categoryById.get(route.id)!;
+    page = (
+      <ListPage key={key} route="categoria" title={c.label} subtitle={c.description} {...listProps} />
+    );
+  } else if (route.page === "attrezzo" && listProps) {
+    const t = toolById.get(route.id)!;
+    page = (
+      <ListPage
+        key={key}
+        route="attrezzo"
+        title={t.label}
+        eyebrow="Attrezzo"
+        subtitle={t.description}
+        showCategory
+        {...listProps}
+      />
+    );
+  } else if (route.page === "attrezzi") {
+    page = <ToolsPage workoutCount={workoutCount} />;
+  } else if (route.page === "allenamento") {
+    page = (
+      <WorkoutPage
+        workout={workout}
+        onChange={(ids) => setWorkout({ ids, auto: false })}
+        onGenerate={() => setWorkout({ ids: generateLesson(settings).map((e) => e.id), auto: true })}
+        {...settingsProps}
+      />
+    );
+  } else if (route.page === "impostazioni") {
+    page = <SettingsPage workoutCount={workoutCount} {...settingsProps} />;
+  } else {
+    page = <CategoriesPage workoutCount={workoutCount} />;
   }
+
+  return <DoseContext.Provider value={{ custom: doses, setDose }}>{page}</DoseContext.Provider>;
 }

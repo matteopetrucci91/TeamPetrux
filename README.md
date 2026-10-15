@@ -14,7 +14,10 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
   I lavori a riprese da 2–3 min seguono la durata della ripresa scelta.
 - **Esercizi per attrezzo**: corpo libero, compagno, palla medica, corda, kettlebell, elastici, sacco, pao, bilanciere, manubri,
   sbarra e parallele, battle rope, sandbag, pneumatico e mazza, coni e scaletta, ognuno con almeno 24 esercizi.
-  Negli esercizi delle categorie, l'attrezzo è un collegamento all'elenco completo di quell'attrezzo.
+  Funzionano come le categorie (10 a caso nel tempo della lezione, Ricarica, Altri 10, torna indietro).
+  Negli esercizi delle categorie, l'attrezzo è un collegamento alla lista di quell'attrezzo.
+- **Dosaggio modificabile**: con "✎ Modifica" scrivi le tue ripetizioni, serie o tempi per ogni esercizio;
+  restano salvati, valgono ovunque e contano nella stima del tempo. "Ripristina originale" torna a quello del catalogo.
 - **Crea allenamento**: aggiungi gli esercizi dalle categorie con "+ Aggiungi all'allenamento", riordinali e toglili;
   oppure **⚡ Crea lezione automatica** compone la lezione in ordine logico: riscaldamento, tecnica, velocità o footwork,
   clinch, condizionamento, forza, core e mobilità per defaticare.
@@ -52,5 +55,6 @@ npm run preview   # la prova in locale
 - `src/data/exercises.ts` – catalogo esercizi (generato dal catalogo del progetto, non modificarlo a mano)
 - `src/lib/random.ts` – estrazione casuale senza ripetizioni
 - `src/lib/lesson.ts` – impostazioni lezione, adattamento delle riprese e stima dei tempi
+- `src/lib/doses.ts` – dosaggi personalizzati
 - `src/lib/storage.ts` – salvataggio in localStorage
 - `src/index.css` – stile e colori (rosso `#A51931`, bianco, blu `#2D2A4A`)
