@@ -22,6 +22,9 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
 - **Crea allenamento**: aggiungi gli esercizi dalle categorie con "+ Aggiungi all'allenamento", riordinali e toglili;
   oppure **⚡ Crea lezione automatica** compone la lezione in ordine logico: riscaldamento, tecnica, velocità o footwork,
   clinch, condizionamento, forza, core e mobilità per defaticare.
+  Il **Controllo qualità** dà un voto su 100 e consigli: tempo, peso della tecnica, condizionamento, forza o core,
+  ordine logico (tecnica prima dei lavori stancanti), defaticamento finale, varietà e numero di esercizi.
+  Le regole sono nell'app (src/lib/review.ts): gratis e funziona anche offline.
   Con **⬇ Scarica PDF dell'allenamento** salvi la lezione completa (impostazioni, riscaldamento, esercizi con dosaggio,
   tempo e descrizione, totale) da stampare o tenere sul telefono.
 - Tutto resta salvato nel browser (localStorage): nessun database, nessun costo. Ogni dispositivo ha i suoi dati.

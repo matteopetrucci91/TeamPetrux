@@ -409,3 +409,45 @@ a.chip.link { text-decoration: none; color: var(--blue); font-weight: 600; }
   color: #fff;
   border: none;
 }
+
+.quality {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+.quality header { display: flex; align-items: center; gap: 12px; }
+.quality h2 { margin: 0; font-size: 1.05rem; color: var(--text); }
+.quality header p { margin: 2px 0 0; color: var(--muted); font-size: 0.9rem; }
+.quality .score {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.quality .score.ok { background: #1f7a4d; }
+.quality .score.warn { background: #b7791f; }
+.quality .score.bad { background: var(--thai-red); }
+.quality ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.quality li { display: flex; gap: 8px; font-size: 0.92rem; line-height: 1.35; color: var(--text); }
+.quality .mark {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 1px;
+}
+.quality li.ok .mark { background: #1f7a4d; }
+.quality li.warn .mark { background: #b7791f; }
+.quality li.bad .mark { background: var(--thai-red); }

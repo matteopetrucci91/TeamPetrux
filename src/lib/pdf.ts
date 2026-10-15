@@ -2,6 +2,7 @@ import type { Exercise } from "../data/exercises";
 import { categoryById, doseFor } from "./catalog";
 import type { LessonSettings } from "./lesson";
 import { totalMinutes, WARMUP_MIN } from "./plan";
+import { reviewWorkout } from "./review";
 
 const RED: [number, number, number] = [165, 25, 49];
 const BLUE: [number, number, number] = [45, 42, 74];
@@ -114,6 +115,14 @@ export async function downloadWorkoutPdf(list: readonly Exercise[], settings: Le
     "bold",
     M,
   );
+
+  const review = reviewWorkout(list, settings);
+  if (review) {
+    y += 4;
+    ensure(12);
+    lines(`Controllo qualità: ${review.score}/100 (${review.verdict})`, 11, RED, "bold", M);
+    for (const it of review.items.filter((i) => i.level !== "ok")) lines(`- ${it.text}`, 9.5, [30, 30, 40], "normal", M + 2);
+  }
 
   const pages = doc.getNumberOfPages();
   for (let p = 1; p <= pages; p++) {

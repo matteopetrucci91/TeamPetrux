@@ -1,10 +1,12 @@
 import { ExerciseCard } from "../components/ExerciseCard";
+import { QualityCheck } from "../components/QualityCheck";
 import { SettingsPanel, type SettingsProps } from "../components/Settings";
 import { TimeSummary } from "../components/TimeSummary";
 import { Topbar } from "../components/Topbar";
 import { toExercises } from "../lib/catalog";
 import { downloadWorkoutPdf } from "../lib/pdf";
 import { totalMinutes, WARMUP_MIN } from "../lib/plan";
+import { reviewWorkout } from "../lib/review";
 import { hrefFor } from "../lib/route";
 
 export interface Workout {
@@ -25,6 +27,7 @@ export function WorkoutPage({
   onGenerate: () => void;
 } & SettingsProps) {
   const list = toExercises(workout.ids);
+  const review = reviewWorkout(list, settings);
   const move = (i: number, d: -1 | 1) => {
     const ids = [...workout.ids];
     [ids[i], ids[i + d]] = [ids[i + d], ids[i]];
@@ -47,6 +50,7 @@ export function WorkoutPage({
           exerciseMinutes={totalMinutes(list, settings.round)}
           extra={`${list.length} esercizi${workout.auto && list.length ? " · automatica" : ""}`}
         />
+        {review && <QualityCheck review={review} />}
         <ol className="exercises">
           <li className="exercise warmup-card">
             <span className="num">0</span>
