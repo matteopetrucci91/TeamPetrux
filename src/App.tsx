@@ -6,12 +6,19 @@ import {
   type CategoryId,
   type Exercise,
 } from "./data/exercises";
+import {
+  adaptDose,
+  DEFAULT_SETTINGS,
+  estimateMinutes,
+  type LessonSettings,
+} from "./lib/lesson";
 import { pickRandom, redraw } from "./lib/random";
 import { load, save } from "./lib/storage";
 
 const PAGE = 10;
 const LISTS_KEY = "muaythai:liste:v1";
 const CURRENT_KEY = "muaythai:categoria:v1";
+const SETTINGS_KEY = "muaythai:lezione:v1";
 
 /** Esercizi mostrati per ogni categoria (solo gli id, in ordine). */
 type Lists = Partial<Record<CategoryId, string[]>>;
@@ -43,7 +50,13 @@ export default function App() {
     return isCategoryId(saved) ? saved : null;
   });
 
+  const [settings, setSettings] = useState<LessonSettings>(() => ({
+    ...DEFAULT_SETTINGS,
+    ...load<Partial<LessonSettings>>(SETTINGS_KEY, {}),
+  }));
+
   useEffect(() => save(LISTS_KEY, lists), [lists]);
+  useEffect(() => save(SETTINGS_KEY, settings), [settings]);
   useEffect(() => save(CURRENT_KEY, current), [current]);
 
   const openCategory = (id: CategoryId) => {
@@ -65,13 +78,81 @@ export default function App() {
       ids={lists[category.id] ?? []}
       onChange={(ids) => setLists((prev) => ({ ...prev, [category.id]: ids }))}
       onBack={() => setCurrent(null)}
+      settings={settings}
+      onSettings={setSettings}
     />
   ) : (
-    <Home onOpen={openCategory} />
+    <Home onOpen={openCategory} settings={settings} onSettings={setSettings} />
   );
 }
 
-function Home({ onOpen }: { onOpen: (id: CategoryId) => void }) {
+function Segmented<T extends string | number>({
+  label,
+  value,
+  options,
+  onChange,
+}: {
+  label: string;
+  value: T;
+  options: { value: T; label: string; hint?: string }[];
+  onChange: (v: T) => void;
+}) {
+  return (
+    <div className="setting">
+      <span className="setting-label">{label}</span>
+      <div className="segmented" role="radiogroup" aria-label={label}>
+        {options.map((o) => (
+          <button
+            key={o.value}
+            role="radio"
+            aria-checked={o.value === value}
+            className={o.value === value ? "active" : ""}
+            onClick={() => onChange(o.value)}
+          >
+            {o.label}
+            {o.hint && <small>{o.hint}</small>}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SettingsPanel({
+  settings,
+  onSettings,
+  compact = false,
+}: SettingsProps & { compact?: boolean }) {
+  return (
+    <section className={compact ? "settings compact" : "settings"}>
+      <Segmented
+        label="Durata lezione"
+        value={settings.lesson}
+        options={[
+          { value: 60, label: "1 ora" },
+          { value: 90, label: "1 ora e 30" },
+        ]}
+        onChange={(lesson) => onSettings({ ...settings, lesson })}
+      />
+      <Segmented
+        label="Durata ripresa"
+        value={settings.round}
+        options={[
+          { value: 2, label: "2 min", hint: "leggero" },
+          { value: 3, label: "3 min", hint: "agonistico" },
+        ]}
+        onChange={(round) => onSettings({ ...settings, round })}
+      />
+    </section>
+  );
+}
+
+type SettingsProps = {
+  settings: LessonSettings;
+  onSettings: (s: LessonSettings) => void;
+};
+
+function Home({ onOpen, settings, onSettings }: { onOpen: (id: CategoryId) => void } & SettingsProps) {
   const groups = useMemo(() => groupCategories(categories), []);
   return (
     <div className="page">
@@ -79,6 +160,7 @@ function Home({ onOpen }: { onOpen: (id: CategoryId) => void }) {
         <h1>Allenamento Muay Thai</h1>
         <p className="subtitle">Scegli una categoria per vedere 10 esercizi.</p>
       </header>
+      <SettingsPanel settings={settings} onSettings={onSettings} />
       <main className="home">
         {groups.map((g, i) => (
           <section key={g.title ?? `altre-${i}`} className="group">
@@ -117,16 +199,24 @@ function CategoryView({
   ids,
   onChange,
   onBack,
+  settings,
+  onSettings,
 }: {
   category: Category;
   ids: string[];
   onChange: (ids: string[]) => void;
   onBack: () => void;
-}) {
+} & SettingsProps) {
   const pool = byCategory.get(category.id) ?? [];
   const shown = ids.map((id) => byId.get(id)).filter((e): e is Exercise => !!e);
   const shownIds = new Set(shown.map((e) => e.id));
   const remaining = pool.length - shown.length;
+  const rows = shown.map((e) => {
+    const dose = adaptDose(e.dose, settings.round);
+    return { e, dose, minutes: estimateMinutes(dose) };
+  });
+  const total = rows.reduce((sum, r) => sum + r.minutes, 0);
+  const over = total - settings.lesson;
 
   const addMore = () =>
     onChange([...shown.map((e) => e.id), ...pickRandom(pool, PAGE, shownIds).map((e) => e.id)]);
@@ -149,16 +239,35 @@ function CategoryView({
       </header>
 
       <main>
-        <p className="counter">
-          {shown.length} di {pool.length} esercizi
-        </p>
+        <SettingsPanel settings={settings} onSettings={onSettings} compact />
+        <div className={`time-summary${over > 0 ? " over" : ""}`}>
+          <div className="time-text">
+            <span>
+              Tempo stimato: <strong>~{total} min</strong> su {settings.lesson}
+            </span>
+            <span className="counter">
+              {shown.length} di {pool.length} esercizi
+            </span>
+          </div>
+          <div className="time-bar" aria-hidden="true">
+            <span style={{ width: `${Math.min(100, (total / settings.lesson) * 100)}%` }} />
+          </div>
+          <p className="time-note">
+            {over > 0
+              ? `Supera la lezione di ${over} min: scegli quali fare o usa Ricarica.`
+              : `Restano circa ${-over} min per riscaldamento e defaticamento.`}
+          </p>
+        </div>
         <ol className="exercises">
-          {shown.map((e, i) => (
+          {rows.map(({ e, dose, minutes }, i) => (
             <li key={e.id} className="exercise">
               <span className="num">{i + 1}</span>
               <div>
                 <h3>{e.name}</h3>
-                <p className="dose">{e.dose}</p>
+                <p className="dose-row">
+                  <span className="dose">{dose}</span>
+                  <span className="minutes">≈ {minutes} min</span>
+                </p>
                 <p className="summary">{e.description}</p>
                 <p className="details">{e.details}</p>
                 {e.equipment && <span className="chip">{e.equipment}</span>}
