@@ -7,14 +7,14 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
 
 - **Menu a tendina** in alto per passare tra *Categorie esercizi*, *Crea allenamento* e *Impostazioni lezione*.
 - **Impostazioni**: lezione da 1 ora o 1 ora e 30, ripresa da 2 min (leggero) o 3 min (agonistico).
-  I primi 10 minuti sono sempre di riscaldamento. Cambiando durata, le liste si ricaricano da sole per stare nel tempo.
-- **Categorie**: tocchi una categoria e vedi fino a 10 esercizi a caso che stanno nel tempo della lezione.
-  **↻ Ricarica** ne estrae altri diversi, **+ Altri 10** ne aggiunge 10 non ancora visti.
+  I primi 10 minuti sono sempre di riscaldamento.
+- **Categorie**: tocchi una categoria e vedi la lista completa dei suoi esercizi, con la ricerca per nome
+  e il tempo della tua lezione in alto. "+ Aggiungi alla lezione" lo mette al posto giusto nella scaletta.
 - Ogni esercizio ha il **dosaggio** (ripetizioni, serie, tempo o riprese), il tempo stimato e una **descrizione estesa**.
   I lavori a riprese da 2–3 min seguono la durata della ripresa scelta.
 - **Esercizi per attrezzo**: corpo libero, compagno, palla medica, corda, kettlebell, elastici, sacco, pao, bilanciere, manubri,
   sbarra e parallele, battle rope, sandbag, pneumatico e mazza, coni e scaletta, ognuno con almeno 24 esercizi.
-  Funzionano come le categorie (10 a caso nel tempo della lezione, Ricarica, Altri 10, torna indietro).
+  Funzionano come le categorie (lista completa, ricerca, torna indietro).
   Negli esercizi delle categorie, l'attrezzo è un collegamento alla lista di quell'attrezzo.
 - **Dosaggio modificabile**: con "✎ Modifica" scegli dai menu a tendina tipo (ripetizioni, tempo,
   riprese, distanza), serie, quantità, lati e recupero, così non si sbaglia a scrivere;
@@ -35,6 +35,9 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
 - Logo del Team Petrux nella home (anche come icona dell'app sul telefono) e "‹ Categorie" per tornare indietro da ogni pagina.
 - **Crea allenamento guidato**: tre scelte (durata, ritmo, "Pensaci tu" o "La scelgo io") e la lezione appare come
   una scaletta per fasi con i minuti (es. Tecnica 10′–37′), il voto in alto, PDF e "Nuova proposta".
+  Con "La scelgo io" (o sotto ogni lezione) c'è **➕ Aggiungi esercizi**: un menu a tendina con tutte le categorie
+  e gli attrezzi, la ricerca per nome e i **💡 Suggeriti**, cioè gli esercizi che alzano di più il voto e stanno nel
+  tempo che resta. Si aggiungono con "+" senza uscire dalla pagina.
   Se hai scelto tu alcuni esercizi, **✨ Completa la lezione** aggiunge quelli che mancano (tenendo i tuoi e
   rimettendoli in ordine logico) per arrivare a 100, o al voto più alto possibile.
 - Colori della bandiera thailandese, pensata prima per il telefono (anche tema scuro).

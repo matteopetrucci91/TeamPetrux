@@ -902,3 +902,84 @@ h1, h2, h3 { letter-spacing: -0.01em; }
   font-size: 0.9rem;
   line-height: 1.45;
 }
+
+/* ---------- Ricerca e scelta esercizi dentro la lezione ---------- */
+.search {
+  width: 100%;
+  font: inherit;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  margin: 4px 0 12px;
+}
+.picker {
+  margin-top: 22px;
+  padding: 16px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  scroll-margin-top: 80px;
+}
+.picker h2 { margin: 0 0 10px; font-size: 1.1rem; }
+.picker-filters { display: grid; gap: 8px; }
+.picker-filters select {
+  font: inherit;
+  font-weight: 600;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+.picker-filters .search { margin: 0; background: var(--bg); }
+.picker-note { color: var(--muted); font-size: 0.88rem; margin: 10px 0 6px; }
+.pick-list { list-style: none; margin: 0; padding: 0; }
+.pick {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+}
+.pick:first-child { border-top: 0; }
+.pick-main {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  min-width: 0;
+}
+.pick-icon { font-size: 1.3rem; line-height: 1.4; }
+.pick-text { display: grid; gap: 2px; min-width: 0; }
+.pick-text strong { font-size: 0.95rem; }
+.pick-text small { color: var(--muted); font-size: 0.8rem; }
+.pick-text .gain { color: var(--ok); font-weight: 700; }
+.pick-detail { font-size: 0.85rem; line-height: 1.45; color: var(--text); margin-top: 4px; }
+.pick-detail em { display: block; color: var(--muted); margin-top: 2px; }
+.pick-add {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--thai-red);
+  background: transparent;
+  color: var(--thai-red);
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.15s ease;
+}
+.pick-add:active { transform: scale(0.9); }
+.pick-add.on { background: var(--dose-bg); border-color: var(--dose-bg); color: #fff; }
+.hint a { color: var(--blue); font-weight: 600; }
+.link-btn { display: flex; align-items: center; justify-content: center; text-decoration: none; }

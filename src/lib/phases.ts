@@ -39,3 +39,20 @@ export function groupByPhase<T extends { e: Exercise }>(items: T[]): { phase: Ph
   }
   return groups;
 }
+
+/** Ordine logico delle fasi nella lezione. */
+export const PHASE_ORDER: Phase[] = ["tecnica", "velocita", "clinch", "condizionamento", "forza", "core", "mobilita"];
+const rank = (e: Exercise) => PHASE_ORDER.indexOf(phaseOf(e));
+
+/** Inserisce un esercizio nella lezione al posto giusto: dopo gli ultimi della sua fase o di quelle prima. */
+export function insertInOrder(list: readonly Exercise[], e: Exercise): Exercise[] {
+  const r = rank(e);
+  let at = list.length;
+  for (let i = list.length - 1; i >= -1; i--) {
+    if (i === -1 || rank(list[i]) <= r) {
+      at = i + 1;
+      break;
+    }
+  }
+  return [...list.slice(0, at), e, ...list.slice(at)];
+}

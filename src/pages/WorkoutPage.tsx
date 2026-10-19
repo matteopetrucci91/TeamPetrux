@@ -1,12 +1,13 @@
 import { useState, type ReactNode } from "react";
 import { ExerciseCard } from "../components/ExerciseCard";
+import { ExercisePicker } from "../components/ExercisePicker";
 import { QualityCheck } from "../components/QualityCheck";
 import { SettingsPanel, type SettingsProps } from "../components/Settings";
 import { Topbar } from "../components/Topbar";
 import { doseFor, toExercises } from "../lib/catalog";
 import type { LessonSettings } from "../lib/lesson";
 import { downloadWorkoutPdf } from "../lib/pdf";
-import { groupByPhase, PHASE_INFO } from "../lib/phases";
+import { groupByPhase, insertInOrder, PHASE_INFO } from "../lib/phases";
 import { availableMinutes, WARMUP_MIN } from "../lib/plan";
 import { bestLesson, reviewWorkout } from "../lib/review";
 import { hrefFor } from "../lib/route";
@@ -69,7 +70,7 @@ function Step({ n, title, children }: { n: number; title: string; children: Reac
 }
 
 /** Lezione vuota: tre scelte guidate per prepararla. */
-function Planner({ settings, onSettings, onGenerate }: SettingsProps & { onGenerate: () => void }) {
+function Planner({ settings, onSettings, onGenerate, onPick }: SettingsProps & { onGenerate: () => void; onPick: () => void }) {
   return (
     <main className="planner">
       <p className="planner-intro">
@@ -109,7 +110,7 @@ function Planner({ settings, onSettings, onGenerate }: SettingsProps & { onGener
       </Step>
       <Step n={3} title="Come la costruiamo?">
         <Choice icon="✨" title="Pensaci tu" text="Una lezione completa e in ordine logico, con voto 100" onClick={onGenerate} />
-        <Choice icon="✋" title="La scelgo io" text="Sfoglia le categorie e aggiungi gli esercizi che vuoi" href={hrefFor({ page: "categorie" })} />
+        <Choice icon="✋" title="La scelgo io" text="Aggiungi gli esercizi da qui, con i suggerimenti per il voto più alto" onClick={onPick} />
       </Step>
     </main>
   );
@@ -128,6 +129,8 @@ export function WorkoutPage({
 } & SettingsProps) {
   const [showSettings, setShowSettings] = useState(false);
   const [busy, setBusy] = useState(false);
+  /** "La scelgo io": si mostra la lezione anche vuota, con la scelta degli esercizi. */
+  const [picking, setPicking] = useState(false);
   const list = toExercises(workout.ids);
   const review = reviewWorkout(list, settings);
   const generate = (first: boolean) => {
@@ -136,7 +139,7 @@ export function WorkoutPage({
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  if (list.length === 0) {
+  if (list.length === 0 && !picking) {
     return (
       <div className="page">
         <Topbar
@@ -146,7 +149,15 @@ export function WorkoutPage({
           title="Crea allenamento"
           subtitle="Prepariamo insieme la lezione di oggi."
         />
-        <Planner settings={settings} onSettings={onSettings} onGenerate={() => generate(true)} />
+        <Planner
+          settings={settings}
+          onSettings={onSettings}
+          onGenerate={() => generate(true)}
+          onPick={() => {
+            setPicking(true);
+            window.scrollTo({ top: 0 });
+          }}
+        />
       </div>
     );
   }
@@ -202,7 +213,7 @@ export function WorkoutPage({
             <span className={`score ${review.score >= 85 ? "ok" : review.score >= 60 ? "warn" : "bad"}`}>{review.score}</span>
           )}
           <div className="hero-text">
-            <strong>{review?.score === 100 ? "Lezione perfetta 💯" : review?.verdict}</strong>
+            <strong>{!review ? "Lezione vuota" : review.score === 100 ? "Lezione perfetta 💯" : review.verdict}</strong>
             <span>
               ~{total} min su {settings.lesson}
               {total > settings.lesson ? ` · supera di ${total - settings.lesson} min` : total < settings.lesson ? ` · liberi ${settings.lesson - total} min` : ""}
@@ -213,12 +224,20 @@ export function WorkoutPage({
             <span style={{ width: pct(total - WARMUP_MIN) }} />
           </div>
           <div className="hero-actions">
-            <button className="pill solid" onClick={() => void downloadWorkoutPdf(list, settings)}>⬇ Scarica PDF</button>
+            {list.length > 0 && (
+              <button className="pill solid" onClick={() => void downloadWorkoutPdf(list, settings)}>⬇ Scarica PDF</button>
+            )}
             <button className="pill" onClick={() => setShowSettings((v) => !v)} aria-expanded={showSettings}>
               ⚙️ Durata e ritmo
             </button>
           </div>
         </section>
+        {list.length === 0 && (
+          <p className="hint">
+            Scegli gli esercizi qui sotto da <a href="#aggiungi">➕ Aggiungi esercizi</a>: ti suggerisco quelli che
+            alzano di più il voto. Oppure premi <strong>✨ Completa la lezione</strong> quando vuoi.
+          </p>
+        )}
         {!workout.auto && review && review.score < 100 && (
           <p className="hint">
             Hai scelto tu gli esercizi: premi <strong>✨ Completa la lezione</strong> e aggiungo quelli che mancano,
@@ -285,12 +304,27 @@ export function WorkoutPage({
             </li>
           ))}
         </ol>
-        <p className="more">
-          <a href={hrefFor({ page: "categorie" })}>+ Aggiungi altri esercizi dalle categorie</a>
-        </p>
+        <ExercisePicker
+          list={list}
+          settings={settings}
+          onAdd={(e) => {
+            onChange(insertInOrder(list, e).map((x) => x.id));
+            showToast(`Aggiunto: ${e.name}`);
+          }}
+          onRemove={(e) => {
+            onChange(workout.ids.filter((id) => id !== e.id));
+            showToast(`Tolto: ${e.name}`);
+          }}
+        />
       </main>
       <footer className="actions">
-        <button className="btn secondary" onClick={() => onChange([])}>
+        <button
+          className="btn secondary"
+          onClick={() => {
+            onChange([]);
+            setPicking(false);
+          }}
+        >
           Ricomincia
         </button>
         {workout.auto ? (

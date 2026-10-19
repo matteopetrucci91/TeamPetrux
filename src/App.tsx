@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { categoryById, poolFor, toolById } from "./lib/catalog";
+import { categoryById, poolFor, toExercises, toolById } from "./lib/catalog";
 import { DoseContext, setCurrentDoses, type CustomDoses } from "./lib/doses";
 import { DEFAULT_SETTINGS, type LessonSettings } from "./lib/lesson";
-import { availableMinutes, fitDraw } from "./lib/plan";
+import { insertInOrder } from "./lib/phases";
+import { totalMinutes } from "./lib/plan";
 import { bestLesson } from "./lib/review";
 import { useRoute, type Route } from "./lib/route";
 import { load, save } from "./lib/storage";
@@ -16,26 +17,16 @@ import { SettingsPage } from "./pages/SettingsPage";
 import { ToolsPage } from "./pages/ToolsPage";
 import { WorkoutPage, type Workout } from "./pages/WorkoutPage";
 
-const LISTS_KEY = "muaythai:liste:v1";
 const SETTINGS_KEY = "muaythai:lezione:v1";
 const WORKOUT_KEY = "muaythai:allenamento:v1";
 const DOSES_KEY = "muaythai:dosi:v1";
-const PAGE = 10;
-
-/** Esercizi mostrati per ogni lista (categoria o "attrezzo:<id>"), solo gli id. */
-type Lists = Record<string, string[]>;
 
 /** Chiave della lista mostrata nella pagina corrente, se è una lista. */
 const listKey = (r: Route) =>
   r.page === "categoria" ? r.id : r.page === "attrezzo" ? `attrezzo:${r.id}` : null;
 
-/** 10 esercizi a caso della lista che stanno nel tempo della lezione. */
-const drawFor = (key: string, s: LessonSettings) =>
-  fitDraw(poolFor(key), availableMinutes(s), s.round, PAGE).map((e) => e.id);
-
 export default function App() {
   const route = useRoute();
-  const [lists, setLists] = useState<Lists>(() => load<Lists>(LISTS_KEY, {}));
   const [settings, setSettings] = useState<LessonSettings>(() => ({
     ...DEFAULT_SETTINGS,
     ...load<Partial<LessonSettings>>(SETTINGS_KEY, {}),
@@ -46,23 +37,15 @@ export default function App() {
   const [doses, setDoses] = useState<CustomDoses>(() => load<CustomDoses>(DOSES_KEY, {}));
   setCurrentDoses(doses);
 
-  useEffect(() => save(LISTS_KEY, lists), [lists]);
   useEffect(() => save(SETTINGS_KEY, settings), [settings]);
   useEffect(() => save(WORKOUT_KEY, workout), [workout]);
   useEffect(() => save(DOSES_KEY, doses), [doses]);
 
-  // Alla prima apertura di una lista si estraggono gli esercizi.
   const key = listKey(route);
-  useEffect(() => {
-    if (key && !lists[key]?.length) {
-      setLists((prev) => ({ ...prev, [key]: drawFor(key, settings) }));
-    }
-  }, [key, lists, settings]);
 
-  /** Cambiando durata, liste e lezione automatica si ricaricano per stare nel tempo. */
+  /** Cambiando durata o ritmo, la lezione automatica si ricrea per stare nel tempo. */
   const changeSettings = (next: LessonSettings) => {
     setSettings(next);
-    setLists((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, drawFor(k, next)])));
     if (workout.auto && workout.ids.length) {
       setWorkout({ ids: bestLesson(next).map((e) => e.id), auto: true });
     }
@@ -79,7 +62,9 @@ export default function App() {
   const toggleWorkout = (id: string) => {
     showToast(workout.ids.includes(id) ? "Tolto dalla lezione" : "Aggiunto alla lezione ✓");
     setWorkout((w) => ({
-      ids: w.ids.includes(id) ? w.ids.filter((x) => x !== id) : [...w.ids, id],
+      ids: w.ids.includes(id)
+        ? w.ids.filter((x) => x !== id)
+        : insertInOrder(toExercises(w.ids), toExercises([id])[0]).map((e) => e.id),
       auto: false,
     }));
   };
@@ -87,9 +72,8 @@ export default function App() {
   const settingsProps = { settings, onSettings: changeSettings };
   const workoutCount = workout.ids.length;
   const listProps = key && {
-    ids: lists[key] ?? [],
-    onChange: (ids: string[]) => setLists((prev) => ({ ...prev, [key]: ids })),
     pool: poolFor(key),
+    workoutMinutes: totalMinutes(toExercises(workout.ids), settings.round),
     inWorkout: new Set(workout.ids),
     onToggleWorkout: toggleWorkout,
     workoutCount,
