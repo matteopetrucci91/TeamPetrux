@@ -53,18 +53,29 @@ const BLOCKS: { label: string; from: CategoryId[]; share: number }[] = [
   { label: "Defaticamento", from: ["mobilita"], share: 0.07 },
 ];
 
+/** Blocco della lezione in cui cade una categoria (la forza massimale va con la forza). */
+const blockOf = (c: CategoryId) => {
+  const i = BLOCKS.findIndex((b) => b.from.includes(c));
+  return i >= 0 ? i : BLOCKS.findIndex((b) => b.label === "Forza");
+};
+
 /**
  * Crea una lezione in ordine logico: dopo il riscaldamento tecnica, velocità,
  * clinch, condizionamento, forza, core e infine mobilità per defaticare.
  * Ogni blocco ha una quota del tempo; quello che avanza passa al blocco dopo.
+ * Gli esercizi in `fixed` (scelti a mano) restano tutti: vanno nel loro blocco
+ * e si aggiunge solo ciò che manca.
  */
-export function generateLesson(settings: LessonSettings): Exercise[] {
+export function generateLesson(settings: LessonSettings, fixed: readonly Exercise[] = []): Exercise[] {
   const { round } = settings;
   const total = availableMinutes(settings);
-  const taken = new Set<string>();
+  const taken = new Set<string>(fixed.map((e) => e.id));
   const cats = BLOCKS.map((b) => b.from[Math.floor(Math.random() * b.from.length)]);
   const blocks: Exercise[][] = BLOCKS.map(() => []);
-  let used = 0;
+  fixed.forEach((e) => blocks[blockOf(e.category)].push(e));
+  // se nel blocco c'è già una categoria scelta a mano, si resta su quella
+  blocks.forEach((b, i) => b.length && (cats[i] = b[0].category));
+  let used = totalMinutes(fixed, round);
   let carry = 0;
 
   const fill = (i: number, budget: number, max: number) => {
@@ -80,10 +91,11 @@ export function generateLesson(settings: LessonSettings): Exercise[] {
     return m;
   };
 
-  // primo giro: ogni blocco la sua quota, l'avanzo passa al successivo
+  // primo giro: ogni blocco la sua quota (meno quello che c'è già), l'avanzo passa al successivo
   BLOCKS.forEach((b, i) => {
-    const budget = Math.round(b.share * total) + carry;
-    carry = budget - fill(i, budget, 3);
+    const have = totalMinutes(blocks[i], round);
+    const budget = Math.round(b.share * total) + carry - have;
+    carry = budget > 0 ? budget - fill(i, budget, Math.max(0, 3 - blocks[i].length)) : 0;
   });
   // secondo giro: il tempo rimasto va a tecnica, condizionamento e clinch
   for (const i of [0, 3, 2, 1]) {

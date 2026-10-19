@@ -1,6 +1,7 @@
 // Controllo qualità dell'allenamento: regole da allenatore, calcolate nell'app (gratis, anche offline).
 import type { Exercise } from "../data/exercises";
-import { doseFor, toolById } from "./catalog";
+import { exercises } from "../data/exercises";
+import { byCategory, doseFor, toolById } from "./catalog";
 import type { LessonSettings } from "./lesson";
 import { PHASE_OF as PHASE, type Phase } from "./phases";
 import { availableMinutes, generateLesson } from "./plan";
@@ -112,17 +113,72 @@ export function reviewWorkout(list: readonly Exercise[], settings: LessonSetting
   return { score, verdict, items };
 }
 
+/** Valore di una lezione: prima il voto, a parità quella che usa meglio il tempo. */
+function value(list: readonly Exercise[], settings: LessonSettings) {
+  const r = reviewWorkout(list, settings);
+  if (!r) return -Infinity;
+  const used = list.reduce((m, e) => m + doseFor(e, settings.round).minutes, 0);
+  return r.score * 1000 - Math.abs(availableMinutes(settings) - used);
+}
+
+/** Sopra questo valore il voto è 100. */
+const PERFECT = 99_000;
+
+const randomOf = <T,>(a: readonly T[]) => a[Math.floor(Math.random() * a.length)];
+
 /**
- * Lezione automatica con il voto più alto: ne genera fino a 40 e si ferma alla prima da 100
- * (con i dosaggi personalizzati una singola estrazione potrebbe non bastare).
+ * Migliora una lezione con piccoli ritocchi casuali (aggiungi, togli, sostituisci, sposta),
+ * tenendo sempre gli esercizi scelti a mano. Accetta solo i ritocchi che alzano il voto.
  */
-export function bestLesson(settings: LessonSettings): Exercise[] {
-  let best: Exercise[] = [];
-  let bestScore = -1;
-  for (let i = 0; i < 40 && bestScore < 100; i++) {
-    const list = generateLesson(settings);
-    const score = reviewWorkout(list, settings)?.score ?? 0;
-    if (score > bestScore) [best, bestScore] = [list, score];
+function improve(start: Exercise[], fixedIds: ReadonlySet<string>, settings: LessonSettings, steps = 1500): Exercise[] {
+  let best = start;
+  let bestValue = value(best, settings);
+  for (let i = 0; i < steps && bestValue < PERFECT; i++) {
+    const list = [...best];
+    const free = list.map((_, k) => k).filter((k) => !fixedIds.has(list[k].id));
+    const move = Math.floor(Math.random() * 4);
+    if (move === 0) {
+      // aggiungi un esercizio nuovo in un punto qualsiasi
+      const e = randomOf(exercises);
+      if (list.some((x) => x.id === e.id)) continue;
+      list.splice(Math.floor(Math.random() * (list.length + 1)), 0, e);
+    } else if (move === 1) {
+      // togli un esercizio non scelto a mano
+      if (!free.length) continue;
+      list.splice(randomOf(free), 1);
+    } else if (move === 2) {
+      // sostituisci un esercizio non scelto a mano con uno della stessa categoria
+      if (!free.length) continue;
+      const k = randomOf(free);
+      const e = randomOf(byCategory.get(list[k].category) ?? []);
+      if (!e || list.some((x) => x.id === e.id)) continue;
+      list[k] = e;
+    } else {
+      // sposta un esercizio (anche quelli scelti a mano) per migliorare l'ordine
+      if (list.length < 2) continue;
+      const [e] = list.splice(Math.floor(Math.random() * list.length), 1);
+      list.splice(Math.floor(Math.random() * (list.length + 1)), 0, e);
+    }
+    const v = value(list, settings);
+    if (v > bestValue) [best, bestValue] = [list, v];
   }
   return best;
+}
+
+/**
+ * Lezione automatica con il voto più alto: ne genera fino a 60 e si ferma alla prima da 100,
+ * poi, se serve, la ritocca per avvicinarsi il più possibile a 100.
+ * Con `fixed` completa una lezione già iniziata tenendo tutti gli esercizi scelti.
+ */
+export function bestLesson(settings: LessonSettings, fixed: readonly Exercise[] = []): Exercise[] {
+  let best: Exercise[] = [...fixed];
+  let bestValue = fixed.length ? value(fixed, settings) : -Infinity;
+  for (let i = 0; i < 60 && bestValue < PERFECT; i++) {
+    const list = generateLesson(settings, fixed);
+    const v = value(list, settings);
+    if (v > bestValue) [best, bestValue] = [list, v];
+  }
+  return (reviewWorkout(best, settings)?.score ?? 0) < 100
+    ? improve(best, new Set(fixed.map((e) => e.id)), settings)
+    : best;
 }

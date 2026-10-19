@@ -893,3 +893,12 @@ h1, h2, h3 { letter-spacing: -0.01em; }
 .cat-card .cat-icon { grid-row: 1 / 4; margin: 0; width: 48px; height: 48px; }
 .cat-card .cat-label { align-self: end; }
 .cat-card .cat-count { margin-top: 4px; justify-self: start; }
+.hint {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--chip);
+  color: var(--chip-text);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}

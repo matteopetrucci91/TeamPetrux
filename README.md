@@ -35,6 +35,8 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
 - Logo del Team Petrux nella home (anche come icona dell'app sul telefono) e "‹ Categorie" per tornare indietro da ogni pagina.
 - **Crea allenamento guidato**: tre scelte (durata, ritmo, "Pensaci tu" o "La scelgo io") e la lezione appare come
   una scaletta per fasi con i minuti (es. Tecnica 10′–37′), il voto in alto, PDF e "Nuova proposta".
+  Se hai scelto tu alcuni esercizi, **✨ Completa la lezione** aggiunge quelli che mancano (tenendo i tuoi e
+  rimettendoli in ordine logico) per arrivare a 100, o al voto più alto possibile.
 - Colori della bandiera thailandese, pensata prima per il telefono (anche tema scuro).
 
 <img src="docs/anteprima-allenamento.png" alt="Pagina Crea allenamento" width="300">

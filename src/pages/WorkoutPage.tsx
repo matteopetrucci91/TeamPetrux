@@ -8,7 +8,7 @@ import type { LessonSettings } from "../lib/lesson";
 import { downloadWorkoutPdf } from "../lib/pdf";
 import { groupByPhase, PHASE_INFO } from "../lib/phases";
 import { availableMinutes, WARMUP_MIN } from "../lib/plan";
-import { reviewWorkout } from "../lib/review";
+import { bestLesson, reviewWorkout } from "../lib/review";
 import { hrefFor } from "../lib/route";
 import { showToast } from "../lib/toast";
 
@@ -127,6 +127,7 @@ export function WorkoutPage({
   onGenerate: () => void;
 } & SettingsProps) {
   const [showSettings, setShowSettings] = useState(false);
+  const [busy, setBusy] = useState(false);
   const list = toExercises(workout.ids);
   const review = reviewWorkout(list, settings);
   const generate = (first: boolean) => {
@@ -149,6 +150,28 @@ export function WorkoutPage({
       </div>
     );
   }
+
+  /** Completa la lezione tenendo gli esercizi scelti e puntando al voto più alto. */
+  const complete = () => {
+    setBusy(true);
+    // piccolo ritardo: lascia comparire "Sto completando…" prima del calcolo
+    setTimeout(() => {
+      const before = new Set(workout.ids);
+      const done = bestLesson(settings, list);
+      const added = done.filter((e) => !before.has(e.id)).length;
+      const score = reviewWorkout(done, settings)?.score ?? 0;
+      onChange(done.map((e) => e.id));
+      setBusy(false);
+      showToast(
+        added === 0
+          ? `Non c'era spazio per altri esercizi: ho sistemato l'ordine · voto ${score}`
+          : score === 100
+            ? `Aggiunti ${added} esercizi: lezione da 100 💯`
+            : `Aggiunti ${added} esercizi: voto ${score}, il massimo possibile con i tuoi`,
+      );
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 30);
+  };
 
   const move = (i: number, d: -1 | 1) => {
     const ids = [...workout.ids];
@@ -196,6 +219,12 @@ export function WorkoutPage({
             </button>
           </div>
         </section>
+        {!workout.auto && review && review.score < 100 && (
+          <p className="hint">
+            Hai scelto tu gli esercizi: premi <strong>✨ Completa la lezione</strong> e aggiungo quelli che mancano,
+            tenendo i tuoi, per arrivare al voto più alto possibile.
+          </p>
+        )}
         {showSettings && <SettingsPanel settings={settings} onSettings={onSettings} compact />}
 
         {review &&
@@ -264,9 +293,15 @@ export function WorkoutPage({
         <button className="btn secondary" onClick={() => onChange([])}>
           Ricomincia
         </button>
-        <button className="btn primary" onClick={() => generate(false)}>
-          ✨ Nuova proposta
-        </button>
+        {workout.auto ? (
+          <button className="btn primary" onClick={() => generate(false)}>
+            ✨ Nuova proposta
+          </button>
+        ) : (
+          <button className="btn primary" onClick={complete} disabled={busy}>
+            {busy ? "Sto completando…" : "✨ Completa la lezione"}
+          </button>
+        )}
       </footer>
     </div>
   );
