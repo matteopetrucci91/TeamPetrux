@@ -20,7 +20,7 @@ const AGES = Array.from({ length: 88 }, (_, i) => i + 3);
 function Toggle({ on, label, onChange }: { on: boolean; label: string; onChange: (v: boolean) => void }) {
   return (
     <button type="button" className={`toggle ${on ? "on" : "off"}`} aria-pressed={on} onClick={() => onChange(!on)}>
-      <span className="mark">{on ? "✓" : "✕"}</span>
+      <span className="mark" aria-hidden="true"><span className={on ? "mark-check" : "mark-x"} /></span>
       {label}
     </button>
   );

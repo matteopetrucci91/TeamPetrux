@@ -45,7 +45,7 @@ function Choice({
         <strong>{title}</strong>
         <small>{text}</small>
       </span>
-      {active !== undefined && <span className="choice-check" aria-hidden="true">{active ? "✓" : ""}</span>}
+      {active !== undefined && <span className="choice-check" aria-hidden="true">{active && <span className="mark-check" />}</span>}
     </>
   );
   return href ? (

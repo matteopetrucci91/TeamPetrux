@@ -496,7 +496,8 @@ a.chip.link { text-decoration: none; color: var(--blue); font-weight: 600; }
   margin-bottom: 14px;
 }
 .sheet { display: grid; gap: 10px; }
-.when { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 8px; }
+.when { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.when .field:first-child { grid-column: 1 / -1; }
 .when input[type=date] { padding: 8px 6px; min-width: 0; }
 .sheet h3 { margin: 0; font-size: 1rem; }
 .field textarea { font-weight: 500; resize: vertical; }
@@ -1009,28 +1010,47 @@ h1, h2, h3 { letter-spacing: -0.01em; }
 }
 .cta.secondary .cta-icon { background: var(--chip); }
 
-/* "+" e "✓" disegnati, così sono sempre al centro del cerchio */
-.pick-add { display: grid; place-items: center; padding: 0; }
-.mark-plus, .mark-check { position: relative; width: 16px; height: 16px; }
-.mark-plus::before, .mark-plus::after {
+/* Segni disegnati (+ ✓ ✕ !): restano al centro del cerchio con qualsiasi carattere del telefono */
+.pick-add { display: grid; place-items: center; padding: 0; font-size: 16px; }
+.choice-check { font-size: 12px; }
+.quality .mark, .toggle .mark { font-size: 10px; }
+.mark-plus, .mark-check, .mark-x, .mark-bang { position: relative; display: block; width: 1em; height: 1em; }
+.mark-plus::before, .mark-plus::after,
+.mark-x::before, .mark-x::after,
+.mark-bang::before, .mark-bang::after {
   content: "";
   position: absolute;
   left: 50%;
   top: 50%;
   background: currentColor;
-  border-radius: 2px;
-  transform: translate(-50%, -50%);
+  border-radius: 0.1em;
 }
-.mark-plus::before { width: 16px; height: 2.5px; }
-.mark-plus::after { width: 2.5px; height: 16px; }
+.mark-plus::before { width: 1em; height: 0.16em; transform: translate(-50%, -50%); }
+.mark-plus::after { width: 0.16em; height: 1em; transform: translate(-50%, -50%); }
+.mark-x::before, .mark-x::after { width: 0.95em; height: 0.17em; }
+.mark-x::before { transform: translate(-50%, -50%) rotate(45deg); }
+.mark-x::after { transform: translate(-50%, -50%) rotate(-45deg); }
+.mark-bang::before { width: 0.18em; height: 0.55em; transform: translate(-50%, -72%); }
+.mark-bang::after { width: 0.2em; height: 0.2em; border-radius: 50%; transform: translate(-50%, 150%); }
 .mark-check::after {
   content: "";
   position: absolute;
-  left: 5px;
-  top: 1px;
-  width: 5px;
-  height: 10px;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  width: 0.45em;
+  height: 0.8em;
   border: solid currentColor;
-  border-width: 0 2.5px 2.5px 0;
-  transform: rotate(45deg);
+  border-width: 0 0.17em 0.17em 0;
+  transform: translate(-50%, -62%) rotate(45deg);
 }
+
+/* Icone emoji: riga alta quanto l'emoji, così il disegno sta al centro del riquadro anche su iPhone */
+.cat-icon, .cta-icon, .choice-icon, .phase-icon, .pick-icon, .menu-icon {
+  line-height: 1;
+  text-align: center;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+.pick-icon { display: grid; place-items: center; flex: none; width: 30px; height: 30px; font-size: 1.3rem; }
+.menu-icon { display: inline-grid; place-items: center; height: 24px; }
+.step-n, .icon { line-height: 1; display: grid; place-items: center; padding: 0; }
