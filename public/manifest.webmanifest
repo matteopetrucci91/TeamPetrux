@@ -1,0 +1,15 @@
+{
+  "name": "Team Petrux · Muay Thai",
+  "short_name": "Muay Thai",
+  "description": "Allenamenti, lezioni e presenze del Team Petrux",
+  "lang": "it",
+  "start_url": "./#/home",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#2d2a4a",
+  "theme_color": "#2d2a4a",
+  "icons": [
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "favicon.png", "sizes": "64x64", "type": "image/png" }
+  ]
+}

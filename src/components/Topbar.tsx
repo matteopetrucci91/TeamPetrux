@@ -3,10 +3,11 @@ import logo from "../assets/logo.webp";
 import { hrefFor, type Route } from "../lib/route";
 
 const PAGES: { route: Route; label: string; icon: string }[] = [
-  { route: { page: "categorie" }, label: "Categorie esercizi", icon: "☰" },
-  { route: { page: "attrezzi" }, label: "Esercizi per attrezzo", icon: "◉" },
-  { route: { page: "allenamento" }, label: "Crea allenamento", icon: "✚" },
-  { route: { page: "impostazioni" }, label: "Impostazioni lezione", icon: "⏱" },
+  { route: { page: "home" }, label: "Home", icon: "🏠" },
+  { route: { page: "attrezzi" }, label: "Esercizi per attrezzo", icon: "🧰" },
+  { route: { page: "allenamento" }, label: "Crea allenamento", icon: "✨" },
+  { route: { page: "calendario" }, label: "Calendario lezioni", icon: "📅" },
+  { route: { page: "impostazioni" }, label: "Impostazioni lezione", icon: "⚙️" },
 ];
 
 /** Menu a tendina per spostarsi tra le pagine. */
@@ -43,8 +44,9 @@ function Menu({ current, workoutCount }: { current: Route["page"]; workoutCount:
           {PAGES.map((p) => {
             const active =
               p.route.page === current ||
-              (p.route.page === "categorie" && current === "categoria") ||
-              (p.route.page === "attrezzi" && current === "attrezzo");
+              (p.route.page === "home" && current === "categoria") ||
+              (p.route.page === "attrezzi" && current === "attrezzo") ||
+              (p.route.page === "calendario" && current === "lezione");
             return (
               <a
                 key={p.route.page}
@@ -102,6 +104,11 @@ export function Topbar({
         )}
         <Menu current={route} workoutCount={workoutCount} />
       </div>
+      {showLogo && (
+        <p className="team-title">
+          <span>Team</span> Petrux
+        </p>
+      )}
       {showLogo && <img className="team-logo" src={logo} alt="Team Petrux Muay Thai" width={132} height={132} />}
       <h1>
         {eyebrow && <span className="eyebrow">{eyebrow}</span>}

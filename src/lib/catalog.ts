@@ -8,7 +8,8 @@ import {
   type ToolId,
 } from "../data/exercises";
 import { customDoseOf } from "./doses";
-import { adaptDose, estimateMinutes, type RoundMinutes } from "./lesson";
+import { defaultDose, withRest } from "./doseBuilder";
+import { estimateMinutes, type RoundMinutes } from "./lesson";
 
 export const byId = new Map([...exercises, ...toolExercises].map((e) => [e.id, e]));
 export const byCategory = new Map<CategoryId, Exercise[]>(
@@ -27,12 +28,12 @@ export const isCategoryId = (v: unknown): v is CategoryId =>
   categories.some((c) => c.id === v);
 
 /**
- * Dosaggio e minuti stimati: quello scelto dall'allenatore se c'è,
- * altrimenti quello del catalogo adattato alla ripresa scelta.
+ * Dosaggio e minuti stimati: quello scelto dall'allenatore se c'è, altrimenti
+ * 1 ripresa da 2 o 3 min come la lezione. Il recupero è sempre di 1 min.
  */
 export function doseFor(e: Exercise, round: RoundMinutes) {
   const custom = customDoseOf(e.id);
-  const dose = custom ?? adaptDose(e.dose, round);
+  const dose = custom ? withRest(custom) : defaultDose(round);
   return { dose, minutes: estimateMinutes(dose), custom: custom !== undefined };
 }
 

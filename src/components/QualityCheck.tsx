@@ -1,6 +1,6 @@
 import type { Review } from "../lib/review";
 
-const ICON = { ok: "✓", warn: "!", bad: "✕" } as const;
+const ICON = { ok: "mark-check", warn: "mark-bang", bad: "mark-x" } as const;
 
 /** Voto e consigli del controllo qualità. */
 export function QualityCheck({ review }: { review: Review }) {
@@ -19,7 +19,7 @@ export function QualityCheck({ review }: { review: Review }) {
       <ul>
         {review.items.map((it) => (
           <li key={it.text} className={it.level}>
-            <span className="mark">{ICON[it.level]}</span>
+            <span className="mark" aria-hidden="true"><span className={ICON[it.level]} /></span>
             {it.text}
           </li>
         ))}

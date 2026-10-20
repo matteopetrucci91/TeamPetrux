@@ -7,28 +7,41 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
 
 - **Menu a tendina** in alto per passare tra *Categorie esercizi*, *Crea allenamento* e *Impostazioni lezione*.
 - **Impostazioni**: lezione da 1 ora o 1 ora e 30, ripresa da 2 min (leggero) o 3 min (agonistico).
-  I primi 10 minuti sono sempre di riscaldamento. Cambiando durata, le liste si ricaricano da sole per stare nel tempo.
-- **Categorie**: tocchi una categoria e vedi fino a 10 esercizi a caso che stanno nel tempo della lezione.
-  **↻ Ricarica** ne estrae altri diversi, **+ Altri 10** ne aggiunge 10 non ancora visti.
-- Ogni esercizio ha il **dosaggio** (ripetizioni, serie, tempo o riprese), il tempo stimato e una **descrizione estesa**.
-  I lavori a riprese da 2–3 min seguono la durata della ripresa scelta.
+  I primi 10 minuti sono sempre di riscaldamento.
+- **Categorie**: tocchi una categoria e vedi la lista completa dei suoi esercizi, con la ricerca per nome
+  e il tempo della tua lezione in alto. "+ Aggiungi alla lezione" lo mette al posto giusto nella scaletta.
+- Ogni esercizio ha il **dosaggio**, il tempo stimato e una **descrizione estesa**. Di default ogni esercizio è
+  **1 ripresa da 2 o 3 min** (come scelto per la lezione) e il **recupero è sempre di 1 min**, tra le serie e tra un
+  esercizio e l'altro. Sotto c'è il dosaggio suggerito dal catalogo ("Nel catalogo: …") come riferimento.
 - **Esercizi per attrezzo**: corpo libero, compagno, palla medica, corda, kettlebell, elastici, sacco, pao, bilanciere, manubri,
   sbarra e parallele, battle rope, sandbag, pneumatico e mazza, coni e scaletta, ognuno con almeno 24 esercizi.
-  Funzionano come le categorie (10 a caso nel tempo della lezione, Ricarica, Altri 10, torna indietro).
+  Funzionano come le categorie (lista completa, ricerca, torna indietro).
   Negli esercizi delle categorie, l'attrezzo è un collegamento alla lista di quell'attrezzo.
 - **Dosaggio modificabile**: con "✎ Modifica" scegli dai menu a tendina tipo (ripetizioni, tempo,
-  riprese, distanza), serie, quantità, lati e recupero, così non si sbaglia a scrivere;
-  restano salvati, valgono ovunque e contano nella stima del tempo. "Ripristina originale" torna a quello del catalogo.
+  riprese, distanza), serie, quantità e lati, così non si sbaglia a scrivere (il recupero resta 1 min);
+  restano salvati, valgono ovunque e contano nella stima del tempo. "Torna a 1 ripresa" rimette quello di default.
 - **Crea allenamento**: aggiungi gli esercizi dalle categorie con "+ Aggiungi all'allenamento", riordinali e toglili;
   oppure **⚡ Crea lezione automatica** compone la lezione in ordine logico: riscaldamento, tecnica, velocità o footwork,
   clinch, condizionamento, forza, core e mobilità per defaticare.
   Il **Controllo qualità** dà un voto su 100 e consigli: tempo, peso della tecnica, condizionamento, forza o core,
-  ordine logico (tecnica prima dei lavori stancanti), defaticamento finale, varietà e numero di esercizi.
+  ordine logico (tecnica prima dei lavori stancanti), defaticamento finale, varietà (non più di 20 min di fila sulla
+  stessa categoria, tecnica esclusa) e numero di esercizi.
   Le regole sono nell'app (src/lib/review.ts): gratis e funziona anche offline.
   Con **⬇ Scarica PDF dell'allenamento** salvi la lezione completa (impostazioni, riscaldamento, esercizi con dosaggio,
   tempo e descrizione, totale) da stampare o tenere sul telefono.
 - Tutto resta salvato nel browser (localStorage): nessun database, nessun costo. Ogni dispositivo ha i suoi dati.
-- Logo del Team Petrux nella home (anche come icona dell'app sul telefono) e "‹ Categorie" per tornare indietro da ogni pagina.
+- **Calendario lezioni**: calendario del mese come su iPhone; aggiungi le lezioni con orari (anche ripetute ogni settimana)
+  e per ognuna le presenze: nome, cognome, età, certificato medico, mese pagato e note. Puoi aggiungere persone già
+  inserite o copiare le presenze della lezione precedente. I dati restano sul dispositivo: "Scarica backup" e
+  "Carica backup" servono per non perderli, "Presenze per Excel" scarica un file CSV.
+- Logo del Team Petrux nella home (anche come icona dell'app sul telefono) e "‹ Home" per tornare indietro da ogni pagina; la pagina principale è #/home.
+- **Crea allenamento guidato**: tre scelte (durata, ritmo, "Pensaci tu" o "La scelgo io") e la lezione appare come
+  una scaletta per fasi con i minuti (es. Tecnica 10′–37′), il voto in alto, PDF e "Nuova proposta".
+  Con "La scelgo io" (o sotto ogni lezione) c'è **➕ Aggiungi esercizi**: un menu a tendina con tutte le categorie
+  e gli attrezzi, la ricerca per nome e i **💡 Suggeriti**, cioè gli esercizi che alzano di più il voto e stanno nel
+  tempo che resta. Si aggiungono con "+" senza uscire dalla pagina.
+  Se hai scelto tu alcuni esercizi, **✨ Completa la lezione** aggiunge quelli che mancano (tenendo i tuoi e
+  rimettendoli in ordine logico) per arrivare a 100, o al voto più alto possibile.
 - Colori della bandiera thailandese, pensata prima per il telefono (anche tema scuro).
 
 <img src="docs/anteprima-allenamento.png" alt="Pagina Crea allenamento" width="300">
@@ -58,7 +71,7 @@ npm run preview   # la prova in locale
 
 ## Struttura
 
-- `src/App.tsx` – stato dell'app e scelta della pagina (indirizzi `#/`, `#/categoria/...`, `#/allenamento`, `#/impostazioni`)
+- `src/App.tsx` – stato dell'app e scelta della pagina (indirizzi `#/home`, `#/categoria/...`, `#/allenamento`, `#/impostazioni`)
 - `src/pages/` – le pagine (anche `#/attrezzi` e `#/attrezzo/...`); `src/components/` – menu, impostazioni, riepilogo tempi, scheda esercizio
 - `src/lib/plan.ts` – esercizi che stanno nel tempo e lezione automatica
 - `src/data/exercises.ts` – catalogo esercizi (generato dal catalogo del progetto, non modificarlo a mano)
@@ -67,3 +80,10 @@ npm run preview   # la prova in locale
 - `src/lib/doses.ts` – dosaggi personalizzati
 - `src/lib/storage.ts` – salvataggio in localStorage
 - `src/index.css` – stile e colori (rosso `#A51931`, bianco, blu `#2D2A4A`)
+
+## Sul telefono (iPhone)
+
+L'app è una PWA: si installa dal browser, senza App Store, e dopo la prima apertura funziona anche senza internet.
+A ogni push su `develop` la GitHub Action "Pubblica app" la pubblica su GitHub Pages
+(https://matteopetrucci91.github.io/TeamPetrux/). Su iPhone: apri il link in Safari, Condividi › "Aggiungi alla schermata Home".
+I dati restano nel telefono (separati da quelli del PC): per spostare il calendario usa "Scarica backup" / "Carica backup".

@@ -1,8 +1,10 @@
 // Controllo qualità dell'allenamento: regole da allenatore, calcolate nell'app (gratis, anche offline).
-import type { CategoryId, Exercise } from "../data/exercises";
-import { doseFor, toolById } from "./catalog";
+import type { Exercise } from "../data/exercises";
+import { exercises } from "../data/exercises";
+import { byCategory, doseFor, toolById } from "./catalog";
 import type { LessonSettings } from "./lesson";
-import { availableMinutes } from "./plan";
+import { PHASE_OF as PHASE, type Phase } from "./phases";
+import { availableMinutes, generateLesson } from "./plan";
 
 export type Level = "ok" | "warn" | "bad";
 export interface ReviewItem {
@@ -14,21 +16,6 @@ export interface Review {
   verdict: string;
   items: ReviewItem[];
 }
-
-type Phase = "tecnica" | "clinch" | "velocita" | "condizionamento" | "forza" | "core" | "mobilita";
-
-const PHASE: Record<CategoryId, Phase> = {
-  tecnica: "tecnica",
-  clinch: "clinch",
-  velocita: "velocita",
-  agilita: "velocita",
-  resistenza: "condizionamento",
-  "forza-esplosiva": "forza",
-  "forza-massimale": "forza",
-  "forza-resistente": "forza",
-  core: "core",
-  mobilita: "mobilita",
-};
 
 /** Lavori che richiedono freschezza e lavori che stancano. */
 const FRESH: Phase[] = ["tecnica", "velocita"];
@@ -95,23 +82,27 @@ export function reviewWorkout(list: readonly Exercise[], settings: LessonSetting
   else if (phases.at(-1) !== "mobilita") add("warn", "La mobilità è meglio come ultimo esercizio, per defaticare.", 4);
   else add("ok", "Chiude con mobilità per defaticare.");
 
-  // 6. Varietà
-  let run = 1;
-  let longest = 1;
-  for (let i = 1; i < list.length; i++) {
-    run = list[i].category === list[i - 1].category ? run + 1 : 1;
-    longest = Math.max(longest, run);
+  // 6. Varietà: più di 20 min di fila sulla stessa categoria stancano la testa
+  // (la tecnica no: i colpi e le combinazioni in fila sono il cuore della lezione)
+  let run = 0;
+  let runMin = 0;
+  let longest = 0;
+  for (let i = 0; i < list.length; i++) {
+    const same = i > 0 && list[i].category === list[i - 1].category;
+    run = same ? run + 1 : 1;
+    runMin = same ? runMin + mins[i] : mins[i];
+    if (list[i].category !== "tecnica" && run >= 4 && runMin > 20) longest = Math.max(longest, run);
   }
   const toolCount = new Map<string, number>();
   list.forEach((e) => e.tool && !SHARED_TOOLS.has(e.tool) && toolCount.set(e.tool, (toolCount.get(e.tool) ?? 0) + 1));
   const crowded = [...toolCount.entries()].filter(([, n]) => n > 3);
-  if (longest >= 4) add("warn", `Ci sono ${longest} esercizi di fila della stessa categoria: alterna un po' di più.`, 5);
+  if (longest) add("warn", `Ci sono ${longest} esercizi di fila della stessa categoria: alterna un po' di più.`, 5);
   if (crowded.length) add(
       "warn",
       `Troppi esercizi con ${crowded.map(([t, n]) => `${toolById.get(t as never)?.label.toLowerCase() ?? t} (${n})`).join(", ")}: in palestra può creare file d'attesa.`,
       4,
     );
-  if (longest < 4 && !crowded.length) add("ok", "Buona varietà di esercizi e attrezzi.");
+  if (!longest && !crowded.length) add("ok", "Buona varietà di esercizi e attrezzi.");
 
   // 7. Numero di esercizi
   if (list.length < 4) add("warn", `Solo ${list.length} esercizi: la lezione rischia di essere monotona.`, 8);
@@ -124,4 +115,74 @@ export function reviewWorkout(list: readonly Exercise[], settings: LessonSetting
   const order: Record<Level, number> = { bad: 0, warn: 1, ok: 2 };
   items.sort((a, b) => order[a.level] - order[b.level]);
   return { score, verdict, items };
+}
+
+/** Valore di una lezione: prima il voto, a parità quella che usa meglio il tempo. */
+function value(list: readonly Exercise[], settings: LessonSettings) {
+  const r = reviewWorkout(list, settings);
+  if (!r) return -Infinity;
+  const used = list.reduce((m, e) => m + doseFor(e, settings.round).minutes, 0);
+  return r.score * 1000 - Math.abs(availableMinutes(settings) - used);
+}
+
+/** Sopra questo valore il voto è 100. */
+const PERFECT = 99_000;
+
+const randomOf = <T,>(a: readonly T[]) => a[Math.floor(Math.random() * a.length)];
+
+/**
+ * Migliora una lezione con piccoli ritocchi casuali (aggiungi, togli, sostituisci, sposta),
+ * tenendo sempre gli esercizi scelti a mano. Accetta solo i ritocchi che alzano il voto.
+ */
+function improve(start: Exercise[], fixedIds: ReadonlySet<string>, settings: LessonSettings, steps = 1500): Exercise[] {
+  let best = start;
+  let bestValue = value(best, settings);
+  for (let i = 0; i < steps && bestValue < PERFECT; i++) {
+    const list = [...best];
+    const free = list.map((_, k) => k).filter((k) => !fixedIds.has(list[k].id));
+    const move = Math.floor(Math.random() * 4);
+    if (move === 0) {
+      // aggiungi un esercizio nuovo in un punto qualsiasi
+      const e = randomOf(exercises);
+      if (list.some((x) => x.id === e.id)) continue;
+      list.splice(Math.floor(Math.random() * (list.length + 1)), 0, e);
+    } else if (move === 1) {
+      // togli un esercizio non scelto a mano
+      if (!free.length) continue;
+      list.splice(randomOf(free), 1);
+    } else if (move === 2) {
+      // sostituisci un esercizio non scelto a mano con uno della stessa categoria
+      if (!free.length) continue;
+      const k = randomOf(free);
+      const e = randomOf(byCategory.get(list[k].category) ?? []);
+      if (!e || list.some((x) => x.id === e.id)) continue;
+      list[k] = e;
+    } else {
+      // sposta un esercizio (anche quelli scelti a mano) per migliorare l'ordine
+      if (list.length < 2) continue;
+      const [e] = list.splice(Math.floor(Math.random() * list.length), 1);
+      list.splice(Math.floor(Math.random() * (list.length + 1)), 0, e);
+    }
+    const v = value(list, settings);
+    if (v > bestValue) [best, bestValue] = [list, v];
+  }
+  return best;
+}
+
+/**
+ * Lezione automatica con il voto più alto: ne genera fino a 60 e si ferma alla prima da 100,
+ * poi, se serve, la ritocca per avvicinarsi il più possibile a 100.
+ * Con `fixed` completa una lezione già iniziata tenendo tutti gli esercizi scelti.
+ */
+export function bestLesson(settings: LessonSettings, fixed: readonly Exercise[] = []): Exercise[] {
+  let best: Exercise[] = [...fixed];
+  let bestValue = fixed.length ? value(fixed, settings) : -Infinity;
+  for (let i = 0; i < 60 && bestValue < PERFECT; i++) {
+    const list = generateLesson(settings, fixed);
+    const v = value(list, settings);
+    if (v > bestValue) [best, bestValue] = [list, v];
+  }
+  return (reviewWorkout(best, settings)?.score ?? 0) < 100
+    ? improve(best, new Set(fixed.map((e) => e.id)), settings)
+    : best;
 }
