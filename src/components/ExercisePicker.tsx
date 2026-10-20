@@ -134,7 +134,7 @@ export function ExercisePicker({
                 onClick={() => (added ? onRemove(e) : onAdd(e))}
                 aria-label={added ? `Togli ${e.name}` : `Aggiungi ${e.name}`}
               >
-                {added ? "✓" : "+"}
+                <span className={added ? "mark-check" : "mark-plus"} aria-hidden="true" />
               </button>
             </li>
           );

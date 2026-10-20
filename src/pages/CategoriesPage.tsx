@@ -16,20 +16,18 @@ export function CategoriesPage({ workoutCount }: { workoutCount: number }) {
         subtitle="Scegli una categoria per vedere gli esercizi."
       />
       <main className="home">
-        <a className="cta" href={hrefFor({ page: "allenamento" })}>
-          <span>
+        <div className="cta-row">
+          <a className="cta" href={hrefFor({ page: "allenamento" })}>
+            <span className="cta-icon" aria-hidden="true">✨</span>
             <strong>Crea allenamento</strong>
-            <small>Scegli tu gli esercizi o crea una lezione automatica</small>
-          </span>
-          <span aria-hidden="true">›</span>
-        </a>
-        <a className="cta secondary" href={hrefFor({ page: "calendario" })}>
-          <span>
+            <small>Automatico o scelto da te</small>
+          </a>
+          <a className="cta secondary" href={hrefFor({ page: "calendario" })}>
+            <span className="cta-icon" aria-hidden="true">📅</span>
             <strong>Calendario lezioni</strong>
-            <small>Orari delle lezioni e presenze</small>
-          </span>
-          <span aria-hidden="true">›</span>
-        </a>
+            <small>Orari e presenze</small>
+          </a>
+        </div>
         <section className="group">
           <h2>Categorie</h2>
           <div className="grid">
