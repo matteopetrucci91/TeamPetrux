@@ -36,6 +36,16 @@ export type Prop =
   | { type: "pullbar" }
   | { type: "rope" }
   | { type: "cone"; x: number }
+  /** Pao o colpitore tenuto in mano (di solito dal compagno: who 1). */
+  | { type: "pad"; at?: Joint; who?: number }
+  | { type: "sandbag"; at?: Joint }
+  | { type: "stick"; at?: Joint }
+  | { type: "tire"; x: number; w?: number }
+  | { type: "ladder" }
+  /** Corda dalle mani verso un ancoraggio a destra, ondulata per la battle rope. */
+  | { type: "battlerope" }
+  /** Elastico dalla mano (o dal piede) a un punto fisso x,y. */
+  | { type: "band"; at?: Joint; x: number; y: number }
   | { type: "line"; x: number };
 
 export interface Arrow {
@@ -174,7 +184,8 @@ function drawPerson(s: Skeleton, p: Person): string {
   return out.join("");
 }
 
-function drawProp(pr: Prop, s: Skeleton): string {
+function drawProp(pr: Prop, main: Skeleton, all: Skeleton[]): string {
+  const s = "who" in pr && pr.who !== undefined ? (all[pr.who] ?? main) : main;
   const at = (j?: Joint): P => (j ? s[j] : lerp(s.hand, s.hand2, 0.5));
   switch (pr.type) {
     case "kettlebell": {
@@ -212,6 +223,36 @@ function drawProp(pr: Prop, s: Skeleton): string {
       const low = Math.max(s.foot[1], s.foot2[1]) + 3;
       return `<path d="M${f(a[0])} ${f(a[1])} C${f(a[0] + 30)} ${f(low + 10)} ${f(b[0] - 30)} ${f(low + 10)} ${f(b[0])} ${f(b[1])}" fill="none" stroke="${C.shorts}" stroke-width="1.8"/>`;
     }
+    case "pad": {
+      const [x, y] = at(pr.at);
+      return `<rect x="${f(x - 5)}" y="${f(y - 12)}" width="10" height="24" rx="4" fill="#1e1c33" stroke="#fff" stroke-width="1"/>`;
+    }
+    case "sandbag": {
+      const [x, y] = at(pr.at);
+      return `<rect x="${f(x - 16)}" y="${f(y - 7)}" width="32" height="14" rx="6" fill="#6b6b4f"/>`;
+    }
+    case "stick": {
+      const [x, y] = at(pr.at);
+      return line([x - 26, y], [x + 26, y], "#8a5a2b", 3);
+    }
+    case "tire": {
+      const w = pr.w ?? 56;
+      return `<rect x="${pr.x}" y="${GROUND - 14}" width="${w}" height="14" rx="6" fill="#2b2b2b"/><rect x="${pr.x + 10}" y="${GROUND - 11}" width="${w - 20}" height="3" rx="1.5" fill="#555"/>`;
+    }
+    case "ladder":
+      return Array.from({ length: 7 }, (_, i) => line([10 + i * 23, GROUND + 0.5], [22 + i * 23, GROUND + 0.5], "#e8b923", 3)).join("");
+    case "battlerope": {
+      const [x, y] = lerp(s.hand, s.hand2, 0.5);
+      const pts: string[] = [];
+      for (let i = 0; i <= 20; i++) {
+        const t = i / 20, px = x + (W - x) * t;
+        const py = y + (GROUND - 4 - y) * t + Math.sin(t * Math.PI * 4) * 8 * (1 - t);
+        pts.push(`${f(px)},${f(py)}`);
+      }
+      return `<polyline points="${pts.join(" ")}" fill="none" stroke="#3a3a3a" stroke-width="3.5" stroke-linecap="round"/>`;
+    }
+    case "band":
+      return line(at(pr.at), [pr.x, pr.y], "#2f9e5c", 2.5);
     case "cone":
       return `<path d="M${pr.x - 7} ${GROUND} L${pr.x} ${GROUND - 16} L${pr.x + 7} ${GROUND} Z" fill="#e8762c"/>`;
     case "line":
@@ -286,13 +327,13 @@ export function frameSvg(fr: Frame): string {
     `<line x1="6" y1="${GROUND}" x2="${W - 6}" y2="${GROUND}" stroke="${C.ground}" stroke-width="2" stroke-linecap="round"/>`,
     `<g transform="translate(${f(W / 2 + tx)} ${GROUND}) scale(${f(k * 1000) / 1000}) translate(${-W / 2} ${-GROUND})">`,
   ];
-  const before = (fr.props ?? []).filter((p) => ["box", "bench", "bag", "cone", "line", "pullbar"].includes(p.type));
+  const before = (fr.props ?? []).filter((p) => ["box", "bench", "bag", "cone", "line", "pullbar", "tire", "ladder", "band", "battlerope"].includes(p.type));
   const after = (fr.props ?? []).filter((p) => !before.includes(p));
-  parts.push(...before.map((p) => drawProp(p, main)));
+  parts.push(...before.map((p) => drawProp(p, main, skels)));
   // Il compagno dietro, la persona principale davanti.
   fr.people.forEach((p, i) => i > 0 && parts.push(drawPerson(skels[i], p)));
   parts.push(drawPerson(main, fr.people[0]));
-  parts.push(...after.map((p) => drawProp(p, main)));
+  parts.push(...after.map((p) => drawProp(p, main, skels)));
   parts.push(...(fr.arrows ?? []).map((a) => drawArrow(a, skels[a.who ?? 0])));
   parts.push("</g>");
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img">${parts.join("")}</svg>`;
