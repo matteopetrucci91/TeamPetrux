@@ -159,7 +159,67 @@ export const exercises: Exercise[] = [
     "description": "Salto a piedi pari sul box, atterraggio stabile e discesa controllata.",
     "equipment": "Box",
     "dose": "4 × 5 ripetizioni, recupero 90 s",
-    "details": "Parti in piedi davanti al box, carica rapidamente anche e braccia e salta atterrando morbido al centro con entrambi i piedi, in mezzo squat. Scendi sempre a piedi, senza saltare all'indietro, per proteggere tendini e caviglie. Allena l'estensione esplosiva di anca e ginocchio utile per entrare con ginocchiate e calci."
+    "details": "Parti in piedi davanti al box, carica rapidamente anche e braccia e salta atterrando morbido al centro con entrambi i piedi, in mezzo squat. Scendi sempre a piedi, senza saltare all'indietro, per proteggere tendini e caviglie. Allena l'estensione esplosiva di anca e ginocchio utile per entrare con ginocchiate e calci.",
+    "setup": "In piedi davanti al box, a circa mezzo passo di distanza, piedi alla larghezza delle anche e braccia lungo i fianchi. Scegli un'altezza che ti permetta di atterrare comodo, non al limite.",
+    "steps": [
+      "Carica veloce: spingi il sedere indietro, piega le ginocchia a mezzo squat e porta le braccia indietro.",
+      "Senza fermarti in basso, salta in alto e in avanti spingendo forte da tutta la pianta e lanciando le braccia avanti e in alto.",
+      "In volo porta le ginocchia verso il petto per far passare i piedi sopra il bordo del box.",
+      "Atterra al centro del box con entrambi i piedi insieme, in mezzo squat, morbido e silenzioso, con le braccia avanti per l'equilibrio.",
+      "Distendi le gambe e alzati in piedi sopra il box.",
+      "Scendi a piedi, un passo alla volta, e risistemati davanti al box prima del salto successivo."
+    ],
+    "errors": [
+      "Box troppo alto, atterraggio in squat profondissimo: alleni la mobilità delle anche, non il salto, e rischi di colpire il bordo con gli stinchi.",
+      "Saltare giù all'indietro: ogni discesa pesa su tendine d'Achille e caviglie.",
+      "Atterrare rumoroso, sui talloni o con le ginocchia che cadono verso l'interno: carichi le articolazioni invece di ammortizzare con i muscoli."
+    ],
+    "why": "Allena l'estensione esplosiva di anca e ginocchio che serve per entrare con ginocchiate e calci. Scendere sempre a piedi protegge tendini e caviglie.",
+    "figure": [
+      {
+        "label": "Carica",
+        "people": [
+          {
+            "pose": "mezzo-squat",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 95,
+            "w": 44,
+            "h": 34
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 45,
+            "dy": -30,
+            "bend": -10
+          }
+        ]
+      },
+      {
+        "label": "Atterraggio morbido",
+        "people": [
+          {
+            "pose": "forza-esplosiva/atterraggio",
+            "x": 37,
+            "air": 34
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 95,
+            "w": 44,
+            "h": 34
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-esplosiva--salto-in-lungo-da-fermo",
@@ -169,6 +229,69 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 4 salti, recupero 90 s",
     "details": "Da piedi paralleli, porta le braccia indietro piegando le anche e proietta il corpo in avanti con un'estensione completa. Atterra in mezzo squat tenendo la posizione due secondi prima di ripartire. Migliora la potenza orizzontale necessaria per accorciare la distanza e chiudere sull'avversario.",
+    "setup": "In piedi dietro a una linea, piedi paralleli alla larghezza delle anche, braccia lungo i fianchi. Davanti a te serve spazio libero e un pavimento che non scivoli.",
+    "steps": [
+      "Porta le braccia in alto, poi lanciale indietro mentre pieghi le anche e le ginocchia a mezzo squat, busto inclinato in avanti.",
+      "Senza pause, lancia le braccia in avanti e spingi il pavimento indietro: anche, ginocchia e caviglie si distendono completamente.",
+      "In volo il corpo è come una freccia inclinata in avanti; poi porta le ginocchia avanti per preparare l'atterraggio.",
+      "Atterra a piedi pari in mezzo squat, ginocchia in linea con le punte e braccia avanti per non cadere indietro.",
+      "Resta fermo nella posizione d'atterraggio per due secondi, poi rialzati, torna alla linea e ripeti."
+    ],
+    "errors": [
+      "Saltare troppo in alto e poco in avanti: la spinta va proiettata lontano, non verso il soffitto.",
+      "Braccia ferme: perdi gran parte dello slancio.",
+      "Atterrare a gambe tese o sbilanciati all'indietro: carichi le ginocchia e non riesci a tenere la posizione."
+    ],
+    "why": "Migliora la potenza orizzontale che serve per accorciare la distanza e chiudere sull'avversario.",
+    "figure": [
+      {
+        "label": "Carica",
+        "people": [
+          {
+            "pose": "mezzo-squat",
+            "x": -30
+          }
+        ],
+        "props": [
+          {
+            "type": "line",
+            "x": 62
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 45,
+            "dy": -15,
+            "bend": -20
+          }
+        ]
+      },
+      {
+        "label": "Proiezione avanti",
+        "people": [
+          {
+            "pose": "forza-esplosiva/lungo-volo",
+            "x": -10,
+            "air": 18
+          }
+        ],
+        "props": [
+          {
+            "type": "line",
+            "x": 30
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 45,
+            "dy": 5,
+            "bend": -12
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -179,6 +302,48 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 4 per gamba, recupero 90 s",
     "details": "In equilibrio su una gamba, piega leggermente l'anca e salta in avanti atterrando sulla stessa gamba, ginocchio stabile e non rientrante. Mantieni l'atterraggio due secondi. Rinforza la spinta unilaterale e la stabilità della gamba d'appoggio, decisiva quando si calcia o si entra con il teep.",
+    "setup": "In piedi su una gamba sola, l'altra sollevata dietro con il ginocchio piegato. Busto leggermente inclinato in avanti, braccia libere per l'equilibrio, spazio libero davanti.",
+    "steps": [
+      "Piega leggermente anca e ginocchio della gamba d'appoggio portando le braccia indietro, come per sederti su una sedia alta.",
+      "Spingi forte con la gamba d'appoggio e lancia le braccia in avanti: salta in avanti, non in alto.",
+      "In volo tieni la gamba libera sollevata dietro, senza toccare terra.",
+      "Atterra sulla stessa gamba con il piede piatto, ginocchio piegato e in linea con la punta, senza farlo cadere verso l'interno.",
+      "Mantieni l'atterraggio per due secondi senza saltellare, poi ripeti. Lavora con entrambe le gambe."
+    ],
+    "errors": [
+      "Ginocchio che rientra all'atterraggio: sollecita i legamenti e non alleni la stabilità.",
+      "Saltare troppo lontano per le proprie capacità: non riesci a tenere l'atterraggio e appoggi l'altro piede.",
+      "Busto che si piega di lato per recuperare l'equilibrio: il controllo deve venire da anca e piede."
+    ],
+    "why": "Rinforza la spinta su una gamba e la stabilità della gamba d'appoggio, decisive quando si calcia o si entra con il teep.",
+    "figure": [
+      {
+        "label": "Carica su una gamba",
+        "people": [
+          {
+            "pose": "forza-esplosiva/una-gamba-carica",
+            "x": -35
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 55,
+            "dy": -12,
+            "bend": -14
+          }
+        ]
+      },
+      {
+        "label": "Atterra e tieni",
+        "people": [
+          {
+            "pose": "forza-esplosiva/una-gamba-atterra",
+            "x": 20
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -188,7 +353,66 @@ export const exercises: Exercise[] = [
     "description": "Salti laterali rapidi a piedi pari oltre una panca bassa.",
     "equipment": "Panca",
     "dose": "4 × 10 salti, recupero 60 s",
-    "details": "In piedi a lato di una panca bassa, salta a piedi pari da una parte all'altra riducendo al minimo il tempo di contatto a terra. Resta sugli avampiedi con il busto composto. Sviluppa reattività laterale e cambi di direzione rapidi per uscire dalla linea d'attacco."
+    "details": "In piedi a lato di una panca bassa, salta a piedi pari da una parte all'altra riducendo al minimo il tempo di contatto a terra. Resta sugli avampiedi con il busto composto. Sviluppa reattività laterale e cambi di direzione rapidi per uscire dalla linea d'attacco.",
+    "setup": "In piedi a lato di una panca bassa, con la panca parallela ai piedi e a pochi centimetri da te. Piedi uniti, peso sugli avampiedi, ginocchia morbide, braccia piegate davanti al corpo.",
+    "steps": [
+      "Piega leggermente le ginocchia e salta di lato a piedi pari, sollevando le ginocchia quanto basta per passare sopra la panca.",
+      "Atterra dall'altra parte sugli avampiedi, con le ginocchia morbide e i piedi ancora uniti.",
+      "Appena tocchi terra riparti subito verso il lato opposto: il contatto con il pavimento deve essere brevissimo, come se il pavimento scottasse.",
+      "Tieni busto e testa fermi al centro, sopra la panca: si muovono le gambe, non le spalle.",
+      "Mantieni un ritmo regolare; se inizi a sfiorare la panca o ad atterrare pesante, fermati."
+    ],
+    "errors": [
+      "Atterrare sui talloni e restare a terra: perdi l'effetto elastico e diventa un salto lento.",
+      "Inclinare il busto di lato a ogni salto: sei sbilanciato e il prossimo salto parte in ritardo.",
+      "Panca troppo alta per la stanchezza: rischi di inciampare e cadere."
+    ],
+    "why": "Sviluppa reattività laterale e cambi di direzione rapidi, utili per uscire dalla linea d'attacco dell'avversario.",
+    "figure": [
+      {
+        "label": "A lato della panca",
+        "people": [
+          {
+            "pose": "forza-esplosiva/piedi-pari-punte",
+            "x": -45
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 70,
+            "w": 30,
+            "h": 20
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 55,
+            "dy": -10,
+            "bend": -20
+          }
+        ]
+      },
+      {
+        "label": "Oltre, piedi pari",
+        "people": [
+          {
+            "pose": "forza-esplosiva/panca-salto",
+            "x": 5,
+            "air": 30
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 70,
+            "w": 30,
+            "h": 20
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-esplosiva--depth-jump",
@@ -197,7 +421,83 @@ export const exercises: Exercise[] = [
     "description": "Scendere da un box e rimbalzare subito in un salto verticale.",
     "equipment": "Box",
     "dose": "4 × 4 ripetizioni, recupero 2 min",
-    "details": "Da un box di 30-40 cm lasciati cadere (non saltare giù) e appena tocchi terra rimbalza subito in un salto verticale massimale. Il contatto deve essere breve e reattivo, senza affondare. Esercizio pliometrico avanzato: da usare solo con buona base di forza, per migliorare la reattività di gambe e calci."
+    "details": "Da un box di 30-40 cm lasciati cadere (non saltare giù) e appena tocchi terra rimbalza subito in un salto verticale massimale. Il contatto deve essere breve e reattivo, senza affondare. Esercizio pliometrico avanzato: da usare solo con buona base di forza, per migliorare la reattività di gambe e calci.",
+    "setup": "In piedi sul bordo di un box di 30-40 cm, punte dei piedi vicino allo spigolo, braccia lungo i fianchi. Davanti al box serve spazio libero e un pavimento non scivoloso.",
+    "steps": [
+      "Fai un passo avanti nel vuoto e lasciati cadere: non saltare giù, scendi semplicemente dal box.",
+      "Atterra a piedi pari sugli avampiedi, con le ginocchia leggermente piegate e le braccia che vanno indietro.",
+      "Nell'istante in cui tocchi terra rimbalza subito: salta in verticale il più in alto possibile lanciando le braccia in alto.",
+      "Il contatto deve essere breve ed elastico, come una molla: non affondare in squat profondo.",
+      "Atterra dal salto in mezzo squat morbido, poi risali sul box camminando e recupera bene prima della ripetizione successiva."
+    ],
+    "errors": [
+      "Saltare in alto dal box invece di lasciarsi cadere: aumenti l'impatto senza vantaggi.",
+      "Affondare troppo all'atterraggio o restare a terra a lungo: diventa un normale salto e perdi l'effetto reattivo.",
+      "Talloni che sbattono a terra o ginocchia che rientrano: il carico finisce su articolazioni e tendini."
+    ],
+    "why": "Migliora la reattività di gambe e calci sfruttando l'effetto molla. È pliometria avanzata: usala solo con una buona base di forza e senza dolori a ginocchia o caviglie.",
+    "figure": [
+      {
+        "label": "Sul box",
+        "people": [
+          {
+            "pose": "in-piedi",
+            "x": -45,
+            "air": 34
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 15,
+            "w": 42,
+            "h": 34
+          }
+        ]
+      },
+      {
+        "label": "Contatto breve",
+        "people": [
+          {
+            "pose": "forza-esplosiva/piedi-pari-punte",
+            "x": 25
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 2,
+            "w": 34,
+            "h": 34
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      },
+      {
+        "label": "Rimbalzo in alto",
+        "people": [
+          {
+            "pose": "salto",
+            "x": 25,
+            "air": 26
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 2,
+            "w": 34,
+            "h": 34
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-esplosiva--tuck-jump",
@@ -207,6 +507,47 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 6 ripetizioni, recupero 90 s",
     "details": "Da in piedi salta in verticale portando rapidamente le ginocchia al petto, poi distendi le gambe prima di atterrare morbido sugli avampiedi. Concatenale con contatti brevi mantenendo il core attivo. Allena la flessione d'anca esplosiva, la stessa che serve per una ginocchiata potente.",
+    "setup": "In piedi, piedi alla larghezza delle anche, ginocchia morbide, braccia piegate davanti al corpo all'altezza del petto.",
+    "steps": [
+      "Fai un rapido piegamento delle ginocchia (un quarto di squat) e salta in verticale spingendo forte dagli avampiedi.",
+      "Appena stacchi, tira le ginocchia verso il petto con forza: sono le ginocchia che salgono, non il busto che si piega in avanti.",
+      "Se vuoi, tocca le ginocchia con i palmi delle mani tenute davanti al petto.",
+      "Prima di toccare terra distendi di nuovo le gambe sotto di te.",
+      "Atterra morbido sugli avampiedi e riparti subito con il salto successivo, contatto breve e core contratto."
+    ],
+    "errors": [
+      "Piegare il busto verso le ginocchia invece di alzarle: l'esercizio perde la sua funzione e atterri curvo.",
+      "Atterrare con le gambe ancora raccolte: sbatti a terra pesante e rischi le caviglie.",
+      "Continuare quando i salti si abbassano: diventa un lavoro di fatica e la tecnica peggiora."
+    ],
+    "why": "Allena la flessione d'anca esplosiva, la stessa che serve per una ginocchiata potente, e la reattività delle gambe.",
+    "figure": [
+      {
+        "label": "Stacco",
+        "people": [
+          {
+            "pose": "forza-esplosiva/piedi-pari-punte"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 12,
+            "dy": -30,
+            "bend": -6
+          }
+        ]
+      },
+      {
+        "label": "Ginocchia al petto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/tuck",
+            "air": 26
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -217,6 +558,48 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 6 per lato, recupero 60 s",
     "details": "In equilibrio su una gamba, salta lateralmente atterrando sulla gamba opposta e stabilizzati un istante prima di ripartire. Il ginocchio d'atterraggio resta in linea con il piede e il busto leggermente inclinato in avanti. Migliora gli spostamenti laterali e la stabilità nelle uscite angolate.",
+    "setup": "In piedi su una gamba, ginocchio leggermente piegato, l'altra gamba sollevata e incrociata dietro. Busto inclinato in avanti, braccia pronte a oscillare come quelle di un pattinatore.",
+    "steps": [
+      "Piega anca e ginocchio della gamba d'appoggio, carica le braccia verso il lato da cui parti.",
+      "Spingi lateralmente con forza e salta di lato verso l'altra gamba, facendo oscillare le braccia nella direzione del salto.",
+      "Atterra sulla gamba opposta, sull'avampiede e poi su tutto il piede, ginocchio piegato e in linea con la punta.",
+      "La gamba che hai lasciato va dietro e incrociata, senza appoggiarla: fermati un istante per stabilizzarti.",
+      "Riparti verso il lato opposto con la stessa spinta. Cerca distanza e controllo, non velocità."
+    ],
+    "errors": [
+      "Ginocchio d'atterraggio che crolla verso l'interno: carichi il ginocchio invece dell'anca.",
+      "Appoggiare il piede libero per salvarti: perdi il lavoro di stabilizzazione.",
+      "Busto dritto e rigido: senza inclinazione in avanti non riesci a usare i glutei per spingere."
+    ],
+    "why": "Migliora gli spostamenti laterali esplosivi e la stabilità su una gamba nelle uscite angolate.",
+    "figure": [
+      {
+        "label": "Spinta laterale",
+        "people": [
+          {
+            "pose": "forza-esplosiva/skater-a",
+            "x": -20
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 45,
+            "dy": -6,
+            "bend": -14
+          }
+        ]
+      },
+      {
+        "label": "Atterra sull'altra",
+        "people": [
+          {
+            "pose": "forza-esplosiva/skater-b",
+            "x": 10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -227,6 +610,39 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 20 m, recupero 90 s",
     "details": "Corri con balzi lunghi e alternati, spingendo con forza ogni appoggio e portando il ginocchio opposto in avanti e in alto. Cerca ampiezza e tempo di volo, non velocità di passo. Sviluppa potenza di spinta unilaterale e coordinazione, utili per entrate rapide e calci in avanzamento.",
+    "setup": "Su un tratto piano e libero di almeno 20-30 metri, parti con qualche passo di corsa leggera per prendere il ritmo.",
+    "steps": [
+      "Trasforma la corsa in balzi: a ogni appoggio spingi il terreno indietro con forza, distendendo completamente anca, ginocchio e caviglia.",
+      "Mentre una gamba spinge, porta il ginocchio dell'altra in avanti e in alto, fino all'altezza dell'anca.",
+      "Resta in volo il più a lungo possibile: cerca passi lunghi, non passi veloci.",
+      "Atterra sull'avampiede con il piede sotto il corpo, non lontano davanti, e riparti subito con la gamba opposta.",
+      "Le braccia lavorano in opposizione alle gambe, ampie e decise. Al termine del tratto torna camminando."
+    ],
+    "errors": [
+      "Fare passi corti e rapidi: diventa una corsa, non un lavoro di potenza.",
+      "Atterrare sul tallone con la gamba tesa avanti: freni il movimento e carichi il ginocchio.",
+      "Braccia ferme o incrociate davanti al corpo: perdi slancio ed equilibrio."
+    ],
+    "why": "Sviluppa la potenza di spinta di una gamba alla volta e la coordinazione, utili per entrate rapide e calci in avanzamento.",
+    "figure": [
+      {
+        "label": "Spinta e ginocchio alto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/balzo",
+            "air": 16
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 40,
+            "dy": -5,
+            "bend": -10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -237,6 +653,60 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 6 per gamba, recupero 90 s",
     "details": "Da posizione di affondo, salta in alto e scambia le gambe in volo, atterrando morbido nell'affondo opposto con il ginocchio posteriore vicino al suolo. Tieni il busto eretto e il ginocchio anteriore stabile. Rinforza le gambe in modo esplosivo e unilaterale, simile ai cambi di peso tra un colpo e l'altro.",
+    "setup": "In affondo: un piede avanti con il ginocchio piegato a 90° sopra la caviglia, l'altro dietro sull'avampiede con il ginocchio vicino a terra. Busto eretto, braccia piegate ai fianchi.",
+    "steps": [
+      "Spingi forte con entrambe le gambe e salta verso l'alto, aiutandoti con un colpo deciso delle braccia.",
+      "In volo scambia le gambe: quella davanti va dietro e quella dietro va avanti, con un movimento a forbice rapido.",
+      "Atterra nell'affondo opposto, prima sull'avampiede e poi su tutto il piede anteriore, scendendo morbido finché il ginocchio posteriore si avvicina a terra senza toccarla.",
+      "Il ginocchio anteriore resta sopra il piede, senza cadere verso l'interno né superare troppo la punta.",
+      "Riparti subito dalla posizione bassa, mantenendo il busto dritto per tutto il tempo."
+    ],
+    "errors": [
+      "Busto che si piega in avanti all'atterraggio: il carico va sulla schiena e perdi l'equilibrio.",
+      "Ginocchio posteriore che sbatte a terra: ti fai male e non controlli la discesa.",
+      "Passo troppo corto: il ginocchio anteriore va molto oltre la punta e si sovraccarica."
+    ],
+    "why": "Rinforza le gambe in modo esplosivo e una alla volta, come nei rapidi cambi di peso tra un colpo e l'altro.",
+    "figure": [
+      {
+        "label": "Affondo",
+        "people": [
+          {
+            "pose": "forza-esplosiva/affondo"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      },
+      {
+        "label": "Cambio in volo",
+        "people": [
+          {
+            "pose": "forza-esplosiva/affondo-volo",
+            "air": 20
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": -30,
+            "dy": -2,
+            "bend": -8
+          },
+          {
+            "at": "foot2",
+            "dx": 30,
+            "dy": -2,
+            "bend": 8
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -247,6 +717,39 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 20 s, recupero 40 s",
     "details": "In guardia di Muay Thai, mani alte e mento basso, esegui saltelli rapidi ed elastici sugli avampiedi senza perdere la posizione. Alterna saltelli bassi a qualche spinta più esplosiva in avanti o indietro. Allena la reattività delle caviglie e la prontezza a partire con un colpo da qualsiasi istante.",
+    "setup": "In guardia di Muay Thai: piedi poco più larghi delle spalle, uno avanti e uno dietro, peso leggero sull'avampiede posteriore, mani alte vicino alle tempie, gomiti stretti, mento basso.",
+    "steps": [
+      "Inizia con saltelli bassi ed elastici sugli avampiedi: i talloni sfiorano appena il pavimento e le ginocchia restano morbide.",
+      "Il busto e le mani non si muovono: salta solo con le caviglie, mantenendo la stessa distanza tra i piedi.",
+      "Ogni tanto inserisci una spinta più esplosiva in avanti o indietro, come per entrare o uscire dalla distanza, e torna subito ai saltelli.",
+      "Atterra sempre in guardia, con il peso ben distribuito e pronto a partire con un colpo.",
+      "Respira con calma dal naso, senza contrarre spalle e collo."
+    ],
+    "errors": [
+      "Abbassare le mani o alzare il mento mentre salti: in combattimento resti scoperto.",
+      "Saltare troppo in alto: sprechi energia e sei lento a partire.",
+      "Restare sui talloni: il movimento diventa pesante e perdi la reattività."
+    ],
+    "why": "Allena la reattività delle caviglie e la prontezza a partire con un colpo in qualsiasi istante, senza perdere la guardia.",
+    "figure": [
+      {
+        "label": "Saltelli in guardia",
+        "people": [
+          {
+            "pose": "forza-esplosiva/guardia-punte",
+            "air": 6,
+            "gloves": true
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -22
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -257,6 +760,69 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "4 × 6 lanci, recupero 60 s",
     "details": "In guardia o a piedi paralleli, tieni la palla al petto e spingila con forza contro il muro distendendo completamente le braccia e trasferendo il peso in avanti. Riprendila e ripeti senza pause. Sviluppa la potenza di spinta di petto e tricipiti per diretti e uscite dal clinch.",
+    "setup": "Di fronte a un muro solido, a 2-3 metri di distanza, in guardia o a piedi paralleli. Tieni la palla al petto con entrambe le mani ai lati, gomiti bassi e vicini al corpo.",
+    "steps": [
+      "Piega leggermente le ginocchia e porta il peso sulla gamba posteriore, come per caricare un diretto.",
+      "Spingi la palla in avanti in linea retta all'altezza del petto, distendendo le braccia con forza fino in fondo.",
+      "Mentre le braccia spingono, trasferisci il peso in avanti: la spinta parte dalle gambe e arriva alle mani.",
+      "Alla fine del lancio le braccia sono tese e i pollici puntano verso il basso, come a chiudere un pugno.",
+      "Riprendi la palla al rimbalzo con le braccia morbide, riportala al petto e lancia di nuovo senza pause."
+    ],
+    "errors": [
+      "Lanciare solo con le braccia, a gambe ferme: perdi la parte più importante della spinta.",
+      "Gomiti larghi all'inizio: la spinta perde direzione, come un pugno che parte largo.",
+      "Bloccare la presa al rimbalzo a braccia tese: rischi di farti male a polsi e dita."
+    ],
+    "why": "Sviluppa la potenza di spinta di petto e tricipiti per diretti più incisivi e per staccarsi con decisione dal clinch.",
+    "figure": [
+      {
+        "label": "Palla al petto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/palla-petto",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "medball"
+          },
+          {
+            "type": "box",
+            "x": 140,
+            "w": 10,
+            "h": 130
+          }
+        ]
+      },
+      {
+        "label": "Spinta esplosiva",
+        "people": [
+          {
+            "pose": "forza-esplosiva/palla-spinta",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "medball"
+          },
+          {
+            "type": "box",
+            "x": 140,
+            "w": 10,
+            "h": 130
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 28,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -267,6 +833,72 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "3 × 6 per lato, recupero 60 s",
     "details": "Di fianco al muro, carica la palla sull'anca posteriore e lanciala ruotando piede, anca e spalle in sequenza, con le braccia che seguono il busto. La forza nasce da terra, non dalle braccia. Trasferisce la potenza rotazionale a ganci, calci circolari e gomitate.",
+    "setup": "Di fianco a un muro solido, a circa un metro e mezzo, con il muro dal lato del braccio avanzato. Piedi un po' più larghi delle spalle, ginocchia morbide, palla tenuta con due mani davanti al busto.",
+    "steps": [
+      "Ruota il busto lontano dal muro portando la palla all'altezza dell'anca posteriore: il peso va sulla gamba posteriore, le braccia restano quasi tese.",
+      "Fai partire la rotazione dal basso: ruota il piede posteriore sull'avampiede, alzando il tallone, come nel gancio o nel calcio.",
+      "Subito dopo ruotano anca e spalle, in quest'ordine, e per ultime le braccia, che seguono il busto e lasciano andare la palla contro il muro.",
+      "Lancia con forza all'altezza del petto e lascia che il corpo completi la rotazione verso il muro.",
+      "Riprendi la palla, riportala sull'anca posteriore e ripeti. Alla fine della serie cambia lato."
+    ],
+    "errors": [
+      "Lanciare solo con le braccia: perdi la forza che nasce dalle gambe e affatichi le spalle.",
+      "Piede posteriore piatto e fermo: le anche non ruotano e la torsione va tutta sulla schiena.",
+      "Schiena curva quando carichi in basso: carichi la zona lombare."
+    ],
+    "why": "Trasferisce la potenza rotazionale (piede, anca, spalle) a ganci, calci circolari e gomitate.",
+    "figure": [
+      {
+        "label": "Carica sull'anca",
+        "people": [
+          {
+            "pose": "forza-esplosiva/rot-carica",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "at": "hand"
+          },
+          {
+            "type": "box",
+            "x": 140,
+            "w": 10,
+            "h": 130
+          }
+        ]
+      },
+      {
+        "label": "Rotazione e lancio",
+        "people": [
+          {
+            "pose": "forza-esplosiva/rot-lancio",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "at": "hand"
+          },
+          {
+            "type": "box",
+            "x": 140,
+            "w": 10,
+            "h": 130
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 28,
+            "dy": -4,
+            "bend": 10
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -277,6 +909,55 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "4 × 8 ripetizioni, recupero 60 s",
     "details": "Porta la palla sopra la testa salendo sulle punte, poi schiacciala a terra con tutta la forza flettendo anche e addome. Usa una palla che non rimbalza e tieni la schiena neutra. Allena la catena anteriore e la potenza dall'alto verso il basso, utile per gomitate e controllo nel clinch.",
+    "setup": "In piedi, piedi alla larghezza delle spalle, palla medica (di quelle che non rimbalzano) tenuta con due mani davanti al petto. Attorno a te spazio libero.",
+    "steps": [
+      "Porta la palla sopra la testa a braccia tese, salendo sulle punte e allungando tutto il corpo: inspira.",
+      "Da lì schiaccia la palla a terra con tutta la forza, davanti ai piedi, chiudendo con forza addome e anche.",
+      "Mentre la palla scende piega le ginocchia e spingi il sedere indietro, così la schiena resta dritta: espira forte.",
+      "Raccogli la palla da terra piegando le gambe, non curvando la schiena.",
+      "Rialzati e riportala subito sopra la testa per il colpo successivo."
+    ],
+    "errors": [
+      "Usare una palla che rimbalza: ti torna in faccia.",
+      "Piegarsi solo con la schiena, a gambe tese: lavori male e rischi la zona lombare.",
+      "Lanciare troppo lontano davanti: la palla rimbalza via e perdi il ritmo."
+    ],
+    "why": "Allena la catena anteriore e la potenza dall'alto verso il basso, utile per gomitate e per il controllo nel clinch.",
+    "figure": [
+      {
+        "label": "Sulle punte",
+        "people": [
+          {
+            "pose": "forza-esplosiva/braccia-su-punte"
+          }
+        ],
+        "props": [
+          {
+            "type": "medball"
+          }
+        ]
+      },
+      {
+        "label": "Schiaccia a terra",
+        "people": [
+          {
+            "pose": "forza-esplosiva/slam-giu"
+          }
+        ],
+        "props": [
+          {
+            "type": "medball"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 6,
+            "dy": 28
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -287,6 +968,72 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "3 × 6 per lato, recupero 60 s",
     "details": "In guardia, tieni una palla leggera (2-3 kg) all'altezza della spalla posteriore e lanciala contro il muro con un braccio, ruotando il piede e l'anca come nel diretto. Chiudi l'altra mano a protezione del viso. Rende il diretto più esplosivo collegando gambe, anca e braccio.",
+    "setup": "In guardia di fronte a un muro solido, a circa 2 metri. Tieni una palla leggera (2-3 kg) con la mano posteriore, appoggiata davanti alla spalla, gomito basso; l'altra mano è chiusa a protezione del viso.",
+    "steps": [
+      "Carica il peso sulla gamba posteriore, mento basso dietro la spalla.",
+      "Ruota il piede posteriore sull'avampiede, tallone verso l'esterno, e fai girare l'anca in avanti, esattamente come nel diretto.",
+      "Mentre l'anca gira, distendi il braccio e spingi la palla in linea retta verso il muro, all'altezza del viso.",
+      "A fine lancio il braccio è teso, la spalla protegge il mento e la mano anteriore è ancora alta.",
+      "Riprendi la palla, riportala alla spalla e torna in guardia prima del lancio successivo. Cambia lato alla fine della serie."
+    ],
+    "errors": [
+      "Spingere solo con il braccio, senza ruotare piede e anca: è un lancio di spalla, non un diretto.",
+      "Abbassare la mano anteriore durante il lancio: perdi l'abitudine alla guardia.",
+      "Usare una palla pesante: il gesto rallenta e la spalla si sovraccarica."
+    ],
+    "why": "Rende il diretto posteriore più esplosivo collegando gambe, anca e braccio in un unico movimento.",
+    "figure": [
+      {
+        "label": "Palla alla spalla",
+        "people": [
+          {
+            "pose": "forza-esplosiva/palla-spalla",
+            "x": -35,
+            "gloves": false
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "at": "hand"
+          },
+          {
+            "type": "box",
+            "x": 140,
+            "w": 10,
+            "h": 130
+          }
+        ]
+      },
+      {
+        "label": "Lancio da diretto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/diretto",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "at": "hand"
+          },
+          {
+            "type": "box",
+            "x": 140,
+            "w": 10,
+            "h": 130
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 25,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -297,6 +1044,58 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "4 × 5 lanci, recupero 90 s",
     "details": "Tieni la palla tra le gambe in mezzo squat, poi estendi esplosivamente anche e ginocchia lanciandola all'indietro sopra la testa il più lontano possibile. Controlla che lo spazio dietro sia libero. Allena l'estensione totale dell'anca, motore di salti, ginocchiate e calci.",
+    "setup": "All'aperto o in un ambiente grande, con lo spazio dietro di te completamente libero per diversi metri. Piedi alla larghezza delle spalle, palla tenuta con le braccia tese davanti al corpo.",
+    "steps": [
+      "Scendi a mezzo squat portando la palla in basso tra le gambe: sedere indietro, schiena dritta, braccia tese.",
+      "Da lì distendi in modo esplosivo anche, ginocchia e caviglie, come in un salto verticale.",
+      "Le braccia restano tese e salgono insieme al corpo, accompagnando la palla davanti al viso e poi sopra la testa.",
+      "Lascia la palla quando è sopra la testa, lanciandola all'indietro il più lontano possibile: alla fine puoi arrivare sulle punte o staccare i piedi.",
+      "Girati, controlla dove è caduta, recuperala e torna alla posizione di partenza."
+    ],
+    "errors": [
+      "Non controllare lo spazio dietro: puoi colpire qualcuno o qualcosa.",
+      "Tirare con le braccia piegate: il lancio viene dalle spalle invece che dalle anche.",
+      "Schiena curva in basso: il carico va sulla zona lombare."
+    ],
+    "why": "Allena l'estensione completa dell'anca, il motore di salti, ginocchiate e calci. Controlla sempre che lo spazio dietro sia libero.",
+    "figure": [
+      {
+        "label": "Palla tra le gambe",
+        "people": [
+          {
+            "pose": "forza-esplosiva/squat-palla-bassa"
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Estensione e lancio",
+        "people": [
+          {
+            "pose": "forza-esplosiva/estensione-indietro"
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -30,
+            "dy": -5,
+            "bend": 12
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -307,6 +1106,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 6 ripetizioni, recupero 90 s",
     "details": "In posizione di piegamento con corpo in linea, scendi controllato e spingi con forza così che le mani si stacchino da terra. Atterra con gomiti leggermente piegati e riparti subito. Sviluppa la potenza di spinta di petto e braccia, utile per pugni più incisivi.",
+    "setup": "In posizione di piegamento: mani a terra poco più larghe delle spalle, braccia tese, corpo in linea dalla testa ai talloni, piedi uniti o leggermente aperti.",
+    "steps": [
+      "Contrai addome e glutei per tenere il corpo rigido come una tavola.",
+      "Scendi controllato piegando i gomiti, tenuti a circa 45° dal busto, finché il petto è vicino a terra.",
+      "Dal basso spingi il pavimento con tutta la forza possibile, così che le mani si stacchino da terra.",
+      "Riappoggia le mani nello stesso punto con i gomiti già leggermente piegati, per ammortizzare.",
+      "Scendi subito nel piegamento successivo, sempre con il corpo in linea."
+    ],
+    "errors": [
+      "Bacino che cade o sedere alto durante la spinta: perdi la tensione e carichi la schiena.",
+      "Riatterrare a braccia tese e bloccate: l'impatto va tutto su polsi e gomiti.",
+      "Gomiti molto larghi: sovraccarichi le spalle."
+    ],
+    "why": "Sviluppa la potenza di spinta di petto e braccia, utile per pugni più incisivi.",
+    "figure": [
+      {
+        "label": "Petto vicino a terra",
+        "people": [
+          {
+            "pose": "forza-esplosiva/piegamento-basso"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 0,
+            "dy": -25
+          }
+        ]
+      },
+      {
+        "label": "Mani staccate",
+        "people": [
+          {
+            "pose": "forza-esplosiva/piegamento-volo"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -317,6 +1155,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 5 ripetizioni, recupero 90 s",
     "details": "Come un piegamento esplosivo, ma spingi abbastanza da battere le mani in volo prima di riappoggiarle. Mantieni addome e glutei contratti per non inarcare la schiena. Se la tecnica cala, torna al piegamento esplosivo semplice. Migliora velocità e forza reattiva della parte alta.",
+    "setup": "In posizione di piegamento con le mani poco più larghe delle spalle, braccia tese e corpo in linea. Meglio su un tappetino, per attutire l'atterraggio.",
+    "steps": [
+      "Contrai addome e glutei: il corpo deve restare rigido dall'inizio alla fine.",
+      "Scendi controllato finché il petto è vicino a terra, gomiti a circa 45° dal busto.",
+      "Spingi in modo esplosivo, più forte che nel piegamento esplosivo semplice, così da staccare le mani e alzare il busto.",
+      "In volo batti velocemente le mani davanti al petto e riaprile subito alla larghezza di partenza.",
+      "Riatterra con i gomiti morbidi, assorbi scendendo nel piegamento e riparti. Se la tecnica cala, torna al piegamento esplosivo semplice."
+    ],
+    "errors": [
+      "Inarcare la schiena per guadagnare tempo in volo: carichi la zona lombare.",
+      "Battere le mani senza avere abbastanza altezza: rischi di cadere di faccia.",
+      "Riatterrare a braccia tese o con le mani troppo strette: polsi e gomiti prendono tutto l'impatto."
+    ],
+    "why": "Migliora velocità e forza reattiva della parte alta del corpo, quella che rende i pugni rapidi e pesanti.",
+    "figure": [
+      {
+        "label": "Discesa",
+        "people": [
+          {
+            "pose": "forza-esplosiva/piegamento-basso"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 0,
+            "dy": -25
+          }
+        ]
+      },
+      {
+        "label": "Battuta in volo",
+        "people": [
+          {
+            "pose": "forza-esplosiva/piegamento-battuta"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -327,6 +1204,58 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "3 × 6 ripetizioni, recupero 90 s",
     "details": "Una mano su una palla medica e l'altra a terra: spingi in modo esplosivo e sposta il corpo lateralmente in volo, scambiando la mano sulla palla. Corpo rigido e core attivo durante tutto il movimento. Allena potenza e coordinazione asimmetrica delle braccia, come nelle combinazioni di pugni.",
+    "setup": "In posizione di piegamento con una mano appoggiata sopra una palla medica e l'altra a terra, alla larghezza delle spalle. Corpo in linea, piedi un po' aperti per la stabilità.",
+    "steps": [
+      "Contrai addome e glutei e scendi controllato finché il petto è vicino alla palla.",
+      "Spingi con forza con entrambe le braccia così da staccare le mani da terra e dalla palla.",
+      "In volo sposta il busto di lato: la mano che era a terra va sopra la palla e quella che era sulla palla va a terra dall'altra parte.",
+      "Riatterra con i gomiti morbidi, palla stabile sotto il palmo, e scendi subito nel piegamento successivo.",
+      "Continua alternando i lati, mantenendo il corpo rigido e i fianchi allineati alle spalle."
+    ],
+    "errors": [
+      "Mano non centrata sulla palla: la palla scappa e puoi cadere sul viso o farti male al polso.",
+      "Fianchi che si girano o il bacino che cade durante lo spostamento: perdi il controllo del tronco.",
+      "Fare il cambio senza staccare davvero le mani: diventa un passo, non un esercizio esplosivo."
+    ],
+    "why": "Allena potenza e coordinazione delle braccia quando lavorano in modo diverso, come nelle combinazioni di pugni. Usa una palla che non rotoli facilmente.",
+    "figure": [
+      {
+        "label": "Mano sulla palla",
+        "people": [
+          {
+            "pose": "forza-esplosiva/piegamento-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 0,
+            "dy": -25
+          }
+        ]
+      },
+      {
+        "label": "Spinta e cambio",
+        "people": [
+          {
+            "pose": "forza-esplosiva/piegamento-volo"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -18
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -399,6 +1328,58 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "3 × 8 per braccio, recupero 60 s",
     "details": "Esegui lo swing con una sola mano, resistendo alla rotazione del busto e tenendo le spalle squadrate. Spinta d'anca secca e braccio libero che si muove in modo naturale. Rinforza il core anti-rotazione e la potenza unilaterale, utile per stabilità nei colpi e nel clinch.",
+    "setup": "Kettlebell a terra circa 30 cm davanti a te, piedi poco più larghi delle spalle. Piega le anche, schiena dritta, e afferra la maniglia con una mano sola; l'altra è libera.",
+    "steps": [
+      "Fai oscillare la kettlebell all'indietro tra le gambe, come un passaggio da football: l'avambraccio tocca l'interno della coscia, il sedere va indietro, le ginocchia si piegano poco.",
+      "Spingi in avanti le anche con un colpo secco, stringendo i glutei: la kettlebell sale davanti a te fino all'altezza del petto, spinta dalle anche e non dal braccio.",
+      "Le spalle restano squadrate e parallele al pavimento: la kettlebell tende a girarti il busto, tu resisti contraendo l'addome.",
+      "Il braccio libero accompagna il movimento in modo naturale, vicino al fianco o leggermente avanti.",
+      "Lascia ricadere la kettlebell tra le gambe piegando di nuovo le anche e riparti. A fine serie cambia mano."
+    ],
+    "errors": [
+      "Sollevare la kettlebell con la spalla: il braccio è solo una corda, la forza viene dalle anche.",
+      "Lasciare che le spalle ruotino verso il lato della kettlebell: perdi il lavoro anti-rotazione e sovraccarichi la schiena.",
+      "Fare uno squat invece di piegare le anche: le ginocchia lavorano troppo e la spinta perde forza."
+    ],
+    "why": "Rinforza il core anti-rotazione e la potenza di un lato alla volta, utile per la stabilità nei colpi e nel clinch.",
+    "figure": [
+      {
+        "label": "Carica tra le gambe",
+        "people": [
+          {
+            "pose": "forza-esplosiva/swing-carica-1"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 50,
+            "dy": -40,
+            "bend": -15
+          }
+        ]
+      },
+      {
+        "label": "Spinta d'anca",
+        "people": [
+          {
+            "pose": "forza-esplosiva/swing-alto-1"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -409,6 +1390,72 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni, recupero 2 min",
     "details": "Con il bilanciere a terra e schiena neutra, solleva fino alle ginocchia, poi estendi esplosivamente anche, ginocchia e caviglie e ricevi il bilanciere sulle spalle in mezzo squat. Carico moderato e tecnica perfetta prima di aumentare. Sviluppa potenza totale del corpo, trasferibile a ogni azione esplosiva.",
+    "setup": "Bilanciere a terra sopra la metà dei piedi, piedi alla larghezza delle anche. Afferra la sbarra poco fuori dalle ginocchia, spalle sopra o appena davanti alla sbarra, schiena neutra, petto aperto, braccia tese.",
+    "steps": [
+      "Solleva il bilanciere da terra spingendo il pavimento con le gambe, lentamente e con controllo, fino a superare le ginocchia. La schiena mantiene lo stesso angolo.",
+      "Quando la sbarra è a metà coscia, estendi in modo esplosivo anche, ginocchia e caviglie, salendo sulle punte e facendo spallucce: il bilanciere sale vicino al corpo.",
+      "Subito dopo tira il corpo sotto la sbarra: i gomiti girano velocemente in avanti e in alto.",
+      "Ricevi il bilanciere appoggiato sulle spalle, davanti al collo, in mezzo squat, gomiti alti e mani rilassate sulla sbarra.",
+      "Alzati in piedi, poi riporta il bilanciere a terra in modo controllato e risistemati prima della ripetizione successiva."
+    ],
+    "errors": [
+      "Tirare con le braccia piegate fin dall'inizio: perdi la spinta delle gambe e affatichi i gomiti.",
+      "Bilanciere lontano dal corpo: la traiettoria si allunga e la schiena si carica.",
+      "Ricevere a gomiti bassi: il bilanciere scivola avanti e pesa sui polsi.",
+      "Aumentare il carico prima di avere una tecnica sicura."
+    ],
+    "why": "Sviluppa la potenza di tutto il corpo, trasferibile a ogni azione esplosiva sul ring. Usa carichi moderati e tecnica perfetta, meglio con la supervisione di un allenatore.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "forza-esplosiva/clean-partenza"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Estensione",
+        "people": [
+          {
+            "pose": "forza-esplosiva/clean-tirata"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      },
+      {
+        "label": "Ricezione",
+        "people": [
+          {
+            "pose": "forza-esplosiva/clean-ricezione"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -419,6 +1466,71 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 3 ripetizioni, recupero 2 min",
     "details": "Parti in piedi con il bilanciere appena sopra le ginocchia, anche indietro e schiena dritta; estendi in modo esplosivo e ricevi il bilanciere sulle spalle con gomiti alti. È più semplice da imparare del power clean. Allena la tripla estensione rapida, la stessa che dà forza a ginocchiate e calci.",
+    "setup": "In piedi con il bilanciere in mano, presa poco più larga delle cosce, braccia tese. Piega le anche portando il sedere indietro finché la sbarra è appena sopra le ginocchia: schiena dritta, spalle sopra la sbarra, ginocchia leggermente piegate.",
+    "steps": [
+      "Parti fermo nella posizione alta: peso su tutta la pianta, bilanciere a contatto con le cosce, sguardo avanti.",
+      "Estendi in modo esplosivo anche, ginocchia e caviglie, salendo sulle punte e facendo spallucce: il bilanciere sale vicino al corpo.",
+      "Appena il bilanciere smette di salire, tirati sotto: piega le gambe e ruota velocemente i gomiti in avanti.",
+      "Ricevi il bilanciere sulle spalle, davanti al collo, in mezzo squat, con i gomiti alti e puntati avanti.",
+      "Alzati in piedi, poi riporta il bilanciere alla posizione sopra le ginocchia in modo controllato."
+    ],
+    "errors": [
+      "Tirare con le braccia invece di spingere con le anche: il bilanciere sale poco e affatichi i gomiti.",
+      "Spingere le anche in avanti e allontanare il bilanciere dal corpo: la traiettoria si allarga e perdi il controllo.",
+      "Ricevere a gambe tese o con i gomiti bassi: il colpo arriva su schiena e polsi."
+    ],
+    "why": "Allena la tripla estensione rapida (anca, ginocchio, caviglia), la stessa che dà forza a ginocchiate e calci. È più semplice da imparare del power clean; usa carichi moderati.",
+    "figure": [
+      {
+        "label": "Sopra le ginocchia",
+        "people": [
+          {
+            "pose": "forza-esplosiva/hang"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Estensione",
+        "people": [
+          {
+            "pose": "forza-esplosiva/clean-tirata"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      },
+      {
+        "label": "Ricezione",
+        "people": [
+          {
+            "pose": "forza-esplosiva/clean-ricezione"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -429,6 +1541,57 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 90 s",
     "details": "Con il bilanciere sulle spalle, fai un piccolo piegamento rapido delle ginocchia e usa la spinta delle gambe per portarlo sopra la testa a braccia tese. Core contratto e niente iperestensione della schiena. Insegna a trasferire la forza dalle gambe alle braccia, come nei pugni potenti.",
+    "setup": "In piedi con il bilanciere appoggiato sulle spalle, davanti al collo, mani poco più larghe delle spalle, gomiti leggermente avanti. Piedi alla larghezza delle anche, addome e glutei contratti.",
+    "steps": [
+      "Fai un piccolo piegamento rapido delle ginocchia (pochi centimetri), tenendo il busto verticale e il peso sui talloni.",
+      "Senza fermarti in basso, distendi con forza le gambe: è questa spinta che fa partire il bilanciere dalle spalle.",
+      "Mentre il bilanciere sale, sposta leggermente la testa indietro per farlo passare e completa con le braccia fino a gomiti tesi.",
+      "In alto il bilanciere è sopra la testa, in linea con orecchie e anche, addome contratto.",
+      "Riporta il bilanciere sulle spalle piegando leggermente le ginocchia per ammortizzare, poi ripeti."
+    ],
+    "errors": [
+      "Piegamento troppo profondo o lento: diventa uno squat e perdi l'effetto molla.",
+      "Inarcare la schiena in alto: carichi la zona lombare; tieni addome e glutei contratti.",
+      "Spingere prima con le braccia e poi con le gambe: la sequenza è gambe, poi braccia."
+    ],
+    "why": "Insegna a trasferire la forza dalle gambe alle braccia, come succede nei pugni potenti.",
+    "figure": [
+      {
+        "label": "Piccolo piegamento",
+        "people": [
+          {
+            "pose": "forza-esplosiva/rack-dip"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 0,
+            "dy": -20
+          }
+        ]
+      },
+      {
+        "label": "Sopra la testa",
+        "people": [
+          {
+            "pose": "forza-esplosiva/sopra-testa"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -439,6 +1602,58 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2 min",
     "details": "Con bilanciere leggero sulle spalle o manubri in mano (20-30% del massimale), scendi a mezzo squat e salta al massimo. Atterra morbido, stabilizzati e riparti. Il carico deve permettere un salto veloce: se rallenti è troppo pesante. Aumenta la potenza delle gambe per calci e spostamenti.",
+    "setup": "In piedi con un bilanciere leggero appoggiato sulla parte alta della schiena (non sul collo) oppure con due manubri leggeri in mano, circa il 20-30% del tuo massimale. Piedi alla larghezza delle spalle.",
+    "steps": [
+      "Tieni il bilanciere ben fermo contro la schiena tirandolo verso il basso con le mani, petto aperto.",
+      "Scendi a mezzo squat, sedere indietro e schiena dritta.",
+      "Salta in verticale il più in alto possibile, distendendo completamente anche, ginocchia e caviglie.",
+      "Atterra sugli avampiedi e poi su tutto il piede, piegando le ginocchia per ammortizzare, con il bilanciere sempre aderente alla schiena.",
+      "Stabilizzati un istante in piedi e riparti. Se ti accorgi che il salto rallenta, il carico è troppo pesante."
+    ],
+    "errors": [
+      "Carico troppo pesante: il salto diventa lento e alleni la forza, non la potenza.",
+      "Bilanciere che si stacca dalla schiena in volo: all'atterraggio ti colpisce le spalle.",
+      "Atterrare rigidi a gambe tese: il carico finisce su ginocchia e colonna."
+    ],
+    "why": "Aumenta la potenza delle gambe per calci e spostamenti, aggiungendo un piccolo carico al salto.",
+    "figure": [
+      {
+        "label": "Mezzo squat",
+        "people": [
+          {
+            "pose": "forza-esplosiva/bar-schiena-squat"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      },
+      {
+        "label": "Salto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/bar-schiena-salto",
+            "air": 22
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -449,6 +1664,71 @@ export const exercises: Exercise[] = [
     "equipment": "Manubrio",
     "dose": "3 × 4 per braccio, recupero 90 s",
     "details": "Con il manubrio a terra tra i piedi, estendi esplosivamente le anche e tira il manubrio vicino al corpo fino a bloccarlo sopra la testa a braccio teso. Ricevi con ginocchia leggermente piegate e polso fermo. Sviluppa potenza unilaterale e coordinazione tra gambe, tronco e spalla.",
+    "setup": "In piedi con un manubrio a terra tra i piedi, piedi poco più larghi delle anche. Piega anche e ginocchia come per uno stacco e afferra il manubrio con una mano, braccio teso, schiena dritta; l'altra mano è libera di lato.",
+    "steps": [
+      "Solleva il manubrio da terra spingendo con le gambe, schiena sempre neutra, finché arriva sopra le ginocchia.",
+      "Estendi in modo esplosivo anche, ginocchia e caviglie, salendo sulle punte: è questa spinta che lancia il manubrio verso l'alto.",
+      "Tira il manubrio vicino al corpo con il gomito alto, come a chiudere una cerniera della giacca.",
+      "Quando il manubrio arriva all'altezza del viso, ruota il polso e infila il braccio sotto, bloccandolo sopra la testa a braccio teso.",
+      "Ricevi con le ginocchia leggermente piegate e il polso fermo, poi alzati in piedi. Riporta il manubrio a terra in modo controllato e alterna le mani."
+    ],
+    "errors": [
+      "Alzare il manubrio con la sola spalla, a gambe ferme: la spalla si sovraccarica.",
+      "Manubrio lontano dal corpo durante la tirata: il carico tira avanti la schiena.",
+      "Polso piegato o gomito non bloccato in alto: il manubrio oscilla e rischi di farti male."
+    ],
+    "why": "Sviluppa la potenza di un lato alla volta e la coordinazione tra gambe, tronco e spalla.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "forza-esplosiva/snatch-partenza"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Tirata alta",
+        "people": [
+          {
+            "pose": "forza-esplosiva/snatch-tirata"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -28
+          }
+        ]
+      },
+      {
+        "label": "Braccio teso in alto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/snatch-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "manubri"
   },
   {
@@ -459,6 +1739,57 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "3 × 6 per lato, recupero 90 s",
     "details": "In guardia con l'estremità del bilanciere ancorato alla spalla posteriore, spingi in avanti ruotando il piede e l'anca come in un diretto fino a braccio teso. Il busto ruota insieme, non solo il braccio. Rinforza la catena del diretto posteriore con un carico progressivo e sicuro.",
+    "setup": "Un'estremità del bilanciere è fissata a terra (in un angolo o in un supporto apposito), l'altra la tieni con la mano posteriore davanti alla spalla. Mettiti in guardia di fronte al bilanciere, mano anteriore alta a protezione del viso.",
+    "steps": [
+      "Carica il peso sulla gamba posteriore, gomito basso e vicino al corpo, come prima di un diretto.",
+      "Ruota il piede posteriore sull'avampiede e fai girare l'anca verso l'avanti, esattamente come nel diretto.",
+      "Mentre l'anca gira, spingi il bilanciere in avanti e in alto fino a distendere completamente il braccio.",
+      "Il busto ruota insieme al braccio e la spalla finisce vicino al mento a proteggerlo.",
+      "Torna controllato in guardia riportando il bilanciere alla spalla e ripeti. A fine serie cambia guardia."
+    ],
+    "errors": [
+      "Spingere solo con il braccio, a busto fermo: perdi il legame con le gambe e affatichi la spalla.",
+      "Piede posteriore piatto: le anche non ruotano.",
+      "Lasciare scendere la mano anteriore: perdi l'abitudine alla guardia."
+    ],
+    "why": "Rinforza la catena del diretto posteriore (piede, anca, busto, braccio) con un carico progressivo e sicuro per la spalla.",
+    "figure": [
+      {
+        "label": "Bilanciere alla spalla",
+        "people": [
+          {
+            "pose": "forza-esplosiva/landmine-carica"
+          }
+        ],
+        "props": [
+          {
+            "type": "plate",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Spinta da diretto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/landmine-spinta"
+          }
+        ],
+        "props": [
+          {
+            "type": "plate",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 20,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -469,6 +1800,56 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "3 × 8 per lato, recupero 60 s",
     "details": "Tieni l'estremità del bilanciere ancorato con le braccia tese davanti al petto e portalo rapidamente da un fianco all'altro ruotando anche e piedi. Controlla la frenata a fine rotazione senza curvare la schiena. Allena la potenza rotazionale del core per ganci, calci circolari e gomitate.",
+    "setup": "Un'estremità del bilanciere è fissata a terra, l'altra la tieni con entrambe le mani sovrapposte davanti al petto, braccia tese. Piedi alla larghezza delle spalle, ginocchia morbide, di fronte al bilanciere.",
+    "steps": [
+      "Porta rapidamente il bilanciere verso un fianco, all'altezza dell'anca, ruotando anche e piedi dalla stessa parte: il piede opposto ruota sull'avampiede.",
+      "Frena il movimento a fine rotazione contraendo l'addome, senza curvare la schiena.",
+      "Riparti subito nella direzione opposta: il bilanciere disegna un arco sopra la testa passando davanti al viso.",
+      "Arriva all'altro fianco con la stessa rotazione dei piedi e delle anche.",
+      "Le braccia restano quasi tese: il movimento lo fanno anche e busto, non le spalle."
+    ],
+    "errors": [
+      "Ruotare solo con le braccia, a piedi fermi: la torsione va tutta sulla schiena.",
+      "Curvare la schiena per frenare il bilanciere: carichi la zona lombare.",
+      "Andare troppo in basso o troppo lontano dal corpo: perdi il controllo del carico."
+    ],
+    "why": "Allena la potenza rotazionale del tronco, e la capacità di frenarla, per ganci, calci circolari e gomitate.",
+    "figure": [
+      {
+        "label": "Braccia tese al centro",
+        "people": [
+          {
+            "pose": "forza-esplosiva/landmine-centro"
+          }
+        ],
+        "props": [
+          {
+            "type": "plate"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 10,
+            "dy": 40,
+            "bend": -18
+          }
+        ]
+      },
+      {
+        "label": "Al fianco",
+        "people": [
+          {
+            "pose": "forza-esplosiva/landmine-fianco"
+          }
+        ],
+        "props": [
+          {
+            "type": "plate"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -479,6 +1860,65 @@ export const exercises: Exercise[] = [
     "equipment": "Elastico",
     "dose": "3 × 8 per braccio, recupero 60 s",
     "details": "Con l'elastico ancorato dietro di te e impugnato, in guardia esegui diretti esplosivi contro la resistenza ritornando subito in guardia. Ruota il piede e l'anca a ogni colpo e controlla il ritorno. Aumenta velocità e potenza del pugno lavorando sulla fase di accelerazione.",
+    "setup": "Fissa l'elastico a un punto solido dietro di te, all'altezza delle spalle. Impugnalo con la mano posteriore e mettiti in guardia, avanzando finché l'elastico è già un po' teso con la mano al mento.",
+    "steps": [
+      "Parti in guardia, mani alte e mento basso, peso leggero sull'avampiede posteriore.",
+      "Tira il diretto con la mano posteriore in modo esplosivo: ruota il piede posteriore sull'avampiede, gira l'anca e distendi il braccio in linea retta.",
+      "Allo stesso tempo la mano anteriore resta alta a coprire il viso e la spalla del braccio che colpisce protegge il mento.",
+      "Riporta subito la mano al mento controllando la trazione dell'elastico, senza farti tirare indietro.",
+      "Lavora a colpi singoli e secchi, tornando ogni volta in guardia completa. Alla fine cambia lato."
+    ],
+    "errors": [
+      "Lasciarsi riportare indietro dall'elastico: la mano torna bassa e lenta, proprio l'errore che si paga sul ring.",
+      "Spingere solo con il braccio senza ruotare piede e anca.",
+      "Elastico troppo duro: il pugno rallenta e la tecnica si deforma."
+    ],
+    "why": "Aumenta velocità e potenza del pugno lavorando sulla fase di accelerazione e sul ritorno rapido in guardia.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "forza-esplosiva/guardia-b",
+            "x": 10,
+            "gloves": true
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 4,
+            "y": 70
+          }
+        ]
+      },
+      {
+        "label": "Diretto esplosivo",
+        "people": [
+          {
+            "pose": "forza-esplosiva/diretto",
+            "x": 10,
+            "gloves": true
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 4,
+            "y": 70
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 18,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "elastico"
   },
   {
@@ -489,6 +1929,65 @@ export const exercises: Exercise[] = [
     "equipment": "Elastico",
     "dose": "3 × 8 per gamba, recupero 60 s",
     "details": "Con l'elastico alla caviglia ancorato dietro, in guardia esegui il teep alzando il ginocchio e spingendo con il tallone in avanti, poi richiama rapidamente. Mantieni l'equilibrio sulla gamba d'appoggio e le mani alte. Rende il teep più esplosivo e rinforza i flessori dell'anca.",
+    "setup": "Fissa l'elastico a un punto basso e solido dietro di te e infila l'altro capo alla caviglia della gamba che calcia. Mettiti in guardia, abbastanza avanti da sentire già un po' di tensione.",
+    "steps": [
+      "Dalla guardia alza il ginocchio della gamba con l'elastico verso il petto, mani alte.",
+      "Spingi il piede in avanti con decisione, colpendo con la pianta e l'avampiede, punte verso l'alto, come per spingere via una porta.",
+      "Nel momento della spinta porta leggermente l'anca in avanti e il busto un poco indietro; la gamba d'appoggio resta stabile, sull'avampiede.",
+      "Richiama rapidamente la gamba al ginocchio alto, resistendo all'elastico, e poi rimetti giù il piede in guardia.",
+      "Esegui calci singoli ed esplosivi, ritornando ogni volta in guardia. A fine serie cambia gamba."
+    ],
+    "errors": [
+      "Calciare a gamba tesa senza alzare prima il ginocchio: il teep diventa una spinta debole e lenta.",
+      "Lasciare che l'elastico riporti giù la gamba di colpo: perdi il controllo e l'equilibrio.",
+      "Abbassare le mani durante il calcio."
+    ],
+    "why": "Rende il teep più esplosivo e rinforza i flessori dell'anca che sollevano il ginocchio.",
+    "figure": [
+      {
+        "label": "Ginocchio al petto",
+        "people": [
+          {
+            "pose": "teep-carica",
+            "gloves": true,
+            "x": 5
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "foot",
+            "x": 4,
+            "y": 132
+          }
+        ]
+      },
+      {
+        "label": "Spinta con la pianta",
+        "people": [
+          {
+            "pose": "teep-spinta",
+            "gloves": true,
+            "x": -5
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "foot",
+            "x": 4,
+            "y": 132
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 30,
+            "dy": -2
+          }
+        ]
+      }
+    ],
     "tool": "elastico"
   },
   {
@@ -499,6 +1998,66 @@ export const exercises: Exercise[] = [
     "equipment": "Elastico",
     "dose": "3 × 10 per gamba, recupero 60 s",
     "details": "Con l'elastico alla caviglia ancorato dietro, porta la ginocchiata in avanti e in alto spingendo l'anca, come se tirassi a te la testa dell'avversario. Sali sull'avampiede della gamba d'appoggio e richiama controllato. Sviluppa velocità e potenza della ginocchiata.",
+    "setup": "Fissa l'elastico a un punto basso dietro di te e infila l'altro capo alla caviglia della gamba posteriore. Mettiti in guardia, con le mani in avanti come se tenessi la testa dell'avversario.",
+    "steps": [
+      "Sali sull'avampiede della gamba d'appoggio e spingi l'anca in avanti.",
+      "Porta il ginocchio in avanti e verso l'alto con forza, punta del piede verso il basso e tallone vicino al gluteo.",
+      "Mentre il ginocchio sale, tira le mani verso il basso, come se portassi la testa dell'avversario contro il ginocchio; il busto va leggermente indietro.",
+      "Richiama la gamba in modo controllato, resistendo all'elastico, e rimetti il piede dietro in guardia.",
+      "Esegui ginocchiate singole e al massimo della velocità. A fine serie cambia gamba."
+    ],
+    "errors": [
+      "Alzare il ginocchio senza spingere l'anca: la ginocchiata resta corta e debole.",
+      "Piede d'appoggio piatto: perdi la spinta e la stabilità.",
+      "Piegare il busto in avanti verso il ginocchio: accorci il colpo e ti esponi."
+    ],
+    "why": "Sviluppa velocità e potenza della ginocchiata, una delle armi principali della Muay Thai.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "forza-esplosiva/guardia-b",
+            "gloves": true,
+            "x": 10
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "foot",
+            "x": 4,
+            "y": 132
+          }
+        ]
+      },
+      {
+        "label": "Ginocchio e anca avanti",
+        "people": [
+          {
+            "pose": "forza-esplosiva/ginocchiata",
+            "gloves": true,
+            "x": 5
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "foot",
+            "x": 4,
+            "y": 132
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 12,
+            "dy": -20,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "elastico"
   },
   {
@@ -509,6 +2068,63 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "5 × 5 per gamba, recupero 90 s",
     "details": "In guardia davanti al sacco, esegui calci circolari alla massima potenza ruotando completamente il piede d'appoggio e l'anca, tornando in guardia tra un calcio e l'altro. Ogni calcio deve essere al 100%: se la qualità cala, fermati. Trasferisce la forza esplosiva direttamente al gesto tecnico.",
+    "setup": "In guardia davanti al sacco, alla distanza giusta per colpire con la tibia (non con il piede). Si descrive il calcio con la gamba posteriore.",
+    "steps": [
+      "Fai un piccolo passo in diagonale verso l'esterno con il piede anteriore, punta verso fuori, per aprire l'angolo.",
+      "Sali sull'avampiede della gamba d'appoggio e ruota il tallone verso il sacco: è questa rotazione che fa girare le anche fino in fondo.",
+      "Lancia la gamba posteriore quasi tesa facendo ruotare tutto il corpo e colpisci il sacco con la parte bassa della tibia, alla massima potenza.",
+      "Il braccio dello stesso lato scende indietro per dare forza, l'altra mano resta alta a coprire il viso.",
+      "Riporta la gamba, torna in guardia completa e prenditi qualche secondo prima del calcio successivo.",
+      "Ogni calcio deve essere al 100%: quando la potenza cala, fermati e recupera."
+    ],
+    "errors": [
+      "Piede d'appoggio piatto e fermo: le anche non ruotano e il calcio perde potenza.",
+      "Colpire con il collo del piede: fa male e si rischia di romperlo.",
+      "Calciare di continuo senza recupero: diventa un lavoro di resistenza e la potenza cala."
+    ],
+    "why": "Trasferisce la forza esplosiva direttamente al gesto tecnico più importante della Muay Thai.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true,
+            "x": -15
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Impatto con la tibia",
+        "people": [
+          {
+            "pose": "calcio-circolare",
+            "gloves": true,
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 25,
+            "dy": 18,
+            "bend": 18
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -519,6 +2135,62 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "5 × 6 per gamba, recupero 90 s",
     "details": "Al sacco, afferra o simula la presa e porta ginocchiate singole al massimo della potenza spingendo l'anca in avanti, poi richiama subito la gamba. Mantieni il busto alto e l'appoggio sull'avampiede. Allena la potenza della ginocchiata e il rapido ritorno in posizione.",
+    "setup": "In guardia vicino al sacco, a distanza di clinch: le mani possono afferrarlo all'altezza della testa. Afferra il sacco con le mani sovrapposte dietro, come una presa al collo, oppure tieni le mani alte se simuli la presa.",
+    "steps": [
+      "Porta il peso sulla gamba anteriore e sali sull'avampiede, gamba posteriore pronta a partire.",
+      "Lancia il ginocchio posteriore in avanti e in alto spingendo forte l'anca contro il sacco: la punta del piede guarda in basso.",
+      "Mentre il ginocchio colpisce, tira il sacco verso di te con le mani e porta le spalle leggermente indietro, busto alto.",
+      "Colpisci con la punta del ginocchio, al massimo della potenza, poi richiama subito la gamba e rimetti il piede in guardia.",
+      "Fai una breve pausa per tornare composto e ripeti. Ogni ginocchiata deve essere singola e al 100%."
+    ],
+    "errors": [
+      "Piegarsi in avanti verso il sacco: la ginocchiata si accorcia e perde potenza.",
+      "Spingere solo con la coscia senza portare avanti l'anca: il colpo resta debole.",
+      "Lasciare il piede d'appoggio piatto: perdi spinta ed equilibrio."
+    ],
+    "why": "Allena la potenza della ginocchiata e il ritorno rapido in posizione, fondamentali nel clinch.",
+    "figure": [
+      {
+        "label": "Guardia vicino",
+        "people": [
+          {
+            "pose": "forza-esplosiva/guardia-b",
+            "gloves": true,
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Anca dentro",
+        "people": [
+          {
+            "pose": "forza-esplosiva/ginocchiata",
+            "gloves": true,
+            "x": 2
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 10,
+            "dy": -18,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -529,6 +2201,61 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "5 × 6 per braccio, recupero 60 s",
     "details": "In guardia, esegui diretti singoli alla massima potenza ruotando piede e anca e chiudendo il pugno all'impatto, poi torna in guardia. Pausa breve tra un colpo e l'altro per mantenere la qualità al massimo. Allena il trasferimento di forza da terra al pugno.",
+    "setup": "In guardia davanti al sacco, a una distanza in cui il pugno posteriore arriva a braccio quasi teso. Mani alte, mento basso, peso leggero sull'avampiede posteriore.",
+    "steps": [
+      "Dalla guardia lancia il diretto con la mano posteriore: il movimento parte dal piede posteriore, che ruota sull'avampiede con il tallone verso fuori.",
+      "Anca e spalla girano in avanti e il braccio si distende in linea retta verso il sacco, senza caricare indietro.",
+      "Chiudi forte il pugno solo al momento dell'impatto, colpendo con le prime due nocche; la spalla protegge il mento.",
+      "La mano anteriore resta alta vicino al viso per tutto il colpo.",
+      "Riporta subito la mano al viso lungo la stessa linea e torna in guardia completa. Pausa breve, poi colpo successivo: qualità sempre al massimo."
+    ],
+    "errors": [
+      "Caricare il pugno portando la mano indietro: il colpo si vede arrivare e perde tempo.",
+      "Colpire solo con il braccio, a piede e anca fermi: perdi la forza che viene da terra.",
+      "Abbassare la mano anteriore o lasciare il braccio teso dopo l'impatto: resti scoperto."
+    ],
+    "why": "Allena il trasferimento della forza da terra al pugno, per un diretto che fa male.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "forza-esplosiva/guardia-b",
+            "gloves": true,
+            "x": -15
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Diretto con rotazione",
+        "people": [
+          {
+            "pose": "forza-esplosiva/diretto",
+            "gloves": true,
+            "x": -22
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 20,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -538,7 +2265,47 @@ export const exercises: Exercise[] = [
     "description": "Spinta della slitta su brevi distanze alla massima velocità.",
     "equipment": "Slitta",
     "dose": "6 × 15 m, recupero 2 min",
-    "details": "Con le braccia tese e il busto inclinato in avanti, spingi la slitta con passi corti e potenti, spingendo con forza dall'avampiede. Carico tale da permettere uno sprint, non una camminata. Sviluppa la forza di spinta di gambe e anche utile nel clinch e per far indietreggiare l'avversario."
+    "details": "Con le braccia tese e il busto inclinato in avanti, spingi la slitta con passi corti e potenti, spingendo con forza dall'avampiede. Carico tale da permettere uno sprint, non una camminata. Sviluppa la forza di spinta di gambe e anche utile nel clinch e per far indietreggiare l'avversario.",
+    "setup": "Dietro la slitta, mani sulle maniglie, braccia tese. Inclina il busto in avanti finché il corpo forma una linea dritta dalla testa al tallone della gamba posteriore.",
+    "steps": [
+      "Parti con una gamba piegata sotto il corpo e l'altra dietro, sull'avampiede, come un velocista in partenza.",
+      "Spingi con forza dall'avampiede della gamba posteriore, distendendo completamente anca, ginocchio e caviglia.",
+      "Porta avanti l'altra gamba con un passo corto e potente, ginocchio alto, e spingi di nuovo.",
+      "Mantieni braccia tese, schiena dritta e addome contratto: la forza passa dalle gambe alla slitta attraverso un busto rigido.",
+      "Accelera fino alla fine del tratto, poi torna camminando e recupera completamente."
+    ],
+    "errors": [
+      "Carico troppo pesante: diventa una camminata lenta, non una spinta esplosiva.",
+      "Schiena curva o bacino che cade: la forza si disperde e la schiena si carica.",
+      "Passi lunghi con il piede che atterra davanti al corpo: freni invece di spingere."
+    ],
+    "why": "Sviluppa la forza di spinta di gambe e anche, utile nel clinch e per far indietreggiare l'avversario.",
+    "figure": [
+      {
+        "label": "Spinta dall'avampiede",
+        "people": [
+          {
+            "pose": "forza-esplosiva/spinta-slitta",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 134,
+            "w": 20,
+            "h": 70
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot2",
+            "dx": -18,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-esplosiva--sprint-in-salita-brevi",
@@ -548,6 +2315,30 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "6 × 10-15 m, recupero 90 s",
     "details": "Su una salita moderata, scatta alla massima velocità con busto inclinato, braccia attive e ginocchia alte, poi torna camminando. Il recupero completo è parte dell'esercizio. Allena accelerazione e potenza delle gambe con un basso impatto sulle articolazioni.",
+    "setup": "Su una salita moderata e regolare, senza buche, segna un tratto di 10-15 metri. Parti in piedi alla base, un piede avanti e uno dietro, busto leggermente inclinato in avanti.",
+    "steps": [
+      "Al via spingi con forza dall'avampiede e parti alla massima velocità.",
+      "Tieni il busto inclinato in avanti, in linea con la pendenza, e lo sguardo una decina di metri avanti.",
+      "Porta le ginocchia alte e appoggia il piede sotto il corpo, sull'avampiede, spingendo indietro il terreno a ogni passo.",
+      "Le braccia lavorano attive e veloci, gomiti a circa 90°, mani che vanno dal fianco all'altezza del mento.",
+      "Arrivato in cima rallenta gradualmente e torna giù camminando: il recupero completo fa parte dell'esercizio."
+    ],
+    "errors": [
+      "Busto dritto o all'indietro: perdi spinta e la salita ti frena.",
+      "Ripartire prima di aver recuperato: diventa resistenza e la velocità cala.",
+      "Tornare giù di corsa: carichi inutilmente ginocchia e muscoli anteriori."
+    ],
+    "why": "Allena l'accelerazione e la potenza delle gambe con un impatto basso sulle articolazioni.",
+    "figure": [
+      {
+        "label": "Busto inclinato",
+        "people": [
+          {
+            "pose": "forza-esplosiva/sprint"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -558,6 +2349,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "6 × 10 m, recupero 60 s",
     "details": "Parti sdraiato a pancia in giù o in su, al segnale alzati il più rapidamente possibile e scatta per 10 metri. Variare la posizione di partenza allena anche la reazione. Migliora la capacità di generare potenza da posizioni sfavorevoli e di rialzarsi rapidamente.",
+    "setup": "Sdraiato a terra a pancia in giù o a pancia in su, con 10 metri di spazio libero davanti a te. Un compagno o l'allenatore dà il segnale.",
+    "steps": [
+      "Resta rilassato ma pronto, in ascolto del segnale.",
+      "Al via alzati il più rapidamente possibile: da prono spingi con le mani e porta un piede sotto il corpo; da supino rotola sul fianco e fai lo stesso.",
+      "Mentre ti alzi sei già inclinato in avanti: non metterti dritto in piedi, ma esci direttamente in corsa.",
+      "Scatta per 10 metri alla massima velocità, con passi corti e potenti all'inizio, poi più lunghi.",
+      "Torna camminando al punto di partenza e cambia posizione di partenza nelle ripetizioni successive."
+    ],
+    "errors": [
+      "Alzarsi in piedi del tutto e poi partire: perdi tempo prezioso.",
+      "Partire prima del segnale: non alleni la reazione.",
+      "Primi passi lunghi e sui talloni: l'accelerazione è lenta."
+    ],
+    "why": "Migliora la capacità di generare potenza da posizioni sfavorevoli e di rialzarsi rapidamente, oltre alla velocità di reazione.",
+    "figure": [
+      {
+        "label": "A terra",
+        "people": [
+          {
+            "pose": "forza-esplosiva/prono"
+          }
+        ]
+      },
+      {
+        "label": "Su e scatto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/sprint"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 35,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -568,6 +2398,36 @@ export const exercises: Exercise[] = [
     "equipment": "Corda",
     "dose": "5 × 20 s, recupero 40 s",
     "details": "Con la corda, salta leggermente più in alto del normale e fai passare la corda due volte sotto i piedi con un movimento rapido dei polsi. Resta sugli avampiedi, gambe quasi tese e busto composto. Sviluppa reattività dei polpacci, coordinazione e ritmo.",
+    "setup": "In piedi con la corda dietro i talloni, impugnature tenute basse ai lati dei fianchi, gomiti vicini al corpo. Piedi uniti o quasi, peso sugli avampiedi.",
+    "steps": [
+      "Inizia con qualche salto semplice per prendere il ritmo, con la corda che gira grazie ai polsi e non alle braccia.",
+      "Quando sei pronto, fai un salto un po' più alto del normale, con le gambe quasi tese e le punte dei piedi verso il basso.",
+      "Durante il salto accelera di colpo il giro dei polsi, così la corda passa due volte sotto i piedi prima che tu tocchi terra.",
+      "Atterra sugli avampiedi, morbido e senza far toccare i talloni, con il busto composto e lo sguardo avanti.",
+      "Puoi alternare doppi e salti semplici finché il ritmo diventa regolare, poi concatena più doppi di fila."
+    ],
+    "errors": [
+      "Girare la corda con le braccia larghe: è lenta e non fa due giri.",
+      "Piegare le ginocchia verso il petto per avere più tempo: atterri pesante e ti stanchi subito.",
+      "Atterrare sui talloni: perdi l'elasticità e sovraccarichi le ginocchia."
+    ],
+    "why": "Sviluppa reattività dei polpacci, coordinazione e ritmo, la base del gioco di gambe leggero sul ring.",
+    "figure": [
+      {
+        "label": "Salto alto, polsi veloci",
+        "people": [
+          {
+            "pose": "forza-esplosiva/corda-salto",
+            "air": 16
+          }
+        ],
+        "props": [
+          {
+            "type": "rope"
+          }
+        ]
+      }
+    ],
     "tool": "corda"
   },
   {
@@ -578,6 +2438,69 @@ export const exercises: Exercise[] = [
     "equipment": "Ostacoli",
     "dose": "4 × 5 ostacoli, recupero 90 s",
     "details": "Disponi 5 ostacoli bassi in fila e saltali a piedi pari uno dopo l'altro, con contatti a terra brevi e reattivi. Le ginocchia salgono, le braccia danno slancio e l'atterraggio resta sugli avampiedi. Migliora la forza elastica delle gambe e la capacità di concatenare azioni esplosive.",
+    "setup": "Disponi 5 ostacoli bassi in fila, distanti circa un passo e mezzo l'uno dall'altro. Mettiti in piedi davanti al primo, piedi alla larghezza delle anche, braccia piegate ai fianchi.",
+    "steps": [
+      "Fai un breve piegamento e salta a piedi pari oltre il primo ostacolo, lanciando le braccia avanti e in alto.",
+      "In volo porta le ginocchia verso l'alto per superare l'ostacolo senza toccarlo.",
+      "Atterra sugli avampiedi, piedi uniti, con le ginocchia morbide e il busto composto.",
+      "Riparti subito verso l'ostacolo successivo: il contatto a terra deve essere brevissimo, come una molla.",
+      "Dopo l'ultimo ostacolo fermati in equilibrio, torna camminando all'inizio e ripeti."
+    ],
+    "errors": [
+      "Fare un saltello in più tra un ostacolo e l'altro: perdi l'effetto reattivo.",
+      "Atterrare sui talloni o a gambe rigide: l'impatto va su ginocchia e schiena.",
+      "Ostacoli troppo alti: devi rallentare e la qualità del contatto peggiora."
+    ],
+    "why": "Migliora la forza elastica delle gambe e la capacità di concatenare azioni esplosive una dopo l'altra.",
+    "figure": [
+      {
+        "label": "Davanti all'ostacolo",
+        "people": [
+          {
+            "pose": "forza-esplosiva/piedi-pari-punte",
+            "x": -45
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 75
+          },
+          {
+            "type": "cone",
+            "x": 140
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 50,
+            "dy": -10,
+            "bend": -18
+          }
+        ]
+      },
+      {
+        "label": "Oltre, ginocchia su",
+        "people": [
+          {
+            "pose": "forza-esplosiva/ostacolo-salto",
+            "x": -5,
+            "air": 24
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 75
+          },
+          {
+            "type": "cone",
+            "x": 140
+          }
+        ]
+      }
+    ],
     "tool": "coni-scaletta"
   },
   {
@@ -588,6 +2511,63 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "4 × 4 per lato, recupero 90 s",
     "details": "Da guardia, fai un piccolo passo o una finta, salta e porta il calcio circolare in volo colpendo il sacco con la tibia, poi atterra in guardia. Qualità tecnica prima della potenza; atterra sempre in equilibrio. Sviluppa coordinazione esplosiva e un'arma a sorpresa.",
+    "setup": "In guardia davanti al sacco, un po' più lontano della distanza da calcio normale. Mani alte, mento basso. Lavora prima la tecnica a bassa intensità.",
+    "steps": [
+      "Fai un piccolo passo avanti con il piede anteriore, oppure una finta di pugno, per avvicinarti e caricarti.",
+      "Spingi con la gamba anteriore e salta, portando il ginocchio della gamba anteriore verso l'alto come se partisse un calcio con quella.",
+      "In volo, mentre quella gamba scende, ruota le anche e porta il calcio circolare con la gamba posteriore.",
+      "Colpisci il sacco con la parte bassa della tibia, con l'anca girata e una mano alta a protezione del viso.",
+      "Atterra sulla gamba d'appoggio in equilibrio e rimettiti subito in guardia prima di ripetere."
+    ],
+    "errors": [
+      "Saltare troppo in alto: il calcio arriva tardi e atterri sbilanciato.",
+      "Non ruotare le anche in volo: colpisci di piede, senza potenza.",
+      "Atterrare a gambe rigide o di schiena al sacco: rischi le caviglie e resti scoperto."
+    ],
+    "why": "Sviluppa coordinazione esplosiva e un'arma a sorpresa. Prima la qualità tecnica, poi la potenza; atterra sempre in equilibrio.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true,
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Calcio in volo",
+        "people": [
+          {
+            "pose": "forza-esplosiva/calcio-volante",
+            "gloves": true,
+            "x": -40,
+            "air": 18
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 25,
+            "dy": 18,
+            "bend": 18
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -598,6 +2578,61 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "4 × 4 per lato, recupero 90 s",
     "details": "Fai uno o due passi di rincorsa, spingi con la gamba d'appoggio e lancia in alto il ginocchio opposto verso il sacco, aiutandoti con lo slancio delle braccia. Atterra in guardia controllando l'equilibrio. Esalta la potenza di salto e il tempismo di una tecnica decisiva della Muay Thai.",
+    "setup": "A tre o quattro passi dal sacco, in guardia, mani alte. Assicurati che il sacco sia fermo e che lo spazio attorno sia libero.",
+    "steps": [
+      "Fai uno o due passi di rincorsa verso il sacco, mantenendo le mani alte.",
+      "All'ultimo passo spingi forte con la gamba d'appoggio e salta verso l'alto e in avanti.",
+      "Lancia in alto il ginocchio della gamba opposta e porta le braccia avanti e in alto per dare slancio, come per afferrare la testa dell'avversario.",
+      "Colpisci il sacco con la punta del ginocchio all'altezza del viso, spingendo l'anca in avanti.",
+      "Atterra sulla gamba di stacco con le ginocchia morbide e torna subito in guardia. Recupera prima della ripetizione successiva."
+    ],
+    "errors": [
+      "Saltare troppo vicino al sacco: il ginocchio non ha spazio e sbatti con il corpo.",
+      "Saltare solo in alto senza spingere l'anca avanti: il colpo arriva senza forza.",
+      "Atterrare sbilanciati o con le mani basse."
+    ],
+    "why": "Esalta la potenza di salto e il tempismo di una tecnica decisiva della Muay Thai.",
+    "figure": [
+      {
+        "label": "Rincorsa",
+        "people": [
+          {
+            "pose": "forza-esplosiva/sprint",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Ginocchio in alto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/ginocchiata-volante",
+            "gloves": true,
+            "x": 0,
+            "air": 20
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 14,
+            "dy": -14
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -608,6 +2643,62 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "4 × 4 per lato, recupero 90 s",
     "details": "Avvicinati al sacco, salta e colpisci dall'alto verso il basso con la punta del gomito, sfruttando il peso del corpo nella discesa. Mantieni l'altra mano a protezione del viso e atterra stabile. Allena potenza, coordinazione e tempismo di un colpo spettacolare e pericoloso.",
+    "setup": "In guardia vicino al sacco, a distanza ravvicinata, a un passo dal punto in cui il gomito può arrivare. Mani alte, mento basso.",
+    "steps": [
+      "Fai un piccolo passo verso il sacco e salta verso l'alto spingendo con entrambe le gambe.",
+      "Mentre sali alza il gomito del braccio che colpisce sopra la testa, con la mano vicino alla nuca o all'orecchio.",
+      "Dall'alto, mentre il corpo scende, porta il gomito verso il basso sul sacco colpendo con la punta, sfruttando il peso del corpo.",
+      "L'altra mano resta alta a proteggere il viso per tutto il movimento.",
+      "Atterra stabile con le ginocchia piegate, torna subito in guardia e recupera prima di ripetere."
+    ],
+    "errors": [
+      "Colpire con l'avambraccio invece che con la punta del gomito: il colpo è debole e inefficace.",
+      "Abbassare la mano libera: in combattimento resti scoperto.",
+      "Atterrare troppo vicino al sacco o sbilanciato: rischi di cadere o di storcerti una caviglia."
+    ],
+    "why": "Allena potenza, coordinazione e tempismo di un colpo spettacolare e pericoloso. Al sacco controlla bene la distanza: non va mai portato senza protezioni su un compagno.",
+    "figure": [
+      {
+        "label": "Gomito in alto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/gomito-alto-volo",
+            "gloves": true,
+            "x": -15,
+            "air": 20
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Colpo dall'alto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/gomito-giu",
+            "gloves": true,
+            "x": -5
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 4,
+            "dy": 22
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -618,6 +2709,70 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "4 × 4 per lato, recupero 90 s",
     "details": "Fingi un calcio alzando la gamba posteriore, poi riportala indietro con forza e usala per proiettarti in avanti con un diretto. Il pugno arriva mentre il corpo è in volo. Atterra in guardia con le mani alte. Allena coordinazione esplosiva e la finta per chiudere la distanza.",
+    "setup": "In guardia davanti al sacco, a distanza da calcio: troppo lontano per un diretto normale.",
+    "steps": [
+      "Fingi un calcio: alza il ginocchio della gamba posteriore come se partisse un calcio, mani alte.",
+      "Riporta con forza quella gamba indietro e a terra, e usala come una molla per spingerti in avanti.",
+      "Mentre il corpo vola avanti, la gamba posteriore si distende dietro e tiri il diretto con la mano posteriore.",
+      "Il pugno arriva sul sacco quando sei ancora in volo, con la spalla che protegge il mento e l'altra mano alta.",
+      "Atterra sulla gamba anteriore e torna subito in guardia, mani alte."
+    ],
+    "errors": [
+      "Finta poco credibile, appena accennata: in combattimento non fa abbassare la guardia all'avversario.",
+      "Caricare il pugno indietro o abbassare la mano anteriore: il colpo si vede e resti scoperto.",
+      "Atterrare lontano dal sacco o sbilanciato in avanti: perdi l'equilibrio."
+    ],
+    "why": "Allena coordinazione esplosiva e la finta per chiudere la distanza con un pugno a sorpresa.",
+    "figure": [
+      {
+        "label": "Finta di calcio",
+        "people": [
+          {
+            "pose": "forza-esplosiva/finta-calcio",
+            "gloves": true,
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": -25,
+            "dy": 20,
+            "bend": 10
+          }
+        ]
+      },
+      {
+        "label": "Diretto in volo",
+        "people": [
+          {
+            "pose": "forza-esplosiva/superman-volo",
+            "gloves": true,
+            "x": -15,
+            "air": 14
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 22,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -628,6 +2783,64 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 20 s, recupero 40 s",
     "details": "In guardia, salta scambiando il piede avanti con quello dietro e atterra di nuovo in guardia, con mani alte e peso centrato. Cerca rapidità e un contatto a terra breve. Migliora la reattività delle gambe e la capacità di cambiare guardia, utile per preparare calci con la gamba anteriore.",
+    "setup": "In guardia di Muay Thai: piede sinistro avanti se sei destro, mani alte, mento basso, peso leggero sull'avampiede posteriore.",
+    "steps": [
+      "Piega leggermente le ginocchia e fai un piccolo salto, appena pochi centimetri da terra.",
+      "In volo scambia la posizione dei piedi: quello davanti va dietro e quello dietro va avanti, con un movimento a forbice veloce.",
+      "Mentre cambi i piedi cambia anche le mani: la mano avanzata diventa quella dietro, sempre alte al viso.",
+      "Atterra in guardia opposta, sugli avampiedi, con il peso centrato e la stessa distanza tra i piedi.",
+      "Riparti subito con il cambio successivo: contatto a terra breve e ritmo costante."
+    ],
+    "errors": [
+      "Saltare troppo in alto: diventa lento e inutile sul ring.",
+      "Abbassare le mani durante il cambio: è proprio il momento in cui puoi essere colpito.",
+      "Atterrare con i piedi sulla stessa linea o troppo vicini: perdi l'equilibrio della guardia."
+    ],
+    "why": "Migliora la reattività delle gambe e la capacità di cambiare guardia, utile per preparare calci con la gamba anteriore.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true
+          }
+        ]
+      },
+      {
+        "label": "Cambio in volo",
+        "people": [
+          {
+            "pose": "forza-esplosiva/cambio-volo",
+            "gloves": true,
+            "air": 10
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": -22,
+            "dy": 0,
+            "bend": -6
+          },
+          {
+            "at": "foot2",
+            "dx": 22,
+            "dy": 0,
+            "bend": 6
+          }
+        ]
+      },
+      {
+        "label": "Guardia opposta",
+        "people": [
+          {
+            "pose": "forza-esplosiva/guardia-b",
+            "gloves": true
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -638,6 +2851,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 5 per gamba, recupero 90 s",
     "details": "In appoggio su una gamba, piega leggermente anca e ginocchio e salta in alto con lo slancio del braccio opposto. Atterra sulla stessa gamba, morbido e con il ginocchio in linea con la punta. Sviluppa potenza unilaterale e stabilità per calci e ginocchiate saltate.",
+    "setup": "In piedi su una gamba, l'altra sollevata con il ginocchio piegato. Braccia lungo i fianchi, sguardo avanti, spazio libero sopra la testa.",
+    "steps": [
+      "Piega leggermente anca e ginocchio della gamba d'appoggio, portando le braccia indietro.",
+      "Salta in alto spingendo con tutta la pianta e distendendo anca, ginocchio e caviglia.",
+      "Lancia verso l'alto il braccio opposto alla gamba d'appoggio e solleva il ginocchio libero, come in una ginocchiata.",
+      "Atterra sulla stessa gamba, prima sull'avampiede poi su tutto il piede, con il ginocchio morbido e in linea con la punta.",
+      "Resta fermo in equilibrio un paio di secondi prima di ripartire. Lavora con entrambe le gambe."
+    ],
+    "errors": [
+      "Ginocchio che rientra all'atterraggio: sovraccarichi i legamenti.",
+      "Atterrare a gamba tesa: l'impatto arriva su ginocchio e schiena.",
+      "Ripartire senza aver trovato l'equilibrio: perdi il lavoro di stabilità."
+    ],
+    "why": "Sviluppa potenza su una gamba e stabilità all'atterraggio, utili per calci e ginocchiate saltate.",
+    "figure": [
+      {
+        "label": "Carica",
+        "people": [
+          {
+            "pose": "forza-esplosiva/una-gamba-carica"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      },
+      {
+        "label": "Salto e braccio su",
+        "people": [
+          {
+            "pose": "forza-esplosiva/una-gamba-su",
+            "air": 22
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -648,6 +2901,47 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 6 ripetizioni, recupero 90 s",
     "details": "Scendi a terra, porta le gambe indietro, rientra con i piedi sotto le anche e salta in verticale al massimo con le braccia in alto. Cura la qualità del salto più che la velocità di esecuzione. Allena la capacità di generare potenza partendo da terra e cambiando livello rapidamente.",
+    "setup": "In piedi, piedi alla larghezza delle spalle, braccia lungo i fianchi, spazio libero davanti e sopra.",
+    "steps": [
+      "Scendi in squat e appoggia le mani a terra davanti ai piedi, alla larghezza delle spalle.",
+      "Porta indietro le gambe con un salto e arriva in posizione di piegamento, corpo in linea e addome contratto.",
+      "Riporta i piedi sotto le anche con un salto, atterrando sugli avampiedi in squat con il petto alto.",
+      "Da lì salta in verticale il più in alto possibile, lanciando le braccia sopra la testa e distendendo tutto il corpo.",
+      "Atterra morbido piegando le ginocchia e scendi subito nel burpee successivo. Conta l'altezza del salto, non la velocità."
+    ],
+    "errors": [
+      "Bacino che cade in posizione di piegamento: carichi la zona lombare.",
+      "Rientrare con i piedi troppo indietro: devi rialzarti con la schiena e il salto perde potenza.",
+      "Salto appena accennato per fare in fretta: alleni la resistenza, non la potenza."
+    ],
+    "why": "Allena a generare potenza partendo da terra e cambiando livello rapidamente, come quando ti rialzi dopo una caduta.",
+    "figure": [
+      {
+        "label": "Mani a terra",
+        "people": [
+          {
+            "pose": "forza-esplosiva/squat-mani-terra"
+          }
+        ]
+      },
+      {
+        "label": "Gambe indietro",
+        "people": [
+          {
+            "pose": "forza-esplosiva/piegamento-alto"
+          }
+        ]
+      },
+      {
+        "label": "Salto in alto",
+        "people": [
+          {
+            "pose": "salto",
+            "air": 24
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -658,6 +2952,57 @@ export const exercises: Exercise[] = [
     "equipment": "Battle rope",
     "dose": "5 × 15 s, recupero 45 s",
     "details": "In mezzo squat con un capo della corda in ogni mano, solleva le braccia sopra la testa e sbatti le corde a terra con tutta la forza, coinvolgendo anche e addome. Tieni la schiena neutra e i piedi ben piantati. Sviluppa potenza della parte alta e del core sotto fatica breve.",
+    "setup": "Di fronte all'ancoraggio della battle rope, a una distanza in cui la corda è appena allentata. Afferra un capo in ogni mano, piedi alla larghezza delle spalle, ginocchia piegate a mezzo squat.",
+    "steps": [
+      "Solleva entrambe le braccia sopra la testa portando su i capi della corda, allungandoti un po' con le gambe.",
+      "Sbatti le corde a terra con tutta la forza, chiudendo con decisione addome e anche verso il basso.",
+      "Mentre le corde scendono, torna in mezzo squat: la schiena resta dritta e i piedi ben piantati.",
+      "Senza pause risolleva le braccia e ripeti: ogni colpo deve far partire un'onda grande fino all'ancoraggio.",
+      "Espira forte a ogni colpo e mantieni un ritmo sostenuto ma con colpi sempre pieni."
+    ],
+    "errors": [
+      "Colpire solo con le braccia, a gambe tese: perdi la forza di anche e addome.",
+      "Schiena curva quando le corde scendono: carichi la zona lombare.",
+      "Colpi piccoli e veloci: diventa un esercizio di resistenza, non di potenza."
+    ],
+    "why": "Sviluppa la potenza della parte alta del corpo e del core sotto uno sforzo breve e intenso.",
+    "figure": [
+      {
+        "label": "Braccia in alto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/rope-alto",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "battlerope"
+          }
+        ]
+      },
+      {
+        "label": "Schiaccia a terra",
+        "people": [
+          {
+            "pose": "forza-esplosiva/rope-basso",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "battlerope"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 5,
+            "dy": 25
+          }
+        ]
+      }
+    ],
     "tool": "battle-rope"
   },
   {
@@ -668,6 +3013,72 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "3 × 6 per lato, recupero 60 s",
     "details": "In ginocchio di fianco al muro, con il busto eretto, carica la palla sull'anca e lanciala ruotando energicamente il tronco. Senza il contributo delle gambe il lavoro è tutto di core e spalle. Isola la rotazione del tronco, fondamentale per ganci, gomitate e calci circolari.",
+    "setup": "In ginocchio su un tappetino di fianco a un muro solido, a circa un metro, con il busto eretto e le anche distese. Tieni la palla medica con due mani davanti al busto.",
+    "steps": [
+      "Ruota il busto lontano dal muro portando la palla all'altezza dell'anca opposta, braccia quasi tese.",
+      "Tieni anche e ginocchia ferme: il movimento parte solo dal tronco.",
+      "Ruota il busto con forza verso il muro e lancia la palla all'altezza del petto, con le braccia che seguono le spalle.",
+      "Riprendi la palla al rimbalzo con le braccia morbide e riportala subito al fianco per il lancio successivo.",
+      "Fai tutta la serie da un lato, poi girati e lavora dall'altro."
+    ],
+    "errors": [
+      "Sedersi sui talloni: la posizione diventa instabile e le anche si muovono.",
+      "Lanciare con le braccia invece di ruotare il busto: il lavoro va sulle spalle.",
+      "Inarcare la schiena per dare più forza: carichi la zona lombare."
+    ],
+    "why": "Isola la rotazione del tronco, fondamentale per ganci, gomitate e calci circolari.",
+    "figure": [
+      {
+        "label": "Carica al fianco",
+        "people": [
+          {
+            "pose": "forza-esplosiva/ginocchio-carica",
+            "x": -30
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "at": "hand"
+          },
+          {
+            "type": "box",
+            "x": 140,
+            "w": 10,
+            "h": 130
+          }
+        ]
+      },
+      {
+        "label": "Rotazione e lancio",
+        "people": [
+          {
+            "pose": "forza-esplosiva/ginocchio-lancio",
+            "x": -30
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "at": "hand"
+          },
+          {
+            "type": "box",
+            "x": 140,
+            "w": 10,
+            "h": 130
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 25,
+            "dy": 0,
+            "bend": 8
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -678,6 +3089,69 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "3 × 6 per lato, recupero 60 s",
     "details": "In posizione di affondo con la palla al petto, spingi la palla in avanti con forza trasferendo il peso dalla gamba posteriore all'anteriore. Mantieni il busto stabile e il ginocchio anteriore allineato. Collega la spinta delle gambe a quella delle braccia, come nell'esecuzione dei pugni.",
+    "setup": "Davanti a un muro o a un compagno, a 2-3 metri. Mettiti in affondo con un piede avanti e uno dietro, ginocchia piegate, palla tenuta al petto con le due mani, gomiti bassi.",
+    "steps": [
+      "Porta il peso sulla gamba posteriore, busto stabile e leggermente inclinato in avanti.",
+      "Spingi con la gamba posteriore e trasferisci il peso sulla gamba anteriore.",
+      "Mentre il peso va avanti, distendi le braccia e lancia la palla in linea retta all'altezza del petto.",
+      "Il ginocchio anteriore resta allineato sopra il piede e il busto non si piega in avanti.",
+      "Riprendi la palla, riportala al petto, torna con il peso indietro e ripeti. A metà serie cambia gamba avanti."
+    ],
+    "errors": [
+      "Lanciare solo con le braccia: perdi il legame tra gambe e braccia, che è lo scopo dell'esercizio.",
+      "Ginocchio anteriore che cade verso l'interno: sovraccarichi l'articolazione.",
+      "Busto che si piega in avanti alla fine: perdi stabilità e la spinta va verso il basso."
+    ],
+    "why": "Collega la spinta delle gambe a quella delle braccia, esattamente come nell'esecuzione dei pugni.",
+    "figure": [
+      {
+        "label": "Peso dietro",
+        "people": [
+          {
+            "pose": "forza-esplosiva/affondo-palla",
+            "x": -30
+          }
+        ],
+        "props": [
+          {
+            "type": "medball"
+          },
+          {
+            "type": "box",
+            "x": 140,
+            "w": 10,
+            "h": 130
+          }
+        ]
+      },
+      {
+        "label": "Peso avanti, spinta",
+        "people": [
+          {
+            "pose": "forza-esplosiva/affondo-spinta",
+            "x": -30
+          }
+        ],
+        "props": [
+          {
+            "type": "medball"
+          },
+          {
+            "type": "box",
+            "x": 140,
+            "w": 10,
+            "h": 130
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 25,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -688,6 +3162,58 @@ export const exercises: Exercise[] = [
     "equipment": "Trap bar",
     "dose": "4 × 4 ripetizioni, recupero 2 min",
     "details": "Dentro la trap bar con carico leggero (20-30% del massimale), scendi a mezzo squat con schiena neutra e salta in alto il più possibile. Atterra morbido, stabilizzati e ripeti. La trap bar permette di caricare il salto in modo sicuro: aumenta la potenza degli arti inferiori.",
+    "setup": "Dentro la trap bar caricata leggera (20-30% del massimale), piedi alla larghezza delle anche al centro del telaio. Afferra le maniglie con le braccia tese ai lati del corpo.",
+    "steps": [
+      "Scendi a mezzo squat con il sedere indietro, schiena neutra e petto aperto; le braccia restano tese.",
+      "Salta in alto il più possibile distendendo in modo esplosivo anche, ginocchia e caviglie.",
+      "Le braccia sono solo agganci: non tirare con le spalle, è la spinta delle gambe a sollevare tutto.",
+      "Atterra morbido sugli avampiedi e poi su tutto il piede, piegando le ginocchia per ammortizzare.",
+      "Stabilizzati un istante in piedi e ripeti. Se il salto rallenta, togli carico."
+    ],
+    "errors": [
+      "Carico troppo pesante: il salto diventa lento e la schiena si carica.",
+      "Schiena curva in basso: il peso tira la colonna in avanti.",
+      "Atterrare rigidi, a gambe tese: l'impatto con il carico arriva su ginocchia e schiena."
+    ],
+    "why": "Aumenta la potenza degli arti inferiori: la trap bar permette di caricare il salto in modo sicuro, con il peso ai lati del corpo.",
+    "figure": [
+      {
+        "label": "Mezzo squat",
+        "people": [
+          {
+            "pose": "forza-esplosiva/squat-braccia-giu"
+          }
+        ],
+        "props": [
+          {
+            "type": "plate",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      },
+      {
+        "label": "Salto",
+        "people": [
+          {
+            "pose": "forza-esplosiva/salto-braccia-giu",
+            "air": 20
+          }
+        ],
+        "props": [
+          {
+            "type": "plate",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -697,7 +3223,66 @@ export const exercises: Exercise[] = [
     "description": "Salti ripetuti su un gradino basso con una gamba.",
     "equipment": "Gradino",
     "dose": "3 × 8 per gamba, recupero 60 s",
-    "details": "In piedi su una gamba davanti a un gradino basso, salta sul gradino e torna a terra in modo rapido e reattivo, sempre sulla stessa gamba. Tieni il ginocchio stabile e il busto composto. Rinforza la reattività di caviglia e polpaccio, utile per spostamenti rapidi e calci."
+    "details": "In piedi su una gamba davanti a un gradino basso, salta sul gradino e torna a terra in modo rapido e reattivo, sempre sulla stessa gamba. Tieni il ginocchio stabile e il busto composto. Rinforza la reattività di caviglia e polpaccio, utile per spostamenti rapidi e calci.",
+    "setup": "In piedi su una gamba davanti a un gradino basso e stabile (10-20 cm), a circa mezzo passo. L'altra gamba è sollevata dietro, braccia libere per l'equilibrio.",
+    "steps": [
+      "Piega leggermente il ginocchio d'appoggio e salta sul gradino con la stessa gamba, spingendo dall'avampiede.",
+      "Atterra sopra il gradino sull'avampiede, ginocchio morbido e in linea con la punta.",
+      "Scendi subito a terra, sempre sulla stessa gamba, e riparti appena tocchi il pavimento.",
+      "Il contatto deve essere breve e reattivo: lavora soprattutto la caviglia, con il busto composto e fermo.",
+      "Alla fine della serie cambia gamba."
+    ],
+    "errors": [
+      "Atterrare sul tallone: perdi la reattività e carichi il ginocchio.",
+      "Ginocchio che oscilla verso l'interno: lavori in modo instabile e rischi distorsioni.",
+      "Gradino troppo alto: diventa un salto lento e faticoso, non reattivo."
+    ],
+    "why": "Rinforza la reattività di caviglia e polpaccio, utile per spostamenti rapidi e calci.",
+    "figure": [
+      {
+        "label": "Davanti al gradino",
+        "people": [
+          {
+            "pose": "forza-esplosiva/una-gamba-carica",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 95,
+            "w": 40,
+            "h": 14
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 40,
+            "dy": -15,
+            "bend": -12
+          }
+        ]
+      },
+      {
+        "label": "Sopra, contatto breve",
+        "people": [
+          {
+            "pose": "forza-esplosiva/una-gamba-atterra",
+            "x": 20,
+            "air": 14
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 95,
+            "w": 40,
+            "h": 14
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-esplosiva--calcio-laterale-con-elastico",
@@ -707,6 +3292,65 @@ export const exercises: Exercise[] = [
     "equipment": "Elastico",
     "dose": "3 × 8 per gamba, recupero 60 s",
     "details": "Con l'elastico alla caviglia, alza il ginocchio e spingi il piede di taglio lateralmente con forza, poi richiama controllato. La gamba d'appoggio resta stabile e le mani in guardia. Allena la potenza dei calci di spinta e la stabilità dell'anca.",
+    "setup": "Fissa l'elastico a un punto basso e solido e infila l'altro capo alla caviglia della gamba che calcia. Mettiti di fianco al bersaglio immaginario, in guardia, abbastanza lontano da sentire già un po' di tensione.",
+    "steps": [
+      "Dalla guardia solleva il ginocchio della gamba che calcia verso il petto, mani alte.",
+      "Ruota il piede d'appoggio sull'avampiede, così il fianco si gira verso il bersaglio.",
+      "Spingi il piede lateralmente in linea retta, colpendo con il bordo esterno e il tallone, piede di taglio; il busto si inclina un po' all'indietro per bilanciare.",
+      "Richiama controllato il ginocchio al petto resistendo all'elastico, poi rimetti il piede a terra in guardia.",
+      "Esegui calci singoli ed esplosivi, la gamba d'appoggio stabile. A fine serie cambia lato."
+    ],
+    "errors": [
+      "Calciare senza prima alzare il ginocchio: il calcio diventa una spinta lenta e circolare.",
+      "Piede d'appoggio che non ruota: l'anca resta chiusa e perdi potenza.",
+      "Lasciare che l'elastico tiri giù la gamba o abbassare le mani: perdi equilibrio e guardia."
+    ],
+    "why": "Allena la potenza dei calci di spinta e la stabilità dell'anca della gamba d'appoggio.",
+    "figure": [
+      {
+        "label": "Ginocchio su",
+        "people": [
+          {
+            "pose": "teep-carica",
+            "gloves": true,
+            "x": 5
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "foot",
+            "x": 4,
+            "y": 132
+          }
+        ]
+      },
+      {
+        "label": "Spinta di taglio",
+        "people": [
+          {
+            "pose": "forza-esplosiva/laterale-spinta",
+            "gloves": true,
+            "x": -5
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "foot",
+            "x": 4,
+            "y": 132
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 30,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "elastico"
   },
   {
@@ -717,6 +3361,66 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni all'85%, recupero 3 min",
     "details": "Bilanciere appoggiato sui trapezi, piedi alla larghezza delle spalle: scendi controllando fino a rompere il parallelo e risali spingendo il pavimento. Costruisce la forza di base di gambe e anche da cui nascono calci, ginocchiate e spostamenti potenti. Mantieni il core contratto e le ginocchia in linea con le punte dei piedi.",
+    "setup": "Al rack, entra sotto il bilanciere e appoggialo sui trapezi (non sul collo), mani poco più larghe delle spalle e gomiti verso il basso. Stacca il bilanciere, fai due passi indietro e metti i piedi alla larghezza delle spalle con le punte leggermente aperte.",
+    "steps": [
+      "Prendi un respiro profondo nella pancia e contrai l'addome come per ricevere un colpo: tieni questa tensione per tutta la ripetizione.",
+      "Scendi controllando: spingi le anche indietro e piega le ginocchia insieme, facendole andare nella direzione delle punte dei piedi.",
+      "Continua finché la piega dell'anca scende appena sotto il ginocchio (rompi il parallelo), con petto aperto e schiena neutra.",
+      "Risali spingendo forte il pavimento con tutta la pianta, anche e spalle che salgono insieme.",
+      "Butta fuori l'aria solo nell'ultimo tratto o in alto, riprendi fiato e riparti con la ripetizione successiva."
+    ],
+    "errors": [
+      "Ginocchia che cadono verso l'interno in risalita: così carichi i legamenti invece dei glutei.",
+      "Talloni che si staccano: così il peso va sulle punte e perdi equilibrio e forza.",
+      "Sedere che sale prima delle spalle: così la schiena diventa una leva e si carica la zona lombare.",
+      "Scendere a metà con carichi troppo alti: così costruisci forza solo in un pezzo del movimento."
+    ],
+    "why": "È la base della forza di gambe e anche da cui nascono calci, ginocchiate e spostamenti potenti. Con carichi pesanti lavora sempre al rack con le sicure regolate o con un compagno che assiste.",
+    "figure": [
+      {
+        "label": "Bilanciere sui trapezi",
+        "people": [
+          {
+            "pose": "forza-massimale/bil-in-piedi"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -14,
+            "dy": 24,
+            "bend": -6
+          }
+        ]
+      },
+      {
+        "label": "Sotto il parallelo",
+        "people": [
+          {
+            "pose": "forza-massimale/squat-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -727,6 +3431,57 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni all'80%, recupero 3 min",
     "details": "Bilanciere sui deltoidi anteriori, gomiti alti e busto verticale: scendi in profondità e risali senza far cadere i gomiti. Rafforza quadricipiti e core anteriore, utili per mantenere la postura eretta in clinch e sotto pressione. Se la presa è scomoda usa la presa incrociata o le cinghie.",
+    "setup": "Al rack, appoggia il bilanciere sui deltoidi anteriori, vicino alla gola, con le dita sotto il bilanciere (presa pulita) oppure con le braccia incrociate. Alza i gomiti in avanti finché le braccia sono quasi parallele al pavimento, piedi alla larghezza delle spalle.",
+    "steps": [
+      "Inspira e blocca l'addome; il bilanciere deve appoggiare sulle spalle, non sui polsi.",
+      "Scendi tra le gambe tenendo il busto il più verticale possibile e i gomiti sempre alti.",
+      "Arriva in profondità, cosce almeno parallele, con le ginocchia che avanzano nella direzione delle punte.",
+      "Risali spingendo con tutta la pianta e pensando di portare i gomiti verso il soffitto.",
+      "Espira in alto e risistema la presa se il bilanciere è scivolato."
+    ],
+    "errors": [
+      "Gomiti che cadono durante la risalita: così il bilanciere rotola in avanti e il busto si piega.",
+      "Tenere il peso con i polsi invece che con le spalle: così hai dolore ai polsi e una presa instabile.",
+      "Sedere che va troppo indietro come nel back squat: così perdi la verticalità e scarichi i quadricipiti."
+    ],
+    "why": "Rafforza quadricipiti e core anteriore e insegna a restare dritto sotto pressione, come quando l'avversario ti tira giù nel clinch. Se la presa pulita è scomoda usa la presa incrociata o le cinghie.",
+    "figure": [
+      {
+        "label": "Gomiti alti",
+        "people": [
+          {
+            "pose": "forza-massimale/front-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Busto verticale",
+        "people": [
+          {
+            "pose": "forza-massimale/front-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -737,6 +3492,59 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni all'85%, recupero 3-4 min",
     "details": "Piedi sotto il bilanciere, presa appena fuori dalle gambe: spingi con le gambe e porta le anche avanti mantenendo il bilanciere vicino al corpo. Sviluppa tutta la catena posteriore, fondamentale per la potenza dei colpi e la stabilità nel clinch. Schiena neutra sempre: se si arrotonda, il carico è troppo alto.",
+    "setup": "Piedi alla larghezza delle anche, sotto il bilanciere: la sbarra passa sopra il centro del piede, a pochi centimetri dalle tibie. Piegati e impugna il bilanciere appena fuori dalle gambe, braccia tese.",
+    "steps": [
+      "Abbassa le anche finché le tibie toccano il bilanciere, con le spalle appena davanti alla sbarra e la schiena neutra.",
+      "Inspira, contrai l'addome e 'piega' il bilanciere verso di te per mettere in tensione dorsali e braccia, senza strappi.",
+      "Spingi il pavimento con le gambe: il bilanciere sale strisciando sulle tibie, anche e spalle salgono insieme.",
+      "Superate le ginocchia, porta le anche avanti fino a stare dritto, glutei stretti, senza buttarti indietro con la schiena.",
+      "Scendi invertendo il movimento: prima anche indietro, poi ginocchia quando il bilanciere le ha superate. Appoggia a terra, risistemati e riparti."
+    ],
+    "errors": [
+      "Schiena che si arrotonda: così la colonna prende il carico; se succede il peso è troppo alto.",
+      "Bilanciere lontano dalle gambe: così la leva aumenta e tira la schiena in avanti.",
+      "Partire con lo strappo a braccia piegate: così rischi i bicipiti e perdi la posizione.",
+      "Iperestendere la schiena in alto: così comprimi la zona lombare senza alcun vantaggio."
+    ],
+    "why": "Sviluppa tutta la catena posteriore, che dà potenza ai colpi e stabilità nel clinch. Schiena neutra sempre: se si arrotonda, scala il carico.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "forza-massimale/stacco-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 20,
+            "dy": -22,
+            "bend": -8
+          }
+        ]
+      },
+      {
+        "label": "Anche avanti",
+        "people": [
+          {
+            "pose": "forza-massimale/stacco-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -747,6 +3555,58 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 4 ripetizioni all'80%, recupero 3 min",
     "details": "Piedi molto larghi e punte extraruotate, presa stretta tra le gambe: spingi le ginocchia in fuori e porta le anche sotto il bilanciere. Rinforza adduttori e glutei, muscoli chiave per la stabilità in guardia e per la potenza delle ginocchiate. Busto il più eretto possibile e bilanciere a contatto con le gambe.",
+    "setup": "Piedi molto larghi, ben oltre le spalle, con le punte aperte verso l'esterno e le tibie quasi verticali. Il bilanciere sta sopra il centro del piede; impugnalo con presa stretta, mani alla larghezza delle spalle, tra le gambe.",
+    "steps": [
+      "Spingi le ginocchia in fuori nella direzione delle punte, così le anche si avvicinano al bilanciere.",
+      "Porta il petto in alto e la schiena neutra: il busto deve essere più dritto che nello stacco classico.",
+      "Inspira, contrai l'addome e metti in tensione le braccia tirando via il 'gioco' dal bilanciere.",
+      "Spingi il pavimento 'in fuori' con i piedi e porta le anche sotto il bilanciere, che resta a contatto con le gambe.",
+      "In alto stringi i glutei e stai dritto, poi riporta il bilanciere a terra controllando."
+    ],
+    "errors": [
+      "Ginocchia che rientrano: così il carico finisce sulle ginocchia e perdi la spinta degli adduttori.",
+      "Anche che salgono per prime: così diventa uno stacco a gambe tese con la schiena in avanti.",
+      "Bilanciere che si stacca dalle gambe: così la leva si allunga e la schiena soffre."
+    ],
+    "why": "Rinforza adduttori e glutei, chiave per la stabilità in guardia e per la potenza delle ginocchiate. Tieni il busto alto e il bilanciere sempre a contatto con le gambe.",
+    "figure": [
+      {
+        "label": "Gambe larghe",
+        "people": [
+          {
+            "pose": "forza-massimale/sumo-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 18,
+            "dy": -24,
+            "bend": -8
+          }
+        ]
+      },
+      {
+        "label": "In piedi",
+        "people": [
+          {
+            "pose": "forza-massimale/stacco-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -757,6 +3617,57 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
     "details": "Parti in piedi con il bilanciere, ginocchia leggermente flesse: spingi indietro le anche facendo scivolare il bilanciere lungo le cosce fino a sentire i femorali in tensione, poi risali. Protegge i femorali dagli infortuni e potenzia l'estensione d'anca usata nei calci. Controlla la discesa in 2-3 secondi.",
+    "setup": "In piedi con il bilanciere in mano (preso dal rack o sollevato da terra), presa poco più larga delle anche, piedi alla larghezza delle anche e ginocchia leggermente piegate.",
+    "steps": [
+      "Contrai l'addome e tieni le scapole ferme, braccia tese e rilassate.",
+      "Spingi le anche indietro come per chiudere una porta col sedere: il busto si inclina in avanti, le ginocchia restano quasi ferme.",
+      "Fai scivolare il bilanciere lungo le cosce e oltre le ginocchia, impiegando 2-3 secondi per scendere.",
+      "Fermati quando senti i femorali in forte tensione (di solito a metà tibia), sempre con la schiena neutra.",
+      "Risali spingendo le anche in avanti e stringendo i glutei, fino a stare dritto."
+    ],
+    "errors": [
+      "Piegare troppo le ginocchia: così diventa uno stacco normale e i femorali lavorano poco.",
+      "Scendere arrotondando la schiena per arrivare più in basso: così carichi la colonna invece dei femorali.",
+      "Bilanciere che si allontana dalle gambe: così la schiena tira e il peso ti porta in avanti."
+    ],
+    "why": "Protegge i femorali dagli stiramenti e potenzia l'estensione d'anca che usi nei calci e negli scatti.",
+    "figure": [
+      {
+        "label": "In piedi",
+        "people": [
+          {
+            "pose": "forza-massimale/stacco-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -22,
+            "dy": 4
+          }
+        ]
+      },
+      {
+        "label": "Anche indietro",
+        "people": [
+          {
+            "pose": "forza-massimale/rumeno-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -767,6 +3678,58 @@ export const exercises: Exercise[] = [
     "equipment": "Trap bar",
     "dose": "5 × 3 ripetizioni pesanti, recupero 3 min",
     "details": "Entra nella trap bar, impugna le maniglie laterali e solleva spingendo con le gambe, busto inclinato e petto aperto. Permette carichi alti con meno stress sulla zona lombare, ideale per costruire forza generale in periodo di sparring intenso. Blocca in alto contraendo i glutei senza iperestendere la schiena.",
+    "setup": "Entra al centro della trap bar con i piedi alla larghezza delle anche, allineati alle maniglie. Piegati e impugna le maniglie laterali al centro, braccia tese lungo i fianchi.",
+    "steps": [
+      "Abbassa le anche, petto aperto e busto inclinato in avanti, schiena neutra e sguardo un paio di metri avanti a terra.",
+      "Inspira, contrai l'addome e tendi le braccia come se volessi strappare le maniglie verso l'alto senza ancora muoverle.",
+      "Spingi il pavimento con le gambe: anche e spalle salgono insieme, la barra sale dritta.",
+      "Arriva in piedi e blocca stringendo i glutei, senza piegarti all'indietro.",
+      "Torna giù controllato, anche indietro e ginocchia piegate, e appoggia la barra a terra."
+    ],
+    "errors": [
+      "Iperestendere la schiena in alto: così comprimi la zona lombare inutilmente.",
+      "Afferrare le maniglie troppo avanti o indietro: così la barra si inclina e sbilancia il corpo.",
+      "Lasciar cadere la barra in discesa: così perdi metà dell'allenamento e rischi la schiena."
+    ],
+    "why": "Permette carichi alti con meno stress sulla zona lombare: ideale per costruire forza generale nei periodi di sparring intenso.",
+    "figure": [
+      {
+        "label": "Dentro la trap bar",
+        "people": [
+          {
+            "pose": "forza-massimale/trap-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 14,
+            "dy": -26,
+            "bend": -6
+          }
+        ]
+      },
+      {
+        "label": "Glutei stretti",
+        "people": [
+          {
+            "pose": "forza-massimale/stacco-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -777,6 +3740,71 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni all'85%, recupero 3 min",
     "details": "Sdraiato con scapole addotte e piedi ben piantati, abbassa il bilanciere a metà petto e spingi fino a braccia tese. Aumenta la forza di spinta di petto, spalle e tricipiti, base per pugni pesanti e per allontanare l'avversario. Usa sempre un compagno di assistenza con carichi elevati.",
+    "setup": "Sdraiati sulla panca con gli occhi sotto il bilanciere. Stringi le scapole indietro e in basso, piedi ben piantati a terra, glutei sulla panca. Impugna il bilanciere poco più largo delle spalle, pollici attorno alla sbarra.",
+    "steps": [
+      "Stacca il bilanciere dal supporto (aiutato dal compagno) e portalo sopra le spalle a braccia tese.",
+      "Inspira e abbassa il bilanciere in modo controllato verso la metà del petto, gomiti a circa 45° dal busto.",
+      "Tocca leggermente il petto senza rimbalzare, sempre con le scapole strette.",
+      "Spingi il bilanciere verso l'alto e leggermente indietro, verso le spalle, spingendo anche con i piedi a terra.",
+      "Espira in alto a braccia tese e riparti. Il compagno sta dietro la testa, mani vicine alla sbarra, pronto ad aiutare."
+    ],
+    "errors": [
+      "Far rimbalzare il bilanciere sul petto: così rischi costole e spalle e togli lavoro ai muscoli.",
+      "Gomiti aperti a 90°: così le spalle si caricano troppo.",
+      "Staccare i glutei dalla panca per spingere di più: così la schiena si inarca e il gesto non vale."
+    ],
+    "why": "Aumenta la forza di spinta di petto, spalle e tricipiti, base per pugni pesanti e per allontanare l'avversario. Con carichi elevati usa sempre un compagno di assistenza.",
+    "figure": [
+      {
+        "label": "A metà petto",
+        "people": [
+          {
+            "pose": "forza-massimale/panca-giu",
+            "x": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 18,
+            "w": 82,
+            "h": 30
+          },
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Braccia tese",
+        "people": [
+          {
+            "pose": "forza-massimale/panca-su",
+            "x": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 18,
+            "w": 82,
+            "h": 30
+          },
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 0,
+            "dy": -26
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -787,6 +3815,71 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
     "details": "Panca a 30-45°, scapole retratte: abbassa il bilanciere sulla parte alta del petto e spingi verso l'alto. Lavora l'angolo di spinta simile a quello di diretti e montanti, rinforzando petto alto e deltoidi anteriori. Non staccare i glutei dalla panca e controlla la discesa.",
+    "setup": "Regola lo schienale a 30-45° e siediti con la schiena ben appoggiata, scapole strette indietro e piedi saldi a terra. Impugna il bilanciere poco più largo delle spalle.",
+    "steps": [
+      "Stacca il bilanciere e portalo a braccia tese sopra le spalle.",
+      "Inspira e abbassalo lentamente verso la parte alta del petto, sotto le clavicole, gomiti leggermente chiusi.",
+      "Sfiora il petto senza rimbalzare.",
+      "Spingi in verticale fino a braccia tese, mantenendo glutei e scapole appoggiati.",
+      "Espira in alto e controlla sempre la discesa."
+    ],
+    "errors": [
+      "Staccare i glutei dalla panca: così diventa una panca piana e la schiena si inarca.",
+      "Portare il bilanciere sul petto basso: così perdi l'angolo che vuoi allenare.",
+      "Scendere di colpo: così le spalle si caricano senza controllo."
+    ],
+    "why": "Lavora un angolo di spinta simile a diretti e montanti, rinforzando petto alto e deltoidi anteriori. Con carichi alti fatti assistere da un compagno.",
+    "figure": [
+      {
+        "label": "Petto alto",
+        "people": [
+          {
+            "pose": "forza-massimale/inclinata-giu",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 50,
+            "w": 44,
+            "h": 32
+          },
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Spinta in alto",
+        "people": [
+          {
+            "pose": "forza-massimale/inclinata-su",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 50,
+            "w": 44,
+            "h": 32
+          },
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 0,
+            "dy": -26
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -797,6 +3890,71 @@ export const exercises: Exercise[] = [
     "equipment": "Manubri",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
     "details": "Sdraiato con manubri pesanti, abbassa con gomiti a circa 45° dal busto e spingi unendo leggermente i manubri in alto. Ogni braccio lavora in modo indipendente, correggendo squilibri tra lato forte e lato debole. Porta su i manubri appoggiandoli sulle ginocchia per iniziare in sicurezza.",
+    "setup": "Siediti sul bordo della panca con i manubri appoggiati in verticale sulle ginocchia. Sdraiati portandoli al petto con l'aiuto delle ginocchia, scapole strette e piedi a terra.",
+    "steps": [
+      "Spingi i manubri sopra il petto a braccia tese, palmi verso i piedi.",
+      "Inspira e scendi lentamente con i gomiti a circa 45° dal busto, finché i manubri arrivano all'altezza del petto.",
+      "Spingi verso l'alto facendo avvicinare leggermente i manubri in cima, senza farli sbattere.",
+      "Controlla che le due braccia salgano alla stessa velocità: il lato debole non deve restare indietro.",
+      "Alla fine porta i manubri al petto, poi sulle ginocchia e rialzati con il busto."
+    ],
+    "errors": [
+      "Lasciar cadere i manubri di lato alla fine: così rischi le spalle.",
+      "Gomiti troppo aperti: così il carico va sulle spalle invece che sul petto.",
+      "Scendere troppo in basso con manubri pesanti: così la spalla va oltre il suo limite sicuro."
+    ],
+    "why": "Ogni braccio lavora da solo e così si correggono gli squilibri tra lato forte e lato debole. Parti e chiudi sempre con i manubri sulle ginocchia.",
+    "figure": [
+      {
+        "label": "Gomiti a 45°",
+        "people": [
+          {
+            "pose": "forza-massimale/panca-giu",
+            "x": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 18,
+            "w": 82,
+            "h": 30
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Spinta",
+        "people": [
+          {
+            "pose": "forza-massimale/panca-su",
+            "x": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 18,
+            "w": 82,
+            "h": 30
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 0,
+            "dy": -26
+          }
+        ]
+      }
+    ],
     "tool": "manubri"
   },
   {
@@ -807,6 +3965,57 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni all'80%, recupero 3 min",
     "details": "In piedi, bilanciere sulle clavicole e glutei contratti: spingi in verticale portando la testa leggermente avanti a fine movimento. Rinforza spalle e tricipiti per tenere la guardia alta a lungo e per pugni più solidi. Evita di inarcare la zona lombare: stringi addome e glutei.",
+    "setup": "In piedi, piedi alla larghezza delle anche. Bilanciere appoggiato sulle clavicole, presa poco più larga delle spalle, avambracci verticali e gomiti leggermente davanti alla sbarra.",
+    "steps": [
+      "Contrai glutei e addome come per ricevere un colpo: il bacino non deve muoversi.",
+      "Inspira e spingi il bilanciere in verticale, portando la testa un po' indietro per farlo passare davanti al viso.",
+      "Appena il bilanciere supera la fronte, porta la testa avanti 'dentro' le braccia: sbarra sopra la nuca e i piedi.",
+      "Blocca a braccia tese ed espira.",
+      "Riporta il bilanciere sulle clavicole controllando la discesa."
+    ],
+    "errors": [
+      "Inarcare la zona lombare per spingere: così la schiena si carica e diventa una panca inclinata in piedi.",
+      "Spingere il bilanciere in avanti invece che in verticale: così perdi forza e carichi le spalle.",
+      "Usare le gambe per dare slancio: così diventa un push press e non alleni la forza delle spalle."
+    ],
+    "why": "Rinforza spalle e tricipiti per tenere la guardia alta a lungo e dare solidità ai pugni.",
+    "figure": [
+      {
+        "label": "Sulle clavicole",
+        "people": [
+          {
+            "pose": "forza-massimale/press-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -34
+          }
+        ]
+      },
+      {
+        "label": "Sopra la testa",
+        "people": [
+          {
+            "pose": "forza-massimale/press-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -817,6 +4026,57 @@ export const exercises: Exercise[] = [
     "equipment": "Manubri",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
     "details": "In piedi, manubri all'altezza delle spalle: spingi sopra la testa senza piegare il busto all'indietro. Sviluppa forza e stabilità delle spalle in modo unilaterale, utile per guardia e clinch. Puoi alternare le braccia per aumentare il lavoro di stabilizzazione del core.",
+    "setup": "In piedi, piedi alla larghezza delle anche e ginocchia morbide. Manubri all'altezza delle spalle, gomiti sotto i polsi, palmi in avanti o uno verso l'altro.",
+    "steps": [
+      "Stringi addome e glutei e tieni il busto fermo.",
+      "Inspira e spingi i manubri sopra la testa, fino a braccia tese sopra le spalle.",
+      "In alto i manubri sono sopra la nuca, non davanti alla faccia; espira.",
+      "Scendi controllando fino all'altezza delle spalle.",
+      "Variante: spingi un braccio alla volta tenendo l'altro fermo alla spalla, senza piegarti di lato."
+    ],
+    "errors": [
+      "Piegare il busto all'indietro: così la zona lombare si inarca e prende il carico.",
+      "Un braccio che sale più lento o storto: così lo squilibrio tra i lati aumenta invece di diminuire.",
+      "Gomiti che scappano all'indietro: così la spalla lavora in posizione scomoda."
+    ],
+    "why": "Sviluppa forza e stabilità delle spalle in modo indipendente per ogni braccio, utile per guardia e clinch.",
+    "figure": [
+      {
+        "label": "Manubri alle spalle",
+        "people": [
+          {
+            "pose": "forza-massimale/press-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -34
+          }
+        ]
+      },
+      {
+        "label": "Braccia tese",
+        "people": [
+          {
+            "pose": "forza-massimale/press-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "manubri"
   },
   {
@@ -827,6 +4087,65 @@ export const exercises: Exercise[] = [
     "equipment": "Sbarra",
     "dose": "5 × 3 ripetizioni con zavorra, recupero 3 min",
     "details": "Appeso alla sbarra con zavorra a cintura, scapole depresse: tira fino a portare il mento sopra la sbarra e scendi controllato a braccia tese. Costruisce la forza di trazione di dorsali e bicipiti, fondamentale per controllare la testa dell'avversario nel clinch. Niente slanci con le gambe.",
+    "setup": "Aggancia la zavorra alla cintura (disco o manubrio sulla catena) e appenditi alla sbarra con presa prona poco più larga delle spalle, braccia tese e gambe ferme.",
+    "steps": [
+      "Prima di tirare abbassa le scapole, allontanando le spalle dalle orecchie.",
+      "Tira portando i gomiti verso i fianchi e il petto verso la sbarra.",
+      "Sali fino a portare il mento sopra la sbarra, espirando.",
+      "Scendi controllando fino a braccia completamente tese, senza lasciarti cadere.",
+      "Tieni le gambe ferme e la zavorra senza oscillazioni per tutta la serie."
+    ],
+    "errors": [
+      "Slanci con le gambe (kipping): così togli lavoro alla schiena e la zavorra oscilla.",
+      "Mezze ripetizioni senza distendere le braccia: così perdi la parte più dura e forte.",
+      "Spalle alzate verso le orecchie: così le spalle si caricano invece dei dorsali."
+    ],
+    "why": "Costruisce la forza di trazione di dorsali e bicipiti, fondamentale per controllare la testa dell'avversario nel clinch.",
+    "figure": [
+      {
+        "label": "Braccia tese",
+        "people": [
+          {
+            "pose": "forza-massimale/appeso",
+            "air": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          },
+          {
+            "type": "plate",
+            "at": "hip"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": 0,
+            "dy": -24
+          }
+        ]
+      },
+      {
+        "label": "Mento sopra",
+        "people": [
+          {
+            "pose": "forza-massimale/trazione-alta",
+            "air": 36
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          },
+          {
+            "type": "plate",
+            "at": "hip"
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -837,6 +4156,64 @@ export const exercises: Exercise[] = [
     "equipment": "Sbarra",
     "dose": "4 × 4 ripetizioni lente, recupero 2-3 min",
     "details": "Impugna le maniglie parallele, sali in 2 secondi e scendi in 3 mantenendo il corpo fermo. La presa neutra è più gentile per gomiti e spalle e richiama molto bicipiti e brachiale, utili per la presa nel clinch. Aggiungi zavorra quando completi le ripetizioni con facilità.",
+    "setup": "Appenditi alle maniglie parallele della sbarra con i palmi uno di fronte all'altro, braccia tese e corpo fermo, gambe unite o incrociate.",
+    "steps": [
+      "Attiva le scapole tirandole in basso prima di piegare le braccia.",
+      "Sali contando 2 secondi, gomiti stretti vicino al corpo, fino a portare il mento sopra le maniglie.",
+      "Fermati un istante in alto ed espira.",
+      "Scendi contando 3 secondi, fino alle braccia completamente tese.",
+      "Quando completi le ripetizioni con facilità, aggiungi zavorra alla cintura."
+    ],
+    "errors": [
+      "Scendere di colpo: così perdi la parte lenta che costruisce forza e tendini.",
+      "Oscillare con le gambe: così il busto si muove e il lavoro va perso.",
+      "Fermarsi a braccia piegate in basso: così l'esercizio diventa più facile e incompleto."
+    ],
+    "why": "La presa neutra è più gentile per gomiti e spalle e richiama molto bicipiti e brachiale, utili per la presa nel clinch.",
+    "figure": [
+      {
+        "label": "Su in 2 s",
+        "people": [
+          {
+            "pose": "forza-massimale/appeso",
+            "air": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": 0,
+            "dy": -24
+          }
+        ]
+      },
+      {
+        "label": "Giù in 3 s",
+        "people": [
+          {
+            "pose": "forza-massimale/trazione-alta",
+            "air": 36
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -14,
+            "dy": 22
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -847,6 +4224,57 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
     "details": "Busto inclinato a circa 45°, schiena neutra: tira il bilanciere verso l'ombelico portando i gomiti indietro, poi abbassa controllato. Rinforza dorso e retrattori delle scapole, bilanciando il lavoro di spinta dei pugni e migliorando la postura. Non usare il busto per dare slancio.",
+    "setup": "In piedi con il bilanciere in mano, presa prona poco più larga delle spalle, piedi alla larghezza delle anche. Piega leggermente le ginocchia e porta le anche indietro fino ad avere il busto inclinato di circa 45°, bilanciere sotto le ginocchia a braccia tese.",
+    "steps": [
+      "Contrai l'addome e tieni la schiena neutra: il busto resta fermo per tutta la serie.",
+      "Tira il bilanciere verso l'ombelico portando i gomiti indietro, vicino ai fianchi.",
+      "In alto stringi le scapole tra loro per un istante ed espira.",
+      "Abbassa il bilanciere controllato fino a braccia tese, senza perdere l'inclinazione del busto.",
+      "Riprendi fiato e ripeti mantenendo lo stesso angolo dall'inizio alla fine."
+    ],
+    "errors": [
+      "Usare il busto per dare slancio: così la schiena prende colpi e i dorsali lavorano poco.",
+      "Schiena che si arrotonda: così carichi la zona lombare.",
+      "Tirare verso il petto con i gomiti aperti: così lavori più le spalle che il dorso."
+    ],
+    "why": "Rinforza dorso e muscoli che chiudono le scapole, bilanciando il lavoro di spinta dei pugni e migliorando la postura in guardia.",
+    "figure": [
+      {
+        "label": "Busto a 45°",
+        "people": [
+          {
+            "pose": "forza-massimale/rematore-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -6,
+            "dy": -24
+          }
+        ]
+      },
+      {
+        "label": "All'ombelico",
+        "people": [
+          {
+            "pose": "forza-massimale/rematore-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -857,6 +4285,71 @@ export const exercises: Exercise[] = [
     "equipment": "Manubrio",
     "dose": "4 × 5 per lato, recupero 2 min",
     "details": "Mano e ginocchio su panca, schiena piatta: tira il manubrio verso l'anca con il gomito vicino al corpo. Permette carichi alti su un lato alla volta, rafforzando dorsali e la tirata usata per strappare l'avversario nel clinch. Evita di ruotare il busto per sollevare.",
+    "setup": "Accanto alla panca: appoggia sulla panca la mano e il ginocchio dello stesso lato, l'altro piede a terra un po' di lato. Schiena piatta, quasi parallela al pavimento; con la mano libera prendi il manubrio a braccio teso sotto la spalla.",
+    "steps": [
+      "Contrai l'addome e tieni le spalle parallele al pavimento.",
+      "Tira il manubrio verso l'anca, non verso il petto, con il gomito che scorre vicino al corpo.",
+      "In alto stringi la scapola verso la colonna per un istante ed espira.",
+      "Scendi controllando fino a braccio teso, lasciando allungare il dorsale.",
+      "Finita la serie, cambia lato e posizione sulla panca."
+    ],
+    "errors": [
+      "Ruotare il busto per sollevare: così il carico passa alla schiena e il dorsale lavora meno.",
+      "Gomito largo e tirata al petto: così lavori soprattutto la spalla.",
+      "Strattonare il manubrio: così perdi controllo e rischi la zona lombare."
+    ],
+    "why": "Permette carichi alti su un lato alla volta e rafforza dorsali e la tirata che usi per strappare l'avversario nel clinch.",
+    "figure": [
+      {
+        "label": "Braccio teso",
+        "people": [
+          {
+            "pose": "forza-massimale/manubrio-panca-basso",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 14,
+            "w": 98,
+            "h": 32
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -10,
+            "dy": -24
+          }
+        ]
+      },
+      {
+        "label": "Gomito all'anca",
+        "people": [
+          {
+            "pose": "forza-massimale/manubrio-panca-alto",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 14,
+            "w": 98,
+            "h": 32
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "manubri"
   },
   {
@@ -867,6 +4360,57 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni, recupero 2-3 min",
     "details": "Busto quasi parallelo al pavimento, bilanciere a terra: tira esplosivamente verso il petto basso e riappoggia a terra ad ogni ripetizione. Unisce forza massimale e rapidità di attivazione del dorso, come negli strattoni del clinch. Mantieni la schiena rigida e neutra per tutta la serie.",
+    "setup": "Bilanciere a terra sopra il centro del piede, piedi alla larghezza delle anche. Piegati con il busto quasi parallelo al pavimento, ginocchia piegate, e impugna il bilanciere poco più largo delle spalle.",
+    "steps": [
+      "Schiena rigida e neutra, addome contratto, braccia tese.",
+      "Tira in modo esplosivo il bilanciere da terra verso il petto basso, gomiti indietro.",
+      "Toccato il busto, riporta il bilanciere a terra controllato senza cambiare l'angolo della schiena.",
+      "Fermalo completamente a terra per un istante: ogni ripetizione parte da ferma.",
+      "Respira e ricompattati prima della tirata successiva."
+    ],
+    "errors": [
+      "Raddrizzare il busto per aiutarti: così diventa un rematore con slancio.",
+      "Far rimbalzare il bilanciere a terra: così perdi la partenza da fermo, che è il senso dell'esercizio.",
+      "Schiena che si arrotonda durante la tirata esplosiva: così rischi la zona lombare."
+    ],
+    "why": "Unisce forza massimale e velocità di attivazione del dorso, come negli strattoni del clinch.",
+    "figure": [
+      {
+        "label": "Bilanciere a terra",
+        "people": [
+          {
+            "pose": "forza-massimale/pendlay-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -4,
+            "dy": -28
+          }
+        ]
+      },
+      {
+        "label": "Al petto basso",
+        "people": [
+          {
+            "pose": "forza-massimale/pendlay-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -877,6 +4421,80 @@ export const exercises: Exercise[] = [
     "equipment": "Parallele",
     "dose": "4 × 5 con zavorra, recupero 2-3 min",
     "details": "Alle parallele con zavorra, scendi finché le spalle arrivano poco sotto i gomiti e risali spingendo forte. Potenzia tricipiti e petto, i motori della distensione completa del braccio nel pugno. Non scendere troppo se hai spalle sensibili e mantieni il busto leggermente inclinato.",
+    "setup": "Aggancia la zavorra alla cintura e sali sulle parallele a braccia tese, mani all'altezza dei fianchi. Piega le ginocchia e incrocia le caviglie dietro.",
+    "steps": [
+      "Abbassa le spalle lontano dalle orecchie e inclina leggermente il busto in avanti.",
+      "Scendi controllando piegando i gomiti, che vanno indietro e non in fuori.",
+      "Fermati quando le spalle sono poco sotto l'altezza dei gomiti.",
+      "Spingi forte fino a braccia tese ed espira.",
+      "Mantieni il corpo fermo, senza oscillare con le gambe e la zavorra."
+    ],
+    "errors": [
+      "Scendere troppo in basso: così la spalla va in sofferenza, soprattutto se è già sensibile.",
+      "Spalle che salgono verso le orecchie: così si caricano le articolazioni invece dei muscoli.",
+      "Gomiti molto aperti: così il carico va sulle spalle."
+    ],
+    "why": "Potenzia tricipiti e petto, i motori della distensione completa del braccio nel pugno. Se hai spalle sensibili riduci la profondità.",
+    "figure": [
+      {
+        "label": "Braccia tese",
+        "people": [
+          {
+            "pose": "forza-massimale/dip-alto",
+            "x": 0,
+            "air": 30
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 75,
+            "w": 8,
+            "h": 78
+          },
+          {
+            "type": "plate",
+            "at": "knee"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": 20
+          }
+        ]
+      },
+      {
+        "label": "Spalle sotto i gomiti",
+        "people": [
+          {
+            "pose": "forza-massimale/dip-basso",
+            "x": 0,
+            "air": 30
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 74,
+            "w": 8,
+            "h": 94
+          },
+          {
+            "type": "plate",
+            "at": "knee"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -20
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -887,6 +4505,97 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 6 ripetizioni pesanti, recupero 2 min",
     "details": "Scapole appoggiate alla panca, bilanciere imbottito sulle anche: spingi il bacino in alto fino ad allineare spalle, anche e ginocchia, poi scendi. Rafforza i glutei, cuore della potenza di calci circolari e ginocchiate. In alto mantieni il mento verso il petto e non iperestendere la lombare.",
+    "setup": "Siediti a terra con la parte alta della schiena (sotto le scapole) contro il bordo della panca. Fai rotolare il bilanciere imbottito sopra le anche, piedi a terra alla larghezza delle anche e ginocchia piegate.",
+    "steps": [
+      "Tieni il bilanciere con le mani ai lati delle anche, mento leggermente verso il petto.",
+      "Inspira, contrai l'addome e spingi con i talloni portando il bacino in alto.",
+      "Sali finché spalle, anche e ginocchia sono in linea e le tibie verticali; stringi forte i glutei per un secondo.",
+      "Scendi controllato finché il sedere arriva vicino al pavimento.",
+      "Ripeti senza perdere il contatto delle scapole con la panca."
+    ],
+    "errors": [
+      "Inarcare la zona lombare in alto: così la spinta la fa la schiena e non i glutei.",
+      "Piedi troppo lontani: così lavorano i femorali più dei glutei.",
+      "Testa buttata indietro: così la schiena si inarca di conseguenza."
+    ],
+    "why": "Rafforza i glutei, cuore della potenza di calci circolari e ginocchiate.",
+    "figure": [
+      {
+        "label": "Scapole sulla panca",
+        "people": [
+          {
+            "pose": "forza-massimale/hip-giu",
+            "x": 10,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "hip",
+                "dy": -7
+              },
+              "hand2": {
+                "who": 0,
+                "at": "hip",
+                "dx": -3,
+                "dy": -7
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 16,
+            "w": 40,
+            "h": 30
+          },
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -24
+          }
+        ]
+      },
+      {
+        "label": "Anche in linea",
+        "people": [
+          {
+            "pose": "forza-massimale/hip-su",
+            "x": 10,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "hip",
+                "dy": -7
+              },
+              "hand2": {
+                "who": 0,
+                "at": "hip",
+                "dx": -3,
+                "dy": -7
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 10,
+            "w": 40,
+            "h": 30
+          },
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -897,6 +4606,71 @@ export const exercises: Exercise[] = [
     "equipment": "Manubri",
     "dose": "4 × 5 per gamba, recupero 2 min",
     "details": "Piede posteriore sul banco, manubri pesanti in mano: scendi in verticale fino a sfiorare il pavimento con il ginocchio dietro e risali spingendo con la gamba davanti. Sviluppa forza unilaterale ed equilibrio, essenziali per la gamba d'appoggio durante i calci. Ginocchio anteriore stabile, senza collassare verso l'interno.",
+    "setup": "Di spalle alla panca, a circa un passo lungo. Appoggia il dorso del piede posteriore sulla panca, manubri pesanti in mano lungo i fianchi, busto dritto.",
+    "steps": [
+      "Controlla la posizione: scendendo, il ginocchio anteriore deve restare sopra il piede, non molto oltre le punte.",
+      "Inspira e scendi in verticale piegando entrambe le ginocchia.",
+      "Arriva fino a sfiorare il pavimento con il ginocchio posteriore.",
+      "Risali spingendo con il tallone della gamba davanti; quella dietro serve solo come appoggio.",
+      "Completa le ripetizioni su un lato, poi cambia gamba."
+    ],
+    "errors": [
+      "Ginocchio anteriore che cade verso l'interno: così carichi il ginocchio invece di gluteo e coscia.",
+      "Spingere con la gamba dietro: così togli lavoro a quella che deve allenarsi.",
+      "Piede davanti troppo vicino alla panca: così il ginocchio va molto avanti e il tallone si stacca."
+    ],
+    "why": "Sviluppa forza su una gamba sola ed equilibrio, essenziali per la gamba d'appoggio durante i calci.",
+    "figure": [
+      {
+        "label": "Piede dietro su panca",
+        "people": [
+          {
+            "pose": "forza-massimale/bulgaro-alto",
+            "x": 31
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 26,
+            "w": 46,
+            "h": 28
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": 24
+          }
+        ]
+      },
+      {
+        "label": "Giù in verticale",
+        "people": [
+          {
+            "pose": "forza-massimale/bulgaro-basso",
+            "x": 10
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 26,
+            "w": 46,
+            "h": 28
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "manubri"
   },
   {
@@ -907,6 +4681,58 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 5 per gamba, recupero 2 min",
     "details": "Bilanciere sulla schiena, fai un passo ampio in avanti e scendi fino a 90° con entrambe le ginocchia, poi torna o prosegui in camminata. Rinforza gambe e glutei in un movimento simile a passi e cambi di guardia. Busto eretto e passo abbastanza lungo da non stressare il ginocchio.",
+    "setup": "Al rack, appoggia il bilanciere sui trapezi come nello squat, stacca e fai due passi indietro. Piedi alla larghezza delle anche, busto eretto.",
+    "steps": [
+      "Fai un passo ampio in avanti, mantenendo i piedi sulla larghezza delle anche per non perdere l'equilibrio.",
+      "Scendi in verticale finché entrambe le ginocchia sono a circa 90° e il ginocchio dietro sfiora il pavimento.",
+      "Spingi con il tallone della gamba davanti per tornare in piedi (sul posto) oppure avanzare con l'altra gamba (in camminata).",
+      "Mantieni busto dritto e addome contratto per tutto il movimento.",
+      "Alterna le gambe a ogni passo, respirando a ogni risalita."
+    ],
+    "errors": [
+      "Passo troppo corto: così il ginocchio davanti va molto oltre il piede e si stressa.",
+      "Busto che cade in avanti: così il bilanciere ti sbilancia e carica la schiena.",
+      "Piedi sulla stessa linea come su un filo: così perdi l'equilibrio e il bilanciere oscilla."
+    ],
+    "why": "Rinforza gambe e glutei in un movimento simile ai passi e ai cambi di guardia. Fallo in uno spazio libero e, con carichi alti, preferisci la versione sul posto.",
+    "figure": [
+      {
+        "label": "Bilanciere sui trapezi",
+        "people": [
+          {
+            "pose": "forza-massimale/bil-in-piedi"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 28,
+            "dy": 0,
+            "bend": 10
+          }
+        ]
+      },
+      {
+        "label": "Ginocchia a 90°",
+        "people": [
+          {
+            "pose": "forza-massimale/affondo-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -916,7 +4742,74 @@ export const exercises: Exercise[] = [
     "description": "Salita su box alto con manubri o bilanciere.",
     "equipment": "Box",
     "dose": "4 × 5 per gamba, recupero 2 min",
-    "details": "Davanti a un box all'altezza del ginocchio, appoggia un piede e sali spingendo solo con quella gamba, senza rimbalzare con quella a terra. Allena la forza unilaterale di quadricipiti e glutei richiesta dalle ginocchiate e dall'avanzamento. Scendi in modo controllato e mantieni il ginocchio allineato."
+    "details": "Davanti a un box all'altezza del ginocchio, appoggia un piede e sali spingendo solo con quella gamba, senza rimbalzare con quella a terra. Allena la forza unilaterale di quadricipiti e glutei richiesta dalle ginocchiate e dall'avanzamento. Scendi in modo controllato e mantieni il ginocchio allineato.",
+    "setup": "Davanti a un box stabile all'altezza del ginocchio, manubri pesanti in mano lungo i fianchi (o bilanciere sui trapezi). Appoggia tutto un piede sul box.",
+    "steps": [
+      "Porta il peso sulla gamba sul box, busto leggermente in avanti.",
+      "Sali spingendo solo con il tallone della gamba sul box, senza dare la spinta con il piede a terra.",
+      "Arriva in piedi sul box con l'anca distesa e il ginocchio allineato al piede.",
+      "Scendi controllando con la gamba che non lavora, appoggiandola a terra dolcemente.",
+      "Completa le ripetizioni su un lato, poi cambia gamba."
+    ],
+    "errors": [
+      "Rimbalzare con il piede a terra: così la gamba sul box lavora la metà.",
+      "Ginocchio che cade verso l'interno: così carichi l'articolazione.",
+      "Lasciarsi cadere giù dal box: così perdi la parte frenante e rischi le caviglie."
+    ],
+    "why": "Allena la forza su una gamba di quadricipiti e glutei richiesta dalle ginocchiate e dall'avanzamento.",
+    "figure": [
+      {
+        "label": "Piede sul box",
+        "people": [
+          {
+            "pose": "forza-massimale/stepup-sale",
+            "x": -18
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 80,
+            "w": 44,
+            "h": 34
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 14,
+            "dy": -26,
+            "bend": -6
+          }
+        ]
+      },
+      {
+        "label": "In piedi sul box",
+        "people": [
+          {
+            "pose": "forza-massimale/stepup-sopra",
+            "x": 0,
+            "air": 34
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 62,
+            "w": 44,
+            "h": 34
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-massimale--pistol-squat-zavorrato",
@@ -926,6 +4819,57 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "4 × 3 per gamba, recupero 2 min",
     "details": "Su una gamba, l'altra tesa in avanti, kettlebell tenuto al petto come contrappeso: scendi lentamente fino in fondo e risali. Sviluppa forza, equilibrio e controllo della gamba d'appoggio, decisivi quando calci o subisci un calcio. Se la profondità è eccessiva, scendi su un box come supporto.",
+    "setup": "In piedi su una gamba, l'altra leggermente sollevata in avanti. Tieni il kettlebell per le corna davanti al petto, a braccia piegate.",
+    "steps": [
+      "Spingi il kettlebell un po' in avanti: fa da contrappeso e ti aiuta a restare in equilibrio.",
+      "Scendi lentamente sulla gamba d'appoggio, anca indietro e ginocchio verso la punta del piede, mentre l'altra gamba si distende in avanti.",
+      "Arriva in fondo con il tallone sempre a terra e la gamba libera tesa, senza toccare il pavimento.",
+      "Risali spingendo con tutta la pianta, controllando il ginocchio.",
+      "Se non arrivi in fondo, scendi fino a sederti su un box e risali da lì."
+    ],
+    "errors": [
+      "Tallone che si stacca: così perdi l'equilibrio e carichi il ginocchio.",
+      "Crollare in basso senza controllo: così rimbalzi e rischi il ginocchio.",
+      "Ginocchio che cade verso l'interno: così la gamba d'appoggio non si rinforza nel modo giusto."
+    ],
+    "why": "Sviluppa forza, equilibrio e controllo della gamba d'appoggio, decisivi quando calci o subisci un calcio. Usa un box come supporto finché la profondità completa non è sicura.",
+    "figure": [
+      {
+        "label": "Su una gamba",
+        "people": [
+          {
+            "pose": "forza-massimale/pistol-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -10,
+            "dy": 26
+          }
+        ]
+      },
+      {
+        "label": "Giù lento",
+        "people": [
+          {
+            "pose": "forza-massimale/pistol-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -936,6 +4880,65 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "5 × 3 con pausa di 2 s, recupero 3 min",
     "details": "Esegui lo squat normale ma fermati 2 secondi nel punto più basso mantenendo la tensione, poi risali con decisione. Elimina il rimbalzo elastico e costruisce forza pura dalla posizione bassa, utile per partenze esplosive. Usa circa il 70-75% del carico massimo e non rilassarti in buca.",
+    "setup": "Come nel back squat: bilanciere sui trapezi, piedi alla larghezza delle spalle e punte leggermente aperte. Usa circa il 70-75% del carico massimo.",
+    "steps": [
+      "Inspira e contrai l'addome.",
+      "Scendi controllando fino a rompere il parallelo.",
+      "Fermati 2 secondi in basso contando, senza rilassare gambe e schiena: la tensione resta tutta.",
+      "Risali con decisione spingendo il pavimento, anche e spalle insieme.",
+      "Espira in alto e ripeti."
+    ],
+    "errors": [
+      "Rilassarti in buca: così la schiena si arrotonda e perdi la posizione.",
+      "Pausa troppo breve o con un piccolo rimbalzo: così torni a usare l'elasticità e perdi l'effetto.",
+      "Carico troppo alto: così non riesci a tenere la pausa e la tecnica si rompe."
+    ],
+    "why": "Elimina il rimbalzo e costruisce forza pura dalla posizione bassa, utile per le partenze esplosive. Lavora al rack con le sicure regolate.",
+    "figure": [
+      {
+        "label": "Discesa",
+        "people": [
+          {
+            "pose": "forza-massimale/bil-in-piedi"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -14,
+            "dy": 24,
+            "bend": -6
+          }
+        ]
+      },
+      {
+        "label": "Pausa 2 secondi",
+        "people": [
+          {
+            "pose": "forza-massimale/squat-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -946,6 +4949,71 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni, recupero 2-3 min",
     "details": "Scendi all'indietro fino a sederti su un box all'altezza del parallelo, fermati un istante senza rilassarti e risali in modo esplosivo. Allena la partenza da fermo e la catena posteriore, come lo scatto in avanti per entrare a colpire. Siediti in modo controllato, mai lasciarti cadere sul box.",
+    "setup": "Metti un box dietro di te all'altezza che ti porta con le cosce parallele al pavimento. Bilanciere sui trapezi, piedi un po' più larghi delle spalle, a circa un passo dal box.",
+    "steps": [
+      "Inspira e contrai l'addome.",
+      "Scendi portando le anche molto indietro, tibie quasi verticali, finché ti siedi sul box.",
+      "Siediti in modo controllato senza crollare e fermati un istante, restando contratto: non rilassare la schiena.",
+      "Risali in modo esplosivo spingendo con talloni e anche.",
+      "Espira in alto e riparti."
+    ],
+    "errors": [
+      "Lasciarsi cadere sul box: così la colonna prende un colpo con il bilanciere sulle spalle.",
+      "Rilassarsi completamente da seduti: così perdi la posizione e la risalita diventa pericolosa.",
+      "Dondolare in avanti per partire: così usi lo slancio invece della forza."
+    ],
+    "why": "Allena la partenza da fermo e la catena posteriore, come lo scatto in avanti per entrare a colpire.",
+    "figure": [
+      {
+        "label": "Seduto sul box",
+        "people": [
+          {
+            "pose": "forza-massimale/squat-basso",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 50,
+            "w": 32,
+            "h": 30
+          },
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      },
+      {
+        "label": "Su esplosivo",
+        "people": [
+          {
+            "pose": "forza-massimale/bil-in-piedi",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 50,
+            "w": 32,
+            "h": 30
+          },
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -956,6 +5024,58 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni moderate, recupero 2 min",
     "details": "Bilanciere sulla schiena e ginocchia leggermente flesse: spingi le anche indietro abbassando il busto quasi parallelo al pavimento, poi risali. Rinforza lombari e femorali, proteggendo la schiena da clinch e cadute. Usa carichi moderati e schiena sempre neutra: è un esercizio da eseguire con rigore.",
+    "setup": "Bilanciere sui trapezi come nello squat, piedi alla larghezza delle anche e ginocchia leggermente piegate. Usa un carico moderato.",
+    "steps": [
+      "Inspira, contrai l'addome e blocca la schiena in posizione neutra.",
+      "Spingi le anche indietro e abbassa il busto in avanti, tenendo le ginocchia quasi ferme.",
+      "Scendi fino a sentire i femorali in tensione, al massimo con il busto quasi parallelo al pavimento.",
+      "Risali portando le anche in avanti e stringendo i glutei.",
+      "Espira in alto e ripeti con lo stesso ritmo lento."
+    ],
+    "errors": [
+      "Arrotondare la schiena per scendere di più: così il carico va tutto sulla colonna.",
+      "Piegare molto le ginocchia: così diventa uno squat e i femorali non lavorano.",
+      "Usare carichi pesanti: così aumenta il rischio senza alcun vantaggio."
+    ],
+    "why": "Rinforza lombari e femorali e protegge la schiena negli strattoni del clinch e nelle cadute. Esercizio da eseguire con rigore e carichi moderati.",
+    "figure": [
+      {
+        "label": "In piedi",
+        "people": [
+          {
+            "pose": "forza-massimale/bil-in-piedi"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 30,
+            "dy": 26,
+            "bend": -10
+          }
+        ]
+      },
+      {
+        "label": "Anche indietro",
+        "people": [
+          {
+            "pose": "forza-massimale/good-morning-giu"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -966,6 +5086,57 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "5 × 3 ripetizioni, recupero 2-3 min",
     "details": "Sdraiato a terra, abbassa il bilanciere finché i tricipiti toccano il pavimento, pausa breve e spingi in alto. Rafforza la parte finale della spinta, quella che dà forza all'impatto del pugno, con meno stress sulle spalle. Gomiti a circa 45° dal busto e assistenza per carichi elevati.",
+    "setup": "Sdraiati a terra sotto il bilanciere posto al rack basso (o passato dal compagno), ginocchia piegate e piedi a terra. Presa poco più larga delle spalle, scapole strette.",
+    "steps": [
+      "Porta il bilanciere sopra le spalle a braccia tese.",
+      "Inspira e scendi controllando, gomiti a circa 45° dal busto.",
+      "Appoggia i tricipiti a terra e fermati un istante, senza rilassare.",
+      "Spingi in alto con forza fino a braccia tese ed espira.",
+      "Il compagno resta pronto dietro la testa per aiutare con carichi elevati."
+    ],
+    "errors": [
+      "Far sbattere i gomiti a terra: così senti dolore e perdi il controllo.",
+      "Gomiti aperti a 90°: così le spalle soffrono.",
+      "Non fermarsi a terra: così con il rimbalzo perdi lo scopo dell'esercizio."
+    ],
+    "why": "Rafforza la parte finale della spinta, quella che dà forza all'impatto del pugno, con meno stress per le spalle. Con carichi elevati serve un compagno di assistenza.",
+    "figure": [
+      {
+        "label": "Tricipiti a terra",
+        "people": [
+          {
+            "pose": "forza-massimale/floor-giu"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -26
+          }
+        ]
+      },
+      {
+        "label": "Braccia tese",
+        "people": [
+          {
+            "pose": "forza-massimale/floor-su"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -976,6 +5147,71 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
     "details": "Presa alla larghezza delle spalle, abbassa il bilanciere verso il petto basso tenendo i gomiti vicino al corpo e spingi. Potenzia i tricipiti, muscoli che estendono il braccio nei diretti e nelle gomitate. Non stringere troppo la presa per non sovraccaricare i polsi.",
+    "setup": "Sdraiato sulla panca come per la panca piana: scapole strette, piedi piantati, glutei appoggiati. Impugna il bilanciere con le mani alla larghezza delle spalle.",
+    "steps": [
+      "Stacca il bilanciere con l'aiuto del compagno e portalo sopra le spalle a braccia tese.",
+      "Inspira e scendi verso il petto basso tenendo i gomiti vicini al corpo.",
+      "Sfiora il petto senza rimbalzare, con i polsi dritti sopra i gomiti.",
+      "Spingi fino a braccia tese pensando di distendere i gomiti con forza, ed espira.",
+      "Il compagno resta dietro la testa pronto ad aiutare."
+    ],
+    "errors": [
+      "Presa troppo stretta, con le mani quasi unite: così sovraccarichi i polsi.",
+      "Gomiti che si aprono durante la spinta: così il lavoro passa al petto e alle spalle.",
+      "Polsi piegati all'indietro: così il bilanciere pesa sull'articolazione e non sulle ossa dell'avambraccio."
+    ],
+    "why": "Potenzia i tricipiti, i muscoli che distendono il braccio nei diretti e nelle gomitate. Con carichi elevati usa sempre un compagno.",
+    "figure": [
+      {
+        "label": "Gomiti stretti",
+        "people": [
+          {
+            "pose": "forza-massimale/panca-giu",
+            "x": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 18,
+            "w": 82,
+            "h": 30
+          },
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Braccia tese",
+        "people": [
+          {
+            "pose": "forza-massimale/panca-su",
+            "x": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 18,
+            "w": 82,
+            "h": 30
+          },
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 0,
+            "dy": -26
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -986,6 +5222,47 @@ export const exercises: Exercise[] = [
     "equipment": "Manubri",
     "dose": "4 × 30 m, recupero 2 min",
     "details": "Afferra due manubri o kettlebell pesanti, spalle basse e petto alto, e cammina a passi brevi e veloci. Rafforza presa, trapezi e core, qualità che servono per resistere e dominare nel clinch. Non lasciare che le spalle si chiudano in avanti e respira in modo controllato.",
+    "setup": "Due manubri o kettlebell pesanti a terra ai lati dei piedi. Accovacciati con la schiena neutra, afferrali al centro della maniglia e alzati come in uno stacco.",
+    "steps": [
+      "In piedi, braccia tese lungo i fianchi, spalle basse e lontane dalle orecchie, petto alto.",
+      "Stringi forte le maniglie e contrai l'addome.",
+      "Cammina a passi brevi e veloci in linea retta, guardando avanti.",
+      "Respira in modo corto e controllato senza mai mollare la tensione del tronco.",
+      "Alla fine fermati, piegati con la schiena neutra e appoggia i pesi a terra, senza lasciarli cadere."
+    ],
+    "errors": [
+      "Spalle che si chiudono in avanti: così perdi la postura e il lavoro dei trapezi.",
+      "Passi lunghi e lenti: così i pesi oscillano e ti sbilanciano.",
+      "Sollevare i pesi da terra con la schiena tonda: così rischi la schiena prima ancora di partire."
+    ],
+    "why": "Rafforza presa, trapezi e core, qualità che servono per resistere e dominare nel clinch.",
+    "figure": [
+      {
+        "label": "Passi brevi",
+        "people": [
+          {
+            "pose": "forza-massimale/camminata-carico"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          },
+          {
+            "type": "kettlebell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 34,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "manubri"
   },
   {
@@ -996,6 +5273,43 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "4 × 20 m per lato, recupero 90 s",
     "details": "Tieni un kettlebell pesante in una sola mano e cammina mantenendo busto perfettamente verticale, senza inclinarti verso il carico. Allena gli obliqui e la stabilità laterale, utili per non farsi sbilanciare nel clinch e durante i calci. Cambia mano a ogni serie.",
+    "setup": "Un kettlebell pesante a terra a lato di un piede. Accovacciati con la schiena neutra, afferralo con una mano e alzati senza inclinarti.",
+    "steps": [
+      "In piedi, braccio teso lungo il fianco, spalle alla stessa altezza.",
+      "Contrai l'addome e i fianchi come se qualcuno provasse a spingerti di lato.",
+      "Cammina a passi normali in linea retta mantenendo il busto perfettamente verticale.",
+      "Respira in modo regolare; il braccio libero può stare leggermente aperto per l'equilibrio.",
+      "Alla fine appoggia il kettlebell e alla serie successiva cambia mano."
+    ],
+    "errors": [
+      "Inclinarsi verso il carico: così gli obliqui smettono di lavorare.",
+      "Inclinarsi dall'altra parte per compensare: così ti pieghi comunque e il lavoro diventa sbagliato.",
+      "Spalla dal lato del peso che scende: così perdi la postura e carichi la spalla."
+    ],
+    "why": "Allena obliqui e stabilità laterale, utili per non farsi sbilanciare nel clinch e durante i calci.",
+    "figure": [
+      {
+        "label": "Busto verticale",
+        "people": [
+          {
+            "pose": "forza-massimale/camminata-carico"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 34,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -1006,6 +5320,64 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "3 × 2 per lato, recupero 2 min",
     "details": "Da sdraiato con il kettlebell a braccio teso, alzati in piedi passando per gomito, mano, ginocchio, poi torna a terra invertendo le fasi. Costruisce spalle stabili e controllo totale del corpo, utile per rialzarsi e mantenere la guardia sotto fatica. Tieni sempre lo sguardo sul kettlebell e il braccio bloccato.",
+    "setup": "Sdraiato sulla schiena con il kettlebell al petto. Spingilo a braccio teso verso il soffitto. Piega la gamba dallo stesso lato del kettlebell con il piede a terra; l'altra gamba e l'altro braccio sono distesi a terra a circa 45°.",
+    "steps": [
+      "Tieni lo sguardo sul kettlebell e il braccio bloccato; spingi con il piede a terra e sali sul gomito opposto.",
+      "Dal gomito passa alla mano, braccio teso a terra, petto aperto.",
+      "Solleva il bacino, porta la gamba distesa indietro sotto il corpo e appoggia il ginocchio a terra.",
+      "Raddrizza il busto in ginocchio, poi alzati in piedi come in un affondo, braccio sempre teso sopra la testa.",
+      "Torna a terra invertendo le stesse fasi una per una, lentamente."
+    ],
+    "errors": [
+      "Piegare il braccio con il kettlebell: così il peso può caderti addosso.",
+      "Perdere di vista il kettlebell: così non controlli più la posizione della spalla.",
+      "Passare da una fase all'altra di slancio: così perdi il controllo, che è lo scopo dell'esercizio."
+    ],
+    "why": "Costruisce spalle stabili e controllo di tutto il corpo, utili per rialzarsi e tenere la guardia sotto fatica. Impara le fasi senza peso o con un kettlebell leggero prima di caricare.",
+    "figure": [
+      {
+        "label": "Braccio teso",
+        "people": [
+          {
+            "pose": "forza-massimale/tgu-sdraiato"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Su gomito e mano",
+        "people": [
+          {
+            "pose": "forza-massimale/tgu-seduto"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "In ginocchio",
+        "people": [
+          {
+            "pose": "forza-massimale/tgu-ginocchio"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -1016,6 +5388,57 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
     "details": "Bilanciere nell'incavo dei gomiti, mani unite davanti al petto: scendi in squat profondo mantenendo il busto eretto. Simula la tenuta dell'avversario stretto a sé, rafforzando braccia, core e gambe per il clinch. Usa un pad sul bilanciere per proteggere gli avambracci.",
+    "setup": "Al rack con il bilanciere all'altezza della pancia, coperto da un'imbottitura. Mettilo nell'incavo dei gomiti, mani unite davanti al petto, staccalo e fai due passi indietro con i piedi alla larghezza delle spalle.",
+    "steps": [
+      "Stringi le braccia al corpo come se tenessi l'avversario stretto a te; contrai l'addome.",
+      "Inspira e scendi in squat profondo, busto eretto e ginocchia nella direzione delle punte.",
+      "Arriva almeno con le cosce parallele, senza far scivolare il bilanciere verso le mani.",
+      "Risali spingendo il pavimento con tutta la pianta, petto alto.",
+      "Espira in alto e ripeti."
+    ],
+    "errors": [
+      "Busto che cade in avanti: così il bilanciere ti tira giù e la schiena si arrotonda.",
+      "Braccia che si aprono: così il bilanciere scivola verso le mani e diventa instabile.",
+      "Fare l'esercizio senza imbottitura: così gli avambracci fanno molto male e molli la presa."
+    ],
+    "why": "Simula la tenuta dell'avversario stretto a te e rafforza braccia, core e gambe per il clinch. Usa sempre un pad sul bilanciere.",
+    "figure": [
+      {
+        "label": "Bilanciere nei gomiti",
+        "people": [
+          {
+            "pose": "forza-massimale/zercher-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "elbow"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -8,
+            "dy": 26
+          }
+        ]
+      },
+      {
+        "label": "Squat profondo",
+        "people": [
+          {
+            "pose": "forza-massimale/zercher-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "elbow"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -1026,6 +5449,43 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 20 m, recupero 2 min",
     "details": "Solleva il bilanciere nell'incavo dei gomiti e cammina con passi corti, busto dritto e addome contratto. Allena la forza di stringere e trasportare un peso davanti al corpo, come quando si controlla l'avversario in clinch. Usa un'imbottitura e non far cadere il bilanciere verso le mani.",
+    "setup": "Al rack con il bilanciere imbottito all'altezza della pancia. Mettilo nell'incavo dei gomiti, mani unite davanti al petto, staccalo e allontanati dal rack.",
+    "steps": [
+      "Stringi il bilanciere al corpo con le braccia, busto dritto e addome contratto.",
+      "Cammina a passi corti e controllati in linea retta.",
+      "Respira corto con il petto, senza mai mollare la tensione della pancia.",
+      "Tieni il bilanciere fermo e parallelo al pavimento.",
+      "Alla fine torna al rack e appoggialo, senza lasciarlo cadere."
+    ],
+    "errors": [
+      "Bilanciere che scivola verso le mani: così perdi la presa e rischi di farlo cadere.",
+      "Busto inclinato all'indietro per bilanciare il peso: così carichi la zona lombare.",
+      "Passi lunghi: così il bilanciere oscilla e perdi stabilità."
+    ],
+    "why": "Allena la forza di stringere e trasportare un peso davanti al corpo, come quando controlli l'avversario in clinch. Usa un'imbottitura sul bilanciere.",
+    "figure": [
+      {
+        "label": "Passi corti",
+        "people": [
+          {
+            "pose": "forza-massimale/zercher-cammina"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "elbow"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 34,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -1036,6 +5496,58 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "4 × 5 per gamba, recupero 90 s",
     "details": "Su una gamba con kettlebell nella mano opposta, porta il busto in avanti e la gamba libera indietro fino ad avere il corpo quasi orizzontale, poi risali. Rinforza femorali e glutei e migliora l'equilibrio della gamba d'appoggio nei calci. Mantieni le anche allineate, senza aprire il bacino.",
+    "setup": "In piedi su una gamba con il ginocchio leggermente piegato. Tieni il kettlebell nella mano opposta alla gamba d'appoggio, braccio teso.",
+    "steps": [
+      "Contrai l'addome e tieni il bacino dritto, rivolto verso il pavimento.",
+      "Porta il busto in avanti e la gamba libera indietro insieme, come una leva: corpo e gamba restano in linea.",
+      "Scendi fino ad avere il corpo quasi orizzontale, con il kettlebell che scende vicino alla gamba d'appoggio.",
+      "Risali spingendo l'anca in avanti e stringendo il gluteo della gamba d'appoggio.",
+      "Completa le ripetizioni e poi cambia lato."
+    ],
+    "errors": [
+      "Aprire il bacino ruotando l'anca della gamba libera verso l'alto: così perdi l'allineamento e l'equilibrio.",
+      "Piegare la schiena invece di piegarti dall'anca: così carichi la zona lombare.",
+      "Ginocchio d'appoggio completamente bloccato: così stressi l'articolazione."
+    ],
+    "why": "Rinforza femorali e glutei e migliora l'equilibrio della gamba d'appoggio nei calci.",
+    "figure": [
+      {
+        "label": "Su una gamba",
+        "people": [
+          {
+            "pose": "forza-massimale/sl-dl-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 30,
+            "dy": 26,
+            "bend": -10
+          }
+        ]
+      },
+      {
+        "label": "Corpo a T",
+        "people": [
+          {
+            "pose": "forza-massimale/sl-dl-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand2"
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -1046,6 +5558,86 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 4 discese lente, recupero 2 min",
     "details": "In ginocchio con le caviglie bloccate da un compagno, scendi in avanti con il corpo dritto il più lentamente possibile, poi aiutati con le mani per risalire. Forza eccentrica dei femorali, la migliore prevenzione contro gli stiramenti da calcio e scatto. Non piegare le anche: corpo rigido come una tavola.",
+    "setup": "In ginocchio su un materassino, busto dritto, braccia piegate davanti al petto. Il compagno è inginocchiato dietro di te e ti blocca le caviglie a terra con le mani, spingendo con il peso del corpo.",
+    "steps": [
+      "Contrai glutei e addome: dalle ginocchia alla testa il corpo deve essere una tavola rigida.",
+      "Scendi in avanti il più lentamente possibile, frenando con i femorali.",
+      "Quando non riesci più a frenare, lasciati andare sulle mani come in un piegamento.",
+      "Spingi leggermente con le mani per risalire e torna in ginocchio dritto.",
+      "Il compagno tiene le caviglie ben ferme a terra per tutta la ripetizione, senza mollare."
+    ],
+    "errors": [
+      "Piegarsi dalle anche con il sedere indietro: così togli lavoro ai femorali.",
+      "Scendere veloce: così perdi la fase lenta, che è quella che rinforza.",
+      "Compagno che tiene male le caviglie: così i piedi si sollevano e rischi di cadere di faccia."
+    ],
+    "why": "È la forza eccentrica dei femorali, la migliore prevenzione contro gli stiramenti da calcio e scatto. Usa un materassino sotto le ginocchia.",
+    "figure": [
+      {
+        "label": "Caviglie bloccate",
+        "people": [
+          {
+            "pose": "forza-massimale/nordic-alto",
+            "x": 10
+          },
+          {
+            "pose": "forza-massimale/nordic-compagno",
+            "partner": true,
+            "x": -58,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "foot",
+                "dx": 8,
+                "dy": -3
+              },
+              "hand2": {
+                "who": 0,
+                "at": "foot",
+                "dx": 10,
+                "dy": -3
+              }
+            }
+          }
+        ]
+      },
+      {
+        "label": "Giù lentissimo",
+        "people": [
+          {
+            "pose": "forza-massimale/nordic-giu",
+            "x": 10
+          },
+          {
+            "pose": "forza-massimale/nordic-compagno",
+            "partner": true,
+            "x": -58,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "foot",
+                "dx": 8,
+                "dy": -3
+              },
+              "hand2": {
+                "who": 0,
+                "at": "foot",
+                "dx": 10,
+                "dy": -3
+              }
+            }
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": 16,
+            "dy": 18,
+            "bend": -8
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1056,6 +5648,73 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 8 ripetizioni, recupero 90 s",
     "details": "Bilanciere sulla schiena, avampiedi su un rialzo: sali sulle punte il più in alto possibile, tieni 1 secondo e scendi lentamente sotto il livello del rialzo. Rafforza polpacci e caviglie per spostamenti sulle punte, rotazioni nei calci e stabilità. Evita rimbalzi e controlla tutta l'ampiezza.",
+    "setup": "Bilanciere sui trapezi come nello squat. Appoggia solo gli avampiedi sul bordo di un rialzo stabile (un disco o uno step), talloni nel vuoto, piedi alla larghezza delle anche.",
+    "steps": [
+      "Parti con i talloni scesi un po' sotto il livello del rialzo, polpacci in allungamento.",
+      "Sali sulle punte il più in alto possibile, spingendo con l'alluce.",
+      "Tieni la posizione in alto per 1 secondo contraendo i polpacci.",
+      "Scendi lentamente, in 2-3 secondi, fino sotto il livello del rialzo.",
+      "Tieni le ginocchia distese ma non bloccate e il busto fermo."
+    ],
+    "errors": [
+      "Rimbalzare in basso: così sfrutti l'elasticità del tendine e non i muscoli.",
+      "Mezze ripetizioni: così perdi forza e mobilità della caviglia.",
+      "Peso sul bordo esterno del piede: così la caviglia lavora storta."
+    ],
+    "why": "Rafforza polpacci e caviglie per muoverti sulle punte, ruotare nei calci e restare stabile. Usa un rialzo stabile e, con carichi alti, il rack con le sicure.",
+    "figure": [
+      {
+        "label": "Talloni sotto",
+        "people": [
+          {
+            "pose": "forza-massimale/calf-giu",
+            "x": 0,
+            "air": 7
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 86,
+            "w": 30,
+            "h": 12
+          },
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ]
+      },
+      {
+        "label": "Sulle punte",
+        "people": [
+          {
+            "pose": "forza-massimale/calf-su",
+            "x": 0,
+            "air": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 86,
+            "w": 30,
+            "h": 12
+          },
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": 0,
+            "dy": -16
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -1066,6 +5725,43 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 6 ripetizioni pesanti, recupero 2 min",
     "details": "In piedi con il bilanciere a braccia tese, solleva le spalle verso le orecchie senza piegare i gomiti, tieni un istante e abbassa. Trapezi forti proteggono il collo dagli impatti e aiutano a resistere alle tirate di testa nel clinch. Non ruotare le spalle: solo movimento verticale.",
+    "setup": "In piedi, piedi alla larghezza delle anche. Tieni il bilanciere a braccia tese davanti alle cosce, presa poco più larga delle spalle.",
+    "steps": [
+      "Contrai l'addome e tieni il busto dritto.",
+      "Solleva le spalle in verticale verso le orecchie, senza piegare i gomiti.",
+      "Tieni la posizione alta per un istante stringendo i trapezi.",
+      "Abbassa lentamente le spalle fino in basso.",
+      "Respira con calma: espira salendo, inspira scendendo."
+    ],
+    "errors": [
+      "Ruotare le spalle in cerchio: così stressi l'articolazione senza alcun vantaggio.",
+      "Piegare i gomiti per tirare: così lavorano le braccia.",
+      "Spingere il mento in avanti: così carichi il collo in modo scorretto."
+    ],
+    "why": "Trapezi forti proteggono il collo dagli impatti e aiutano a resistere alle tirate di testa nel clinch.",
+    "figure": [
+      {
+        "label": "Spalle alle orecchie",
+        "people": [
+          {
+            "pose": "forza-massimale/stacco-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": -14,
+            "dy": -14
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -1076,6 +5772,53 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 20 s, recupero 90 s",
     "details": "Partendo da supino con mani a terra a supporto, sollevati in ponte appoggiandoti sulla parte alta della testa e dondola leggermente avanti e indietro. Rinforza il collo, prezioso per assorbire i colpi e non farsi abbassare la testa nel clinch. Usa un materassino, inizia con le mani a sostegno e progredisci lentamente.",
+    "setup": "Sdraiato sulla schiena su un materassino spesso, ginocchia piegate e piedi a terra un po' più larghi delle anche. Appoggia le mani a terra ai lati della testa.",
+    "steps": [
+      "Spingi con i piedi e solleva il bacino, inarcando la schiena.",
+      "Fai scivolare la testa indietro finché appoggi la parte alta della testa (non la fronte e non la nuca), aiutandoti con le mani.",
+      "Con le mani sempre a sostegno, dondola leggermente avanti e indietro rotolando un poco sulla testa.",
+      "Torna giù appoggiando prima la schiena e poi il bacino, con calma.",
+      "Quando sei sicuro, riduci gradualmente l'appoggio delle mani, una settimana alla volta."
+    ],
+    "errors": [
+      "Caricare il collo di colpo senza mani: così rischi una distorsione.",
+      "Appoggiarsi sulla fronte o sulla nuca: così forzi il collo in un angolo pericoloso.",
+      "Movimenti ampi e veloci: così il collo non si rinforza e si irrita."
+    ],
+    "why": "Rinforza il collo, prezioso per assorbire i colpi e non farsi abbassare la testa nel clinch. Usa sempre un materassino, inizia con le mani a sostegno e progredisci molto lentamente; se senti dolore o formicolii, fermati.",
+    "figure": [
+      {
+        "label": "Supino, mani a terra",
+        "people": [
+          {
+            "pose": "forza-massimale/supino"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -22
+          }
+        ]
+      },
+      {
+        "label": "Ponte sulla testa",
+        "people": [
+          {
+            "pose": "forza-massimale/ponte-collo"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": -12,
+            "dy": -6,
+            "bend": 6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1085,7 +5828,79 @@ export const exercises: Exercise[] = [
     "description": "Flessioni ed estensioni del collo con fascia zavorrata.",
     "equipment": "Fascia collo",
     "dose": "3 × 10 per direzione, recupero 90 s",
-    "details": "Indossa la fascia zavorrata, busto inclinato in avanti con mani sulle ginocchia, ed esegui flessioni ed estensioni del collo lente e controllate. Un collo forte riduce l'effetto dei colpi alla testa e migliora la resistenza nel clinch. Inizia con carichi leggeri e movimenti senza strappi."
+    "details": "Indossa la fascia zavorrata, busto inclinato in avanti con mani sulle ginocchia, ed esegui flessioni ed estensioni del collo lente e controllate. Un collo forte riduce l'effetto dei colpi alla testa e migliora la resistenza nel clinch. Inizia con carichi leggeri e movimenti senza strappi.",
+    "setup": "Indossa la fascia per il collo con il peso che pende sotto il viso. In piedi o seduto sul bordo di una panca, busto inclinato in avanti con la schiena dritta e mani sulle ginocchia.",
+    "steps": [
+      "Parti con la testa in linea con la schiena e lo sguardo verso il pavimento.",
+      "Estensione: solleva lentamente la testa portando lo sguardo in avanti, in 2 secondi.",
+      "Flessione: riabbassa la testa portando il mento verso il petto, sempre in 2 secondi.",
+      "Muovi solo il collo: spalle e busto restano fermi.",
+      "Respira con calma per tutto il tempo, senza trattenere il fiato."
+    ],
+    "errors": [
+      "Movimenti a strappi: così il peso oscilla e rischi una distorsione al collo.",
+      "Muovere le spalle o il busto: così il collo lavora poco.",
+      "Partire con un peso alto: così il collo si irrita invece di rinforzarsi."
+    ],
+    "why": "Un collo forte riduce l'effetto dei colpi alla testa e migliora la resistenza nel clinch. Inizia con carichi leggeri e aumenta poco alla volta.",
+    "figure": [
+      {
+        "label": "Estensione",
+        "people": [
+          {
+            "pose": "forza-massimale/collo-estensione",
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dy": -3
+              },
+              "hand2": {
+                "who": 0,
+                "at": "knee2",
+                "dy": -3
+              }
+            }
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": 10,
+            "dy": -12,
+            "bend": 5
+          }
+        ]
+      },
+      {
+        "label": "Flessione",
+        "people": [
+          {
+            "pose": "forza-massimale/collo-flessione",
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dy": -3
+              },
+              "hand2": {
+                "who": 0,
+                "at": "knee2",
+                "dy": -3
+              }
+            }
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": 4,
+            "dy": 14,
+            "bend": -5
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-massimale--pallof-press-pesante",
@@ -1094,7 +5909,46 @@ export const exercises: Exercise[] = [
     "description": "Resistenza alla rotazione con cavo o elastico pesante.",
     "equipment": "Cavo",
     "dose": "4 × 8 per lato, recupero 60 s",
-    "details": "Di lato al cavo, maniglia al petto: distendi le braccia in avanti resistendo alla rotazione, tieni 2 secondi e riporta al petto. Allena il core anti-rotazione che stabilizza il busto quando colpisci e quando vieni spinto o tirato. Piedi saldi e anche ferme: nessuna torsione."
+    "details": "Di lato al cavo, maniglia al petto: distendi le braccia in avanti resistendo alla rotazione, tieni 2 secondi e riporta al petto. Allena il core anti-rotazione che stabilizza il busto quando colpisci e quando vieni spinto o tirato. Piedi saldi e anche ferme: nessuna torsione.",
+    "setup": "Di lato al cavo (o all'elastico) fissato all'altezza del petto. Afferra la maniglia con entrambe le mani al centro del petto, allontanati finché il cavo è in tensione, piedi alla larghezza delle spalle e ginocchia morbide.",
+    "steps": [
+      "Contrai addome e glutei: il cavo cerca di ruotarti verso la macchina e tu non glielo permetti.",
+      "Distendi le braccia in avanti davanti allo sterno, lentamente.",
+      "Tieni le braccia tese 2 secondi senza far ruotare busto e anche, respirando.",
+      "Riporta la maniglia al petto controllando.",
+      "Completa la serie, poi girati e lavora dall'altro lato."
+    ],
+    "errors": [
+      "Lasciarsi ruotare verso il cavo: così il core smette di lavorare.",
+      "Spostare le anche o i piedi per compensare: così la tensione va persa.",
+      "Trattenere il fiato: così la pressione sale e la tenuta non migliora."
+    ],
+    "why": "Allena il core anti-rotazione che stabilizza il busto quando colpisci e quando vieni spinto o tirato.",
+    "figure": [
+      {
+        "label": "Maniglia al petto",
+        "people": [
+          {
+            "pose": "forza-massimale/pallof-petto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 24,
+            "dy": 0
+          }
+        ]
+      },
+      {
+        "label": "Tieni 2 secondi",
+        "people": [
+          {
+            "pose": "forza-massimale/pallof-tese"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-massimale--isometria-al-rack-squat",
@@ -1104,6 +5958,46 @@ export const exercises: Exercise[] = [
     "equipment": "Rack",
     "dose": "5 × 6 s di spinta massimale, recupero 2 min",
     "details": "Posiziona il bilanciere sotto le sicure del rack all'altezza di mezzo squat e spingi con tutta la forza contro di esse. Recluta il massimo delle fibre muscolari senza movimento, aumentando la forza nel punto critico. Respira prima, mantieni la schiena neutra e aumenta la spinta in modo progressivo.",
+    "setup": "Nel rack, regola le sicure all'altezza in cui il bilanciere sta sui trapezi quando sei in mezzo squat. Mettiti sotto il bilanciere, sotto le sicure, come per lo squat: piedi alla larghezza delle spalle, ginocchia e anche piegate.",
+    "steps": [
+      "Controlla la posizione: schiena neutra, petto aperto, ginocchia nella direzione delle punte.",
+      "Prendi un respiro profondo e contrai l'addome.",
+      "Inizia a spingere verso l'alto contro le sicure aumentando la forza in 2-3 secondi, senza strappi.",
+      "Arriva alla spinta massima e tienila per il tempo indicato, respirando corto senza mollare la pancia.",
+      "Riduci la spinta gradualmente e solo allora rilassati e respira a fondo."
+    ],
+    "errors": [
+      "Partire con uno strappo: così rischi schiena e ginocchia senza aggiungere forza.",
+      "Perdere la schiena neutra mentre spingi: così la forza finisce sulla colonna.",
+      "Trattenere il fiato per tutta la spinta: così la pressione sale troppo e puoi sentirti stordito."
+    ],
+    "why": "Recluta il massimo delle fibre muscolari senza movimento e aumenta la forza nel punto critico dello squat. Le sicure devono essere ben fissate e il bilanciere non deve muoversi.",
+    "figure": [
+      {
+        "label": "Spingi sulle sicure",
+        "people": [
+          {
+            "pose": "forza-massimale/rack-squat"
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          },
+          {
+            "type": "barbell",
+            "at": "shoulder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -26
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -1114,6 +6008,46 @@ export const exercises: Exercise[] = [
     "equipment": "Rack",
     "dose": "5 × 6 s di tirata massimale, recupero 2 min",
     "details": "Bilanciere bloccato sotto le sicure all'altezza del ginocchio: assumi la posizione di stacco e tira con la massima intensità. Sviluppa la forza della catena posteriore in sicurezza, senza carichi enormi da gestire. Spalle sopra il bilanciere e schiena piatta, nessuno strattone iniziale.",
+    "setup": "Nel rack, metti il bilanciere sotto le sicure con le sicure all'altezza del ginocchio. Mettiti nella posizione di stacco: piedi alla larghezza delle anche, presa appena fuori dalle gambe, spalle sopra il bilanciere e schiena piatta.",
+    "steps": [
+      "Tendi le braccia e togli tutto il 'gioco' dal bilanciere finché tocca le sicure.",
+      "Inspira, contrai l'addome e spingi il pavimento con i piedi.",
+      "Aumenta la tirata in 2-3 secondi fino al massimo, come se volessi portare le anche avanti.",
+      "Tieni la tirata massima per il tempo indicato con le spalle sopra il bilanciere e la schiena piatta.",
+      "Molla gradualmente e appoggia la tensione prima di rialzarti."
+    ],
+    "errors": [
+      "Dare uno strattone iniziale: così colpisci le sicure e rischi la schiena.",
+      "Schiena che si arrotonda mentre tiri: così il carico finisce sulla colonna.",
+      "Spalle dietro il bilanciere: così tiri con la schiena invece che con le gambe."
+    ],
+    "why": "Sviluppa la forza della catena posteriore in sicurezza, senza dover gestire carichi enormi.",
+    "figure": [
+      {
+        "label": "Tira contro le sicure",
+        "people": [
+          {
+            "pose": "forza-massimale/rack-stacco"
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          },
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 8,
+            "dy": -26
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -1124,6 +6058,63 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "5 × 8 s per braccio, recupero 60 s",
     "details": "In guardia davanti al muro, appoggia il pugno chiuso o il palmo nella posizione finale del diretto e spingi al massimo con tutto il corpo. Insegna a trasferire la forza da piede, anca e spalla fino al pugno. Mantieni il polso allineato e il tallone posteriore sollevato come nel colpo vero.",
+    "setup": "In guardia davanti a un muro, alla distanza giusta perché il pugno posteriore arrivi al muro con il braccio quasi disteso. Mani alte, mento basso.",
+    "steps": [
+      "Porta il diretto posteriore fino al muro e appoggia il pugno chiuso (o il palmo) nella posizione finale del colpo, polso dritto.",
+      "Solleva il tallone posteriore e ruota anca e spalla come nel colpo vero; l'altra mano resta alta a protezione del viso.",
+      "Spingi contro il muro aumentando la forza in 2 secondi: la spinta parte dal piede, passa per anca e busto e arriva al pugno.",
+      "Tieni la spinta massima per il tempo indicato espirando lentamente dal naso.",
+      "Rilascia, torna in guardia e ripeti; poi cambia lato."
+    ],
+    "errors": [
+      "Polso piegato: così la forza si scarica sull'articolazione e rischi di farti male.",
+      "Tallone posteriore a terra: così la spinta non parte dalla gamba e lavori solo con il braccio.",
+      "Abbassare la mano libera: così prendi l'abitudine di lasciare il viso scoperto."
+    ],
+    "why": "Insegna a trasferire la forza dal piede, attraverso anca e spalla, fino al pugno.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": -30
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 120,
+            "w": 10,
+            "h": 135
+          }
+        ]
+      },
+      {
+        "label": "Spingi col diretto",
+        "people": [
+          {
+            "pose": "forza-massimale/diretto-muro",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 120,
+            "w": 10,
+            "h": 135
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 0,
+            "dy": -14
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1134,6 +6125,57 @@ export const exercises: Exercise[] = [
     "equipment": "Disco",
     "dose": "4 × 40 s con disco, recupero 90 s",
     "details": "Schiena al muro e cosce parallele al pavimento, appoggia un disco pesante sulle cosce e mantieni la posizione. Rafforza i quadricipiti e la tenuta in posizione flessa, utile per guardia bassa e spostamenti. Ginocchia sopra le caviglie e piedi piatti a terra.",
+    "setup": "Schiena appoggiata al muro, piedi avanti alla larghezza delle anche. Scivola giù finché le cosce sono parallele al pavimento e il compagno (o tu da seduto) appoggia un disco pesante sulle cosce, vicino alle anche.",
+    "steps": [
+      "Controlla la posizione: ginocchia sopra le caviglie, angolo di 90° alle ginocchia, piedi piatti a terra.",
+      "Schiena e testa ben appoggiate al muro, addome contratto.",
+      "Tieni il disco fermo con le mani, senza spingerlo verso il basso né sollevarlo.",
+      "Respira con calma e regolarità per tutto il tempo indicato.",
+      "Alla fine togli il disco e poi alzati scivolando su lungo il muro."
+    ],
+    "errors": [
+      "Ginocchia oltre le punte: così il carico va sulle ginocchia invece che sui quadricipiti.",
+      "Talloni che si staccano: così perdi stabilità e la posizione cede.",
+      "Alzarsi con il disco ancora sulle cosce: così rischi di farlo cadere sui piedi."
+    ],
+    "why": "Rafforza i quadricipiti e la tenuta in posizione flessa, utile per guardia bassa e spostamenti.",
+    "figure": [
+      {
+        "label": "Cosce parallele",
+        "people": [
+          {
+            "pose": "forza-massimale/wall-sit",
+            "x": 0,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dx": -14,
+                "dy": -6
+              },
+              "hand2": {
+                "who": 0,
+                "at": "knee",
+                "dx": -12,
+                "dy": -6
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 63,
+            "w": 10,
+            "h": 135
+          },
+          {
+            "type": "plate",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -1144,6 +6186,65 @@ export const exercises: Exercise[] = [
     "equipment": "Sbarra",
     "dose": "4 × 3 discese da 5 s, recupero 2 min",
     "details": "Sali sopra la sbarra con un salto o una spinta e scendi in 5 secondi controllati fino a braccia tese, con zavorra se possibile. La fase eccentrica costruisce forza e resistenza dei tendini di dorsali e bicipiti. Mantieni le scapole attive e non lasciarti cadere nell'ultima parte.",
+    "setup": "Sotto la sbarra, con un rialzo o un box se serve. Aggancia la zavorra alla cintura se il carico lo prevede e afferra la sbarra con presa poco più larga delle spalle.",
+    "steps": [
+      "Arriva sopra la sbarra con un salto o spingendo sul box, mento sopra la sbarra.",
+      "Attiva le scapole tirandole in basso e stringi gli addominali.",
+      "Scendi contando 5 secondi, in modo uniforme, senza fermarti né accelerare.",
+      "Resta in controllo anche nell'ultimo tratto, fino a braccia completamente tese.",
+      "Appoggia i piedi, risali con il salto e ripeti."
+    ],
+    "errors": [
+      "Lasciarsi cadere nell'ultima parte: così perdi la fase più utile e stressi i gomiti.",
+      "Scapole rilassate: così il peso va sulle articolazioni delle spalle.",
+      "Fare la salita faticosa per stancarsi: così arrivi alla discesa senza forza per controllarla."
+    ],
+    "why": "La fase lenta di discesa costruisce forza e tendini più resistenti per dorsali e bicipiti.",
+    "figure": [
+      {
+        "label": "Parti in alto",
+        "people": [
+          {
+            "pose": "forza-massimale/trazione-alta",
+            "air": 36
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          },
+          {
+            "type": "plate",
+            "at": "hip"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": 24
+          }
+        ]
+      },
+      {
+        "label": "Giù in 5 secondi",
+        "people": [
+          {
+            "pose": "forza-massimale/appeso",
+            "air": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          },
+          {
+            "type": "plate",
+            "at": "hip"
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -1153,7 +6254,63 @@ export const exercises: Exercise[] = [
     "description": "Adduzione del braccio al cavo per la catena del gancio.",
     "equipment": "Cavo",
     "dose": "4 × 6 per lato, recupero 90 s",
-    "details": "Di lato al cavo alto, braccio leggermente flesso: porta la mano davanti al corpo con un arco simile al gancio e ritorna lentamente. Rinforza petto e spalla anteriore nella traiettoria del gancio. Gomito fisso e busto stabile, senza ruotare per tirare il carico."
+    "details": "Di lato al cavo alto, braccio leggermente flesso: porta la mano davanti al corpo con un arco simile al gancio e ritorna lentamente. Rinforza petto e spalla anteriore nella traiettoria del gancio. Gomito fisso e busto stabile, senza ruotare per tirare il carico.",
+    "setup": "Di lato al cavo alto, con il braccio esterno che impugna la maniglia. Piedi sfalsati come in guardia, busto leggermente inclinato in avanti, gomito appena piegato e braccio aperto all'indietro.",
+    "steps": [
+      "Contrai l'addome e blocca il gomito in questo angolo: non deve piegarsi né distendersi.",
+      "Porta la mano davanti al corpo con un arco largo, come la traiettoria di un gancio.",
+      "Chiudi l'arco davanti al petto stringendo il pettorale per un istante ed espira.",
+      "Torna indietro lentamente, lasciando che il cavo apra il braccio senza strapparlo.",
+      "Completa la serie e poi cambia lato."
+    ],
+    "errors": [
+      "Piegare e distendere il gomito: così diventa una spinta e il petto lavora meno.",
+      "Ruotare il busto per tirare il carico: così il movimento lo fa la schiena e non il petto.",
+      "Lasciar tornare il braccio di colpo: così la spalla viene strattonata all'indietro."
+    ],
+    "why": "Rinforza petto e spalla anteriore nella traiettoria del gancio.",
+    "figure": [
+      {
+        "label": "Braccio aperto",
+        "people": [
+          {
+            "pose": "forza-massimale/croci-aperto"
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 8,
+            "y": 12
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 40,
+            "dy": 4,
+            "bend": -14
+          }
+        ]
+      },
+      {
+        "label": "Arco del gancio",
+        "people": [
+          {
+            "pose": "forza-massimale/croci-chiuso"
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 8,
+            "y": 12
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-massimale--lat-machine-pesante",
@@ -1162,7 +6319,76 @@ export const exercises: Exercise[] = [
     "description": "Tirata alla lat machine con carico alto.",
     "equipment": "Macchina",
     "dose": "4 × 6 ripetizioni, recupero 2 min",
-    "details": "Seduto con le cosce bloccate, tira la barra al petto alto portando i gomiti verso i fianchi e risali controllando. Alternativa alle trazioni per costruire dorsali forti, utili per tirare e controllare l'avversario. Non inclinarti troppo all'indietro e non usare slancio."
+    "details": "Seduto con le cosce bloccate, tira la barra al petto alto portando i gomiti verso i fianchi e risali controllando. Alternativa alle trazioni per costruire dorsali forti, utili per tirare e controllare l'avversario. Non inclinarti troppo all'indietro e non usare slancio.",
+    "setup": "Seduto alla lat machine con le cosce bloccate sotto i cuscinetti e i piedi a terra. Impugna la barra con presa prona più larga delle spalle, braccia tese sopra la testa.",
+    "steps": [
+      "Abbassa le scapole e inclinati appena indietro, petto alto.",
+      "Tira la barra verso il petto alto portando i gomiti verso i fianchi, ed espira.",
+      "Tocca il petto alto senza dondolare il busto, stringendo i dorsali per un istante.",
+      "Risali controllando fino a braccia tese, lasciando allungare i dorsali.",
+      "Inspira in alto e ripeti con lo stesso ritmo."
+    ],
+    "errors": [
+      "Inclinarsi molto indietro: così diventa un rematore e usi il peso del corpo.",
+      "Dare slancio con il busto: così i dorsali lavorano poco.",
+      "Tirare la barra dietro la nuca: così stressi spalle e collo."
+    ],
+    "why": "È un'alternativa alle trazioni per costruire dorsali forti, utili per tirare e controllare l'avversario.",
+    "figure": [
+      {
+        "label": "Braccia tese",
+        "people": [
+          {
+            "pose": "forza-massimale/lat-alto",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 50,
+            "w": 44,
+            "h": 28
+          },
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 75,
+            "y": 2
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": 30
+          }
+        ]
+      },
+      {
+        "label": "Barra al petto",
+        "people": [
+          {
+            "pose": "forza-massimale/lat-basso",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 50,
+            "w": 44,
+            "h": 28
+          },
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 70,
+            "y": 2
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-massimale--leg-press",
@@ -1171,7 +6397,66 @@ export const exercises: Exercise[] = [
     "description": "Spinta delle gambe con carico alto.",
     "equipment": "Macchina",
     "dose": "4 × 6 ripetizioni pesanti, recupero 2-3 min",
-    "details": "Piedi alla larghezza delle spalle sulla pedana, scendi finché le ginocchia arrivano a circa 90° e spingi senza bloccarle in estensione. Consente carichi alti sulle gambe con poco stress sulla schiena. La zona lombare deve restare sempre appoggiata allo schienale."
+    "details": "Piedi alla larghezza delle spalle sulla pedana, scendi finché le ginocchia arrivano a circa 90° e spingi senza bloccarle in estensione. Consente carichi alti sulle gambe con poco stress sulla schiena. La zona lombare deve restare sempre appoggiata allo schienale.",
+    "setup": "Seduto nella macchina con schiena e zona lombare ben appoggiate allo schienale. Piedi sulla pedana alla larghezza delle spalle, punte leggermente aperte; mani sulle maniglie laterali.",
+    "steps": [
+      "Spingi per sbloccare la pedana e togli le sicure.",
+      "Inspira e scendi piegando le ginocchia finché arrivano a circa 90°, ginocchia nella direzione delle punte.",
+      "Spingi con tutta la pianta, soprattutto i talloni, ed espira.",
+      "Fermati poco prima di distendere completamente le ginocchia, senza bloccarle.",
+      "Alla fine della serie rimetti le sicure prima di togliere i piedi."
+    ],
+    "errors": [
+      "Bloccare le ginocchia in estensione: così il carico pesante finisce tutto sull'articolazione.",
+      "Scendere troppo con il bacino che si stacca dallo schienale: così la zona lombare si arrotonda sotto carico.",
+      "Talloni che si sollevano: così il peso va sulle ginocchia."
+    ],
+    "why": "Consente carichi alti sulle gambe con poco stress sulla schiena. La zona lombare deve restare sempre appoggiata allo schienale.",
+    "figure": [
+      {
+        "label": "Ginocchia a 90°",
+        "people": [
+          {
+            "pose": "forza-massimale/legpress-giu",
+            "x": -25,
+            "air": 26
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 20,
+            "w": 60,
+            "h": 30
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 20,
+            "dy": -14
+          }
+        ]
+      },
+      {
+        "label": "Spingi senza bloccare",
+        "people": [
+          {
+            "pose": "forza-massimale/legpress-su",
+            "x": -25,
+            "air": 26
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 20,
+            "w": 60,
+            "h": 30
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-massimale--hack-squat",
@@ -1180,7 +6465,53 @@ export const exercises: Exercise[] = [
     "description": "Squat alla macchina con schiena appoggiata.",
     "equipment": "Macchina",
     "dose": "4 × 5 ripetizioni, recupero 2-3 min",
-    "details": "Schiena e spalle contro lo schienale della macchina, scendi in profondità e spingi con i talloni. Isola i quadricipiti in modo sicuro, utile per la forza dei calci frontali (teep) e delle ginocchiate. Mantieni le ginocchia nella direzione delle punte."
+    "details": "Schiena e spalle contro lo schienale della macchina, scendi in profondità e spingi con i talloni. Isola i quadricipiti in modo sicuro, utile per la forza dei calci frontali (teep) e delle ginocchiate. Mantieni le ginocchia nella direzione delle punte.",
+    "setup": "Nella macchina con schiena e spalle appoggiate allo schienale e le spalle sotto i cuscinetti. Piedi sulla pedana alla larghezza delle spalle, punte leggermente aperte; mani sulle maniglie.",
+    "steps": [
+      "Spingi per sbloccare la macchina e togli le sicure.",
+      "Inspira e scendi in profondità, ginocchia nella direzione delle punte, schiena sempre incollata allo schienale.",
+      "Arriva almeno con le cosce parallele alla pedana.",
+      "Spingi con i talloni fino a quasi distendere le gambe, ed espira.",
+      "Alla fine rimetti le sicure prima di uscire."
+    ],
+    "errors": [
+      "Ginocchia che cadono verso l'interno: così stressi i legamenti.",
+      "Talloni che si staccano: così il peso va tutto sulle ginocchia.",
+      "Bacino che si stacca dallo schienale in basso: così la schiena si arrotonda."
+    ],
+    "why": "Isola i quadricipiti in modo sicuro, utile per la forza del teep e delle ginocchiate.",
+    "figure": [
+      {
+        "label": "Schiena allo schienale",
+        "people": [
+          {
+            "pose": "forza-massimale/hack-alto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -10,
+            "dy": 24
+          }
+        ]
+      },
+      {
+        "label": "Giù in profondità",
+        "people": [
+          {
+            "pose": "forza-massimale/hack-basso"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -28
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-massimale--adduttori-con-cavo",
@@ -1189,7 +6520,53 @@ export const exercises: Exercise[] = [
     "description": "Adduzione dell'anca al cavo, importante per il clinch e i calci.",
     "equipment": "Cavo",
     "dose": "3 × 8 per gamba, recupero 60 s",
-    "details": "Cavigliera al cavo basso, gamba lontana dalla macchina: porta la gamba verso e oltre la linea mediana contro resistenza, poi torna lentamente. Rafforza gli adduttori usati per stringere nel clinch e stabilizzare l'anca nei calci, prevenendo le pubalgie. Busto fermo, aiutati con una mano sul supporto."
+    "details": "Cavigliera al cavo basso, gamba lontana dalla macchina: porta la gamba verso e oltre la linea mediana contro resistenza, poi torna lentamente. Rafforza gli adduttori usati per stringere nel clinch e stabilizzare l'anca nei calci, prevenendo le pubalgie. Busto fermo, aiutati con una mano sul supporto.",
+    "setup": "Allaccia la cavigliera al cavo basso sulla gamba più vicina alla macchina e allontanati di lato finché il cavo è in tensione con la gamba aperta verso la macchina. Stai sull'altra gamba e tieniti con una mano a un supporto.",
+    "steps": [
+      "Busto dritto e addome contratto, gamba d'appoggio leggermente piegata.",
+      "Porta la gamba con il cavo verso l'interno, davanti all'altra, superando un po' la linea del corpo.",
+      "Stringi l'interno coscia per un istante ed espira.",
+      "Torna lentamente nella posizione di partenza, senza lasciarti tirare dal cavo.",
+      "Completa la serie e poi cambia gamba."
+    ],
+    "errors": [
+      "Inclinare il busto per spostare la gamba: così il lavoro lo fa il tronco.",
+      "Ritorno veloce: così il cavo strattona l'inguine.",
+      "Ruotare il piede verso l'esterno: così lavorano altri muscoli dell'anca."
+    ],
+    "why": "Rafforza gli adduttori che usi per stringere nel clinch e stabilizzare l'anca nei calci, e aiuta a prevenire le pubalgie.",
+    "figure": [
+      {
+        "label": "Gamba verso l'interno",
+        "people": [
+          {
+            "pose": "forza-massimale/gamba-cavo",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 123,
+            "w": 12,
+            "h": 94
+          },
+          {
+            "type": "band",
+            "at": "foot",
+            "x": 150,
+            "y": 136
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": -22,
+            "dy": -4
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-massimale--abduttori-con-cavo",
@@ -1198,7 +6575,53 @@ export const exercises: Exercise[] = [
     "description": "Abduzione dell'anca al cavo per stabilità della gamba d'appoggio.",
     "equipment": "Cavo",
     "dose": "3 × 8 per gamba, recupero 60 s",
-    "details": "Cavigliera al cavo basso sulla gamba esterna: allontana la gamba lateralmente contro resistenza e torna controllato. Rinforza il medio gluteo, che stabilizza il bacino sulla gamba d'appoggio durante il calcio. Non inclinare il busto per compensare."
+    "details": "Cavigliera al cavo basso sulla gamba esterna: allontana la gamba lateralmente contro resistenza e torna controllato. Rinforza il medio gluteo, che stabilizza il bacino sulla gamba d'appoggio durante il calcio. Non inclinare il busto per compensare.",
+    "setup": "Allaccia la cavigliera al cavo basso sulla gamba più lontana dalla macchina, quella esterna. Stai sull'altra gamba, di lato alla macchina, e tieniti con una mano a un supporto.",
+    "steps": [
+      "Busto dritto e addome contratto, gamba d'appoggio leggermente piegata.",
+      "Allontana la gamba con il cavo lateralmente, punta del piede in avanti, fino a circa 30-40°.",
+      "Tieni un istante sentendo lavorare il fianco (medio gluteo) ed espira.",
+      "Torna lentamente alla partenza, senza far sbattere i pesi.",
+      "Completa la serie e poi cambia gamba."
+    ],
+    "errors": [
+      "Inclinare il busto dall'altra parte per alzare di più: così compensi con il tronco e il gluteo lavora meno.",
+      "Ruotare il piede con la punta verso l'alto: così lavorano i flessori dell'anca invece del gluteo.",
+      "Muoversi a scatti: così perdi il controllo dell'anca d'appoggio."
+    ],
+    "why": "Rinforza il medio gluteo, che tiene fermo il bacino sulla gamba d'appoggio durante il calcio.",
+    "figure": [
+      {
+        "label": "Gamba verso l'esterno",
+        "people": [
+          {
+            "pose": "forza-massimale/gamba-cavo",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 123,
+            "w": 12,
+            "h": 94
+          },
+          {
+            "type": "band",
+            "at": "foot",
+            "x": 10,
+            "y": 136
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 22,
+            "dy": -4
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-massimale--copenhagen-plank-zavorrato",
@@ -1207,7 +6630,58 @@ export const exercises: Exercise[] = [
     "description": "Plank laterale con gamba superiore su panca e peso.",
     "equipment": "Panca",
     "dose": "3 × 20 s per lato, recupero 60 s",
-    "details": "In plank laterale sull'avambraccio, appoggia la gamba superiore sulla panca e solleva il bacino; aggiungi un disco sul fianco per aumentare il carico. Rinforza adduttori e obliqui, proteggendo l'inguine da calci e cambi di guardia. Corpo allineato dalla testa ai piedi, senza far cadere le anche."
+    "details": "In plank laterale sull'avambraccio, appoggia la gamba superiore sulla panca e solleva il bacino; aggiungi un disco sul fianco per aumentare il carico. Rinforza adduttori e obliqui, proteggendo l'inguine da calci e cambi di guardia. Corpo allineato dalla testa ai piedi, senza far cadere le anche.",
+    "setup": "Di fianco a una panca, sdraiato sul lato. Appoggia l'avambraccio a terra con il gomito sotto la spalla e metti l'interno della gamba superiore (ginocchio o caviglia) sulla panca; la gamba inferiore resta sotto la panca. Appoggia un disco sul fianco tenendolo con la mano libera.",
+    "steps": [
+      "Stringi la gamba superiore contro la panca e solleva il bacino da terra.",
+      "Allinea il corpo dalla testa ai piedi, come in un plank laterale.",
+      "Se riesci, solleva anche la gamba inferiore fino a toccare la panca da sotto.",
+      "Tieni la posizione respirando regolarmente, con il disco fermo sul fianco.",
+      "Scendi con controllo e poi cambia lato."
+    ],
+    "errors": [
+      "Anche che cadono verso il pavimento: così perdi l'allineamento e gli adduttori lavorano poco.",
+      "Spalla che collassa sul gomito: così carichi l'articolazione della spalla.",
+      "Partire subito con il disco: così l'inguine si sovraccarica; prima impara la versione a corpo libero e con il ginocchio sulla panca."
+    ],
+    "why": "Rinforza adduttori e obliqui e protegge l'inguine da calci e cambi di guardia.",
+    "figure": [
+      {
+        "label": "Gamba sopra sulla panca",
+        "people": [
+          {
+            "pose": "forza-massimale/copenhagen",
+            "x": 28,
+            "reach": {
+              "hand2": {
+                "who": 0,
+                "at": "hip",
+                "dy": -6
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 21,
+            "w": 40,
+            "h": 40
+          },
+          {
+            "type": "plate",
+            "at": "hip"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -18
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-massimale--curl-con-bilanciere",
@@ -1217,6 +6691,58 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "4 × 6 ripetizioni, recupero 90 s",
     "details": "In piedi, gomiti vicino ai fianchi: fletti le braccia portando il bilanciere alle spalle e scendi lentamente. Rafforza bicipiti e flessori dell'avambraccio, utili per tenere e tirare la testa dell'avversario nel clinch. Niente oscillazioni del busto.",
+    "setup": "In piedi, piedi alla larghezza delle anche. Impugna il bilanciere con i palmi in avanti, mani alla larghezza delle spalle, braccia tese davanti alle cosce e gomiti vicino ai fianchi.",
+    "steps": [
+      "Contrai addome e glutei: il busto resta fermo.",
+      "Piega i gomiti e porta il bilanciere verso le spalle, senza spostare i gomiti in avanti.",
+      "In alto stringi i bicipiti per un istante ed espira.",
+      "Scendi lentamente, in 2-3 secondi, fino a braccia quasi tese.",
+      "Ripeti senza rimbalzare in basso."
+    ],
+    "errors": [
+      "Oscillare con il busto: così il peso sale con lo slancio e i bicipiti lavorano poco.",
+      "Gomiti che si spostano in avanti: così lavorano le spalle.",
+      "Lasciar cadere il bilanciere in discesa: così perdi metà del lavoro e stressi i gomiti."
+    ],
+    "why": "Rafforza bicipiti e muscoli dell'avambraccio, utili per tenere e tirare la testa dell'avversario nel clinch.",
+    "figure": [
+      {
+        "label": "Gomiti ai fianchi",
+        "people": [
+          {
+            "pose": "forza-massimale/stacco-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 20,
+            "dy": -30,
+            "bend": 10
+          }
+        ]
+      },
+      {
+        "label": "Su alle spalle",
+        "people": [
+          {
+            "pose": "forza-massimale/curl-su"
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -1227,6 +6753,45 @@ export const exercises: Exercise[] = [
     "equipment": "Sbarra",
     "dose": "4 × 20-30 s di sospensione, recupero 90 s",
     "details": "Avvolgi due asciugamani sulla sbarra, afferrali e resta appeso a braccia tese, scapole attive. Sviluppa una presa ferrea per controllare collo e braccia dell'avversario nel clinch. Aggiungi zavorra o passa a una sola mano quando superi i 30 secondi.",
+    "setup": "Avvolgi due asciugamani sopra la sbarra, alla larghezza delle spalle, con le due estremità che pendono alla stessa lunghezza. Afferra le estremità di ciascun asciugamano con una mano.",
+    "steps": [
+      "Solleva i piedi e resta appeso a braccia tese.",
+      "Attiva le scapole tirandole leggermente in basso, senza piegare i gomiti.",
+      "Stringi forte gli asciugamani con tutte le dita e tieni il corpo fermo, senza dondolare.",
+      "Respira con calma per tutto il tempo indicato.",
+      "Quando superi i 30 secondi, aggiungi zavorra o passa a una sola mano."
+    ],
+    "errors": [
+      "Spalle rilassate e 'appese': così il peso va tutto sulle articolazioni.",
+      "Dondolare con le gambe: così la presa cede prima e perdi tensione.",
+      "Asciugamani di lunghezza diversa: così un braccio lavora più dell'altro."
+    ],
+    "why": "Sviluppa una presa ferrea per controllare collo e braccia dell'avversario nel clinch. Tieni un box sotto i piedi per scendere in sicurezza.",
+    "figure": [
+      {
+        "label": "Appeso agli asciugamani",
+        "people": [
+          {
+            "pose": "forza-massimale/appeso-asciugamani",
+            "air": 2
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 88,
+            "y": -40
+          },
+          {
+            "type": "band",
+            "at": "hand2",
+            "x": 90,
+            "y": -40
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -1237,6 +6802,47 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 riprese da 3 min, recupero 1 min",
     "details": "Esegui piegamenti a ritmo costante per tutta la ripresa, fermandoti in plank alto quando serve invece di appoggiarti a terra. Corpo in linea, gomiti a circa 45° dal busto. Allena petto, spalle e tricipiti a reggere pugni e push nel clinch fino al quinto round.",
+    "setup": "A terra in plank alto: mani appoggiate poco più larghe delle spalle, braccia tese, piedi uniti o leggermente divaricati sulle punte. Il corpo è una linea dritta dalla testa ai talloni. Fai partire il timer come per una ripresa.",
+    "steps": [
+      "Stringi glutei e addome, poi scendi piegando le braccia con i gomiti che vanno indietro a circa 45° dal busto, non aperti a T.",
+      "Porta il petto a un pugno dal pavimento tenendo il corpo rigido: bacino e spalle scendono insieme.",
+      "Spingi il pavimento lontano e torna a braccia tese, espirando durante la salita.",
+      "Trova un ritmo regolare che puoi tenere fino al gong: meglio piegamenti continui e puliti che una partenza a tutta e poi il blocco.",
+      "Quando le braccia bruciano non appoggiarti a terra: fermati qualche secondo in plank alto, respira e riparti appena puoi.",
+      "Continua così fino alla fine della ripresa, contando mentalmente per non rallentare troppo nell'ultimo minuto."
+    ],
+    "errors": [
+      "Bacino che cade verso il pavimento: carichi la schiena invece di petto e braccia.",
+      "Gomiti larghi a 90° dal busto: sovraccarichi le spalle e ti stanchi prima.",
+      "Mezze ripetizioni a fine ripresa: smetti di allenare la forza proprio quando serve.",
+      "Riposarti sdraiato a terra: perdi la tensione del tronco e la ripresa diventa a pezzi."
+    ],
+    "why": "Allena petto, spalle e tricipiti a reggere pugni e spinte nel clinch fino all'ultimo round, abituandoti a lavorare a tempo come in gara.",
+    "figure": [
+      {
+        "label": "Plank alto",
+        "people": [
+          {
+            "pose": "forza-resistente/piegamento-alto"
+          }
+        ]
+      },
+      {
+        "label": "Petto vicino a terra",
+        "people": [
+          {
+            "pose": "forza-resistente/piegamento-basso"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 0,
+            "dy": -22
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1247,6 +6853,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 2 min, recupero 1 min",
     "details": "Piedi alla larghezza delle spalle, scendi fino alle cosce parallele e risali senza bloccare le ginocchia, mantenendo un ritmo regolare. Talloni sempre a terra e ginocchia in linea con le punte. Costruisce gambe resistenti per restare mobili e piantati sui calci anche a fine incontro.",
+    "setup": "In piedi, piedi alla larghezza delle spalle con le punte leggermente aperte, peso su tutta la pianta. Braccia rilassate lungo i fianchi o incrociate davanti al petto.",
+    "steps": [
+      "Inspira e scendi spingendo il sedere indietro e piegando le ginocchia, come per sederti su una sedia bassa; puoi portare le braccia avanti per bilanciarti.",
+      "Arriva con le cosce parallele al pavimento, talloni ben a terra e ginocchia che seguono la direzione delle punte.",
+      "Risali spingendo con tutto il piede ed espira mentre sali.",
+      "In alto fermati con le ginocchia appena morbide, senza bloccarle, e riparti subito con la discesa successiva.",
+      "Tieni un ritmo regolare, circa un secondo per scendere e uno per salire, per tutto il tempo: se ti stanchi rallenta, ma non fermarti."
+    ],
+    "errors": [
+      "Talloni che si alzano da terra: il carico va tutto sulle ginocchia.",
+      "Ginocchia che cadono verso l'interno: con la fatica rischi di farti male.",
+      "Schiena che si arrotonda in basso: sposti lo sforzo sulla zona lombare.",
+      "Squat sempre più corti verso la fine: riduci il lavoro proprio nella parte utile."
+    ],
+    "why": "Costruisce gambe resistenti che restano mobili e ben piantate per calciare e spostarsi anche a fine incontro.",
+    "figure": [
+      {
+        "label": "In piedi",
+        "people": [
+          {
+            "pose": "in-piedi"
+          }
+        ]
+      },
+      {
+        "label": "Cosce parallele",
+        "people": [
+          {
+            "pose": "forza-resistente/squat-parallelo"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -28
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1257,6 +6903,47 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 40 m, recupero 1 min",
     "details": "Avanza con passi lunghi portando il ginocchio posteriore vicino al suolo, busto eretto e mani in guardia. Spingi dal tallone anteriore per passare al passo successivo. Rinforza quadricipiti e glutei in modo unilaterale, utile per la stabilità in uscita dai calci e negli spostamenti.",
+    "setup": "In piedi all'inizio di un corridoio libero di 30-50 metri, piedi alla larghezza delle anche. Mani alzate in guardia, mento basso, busto dritto.",
+    "steps": [
+      "Fai un passo lungo in avanti con una gamba e appoggia prima il tallone e poi tutta la pianta.",
+      "Scendi in verticale finché il ginocchio posteriore arriva a pochi centimetri dal pavimento, senza sbatterlo. Il ginocchio anteriore resta sopra la caviglia.",
+      "Busto eretto e mani in guardia: non appoggiare le mani sulla coscia.",
+      "Spingi con il tallone della gamba davanti e porta avanti la gamba posteriore direttamente nel passo successivo, senza fermarti in piedi.",
+      "Continua alternando le gambe a ritmo costante fino alla fine del percorso, respirando a ogni passo."
+    ],
+    "errors": [
+      "Passi corti: il ginocchio anteriore va oltre la punta e lavori poco i glutei.",
+      "Busto che si piega in avanti: perdi l'equilibrio e carichi la schiena.",
+      "Ginocchio anteriore che cade verso l'interno: stressi l'articolazione.",
+      "Abbassare la guardia con la fatica: perdi l'abitudine a tenere le mani alte."
+    ],
+    "why": "Rinforza quadricipiti e glutei una gamba alla volta, dando stabilità quando atterri dopo un calcio e nei cambi di distanza.",
+    "figure": [
+      {
+        "label": "Partenza in guardia",
+        "people": [
+          {
+            "pose": "guardia"
+          }
+        ]
+      },
+      {
+        "label": "Ginocchio vicino a terra",
+        "people": [
+          {
+            "pose": "forza-resistente/affondo"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 30,
+            "dy": -20,
+            "bend": -8
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1267,6 +6954,49 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 riprese da 3 min, recupero 1 min",
     "details": "Scendi in plank, petto a terra, risali e salta battendo le mani sopra la testa, mantenendo un ritmo che riesci a sostenere fino al gong. Atterra morbido sugli avampiedi. Simula lo sforzo di cadere e rialzarsi e allena forza e fiato insieme per tutta la ripresa.",
+    "setup": "In piedi, piedi alla larghezza delle spalle, in uno spazio libero. Prepara il timer per una ripresa da 3 minuti.",
+    "steps": [
+      "Piega le gambe e appoggia le mani a terra davanti ai piedi, alla larghezza delle spalle.",
+      "Lancia i piedi indietro in plank e scendi con petto e cosce fino a toccare il pavimento.",
+      "Spingi con le braccia per staccare il petto e riporta i piedi vicino alle mani con un piccolo salto.",
+      "Distendi gambe e anche e salta verso l'alto battendo le mani sopra la testa.",
+      "Atterra morbido sugli avampiedi con le ginocchia piegate e parti subito con il burpee successivo.",
+      "Scegli un ritmo che riesci a tenere fino al gong: espira quando ti rialzi da terra e non cambiare velocità a metà ripresa."
+    ],
+    "errors": [
+      "Partire a tutta velocità: dopo un minuto sei finito e la ripresa si spezza.",
+      "Schiena inarcata o bacino che tocca per primo quando scendi: carichi la zona lombare.",
+      "Atterrare dal salto a gambe tese: ginocchia e caviglie prendono il colpo.",
+      "Saltare il passaggio del petto a terra: l'esercizio perde metà del lavoro di forza."
+    ],
+    "why": "Simula lo sforzo di andare giù e rialzarsi in fretta e allena forza e fiato insieme per tutta la durata di una ripresa.",
+    "figure": [
+      {
+        "label": "Mani a terra",
+        "people": [
+          {
+            "pose": "forza-resistente/accosciato-mani-a-terra"
+          }
+        ]
+      },
+      {
+        "label": "Petto a terra",
+        "people": [
+          {
+            "pose": "forza-resistente/petto-a-terra"
+          }
+        ]
+      },
+      {
+        "label": "Salto, mani in alto",
+        "people": [
+          {
+            "pose": "salto",
+            "air": 20
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1277,6 +7007,58 @@ export const exercises: Exercise[] = [
     "equipment": "Sbarra",
     "dose": "Scala 1-2-3-4-5-4-3-2-1, recupero 15 s",
     "details": "Esegui una trazione, poi due, fino al picco e poi riscendi, con pause brevissime tra i gradini. Presa prona, scapole depresse e mento sopra la sbarra a ogni ripetizione. Sviluppa la resistenza di dorsali e bicipiti necessaria per controllare l'avversario nel clinch.",
+    "setup": "Appeso alla sbarra con presa prona (palmi in avanti), mani poco più larghe delle spalle, braccia tese. Puoi incrociare i piedi e piegare un po' le ginocchia per non oscillare.",
+    "steps": [
+      "Prima di tirare abbassa le spalle lontano dalle orecchie (scapole giù): è da qui che parte ogni trazione.",
+      "Tira portando i gomiti verso i fianchi finché il mento supera la sbarra, senza slanci con le gambe. Espira mentre sali.",
+      "Scendi controllando fino a braccia tese: ogni ripetizione parte da appeso completo.",
+      "Fai la scala: 1 trazione, breve pausa appeso o con i piedi a terra, poi 2, poi 3, e così via fino al numero più alto stabilito.",
+      "Arrivato al picco riscendi: picco meno uno, meno due, fino a 1. Tra un gradino e l'altro riposa solo pochi secondi, il tempo di respirare."
+    ],
+    "errors": [
+      "Slanciarsi con le gambe o col bacino (kipping): lavori meno la schiena e stressi le spalle.",
+      "Mezze trazioni senza tornare a braccia tese: perdi metà del movimento.",
+      "Spalle che salgono verso le orecchie: carichi il collo invece dei dorsali.",
+      "Pause lunghe tra i gradini: l'esercizio non allena più la resistenza."
+    ],
+    "why": "Sviluppa la resistenza di dorsali e bicipiti che ti serve per tirare e controllare l'avversario nel clinch per tutta la ripresa.",
+    "figure": [
+      {
+        "label": "Appeso, braccia tese",
+        "people": [
+          {
+            "pose": "forza-resistente/appeso",
+            "air": 8
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ]
+      },
+      {
+        "label": "Mento sopra la sbarra",
+        "people": [
+          {
+            "pose": "forza-resistente/trazione-alta",
+            "air": 50
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -26
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -1287,6 +7069,58 @@ export const exercises: Exercise[] = [
     "equipment": "Parallele",
     "dose": "4 × 15-20 ripetizioni, recupero 45 s",
     "details": "Dalle braccia tese alle parallele scendi finché i gomiti arrivano a circa 90°, busto leggermente inclinato in avanti, poi risali con controllo. Evita di scendere troppo per non stressare le spalle. Rinforza tricipiti e petto per pugni e gomitate che restano incisivi anche da stanchi.",
+    "setup": "Alle parallele: afferra le sbarre e sali a braccia tese, spalle basse e lontane dalle orecchie. Piega le ginocchia e incrocia i piedi dietro di te.",
+    "steps": [
+      "Inclina leggermente il busto in avanti e tieni i gomiti vicini al corpo, puntati indietro.",
+      "Scendi lentamente piegando le braccia finché i gomiti arrivano a circa 90°, cioè braccio parallelo al pavimento. Inspira mentre scendi.",
+      "Non scendere oltre: le spalle non devono andare più in basso dei gomiti.",
+      "Spingi sulle sbarre e torna a braccia tese con controllo, espirando.",
+      "Mantieni un ritmo costante e uguale per tutta la serie: quando non riesci più a scendere fino a 90° la serie è finita."
+    ],
+    "errors": [
+      "Scendere troppo in basso: metti sotto stress l'articolazione della spalla.",
+      "Spalle che salgono verso le orecchie: carichi il collo e perdi forza.",
+      "Gomiti aperti verso l'esterno: lavori male i tricipiti e affatichi le spalle.",
+      "Rimbalzare in basso: usi lo slancio invece dei muscoli."
+    ],
+    "why": "Rinforza tricipiti e petto per pugni e gomitate che restano incisivi anche da stanco. Se senti fastidio alle spalle riduci la profondità.",
+    "figure": [
+      {
+        "label": "Braccia tese",
+        "people": [
+          {
+            "pose": "forza-resistente/dip-alto",
+            "air": 25
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ]
+      },
+      {
+        "label": "Gomiti a 90°",
+        "people": [
+          {
+            "pose": "forza-resistente/dip-basso",
+            "air": 25
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 0,
+            "dy": 18
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -1297,6 +7131,59 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "5 × 1 min, recupero 30 s",
     "details": "Con piedi larghi, fletti le anche spingendo indietro il bacino e proietta la kettlebell fino all'altezza del petto con una spinta esplosiva dei glutei. Schiena neutra, le braccia accompagnano soltanto. Allena la catena posteriore a ripetere spinte d'anca, base di ginocchiate e calci potenti.",
+    "setup": "Kettlebell a terra circa 30 cm davanti a te, piedi poco più larghi delle spalle. Piega le anche, afferra la maniglia con due mani a braccia tese e inclina la kettlebell verso di te.",
+    "steps": [
+      "Lancia la kettlebell indietro tra le gambe: avambracci contro l'interno delle cosce, sedere indietro, schiena dritta, ginocchia solo un po' piegate.",
+      "Spingi le anche in avanti con forza e distendi le gambe: sono glutei e femorali a far salire il peso, le braccia accompagnano soltanto.",
+      "In alto sei dritto, glutei e addome stretti, e la kettlebell arriva all'altezza del petto a braccia tese.",
+      "Lasciala ricadere e, quando gli avambracci toccano le cosce, piega di nuovo le anche per il colpo successivo.",
+      "Espira con decisione a ogni spinta d'anca e tieni lo stesso ritmo per tutto il tempo; se la tecnica peggiora, posa la kettlebell piegando le anche, non arrotondando la schiena."
+    ],
+    "errors": [
+      "Trasformarlo in uno squat: le ginocchia vanno avanti e i glutei lavorano poco.",
+      "Sollevare la kettlebell con spalle e braccia: ti stanchi subito e non alleni le anche.",
+      "Schiena arrotondata in basso o inarcata in alto: la zona lombare prende il carico.",
+      "Ritmo che si spegne a metà: il lavoro di resistenza si perde."
+    ],
+    "why": "Allena la catena posteriore a ripetere spinte d'anca a lungo, lo stesso gesto che dà potenza a ginocchiate e calci anche a fine incontro.",
+    "figure": [
+      {
+        "label": "Carica tra le gambe",
+        "people": [
+          {
+            "pose": "swing-carica"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 50,
+            "dy": -40,
+            "bend": -15
+          }
+        ]
+      },
+      {
+        "label": "Spinta d'anca",
+        "people": [
+          {
+            "pose": "swing-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -1307,6 +7194,73 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "4 giri × 12 rip. per esercizio, recupero 1 min",
     "details": "Esegui 12 swing, 12 goblet squat e 12 rematori per lato in sequenza, senza appoggiare la kettlebell tra un esercizio e l'altro. Scegli un carico moderato che ti permetta tecnica pulita fino all'ultimo giro. Lavora tutto il corpo con densità simile a una ripresa intensa.",
+    "setup": "Una sola kettlebell di peso moderato a terra davanti a te, piedi alla larghezza delle spalle. Il circuito è: swing, goblet squat e rematore per lato, uno dopo l'altro senza posare il peso.",
+    "steps": [
+      "Swing: dalla carica tra le gambe spingi le anche in avanti e porta la kettlebell all'altezza del petto a braccia tese. Fai tutte le ripetizioni previste.",
+      "All'ultimo swing accompagna la kettlebell al petto e afferrala per i lati della maniglia: sei pronto per il goblet squat.",
+      "Goblet squat: gomiti stretti, scendi in squat profondo con il busto alto e risali spingendo con tutto il piede.",
+      "Rematore: fai un passo indietro con una gamba, piega il busto in avanti con la schiena dritta, appoggia la mano libera sulla coscia davanti e tira la kettlebell verso il fianco portando il gomito indietro.",
+      "Finite le ripetizioni cambia mano e lato, poi ricomincia con gli swing senza pause.",
+      "Respira a ogni ripetizione e tieni lo stesso ritmo fino all'ultimo giro: la tecnica pulita viene prima della velocità."
+    ],
+    "errors": [
+      "Scegliere un peso troppo alto: all'ultimo giro la schiena si arrotonda.",
+      "Appoggiare la kettlebell tra un esercizio e l'altro: perdi la continuità che rende il circuito simile a una ripresa.",
+      "Nel rematore ruotare il busto per tirare su il peso: lavori con lo slancio e non con la schiena.",
+      "Swing tirati con le braccia: affatichi le spalle prima del rematore."
+    ],
+    "why": "Lavora tutto il corpo con una densità simile a una ripresa intensa: anche, gambe e schiena devono reggere sotto fatica.",
+    "figure": [
+      {
+        "label": "Swing",
+        "people": [
+          {
+            "pose": "swing-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Goblet squat",
+        "people": [
+          {
+            "pose": "forza-resistente/goblet-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Rematore",
+        "people": [
+          {
+            "pose": "forza-resistente/rematore-kb"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": -6,
+            "dy": -20
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -1317,6 +7271,58 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "3 × 25 ripetizioni, recupero 45 s",
     "details": "Tieni la kettlebell per le maniglie vicino al petto, gomiti all'interno, e scendi in squat profondo mantenendo il busto alto. Risali spingendo con tutto il piede. Rinforza gambe e core in modo stabile, migliorando la tenuta in guardia e la spinta nei calci.",
+    "setup": "In piedi, piedi poco più larghi delle spalle con le punte leggermente aperte. Tieni la kettlebell davanti al petto afferrandola per i lati della maniglia, gomiti stretti e puntati verso il basso.",
+    "steps": [
+      "Inspira, stringi l'addome e scendi spingendo le ginocchia in fuori, nella direzione delle punte.",
+      "Scendi in squat profondo, sotto il parallelo se la mobilità lo permette, tenendo il busto alto e la kettlebell attaccata al petto.",
+      "In basso i gomiti stanno all'interno delle ginocchia e i talloni restano a terra.",
+      "Risali spingendo con tutto il piede ed espira durante la salita.",
+      "Riparti senza pause lunghe in alto e tieni lo stesso ritmo fino all'ultima ripetizione."
+    ],
+    "errors": [
+      "Kettlebell che si allontana dal petto: il busto cade in avanti e la schiena si carica.",
+      "Talloni che si sollevano: il peso finisce sulle ginocchia.",
+      "Ginocchia che crollano verso l'interno quando arriva la fatica.",
+      "Scendere sempre meno per finire prima: alleni solo metà movimento."
+    ],
+    "why": "Rinforza gambe e core in modo stabile, migliorando la tenuta delle gambe in guardia e la spinta nei calci.",
+    "figure": [
+      {
+        "label": "Kettlebell al petto",
+        "people": [
+          {
+            "pose": "forza-resistente/goblet-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Squat profondo",
+        "people": [
+          {
+            "pose": "forza-resistente/goblet-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -1327,6 +7333,66 @@ export const exercises: Exercise[] = [
     "equipment": "Manubri",
     "dose": "4 × 15 ripetizioni, recupero 45 s",
     "details": "Con i manubri sulle spalle scendi in squat e, risalendo, usa la spinta delle gambe per portarli sopra la testa in un unico gesto fluido. Core contratto per non inarcare la schiena. Insegna a trasferire la forza dalle gambe alle braccia, come nei pugni, sotto affaticamento.",
+    "setup": "In piedi, piedi alla larghezza delle spalle. Un manubrio per mano appoggiato sulle spalle, palmi rivolti uno verso l'altro, gomiti in avanti.",
+    "steps": [
+      "Stringi l'addome e scendi in squat fino alle cosce parallele, busto alto e manubri fermi sulle spalle.",
+      "Risali in modo esplosivo spingendo con le gambe.",
+      "Mentre le gambe si distendono usa quella spinta per portare i manubri sopra la testa, a braccia tese: salita e spinta sono un unico movimento.",
+      "In alto i manubri sono sopra le orecchie, non davanti al viso, e la schiena non si inarca.",
+      "Riporta i manubri sulle spalle con controllo e scendi subito nello squat successivo. Espira durante la spinta."
+    ],
+    "errors": [
+      "Fermarsi in piedi e poi spingere solo con le braccia: perdi il passaggio di forza dalle gambe.",
+      "Schiena che si inarca con i pesi sopra la testa: carichi la zona lombare.",
+      "Gomiti che cadono in basso nello squat: i manubri scivolano avanti e il busto si piega.",
+      "Squat corti per andare più veloce."
+    ],
+    "why": "Insegna a trasferire la forza dalle gambe alle braccia, come succede nei pugni, anche sotto fatica.",
+    "figure": [
+      {
+        "label": "Squat, pesi in spalla",
+        "people": [
+          {
+            "pose": "forza-resistente/thruster-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Spinta sopra la testa",
+        "people": [
+          {
+            "pose": "forza-resistente/thruster-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 10,
+            "dy": -24
+          }
+        ]
+      }
+    ],
     "tool": "manubri"
   },
   {
@@ -1337,6 +7403,41 @@ export const exercises: Exercise[] = [
     "equipment": "Manubri",
     "dose": "3 × 2-3 min, recupero 1 min",
     "details": "In posizione di guardia, con manubri da 1-2 kg, mantieni le mani all'altezza del viso e i gomiti chiusi, muovendoti leggermente sulle gambe. Non abbassare le mani nemmeno a fine serie. Rinforza spalle e trapezi per una guardia che non cede negli ultimi round.",
+    "setup": "In guardia, piede sinistro avanti (destro se sei mancino), ginocchia morbide e peso leggero sull'avampiede posteriore. Un manubrio da 1-2 kg per mano, tenuto come fosse il pugno chiuso nel guantone.",
+    "steps": [
+      "Porta le mani all'altezza del viso: il pugno davanti all'altezza della guancia, quello dietro a protezione del mento.",
+      "Chiudi i gomiti vicino ai fianchi e alle costole, abbassa il mento e alza appena le spalle per proteggerlo.",
+      "Muoviti leggero sulle gambe: piccoli passi avanti, indietro e di lato, piccoli rimbalzi sugli avampiedi, senza mai incrociare i piedi.",
+      "Puoi aggiungere piccoli movimenti di busto (schivate, rotazioni) ma le mani non si staccano dal viso.",
+      "Respira con calma dal naso e tieni la posizione fino al gong, anche quando le spalle bruciano."
+    ],
+    "errors": [
+      "Mani che scendono all'altezza del petto verso la fine: è proprio l'abitudine che questo esercizio deve correggere.",
+      "Gomiti larghi: lasci scoperto il corpo e affatichi di più le spalle.",
+      "Restare piantato fermo: la guardia va tenuta mentre ti muovi, come sul ring.",
+      "Usare manubri troppo pesanti: irrigidisci collo e spalle e perdi la posizione."
+    ],
+    "why": "Rinforza spalle e trapezi per una guardia che non cede negli ultimi round, quando la stanchezza fa abbassare le mani.",
+    "figure": [
+      {
+        "label": "Mani alte, gomiti chiusi",
+        "people": [
+          {
+            "pose": "guardia"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      }
+    ],
     "tool": "manubri"
   },
   {
@@ -1347,6 +7448,67 @@ export const exercises: Exercise[] = [
     "equipment": "Manubri",
     "dose": "3 riprese da 2 min, recupero 1 min",
     "details": "Esegui combinazioni di pugni in shadow con manubri da 1-2 kg, ritornando sempre in guardia dopo ogni colpo. Non estendere completamente il gomito per proteggere l'articolazione. Allena la resistenza di spalle e braccia mantenendo il gesto tecnico del pugno.",
+    "setup": "In guardia, con un manubrio da 1-2 kg per mano, in uno spazio libero davanti a te. Il lavoro dura una ripresa intera.",
+    "steps": [
+      "Parti da guardia corretta: mani al viso, gomiti chiusi, mento basso, peso leggero sull'avampiede posteriore.",
+      "Tira combinazioni semplici di pugni (diretto, diretto-dritto, diretto-dritto-gancio) a velocità media, controllando il gesto.",
+      "Allunga il braccio quasi del tutto ma senza bloccare il gomito in fondo: il colpo si ferma un attimo prima della distensione completa.",
+      "Dopo ogni pugno riporta subito la mano al viso lungo la stessa linea: il ritorno in guardia è importante quanto il colpo.",
+      "Muoviti tra una combinazione e l'altra con piccoli passi e respira: espira con un soffio corto a ogni colpo.",
+      "Tieni un ritmo costante fino al gong; se la tecnica peggiora rallenta ma non abbassare le mani."
+    ],
+    "errors": [
+      "Distendere il braccio fino a bloccare il gomito: con il peso in mano l'articolazione viene strattonata.",
+      "Lasciare la mano in fondo o farla cadere al ritorno: abitui il braccio a restare scoperto.",
+      "Tirare con la sola spalla senza ruotare anca e piede: il pugno perde la tecnica corretta.",
+      "Andare troppo veloci: il manubrio prende il sopravvento e il gesto diventa uno strattone."
+    ],
+    "why": "Allena la resistenza di spalle e braccia mantenendo il gesto tecnico del pugno; senza pesi, poi, le mani sembrano più leggere.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Pugno, gomito non bloccato",
+        "people": [
+          {
+            "pose": "forza-resistente/diretto"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 24,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "manubri"
   },
   {
@@ -1356,7 +7518,65 @@ export const exercises: Exercise[] = [
     "description": "Calci al sacco con cavigliere leggere.",
     "equipment": "Cavigliere",
     "dose": "3 riprese da 2 min, recupero 1 min",
-    "details": "Con cavigliere da 0,5-1 kg esegui calci circolari e teep al sacco, curando rotazione dell'anca e ritorno in guardia. Mantieni il controllo del gesto senza strappare. Rinforza flessori dell'anca e gambe; togliendo le cavigliere i calci risulteranno più leggeri e veloci."
+    "details": "Con cavigliere da 0,5-1 kg esegui calci circolari e teep al sacco, curando rotazione dell'anca e ritorno in guardia. Mantieni il controllo del gesto senza strappare. Rinforza flessori dell'anca e gambe; togliendo le cavigliere i calci risulteranno più leggeri e veloci.",
+    "setup": "In guardia davanti al sacco, a distanza da calcio (lo raggiungi con la tibia, non con il piede). Una cavigliera leggera da 0,5-1 kg per caviglia, ben stretta.",
+    "steps": [
+      "Inizia con calci circolari: passo in diagonale con il piede anteriore, poi sali sull'avampiede della gamba d'appoggio e ruota il tallone verso il sacco.",
+      "Lancia la gamba posteriore facendo ruotare l'anca e colpisci il sacco con la parte bassa della tibia; la mano dello stesso lato scende indietro, l'altra protegge il viso.",
+      "Riporta la gamba indietro e torna in guardia prima del calcio successivo.",
+      "Alterna con i teep: alza il ginocchio, poi distendi la gamba e spingi il sacco con la pianta del piede portando avanti l'anca.",
+      "Lavora a velocità controllata: con le cavigliere conta la qualità del gesto, non la forza dell'impatto.",
+      "Cambia gamba a metà del lavoro, o alterna destro e sinistro, per caricare in modo uguale i due lati."
+    ],
+    "errors": [
+      "Strappare il calcio per vincere il peso: stressi ginocchio e anca.",
+      "Piede d'appoggio piatto: le anche non ruotano e il calcio diventa solo di gamba.",
+      "Lasciare la gamba ricadere a terra dopo il calcio invece di riportarla in guardia.",
+      "Usare cavigliere pesanti: il gesto cambia e rischi infortuni."
+    ],
+    "why": "Rinforza flessori dell'anca e gambe; tolte le cavigliere, i calci risultano più leggeri e veloci. Non usare pesi superiori a 1 kg per caviglia.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true,
+            "x": -15
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Impatto con la tibia",
+        "people": [
+          {
+            "pose": "calcio-circolare",
+            "gloves": true,
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 25,
+            "dy": 18,
+            "bend": 18
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-resistente--ginocchiate-a-ripresa-al-sacco",
@@ -1366,6 +7586,64 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "3 riprese da 3 min, recupero 1 min",
     "details": "Afferra il sacco come in un clinch e alterna ginocchiate dritte spingendo l'anca in avanti e salendo sull'avampiede della gamba d'appoggio. Tieni il ritmo costante fino al gong. Allena la resistenza specifica di core, flessori e glutei per vincere le fasi di clinch.",
+    "setup": "In piedi davanti al sacco, abbastanza vicino da abbracciarne la parte alta. Mani sovrapposte dietro il sacco come se tenessi la nuca dell'avversario, gomiti stretti contro il sacco.",
+    "steps": [
+      "Tieni le anche avanti, il busto dritto e il mento basso, come in un clinch dominante.",
+      "Sposta il peso sulla gamba d'appoggio e sali sul suo avampiede.",
+      "Porta il ginocchio dell'altra gamba in alto e in avanti spingendo l'anca verso il sacco: colpisci con la punta del ginocchio, piede in punta verso il basso.",
+      "Nello stesso momento tira il sacco verso di te con le mani e porta il busto leggermente indietro per dare spazio all'anca.",
+      "Riappoggia il piede e colpisci subito con l'altro ginocchio, alternando le gambe.",
+      "Tieni un ritmo costante dal primo all'ultimo secondo della ripresa ed espira a ogni ginocchiata."
+    ],
+    "errors": [
+      "Piegarsi in avanti sul sacco: la ginocchiata parte dalla coscia senza l'anca e perde forza.",
+      "Piede d'appoggio piatto: non sali e il colpo resta basso.",
+      "Dita intrecciate dietro il sacco: nel clinch vero rischi di farti male alle dita.",
+      "Fermarsi a metà ripresa per poi ripartire forte: perdi l'allenamento alla resistenza."
+    ],
+    "why": "Allena la resistenza specifica di core, flessori dell'anca e glutei che serve per vincere le fasi di clinch e continuare a colpire di ginocchio fino al gong.",
+    "figure": [
+      {
+        "label": "Presa al sacco",
+        "people": [
+          {
+            "pose": "forza-resistente/presa-sacco",
+            "gloves": true,
+            "x": -11
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Ginocchio e anca avanti",
+        "people": [
+          {
+            "pose": "forza-resistente/ginocchiata-sacco",
+            "gloves": true,
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 4,
+            "dy": -22,
+            "bend": -8
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -1376,6 +7654,64 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "3 riprese da 3 min, recupero 1 min",
     "details": "Alterna calci circolari destro e sinistro al sacco senza fermarti, ruotando sul piede d'appoggio e colpendo con la tibia. Rientra sempre in guardia tra un calcio e l'altro. Costruisce la resistenza per calciare con potenza anche nelle riprese finali.",
+    "setup": "In guardia davanti al sacco, a distanza da calcio: lo raggiungi con la tibia, non con il piede. Il lavoro dura una ripresa da 3 minuti.",
+    "steps": [
+      "Calcia con la gamba posteriore: piccolo passo in diagonale con il piede anteriore, poi sali sull'avampiede d'appoggio e ruota il tallone verso il sacco.",
+      "Fai girare l'anca e colpisci con la parte bassa della tibia; il braccio del lato che calcia scende indietro, l'altra mano protegge il viso.",
+      "Riporta la gamba indietro e torna in guardia: ogni calcio parte e finisce in guardia.",
+      "Cambia guardia con un piccolo saltello o un passo e calcia con l'altra gamba, alternando destro e sinistro.",
+      "Scegli un ritmo che puoi tenere per 3 minuti: calci pieni e regolari, non una raffica iniziale e poi calci senza forza.",
+      "Espira con un soffio a ogni impatto e non fermarti fino al gong."
+    ],
+    "errors": [
+      "Calciare con il piede d'appoggio piatto: le anche non ruotano e ti stanchi di più.",
+      "Colpire con il collo del piede: fa male e rischi di romperlo.",
+      "Abbassare entrambe le mani durante il calcio.",
+      "Non tornare in guardia tra un calcio e l'altro: con la fatica la tecnica crolla."
+    ],
+    "why": "Costruisce la resistenza per calciare con potenza anche nelle ultime riprese, quando l'avversario è stanco e i calci pesano di più.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true,
+            "x": -15
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Rotazione e tibia",
+        "people": [
+          {
+            "pose": "calcio-circolare",
+            "gloves": true,
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 25,
+            "dy": 18,
+            "bend": 18
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -1386,6 +7722,63 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "3 riprese da 2 min, recupero 1 min",
     "details": "Alterna teep destro e sinistro al sacco, sollevando il ginocchio prima di estendere e spingendo con la pianta del piede attraverso il bersaglio. Mantieni le mani alte. Rinforza flessori dell'anca e core, utili per controllare la distanza per tutto l'incontro.",
+    "setup": "In guardia davanti al sacco, a distanza da calcio. Lavori per una ripresa alternando teep con la gamba anteriore e con quella posteriore.",
+    "steps": [
+      "Solleva il ginocchio della gamba che calcia fino all'altezza della cintura, punta del piede verso l'alto e mani alte in guardia.",
+      "Distendi la gamba e spingi con la pianta o l'avampiede al centro del sacco, come per chiudere una porta con un calcio, puntando oltre il bersaglio.",
+      "Al momento della spinta porta l'anca in avanti e il busto appena indietro, così il peso del corpo entra nel colpo.",
+      "Ritira subito la gamba piegando il ginocchio e appoggia il piede in guardia.",
+      "Alterna gamba anteriore e posteriore con un ritmo regolare; espira a ogni spinta.",
+      "Se il sacco oscilla molto, aspettalo e colpiscilo quando torna verso di te, come un avversario che avanza."
+    ],
+    "errors": [
+      "Calciare a gamba tesa senza alzare prima il ginocchio: diventa uno slancio senza spinta.",
+      "Colpire con la punta delle dita: ti fai male e non sposti il sacco.",
+      "Lasciare la gamba distesa dopo l'impatto: in gara l'avversario la afferra.",
+      "Mani che si abbassano a ogni teep."
+    ],
+    "why": "Rinforza flessori dell'anca e core, utili per tenere a distanza l'avversario e fermarne gli attacchi per tutto l'incontro.",
+    "figure": [
+      {
+        "label": "Ginocchio alto",
+        "people": [
+          {
+            "pose": "teep-carica",
+            "gloves": true,
+            "x": -15
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Spinta con la pianta",
+        "people": [
+          {
+            "pose": "teep-spinta",
+            "gloves": true,
+            "x": -38
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 30,
+            "dy": -2
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -1396,6 +7789,41 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 1-2 min, recupero 1 min",
     "details": "Con la schiena appoggiata al muro scendi fino a cosce parallele al pavimento, ginocchia sopra le caviglie, e mantieni la posizione. Respira in modo regolare senza trattenere il fiato. Sviluppa resistenza isometrica dei quadricipiti per gambe che non cedono durante gli scambi.",
+    "setup": "In piedi con la schiena appoggiata a un muro liscio, piedi alla larghezza delle anche e a circa 50-60 cm dal muro.",
+    "steps": [
+      "Scivola con la schiena lungo il muro piegando le ginocchia.",
+      "Fermati quando le cosce sono parallele al pavimento: le ginocchia formano un angolo retto e sono sopra le caviglie, non più avanti.",
+      "Schiena, spalle e testa restano appoggiate al muro; il peso è sui talloni e su tutta la pianta.",
+      "Tieni le mani appoggiate leggere sulle cosce, incrociate sul petto o in guardia, senza spingere sulle gambe per aiutarti.",
+      "Respira in modo regolare senza trattenere il fiato e mantieni la posizione fino alla fine del tempo.",
+      "Per uscire, risali scivolando lungo il muro."
+    ],
+    "errors": [
+      "Piedi troppo vicini al muro: le ginocchia vanno oltre le punte e si caricano.",
+      "Cosce più alte del parallelo: l'esercizio diventa molto più facile.",
+      "Spingere con le mani sulle cosce: togli lavoro alle gambe.",
+      "Trattenere il respiro: la pressione sale e ti stanchi prima."
+    ],
+    "why": "Sviluppa la resistenza statica dei quadricipiti, così le gambe non cedono durante gli scambi lunghi.",
+    "figure": [
+      {
+        "label": "Cosce parallele",
+        "people": [
+          {
+            "pose": "forza-resistente/wall-sit",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 26,
+            "w": 6,
+            "h": 120
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1406,6 +7834,32 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 1 min, recupero 45 s",
     "details": "Scendi in mezzo squat in posizione di guardia, peso ben distribuito, mani alte e mento basso, e mantieni la posizione. Puoi aggiungere piccoli movimenti di busto senza alzarti. Allena gambe e spalle insieme a sostenere una guardia bassa e stabile a lungo.",
+    "setup": "In guardia normale, poi allarga un po' i piedi e scendi in mezzo squat. Mani alte al viso, gomiti chiusi, mento basso.",
+    "steps": [
+      "Piega le ginocchia finché senti le cosce lavorare bene, circa a metà strada tra in piedi e cosce parallele.",
+      "Distribuisci il peso tra le due gambe, con il tallone posteriore leggermente sollevato come in guardia.",
+      "Tieni il busto dritto e appena inclinato in avanti, le mani all'altezza del viso e le spalle leggermente alzate a protezione del mento.",
+      "Respira con calma e mantieni la posizione per tutto il tempo indicato senza risalire.",
+      "Per renderlo più specifico aggiungi piccoli movimenti di busto (schivate a destra e sinistra, piegamenti sulle gambe) senza mai alzarti e senza abbassare le mani."
+    ],
+    "errors": [
+      "Risalire un po' alla volta senza accorgersene: le gambe smettono di lavorare.",
+      "Mani che scendono verso il petto: perdi metà del lavoro sulle spalle.",
+      "Busto troppo piegato in avanti: la testa esce dalla linea e la schiena si carica.",
+      "Tutto il peso sulla gamba davanti: non sei più in grado di muoverti o calciare."
+    ],
+    "why": "Allena gambe e spalle insieme a reggere una guardia bassa e stabile a lungo, come quando devi assorbire una pressione costante.",
+    "figure": [
+      {
+        "label": "Mezzo squat in guardia",
+        "people": [
+          {
+            "pose": "forza-resistente/guardia-bassa",
+            "gloves": true
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1416,6 +7870,40 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 45 s, recupero 30 s",
     "details": "Da plank alto, porta un diretto in avanti alternando le braccia, mantenendo bacino fermo e piedi leggermente divaricati per stabilità. Evita rotazioni del busto. Rinforza core e spalle nella stabilità anti-rotazione necessaria per colpire senza perdere l'equilibrio.",
+    "setup": "In plank alto: mani sotto le spalle, braccia tese, corpo in linea dalla testa ai talloni. Allarga i piedi un po' più delle anche per essere più stabile.",
+    "steps": [
+      "Stringi glutei e addome come se dovessi ricevere un colpo allo stomaco.",
+      "Sposta il peso sulla mano sinistra senza far ruotare il bacino.",
+      "Tira un diretto con la destra in avanti, all'altezza del viso, con il pugno chiuso.",
+      "Riporta la mano a terra sotto la spalla e ripeti con l'altro braccio.",
+      "Alterna i pugni con un ritmo regolare: il bacino resta fermo e parallelo al pavimento, come se avessi un bicchiere d'acqua sulla schiena.",
+      "Respira a ogni pugno: espira mentre colpisci."
+    ],
+    "errors": [
+      "Bacino che ruota o oscilla a ogni pugno: perdi il lavoro di stabilità del tronco.",
+      "Bacino che cade o sedere troppo alto: carichi la schiena o togli lavoro agli addominali.",
+      "Pugni troppo veloci e scomposti: conta la stabilità, non la velocità.",
+      "Mano d'appoggio troppo avanti rispetto alla spalla: la spalla si sovraccarica."
+    ],
+    "why": "Rinforza core e spalle nella stabilità contro le rotazioni, necessaria per colpire forte senza perdere l'equilibrio.",
+    "figure": [
+      {
+        "label": "Plank alto",
+        "people": [
+          {
+            "pose": "forza-resistente/piegamento-alto"
+          }
+        ]
+      },
+      {
+        "label": "Diretto, bacino fermo",
+        "people": [
+          {
+            "pose": "forza-resistente/plank-pugno"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1426,6 +7914,40 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 20 m, recupero 45 s",
     "details": "A quattro zampe con ginocchia sollevate di pochi centimetri, avanza muovendo mano e piede opposti, schiena piatta e bacino basso. Movimenti corti e controllati. Coordina tutto il corpo e rinforza spalle e core in modo continuo, migliorando la resistenza generale.",
+    "setup": "A quattro zampe: mani sotto le spalle, ginocchia sotto le anche. Punte dei piedi a terra, poi solleva le ginocchia di pochi centimetri dal pavimento.",
+    "steps": [
+      "Tieni la schiena piatta come un tavolo e il bacino alla stessa altezza delle spalle; sguardo a terra poco avanti alle mani.",
+      "Avanza muovendo insieme la mano destra e il piede sinistro, con passi corti di circa una spanna.",
+      "Poi muovi mano sinistra e piede destro, sempre con le ginocchia sospese a pochi centimetri da terra.",
+      "Mantieni l'addome contratto in modo che il bacino non oscilli da una parte all'altra.",
+      "Procedi in modo continuo e controllato per la distanza o il tempo indicato; puoi anche camminare all'indietro o di lato.",
+      "Respira in modo regolare senza trattenere il fiato."
+    ],
+    "errors": [
+      "Sedere alto verso il soffitto: togli il lavoro a spalle e addome.",
+      "Ginocchia che toccano o strisciano a terra.",
+      "Passi lunghi e veloci: il bacino ondeggia e perdi il controllo.",
+      "Muovere mano e piede dello stesso lato insieme: perdi la coordinazione crociata che serve all'esercizio."
+    ],
+    "why": "Coordina tutto il corpo e rinforza spalle e core in modo continuo, migliorando la resistenza generale.",
+    "figure": [
+      {
+        "label": "Ginocchia sollevate",
+        "people": [
+          {
+            "pose": "forza-resistente/orso"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 22,
+            "dy": 0,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1436,6 +7958,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 15 m, recupero 45 s",
     "details": "Seduto, appoggia mani dietro e piedi davanti, solleva il bacino e cammina in avanti o indietro mantenendo i fianchi alti. Spalle attive, non lasciarle sprofondare. Rinforza tricipiti, spalle posteriori e glutei, bilanciando il lavoro di spinta dei pugni.",
+    "setup": "Seduto a terra, ginocchia piegate e piedi appoggiati davanti a te alla larghezza delle anche. Mani a terra dietro il sedere, dita rivolte verso i piedi o di lato.",
+    "steps": [
+      "Spingi su mani e piedi e solleva il bacino da terra finché è quasi all'altezza delle ginocchia.",
+      "Abbassa le spalle lontano dalle orecchie e apri il petto: le spalle devono essere attive, non appese.",
+      "Cammina in avanti muovendo insieme mano destra e piede sinistro, poi mano sinistra e piede destro, con passi corti.",
+      "Tieni i fianchi alti per tutto il tempo e lo sguardo in avanti o verso l'alto.",
+      "Prosegui per la distanza o il tempo indicato, poi cammina anche all'indietro. Respira in modo regolare."
+    ],
+    "errors": [
+      "Bacino che scende verso il pavimento: glutei e tricipiti smettono di lavorare.",
+      "Spalle che sprofondano verso le orecchie: carichi male l'articolazione.",
+      "Mani troppo lontane dal corpo: i polsi e le spalle si sovraccaricano.",
+      "Passi lunghi e scoordinati: il bacino oscilla."
+    ],
+    "why": "Rinforza tricipiti, parte posteriore delle spalle e glutei, bilanciando tutto il lavoro di spinta che fai con i pugni.",
+    "figure": [
+      {
+        "label": "Fianchi alti",
+        "people": [
+          {
+            "pose": "forza-resistente/granchio"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 22,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1446,6 +8000,66 @@ export const exercises: Exercise[] = [
     "equipment": "Battle rope",
     "dose": "3 riprese da 3 min (30 s on/15 s off)",
     "details": "In mezzo squat, crea onde alternate con le corde muovendo le braccia dalle spalle, busto stabile e core contratto. Mantieni l'ampiezza delle onde fino alla fine. Allena la resistenza di braccia e spalle sotto stress metabolico, come in una serie di scambi intensi.",
+    "setup": "Davanti all'ancoraggio della battle rope, un capo della corda per mano, a una distanza tale che la corda sia appena distesa. Piedi alla larghezza delle spalle, ginocchia piegate in mezzo squat, busto leggermente inclinato in avanti.",
+    "steps": [
+      "Afferra le estremità con presa salda, gomiti leggermente piegati e mani davanti alle anche.",
+      "Alza un braccio mentre abbassi l'altro, muovendo le braccia dalle spalle: si formano onde alternate che corrono verso l'ancoraggio.",
+      "Mantieni il mezzo squat e il busto fermo: si muovono solo le braccia, addome contratto.",
+      "Cerca onde ampie e regolari che arrivino fino in fondo alla corda.",
+      "Distribuisci lo sforzo sui 3 minuti: ritmo sostenuto ma costante, respiro corto e regolare, senza mai far morire le onde.",
+      "Negli ultimi 30 secondi, se ne hai, aumenta la velocità come in un finale di ripresa."
+    ],
+    "errors": [
+      "Gambe tese e busto che ondeggia: la schiena si carica e perdi stabilità.",
+      "Onde piccole fatte solo con i polsi: alleni poco le spalle.",
+      "Trattenere il fiato: dopo un minuto sei già senza aria.",
+      "Partire troppo forte: le onde si spengono a metà ripresa."
+    ],
+    "why": "Allena la resistenza di braccia e spalle sotto forte fatica, come durante una serie di scambi intensi.",
+    "figure": [
+      {
+        "label": "Braccio vicino in alto",
+        "people": [
+          {
+            "pose": "forza-resistente/battle-rope-1",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "battlerope"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": 18
+          }
+        ]
+      },
+      {
+        "label": "Braccio vicino in basso",
+        "people": [
+          {
+            "pose": "forza-resistente/battle-rope-2",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "battlerope"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -18
+          }
+        ]
+      }
+    ],
     "tool": "battle-rope"
   },
   {
@@ -1455,7 +8069,48 @@ export const exercises: Exercise[] = [
     "description": "Spinta su distanze lunghe a ritmo costante.",
     "equipment": "Slitta",
     "dose": "5 × 30 m, recupero 1 min",
-    "details": "Con le mani sui montanti e il corpo inclinato in avanti, spingi la slitta con passi corti e potenti, mantenendo la schiena neutra. Usa un carico moderato che consenta un ritmo costante. Allena gambe e spinta totale, utile per guadagnare spazio e pressare l'avversario."
+    "details": "Con le mani sui montanti e il corpo inclinato in avanti, spingi la slitta con passi corti e potenti, mantenendo la schiena neutra. Usa un carico moderato che consenta un ritmo costante. Allena gambe e spinta totale, utile per guadagnare spazio e pressare l'avversario.",
+    "setup": "Dietro la slitta caricata con un peso moderato. Mani sui montanti all'altezza delle spalle o poco sotto, braccia distese, corpo inclinato in avanti a circa 45°.",
+    "steps": [
+      "Allinea testa, schiena e gamba posteriore: il corpo forma una linea dritta inclinata verso la slitta.",
+      "Spingi con l'avampiede e distendi completamente la gamba posteriore a ogni passo.",
+      "Fai passi corti e potenti, portando il ginocchio avanti sotto l'anca e appoggiando sull'avampiede.",
+      "Tieni le braccia rigide e l'addome contratto: la forza viene dalle gambe e arriva alla slitta attraverso il tronco.",
+      "Mantieni un ritmo costante per tutta la distanza, senza fermarti e ripartire; respira in modo regolare."
+    ],
+    "errors": [
+      "Schiena arrotondata o bacino basso: la spinta si disperde e la zona lombare si carica.",
+      "Passi lunghi: perdi aderenza e la slitta si ferma.",
+      "Braccia che si piegano: il busto si avvicina alla slitta e la spinta diventa debole.",
+      "Carico troppo pesante: non riesci a tenere un ritmo costante sulla distanza."
+    ],
+    "why": "Allena gambe e spinta di tutto il corpo, utili per guadagnare spazio e mettere pressione sull'avversario spingendolo all'indietro.",
+    "figure": [
+      {
+        "label": "Corpo inclinato, passi corti",
+        "people": [
+          {
+            "pose": "forza-resistente/spinta-slitta",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 127,
+            "w": 26,
+            "h": 88
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 28,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-resistente--traino-della-slitta-all-indietro",
@@ -1464,7 +8119,54 @@ export const exercises: Exercise[] = [
     "description": "Tirata della slitta camminando all'indietro.",
     "equipment": "Slitta",
     "dose": "5 × 25 m, recupero 1 min",
-    "details": "Afferra le maniglie o la corda, braccia tese, e cammina all'indietro a ginocchia piegate tirando la slitta. Rimani basso e spingi sull'avampiede. Rinforza quadricipiti e ginocchia con poco impatto, utile per la stabilità e per chi ha bisogno di proteggere le articolazioni."
+    "details": "Afferra le maniglie o la corda, braccia tese, e cammina all'indietro a ginocchia piegate tirando la slitta. Rimani basso e spingi sull'avampiede. Rinforza quadricipiti e ginocchia con poco impatto, utile per la stabilità e per chi ha bisogno di proteggere le articolazioni.",
+    "setup": "In piedi di fronte alla slitta, con le maniglie o la corda in mano a braccia tese. Fai qualche passo indietro finché la corda è tesa, piedi alla larghezza delle anche e ginocchia piegate.",
+    "steps": [
+      "Scendi in un quarto di squat con il busto dritto o appena inclinato all'indietro, braccia distese verso la slitta.",
+      "Fai un passo all'indietro appoggiando prima l'avampiede, poi spingi sul piede davanti per trascinare la slitta.",
+      "Resta basso per tutto il percorso: le ginocchia restano piegate e i quadricipiti lavorano sempre.",
+      "Le braccia tengono soltanto, non tirano: la forza viene dalle gambe.",
+      "Continua con passi corti e regolari fino alla fine della distanza, controllando ogni tanto che dietro di te sia libero."
+    ],
+    "errors": [
+      "Raddrizzare le gambe a ogni passo: i quadricipiti si riposano e l'esercizio perde senso.",
+      "Tirare con le braccia piegate: affatichi braccia e schiena invece delle gambe.",
+      "Appoggiare il tallone per primo camminando all'indietro: perdi spinta ed equilibrio.",
+      "Busto troppo inclinato in avanti: la schiena si carica."
+    ],
+    "why": "Rinforza quadricipiti e ginocchia con pochissimo impatto: utile per la stabilità delle gambe e per chi deve proteggere le articolazioni.",
+    "figure": [
+      {
+        "label": "Basso, passi indietro",
+        "people": [
+          {
+            "pose": "forza-resistente/traino-slitta",
+            "x": -30
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 128,
+            "w": 24,
+            "h": 14
+          },
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 130,
+            "y": 128
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -28,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-resistente--farmer-walk-lungo",
@@ -1474,6 +8176,48 @@ export const exercises: Exercise[] = [
     "equipment": "Manubri",
     "dose": "4 × 50 m, recupero 1 min",
     "details": "Con un manubrio pesante per mano, cammina a passi regolari mantenendo busto eretto, spalle basse e addome contratto. Non far oscillare i pesi. Rinforza presa, trapezi e core: una presa resistente è fondamentale per controllare l'avversario nel clinch.",
+    "setup": "In piedi tra due manubri pesanti. Accosciati con la schiena dritta, afferrali al centro e alzati spingendo con le gambe, braccia lungo i fianchi.",
+    "steps": [
+      "Stringi forte le impugnature, abbassa le spalle lontano dalle orecchie e contrai l'addome.",
+      "Cammina a passi normali e regolari, appoggiando il piede dal tallone alla punta e guardando avanti.",
+      "Tieni il busto dritto: i manubri non devono oscillare né toccarti le gambe.",
+      "Respira in modo regolare senza trattenere il fiato, anche quando la presa inizia a cedere.",
+      "Alla fine della distanza fermati e posa i manubri piegando le gambe con la schiena dritta, non lasciandoli cadere."
+    ],
+    "errors": [
+      "Spalle che salgono o si arrotondano in avanti: il collo si carica.",
+      "Busto che si inclina di lato o all'indietro: la schiena compensa il peso.",
+      "Passi lunghi e veloci: i manubri oscillano e perdi stabilità.",
+      "Raccogliere o posare i pesi con la schiena curva."
+    ],
+    "why": "Rinforza presa, trapezi e core: una presa che non cede è fondamentale per controllare l'avversario nel clinch.",
+    "figure": [
+      {
+        "label": "Busto dritto, spalle basse",
+        "people": [
+          {
+            "pose": "forza-resistente/camminata-pesi"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 28,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "manubri"
   },
   {
@@ -1484,6 +8228,43 @@ export const exercises: Exercise[] = [
     "equipment": "Sandbag",
     "dose": "4 × 40 m, recupero 1 min",
     "details": "Abbraccia il sandbag stretto al petto, gomiti chiusi, e cammina mantenendo la schiena dritta senza inarcarti all'indietro. Respira con il diaframma nonostante la compressione. Simula la tenuta di un corpo nel clinch, rinforzando braccia, dorso e core.",
+    "setup": "Sandbag a terra davanti a te. Accosciati con la schiena dritta, abbraccialo, portalo sulle cosce e poi alzati stringendolo al petto con entrambe le braccia, gomiti chiusi.",
+    "steps": [
+      "Stringi il sandbag contro il petto come se abbracciassi forte un avversario, mani incrociate sotto o intorno al sacco.",
+      "Tieni il busto dritto: non inclinarti all'indietro per bilanciare il peso.",
+      "Cammina a passi corti e regolari guardando avanti.",
+      "Respira con la pancia, anche se il sacco ti comprime il petto: inspira dal naso, espira dalla bocca.",
+      "A fine distanza posa il sandbag piegando le gambe, con la schiena dritta."
+    ],
+    "errors": [
+      "Inarcarsi all'indietro con la pancia avanti: la zona lombare prende tutto il carico.",
+      "Lasciare scivolare il sacco verso la pancia: le braccia smettono di stringere.",
+      "Trattenere il respiro: la fatica arriva molto prima.",
+      "Raccogliere il sacco con la schiena curva."
+    ],
+    "why": "Simula la tenuta di un corpo nel clinch e rinforza braccia, dorso e core che devono stringere a lungo senza mollare.",
+    "figure": [
+      {
+        "label": "Sacco stretto al petto",
+        "people": [
+          {
+            "pose": "forza-resistente/abbraccio-sandbag"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 28,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "sandbag"
   },
   {
@@ -1494,6 +8275,67 @@ export const exercises: Exercise[] = [
     "equipment": "Sandbag",
     "dose": "4 × 10 ripetizioni (alternate), recupero 1 min",
     "details": "Accosciati sopra il sandbag, abbraccialo, portalo sulle cosce e con una spinta d'anca lancialo oltre una spalla, alternando i lati. Solleva con le gambe, non con la schiena. Allena l'estensione dell'anca e la forza da lotta, simile agli sbilanciamenti nel clinch.",
+    "setup": "Sandbag a terra tra i piedi, piedi poco più larghi delle spalle. Accosciati sopra il sacco con la schiena dritta e abbraccialo da sotto, petto vicino al sacco.",
+    "steps": [
+      "Solleva il sandbag da terra spingendo con le gambe, tenendolo stretto al corpo, e appoggialo sulle cosce.",
+      "Sistema la presa: avvolgi il sacco con le braccia e tienilo vicino al petto.",
+      "Spingi le anche in avanti con forza e distendi le gambe: è la spinta d'anca, non la schiena, a far salire il sacco.",
+      "Accompagna il sacco sopra una spalla e lascialo cadere dietro di te, girando appena la testa dall'altra parte.",
+      "Girati, riprendi il sandbag e ripeti lanciandolo sopra l'altra spalla, alternando i lati a ritmo costante.",
+      "Espira con forza a ogni spinta."
+    ],
+    "errors": [
+      "Sollevare a gambe tese con la schiena curva: rischi la zona lombare.",
+      "Lanciare con le braccia senza spinta d'anca: ti stanchi subito e il sacco non passa.",
+      "Lanciare sempre dalla stessa parte: sbilanci il lavoro tra i due lati.",
+      "Inarcarsi all'indietro alla fine del lancio."
+    ],
+    "why": "Allena l'estensione dell'anca e la forza da lotta, simile a quando sollevi e sbilanci l'avversario nel clinch. Usa un sacco gestibile: la schiena va protetta.",
+    "figure": [
+      {
+        "label": "Abbraccia il sacco",
+        "people": [
+          {
+            "pose": "forza-resistente/accosciato-sandbag"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 8,
+            "dy": -28,
+            "bend": -6
+          }
+        ]
+      },
+      {
+        "label": "Spinta d'anca, oltre la spalla",
+        "people": [
+          {
+            "pose": "forza-resistente/sandbag-spalla"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -22,
+            "dy": 10,
+            "bend": -10
+          }
+        ]
+      }
+    ],
     "tool": "sandbag"
   },
   {
@@ -1504,6 +8346,66 @@ export const exercises: Exercise[] = [
     "equipment": "Elastico",
     "dose": "3 × 1 min per lato, recupero 30 s",
     "details": "Con l'elastico fissato alle spalle, esegui gomitate orizzontali continue ruotando busto e anca, rientrando ogni volta in guardia. Mantieni il mento basso. Sviluppa la resistenza dei muscoli rotatori e delle spalle per gomitate precise anche a fine ripresa.",
+    "setup": "Fissa l'elastico a un punto solido dietro di te all'altezza delle spalle e passa la maniglia o il capo libero intorno all'avambraccio, vicino al gomito. Mettiti in guardia abbastanza lontano da sentire l'elastico teso.",
+    "steps": [
+      "Parti in guardia con le mani al viso e il mento basso.",
+      "Ruota anca e busto verso il bersaglio immaginario salendo sull'avampiede del piede dello stesso lato.",
+      "Porta il gomito in orizzontale all'altezza del viso: il braccio è piegato, la mano vicina all'orecchio o al petto, e colpisci con la punta del gomito.",
+      "L'altra mano resta alta a proteggere il viso.",
+      "Lascia tornare il gomito con controllo, contro la tensione dell'elastico, e rientra in guardia prima della gomitata successiva.",
+      "Lavora a ritmo costante per tutto il tempo, espirando a ogni colpo; poi cambia braccio."
+    ],
+    "errors": [
+      "Colpire solo con il braccio senza ruotare anca e busto: il gesto perde potenza.",
+      "Lasciare che l'elastico riporti indietro di scatto il braccio: stressi la spalla.",
+      "Alzare il mento o abbassare l'altra mano.",
+      "Gomito troppo basso o troppo alto: non alleni la traiettoria giusta."
+    ],
+    "why": "Sviluppa la resistenza dei muscoli rotatori del tronco e delle spalle, per gomitate precise e forti anche a fine ripresa.",
+    "figure": [
+      {
+        "label": "Guardia, elastico teso",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": -5
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "elbow",
+            "x": 20,
+            "y": 50
+          }
+        ]
+      },
+      {
+        "label": "Gomitata orizzontale",
+        "people": [
+          {
+            "pose": "forza-resistente/gomitata",
+            "x": -5
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "elbow",
+            "x": 20,
+            "y": 50
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 18,
+            "dy": 0,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "elastico"
   },
   {
@@ -1514,6 +8416,78 @@ export const exercises: Exercise[] = [
     "equipment": "Elastico",
     "dose": "4 × 45 s, recupero 15 s",
     "details": "Con l'elastico passato dietro la schiena, alterna diretti veloci contro la resistenza, estendendo il braccio senza bloccare il gomito e ritornando subito in guardia. Ruota leggermente il busto. Allena la resistenza di spalle e petto per pugni rapidi e costanti.",
+    "setup": "Passa un elastico dietro la schiena, all'altezza delle scapole, e tieni un capo in ciascuna mano. Mettiti in guardia: l'elastico deve essere già leggermente teso con le mani al viso.",
+    "steps": [
+      "Parti in guardia, mani al viso, gomiti chiusi, mento basso.",
+      "Tira un diretto distendendo il braccio contro la resistenza dell'elastico, ruotando leggermente busto e piede dello stesso lato.",
+      "Fermati un attimo prima di bloccare il gomito: il braccio è quasi teso, mai rigido.",
+      "Riporta subito la mano al viso controllando il ritorno, senza farti tirare indietro dall'elastico.",
+      "Alterna destro e sinistro a ritmo veloce e regolare per tutto il tempo, espirando a ogni pugno."
+    ],
+    "errors": [
+      "Bloccare il gomito in fondo al pugno: l'elastico tira e stressa l'articolazione.",
+      "Lasciare che l'elastico riporti indietro la mano di colpo: perdi il controllo del gesto.",
+      "Abbassare la mano che non colpisce.",
+      "Tirare solo di braccio, senza la piccola rotazione del busto."
+    ],
+    "why": "Allena la resistenza di spalle e petto per pugni rapidi e costanti fino al gong.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true,
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 66,
+            "y": 42
+          },
+          {
+            "type": "band",
+            "at": "hand2",
+            "x": 66,
+            "y": 42
+          }
+        ]
+      },
+      {
+        "label": "Diretto contro l'elastico",
+        "people": [
+          {
+            "pose": "forza-resistente/diretto",
+            "gloves": true,
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 66,
+            "y": 42
+          },
+          {
+            "type": "band",
+            "at": "hand2",
+            "x": 66,
+            "y": 42
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 24,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "elastico"
   },
   {
@@ -1524,6 +8498,56 @@ export const exercises: Exercise[] = [
     "equipment": "Sbarra",
     "dose": "4 × 15 ripetizioni, recupero 45 s",
     "details": "Sotto una sbarra bassa, corpo rigido come in plank, tira il petto verso la sbarra stringendo le scapole e scendi con controllo. Più i piedi sono avanti, più è difficile. Rinforza dorsali e romboidi per una postura solida e un clinch più forte.",
+    "setup": "Sotto una sbarra bassa (all'altezza del bacino circa). Afferrala con presa prona alla larghezza delle spalle, poi porta i piedi avanti e appoggia i talloni a terra: sei appeso con il corpo dritto e inclinato, il petto sotto la sbarra.",
+    "steps": [
+      "Stringi glutei e addome: il corpo resta rigido come in un plank dalla testa ai talloni.",
+      "Tira il petto verso la sbarra portando i gomiti indietro e stringendo le scapole tra loro.",
+      "Arriva con il petto vicino alla sbarra, fermati un istante ed espira.",
+      "Scendi con controllo fino a braccia tese, senza lasciarti cadere.",
+      "Tieni lo stesso ritmo per tutte le ripetizioni. Per renderlo più facile piega le ginocchia o alza la sbarra; per renderlo più difficile porta i piedi più avanti."
+    ],
+    "errors": [
+      "Bacino che cade verso il pavimento: tiri con la schiena inarcata e perdi la tenuta.",
+      "Tirare con il mento in avanti invece che con il petto: accorci il movimento.",
+      "Spalle che salgono verso le orecchie.",
+      "Scendere di colpo: perdi metà del lavoro."
+    ],
+    "why": "Rinforza dorsali e muscoli tra le scapole per una postura solida e un clinch più forte; bilancia il lavoro di spinta dei pugni.",
+    "figure": [
+      {
+        "label": "Braccia tese",
+        "people": [
+          {
+            "pose": "forza-resistente/rematore-inverso-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ]
+      },
+      {
+        "label": "Petto alla sbarra",
+        "people": [
+          {
+            "pose": "forza-resistente/rematore-inverso-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 0,
+            "dy": -14
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -1534,6 +8558,70 @@ export const exercises: Exercise[] = [
     "equipment": "Sandbag",
     "dose": "4 × 10 ripetizioni, recupero 1 min",
     "details": "Solleva il sandbag da terra con una girata portandolo al petto, poi spingilo sopra la testa usando anche le gambe. Schiena neutra in ogni fase. Esercizio completo che allena l'intero corpo a generare forza ripetutamente, come richiesto in un match intenso.",
+    "setup": "Sandbag a terra tra i piedi, piedi alla larghezza delle spalle. Accosciati con la schiena dritta e afferra le maniglie o i lati del sacco, braccia tese.",
+    "steps": [
+      "Stacca il sandbag da terra spingendo con le gambe, schiena neutra e petto aperto, tenendolo vicino alle gambe.",
+      "Quando il sacco passa le ginocchia spingi le anche in avanti con forza: il sacco sale vicino al corpo.",
+      "Infila i gomiti sotto e ricevi il sandbag appoggiato al petto, piegando un po' le ginocchia per assorbirlo (girata).",
+      "Fai un piccolo piegamento sulle gambe e, distendendole, spingi il sacco sopra la testa fino a braccia tese.",
+      "Riporta il sacco al petto, poi a terra piegando anche e ginocchia con la schiena dritta, e ripeti.",
+      "Espira nella spinta sopra la testa e tieni un ritmo regolare per tutte le ripetizioni."
+    ],
+    "errors": [
+      "Tirare su il sacco con la schiena curva e le gambe tese: rischi la zona lombare.",
+      "Sacco lontano dal corpo durante la girata: diventa molto più pesante per la schiena.",
+      "Spingere sopra la testa inarcando la schiena: carichi le vertebre lombari.",
+      "Fare la spinta solo con le braccia senza il piegamento delle gambe."
+    ],
+    "why": "Esercizio completo che allena tutto il corpo a generare forza dalle gambe più e più volte, come richiede un incontro intenso. La schiena deve restare neutra in ogni fase.",
+    "figure": [
+      {
+        "label": "Presa a terra",
+        "people": [
+          {
+            "pose": "forza-resistente/accosciato-sandbag"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag"
+          }
+        ]
+      },
+      {
+        "label": "Girata al petto",
+        "people": [
+          {
+            "pose": "forza-resistente/sandbag-petto"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -24
+          }
+        ]
+      },
+      {
+        "label": "Spinta sopra la testa",
+        "people": [
+          {
+            "pose": "forza-resistente/sandbag-sopra"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag"
+          }
+        ]
+      }
+    ],
     "tool": "sandbag"
   },
   {
@@ -1543,7 +8631,66 @@ export const exercises: Exercise[] = [
     "description": "Salite sul gradino continue per 2 minuti.",
     "equipment": "Gradino",
     "dose": "3 × 2 min, recupero 1 min",
-    "details": "Sali su un gradino di 30-40 cm spingendo con la gamba d'appoggio, poi scendi con controllo, alternando le gambe a ritmo costante. Ginocchio allineato con il piede. Rinforza le gambe in modo unilaterale e migliora la resistenza per spostamenti continui sul ring."
+    "details": "Sali su un gradino di 30-40 cm spingendo con la gamba d'appoggio, poi scendi con controllo, alternando le gambe a ritmo costante. Ginocchio allineato con il piede. Rinforza le gambe in modo unilaterale e migliora la resistenza per spostamenti continui sul ring.",
+    "setup": "Davanti a un gradino o box stabile alto 30-40 cm, a un piccolo passo di distanza. In piedi, piedi alla larghezza delle anche, braccia rilassate.",
+    "steps": [
+      "Appoggia tutto il piede destro sul gradino, con il ginocchio allineato alla punta del piede.",
+      "Spingi con il tallone della gamba sul gradino e sali fino a stendere la gamba; l'altra gamba ti segue senza spingere dal pavimento.",
+      "Appoggia anche il secondo piede sul gradino, in piedi con il busto dritto.",
+      "Scendi con controllo riportando a terra prima il piede che è salito per ultimo, poi l'altro.",
+      "Ripeti cominciando con l'altra gamba, alternando a ritmo costante per tutto il tempo. Respira in modo regolare."
+    ],
+    "errors": [
+      "Spingere con il piede rimasto a terra: la gamba sul gradino lavora poco.",
+      "Ginocchio che cade verso l'interno salendo: carichi male l'articolazione.",
+      "Busto molto piegato in avanti: sposti il lavoro sulla schiena.",
+      "Scendere di colpo saltando giù dal gradino: le ginocchia prendono un colpo inutile."
+    ],
+    "why": "Rinforza le gambe una alla volta e migliora la resistenza per spostamenti continui sul ring.",
+    "figure": [
+      {
+        "label": "Piede sul gradino",
+        "people": [
+          {
+            "pose": "forza-resistente/step-su",
+            "x": -30
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 76,
+            "w": 44,
+            "h": 31
+          }
+        ]
+      },
+      {
+        "label": "In piedi sul gradino",
+        "people": [
+          {
+            "pose": "forza-resistente/step-in-piedi",
+            "x": 12,
+            "air": 31
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 76,
+            "w": 44,
+            "h": 31
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -22
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-resistente--salti-alla-corda-con-giubbotto-zavorrato",
@@ -1553,6 +8700,37 @@ export const exercises: Exercise[] = [
     "equipment": "Corda, giubbotto",
     "dose": "3 riprese da 3 min, recupero 1 min",
     "details": "Indossa un giubbotto di 5-10% del peso corporeo e salta la corda sugli avampiedi, con salti bassi e polsi che guidano la rotazione. Mantieni il ritmo costante. Rinforza polpacci e caviglie e migliora la resistenza per un footwork leggero anche da stanco.",
+    "setup": "Indossa un giubbotto zavorrato pari al 5-10% del tuo peso, ben stretto in modo che non sobbalzi. Impugna la corda con i gomiti vicini ai fianchi e le mani all'altezza delle anche, la corda dietro i talloni.",
+    "steps": [
+      "Fai girare la corda con i polsi, non con le braccia: i gomiti restano vicino al corpo.",
+      "Salta sugli avampiedi con salti bassi, di pochi centimetri, quanto basta per far passare la corda.",
+      "Atterra morbido con le ginocchia leggermente piegate, senza mai appoggiare i talloni.",
+      "Tieni il busto dritto, lo sguardo avanti e le spalle rilassate.",
+      "Mantieni un ritmo costante e respira in modo regolare per tutto il tempo; quando ti senti sicuro puoi alternare i piedi come in una corsa sul posto."
+    ],
+    "errors": [
+      "Salti alti e pesanti: con il giubbotto il carico su caviglie e ginocchia aumenta molto.",
+      "Atterrare sui talloni: il colpo sale fino alla schiena.",
+      "Girare la corda con le braccia larghe: le spalle si stancano e perdi il ritmo.",
+      "Giubbotto troppo pesante o lento: cambia la postura e rischi fastidi alla schiena."
+    ],
+    "why": "Rinforza polpacci e caviglie e migliora la resistenza per un gioco di gambe leggero anche quando sei stanco. Inizia con un carico basso.",
+    "figure": [
+      {
+        "label": "Salti bassi sugli avampiedi",
+        "people": [
+          {
+            "pose": "forza-resistente/salto-corda",
+            "air": 6
+          }
+        ],
+        "props": [
+          {
+            "type": "rope"
+          }
+        ]
+      }
+    ],
     "tool": "corda"
   },
   {
@@ -1562,7 +8740,47 @@ export const exercises: Exercise[] = [
     "description": "Squat continui con giubbotto zavorrato.",
     "equipment": "Giubbotto",
     "dose": "4 × 20 ripetizioni, recupero 1 min",
-    "details": "Con il giubbotto zavorrato ben aderente, esegui squat completi a ritmo costante, busto alto e talloni a terra. Scegli un carico che permetta tutte le ripetizioni con tecnica pulita. Aumenta la resistenza delle gambe in modo graduale e specifico."
+    "details": "Con il giubbotto zavorrato ben aderente, esegui squat completi a ritmo costante, busto alto e talloni a terra. Scegli un carico che permetta tutte le ripetizioni con tecnica pulita. Aumenta la resistenza delle gambe in modo graduale e specifico.",
+    "setup": "Indossa il giubbotto zavorrato ben aderente al busto. In piedi, piedi alla larghezza delle spalle con le punte leggermente aperte, braccia lungo i fianchi o incrociate davanti al petto.",
+    "steps": [
+      "Inspira e scendi spingendo il sedere indietro e piegando le ginocchia, braccia avanti per bilanciarti.",
+      "Arriva almeno con le cosce parallele al pavimento, talloni a terra, ginocchia nella direzione delle punte.",
+      "Tieni il busto alto e il petto aperto: il giubbotto tende a tirarti in avanti.",
+      "Risali spingendo con tutto il piede ed espira mentre sali.",
+      "Riparti subito con la ripetizione successiva, a ritmo costante, senza bloccare le ginocchia in alto."
+    ],
+    "errors": [
+      "Carico troppo alto: la tecnica crolla a metà serie.",
+      "Busto che cade in avanti: il peso del giubbotto finisce sulla schiena.",
+      "Talloni che si alzano o ginocchia che entrano verso l'interno.",
+      "Squat sempre più corti verso la fine della serie."
+    ],
+    "why": "Aumenta in modo graduale la resistenza delle gambe, che restano reattive per calciare e muoversi fino all'ultima ripresa.",
+    "figure": [
+      {
+        "label": "In piedi",
+        "people": [
+          {
+            "pose": "in-piedi"
+          }
+        ]
+      },
+      {
+        "label": "Cosce parallele",
+        "people": [
+          {
+            "pose": "forza-resistente/squat-parallelo"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -28
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-resistente--mountain-climber",
@@ -1572,6 +8790,39 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 40 s, recupero 20 s",
     "details": "Da plank alto, porta alternativamente le ginocchia verso il petto a ritmo sostenuto, mantenendo le spalle sopra i polsi e il bacino basso. Non far rimbalzare il bacino. Allena core e flessori dell'anca, utili per ginocchiate rapide e per il cardio di gara.",
+    "setup": "In plank alto: mani a terra sotto le spalle, braccia tese, corpo in linea dalla testa ai talloni, appoggiato sulle punte dei piedi.",
+    "steps": [
+      "Stringi l'addome e tieni le spalle sopra i polsi per tutto l'esercizio.",
+      "Porta un ginocchio verso il petto facendo scivolare il piede in avanti, senza appoggiarlo.",
+      "Riporta indietro quella gamba e, nello stesso momento, porta avanti l'altro ginocchio.",
+      "Continua alternando le gambe a ritmo sostenuto, come una corsa in plank.",
+      "Il bacino resta basso e fermo, allineato alle spalle: si muovono solo le gambe.",
+      "Respira in modo regolare: non trattenere il fiato anche quando acceleri."
+    ],
+    "errors": [
+      "Bacino che rimbalza su e giù o sedere alto: togli lavoro agli addominali.",
+      "Spalle che vanno indietro rispetto ai polsi: perdi la posizione di plank.",
+      "Ginocchia che arrivano solo a metà strada: alleni poco i flessori dell'anca.",
+      "Correre troppo veloci perdendo la forma."
+    ],
+    "why": "Allena core e flessori dell'anca, utili per ginocchiate rapide, e sostiene il fiato da gara.",
+    "figure": [
+      {
+        "label": "Ginocchio al petto",
+        "people": [
+          {
+            "pose": "forza-resistente/mountain"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 14,
+            "dy": -6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1582,6 +8833,55 @@ export const exercises: Exercise[] = [
     "equipment": "Pneumatico",
     "dose": "4 × 6-8 ribaltamenti, recupero 1 min",
     "details": "Accosciati, infila le dita sotto lo pneumatico con il petto appoggiato, spingi con le gambe e poi con le braccia per ribaltarlo. Schiena neutra, mai tirare con la schiena curva. Allena forza totale e spinta d'anca in condizioni di fatica.",
+    "setup": "Pneumatico appoggiato a terra davanti a te. Piedi alla larghezza delle spalle, vicini al bordo. Accosciati, infila le dita sotto il bordo con i palmi in su e appoggia il petto contro lo pneumatico.",
+    "steps": [
+      "Schiena neutra, petto alto e appoggiato allo pneumatico, sedere più basso delle spalle.",
+      "Spingi con le gambe e le anche in avanti e in alto, come in uno stacco con spinta: lo pneumatico si solleva.",
+      "Quando arriva all'altezza delle anche, avanza con un ginocchio sotto lo pneumatico per dare un'ulteriore spinta.",
+      "Gira rapidamente le mani in posizione di spinta e distendi le braccia in avanti per ribaltarlo.",
+      "Raggiungi lo pneumatico, rimettiti in posizione e ripeti a ritmo costante. Espira nella spinta."
+    ],
+    "errors": [
+      "Tirare con la schiena curva: è il modo più rapido per farsi male alla zona lombare.",
+      "Tirare con le braccia invece di spingere con le gambe: le braccia cedono e rischi i bicipiti.",
+      "Piedi troppo lontani dallo pneumatico: la spinta va in avanti invece che in alto.",
+      "Pneumatico troppo pesante: la tecnica salta già alle prime ripetizioni."
+    ],
+    "why": "Allena la forza di tutto il corpo e la spinta d'anca in condizioni di fatica. Mai tirare con la schiena curva e non mettere le braccia dritte sotto lo pneumatico come se fosse uno stacco: rischi i bicipiti.",
+    "figure": [
+      {
+        "label": "Petto sullo pneumatico",
+        "people": [
+          {
+            "pose": "forza-resistente/presa-pneumatico",
+            "x": -28
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 82,
+            "w": 60
+          }
+        ]
+      },
+      {
+        "label": "Spinta in avanti",
+        "people": [
+          {
+            "pose": "forza-resistente/spinta-pneumatico",
+            "x": -28
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 24,
+            "dy": -14
+          }
+        ]
+      }
+    ],
     "tool": "pneumatico"
   },
   {
@@ -1592,6 +8892,63 @@ export const exercises: Exercise[] = [
     "equipment": "Mazza",
     "dose": "3 × 1 min (alternando i lati), recupero 45 s",
     "details": "Impugna la mazza con le mani distanziate, portala sopra la spalla e colpisci il pneumatico ruotando busto e anca, cambiando lato a metà serie. Piedi stabili e sguardo sul bersaglio. Allena la potenza rotazionale di core e spalle per colpi più incisivi.",
+    "setup": "Davanti allo pneumatico, a una distanza tale che la testa della mazza colpisca il centro. Piedi alla larghezza delle spalle. Impugna la mazza con una mano vicino alla fine del manico e l'altra vicino alla testa.",
+    "steps": [
+      "Porta la mazza sopra la spalla facendo scivolare la mano alta verso la testa della mazza.",
+      "Solleva la mazza sopra la testa e, mentre la porti giù, fai scivolare quella mano verso l'altra, in fondo al manico.",
+      "Colpisci il centro dello pneumatico piegando le anche e un po' le ginocchia, ruotando busto e anca: la forza viene dal corpo, non solo dalle braccia.",
+      "Tieni lo sguardo sul punto da colpire e i piedi ben piantati; controlla il rimbalzo della mazza.",
+      "Cambia lato a metà serie invertendo la posizione delle mani. Espira a ogni colpo e tieni un ritmo regolare."
+    ],
+    "errors": [
+      "Colpire con le sole braccia: ti stanchi subito e il colpo è debole.",
+      "Schiena curva al momento dell'impatto: la zona lombare prende il contraccolpo.",
+      "Stare troppo vicino o troppo lontano: colpisci il bordo e la mazza rimbalza in modo pericoloso.",
+      "Lavorare sempre dallo stesso lato."
+    ],
+    "why": "Allena la potenza rotazionale di core e spalle per colpi più incisivi. Controlla che intorno a te ci sia spazio libero.",
+    "figure": [
+      {
+        "label": "Mazza sopra la testa",
+        "people": [
+          {
+            "pose": "forza-resistente/mazza-alto",
+            "x": -25
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 96,
+            "w": 56
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 40,
+            "dy": 30,
+            "bend": -18
+          }
+        ]
+      },
+      {
+        "label": "Colpo, anche piegate",
+        "people": [
+          {
+            "pose": "forza-resistente/mazza-impatto",
+            "x": -25
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 96,
+            "w": 56
+          }
+        ]
+      }
+    ],
     "tool": "pneumatico"
   },
   {
@@ -1602,6 +8959,48 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 riprese da 3 min, recupero 1 min",
     "details": "Ogni ripresa comprende 5 esercizi da 36 s ciascuno (es. piegamenti, squat, burpee, mountain climber, sprawl) senza pause. Mantieni la qualità tecnica anche quando aumenta la fatica. Simula la struttura di un incontro, allenando forza e resistenza insieme.",
+    "setup": "Spazio libero e timer. Ogni ripresa dura 3 minuti ed è divisa in 5 esercizi da circa 36 secondi ciascuno, per esempio piegamenti, squat, burpee, mountain climber e sprawl; poi 1 minuto di recupero.",
+    "steps": [
+      "Al via inizia con i piegamenti: corpo in linea, petto vicino a terra, ritmo regolare.",
+      "Allo scadere passa subito agli squat, cosce parallele e talloni a terra.",
+      "Poi i burpee: petto a terra, risalita e salto con le mani in alto.",
+      "Poi i mountain climber: plank alto, ginocchia al petto alternate.",
+      "Chiudi con gli sprawl: dalla guardia lancia le gambe indietro con le anche verso terra e torna subito in guardia.",
+      "Nel minuto di recupero cammina e respira a fondo, poi riparti con la ripresa successiva. Tieni la stessa qualità tecnica anche quando cresce la fatica."
+    ],
+    "errors": [
+      "Pause tra un esercizio e l'altro: perdi la continuità che simula la ripresa.",
+      "Partire a tutta nella prima ripresa: le ultime diventano solo sopravvivenza.",
+      "Peggiorare la tecnica con la fatica (bacino che cade nei piegamenti, squat corti).",
+      "Sedersi o sdraiarsi nel minuto di recupero invece di camminare."
+    ],
+    "why": "Riproduce la struttura di un incontro, riprese da 3 minuti e 1 minuto di pausa, allenando forza e resistenza insieme.",
+    "figure": [
+      {
+        "label": "Piegamenti",
+        "people": [
+          {
+            "pose": "forza-resistente/piegamento-alto"
+          }
+        ]
+      },
+      {
+        "label": "Squat",
+        "people": [
+          {
+            "pose": "forza-resistente/squat-parallelo"
+          }
+        ]
+      },
+      {
+        "label": "Sprawl",
+        "people": [
+          {
+            "pose": "forza-resistente/sprawl"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1612,6 +9011,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "5 giri × (20 squat + 30 s pugni), recupero 30 s",
     "details": "Esegui 20 squat veloci e passa subito a 30 secondi di pugni rapidi in guardia, senza pause tra le due parti. Tieni le mani alte anche con le gambe affaticate. Allena la capacità di colpire con lucidità quando le gambe sono già stanche.",
+    "setup": "In piedi, piedi alla larghezza delle spalle, in uno spazio libero. Il lavoro alterna 20 squat veloci e 30 secondi di pugni in guardia, senza pausa tra le due parti.",
+    "steps": [
+      "Fai 20 squat veloci a corpo libero: cosce parallele, talloni a terra, braccia avanti per bilanciarti.",
+      "Finito l'ultimo squat mettiti subito in guardia: mani al viso, mento basso, piede posteriore sull'avampiede.",
+      "Tira pugni rapidi per 30 secondi, per esempio diretti alternati o uno-due, riportando sempre la mano al viso dopo ogni colpo.",
+      "Resta leggero sulle gambe anche se bruciano: piccoli passi e ginocchia morbide.",
+      "Allo scadere dei 30 secondi torna agli squat e ripeti il ciclo; espira a ogni pugno."
+    ],
+    "errors": [
+      "Prendersi qualche secondo di pausa tra squat e pugni: l'esercizio perde il suo scopo.",
+      "Mani che scendono quando le gambe sono stanche.",
+      "Pugni tirati solo di braccio, con i piedi piantati e senza rotazione.",
+      "Squat corti per arrivare prima ai pugni."
+    ],
+    "why": "Allena la capacità di colpire veloce e con lucidità quando le gambe sono già stanche, come nelle riprese finali.",
+    "figure": [
+      {
+        "label": "20 squat veloci",
+        "people": [
+          {
+            "pose": "forza-resistente/squat-parallelo"
+          }
+        ]
+      },
+      {
+        "label": "Pugni in guardia",
+        "people": [
+          {
+            "pose": "forza-resistente/diretto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 24,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1622,6 +9061,52 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 45 s, recupero 15 s",
     "details": "Con le mani come a trattenere la testa dell'avversario, alterna ginocchiate in aria spingendo l'anca in avanti e salendo sull'avampiede. Tira giù le mani mentre il ginocchio sale. Allena la resistenza del clinch e la coordinazione mani-ginocchio.",
+    "setup": "In guardia, poi porta le mani in avanti all'altezza della testa, una sopra l'altra, come se tenessi la nuca di un avversario immaginario. Gomiti stretti, anche avanti, busto dritto.",
+    "steps": [
+      "Sposta il peso su una gamba e sali sull'avampiede.",
+      "Porta il ginocchio dell'altra gamba in alto e in avanti spingendo l'anca avanti, punta del piede verso il basso.",
+      "Mentre il ginocchio sale tira le mani verso il basso, come per portare la testa dell'avversario contro il ginocchio.",
+      "Riappoggia il piede, riporta le mani in alto e colpisci con l'altro ginocchio.",
+      "Alterna le gambe a ritmo costante per tutto il tempo, espirando a ogni ginocchiata."
+    ],
+    "errors": [
+      "Piegarsi in avanti invece di portare l'anca avanti: la ginocchiata perde potenza.",
+      "Muovere le mani e il ginocchio in tempi diversi: perdi la coordinazione che serve nel clinch.",
+      "Restare sul piede piatto: il colpo resta basso.",
+      "Intrecciare le dita: abitudine pericolosa nel clinch vero."
+    ],
+    "why": "Allena la resistenza del clinch e la coordinazione tra la tirata delle mani e la ginocchiata.",
+    "figure": [
+      {
+        "label": "Mani alla nuca immaginaria",
+        "people": [
+          {
+            "pose": "forza-resistente/clinch-aria"
+          }
+        ]
+      },
+      {
+        "label": "Tira giù, ginocchio su",
+        "people": [
+          {
+            "pose": "forza-resistente/ginocchiata-aria"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": 16
+          },
+          {
+            "at": "knee",
+            "dx": 4,
+            "dy": -20,
+            "bend": -8
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1632,6 +9117,50 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 2 min, recupero 1 min",
     "details": "Esegui calci circolari alternati nell'aria con ritmo controllato, ruotando il piede d'appoggio e riportando sempre la gamba in guardia. Non forzare l'estensione del ginocchio. Allena equilibrio, rotazione e resistenza delle gambe senza l'impatto del sacco.",
+    "setup": "In guardia in uno spazio libero, mani al viso, mento basso. Lavori senza sacco, alternando le gambe con un ritmo controllato.",
+    "steps": [
+      "Fai un piccolo passo in diagonale con il piede anteriore, punta verso l'esterno.",
+      "Sali sull'avampiede della gamba d'appoggio e ruota il tallone in avanti: è questa rotazione che fa girare l'anca.",
+      "Lancia la gamba posteriore in un arco all'altezza del corpo, ginocchio appena piegato, colpendo l'aria con la tibia.",
+      "Il braccio dello stesso lato scende indietro per bilanciare, l'altra mano resta alta.",
+      "Riporta la gamba indietro per la stessa strada e torna in guardia, poi calcia con l'altra gamba.",
+      "Mantieni un ritmo controllato: senza il sacco devi essere tu a fermare la gamba, quindi niente calci a tutta forza."
+    ],
+    "errors": [
+      "Distendere il ginocchio fino in fondo con forza: senza bersaglio l'articolazione si iperestende.",
+      "Piede d'appoggio piatto: le anche non girano.",
+      "Lasciare cadere la gamba a terra dopo il calcio invece di riportarla in guardia.",
+      "Abbassare entrambe le mani."
+    ],
+    "why": "Allena equilibrio, rotazione e resistenza delle gambe senza l'impatto del sacco. Non forzare l'estensione del ginocchio.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true
+          }
+        ]
+      },
+      {
+        "label": "Rotazione sull'avampiede",
+        "people": [
+          {
+            "pose": "calcio-circolare",
+            "gloves": true
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 25,
+            "dy": 18,
+            "bend": 18
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1642,6 +9171,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 15 ripetizioni, recupero 45 s",
     "details": "Mani vicine sotto il petto, con pollici e indici a formare un rombo, e gomiti stretti al corpo durante la discesa. Corpo rigido dalla testa ai talloni. Rinforza i tricipiti, fondamentali per estendere pugni e gomitate con forza fino all'ultimo round.",
+    "setup": "In plank alto con le mani vicine sotto il petto: pollici e indici si toccano formando un rombo (diamante). Piedi alla larghezza delle anche sulle punte, corpo in linea.",
+    "steps": [
+      "Stringi glutei e addome per tenere il corpo rigido dalla testa ai talloni.",
+      "Scendi piegando le braccia con i gomiti stretti al corpo, che puntano indietro verso i piedi.",
+      "Porta il petto vicino alle mani senza appoggiarlo.",
+      "Spingi e torna a braccia tese ed espira durante la salita.",
+      "Tieni un ritmo regolare per tutta la serie; se non riesci più a scendere in modo completo, continua con le ginocchia a terra."
+    ],
+    "errors": [
+      "Gomiti che si aprono verso l'esterno: il lavoro passa dai tricipiti alle spalle.",
+      "Bacino che cade o sedere alto: perdi la linea del corpo.",
+      "Mani troppo avanti, sotto il viso: carichi i polsi e le spalle.",
+      "Scendere solo di pochi centimetri."
+    ],
+    "why": "Rinforza i tricipiti, i muscoli che distendono il braccio in pugni e gomitate, perché restino forti fino all'ultimo round.",
+    "figure": [
+      {
+        "label": "Mani a diamante",
+        "people": [
+          {
+            "pose": "forza-resistente/diamante-alto"
+          }
+        ]
+      },
+      {
+        "label": "Gomiti stretti",
+        "people": [
+          {
+            "pose": "forza-resistente/diamante-basso"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 0,
+            "dy": -22
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1652,6 +9221,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 15 ripetizioni, recupero 45 s",
     "details": "Appoggiati sulle prime due nocche su una superficie morbida, polsi dritti e in linea con l'avambraccio, ed esegui piegamenti controllati. Inizia su tappetino per non irritare la pelle. Rinforza polsi e mani per pugni stabili e meno a rischio di infortuni.",
+    "setup": "Su un tappetino o una superficie morbida, in plank alto appoggiato sui pugni chiusi: il peso è sulle nocche di indice e medio. Pugni sotto le spalle, polsi dritti in linea con l'avambraccio.",
+    "steps": [
+      "Prima di partire controlla i polsi: non devono piegarsi né in dentro né in fuori, come nel pugno ben chiuso al momento dell'impatto.",
+      "Corpo rigido dalla testa ai talloni, glutei e addome stretti.",
+      "Scendi lentamente con i gomiti a circa 45° dal busto fino a portare il petto vicino a terra.",
+      "Spingi sulle nocche e risali a braccia tese, espirando.",
+      "Mantieni un ritmo controllato e regolare; se le nocche fanno male, fermati e continua con le mani aperte."
+    ],
+    "errors": [
+      "Polsi piegati: si scaricano tutte le forze sull'articolazione, proprio come un pugno storto.",
+      "Appoggio sulle nocche di anulare e mignolo: rischi di farti male alla mano.",
+      "Farli sul pavimento duro dall'inizio: irriti la pelle e le articolazioni.",
+      "Bacino che cade."
+    ],
+    "why": "Rinforza polsi e mani e abitua l'appoggio sulle nocche giuste, per pugni più stabili e meno infortuni. Inizia sempre su tappetino.",
+    "figure": [
+      {
+        "label": "Sui pugni, polsi dritti",
+        "people": [
+          {
+            "pose": "forza-resistente/piegamento-alto"
+          }
+        ]
+      },
+      {
+        "label": "Petto vicino a terra",
+        "people": [
+          {
+            "pose": "forza-resistente/piegamento-basso"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 0,
+            "dy": -22
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1662,6 +9271,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 1 min, recupero 45 s",
     "details": "Fai un ampio passo laterale piegando la gamba d'appoggio e mantenendo l'altra tesa, poi spingi per tornare al centro e alterna i lati. Busto eretto e piede ben piantato. Rinforza adduttori e glutei, utili per spostamenti laterali e per l'equilibrio nei calci.",
+    "setup": "In piedi, piedi uniti o alla larghezza delle anche, punte in avanti. Mani al petto o in guardia, busto dritto.",
+    "steps": [
+      "Fai un passo ampio di lato con il piede destro, più largo delle spalle, punta in avanti.",
+      "Piega il ginocchio destro e spingi il sedere indietro, come in uno squat su una gamba sola; la gamba sinistra resta tesa e il piede sinistro ben piantato.",
+      "Scendi finché la coscia della gamba piegata è quasi parallela al pavimento, con il ginocchio sopra il piede e il busto alto.",
+      "Spingi con forza sul piede destro e torna al centro.",
+      "Ripeti dal lato sinistro e continua alternando a ritmo costante, espirando quando risali."
+    ],
+    "errors": [
+      "Ginocchio che va oltre la punta o cade verso l'interno: carichi male l'articolazione.",
+      "Busto che si piega molto in avanti: lavora la schiena invece delle gambe.",
+      "Tallone della gamba piegata che si stacca da terra.",
+      "Passi troppo corti: gli adduttori non si allungano e lavorano poco."
+    ],
+    "why": "Rinforza adduttori e glutei, utili negli spostamenti laterali e per l'equilibrio sulla gamba d'appoggio quando calci.",
+    "figure": [
+      {
+        "label": "In piedi",
+        "people": [
+          {
+            "pose": "in-piedi"
+          }
+        ]
+      },
+      {
+        "label": "Passo di lato, gamba tesa",
+        "people": [
+          {
+            "pose": "forza-resistente/affondo-laterale"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 18,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1672,6 +9321,64 @@ export const exercises: Exercise[] = [
     "equipment": "Elastico",
     "dose": "3 × 45 s per lato, recupero 30 s",
     "details": "Con l'elastico fissato lateralmente, porta le mani al petto e spingi in avanti mantenendo le braccia tese senza farti ruotare. Bacino fermo e glutei contratti. Rinforza la stabilità anti-rotazione del core, essenziale per assorbire colpi e restare in equilibrio.",
+    "setup": "Fissa l'elastico a un punto solido all'altezza del petto e mettiti di fianco all'ancoraggio, a una distanza tale che l'elastico sia teso. Piedi alla larghezza delle spalle, ginocchia morbide, maniglia stretta con due mani davanti allo sterno.",
+    "steps": [
+      "Stringi glutei e addome: il bacino è fermo e rivolto in avanti.",
+      "Spingi le mani dritte davanti al petto fino a braccia tese, lentamente.",
+      "L'elastico cerca di farti ruotare verso l'ancoraggio: non lasciarlo fare, busto e spalle restano rivolti in avanti.",
+      "Mantieni le braccia tese per tutto il tempo indicato, respirando in modo regolare senza trattenere il fiato.",
+      "Riporta le mani al petto con controllo, girati e ripeti con l'ancoraggio dall'altro lato."
+    ],
+    "errors": [
+      "Busto o bacino che ruotano verso l'elastico: l'esercizio perde lo scopo.",
+      "Braccia che si piegano o scendono: la tensione cala e il core lavora meno.",
+      "Gambe tese e rigide: perdi stabilità e la schiena compensa.",
+      "Elastico troppo duro: ti torci per resistere invece di restare fermo."
+    ],
+    "why": "Rinforza la stabilità del tronco contro le rotazioni, essenziale per assorbire i colpi e restare in equilibrio mentre colpisci.",
+    "figure": [
+      {
+        "label": "Mani al petto",
+        "people": [
+          {
+            "pose": "forza-resistente/pallof-petto",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 14,
+            "y": 50
+          }
+        ]
+      },
+      {
+        "label": "Braccia tese, busto fermo",
+        "people": [
+          {
+            "pose": "forza-resistente/pallof-tese",
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 14,
+            "y": 50
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 16,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "elastico"
   },
   {
@@ -1682,6 +9389,56 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "3 × 20 ripetizioni, recupero 45 s",
     "details": "Piedi larghi e punte verso l'esterno, tieni la kettlebell tra le gambe a braccia tese e scendi mantenendo ginocchia aperte e busto alto. Spingi dai talloni per risalire. Rinforza adduttori e glutei, importanti per la stabilità nella guardia e nei calci.",
+    "setup": "In piedi con i piedi molto larghi, circa una volta e mezzo la larghezza delle spalle, punte rivolte verso l'esterno. Tieni la kettlebell per la maniglia con due mani, a braccia tese, tra le gambe.",
+    "steps": [
+      "Stringi l'addome e tieni il petto alto e la schiena dritta.",
+      "Scendi piegando le ginocchia e spingendole in fuori, nella direzione delle punte; la kettlebell scende in verticale tra le gambe.",
+      "Arriva con le cosce circa parallele al pavimento, o fin dove riesci tenendo la schiena dritta.",
+      "Risali spingendo con i talloni e stringendo i glutei in alto, ed espira.",
+      "Continua a ritmo regolare per tutta la serie; le braccia tengono soltanto la kettlebell, non tirano."
+    ],
+    "errors": [
+      "Ginocchia che si chiudono verso l'interno: carichi male le ginocchia e lavori poco gli adduttori.",
+      "Busto che cade in avanti seguendo il peso.",
+      "Talloni che si alzano.",
+      "Sollevare la kettlebell con le braccia invece di salire con le gambe."
+    ],
+    "why": "Rinforza adduttori e glutei, importanti per una guardia stabile e per l'appoggio solido quando calci.",
+    "figure": [
+      {
+        "label": "Kettlebell tra le gambe",
+        "people": [
+          {
+            "pose": "forza-resistente/sumo-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell"
+          }
+        ]
+      },
+      {
+        "label": "Ginocchia in fuori",
+        "people": [
+          {
+            "pose": "forza-resistente/sumo-basso"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -26
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -1692,6 +9449,64 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 20 ripetizioni (o 12 per gamba), recupero 45 s",
     "details": "Con le scapole appoggiate a una panca e i piedi a terra, spingi il bacino verso l'alto fino all'allineamento busto-cosce, stringendo i glutei in alto. Mento leggermente rientrato. Rinforza i glutei, motore delle ginocchiate e della rotazione nei calci.",
+    "setup": "Seduto a terra con la schiena appoggiata al bordo di una panca, all'altezza delle scapole. Piedi a terra alla larghezza delle anche, ginocchia piegate, braccia appoggiate sulla panca o incrociate sul petto.",
+    "steps": [
+      "Sistemati in modo che, con il bacino in alto, le ginocchia siano piegate a 90° e le tibie verticali.",
+      "Spingi con i talloni e solleva il bacino fino a quando spalle, anche e ginocchia sono in linea, come un tavolo.",
+      "In alto stringi forte i glutei per un istante, con il mento leggermente rientrato e lo sguardo verso le ginocchia.",
+      "Scendi con controllo finché il sedere arriva vicino a terra, senza appoggiarlo.",
+      "Riparti subito con la spinta successiva, a ritmo regolare. Per renderlo più difficile eseguilo su una gamba sola."
+    ],
+    "errors": [
+      "Inarcare la zona lombare in alto invece di stringere i glutei: carichi la schiena.",
+      "Spingere sulle punte: lavorano i quadricipiti al posto dei glutei.",
+      "Testa buttata indietro sulla panca: il collo si tende e la schiena si inarca.",
+      "Piedi troppo lontani o troppo vicini: le tibie non sono verticali e perdi il lavoro sui glutei."
+    ],
+    "why": "Rinforza i glutei, il motore delle ginocchiate e della rotazione dell'anca nei calci.",
+    "figure": [
+      {
+        "label": "Bacino in basso",
+        "people": [
+          {
+            "pose": "forza-resistente/hip-thrust-basso",
+            "x": 6
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 4,
+            "w": 50,
+            "h": 30
+          }
+        ]
+      },
+      {
+        "label": "Spalle, anche, ginocchia in linea",
+        "people": [
+          {
+            "pose": "forza-resistente/hip-thrust-alto",
+            "x": 10
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 4,
+            "w": 50,
+            "h": 30
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -18
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1702,6 +9517,31 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 45-60 s, recupero 30 s",
     "details": "Supino con ginocchia piegate, solleva il bacino fino ad allineare spalle, anche e ginocchia e mantieni la posizione con i glutei contratti. Evita di inarcare la zona lombare. Rinforza glutei e catena posteriore, proteggendo la schiena durante i calci.",
+    "setup": "Supino a terra, ginocchia piegate e piedi appoggiati alla larghezza delle anche, talloni a circa una spanna dal sedere. Braccia lungo i fianchi con i palmi a terra.",
+    "steps": [
+      "Contrai l'addome come per proteggerti da un pugno allo stomaco.",
+      "Spingi con i talloni e solleva il bacino finché spalle, anche e ginocchia sono in linea.",
+      "Stringi forte i glutei e mantieni la posizione: non deve essere la schiena a tenerti su.",
+      "Respira in modo regolare per tutto il tempo, senza far scendere il bacino.",
+      "Alla fine appoggia la schiena a terra lentamente, una vertebra alla volta."
+    ],
+    "errors": [
+      "Inarcare la zona lombare per salire più in alto: carichi la schiena invece dei glutei.",
+      "Bacino che scende piano piano con la fatica.",
+      "Spingere sulle punte dei piedi: senti lavorare le cosce e non i glutei.",
+      "Ginocchia che si aprono o si chiudono."
+    ],
+    "why": "Rinforza glutei e catena posteriore e aiuta a proteggere la schiena quando calci.",
+    "figure": [
+      {
+        "label": "Spalle, anche, ginocchia in linea",
+        "people": [
+          {
+            "pose": "forza-resistente/ponte"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1712,6 +9552,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 1 min, recupero 30 s",
     "details": "In piedi, solleva i talloni fino a salire completamente sulle punte e scendi lentamente, mantenendo un ritmo costante. Puoi appoggiarti a un muro per l'equilibrio. Rinforza polpacci e caviglie, fondamentali per stare sugli avampiedi e ruotare nei calci.",
+    "setup": "In piedi, piedi alla larghezza delle anche e punte in avanti, peso distribuito sugli avampiedi. Se serve, appoggia leggermente una mano a un muro per l'equilibrio.",
+    "steps": [
+      "Stringi addome e glutei e tieni il corpo dritto, ginocchia distese ma non bloccate.",
+      "Sali sulle punte sollevando i talloni il più in alto possibile, con il peso al centro dell'avampiede (tra alluce e secondo dito).",
+      "Fermati un istante in alto.",
+      "Scendi lentamente, in circa due secondi, fino a sfiorare il pavimento con i talloni.",
+      "Riparti subito e continua a ritmo costante per tutto il tempo, respirando in modo regolare."
+    ],
+    "errors": [
+      "Salite a metà: lavori poco il polpaccio e la caviglia.",
+      "Caviglie che cadono verso l'esterno sul bordo del piede: rischi distorsioni.",
+      "Scendere di colpo rimbalzando sui talloni.",
+      "Piegare le ginocchia per aiutarti."
+    ],
+    "why": "Rinforza polpacci e caviglie, fondamentali per stare sugli avampiedi tutto l'incontro e per ruotare sul piede d'appoggio nei calci.",
+    "figure": [
+      {
+        "label": "Talloni a terra",
+        "people": [
+          {
+            "pose": "in-piedi"
+          }
+        ]
+      },
+      {
+        "label": "Sulle punte",
+        "people": [
+          {
+            "pose": "forza-resistente/punte"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -18
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1721,7 +9601,73 @@ export const exercises: Exercise[] = [
     "description": "Clinch con il compagno indossando giubbotto zavorrato.",
     "equipment": "Giubbotto",
     "dose": "3 riprese da 2 min, recupero 1 min",
-    "details": "Indossando un giubbotto zavorrato leggero, lavora in clinch con un compagno cercando prese, sbilanciamenti e ginocchiate controllate. Mantieni la postura alta e la testa dritta. Aumenta la resistenza specifica della lotta in piedi, cruciale nella Muay Thai."
+    "details": "Indossando un giubbotto zavorrato leggero, lavora in clinch con un compagno cercando prese, sbilanciamenti e ginocchiate controllate. Mantieni la postura alta e la testa dritta. Aumenta la resistenza specifica della lotta in piedi, cruciale nella Muay Thai.",
+    "setup": "In coppia, entrambi o solo tu con un giubbotto zavorrato leggero, ben stretto. Mettetevi a distanza di clinch, uno di fronte all'altro, e concordate l'intensità: prese e ginocchiate controllate, non a tutta forza.",
+    "steps": [
+      "Al via cercate la presa migliore: mani sovrapposte sulla nuca del compagno, mai dita intrecciate, gomiti stretti contro le sue clavicole.",
+      "Tieni le anche avanti, il busto alto e la testa dritta: chi si piega in avanti perde la posizione.",
+      "Quando hai la presa sbilancia il compagno girandolo di lato o tirandolo verso il basso, e porta ginocchiate controllate al corpo.",
+      "Quando sei tu a subire la presa, infila le braccia dentro le sue per liberarti, porta le anche avanti e rialza la testa.",
+      "Lavorate senza fermarvi per tutta la ripresa, respirando con calma: il giubbotto rende tutto più faticoso, non serve accelerare.",
+      "Allo stop staccatevi e recuperate camminando."
+    ],
+    "errors": [
+      "Dita intrecciate dietro la testa: la presa è debole e in gara rischi le dita.",
+      "Busto piegato e testa bassa: il compagno prende il controllo e ti carica il collo.",
+      "Ginocchiate e strattoni a piena forza: con il giubbotto il rischio di farsi male cresce.",
+      "Trattenere il fiato nelle fasi di spinta."
+    ],
+    "why": "Aumenta la resistenza specifica della lotta in piedi, cruciale nella Muay Thai. Usa un giubbotto leggero e rispettate sempre il collo del compagno.",
+    "figure": [
+      {
+        "label": "Presa e tirata",
+        "people": [
+          {
+            "pose": "plum",
+            "x": -28,
+            "reach": {
+              "hand": {
+                "who": 1,
+                "at": "head",
+                "dx": -7,
+                "dy": -3
+              },
+              "hand2": {
+                "who": 1,
+                "at": "head",
+                "dx": -9,
+                "dy": 2
+              }
+            }
+          },
+          {
+            "pose": "piegato-in-clinch",
+            "flip": true,
+            "partner": true,
+            "x": 44,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "elbow"
+              },
+              "hand2": {
+                "who": 0,
+                "at": "elbow2"
+              }
+            }
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": -16,
+            "dy": 12,
+            "who": 1,
+            "bend": 6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "forza-resistente--sprawl-continui",
@@ -1731,6 +9677,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 1 min, recupero 30 s",
     "details": "Da guardia, lancia le gambe indietro abbassando le anche verso il pavimento, poi torna subito in piedi in guardia. Mantieni le mani pronte e lo sguardo avanti. Allena reattività e resistenza nel difendersi da prese e nel ritornare rapidamente in posizione.",
+    "setup": "In guardia in uno spazio libero, mani alte e mento basso, peso leggero sugli avampiedi.",
+    "steps": [
+      "Piega le gambe e appoggia le mani a terra davanti a te.",
+      "Lancia subito entrambe le gambe indietro e larghe, abbassando le anche verso il pavimento: il bacino schiaccia a terra, petto e testa restano alti.",
+      "Le gambe restano tese dietro di te, appoggiate sulle punte dei piedi.",
+      "Riporta in fretta i piedi sotto il corpo con un saltello e rialzati in guardia, mani al viso.",
+      "Ripeti subito senza fermarti per tutto il tempo, espirando quando lanci le gambe indietro."
+    ],
+    "errors": [
+      "Sedere alto quando lanci le gambe indietro: nel combattimento l'avversario ti prende le gambe.",
+      "Testa e sguardo verso terra: perdi di vista l'avversario.",
+      "Rialzarsi lentamente o con le mani basse.",
+      "Atterrare di peso sulle ginocchia: colpo inutile alle articolazioni."
+    ],
+    "why": "Allena reattività e resistenza nel difendersi da prese alle gambe e nel tornare subito in posizione di guardia.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia"
+          }
+        ]
+      },
+      {
+        "label": "Anche a terra, gambe indietro",
+        "people": [
+          {
+            "pose": "forza-resistente/sprawl"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": -24,
+            "dy": 4
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -1740,7 +9726,65 @@ export const exercises: Exercise[] = [
     "description": "Tirate alternate al cavo mantenendo la guardia.",
     "equipment": "Cavo",
     "dose": "3 × 15 per lato, recupero 45 s",
-    "details": "In posizione di guardia al cavo, tira la maniglia verso il fianco ruotando leggermente il busto, mentre l'altra mano resta alta a protezione del viso. Scapola che si avvicina alla colonna. Rinforza dorsali e muscoli della tirata, utili per il clinch e per il ritorno dei colpi."
+    "details": "In posizione di guardia al cavo, tira la maniglia verso il fianco ruotando leggermente il busto, mentre l'altra mano resta alta a protezione del viso. Scapola che si avvicina alla colonna. Rinforza dorsali e muscoli della tirata, utili per il clinch e per il ritorno dei colpi.",
+    "setup": "Davanti al cavo regolato all'altezza del petto, in guardia, con la maniglia nella mano dello stesso lato della gamba avanti. Allontanati finché, con il braccio teso in avanti, il cavo è in tensione.",
+    "steps": [
+      "Parti con il braccio che tiene la maniglia disteso verso il cavo; l'altra mano è alta a protezione del viso.",
+      "Tira la maniglia verso il fianco portando il gomito indietro e stringendo la scapola verso la colonna.",
+      "Accompagna la tirata con una leggera rotazione del busto, come quando ritiri il braccio dopo un pugno.",
+      "Riaccompagna la maniglia in avanti con controllo fino a braccio quasi teso, senza farti tirare dal peso.",
+      "Lavora a ritmo costante, poi cambia guardia e braccio. Espira mentre tiri."
+    ],
+    "errors": [
+      "Abbassare la mano libera: perdi l'abitudine alla guardia che è il senso dell'esercizio.",
+      "Tirare con lo strattone del busto invece che con la schiena.",
+      "Spalla che sale verso l'orecchio durante la tirata.",
+      "Lasciare tornare la maniglia di colpo: la spalla viene strattonata."
+    ],
+    "why": "Rinforza dorsali e muscoli della tirata, utili nel clinch e per riportare velocemente il braccio in guardia dopo ogni colpo.",
+    "figure": [
+      {
+        "label": "Braccio teso",
+        "people": [
+          {
+            "pose": "forza-resistente/cavo-teso",
+            "x": -25
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 150,
+            "y": 46
+          }
+        ]
+      },
+      {
+        "label": "Tirata al fianco",
+        "people": [
+          {
+            "pose": "forza-resistente/cavo-tirato",
+            "x": -25
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 150,
+            "y": 46
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": -16,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "velocita--diretti-veloci-sul-posto",
@@ -11679,6 +19723,54 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 8 per senso, lento",
     "details": "In piedi, spalle rilassate e mento leggermente rientrato: disegna cerchi ampi con la testa senza forzare la parte posteriore. Respira con calma a ogni giro. Un collo mobile e attivato regge meglio gli impatti e le prese nel clinch; fermati se senti capogiri o fitte.",
+    "setup": "In piedi, piedi alla larghezza delle anche, braccia rilassate lungo i fianchi. Spalle basse e lontane dalle orecchie, mento leggermente rientrato.",
+    "steps": [
+      "Porta lentamente il mento verso il petto, senza forzare: senti allungare la parte dietro del collo.",
+      "Da lì fai scivolare la testa verso una spalla, orecchio verso la spalla, senza alzare la spalla verso l'orecchio.",
+      "Continua il cerchio portando la testa appena indietro, con lo sguardo in alto: è il punto più delicato, quindi riduci l'ampiezza e non schiacciare la nuca.",
+      "Chiudi il cerchio passando sull'altra spalla e tornando con il mento al petto. Un giro completo dura circa 4-5 secondi.",
+      "Dopo i giri in un senso, cambia direzione. Respira con calma dal naso e tieni il resto del corpo fermo."
+    ],
+    "errors": [
+      "Girare la testa veloce e a scatti: così irriti il collo invece di scaldarlo.",
+      "Buttare la testa all'indietro con forza: così comprimi le vertebre della nuca.",
+      "Alzare le spalle durante il giro: così il collo resta rigido e il movimento si accorcia."
+    ],
+    "why": "Prepara il collo a reggere i colpi e le prese del clinch, dove la testa viene tirata in basso. Fermati subito se senti capogiri, formicolii o fitte.",
+    "figure": [
+      {
+        "label": "Mento al petto",
+        "people": [
+          {
+            "pose": "mobilita/collo-avanti"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": -10,
+            "dy": -14,
+            "bend": -10
+          }
+        ]
+      },
+      {
+        "label": "Testa indietro",
+        "people": [
+          {
+            "pose": "mobilita/collo-indietro"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": 12,
+            "dy": -12,
+            "bend": 10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11689,6 +19781,54 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 10 avanti + 10 indietro",
     "details": "Braccia tese, disegna cerchi grandi partendo piccoli e aumentando gradualmente l'ampiezza, con il busto fermo e gli addominali attivi. Scalda la cuffia dei rotatori prima di pugni e guardia alta, riducendo il rischio di sovraccarichi alla spalla durante sparring e colpitori.",
+    "setup": "In piedi, piedi alla larghezza delle spalle e ginocchia morbide. Braccia tese lungo i fianchi, addominali leggermente contratti per tenere fermo il busto.",
+    "steps": [
+      "Inizia con cerchi piccoli: porta le braccia tese in avanti e in alto, poi indietro e giù, come se nuotassi a dorso con entrambe le braccia.",
+      "A ogni giro allarga un po' il cerchio, finché le braccia passano vicino alle orecchie in alto e dietro le anche in basso.",
+      "Tieni i gomiti distesi ma non bloccati e le spalle lontane dalle orecchie quando le braccia scendono.",
+      "Il busto resta fermo: non inarcare la schiena quando le braccia vanno indietro.",
+      "Dopo i giri all'indietro inverti il senso e fai lo stesso in avanti, ritmo lento e respiro regolare."
+    ],
+    "errors": [
+      "Partire subito con cerchi enormi e veloci: così strattoni la spalla ancora fredda.",
+      "Inarcare la schiena per far andare le braccia più indietro: così il movimento lo fa la colonna e non la spalla.",
+      "Piegare i gomiti: così il cerchio si accorcia e scaldi meno."
+    ],
+    "why": "Scalda la cuffia dei rotatori prima di pugni, guardia alta e colpitori, riducendo il rischio di sovraccarichi alla spalla durante lo sparring.",
+    "figure": [
+      {
+        "label": "Braccia avanti",
+        "people": [
+          {
+            "pose": "mobilita/braccia-avanti"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -14,
+            "dy": -38,
+            "bend": 12
+          }
+        ]
+      },
+      {
+        "label": "Braccia in alto",
+        "people": [
+          {
+            "pose": "mobilita/braccia-alto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -36,
+            "dy": 30,
+            "bend": 12
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11699,6 +19839,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 8 per senso per gamba",
     "details": "In equilibrio su una gamba, solleva il ginocchio all'altezza dell'anca e disegna cerchi ampi verso l'esterno e poi verso l'interno, con il busto dritto. Tieniti al muro se serve. Prepara l'articolazione per calci circolari e ginocchiate, migliorando controllo e ampiezza del movimento.",
+    "setup": "In piedi su una gamba, piede d'appoggio ben piantato e ginocchio appena sbloccato. Mani sui fianchi, oppure una mano al muro se l'equilibrio è incerto.",
+    "steps": [
+      "Solleva il ginocchio della gamba libera davanti a te fino all'altezza dell'anca, coscia parallela al pavimento.",
+      "Porta il ginocchio verso l'esterno aprendo l'anca, il più largo possibile senza ruotare il busto.",
+      "Continua il cerchio spingendo il ginocchio indietro e in basso, poi riportalo davanti passando sotto: un cerchio ampio e lento, circa 3 secondi a giro.",
+      "Il busto resta dritto e il bacino fermo: si muove solo l'articolazione dell'anca.",
+      "Dopo i giri verso l'esterno fai quelli verso l'interno, poi cambia gamba. Respira in modo regolare."
+    ],
+    "errors": [
+      "Inclinare il busto di lato per alzare di più il ginocchio: così lavori con la schiena e non con l'anca.",
+      "Cerchi piccoli e veloci: così l'anca non arriva mai a fine corsa.",
+      "Ginocchio d'appoggio bloccato e teso: così perdi equilibrio e carichi l'articolazione."
+    ],
+    "why": "Prepara l'anca all'ampiezza di calci circolari e ginocchiate e allena l'equilibrio su una gamba, che serve in ogni calcio.",
+    "figure": [
+      {
+        "label": "Ginocchio in cerchio",
+        "people": [
+          {
+            "pose": "mobilita/ginocchio-alto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": -6,
+            "dy": 22,
+            "bend": -26
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11709,6 +19881,54 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 10 per gamba, in camminata",
     "details": "Avanza camminando: a ogni passo porta il ginocchio alto e ruotalo verso l'esterno (apertura) o dall'esterno verso l'interno (chiusura), mantenendo il bacino stabile. Movimento controllato, senza strattoni. Riproduce la rotazione d'anca del calcio circolare e del check, ideale nel riscaldamento.",
+    "setup": "In piedi in fondo alla palestra con spazio davanti a te per camminare. Busto dritto, mani sui fianchi o in guardia.",
+    "steps": [
+      "Fai un passo e solleva il ginocchio della gamba dietro davanti a te, all'altezza dell'anca.",
+      "Apertura: porta il ginocchio verso l'esterno con un ampio arco, come se aprissi un cancello, poi appoggia il piede davanti e fai il passo.",
+      "Ripeti con l'altra gamba a ogni passo, mantenendo il bacino rivolto in avanti e il busto fermo.",
+      "Chiusura: al ritorno fai il movimento al contrario, partendo con il ginocchio aperto di lato e portandolo davanti a te verso il centro.",
+      "Muoviti lento e controllato, senza strattoni, respirando con calma a ogni passo."
+    ],
+    "errors": [
+      "Ruotare tutto il busto insieme al ginocchio: così l'anca non lavora.",
+      "Fare il movimento di slancio: così perdi il controllo e strattoni l'inguine.",
+      "Camminare sui talloni con la gamba d'appoggio rigida: così perdi equilibrio."
+    ],
+    "why": "Riproduce la rotazione d'anca del calcio circolare e del check (parata con la tibia): ottimo nel riscaldamento prima del lavoro di gambe.",
+    "figure": [
+      {
+        "label": "Ginocchio alto",
+        "people": [
+          {
+            "pose": "mobilita/ginocchio-alto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": -24,
+            "dy": 4,
+            "bend": -14
+          }
+        ]
+      },
+      {
+        "label": "Passo avanti",
+        "people": [
+          {
+            "pose": "in-piedi"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 28,
+            "dy": 0,
+            "bend": -8
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11719,6 +19939,54 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 12 per gamba",
     "details": "Una mano al muro, busto eretto e gamba d'appoggio leggermente flessa: slancia la gamba avanti e indietro aumentando l'ampiezza a ogni ripetizione, senza inarcare la schiena. È un allungamento dinamico per femorali e flessori che prepara a teep e calci alti; mai forzare all'inizio.",
+    "setup": "In piedi di fianco al muro, a un braccio di distanza, con la mano più vicina appoggiata alla parete. Busto eretto, gamba d'appoggio leggermente piegata, gamba libera rilassata.",
+    "steps": [
+      "Slancia la gamba esterna in avanti e in alto con il ginocchio quasi teso, come un calcio morbido, poi lasciala ricadere indietro come un pendolo.",
+      "Dietro, la gamba sale solo finché la schiena non si inarca: il busto resta dritto per tutto il tempo.",
+      "Parti con slanci bassi e a ogni ripetizione alza un po' di più, fino al massimo comodo.",
+      "Mantieni un ritmo fluido e regolare, senza fermarti in alto, respirando in modo naturale.",
+      "Finite le ripetizioni girati e fai lo stesso con l'altra gamba."
+    ],
+    "errors": [
+      "Calciare al massimo già dal primo slancio: così rischi uno stiramento del femorale.",
+      "Inarcare la schiena quando la gamba va indietro: così carichi la zona lombare.",
+      "Bloccare la gamba d'appoggio tesa: così perdi equilibrio e fluidità."
+    ],
+    "why": "Allungamento dinamico di femorali e flessori dell'anca che prepara a teep e calci alti. Mai forzare all'inizio: l'ampiezza arriva da sola.",
+    "figure": [
+      {
+        "label": "Slancio avanti",
+        "people": [
+          {
+            "pose": "mobilita/swing-avanti"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": -30,
+            "dy": 40,
+            "bend": -20
+          }
+        ]
+      },
+      {
+        "label": "Ritorno dietro",
+        "people": [
+          {
+            "pose": "mobilita/swing-dietro"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 36,
+            "dy": -20,
+            "bend": 18
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11729,6 +19997,47 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 12 per gamba",
     "details": "Di fronte al muro con entrambe le mani appoggiate, slancia la gamba lateralmente incrociandola davanti al corpo e poi verso l'esterno, con il bacino frontale. Aumenta l'ampiezza in modo progressivo. Mobilizza adduttori e abduttori, utili per calci circolari alti e per spostamenti laterali rapidi.",
+    "setup": "In piedi di fronte al muro, a circa un braccio di distanza, con entrambe le mani appoggiate alla parete all'altezza del petto. Bacino e busto rivolti al muro.",
+    "steps": [
+      "Sposta il peso su una gamba e lascia l'altra libera e rilassata.",
+      "Slancia la gamba libera di lato davanti al corpo, incrociandola verso il piede d'appoggio.",
+      "Lasciala tornare come un pendolo e slanciala verso l'esterno, aprendo l'anca di lato.",
+      "Il bacino resta rivolto al muro e il busto non si piega: si muove solo la gamba.",
+      "Aumenta l'ampiezza poco alla volta, ritmo regolare, poi cambia gamba."
+    ],
+    "errors": [
+      "Ruotare il bacino per far salire la gamba: così l'allungamento si perde.",
+      "Inclinare il busto di lato a ogni slancio: così lavori con la schiena.",
+      "Slanci troppo ampi all'inizio: così strattoni gli adduttori freddi."
+    ],
+    "why": "Mobilizza adduttori e abduttori, utili per calci circolari alti e per gli spostamenti laterali rapidi sul ring.",
+    "figure": [
+      {
+        "label": "Mani al muro",
+        "people": [
+          {
+            "pose": "mobilita/mani-al-muro",
+            "x": -12
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 128,
+            "w": 8,
+            "h": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": -18,
+            "dy": 4,
+            "bend": -8
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11739,6 +20048,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 10 per gamba",
     "details": "Dalla guardia, porta la gamba in un arco ampio come un calcio circolare lento, ruotando il piede d'appoggio e tenendo le mani in guardia. Respira in modo regolare e controlla la discesa. Unisce mobilità d'anca e tecnica, preparando le articolazioni al calcio vero senza impatto.",
+    "setup": "In guardia, mani alte e mento basso, con spazio libero davanti a te. Il peso è sull'avampiede, la gamba posteriore è quella che lavora.",
+    "steps": [
+      "Ruota sull'avampiede della gamba anteriore portando il tallone verso l'interno, come nel calcio vero.",
+      "Porta la gamba posteriore in un arco ampio e lento all'altezza del fianco, con il ginocchio quasi teso e le anche che girano.",
+      "Mantieni le mani in guardia: il braccio dello stesso lato può scendere un po' per bilanciare.",
+      "Controlla la discesa: riporta la gamba indietro lungo lo stesso arco e rimetti il piede a terra in guardia.",
+      "Respira in modo regolare e aumenta altezza e velocità solo un poco alla volta. Poi cambia gamba."
+    ],
+    "errors": [
+      "Piede d'appoggio piatto e fermo: così le anche non ruotano e forzi il ginocchio.",
+      "Lasciar cadere la gamba senza controllo: così perdi il beneficio del lavoro lento.",
+      "Abbassare le mani: così abitui il corpo a una brutta guardia nel calcio."
+    ],
+    "why": "Unisce mobilità d'anca e tecnica del calcio circolare, preparando le articolazioni al calcio vero senza impatto.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia"
+          }
+        ]
+      },
+      {
+        "label": "Arco lento",
+        "people": [
+          {
+            "pose": "calcio-circolare"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 25,
+            "dy": 18,
+            "bend": 18
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11749,6 +20098,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 6 per lato, pausa 2 s",
     "details": "Da un affondo lungo, appoggia la mano opposta a terra accanto al piede anteriore e ruota il busto aprendo l'altro braccio verso il soffitto, seguendolo con lo sguardo. Espira durante la rotazione. Apre flessori dell'anca e colonna toracica, migliorando rotazione nei colpi e postura in guardia.",
+    "setup": "In piedi, fai un passo lungo in avanti e scendi in affondo: ginocchio anteriore sopra la caviglia, gamba posteriore distesa con il ginocchio staccato da terra e il peso sull'avampiede.",
+    "steps": [
+      "Appoggia a terra la mano opposta alla gamba avanti, accanto all'interno del piede anteriore.",
+      "Lascia scendere il bacino verso il pavimento: senti allungare la parte davanti dell'anca della gamba dietro.",
+      "Espirando, ruota il busto verso la gamba avanti e apri l'altro braccio teso verso il soffitto, seguendo la mano con lo sguardo.",
+      "Resta un istante in apertura, poi riporta la mano a terra con calma.",
+      "Ripeti le rotazioni, poi cambia gamba. Il bacino resta basso e fermo durante tutto il movimento."
+    ],
+    "errors": [
+      "Ginocchio anteriore che crolla verso l'interno: così lo carichi male.",
+      "Ruotare solo il braccio senza aprire il torace: così l'esercizio perde metà dell'effetto.",
+      "Trattenere il fiato nella rotazione: così il busto si irrigidisce e ruota meno."
+    ],
+    "why": "Apre i flessori dell'anca e la colonna toracica, migliorando la rotazione nei colpi e la postura in guardia.",
+    "figure": [
+      {
+        "label": "Mano a terra",
+        "people": [
+          {
+            "pose": "mobilita/affondo-gomito"
+          }
+        ]
+      },
+      {
+        "label": "Braccio al soffitto",
+        "people": [
+          {
+            "pose": "mobilita/affondo-rotazione"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand2",
+            "dx": -14,
+            "dy": -4,
+            "bend": -10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11759,6 +20148,53 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 5 per lato",
     "details": "Da un affondo profondo porta il gomito verso il collo del piede anteriore, poi ruota il busto aprendo il braccio in alto e infine distendi la gamba anteriore portando il bacino indietro. Movimento fluido e respirazione lenta. Mobilizza in una sola sequenza anche, torace e femorali: perfetto prima dello sparring.",
+    "setup": "In piedi, fai un passo lungo in avanti e scendi in un affondo profondo: gamba posteriore distesa sull'avampiede, mani a terra ai lati del piede anteriore.",
+    "steps": [
+      "Togli da terra la mano dal lato della gamba avanti e porta il gomito verso l'interno del piede anteriore, verso il collo del piede: bacino basso, schiena lunga.",
+      "Ruota il busto e apri lo stesso braccio teso verso il soffitto, seguendolo con lo sguardo. Espira durante l'apertura.",
+      "Riporta la mano a terra, appoggia il ginocchio posteriore e porta il bacino indietro distendendo la gamba anteriore, punta del piede verso l'alto: senti allungare il femorale.",
+      "Torna in affondo e ripeti la sequenza in modo fluido, con respiro lento.",
+      "Finite le ripetizioni, cambia gamba."
+    ],
+    "errors": [
+      "Fretta tra una fase e l'altra: così ogni posizione dura troppo poco per allungare.",
+      "Schiena curva quando distendi la gamba anteriore: così il femorale non si allunga.",
+      "Passo troppo corto: così l'anca dietro non si apre."
+    ],
+    "why": "Mobilizza in una sola sequenza anche, torace e femorali: un riscaldamento completo, perfetto prima dello sparring.",
+    "figure": [
+      {
+        "label": "Gomito al piede",
+        "people": [
+          {
+            "pose": "mobilita/affondo-gomito"
+          }
+        ]
+      },
+      {
+        "label": "Rotazione",
+        "people": [
+          {
+            "pose": "mobilita/affondo-rotazione"
+          }
+        ]
+      },
+      {
+        "label": "Gamba distesa",
+        "people": [
+          {
+            "pose": "mobilita/affondo-femorali"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -18,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11769,6 +20205,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 45 s per lato",
     "details": "Seduto a terra con una gamba davanti e una di lato, entrambe piegate a 90 gradi e busto dritto: inclinati lentamente in avanti sulla gamba anteriore, poi ruota verso quella posteriore. Respira profondamente senza forzare. Migliora rotazione interna ed esterna dell'anca, fondamentale per calci e ginocchiate.",
+    "setup": "Seduto a terra. Una gamba è davanti a te con il ginocchio piegato a 90 gradi e la tibia parallela al tuo petto; l'altra è di lato con il ginocchio piegato a 90 gradi e il piede che punta indietro. Busto dritto, mani appoggiate leggere a terra o sulle ginocchia.",
+    "steps": [
+      "Siediti alto sulle ossa del bacino, schiena lunga come se un filo ti tirasse la testa verso il soffitto.",
+      "Inspira, poi espirando inclinati in avanti sulla gamba davanti partendo dalle anche, petto verso la tibia e schiena dritta.",
+      "Resta qualche respiro dove senti allungare il gluteo, senza forzare e senza arrotondare la schiena.",
+      "Torna dritto e ruota il busto verso la gamba dietro, inclinandoti leggermente su di lei: ora lavora la rotazione interna dell'anca.",
+      "Ripeti alternando le due direzioni con respiri profondi, poi inverti la posizione delle gambe."
+    ],
+    "errors": [
+      "Piegare la schiena invece delle anche: così allunghi la colonna e non l'anca.",
+      "Spingere il ginocchio a terra con le mani: così forzi l'articolazione del ginocchio.",
+      "Ginocchia chiuse a meno di 90 gradi: così l'allungamento si sposta e si perde."
+    ],
+    "why": "Migliora la rotazione interna ed esterna dell'anca, fondamentale per caricare calci circolari e ginocchiate. Se senti dolore al ginocchio, apri un po' l'angolo.",
+    "figure": [
+      {
+        "label": "Busto alto",
+        "people": [
+          {
+            "pose": "mobilita/seduto-90-90"
+          }
+        ]
+      },
+      {
+        "label": "Inclinato avanti",
+        "people": [
+          {
+            "pose": "mobilita/seduto-90-90-avanti"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 16,
+            "dy": 8,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11779,6 +20255,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 10 transizioni",
     "details": "Dalla posizione 90-90, ruota entrambe le ginocchia sull'altro lato senza aiutarti con le mani, mantenendo il busto alto e i talloni a terra come perno. Muoviti lentamente e con controllo. Rinforza la mobilità attiva delle anche, utile per cambi di guardia, equilibrio nei calci e lavoro nel clinch.",
+    "setup": "Seduto a terra nella posizione 90-90: una gamba piegata davanti, una piegata di lato, entrambe a 90 gradi. Busto dritto, mani incrociate davanti al petto o tese in avanti.",
+    "steps": [
+      "Tieni i talloni appoggiati a terra: saranno il perno del movimento.",
+      "Solleva entrambe le ginocchia verso il soffitto ruotandole insieme, senza usare le mani e con il busto alto.",
+      "Continua la rotazione e appoggia le ginocchia sull'altro lato: ora la gamba che era davanti è di lato e viceversa.",
+      "Fermati un istante nella nuova 90-90 controllando di avere la schiena dritta, poi torna dall'altra parte.",
+      "Muoviti lento, circa 3-4 secondi per passaggio, respirando con calma."
+    ],
+    "errors": [
+      "Appoggiarsi indietro sulle mani: così l'anca non lavora attivamente.",
+      "Busto che crolla indietro durante il passaggio: così perdi il controllo.",
+      "Far cadere le ginocchia di peso a terra: così sbatti e non controlli la fine del movimento."
+    ],
+    "why": "Rinforza la mobilità attiva delle anche, utile per cambi di guardia, equilibrio nei calci e lavoro nel clinch.",
+    "figure": [
+      {
+        "label": "90-90",
+        "people": [
+          {
+            "pose": "mobilita/seduto-90-90"
+          }
+        ]
+      },
+      {
+        "label": "Ginocchia in alto",
+        "people": [
+          {
+            "pose": "mobilita/seduto-ginocchia-su"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": -20,
+            "dy": 10,
+            "bend": -10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11789,6 +20305,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s",
     "details": "A quattro zampe, allarga le ginocchia il più possibile con le caviglie in linea alle ginocchia, poi spingi lentamente il bacino indietro verso i talloni. Respira a fondo e rilassati nella posizione, senza molleggiare. Allunga gli adduttori profondi, migliorando l'apertura per calci alti e ginocchiate.",
+    "setup": "A quattro zampe su un tappetino. Allarga le ginocchia il più possibile, con caviglie e piedi in linea con le ginocchia (non chiusi dietro) e le punte dei piedi verso l'esterno. Appoggiati sugli avambracci.",
+    "steps": [
+      "Controlla che le ginocchia siano alla stessa altezza delle anche e che le tibie siano parallele tra loro.",
+      "Lentamente porta il bacino indietro verso i talloni: senti allungare l'interno coscia.",
+      "Fermati alla prima tensione forte e resta immobile, senza molleggiare.",
+      "Respira a fondo dalla pancia: a ogni espirazione lascia scendere il bacino di poco.",
+      "Per uscire torna in avanti piano e richiudi le ginocchia aiutandoti con le mani."
+    ],
+    "errors": [
+      "Molleggiare con il bacino: così gli adduttori si contraggono per difesa e rischi lo strappo.",
+      "Inarcare troppo la zona lombare: così il carico va sulla schiena.",
+      "Piedi uniti dietro: così l'allungamento si sposta sulle ginocchia."
+    ],
+    "why": "Allunga gli adduttori profondi e migliora l'apertura per calci alti e ginocchiate. Le ginocchia vanno su un appoggio morbido.",
+    "figure": [
+      {
+        "label": "Ginocchia larghe",
+        "people": [
+          {
+            "pose": "mobilita/rana"
+          }
+        ]
+      },
+      {
+        "label": "Bacino indietro",
+        "people": [
+          {
+            "pose": "mobilita/rana-indietro"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -16,
+            "dy": 4
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11799,6 +20354,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s per lato",
     "details": "Gambe molto larghe, piega un ginocchio spostando il peso su quel lato mentre l'altra gamba resta tesa con la punta verso l'alto; schiena dritta e talloni a terra. Respira e scendi gradualmente. Allunga l'interno coscia proteggendo gli adduttori, spesso sollecitati da calci e cambi di direzione.",
+    "setup": "In piedi a gambe molto larghe, circa il doppio della larghezza delle spalle, punte dei piedi in avanti. Mani sulle cosce o congiunte davanti al petto.",
+    "steps": [
+      "Sposta il peso su un lato piegando quel ginocchio, che resta in linea con la punta del piede.",
+      "L'altra gamba resta tesa: ruota la punta del piede verso l'alto appoggiandoti sul tallone.",
+      "Spingi il sedere indietro come per sederti, petto alto e schiena dritta: senti allungare l'interno coscia della gamba tesa.",
+      "Scendi poco alla volta a ogni espirazione e resta nella posizione respirando con calma.",
+      "Torna al centro spingendo con la gamba piegata e ripeti dall'altra parte."
+    ],
+    "errors": [
+      "Ginocchio piegato che cade verso l'interno: così sovraccarichi il ginocchio.",
+      "Sollevare il tallone della gamba piegata: così perdi equilibrio e allunghi meno.",
+      "Schiena curva in avanti: così l'allungamento si perde."
+    ],
+    "why": "Allunga l'interno coscia proteggendo gli adduttori, molto sollecitati da calci e cambi di direzione.",
+    "figure": [
+      {
+        "label": "Gambe larghe (di fronte)",
+        "people": [
+          {
+            "pose": "mobilita/gambe-larghe"
+          }
+        ]
+      },
+      {
+        "label": "Peso su un lato",
+        "people": [
+          {
+            "pose": "mobilita/affondo-laterale"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 14,
+            "dy": 10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11809,6 +20403,63 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s per lato",
     "details": "Da un affondo con ginocchio posteriore a terra, scivola lentamente in avanti con la gamba anteriore, usando le mani o dei blocchi come supporto e il bacino frontale. Fermati alla prima tensione e respira per allungarti. Aumenta l'escursione per teep e calci alti; mai rimbalzare o forzare con dolore.",
+    "setup": "Su un tappetino, in affondo con il ginocchio posteriore a terra e il piede anteriore avanti. Mani a terra ai lati del piede anteriore, o su due blocchi o libri se non arrivi.",
+    "steps": [
+      "Porta il bacino frontale: entrambe le anche guardano avanti, non di lato.",
+      "Distendi lentamente la gamba anteriore facendo scivolare il tallone in avanti, punta del piede verso l'alto.",
+      "Allo stesso tempo lascia scivolare indietro la gamba posteriore, mantenendo il peso sulle mani.",
+      "Fermati alla prima tensione chiara, non al dolore, e resta lì respirando lentamente: a ogni espirazione scendi di pochi centimetri.",
+      "Per uscire spostati sulle mani, piega la gamba anteriore e torna in affondo. Poi cambia gamba."
+    ],
+    "errors": [
+      "Rimbalzare per scendere di più: così rischi lo stiramento dei femorali.",
+      "Bacino che ruota di lato: così ti sembra di scendere ma l'allungamento si perde.",
+      "Togliere le mani troppo presto: così cadi di peso nella posizione."
+    ],
+    "why": "Aumenta l'escursione per teep e calci alti. Si lavora sempre a caldo, senza molleggi e senza mai forzare con dolore.",
+    "figure": [
+      {
+        "label": "Ginocchio a terra",
+        "people": [
+          {
+            "pose": "mobilita/spaccata-ginocchio",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 84,
+            "w": 14,
+            "h": 28
+          }
+        ]
+      },
+      {
+        "label": "Scivola avanti",
+        "people": [
+          {
+            "pose": "mobilita/spaccata-scivola",
+            "x": 0
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 16,
+            "dy": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 84,
+            "w": 14,
+            "h": 14
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11819,6 +20470,50 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s",
     "details": "Gambe divaricate con le punte in avanti o verso l'alto, mani a terra davanti: allarga i piedi poco alla volta mantenendo la schiena lunga. Respira lentamente e resta nella tensione senza dolore. Migliora l'apertura dell'anca necessaria per calci circolari alti al viso; evita molleggi e scatti.",
+    "setup": "In piedi a gambe divaricate, punte dei piedi in avanti, busto leggermente inclinato e mani a terra davanti a te (su dei blocchi se non arrivi).",
+    "steps": [
+      "Con il peso sulle mani, allarga i piedi di pochi centimetri facendoli scivolare verso l'esterno.",
+      "Mantieni la schiena lunga e le ginocchia tese, con le rotule che guardano in avanti o verso l'alto.",
+      "Fermati alla prima tensione sull'interno coscia e resta, respirando lentamente.",
+      "A ogni espirazione allarga ancora un poco, sempre senza dolore.",
+      "Per uscire porta il peso sulle mani, avvicina i piedi camminando e torna in piedi."
+    ],
+    "errors": [
+      "Molleggiare o scattare verso il basso: così gli adduttori si strappano facilmente.",
+      "Schiena curva e testa giù: così il carico va sulla colonna.",
+      "Punte dei piedi girate in dentro: così forzi le ginocchia."
+    ],
+    "why": "Migliora l'apertura dell'anca necessaria per i calci circolari alti al viso. Evita molleggi e scatti, lavora solo a muscoli caldi.",
+    "figure": [
+      {
+        "label": "Gambe aperte (di fronte)",
+        "people": [
+          {
+            "pose": "mobilita/divaricata"
+          }
+        ]
+      },
+      {
+        "label": "Allarga poco a poco",
+        "people": [
+          {
+            "pose": "mobilita/divaricata-larga"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 16,
+            "dy": 0
+          },
+          {
+            "at": "foot2",
+            "dx": -16,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11829,6 +20524,42 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s",
     "details": "Seduto con le piante dei piedi unite e i talloni vicini all'inguine, tieni la schiena dritta e spingi dolcemente le ginocchia verso terra con i gomiti. Per aumentare, inclina il busto in avanti dalle anche. Allunga adduttori e inguine, zona spesso rigida nei fighter che calciano molto.",
+    "setup": "Seduto a terra con le piante dei piedi unite e i talloni vicini all'inguine. Afferra i piedi con le mani e appoggia i gomiti sull'interno delle ginocchia.",
+    "steps": [
+      "Siediti alto sul bacino con la schiena dritta e le spalle rilassate.",
+      "Con i gomiti spingi dolcemente le ginocchia verso terra, senza strattoni.",
+      "Respira con calma: a ogni espirazione lascia che le ginocchia scendano un po' di più.",
+      "Per aumentare inclina il busto in avanti partendo dalle anche, petto verso i piedi e schiena lunga.",
+      "Torna su lentamente e lascia rilassare le ginocchia prima di alzarti."
+    ],
+    "errors": [
+      "Arrotondare la schiena per avvicinare la testa ai piedi: così allunghi la schiena e non l'inguine.",
+      "Fare la farfalla sbattendo le ginocchia su e giù: così gli adduttori si irrigidiscono.",
+      "Spingere forte sulle ginocchia: così stressi l'articolazione."
+    ],
+    "why": "Allunga adduttori e inguine, zona spesso rigida nei fighter che calciano molto.",
+    "figure": [
+      {
+        "label": "Piedi uniti (di fronte)",
+        "people": [
+          {
+            "pose": "mobilita/farfalla"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 4,
+            "dy": 10
+          },
+          {
+            "at": "knee2",
+            "dx": -4,
+            "dy": 10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11839,6 +20570,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 45 s per lato",
     "details": "Con la gamba anteriore piegata a terra davanti al corpo e quella posteriore distesa, mantieni il bacino dritto e scendi lentamente con il busto in avanti. Espira a ogni discesa. Allunga gluteo e rotatori esterni dell'anca, migliorando la rotazione nel calcio circolare; proteggi il ginocchio senza forzarlo.",
+    "setup": "Da quattro zampe porta un ginocchio in avanti dietro la mano dello stesso lato e appoggia la gamba piegata a terra davanti a te, con il piede verso l'anca opposta. L'altra gamba scivola indietro distesa, collo del piede a terra.",
+    "steps": [
+      "Sistema il bacino dritto: entrambe le anche rivolte in avanti, non sbilanciate sul lato della gamba piegata.",
+      "Tieni le mani a terra ai lati e il busto alto per qualche respiro.",
+      "Espirando, scendi lentamente con il busto in avanti, prima sugli avambracci e poi, se puoi, con le braccia distese davanti.",
+      "Senti allungare il gluteo della gamba davanti: resta immobile e respira, scendendo un poco a ogni espirazione.",
+      "Per uscire torna sulle mani, riporta la gamba dietro e cambia lato."
+    ],
+    "errors": [
+      "Bacino che cade sul lato della gamba piegata: così l'allungamento sparisce.",
+      "Piede troppo lontano davanti se il ginocchio fa male: così torci il ginocchio, avvicina il piede all'inguine.",
+      "Trattenere il fiato: così i muscoli non si rilasciano."
+    ],
+    "why": "Allunga gluteo e rotatori esterni dell'anca, migliorando la rotazione nel calcio circolare. Proteggi il ginocchio: niente dolore all'articolazione.",
+    "figure": [
+      {
+        "label": "Busto alto",
+        "people": [
+          {
+            "pose": "mobilita/piccione"
+          }
+        ]
+      },
+      {
+        "label": "Busto avanti",
+        "people": [
+          {
+            "pose": "mobilita/piccione-avanti"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 10,
+            "dy": 10,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11849,6 +20620,37 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s per lato",
     "details": "In affondo con il ginocchio posteriore a terra (su un tappetino), contrai il gluteo di quel lato e spingi il bacino in avanti, senza inarcare la zona lombare. Alza il braccio dello stesso lato per aumentare l'allungamento. Libera i flessori accorciati, migliorando estensione d'anca nel teep e nelle ginocchiate.",
+    "setup": "In affondo con il ginocchio posteriore appoggiato su un tappetino e il piede anteriore avanti, ginocchio anteriore sopra la caviglia. Busto dritto, mani sui fianchi.",
+    "steps": [
+      "Porta il bacino in retroversione, come per infilare la coda tra le gambe, e stringi il gluteo della gamba dietro.",
+      "Spingi lentamente il bacino in avanti di pochi centimetri: senti allungare la parte davanti dell'anca della gamba dietro.",
+      "Non inarcare la zona lombare: costole giù e addome leggermente contratto.",
+      "Alza in alto il braccio dello stesso lato della gamba dietro e inclinati appena verso il lato opposto per aumentare l'allungamento.",
+      "Resta respirando lentamente, poi cambia gamba."
+    ],
+    "errors": [
+      "Inarcare la schiena per andare più avanti: così carichi la zona lombare e non allunghi l'anca.",
+      "Gluteo rilassato: così l'allungamento è molto più debole.",
+      "Ginocchio a terra senza appoggio morbido: così fa male alla rotula."
+    ],
+    "why": "Libera i flessori dell'anca accorciati, migliorando l'estensione dell'anca che dà spinta al teep e alle ginocchiate.",
+    "figure": [
+      {
+        "label": "Bacino avanti",
+        "people": [
+          {
+            "pose": "mobilita/affondo-ginocchio"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 14,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11858,7 +20660,40 @@ export const exercises: Exercise[] = [
     "description": "Ginocchio contro il muro per i flessori e il quadricipite.",
     "equipment": "Muro",
     "dose": "2 × 45 s per lato",
-    "details": "Ginocchio posteriore a terra vicino al muro con la tibia appoggiata in verticale, piede anteriore avanti: porta il busto eretto stringendo i glutei. Respira lentamente e aumenta l'inclinazione solo se tollerata. Allunga profondamente quadricipite e flessori, molto sollecitati da ginocchiate e calci."
+    "details": "Ginocchio posteriore a terra vicino al muro con la tibia appoggiata in verticale, piede anteriore avanti: porta il busto eretto stringendo i glutei. Respira lentamente e aumenta l'inclinazione solo se tollerata. Allunga profondamente quadricipite e flessori, molto sollecitati da ginocchiate e calci.",
+    "setup": "Metti un tappetino contro il muro. Appoggia il ginocchio posteriore a terra vicino al muro, con la tibia appoggiata in verticale alla parete e il collo del piede contro il muro. Il piede anteriore è avanti a terra come in un affondo.",
+    "steps": [
+      "Parti con il busto inclinato in avanti e le mani appoggiate sul ginocchio anteriore o a terra.",
+      "Stringi il gluteo della gamba dietro e porta il bacino leggermente in avanti, in retroversione.",
+      "Solleva lentamente il busto verso la verticale: più sei dritto, più l'allungamento su quadricipite e flessore aumenta.",
+      "Non inarcare la schiena: costole giù, addome attivo.",
+      "Resta respirando lentamente, poi esci con calma e cambia gamba."
+    ],
+    "errors": [
+      "Inarcare la zona lombare per stare dritto: così carichi la schiena invece del quadricipite.",
+      "Andare subito in verticale: così l'allungamento è troppo violento.",
+      "Ginocchio sul pavimento duro: così la rotula fa male."
+    ],
+    "why": "Allunga a fondo quadricipite e flessori dell'anca, molto sollecitati da ginocchiate e calci. Aumenta l'inclinazione solo se la tolleri.",
+    "figure": [
+      {
+        "label": "Tibia al muro",
+        "people": [
+          {
+            "pose": "mobilita/couch",
+            "x": -6
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 56,
+            "w": 8,
+            "h": 118
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "mobilita--allungamento-femorali-in-piedi",
@@ -11868,6 +20703,47 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s per lato",
     "details": "Appoggia il tallone su un rialzo con la gamba tesa e la punta verso l'alto, poi inclina il busto in avanti dalle anche mantenendo la schiena dritta. Respira e scendi gradualmente senza molleggiare. Migliora la flessibilità dei femorali, essenziale per teep e calci alti e per prevenire stiramenti.",
+    "setup": "In piedi davanti a un rialzo stabile all'altezza del ginocchio o poco più (una panca, un gradino alto). Appoggia il tallone di una gamba sul rialzo con la gamba tesa e la punta del piede verso l'alto. Gamba d'appoggio dritta, piede rivolto in avanti.",
+    "steps": [
+      "Metti le mani sui fianchi e allunga la schiena: petto alto, spalle basse.",
+      "Inclina il busto in avanti piegandoti dalle anche, come se volessi portare l'ombelico verso la coscia, con la schiena dritta.",
+      "Fermati quando senti tirare dietro la coscia tesa: non serve toccare il piede.",
+      "Resta respirando lentamente: a ogni espirazione scendi di poco, senza molleggiare.",
+      "Torna su con la schiena dritta e cambia gamba."
+    ],
+    "errors": [
+      "Arrotondare la schiena per avvicinare la testa al ginocchio: così allunghi la schiena e non il femorale.",
+      "Piegare il ginocchio della gamba sul rialzo: così l'allungamento sparisce.",
+      "Rialzo troppo alto: così il bacino ruota e perdi l'equilibrio."
+    ],
+    "why": "Migliora la flessibilità dei femorali, essenziale per teep e calci alti e per prevenire stiramenti.",
+    "figure": [
+      {
+        "label": "Busto avanti dalle anche",
+        "people": [
+          {
+            "pose": "mobilita/femorali-rialzo",
+            "x": -25
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 102,
+            "w": 36,
+            "h": 40
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 12,
+            "dy": 12,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11878,6 +20754,47 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 30 s per lato",
     "details": "In piedi su una gamba, afferra il collo del piede e porta il tallone verso il gluteo, con le ginocchia unite e il bacino leggermente in retroversione. Tieniti al muro per l'equilibrio. Allunga il quadricipite caricato da ginocchiate e salti, aiutando il recupero dopo l'allenamento.",
+    "setup": "In piedi accanto a un muro, con una mano appoggiata per l'equilibrio. Piede d'appoggio ben piantato, ginocchio appena sbloccato.",
+    "steps": [
+      "Piega una gamba portando il tallone dietro di te e afferra il collo del piede con la mano dello stesso lato.",
+      "Avvicina dolcemente il tallone al gluteo, tenendo le ginocchia unite e la coscia verticale.",
+      "Porta il bacino leggermente in avanti, in retroversione, e stringi il gluteo: senti allungare la parte davanti della coscia.",
+      "Busto dritto, non piegarti in avanti. Respira lentamente e resta nella posizione.",
+      "Lascia il piede con controllo e cambia gamba."
+    ],
+    "errors": [
+      "Ginocchio che va avanti o si apre di lato: così l'allungamento si perde.",
+      "Inarcare la schiena: così il bacino va in avanti e il quadricipite non si allunga.",
+      "Tirare il piede di forza: così stressi il ginocchio."
+    ],
+    "why": "Allunga il quadricipite caricato da ginocchiate e salti e aiuta il recupero dopo l'allenamento.",
+    "figure": [
+      {
+        "label": "Tallone al gluteo",
+        "people": [
+          {
+            "pose": "mobilita/quadricipite",
+            "x": -10,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "foot",
+                "dx": -2,
+                "dy": -4
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 124,
+            "w": 8,
+            "h": 118
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11888,6 +20805,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 8 per lato",
     "details": "Gambe larghe, scendi su un lato piegando il ginocchio e tenendo l'altra gamba tesa con la punta verso l'alto; tallone a terra e petto alto. Torna al centro e alterna. Unisce mobilità degli adduttori e forza nelle posizioni basse, utile per cambi di livello e stabilità nel clinch.",
+    "setup": "In piedi a gambe molto larghe, circa il doppio delle spalle, punte dei piedi leggermente aperte. Mani congiunte davanti al petto.",
+    "steps": [
+      "Sposta il peso su un lato e scendi piegando quel ginocchio, come in uno squat su una gamba sola: sedere indietro e in basso.",
+      "L'altra gamba resta tesa: ruota la punta del piede verso l'alto, appoggiato sul tallone.",
+      "Scendi più in basso che puoi tenendo il tallone della gamba piegata a terra e il petto alto.",
+      "Fermati un istante in basso, poi spingi con la gamba piegata e torna al centro.",
+      "Alterna i lati con un ritmo lento e controllato, espirando mentre risali."
+    ],
+    "errors": [
+      "Alzare il tallone della gamba piegata: così il peso va sulle ginocchia e perdi equilibrio.",
+      "Ginocchio che cade verso l'interno: così lo sovraccarichi.",
+      "Busto che crolla in avanti: così la schiena si arrotonda."
+    ],
+    "why": "Unisce mobilità degli adduttori e forza nelle posizioni basse, utile per cambi di livello e stabilità nel clinch.",
+    "figure": [
+      {
+        "label": "Gambe larghe (di fronte)",
+        "people": [
+          {
+            "pose": "mobilita/gambe-larghe"
+          }
+        ]
+      },
+      {
+        "label": "Giù su un lato",
+        "people": [
+          {
+            "pose": "mobilita/cosacco-basso"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 10,
+            "dy": 14
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11898,6 +20854,30 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 45 s",
     "details": "Piedi alla larghezza delle spalle, scendi nello squat più profondo possibile con i talloni a terra e i gomiti che spingono le ginocchia verso l'esterno. Respira lentamente e mantieni la schiena il più dritta possibile. Migliora mobilità di caviglie, anche e colonna, utile per postura e salute articolare.",
+    "setup": "In piedi, piedi alla larghezza delle spalle o poco più, punte leggermente aperte. Mani congiunte davanti al petto.",
+    "steps": [
+      "Scendi lentamente piegando anche e ginocchia, sedere verso il basso tra i talloni.",
+      "Arriva nello squat più profondo possibile tenendo i talloni ben a terra.",
+      "Infila i gomiti all'interno delle ginocchia e spingile dolcemente verso l'esterno, mani unite.",
+      "Allunga la schiena il più possibile e tieni il petto aperto, sguardo avanti.",
+      "Resta in basso respirando lentamente; per risalire spingi con tutto il piede."
+    ],
+    "errors": [
+      "Talloni che si sollevano: così il peso va sulle ginocchia; allarga un po' i piedi o metti un piccolo rialzo sotto i talloni.",
+      "Ginocchia che cadono verso l'interno: così stressi l'articolazione.",
+      "Schiena completamente curva e rilassata: così perdi il lavoro di mobilità sulle anche."
+    ],
+    "why": "Migliora la mobilità di caviglie, anche e colonna, utile per la postura e la salute delle articolazioni.",
+    "figure": [
+      {
+        "label": "Squat profondo",
+        "people": [
+          {
+            "pose": "mobilita/squat-profondo"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11907,7 +20887,47 @@ export const exercises: Exercise[] = [
     "description": "Ginocchio verso il muro con tallone a terra.",
     "equipment": "Muro",
     "dose": "2 × 10 per lato",
-    "details": "In affondo davanti al muro, porta il ginocchio anteriore a toccare il muro mantenendo il tallone ben a terra; allontana il piede man mano che migliori. Movimento lento e controllato. Una caviglia mobile migliora la rotazione sul piede d'appoggio nei calci e la reattività negli spostamenti."
+    "details": "In affondo davanti al muro, porta il ginocchio anteriore a toccare il muro mantenendo il tallone ben a terra; allontana il piede man mano che migliori. Movimento lento e controllato. Una caviglia mobile migliora la rotazione sul piede d'appoggio nei calci e la reattività negli spostamenti.",
+    "setup": "In piedi di fronte al muro in posizione di affondo, con la punta del piede anteriore a circa 10 cm dalla parete e il piede posteriore dietro. Mani appoggiate al muro.",
+    "steps": [
+      "Piega il ginocchio anteriore e portalo verso il muro, in linea con il secondo dito del piede.",
+      "Il tallone anteriore resta ben schiacciato a terra per tutto il movimento.",
+      "Tocca il muro con il ginocchio, poi torna indietro distendendo la gamba. Movimento lento, 2 secondi in avanti e 2 indietro.",
+      "Se tocchi facilmente, allontana il piede dal muro di 1-2 cm; se il tallone si alza, avvicinalo.",
+      "Finite le ripetizioni cambia gamba."
+    ],
+    "errors": [
+      "Sollevare il tallone per arrivare al muro: così la caviglia non lavora.",
+      "Ginocchio che va verso l'interno: così sposti il carico sul ginocchio.",
+      "Movimento veloce e a rimbalzo: così la caviglia non guadagna escursione."
+    ],
+    "why": "Una caviglia mobile migliora la rotazione sul piede d'appoggio nei calci e la reattività negli spostamenti.",
+    "figure": [
+      {
+        "label": "Ginocchio al muro",
+        "people": [
+          {
+            "pose": "mobilita/caviglia-muro",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 118,
+            "w": 8,
+            "h": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 14,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "mobilita--rotazioni-delle-caviglie",
@@ -11917,6 +20937,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 10 per senso per piede",
     "details": "In piedi o seduto, solleva leggermente un piede e disegna cerchi ampi con la punta, prima in un senso poi nell'altro, muovendo solo la caviglia. Ottimo all'inizio del riscaldamento. Prepara le caviglie a pivot, saltelli e spostamenti continui sul ring, riducendo il rischio di distorsioni.",
+    "setup": "In piedi su una gamba con le mani sui fianchi (o una mano al muro), oppure seduto. Solleva leggermente l'altro piede da terra.",
+    "steps": [
+      "Con la gamba ferma, disegna con la punta del piede un cerchio ampio e lento.",
+      "Muovi solo la caviglia: il ginocchio e la coscia restano immobili.",
+      "Cerca la massima ampiezza: punta in giù, verso l'esterno, verso l'alto e verso l'interno.",
+      "Dopo i giri in un senso, cambia direzione, poi cambia piede.",
+      "Respira con calma; è un ottimo esercizio per iniziare il riscaldamento."
+    ],
+    "errors": [
+      "Muovere tutta la gamba invece della caviglia: così la caviglia non si scalda.",
+      "Cerchi piccoli e veloci: così l'articolazione non arriva a fine corsa.",
+      "Ginocchio d'appoggio bloccato: così perdi equilibrio."
+    ],
+    "why": "Prepara le caviglie a pivot, saltelli e spostamenti continui sul ring, riducendo il rischio di distorsioni.",
+    "figure": [
+      {
+        "label": "Cerchi con il piede",
+        "people": [
+          {
+            "pose": "mobilita/caviglia-cerchi"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 0,
+            "dy": -12,
+            "bend": -14
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11927,6 +20979,54 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 10, lento",
     "details": "A quattro zampe con mani sotto le spalle e ginocchia sotto le anche: espirando arrotonda la schiena portando il mento al petto, inspirando inarca dolcemente guardando avanti. Muovi una vertebra alla volta. Mobilizza tutta la colonna, preparando la schiena alla postura curva della guardia e del clinch.",
+    "setup": "A quattro zampe su un tappetino: mani sotto le spalle, ginocchia sotto le anche, collo del piede a terra. Schiena neutra.",
+    "steps": [
+      "Espirando, arrotonda la schiena verso il soffitto partendo dal bacino: spingi il pavimento con le mani e porta il mento verso il petto (gatto).",
+      "Resta un istante con la schiena tutta curva, ombelico verso la colonna.",
+      "Inspirando, fai il contrario: lascia scendere la pancia verso il pavimento, apri il petto e porta lo sguardo avanti (cammello).",
+      "Muoviti lentamente, come se spostassi una vertebra alla volta dal bacino alla testa.",
+      "Alterna le due posizioni seguendo il respiro."
+    ],
+    "errors": [
+      "Muovere solo la testa e non la schiena: così la colonna resta ferma.",
+      "Inarcare con forza la zona lombare: così la comprimi.",
+      "Andare veloce senza seguire il respiro: così il movimento diventa un dondolio."
+    ],
+    "why": "Mobilizza tutta la colonna, preparando la schiena alla postura raccolta della guardia e del clinch.",
+    "figure": [
+      {
+        "label": "Schiena curva",
+        "people": [
+          {
+            "pose": "mobilita/gatto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": -10,
+            "dy": -12,
+            "bend": -8
+          }
+        ]
+      },
+      {
+        "label": "Petto aperto",
+        "people": [
+          {
+            "pose": "mobilita/cammello"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": -10,
+            "dy": 10,
+            "bend": 8
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11937,6 +21037,54 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 8 per lato",
     "details": "A quattro zampe, metti una mano dietro la testa e porta il gomito verso il braccio d'appoggio, poi ruota aprendo il gomito verso il soffitto seguendolo con lo sguardo. Bacino fermo, espira in apertura. Migliora la rotazione toracica che dà potenza a pugni, gomiti e calci circolari.",
+    "setup": "A quattro zampe: mani sotto le spalle, ginocchia sotto le anche. Porta una mano dietro la testa, con il gomito aperto di lato.",
+    "steps": [
+      "Ruota il busto verso il basso portando il gomito piegato verso il polso della mano d'appoggio. Sguardo verso l'altra mano.",
+      "Espirando, ruota nel senso opposto e apri il gomito verso il soffitto, seguendolo con lo sguardo.",
+      "Il bacino resta fermo e allineato: si muove solo la parte alta della schiena.",
+      "Resta un istante in apertura, poi torna giù lentamente.",
+      "Finite le ripetizioni cambia braccio."
+    ],
+    "errors": [
+      "Ruotare anche il bacino: così il movimento lo fanno le anche e non il torace.",
+      "Spingere il gomito con uno strattone: così stressi la spalla.",
+      "Braccio d'appoggio piegato: così il busto cade e la rotazione si accorcia."
+    ],
+    "why": "Migliora la rotazione toracica che dà potenza a pugni, gomitate e calci circolari.",
+    "figure": [
+      {
+        "label": "Gomito verso il basso",
+        "people": [
+          {
+            "pose": "mobilita/toracica-chiusa",
+            "reach": {
+              "hand2": {
+                "who": 0,
+                "at": "head",
+                "dx": -4,
+                "dy": -6
+              }
+            }
+          }
+        ]
+      },
+      {
+        "label": "Gomito al soffitto",
+        "people": [
+          {
+            "pose": "mobilita/toracica-aperta"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow2",
+            "dx": -6,
+            "dy": -16,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11947,6 +21095,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 8 per lato, pausa 2 s",
     "details": "Sdraiato sul fianco con le ginocchia piegate a 90 gradi e le braccia tese davanti, apri il braccio superiore verso il lato opposto ruotando il torace, con le ginocchia ferme a terra. Espira durante l'apertura. Libera la colonna toracica e il petto, contrastando la chiusura in avanti tipica della guardia.",
+    "setup": "Sdraiato su un fianco su un tappetino, con la testa appoggiata su un piccolo cuscino o sul braccio. Anche e ginocchia piegate a 90 gradi, ginocchia una sopra l'altra. Braccia tese davanti al petto, palmi uniti.",
+    "steps": [
+      "Tieni le ginocchia ferme e unite a terra: puoi appoggiarci sopra la mano di sotto per bloccarle.",
+      "Espirando, solleva il braccio di sopra e portalo verso il soffitto, seguendo la mano con lo sguardo.",
+      "Continua ad aprire verso il lato opposto ruotando il torace, finché il braccio si avvicina al pavimento dall'altra parte.",
+      "Resta un istante in apertura respirando, poi richiudi lentamente il braccio sopra l'altro.",
+      "Finite le ripetizioni girati sull'altro fianco."
+    ],
+    "errors": [
+      "Le ginocchia si staccano e si aprono: così ruota il bacino e non il torace.",
+      "Spingere il braccio a terra con forza: così stressi la spalla.",
+      "Piegare il gomito: così il braccio fa tutto il lavoro e il torace resta fermo."
+    ],
+    "why": "Libera la colonna toracica e il petto, contrastando la chiusura in avanti tipica della guardia.",
+    "figure": [
+      {
+        "label": "Braccio verso l'alto e dietro",
+        "people": [
+          {
+            "pose": "mobilita/fianco-braccio-su"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 26,
+            "dy": 30,
+            "bend": -14
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11957,6 +21137,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 15 s",
     "details": "Supino con mani accanto alle orecchie e piedi vicini ai glutei, spingi su mani e piedi sollevando bacino e busto fino a distendere le braccia. Respira senza trattenere il fiato e scendi con controllo. Apre colonna e spalle; per i principianti va bene il mezzo ponte. Evitalo con dolori lombari.",
+    "setup": "Sdraiato sulla schiena con le ginocchia piegate e i piedi a terra vicini ai glutei, alla larghezza delle anche. Mani a terra accanto alle orecchie, dita rivolte verso le spalle, gomiti in alto.",
+    "steps": [
+      "Spingi con i piedi e solleva il bacino da terra.",
+      "Spingi con le mani e appoggia per un istante la sommità della testa a terra, con i gomiti stretti e paralleli.",
+      "Distendi le braccia e spingi via il pavimento con mani e piedi, sollevando busto e testa: il corpo forma un arco.",
+      "Porta il peso un po' verso le mani per aprire le spalle e respira senza trattenere il fiato.",
+      "Per scendere piega le braccia, appoggia la parte alta della schiena e poi il bacino, con controllo."
+    ],
+    "errors": [
+      "Gomiti che si aprono verso l'esterno: così perdi forza e carichi le spalle.",
+      "Spingere solo con le gambe: così tutta la curva va sulla zona lombare.",
+      "Cadere giù di colpo: così rischi di battere la testa."
+    ],
+    "why": "Apre colonna e spalle. Per i principianti va bene il mezzo ponte con le spalle a terra; evitalo se hai dolori lombari.",
+    "figure": [
+      {
+        "label": "Mani alle orecchie",
+        "people": [
+          {
+            "pose": "mobilita/ponte-prep"
+          }
+        ]
+      },
+      {
+        "label": "Ponte",
+        "people": [
+          {
+            "pose": "mobilita/ponte"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -18
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11967,6 +21186,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 20 s",
     "details": "Prono con le mani sotto le spalle, spingi dolcemente sollevando il petto e tenendo il bacino a terra, spalle lontane dalle orecchie. Respira profondamente e sali solo fin dove non c'è fastidio lombare. Allunga addominali e flessori dell'anca, compensando le tante ore in posizione chiusa.",
+    "setup": "Sdraiato a pancia in giù su un tappetino, gambe distese e collo dei piedi a terra. Mani appoggiate a terra sotto le spalle o poco più avanti, gomiti stretti ai fianchi.",
+    "steps": [
+      "Spingi il pube e le anche contro il pavimento: resteranno a terra per tutto l'esercizio.",
+      "Inspirando, spingi dolcemente con le mani e solleva testa e petto, allungando la colonna in avanti prima che in alto.",
+      "Sali solo fin dove non senti fastidio alla zona lombare: le braccia possono restare un po' piegate.",
+      "Spalle basse e lontane dalle orecchie, sguardo avanti, glutei non contratti al massimo.",
+      "Resta qualche respiro profondo, poi scendi lentamente espirando."
+    ],
+    "errors": [
+      "Staccare il bacino da terra: così la curva si concentra sulle vertebre lombari.",
+      "Spalle alzate verso le orecchie: così irrigidisci collo e trapezi.",
+      "Buttare la testa indietro: così comprimi la nuca."
+    ],
+    "why": "Allunga addominali e flessori dell'anca, compensando le tante ore passate in posizione chiusa in guardia. Sali solo fin dove la schiena non dà fastidio.",
+    "figure": [
+      {
+        "label": "Prono",
+        "people": [
+          {
+            "pose": "mobilita/prono"
+          }
+        ]
+      },
+      {
+        "label": "Petto in alto",
+        "people": [
+          {
+            "pose": "mobilita/cobra"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": -4,
+            "dy": -14,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11977,6 +21236,30 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 45 s",
     "details": "Seduto sui talloni con le ginocchia leggermente divaricate, distendi le braccia in avanti e appoggia la fronte a terra, lasciando scendere il petto. Respira lentamente nella schiena. Rilassa zona lombare, dorsali e spalle: perfetta come defaticamento a fine lezione o tra un round e l'altro.",
+    "setup": "In ginocchio su un tappetino, ginocchia leggermente divaricate e alluci che si toccano dietro. Siediti sui talloni.",
+    "steps": [
+      "Inclina il busto in avanti tra le cosce partendo dalle anche.",
+      "Distendi le braccia in avanti a terra, palmi giù, e appoggia la fronte sul tappetino.",
+      "Lascia scendere il petto verso il pavimento e il sedere verso i talloni, senza spingere.",
+      "Respira lentamente e profondamente, sentendo la schiena che si allarga a ogni inspirazione.",
+      "Resta rilassato per il tempo indicato, poi risali piano arrotolando la schiena."
+    ],
+    "errors": [
+      "Sollevare il sedere dai talloni: così la schiena non si allunga.",
+      "Spalle tese verso le orecchie: così non rilassi la parte alta.",
+      "Respiro corto e veloce: così il corpo non si calma."
+    ],
+    "why": "Rilassa zona lombare, dorsali e spalle: perfetta come defaticamento a fine lezione o tra un round e l'altro.",
+    "figure": [
+      {
+        "label": "Fronte a terra",
+        "people": [
+          {
+            "pose": "mobilita/bambino"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11987,6 +21270,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s",
     "details": "Da quattro zampe solleva il bacino in alto formando una V rovesciata, spingi il pavimento con le mani e porta i talloni verso terra mantenendo la schiena lunga. Piega leggermente le ginocchia se i femorali sono rigidi. Allunga polpacci, femorali e spalle, utile per calci e guardia.",
+    "setup": "Parti a quattro zampe su un tappetino, mani alla larghezza delle spalle con le dita aperte, ginocchia sotto le anche e punte dei piedi puntate a terra.",
+    "steps": [
+      "Spingi il pavimento con le mani e solleva le ginocchia da terra, portando il bacino in alto e indietro.",
+      "Il corpo forma una V rovesciata: braccia e schiena in linea, testa tra le braccia.",
+      "Allunga la schiena portando il sedere verso il soffitto; se i femorali sono rigidi, piega un po' le ginocchia per tenere la schiena dritta.",
+      "Lentamente porta i talloni verso terra, senza forzare.",
+      "Respira con calma; puoi pedalare piegando un ginocchio alla volta per sciogliere i polpacci."
+    ],
+    "errors": [
+      "Schiena curva per tenere le gambe tese: così perdi l'allungamento di spalle e schiena.",
+      "Peso tutto sulle mani: così carichi i polsi; spingi il bacino indietro.",
+      "Spalle alzate verso le orecchie: così il collo si irrigidisce."
+    ],
+    "why": "Allunga polpacci, femorali e spalle, utile per calci e per stare comodo in guardia.",
+    "figure": [
+      {
+        "label": "Quattro zampe",
+        "people": [
+          {
+            "pose": "mobilita/quattro-zampe"
+          }
+        ]
+      },
+      {
+        "label": "V rovesciata",
+        "people": [
+          {
+            "pose": "mobilita/cane-giu"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -12,
+            "dy": -14
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -11996,7 +21318,63 @@ export const exercises: Exercise[] = [
     "description": "Bastone a presa larga, portato sopra la testa e dietro la schiena.",
     "equipment": "Bastone",
     "dose": "2 × 10",
-    "details": "Impugna un bastone o un elastico con presa larga, braccia tese: portalo lentamente sopra la testa e dietro la schiena, poi torna avanti, senza piegare i gomiti né inarcare la schiena. Stringi la presa man mano che migliori. Mobilizza le spalle per guardia, pugni e lavoro nel clinch; nessun dolore."
+    "details": "Impugna un bastone o un elastico con presa larga, braccia tese: portalo lentamente sopra la testa e dietro la schiena, poi torna avanti, senza piegare i gomiti né inarcare la schiena. Stringi la presa man mano che migliori. Mobilizza le spalle per guardia, pugni e lavoro nel clinch; nessun dolore.",
+    "setup": "In piedi, piedi alla larghezza delle spalle. Impugna un bastone (o un elastico) con le braccia tese davanti alle cosce e una presa molto larga, palmi verso il basso.",
+    "steps": [
+      "Contrai leggermente gli addominali e tieni le costole basse.",
+      "Solleva il bastone a braccia tese davanti a te e sopra la testa, lentamente.",
+      "Continua l'arco portandolo dietro la schiena fino ai glutei, sempre a braccia tese.",
+      "Torna avanti con lo stesso percorso al contrario. Un passaggio completo dura circa 4 secondi, respiro regolare.",
+      "Man mano che migliori stringi la presa di pochi centimetri, sempre senza dolore."
+    ],
+    "errors": [
+      "Piegare i gomiti per far passare il bastone: così le spalle non lavorano.",
+      "Inarcare la schiena quando il bastone va dietro: così compensi con la colonna.",
+      "Presa troppo stretta: così forzi la spalla; allarga finché passi senza fatica."
+    ],
+    "why": "Mobilizza le spalle per guardia, pugni e lavoro nel clinch. Non deve mai fare male.",
+    "figure": [
+      {
+        "label": "Davanti",
+        "people": [
+          {
+            "pose": "mobilita/braccia-basse-avanti"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -40,
+            "bend": 14
+          }
+        ]
+      },
+      {
+        "label": "Sopra la testa",
+        "people": [
+          {
+            "pose": "mobilita/braccia-alto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -34,
+            "dy": 30,
+            "bend": 12
+          }
+        ]
+      },
+      {
+        "label": "Dietro",
+        "people": [
+          {
+            "pose": "mobilita/braccia-dietro"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "mobilita--allungamento-pettorali-al-muro",
@@ -12005,7 +21383,40 @@ export const exercises: Exercise[] = [
     "description": "Braccio al muro e rotazione del busto in direzione opposta.",
     "equipment": "Muro",
     "dose": "2 × 30 s per lato",
-    "details": "Appoggia l'avambraccio al muro con il gomito all'altezza della spalla, poi ruota lentamente il busto in direzione opposta finché senti allungare il petto. Respira e non forzare la spalla. Contrasta la chiusura del petto dovuta alla guardia, migliorando postura e mobilità per i pugni."
+    "details": "Appoggia l'avambraccio al muro con il gomito all'altezza della spalla, poi ruota lentamente il busto in direzione opposta finché senti allungare il petto. Respira e non forzare la spalla. Contrasta la chiusura del petto dovuta alla guardia, migliorando postura e mobilità per i pugni.",
+    "setup": "In piedi di fianco a un muro. Appoggia alla parete l'avambraccio più vicino, con il gomito all'altezza della spalla e piegato a 90 gradi.",
+    "steps": [
+      "Fai un piccolo passo avanti con il piede dal lato del muro.",
+      "Ruota lentamente il busto dalla parte opposta al muro, tenendo l'avambraccio fermo sulla parete.",
+      "Fermati quando senti allungare il petto e la parte davanti della spalla.",
+      "Spalla bassa e lontana dall'orecchio; respira lentamente e resta.",
+      "Prova anche con il gomito un po' più alto o più basso, poi cambia braccio."
+    ],
+    "errors": [
+      "Ruotare di scatto: così forzi la spalla.",
+      "Gomito molto più alto della spalla con dolore: così pizzichi l'articolazione.",
+      "Spalla che si alza verso l'orecchio: così l'allungamento si perde."
+    ],
+    "why": "Contrasta la chiusura del petto dovuta alla guardia, migliorando postura e mobilità per i pugni. Non forzare la spalla.",
+    "figure": [
+      {
+        "label": "Avambraccio al muro",
+        "people": [
+          {
+            "pose": "mobilita/pettorale-muro",
+            "x": 4
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 50,
+            "w": 8,
+            "h": 118
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "mobilita--allungamento-dorsali-alla-sbarra",
@@ -12015,6 +21426,36 @@ export const exercises: Exercise[] = [
     "equipment": "Sbarra",
     "dose": "3 × 20-30 s",
     "details": "Appenditi alla sbarra con presa alla larghezza delle spalle, piedi staccati o appoggiati per alleggerire, e lascia rilassare spalle e schiena. Respira lentamente. Decomprime la colonna e allunga i dorsali, utile dopo sessioni di clinch e sacco; scendi se senti fastidio alle spalle.",
+    "setup": "Sotto una sbarra, afferrala con presa alla larghezza delle spalle e palmi in avanti. Se la sbarra è alta, sali con un rialzo; se vuoi alleggerire, tieni i piedi appoggiati a terra o su una panca.",
+    "steps": [
+      "Lasciati appendere con le braccia tese, togliendo peso dai piedi quanto basta.",
+      "Rilassa spalle e schiena: lascia che il corpo si allunghi verso il basso.",
+      "Tieni addome leggermente attivo e gambe ferme, senza dondolare.",
+      "Respira lentamente sentendo i fianchi e i dorsali che si allungano.",
+      "Per scendere appoggia prima i piedi e poi lascia la sbarra."
+    ],
+    "errors": [
+      "Lasciarsi cadere di colpo nella posizione: così strattoni le spalle.",
+      "Dondolare con le gambe: così perdi l'allungamento e carichi le mani.",
+      "Restare appeso con dolore alle spalle: così rischi di infiammarle."
+    ],
+    "why": "Decomprime la colonna e allunga i dorsali, utile dopo clinch e sacco. Scendi se senti fastidio alle spalle.",
+    "figure": [
+      {
+        "label": "Appeso e rilassato",
+        "people": [
+          {
+            "pose": "mobilita/appeso",
+            "air": 8
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -12025,6 +21466,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "1 × 10 per direzione",
     "details": "A quattro zampe, appoggia i palmi con le dita in avanti, poi di lato e all'indietro, spostando lentamente il peso avanti e indietro; aggiungi rotazioni a mani unite. Resta sotto la soglia del dolore. Prepara i polsi a pugni e flessioni, riducendo il rischio di traumi al sacco o ai colpitori.",
+    "setup": "A quattro zampe su un tappetino, mani sotto le spalle con i palmi a terra e le dita in avanti, ginocchia sotto le anche.",
+    "steps": [
+      "Sposta lentamente il peso in avanti portando le spalle oltre le mani, poi torna indietro. Le dita restano appoggiate.",
+      "Gira le mani con le dita verso l'esterno e ripeti lo spostamento avanti e indietro.",
+      "Gira le mani con le dita rivolte verso le ginocchia e muoviti con ancora più cautela: il peso va solo un po' indietro.",
+      "Appoggia il dorso delle mani a terra e spostati con delicatezza.",
+      "Alla fine alzati, unisci le mani davanti al petto e fai cerchi con i polsi nei due sensi."
+    ],
+    "errors": [
+      "Caricare subito tutto il peso: così stressi i polsi ancora freddi.",
+      "Gomiti piegati e spalle cadute: così il lavoro non arriva al polso.",
+      "Spingere nel dolore: così peggiori eventuali fastidi."
+    ],
+    "why": "Prepara i polsi a pugni e flessioni, riducendo il rischio di traumi al sacco o ai colpitori. Resta sempre sotto la soglia del dolore.",
+    "figure": [
+      {
+        "label": "Mani a terra",
+        "people": [
+          {
+            "pose": "mobilita/quattro-zampe"
+          }
+        ]
+      },
+      {
+        "label": "Peso avanti",
+        "people": [
+          {
+            "pose": "mobilita/polsi-avanti"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 14,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12035,6 +21515,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 20 s per lato",
     "details": "Braccio teso davanti, palmo verso l'alto: con l'altra mano tira dolcemente le dita verso il basso; poi ripeti con il palmo verso il basso. Respira e mantieni senza strappi. Allunga flessori ed estensori dell'avambraccio, affaticati da guantoni, prese nel clinch e colpi ripetuti.",
+    "setup": "In piedi o seduto. Distendi un braccio davanti a te all'altezza della spalla, gomito teso.",
+    "steps": [
+      "Gira il palmo verso l'alto e con l'altra mano afferra le dita.",
+      "Tira dolcemente le dita verso il basso e verso di te: senti allungare la parte interna dell'avambraccio.",
+      "Resta respirando, senza strappi, con la spalla bassa.",
+      "Ora gira il palmo verso il basso e con l'altra mano porta il dorso della mano verso di te: si allunga la parte esterna.",
+      "Ripeti con l'altro braccio."
+    ],
+    "errors": [
+      "Gomito piegato: così l'allungamento si perde.",
+      "Tirare con forza a strappi: così irriti i tendini del polso.",
+      "Spalla che si alza: così tendi il collo inutilmente."
+    ],
+    "why": "Allunga flessori ed estensori dell'avambraccio, affaticati da guantoni, prese nel clinch e colpi ripetuti.",
+    "figure": [
+      {
+        "label": "Mano che tira le dita",
+        "people": [
+          {
+            "pose": "mobilita/avambraccio",
+            "reach": {
+              "hand2": {
+                "who": 0,
+                "at": "hand",
+                "dx": -2,
+                "dy": 4
+              }
+            }
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12045,6 +21557,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 5 per gamba, tenuta 3 s",
     "details": "Dalla guardia esegui un calcio circolare al rallentatore ruotando sul piede d'appoggio, fermati con la gamba all'altezza del bersaglio per 3 secondi, poi ritorna in guardia. Mani alte e respiro costante. Unisce flessibilità attiva, equilibrio e precisione tecnica; tieniti al muro se serve.",
+    "setup": "In guardia, mani alte e mento basso. Puoi metterti di fianco a un muro e appoggiarci una mano se l'equilibrio è incerto.",
+    "steps": [
+      "Ruota sull'avampiede della gamba anteriore portando il tallone verso l'interno.",
+      "Solleva la gamba posteriore e portala con un arco lentissimo all'altezza del bersaglio (fianco o costole), con le anche che ruotano.",
+      "Fermati con la gamba in alto per 3 secondi: tibia orizzontale, piede d'appoggio girato, mano davanti alta.",
+      "Respira in modo costante mentre tieni, senza piegare il busto in avanti.",
+      "Riporta la gamba indietro lungo lo stesso arco e torna in guardia con controllo. Poi cambia gamba."
+    ],
+    "errors": [
+      "Piede d'appoggio piatto: così le anche non ruotano e forzi il ginocchio.",
+      "Abbassare le mani mentre tieni: così perdi l'abitudine alla guardia nel calcio.",
+      "Lasciar cadere la gamba: così perdi tutto il lavoro di controllo."
+    ],
+    "why": "Unisce flessibilità attiva, equilibrio e precisione tecnica del calcio circolare. Tieniti al muro se serve.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia"
+          }
+        ]
+      },
+      {
+        "label": "Tieni 3 secondi",
+        "people": [
+          {
+            "pose": "calcio-circolare"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12055,6 +21599,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 5 per gamba, tenuta 3 s",
     "details": "Dalla guardia solleva il ginocchio e distendi lentamente la gamba in avanti spingendo con il tallone, tieni l'estensione 3 secondi e ritorna con controllo. Busto leggermente indietro e guardia alta. Rinforza la mobilità attiva di anca e femorali, rendendo il teep più alto e stabile.",
+    "setup": "In guardia, mani alte e mento basso. Si può fare con la gamba anteriore o con quella posteriore.",
+    "steps": [
+      "Solleva lentamente il ginocchio fino all'altezza della cintura, punta del piede in alto, mani in guardia.",
+      "Distendi la gamba in avanti molto piano, spingendo con la pianta e il tallone, come per spingere una porta.",
+      "Porta l'anca in avanti e il busto leggermente indietro, piede d'appoggio piatto.",
+      "Tieni la gamba distesa per 3 secondi, respirando senza bloccare il fiato.",
+      "Ripiega il ginocchio con controllo e riappoggia il piede in guardia."
+    ],
+    "errors": [
+      "Calciare a gamba tesa senza sollevare prima il ginocchio: così non alleni il gesto corretto.",
+      "Busto che va troppo indietro: così perdi equilibrio e la gamba scende.",
+      "Abbassare le mani: così abitui il corpo a una guardia sbagliata."
+    ],
+    "why": "Rinforza la mobilità attiva di anca e femorali, rendendo il teep più alto e stabile.",
+    "figure": [
+      {
+        "label": "Ginocchio alto",
+        "people": [
+          {
+            "pose": "teep-carica"
+          }
+        ]
+      },
+      {
+        "label": "Tieni 3 secondi",
+        "people": [
+          {
+            "pose": "teep-spinta"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 24,
+            "dy": -2
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12065,6 +21648,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 5 per gamba, tenuta 5 s",
     "details": "Porta il ginocchio il più in alto possibile spingendo il bacino in avanti e salendo sulla punta del piede d'appoggio, poi mantieni 5 secondi con le braccia come nel clinch. Torna giù controllando. Migliora la forza dei flessori in massima escursione, fondamentale per ginocchiate potenti.",
+    "setup": "In piedi in guardia, oppure con le braccia avanti come se tenessi la testa di un avversario nel clinch.",
+    "steps": [
+      "Porta il ginocchio della gamba posteriore in alto e in avanti, il più alto possibile, con la punta del piede rivolta verso il basso.",
+      "Allo stesso tempo spingi il bacino in avanti e sali sull'avampiede della gamba d'appoggio.",
+      "Busto dritto o leggermente indietro, braccia avanti come se tirassi giù la testa dell'avversario.",
+      "Tieni la posizione 5 secondi stringendo addome e gluteo della gamba d'appoggio, respirando corto.",
+      "Riporta giù la gamba con controllo e torna in guardia. Alterna le gambe."
+    ],
+    "errors": [
+      "Busto che si piega in avanti verso il ginocchio: così la ginocchiata perde altezza e potenza.",
+      "Tallone d'appoggio a terra: così il bacino non va avanti.",
+      "Lasciar scendere il ginocchio durante i 5 secondi: così non alleni la forza a fine corsa."
+    ],
+    "why": "Rinforza i flessori dell'anca nella massima escursione, fondamentale per ginocchiate potenti nel clinch.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia"
+          }
+        ]
+      },
+      {
+        "label": "Ginocchio alto 5 secondi",
+        "people": [
+          {
+            "pose": "mobilita/ginocchiata-alta"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 6,
+            "dy": -14
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12075,6 +21697,52 @@ export const exercises: Exercise[] = [
     "equipment": "Elastico",
     "dose": "3 × 30 s per gamba",
     "details": "Supino, passa l'elastico sotto la pianta del piede e solleva la gamba tesa tirandola verso il petto, con l'altra gamba distesa a terra. Espira e avvicina gradualmente, senza strappi. Puoi portare la gamba di lato per gli adduttori. Allungamento sicuro per femorali e calci alti.",
+    "setup": "Sdraiato sulla schiena su un tappetino, gambe distese. Passa l'elastico sotto la pianta di un piede e tieni un capo in ciascuna mano.",
+    "steps": [
+      "Solleva la gamba con l'elastico tenendola tesa, punta del piede verso di te. L'altra gamba resta distesa a terra.",
+      "Espirando, tira l'elastico con le braccia e avvicina lentamente la gamba al petto.",
+      "Fermati quando senti tirare dietro la coscia; il bacino e la schiena restano appoggiati a terra.",
+      "Resta respirando e a ogni espirazione avvicina di poco la gamba, senza strappi.",
+      "Puoi poi portare la gamba tesa di lato, verso il pavimento, per allungare gli adduttori. Cambia gamba alla fine."
+    ],
+    "errors": [
+      "Piegare il ginocchio per avvicinare la gamba: così il femorale non si allunga.",
+      "Sollevare il bacino o l'altra gamba da terra: così perdi l'allungamento.",
+      "Tirare a scatti: così rischi lo stiramento."
+    ],
+    "why": "Allungamento sicuro e controllato per femorali e adduttori, utile per calci alti e teep.",
+    "figure": [
+      {
+        "label": "Gamba tesa verso il petto",
+        "people": [
+          {
+            "pose": "mobilita/supino-gamba-su",
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "foot",
+                "dx": 2,
+                "dy": 10
+              },
+              "hand2": {
+                "who": 0,
+                "at": "foot",
+                "dx": 0,
+                "dy": 12
+              }
+            }
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": -14,
+            "dy": 4,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "elastico"
   },
   {
@@ -12084,7 +21752,47 @@ export const exercises: Exercise[] = [
     "description": "Massaggio con il rullo sulla parte anteriore della gamba.",
     "equipment": "Foam roller",
     "dose": "1-2 min per gamba",
-    "details": "In ginocchio, appoggia le tibie sul rullo e fai scorrere lentamente il peso dalla caviglia al ginocchio, soffermandoti sui punti tesi, lavorando sul muscolo tibiale e non sull'osso. Regola la pressione con le mani. Allevia la tensione dovuta a calci e check; evita zone con ematomi o dolore acuto."
+    "details": "In ginocchio, appoggia le tibie sul rullo e fai scorrere lentamente il peso dalla caviglia al ginocchio, soffermandoti sui punti tesi, lavorando sul muscolo tibiale e non sull'osso. Regola la pressione con le mani. Allevia la tensione dovuta a calci e check; evita zone con ematomi o dolore acuto.",
+    "setup": "In ginocchio con le mani a terra sotto le spalle. Appoggia la parte anteriore delle gambe sul rullo, appena sopra le caviglie, con le ginocchia sollevate da terra.",
+    "steps": [
+      "Regola la pressione con le mani: più peso sulle mani, meno peso sulle gambe.",
+      "Fai scorrere lentamente il corpo avanti e indietro, così il rullo va dalla caviglia verso il ginocchio e torna.",
+      "Lavora sul muscolo della tibia, leggermente verso l'esterno, non sull'osso.",
+      "Quando trovi un punto teso fermati qualche secondo e respira, finché la tensione cala.",
+      "Muoviti piano, circa 2-3 cm al secondo."
+    ],
+    "errors": [
+      "Rullare sull'osso della tibia: così fa solo male e non scioglie il muscolo.",
+      "Rullare veloce avanti e indietro: così non dai tempo al tessuto di rilassarsi.",
+      "Passare su ematomi o zone doloranti dopo i colpi: così peggiori il trauma."
+    ],
+    "why": "Allevia la tensione dei muscoli della tibia dovuta a calci e check. Evita zone con ematomi o dolore acuto.",
+    "figure": [
+      {
+        "label": "Tibie sul rullo",
+        "people": [
+          {
+            "pose": "mobilita/tibie-rullo",
+            "x": 10
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 60,
+            "w": 26,
+            "h": 17
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -14,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "mobilita--rullo-su-quadricipiti-e-adduttori",
@@ -12093,7 +21801,47 @@ export const exercises: Exercise[] = [
     "description": "Massaggio miofasciale con il rullo.",
     "equipment": "Foam roller",
     "dose": "1-2 min per zona",
-    "details": "Prono sugli avambracci con il rullo sotto le cosce, scorri lentamente dall'anca al ginocchio; poi apri la gamba di lato per lavorare l'interno coscia. Respira e fermati 20-30 secondi sui punti più tesi. Favorisce il recupero dopo ginocchiate, calci e lavoro di gambe; non rullare sulle articolazioni."
+    "details": "Prono sugli avambracci con il rullo sotto le cosce, scorri lentamente dall'anca al ginocchio; poi apri la gamba di lato per lavorare l'interno coscia. Respira e fermati 20-30 secondi sui punti più tesi. Favorisce il recupero dopo ginocchiate, calci e lavoro di gambe; non rullare sulle articolazioni.",
+    "setup": "A pancia in giù, appoggiato sugli avambracci come in un plank, con il rullo sotto le cosce, appena sopra le ginocchia.",
+    "steps": [
+      "Tieni addome attivo e corpo in linea; il peso è distribuito tra avambracci e cosce.",
+      "Spingi con gli avambracci e fai scorrere il corpo lentamente: il rullo va dal ginocchio verso l'anca e ritorna.",
+      "Quando trovi un punto teso fermati 20-30 secondi e respira profondamente.",
+      "Per l'interno coscia apri una gamba di lato con il ginocchio piegato e appoggia l'interno coscia sul rullo, poi scorri tra ginocchio e inguine.",
+      "Muoviti lentamente e regola la pressione spostando il peso sugli avambracci."
+    ],
+    "errors": [
+      "Rullare sopra il ginocchio o sull'anca: così premi sulle articolazioni invece che sui muscoli.",
+      "Schiena che si inarca e pancia che cade: così carichi la zona lombare.",
+      "Andare veloce: così il muscolo non si rilassa."
+    ],
+    "why": "Favorisce il recupero dopo ginocchiate, calci e lavoro di gambe. Non rullare mai sulle articolazioni.",
+    "figure": [
+      {
+        "label": "Cosce sul rullo",
+        "people": [
+          {
+            "pose": "mobilita/cosce-rullo",
+            "x": 20
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 72,
+            "w": 22,
+            "h": 13
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 16,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "mobilita--rullo-sulla-schiena-alta",
@@ -12102,7 +21850,61 @@ export const exercises: Exercise[] = [
     "description": "Rullo sotto le scapole per mobilità toracica.",
     "equipment": "Foam roller",
     "dose": "1-2 min",
-    "details": "Supino con il rullo sotto le scapole, mani dietro la testa e bacino a terra o sollevato: scorri lentamente lungo la schiena alta ed estendi sopra il rullo a più livelli. Evita la zona lombare. Migliora la mobilità toracica e scioglie la tensione della guardia chiusa e del clinch."
+    "details": "Supino con il rullo sotto le scapole, mani dietro la testa e bacino a terra o sollevato: scorri lentamente lungo la schiena alta ed estendi sopra il rullo a più livelli. Evita la zona lombare. Migliora la mobilità toracica e scioglie la tensione della guardia chiusa e del clinch.",
+    "setup": "Seduto a terra con il rullo dietro di te. Sdraiati appoggiando il rullo sotto le scapole, ginocchia piegate e piedi a terra. Mani dietro la testa a sostenerla, gomiti in avanti.",
+    "steps": [
+      "Solleva leggermente il bacino o lascialo a terra, in base a quanta pressione vuoi.",
+      "Spingi con i piedi e fai scorrere lentamente il rullo dalla base delle scapole fino alla parte alta della schiena.",
+      "Fermati a un livello e lasciati andare indietro sopra il rullo, aprendo il petto, poi torna su. Ripeti a più livelli.",
+      "Tieni il collo rilassato sulle mani e respira profondamente, espirando quando ti estendi.",
+      "Non scendere sotto le costole: la zona lombare va evitata."
+    ],
+    "errors": [
+      "Rullare sulla zona lombare: così stressi le vertebre senza protezione.",
+      "Tirare la testa con le mani: così forzi il collo.",
+      "Inarcare con il bacino invece che con il torace: così il lavoro sfugge alla schiena alta."
+    ],
+    "why": "Migliora la mobilità toracica e scioglie la tensione della guardia chiusa e del clinch.",
+    "figure": [
+      {
+        "label": "Rullo sotto le scapole",
+        "people": [
+          {
+            "pose": "mobilita/schiena-rullo",
+            "x": 20,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "head",
+                "dx": -3,
+                "dy": 4
+              },
+              "hand2": {
+                "who": 0,
+                "at": "head",
+                "dx": -5,
+                "dy": 6
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 50,
+            "w": 16,
+            "h": 11
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 14,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "mobilita--pallina-sotto-il-piede",
@@ -12111,7 +21913,44 @@ export const exercises: Exercise[] = [
     "description": "Massaggio della pianta del piede con una pallina.",
     "equipment": "Pallina",
     "dose": "1 min per piede",
-    "details": "In piedi o seduto, fai rotolare una pallina sotto la pianta del piede dal tallone alle dita, aumentando gradualmente la pressione sui punti tesi. Utile a fine allenamento. Rilassa la fascia plantare, molto sollecitata da saltelli e pivot a piedi nudi, aiutando a prevenire fastidi e infiammazioni."
+    "details": "In piedi o seduto, fai rotolare una pallina sotto la pianta del piede dal tallone alle dita, aumentando gradualmente la pressione sui punti tesi. Utile a fine allenamento. Rilassa la fascia plantare, molto sollecitata da saltelli e pivot a piedi nudi, aiutando a prevenire fastidi e infiammazioni.",
+    "setup": "In piedi accanto a un muro o seduto su una panca, a piedi nudi. Metti una pallina (da tennis o da massaggio) sotto la pianta di un piede.",
+    "steps": [
+      "Appoggia il piede sulla pallina con poco peso all'inizio.",
+      "Fai rotolare lentamente la pallina dal tallone fino alla base delle dita e ritorno.",
+      "Quando trovi un punto teso fermati e aumenta un po' la pressione, respirando.",
+      "Prova anche piccoli cerchi e passaggi lungo l'arco interno ed esterno del piede.",
+      "Finito un piede, passa all'altro."
+    ],
+    "errors": [
+      "Caricare subito tutto il peso: così il massaggio diventa doloroso e il piede si contrae.",
+      "Rullare velocemente: così non sciogli la fascia.",
+      "Insistere su un dolore acuto al tallone: così irriti un'eventuale infiammazione."
+    ],
+    "why": "Rilassa la fascia plantare, molto sollecitata da saltelli e pivot a piedi nudi, e aiuta a prevenire fastidi e infiammazioni.",
+    "figure": [
+      {
+        "label": "Pallina sotto la pianta",
+        "people": [
+          {
+            "pose": "mobilita/piede-pallina"
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "at": "foot"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": -16,
+            "dy": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "mobilita--respirazione-diaframmatica",
@@ -12121,6 +21960,37 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3-5 min",
     "details": "Supino con ginocchia piegate, una mano sul petto e una sulla pancia: inspira dal naso per 4 secondi gonfiando l'addome, poi espira lentamente dalla bocca per 6 secondi. Il petto resta quasi fermo. Abbassa la frequenza cardiaca e favorisce il recupero tra i round e a fine lezione, migliorando il controllo del respiro.",
+    "setup": "Sdraiato sulla schiena su un tappetino, ginocchia piegate e piedi a terra. Una mano sul petto e una sulla pancia, spalle rilassate.",
+    "steps": [
+      "Inspira dal naso per circa 4 secondi gonfiando la pancia: la mano sulla pancia sale, quella sul petto resta quasi ferma.",
+      "Fai una breve pausa senza irrigidirti.",
+      "Espira lentamente dalla bocca per circa 6 secondi, come se soffiassi su una candela senza spegnerla: la pancia scende.",
+      "Rilassa mascella, collo e spalle a ogni espirazione.",
+      "Continua con lo stesso ritmo, lasciando rallentare il battito."
+    ],
+    "errors": [
+      "Respirare alzando il petto e le spalle: così il respiro resta corto e alto.",
+      "Forzare l'inspirazione al massimo: così ti giri la testa.",
+      "Espirare troppo in fretta: così il battito non cala."
+    ],
+    "why": "Abbassa la frequenza cardiaca e favorisce il recupero tra i round e a fine lezione, migliorando il controllo del respiro in combattimento.",
+    "figure": [
+      {
+        "label": "Mani su pancia e petto",
+        "people": [
+          {
+            "pose": "mobilita/respiro"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -12
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12131,6 +22001,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 8 per lato",
     "details": "Prono con le braccia aperte a T, solleva una gamba piegata e portala oltre il corpo verso la mano opposta, ruotando il bacino e mantenendo le spalle a terra. Movimento lento e controllato. Mobilizza colonna, flessori dell'anca e catena anteriore, preparando la rotazione dei calci circolari.",
+    "setup": "Sdraiato a pancia in giù su un tappetino, gambe distese e braccia aperte a T sul pavimento, palmi giù. Fronte o mento appoggiati.",
+    "steps": [
+      "Piega il ginocchio di una gamba e solleva il piede verso il soffitto.",
+      "Ruota il bacino e porta il piede oltre il corpo, verso la mano opposta, lentamente.",
+      "Le spalle e il petto restano il più possibile a terra: l'allungamento si sente su anca, addome e colonna.",
+      "Espira mentre scendi verso l'altro lato, tieni un istante, poi riporta la gamba al centro con controllo.",
+      "Alterna le gambe con un ritmo lento."
+    ],
+    "errors": [
+      "Lanciare la gamba con uno slancio: così torci la schiena senza controllo.",
+      "Staccare le spalle da terra: così la rotazione si perde.",
+      "Cercare a tutti i costi di toccare la mano: così forzi la zona lombare."
+    ],
+    "why": "Mobilizza colonna, flessori dell'anca e catena anteriore, preparando la rotazione dei calci circolari.",
+    "figure": [
+      {
+        "label": "Prono, braccia a T",
+        "people": [
+          {
+            "pose": "mobilita/prono-t"
+          }
+        ]
+      },
+      {
+        "label": "Piede verso la mano opposta",
+        "people": [
+          {
+            "pose": "mobilita/scorpione"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 20,
+            "dy": 10,
+            "bend": -10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12141,6 +22051,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 30 s per lato",
     "details": "In piedi con i piedi larghi, alza un braccio sopra la testa e inclinati lateralmente dalla vita, senza ruotare il busto né spingere il bacino in avanti. Respira nel fianco allungato. Allunga obliqui e dorsali, migliorando la mobilità laterale utile per schivate e gomitate.",
+    "setup": "In piedi con i piedi più larghi delle spalle, ginocchia morbide. Un braccio lungo il fianco, l'altro alzato teso sopra la testa.",
+    "steps": [
+      "Allunga il braccio in alto come se volessi toccare il soffitto.",
+      "Inclinati lateralmente dalla vita verso il lato opposto al braccio alzato, portando la mano in alto e oltre la testa.",
+      "Resta sul piano laterale: non ruotare il busto e non spingere il bacino in avanti.",
+      "Respira nel fianco allungato: a ogni inspirazione senti le costole aprirsi.",
+      "Risali lentamente e cambia lato."
+    ],
+    "errors": [
+      "Ruotare il busto in avanti: così l'allungamento si sposta e si perde.",
+      "Spingere il bacino in fuori di lato: così carichi la zona lombare.",
+      "Piegare il braccio alzato: così i dorsali non si allungano."
+    ],
+    "why": "Allunga obliqui e dorsali, migliorando la mobilità laterale utile per schivate e gomitate.",
+    "figure": [
+      {
+        "label": "Inclinazione (di fronte)",
+        "people": [
+          {
+            "pose": "mobilita/inclinazione-laterale"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 14,
+            "dy": 10,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12151,6 +22093,71 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "1 giro, 5-8 min",
     "details": "Parti dalle caviglie e risali a ginocchia, anche, colonna, spalle, polsi e collo, dedicando circa 30 secondi a ciascuna articolazione con movimenti ampi e controllati. Respira in modo regolare. È la base del riscaldamento: prepara tutto il corpo ai colpi e riduce il rischio di infortuni.",
+    "setup": "In piedi, piedi alla larghezza delle anche, con spazio intorno per muovere braccia e gambe. È un giro completo del corpo dal basso verso l'alto, circa 30 secondi per articolazione.",
+    "steps": [
+      "Caviglie: cerchi con la punta del piede nei due sensi, un piede alla volta.",
+      "Ginocchia: piedi uniti, mani sulle ginocchia, piccoli cerchi con le ginocchia leggermente piegate.",
+      "Anche: ginocchio alto e cerchi verso l'esterno e verso l'interno, poi cerchi del bacino con le mani sui fianchi.",
+      "Colonna: rotazioni del busto a destra e sinistra e inclinazioni laterali, braccia rilassate.",
+      "Spalle e polsi: cerchi ampi con le braccia avanti e indietro, poi rotazioni dei polsi a mani unite.",
+      "Collo: rotazioni lente nei due sensi, senza forzare la parte posteriore. Respira in modo regolare per tutto il ciclo."
+    ],
+    "errors": [
+      "Saltare articolazioni per fare prima: così parti dal sacco con zone ancora fredde.",
+      "Movimenti veloci e a strappi: così irriti le articolazioni invece di scaldarle.",
+      "Trattenere il fiato: così i muscoli restano rigidi."
+    ],
+    "why": "È la base del riscaldamento: prepara tutto il corpo ai colpi e riduce il rischio di infortuni.",
+    "figure": [
+      {
+        "label": "Caviglie",
+        "people": [
+          {
+            "pose": "mobilita/caviglia-cerchi"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 0,
+            "dy": -12,
+            "bend": -14
+          }
+        ]
+      },
+      {
+        "label": "Anche",
+        "people": [
+          {
+            "pose": "mobilita/ginocchio-alto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": -6,
+            "dy": 22,
+            "bend": -26
+          }
+        ]
+      },
+      {
+        "label": "Spalle",
+        "people": [
+          {
+            "pose": "mobilita/braccia-alto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -36,
+            "dy": 30,
+            "bend": 12
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12161,6 +22168,44 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 10 m",
     "details": "Camminando, solleva un ginocchio e abbraccialo tirandolo al petto, salendo sulla punta del piede d'appoggio con il busto eretto; rilascia e alterna. Mantieni un ritmo lento. Allunga glutei e zona lombare migliorando equilibrio e flessione d'anca, utile per ginocchiate e teep.",
+    "setup": "In piedi con spazio davanti per camminare, busto eretto e braccia rilassate.",
+    "steps": [
+      "Fai un passo e solleva il ginocchio della gamba dietro verso il petto.",
+      "Abbraccia la gamba sotto il ginocchio con entrambe le mani e tirala dolcemente al petto.",
+      "Nello stesso momento sali sulla punta del piede d'appoggio, con il busto dritto e lo sguardo avanti.",
+      "Tieni un secondo, poi lascia la gamba, appoggia il piede avanti e fai il passo.",
+      "Alterna le gambe a ogni passo con un ritmo lento."
+    ],
+    "errors": [
+      "Piegare la schiena per andare incontro al ginocchio: così l'anca non si allunga.",
+      "Tallone d'appoggio a terra: così perdi la parte di equilibrio.",
+      "Camminare troppo veloce: così non arrivi a fine corsa."
+    ],
+    "why": "Allunga glutei e zona lombare e migliora equilibrio e flessione d'anca, utili per ginocchiate e teep.",
+    "figure": [
+      {
+        "label": "Ginocchio al petto",
+        "people": [
+          {
+            "pose": "mobilita/ginocchio-al-petto",
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dx": 2,
+                "dy": 8
+              },
+              "hand2": {
+                "who": 0,
+                "at": "knee",
+                "dx": -2,
+                "dy": 12
+              }
+            }
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12171,6 +22216,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 10 m",
     "details": "Camminando, slancia la gamba tesa in avanti cercando di toccare con il piede la mano opposta tesa davanti, con la schiena dritta. Aumenta l'altezza poco alla volta. Allungamento dinamico dei femorali, ideale nel riscaldamento prima di teep e calci alti; non forzare se senti tirare troppo.",
+    "setup": "In piedi con spazio davanti per camminare, busto eretto. Distendi un braccio davanti a te all'altezza della spalla, palmo in giù.",
+    "steps": [
+      "Fai un passo con la gamba dello stesso lato del braccio teso.",
+      "Slancia l'altra gamba tesa in avanti e in alto, cercando di toccare la mano con la punta del piede.",
+      "La schiena resta dritta: è la gamba che sale verso la mano, non il busto che scende verso la gamba.",
+      "Riporta giù la gamba con controllo, appoggia il piede avanti e cambia braccio.",
+      "Parti con slanci bassi e aumenta l'altezza poco alla volta."
+    ],
+    "errors": [
+      "Piegare il busto in avanti per arrivare alla mano: così l'allungamento perde senso.",
+      "Piegare il ginocchio della gamba che sale: così i femorali non si allungano.",
+      "Slanciare al massimo da subito: così rischi uno stiramento."
+    ],
+    "why": "Allungamento dinamico dei femorali, ideale nel riscaldamento prima di teep e calci alti. Non forzare se tira troppo.",
+    "figure": [
+      {
+        "label": "Piede verso la mano",
+        "people": [
+          {
+            "pose": "mobilita/calcio-teso"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": -26,
+            "dy": 40,
+            "bend": -14
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12181,6 +22258,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "2 × 5 per lato",
     "details": "In equilibrio su una gamba con il busto inclinato in avanti e la gamba libera distesa dietro, ruota il bacino aprendolo verso l'esterno e poi richiudilo, mantenendo il ginocchio d'appoggio stabile. Tieniti a un supporto all'inizio. Rinforza equilibrio e controllo d'anca, decisivi in calci e clinch.",
+    "setup": "In piedi su una gamba, ginocchio d'appoggio appena piegato. Inclina il busto in avanti dalle anche e distendi l'altra gamba dietro, fino a formare una T. All'inizio tieni una mano su un appoggio.",
+    "steps": [
+      "Controlla che bacino e spalle siano paralleli al pavimento e che il ginocchio d'appoggio punti in avanti.",
+      "Ruota lentamente il bacino verso l'esterno, aprendo il fianco della gamba libera verso il soffitto.",
+      "Torna al centro e continua chiudendo il bacino verso la gamba d'appoggio.",
+      "Il movimento parte dall'anca d'appoggio: il ginocchio resta stabile e il piede ben piantato.",
+      "Muoviti lento, circa 3 secondi per lato, respirando con calma. Poi cambia gamba."
+    ],
+    "errors": [
+      "Ginocchio d'appoggio che cade verso l'interno: così lo stressi e l'anca non lavora.",
+      "Ruotare solo le spalle: così il bacino resta fermo.",
+      "Andare veloce: così perdi equilibrio e controllo."
+    ],
+    "why": "Rinforza equilibrio e controllo dell'anca su una gamba, decisivi nei calci e nel clinch.",
+    "figure": [
+      {
+        "label": "T su una gamba",
+        "people": [
+          {
+            "pose": "mobilita/aeroplano"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -18,
+            "bend": -14
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12225,6 +22334,37 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s per lato, recupero 15 s",
     "details": "Gomito sotto la spalla, piedi sovrapposti, spingi l'anca verso l'alto fino ad allineare spalla, bacino e caviglia. Rinforza obliqui e quadrato dei lombi, i muscoli che proteggono i fianchi da ganci e calci al corpo. Non lasciare ruotare il busto in avanti né cedere con l'anca.",
+    "setup": "Sdraiati su un fianco con le gambe tese e i piedi uno sopra l'altro. Appoggia l'avambraccio a terra con il gomito esattamente sotto la spalla e l'avambraccio rivolto in avanti; la mano libera va sul fianco o tesa verso il soffitto.",
+    "steps": [
+      "Spingi l'avambraccio contro il pavimento e solleva l'anca da terra: restano appoggiati solo avambraccio e bordo esterno del piede di sotto.",
+      "Porta l'anca in alto finché spalla, bacino e caviglia sono sulla stessa linea dritta, vista sia di fronte sia di lato.",
+      "Tieni il busto girato di lato, petto aperto: non lasciare che la spalla di sopra cada in avanti verso il pavimento.",
+      "Stringi glutei e addome e allontana la spalla d'appoggio dall'orecchio, così non ti 'appendi' alla spalla.",
+      "Respira corto e regolare per tutto il tempo, poi appoggia l'anca e cambia lato."
+    ],
+    "errors": [
+      "Anca che scende verso terra: lavora la spalla invece dei fianchi.",
+      "Busto che ruota in avanti a pancia in giù: gli obliqui si scaricano e l'esercizio perde senso.",
+      "Gomito avanti rispetto alla spalla: carichi troppo l'articolazione della spalla."
+    ],
+    "why": "Rinforza obliqui e quadrato dei lombi, i muscoli del fianco che incassano ganci e calci al corpo e tengono il busto stabile quando calci.",
+    "figure": [
+      {
+        "label": "Anca alta",
+        "people": [
+          {
+            "pose": "core/plank-laterale"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -18
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12235,6 +22375,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 10 per lato",
     "details": "Dal plank laterale porta il braccio libero sotto il busto ruotando le spalle, poi riaprilo verso il soffitto seguendo la mano con lo sguardo. Allena la rotazione controllata del tronco, alla base di ganci e gomitate. Mantieni l'anca alta e ferma durante tutto il movimento.",
+    "setup": "Mettiti in plank laterale sull'avambraccio: gomito sotto la spalla, piedi sovrapposti (o sfalsati per più equilibrio), anca alta in linea con spalle e caviglie. Il braccio libero è teso verso il soffitto.",
+    "steps": [
+      "Segui la mano in alto con lo sguardo: petto aperto e corpo dritto come una tavola.",
+      "Espirando, porta il braccio libero verso il basso e infilalo sotto il busto, verso il pavimento dietro di te, ruotando le spalle verso terra.",
+      "Durante la rotazione l'anca resta alta e ferma: girano solo spalle e torace, il bacino non scende.",
+      "Inspirando, riapri il braccio e riportalo teso verso il soffitto, ruotando il petto di nuovo in fuori.",
+      "Muoviti lento e controllato, circa 2 secondi per andare e 2 per tornare; finite le ripetizioni cambia lato."
+    ],
+    "errors": [
+      "Anca che cede quando il braccio passa sotto: l'esercizio diventa un movimento di sole braccia.",
+      "Andare veloce di slancio: perdi il controllo della rotazione che è lo scopo dell'esercizio.",
+      "Spalla d'appoggio schiacciata verso l'orecchio: affatichi la spalla invece del tronco."
+    ],
+    "why": "Allena la rotazione controllata del tronco con il fianco sotto carico, la stessa catena che fa girare il busto in ganci e gomitate.",
+    "figure": [
+      {
+        "label": "Braccio in alto",
+        "people": [
+          {
+            "pose": "core/plank-laterale"
+          }
+        ]
+      },
+      {
+        "label": "Braccio sotto il busto",
+        "people": [
+          {
+            "pose": "core/plank-laterale-sotto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand2",
+            "dx": -14,
+            "dy": 8,
+            "bend": 8
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12245,6 +22425,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 20 tocchi alternati",
     "details": "In plank sulle mani con piedi leggermente larghi, stacca una mano e tocca la spalla opposta lentamente, alternando. L'obiettivo è che il bacino resti immobile: allena la resistenza alla rotazione utile in clinch e quando si colpisce. Se il bacino oscilla, allarga i piedi.",
+    "setup": "Mettiti in plank sulle mani: mani a terra sotto le spalle, braccia tese, corpo dritto dalla testa ai talloni. Apri i piedi un po' più larghi delle anche per avere una base stabile.",
+    "steps": [
+      "Stringi glutei e addome e sposta leggermente il peso sulla mano che resta a terra, senza far ruotare il bacino.",
+      "Stacca una mano e vai a toccare la spalla opposta, lentamente, in circa un secondo.",
+      "Riappoggia la mano sotto la spalla e solo allora stacca l'altra per toccare la spalla opposta.",
+      "Alterna i lati con ritmo calmo: immagina un bicchiere d'acqua appoggiato sulla parte bassa della schiena che non deve rovesciarsi.",
+      "Respira con regolarità; se il bacino oscilla, allarga ancora un po' i piedi o rallenta."
+    ],
+    "errors": [
+      "Bacino che dondola a destra e sinistra a ogni tocco: non stai resistendo alla rotazione.",
+      "Sedere alto a piramide: riduci il lavoro del core.",
+      "Toccare di fretta battendo la mano: il controllo sparisce e l'esercizio non serve."
+    ],
+    "why": "Insegna al tronco a non farsi girare mentre un braccio si muove: è la stabilità che serve in clinch e quando si colpisce.",
+    "figure": [
+      {
+        "label": "Plank sulle mani",
+        "people": [
+          {
+            "pose": "core/plank-mani"
+          }
+        ]
+      },
+      {
+        "label": "Mano alla spalla",
+        "people": [
+          {
+            "pose": "core/plank-mani",
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "shoulder",
+                "dx": -3,
+                "dy": 4
+              }
+            }
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12255,6 +22475,30 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s, recupero 20 s",
     "details": "Schiena bassa schiacciata a terra, braccia tese oltre la testa e gambe tese sollevate di pochi centimetri, mento verso il petto. Crea la tensione addominale globale che serve ad assorbire i colpi al corpo. Se la lombare si stacca dal suolo, piega le ginocchia o alza le gambe.",
+    "setup": "Sdraiati sulla schiena con le gambe tese e unite e le braccia tese oltre la testa. Prima di partire schiaccia la parte bassa della schiena contro il pavimento.",
+    "steps": [
+      "Porta il mento leggermente verso il petto e stacca da terra spalle e scapole, con le braccia tese accanto alle orecchie.",
+      "Solleva le gambe tese e unite di 15-30 cm da terra, punte dei piedi allungate.",
+      "Il corpo prende la forma di una banana: tocca terra solo la zona lombare e il bacino.",
+      "Mantieni la posizione stringendo l'addome come per ricevere un colpo, respirando corto senza mollare.",
+      "Se senti la lombare staccarsi, piega un po' le ginocchia o alza di più le gambe finché torna aderente."
+    ],
+    "errors": [
+      "Lombare che si inarca e si stacca da terra: il carico va sulla schiena invece che sugli addominali.",
+      "Testa che ricade a terra o collo tirato in avanti con forza: il collo si affatica.",
+      "Trattenere il fiato: la tensione dura poco e ti alzi rosso in faccia."
+    ],
+    "why": "Crea la tensione addominale globale, dalla testa ai piedi, che serve per assorbire i colpi al corpo e trasmettere forza nei colpi.",
+    "figure": [
+      {
+        "label": "Forma a banana",
+        "people": [
+          {
+            "pose": "core/hollow"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12265,6 +22509,54 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 20 dondolii",
     "details": "Dalla posizione hollow dondola avanti e indietro come una barca senza mai perdere la forma a banana del corpo. Allena la capacità di mantenere il core rigido in movimento, come durante gli scambi. La lombare resta sempre a contatto: se si inarca, fermati e riprendi la posizione.",
+    "setup": "Mettiti in posizione hollow: sdraiato sulla schiena, lombare schiacciata a terra, spalle e gambe tese sollevate, braccia tese oltre la testa, corpo a forma di banana.",
+    "steps": [
+      "Blocca la forma: addome contratto, gambe unite, braccia vicine alle orecchie. Da qui in poi il corpo non deve più piegarsi.",
+      "Dondola indietro: il peso va verso le scapole e le gambe salgono un po'.",
+      "Dondola in avanti: il peso va verso il bacino e salgono le spalle.",
+      "Continua avanti e indietro con ritmo regolare, come una barca a dondolo, usando la tensione del corpo e non lo slancio di braccia e gambe.",
+      "Respira corto a ogni dondolo; se la forma si rompe fermati, ritrova la posizione hollow e riparti."
+    ],
+    "errors": [
+      "Piegare anche e ginocchia per darsi lo slancio: il corpo smette di essere un blocco unico.",
+      "Lombare che si inarca nel dondolo in avanti: la schiena si carica.",
+      "Dondolo troppo ampio e veloce: perdi la forma a banana."
+    ],
+    "why": "Allena il core a restare rigido mentre il corpo si muove, come negli scambi e quando si incassa un colpo in movimento.",
+    "figure": [
+      {
+        "label": "Dondolo indietro",
+        "people": [
+          {
+            "pose": "core/hollow-indietro"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 18,
+            "dy": 0,
+            "bend": -6
+          }
+        ]
+      },
+      {
+        "label": "Dondolo avanti",
+        "people": [
+          {
+            "pose": "core/hollow-avanti"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -18,
+            "dy": 0,
+            "bend": 6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12275,6 +22567,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 20 ripetizioni",
     "details": "Supino con ginocchia piegate, solleva le scapole da terra arrotolando il busto ed espira con forza in salita; scendi lento. Rinforza il retto dell'addome, prima barriera contro teep e ginocchiate. Non tirare la testa con le mani: lo sguardo resta verso il soffitto.",
+    "setup": "Sdraiati sulla schiena con le ginocchia piegate e i piedi appoggiati a terra alla larghezza delle anche. Mani dietro le orecchie, senza intrecciare le dita, oppure incrociate sul petto.",
+    "steps": [
+      "Prima di salire schiaccia la lombare verso il pavimento e contrai l'addome.",
+      "Espirando con forza, arrotola il busto e stacca da terra testa e scapole: la parte bassa della schiena resta appoggiata.",
+      "Sguardo verso il soffitto, spazio di un pugno tra mento e petto; le mani accompagnano la testa senza tirarla.",
+      "In alto fermati un attimo stringendo bene l'addome.",
+      "Scendi lentamente inspirando, in circa 2 secondi, fino ad appoggiare le scapole, e riparti."
+    ],
+    "errors": [
+      "Tirare la testa con le mani: il collo si affatica e l'addome lavora poco.",
+      "Salire di slancio e lasciarsi cadere giù: perdi metà del lavoro.",
+      "Staccare anche la lombare: diventa un sit-up e lavorano i flessori dell'anca."
+    ],
+    "why": "Rinforza il retto dell'addome, la prima barriera che incassa teep, pugni al corpo e ginocchiate.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "core/supino-mani-testa"
+          }
+        ]
+      },
+      {
+        "label": "Scapole su",
+        "people": [
+          {
+            "pose": "core/crunch-su"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": 10,
+            "dy": -12,
+            "bend": -5
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12285,6 +22617,50 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 20 ripetizioni",
     "details": "Piedi bloccati da un compagno o sotto un supporto, mani in guardia vicino al viso; sali fino a sedere e torna giù controllando la discesa. È il classico lavoro di fine sessione dei campi thai: abitua l'addome a lavorare a lungo mantenendo la guardia. Espira salendo, non strappare con il collo.",
+    "setup": "Sdraiati sulla schiena con le ginocchia piegate e i piedi bloccati: tenuti da un compagno inginocchiato davanti a te o infilati sotto un supporto stabile. Mani in guardia vicino al viso, gomiti stretti.",
+    "steps": [
+      "Contrai l'addome ed espirando sali fino a sederti, arrotolando la schiena dalla testa verso il bacino.",
+      "Le mani restano in guardia per tutto il movimento: non usarle per darti lo slancio.",
+      "In alto il busto arriva quasi verticale, petto verso le ginocchia, mento basso.",
+      "Torna giù lentamente inspirando, appoggiando una vertebra alla volta, fino a toccare terra con le scapole.",
+      "Il compagno tiene i piedi premuti a terra con le mani, senza tirare.",
+      "Tieni un ritmo costante e regolare: è un lavoro lungo, non uno sprint."
+    ],
+    "errors": [
+      "Abbassare le mani o slanciare le braccia per salire: perdi l'abitudine a tenere la guardia.",
+      "Strappare con il collo: male al collo e addome poco coinvolto.",
+      "Lasciarsi cadere all'indietro: si sbatte la schiena e si perde metà del lavoro."
+    ],
+    "why": "È il classico lavoro di fine sessione dei campi thailandesi: abitua l'addome a lavorare a lungo mantenendo la guardia alta.",
+    "figure": [
+      {
+        "label": "Giù in guardia",
+        "people": [
+          {
+            "pose": "core/supino-guardia",
+            "x": -30
+          }
+        ]
+      },
+      {
+        "label": "Seduto, mani alte",
+        "people": [
+          {
+            "pose": "core/seduto-guardia",
+            "x": -36,
+            "gloves": true
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": 14,
+            "dy": 10,
+            "bend": 8
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12295,6 +22671,48 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 15 ripetizioni",
     "details": "Sali con il sit-up e in cima tira un jab-diretto veloce espirando su ogni colpo, poi torna giù controllando. Collega la contrazione addominale alla tecnica di pugno, abituandoti a colpire con il tronco attivo. I pugni devono essere tecnici, con rotazione delle spalle, non spinte molli.",
+    "setup": "Sdraiati sulla schiena con le ginocchia piegate e i piedi a terra (bloccati da un compagno o sotto un supporto se servono). Mani in guardia vicino al viso.",
+    "steps": [
+      "Espirando, sali con il sit-up fino a sederti, mani sempre in guardia.",
+      "In cima tira un jab con il braccio sinistro: braccio teso in avanti all'altezza del viso, pugno ruotato, poi richiamalo subito in guardia.",
+      "Subito dopo tira il diretto con il braccio destro ruotando la spalla in avanti, espirando con un 'tss' su ogni colpo.",
+      "Riporta entrambe le mani in guardia e scendi controllando la discesa, in circa 2 secondi.",
+      "Tocca terra con le scapole e riparti: il ritmo è sit-up, jab-diretto, discesa."
+    ],
+    "errors": [
+      "Pugni molli spinti solo con il braccio: perdi il collegamento tra addome e colpo.",
+      "Abbassare la mano che non colpisce: in combattimento sei scoperto.",
+      "Lasciarsi cadere giù dopo i pugni: la schiena batte e l'addome non lavora in discesa."
+    ],
+    "why": "Collega la contrazione dell'addome alla tecnica di pugno, abituandoti a colpire con il tronco attivo e a respirare su ogni colpo.",
+    "figure": [
+      {
+        "label": "Giù in guardia",
+        "people": [
+          {
+            "pose": "core/supino-guardia",
+            "x": -30
+          }
+        ]
+      },
+      {
+        "label": "Su e diretto",
+        "people": [
+          {
+            "pose": "core/seduto-jab",
+            "x": -36,
+            "gloves": true
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 18,
+            "dy": 0
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12305,6 +22723,69 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "3 × 12 ripetizioni",
     "details": "Seduto di fronte al compagno, ricevi la palla sopra la testa scendendo e risali lanciandola con petto e addome. Sviluppa forza esplosiva del tronco e coordinazione con le braccia. Controlla la discesa per non battere la schiena e scegli una palla da 3–5 kg.",
+    "setup": "Seduto con ginocchia piegate e piedi a terra; il compagno è in piedi davanti ai tuoi piedi a 1-2 metri con una palla medica da 3-5 kg. Porta le braccia in alto pronte a ricevere.",
+    "steps": [
+      "Il compagno ti passa la palla verso le mani sopra la testa: afferrala con le braccia quasi tese.",
+      "Accompagna la palla scendendo all'indietro con la schiena arrotolata, controllando la discesa fino a toccare terra con le scapole e la palla oltre la testa.",
+      "Senza fermarti, contrai l'addome e risali con forza portando le braccia in avanti.",
+      "Quando il busto arriva in alto lancia la palla al compagno con petto e addome, espirando con forza.",
+      "Il compagno la riceve e te la ripassa sopra la testa per la ripetizione successiva."
+    ],
+    "errors": [
+      "Lanciare solo con le braccia restando giù: l'addome non partecipa.",
+      "Scendere di colpo: la schiena e la testa sbattono a terra.",
+      "Palla troppo pesante: il gesto diventa lento e perdi l'esplosività."
+    ],
+    "why": "Sviluppa la forza esplosiva del tronco e il collegamento tra addome e braccia, utile per pugni potenti e per reggere i colpi.",
+    "figure": [
+      {
+        "label": "Ricezione e discesa",
+        "people": [
+          {
+            "pose": "core/supino-palla-alto",
+            "x": -36
+          },
+          {
+            "pose": "core/in-piedi-braccia-alte",
+            "flip": true,
+            "partner": true,
+            "x": 58
+          }
+        ],
+        "props": [
+          {
+            "type": "medball"
+          }
+        ]
+      },
+      {
+        "label": "Risalita e lancio",
+        "people": [
+          {
+            "pose": "core/seduto-lancio",
+            "x": -36
+          },
+          {
+            "pose": "core/in-piedi-braccia-alte",
+            "flip": true,
+            "partner": true,
+            "x": 58
+          }
+        ],
+        "props": [
+          {
+            "type": "medball"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 24,
+            "dy": -6
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -12315,6 +22796,43 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "3 × 20 rotazioni (10 per lato)",
     "details": "Seduto con busto inclinato indietro e piedi sollevati, ruota le spalle portando la palla accanto al fianco, alternando i lati. Rinforza gli obliqui, fondamentali per la rotazione di ganci e calci circolari. Ruota con il busto, non solo con le braccia, e mantieni la schiena dritta.",
+    "setup": "Seduto a terra con le ginocchia piegate, tieni la palla medica con due mani davanti al petto. Inclina il busto indietro di circa 45° con la schiena dritta e solleva i piedi da terra.",
+    "steps": [
+      "Trova l'equilibrio sui glutei: petto aperto, spalle basse, addome contratto.",
+      "Ruota le spalle e il busto verso destra e porta la palla vicino al fianco destro, senza toccare per forza terra.",
+      "Torna al centro e ruota verso sinistra portando la palla accanto al fianco sinistro.",
+      "Lo sguardo segue la palla: è il busto che gira, non solo le braccia.",
+      "Mantieni un ritmo regolare ed espira a ogni rotazione; se perdi l'equilibrio appoggia i talloni."
+    ],
+    "errors": [
+      "Muovere solo le braccia da un lato all'altro: gli obliqui lavorano poco.",
+      "Schiena curva e spalle chiuse: carichi la parte bassa della schiena.",
+      "Gambe che dondolano per compensare: perdi il controllo del tronco."
+    ],
+    "why": "Rinforza gli obliqui, il motore della rotazione che dà potenza a ganci e calci circolari.",
+    "figure": [
+      {
+        "label": "Rotazione col busto",
+        "people": [
+          {
+            "pose": "core/russian-twist"
+          }
+        ],
+        "props": [
+          {
+            "type": "medball"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -16,
+            "dy": 10,
+            "bend": -8
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -12325,6 +22843,39 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s, recupero 20 s",
     "details": "Nella posizione del russian twist, a ogni rotazione tira un gancio in aria girando spalle e busto insieme. Unisce il lavoro degli obliqui alla meccanica del gancio. Mantieni la guardia con la mano libera e la schiena lunga, senza ingobbirti.",
+    "setup": "Seduto a terra con le ginocchia piegate, busto inclinato indietro di circa 45° con la schiena lunga e piedi sollevati (o talloni appoggiati se sei all'inizio). Mani in guardia davanti al viso.",
+    "steps": [
+      "Trova l'equilibrio sui glutei con l'addome contratto e le spalle basse.",
+      "Ruota spalle e busto verso destra tirando un gancio in aria con il braccio sinistro: gomito all'altezza del pugno, braccio piegato a circa 90°.",
+      "Torna al centro con la mano in guardia e ruota verso sinistra tirando il gancio con il braccio destro.",
+      "Il colpo nasce dalla rotazione del busto: spalla e pugno girano insieme, come in piedi.",
+      "La mano che non colpisce resta sempre attaccata alla guancia; espira con un 'tss' su ogni gancio e tieni un ritmo costante."
+    ],
+    "errors": [
+      "Ganci di solo braccio con il busto fermo: alleni la spalla, non gli obliqui.",
+      "Schiena curva e spalle chiuse: carichi la lombare e perdi equilibrio.",
+      "Mano libera che si abbassa: perdi l'abitudine a tenere la guardia."
+    ],
+    "why": "Unisce il lavoro degli obliqui alla meccanica del gancio, abituandoti a far partire il colpo dalla rotazione del tronco.",
+    "figure": [
+      {
+        "label": "Gancio ruotando",
+        "people": [
+          {
+            "pose": "core/russian-pugno",
+            "gloves": true
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -4,
+            "dy": 14,
+            "bend": -10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12335,6 +22886,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 ripetizioni (15 per lato)",
     "details": "Supino con mani dietro la testa, porta il gomito verso il ginocchio opposto mentre l'altra gamba si distende, alternando lentamente. Lavora obliqui e retto insieme, migliorando il controllo rotatorio del tronco. Il movimento parte dalla rotazione del busto: non tirare il collo.",
+    "setup": "Sdraiati sulla schiena con la lombare appoggiata a terra. Mani dietro le orecchie senza intrecciare le dita, gomiti aperti. Solleva spalle e piedi da terra con le ginocchia piegate a 90°.",
+    "steps": [
+      "Porta il ginocchio destro verso il petto e allo stesso tempo distendi la gamba sinistra in avanti, sollevata da terra.",
+      "Ruota il busto e porta il gomito sinistro verso il ginocchio destro: è la spalla che gira, non il gomito che si chiude.",
+      "Cambia lato con calma: il ginocchio sinistro sale, la gamba destra si distende e il gomito destro va verso il ginocchio sinistro.",
+      "Vai lento e controllato, come se pedalassi in salita; espira a ogni rotazione.",
+      "La lombare resta aderente a terra e le spalle non toccano mai il pavimento durante la serie."
+    ],
+    "errors": [
+      "Tirare il collo con le mani per arrivare al ginocchio: il collo si affatica.",
+      "Pedalare veloce senza ruotare il busto: lavorano solo le gambe.",
+      "Gamba tesa troppo bassa con la lombare che si inarca: la schiena si carica."
+    ],
+    "why": "Lavora retto e obliqui insieme e migliora il controllo della rotazione del tronco, alla base di ganci, gomitate e calci.",
+    "figure": [
+      {
+        "label": "Gomito al ginocchio",
+        "people": [
+          {
+            "pose": "core/bicicletta"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": -10,
+            "dy": -6,
+            "bend": 6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12345,6 +22928,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 15 ripetizioni",
     "details": "Supino con mani sotto i glutei, solleva le gambe tese fino alla verticale e riabbassale lentamente senza toccare terra. Rinforza la parte bassa dell'addome e i flessori dell'anca, utili per ginocchiate e teep. Tieni la lombare aderente al suolo; se si inarca, riduci l'escursione.",
+    "setup": "Sdraiati sulla schiena con le gambe tese e unite. Metti le mani sotto i glutei, palmi verso il basso, per sostenere il bacino; la testa resta appoggiata.",
+    "steps": [
+      "Schiaccia la lombare a terra e contrai l'addome prima di muovere le gambe.",
+      "Espirando, solleva le gambe tese e unite fino alla verticale, in circa 2 secondi.",
+      "In alto fermati un attimo senza lasciar cadere le gambe verso la testa.",
+      "Inspirando, riabbassa le gambe lentamente, in 3 secondi, fino a pochi centimetri da terra senza appoggiarle.",
+      "Riparti da lì: i piedi non toccano terra fino alla fine della serie."
+    ],
+    "errors": [
+      "Lombare che si inarca quando le gambe scendono: il carico finisce sulla schiena; riduci l'escursione.",
+      "Lasciar cadere le gambe veloci: perdi la parte più utile, la discesa controllata.",
+      "Piegare le ginocchia per aiutarti: l'esercizio diventa più facile senza accorgertene."
+    ],
+    "why": "Rinforza la parte bassa dell'addome e i flessori dell'anca, i muscoli che sollevano il ginocchio in ginocchiate e teep.",
+    "figure": [
+      {
+        "label": "Gambe basse",
+        "people": [
+          {
+            "pose": "core/supino-gambe-basse"
+          }
+        ]
+      },
+      {
+        "label": "Gambe in verticale",
+        "people": [
+          {
+            "pose": "core/supino-gambe-su"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": -14,
+            "dy": -6,
+            "bend": 10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12355,6 +22978,58 @@ export const exercises: Exercise[] = [
     "equipment": "Sbarra",
     "dose": "3 × 10 ripetizioni",
     "details": "Appeso con presa salda e spalle attive, porta le ginocchia al petto (o i piedi in alto) arrotolando il bacino, poi scendi controllato. Sviluppa forza addominale e di presa, con un movimento simile alla ginocchiata in clinch. Evita di dondolare usando lo slancio.",
+    "setup": "Appenditi alla sbarra con presa salda, mani alla larghezza delle spalle, braccia tese. Spalle attive: tira leggermente le scapole verso il basso invece di restare appeso 'molle'. Gambe unite e ferme.",
+    "steps": [
+      "Prima di salire contrai l'addome e blocca il corpo per non dondolare.",
+      "Espirando, porta le ginocchia verso il petto arrotolando il bacino in alto, non solo sollevando le cosce.",
+      "In alto fermati un istante con le ginocchia all'altezza del petto (o più su se ci riesci).",
+      "Scendi lentamente fino a gambe distese, in circa 2 secondi, senza lasciar partire l'oscillazione.",
+      "Versione avanzata: stesso movimento con le gambe tese, portando i piedi all'altezza delle anche o più in alto."
+    ],
+    "errors": [
+      "Dondolare e usare lo slancio: lavora l'inerzia, non l'addome.",
+      "Alzare solo le cosce senza arrotolare il bacino: lavorano i flessori dell'anca, poco l'addome.",
+      "Spalle passive appese alle orecchie: le spalle si affaticano e la presa cede prima."
+    ],
+    "why": "Sviluppa forza addominale e di presa con un movimento simile alla ginocchiata in clinch, quando porti il ginocchio in alto con il bacino.",
+    "figure": [
+      {
+        "label": "Appeso",
+        "people": [
+          {
+            "pose": "core/appeso",
+            "air": 22
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ]
+      },
+      {
+        "label": "Ginocchia al petto",
+        "people": [
+          {
+            "pose": "core/appeso-ginocchia",
+            "air": 22
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 4,
+            "dy": -16,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -12365,6 +23040,58 @@ export const exercises: Exercise[] = [
     "equipment": "Sbarra",
     "dose": "4 × 6–8 ripetizioni",
     "details": "Appeso alla sbarra, contrai addome e dorsali e porta le punte dei piedi a toccare la sbarra, scendendo lentamente. Esercizio avanzato che sviluppa grande forza di flessione del tronco e controllo del corpo. Limita il kipping e progredisci dalle ginocchia al petto se necessario.",
+    "setup": "Appenditi alla sbarra con presa salda alla larghezza delle spalle, braccia tese e spalle attive (scapole tirate verso il basso). Gambe unite e tese, corpo fermo.",
+    "steps": [
+      "Contrai addome e dorsali spingendo leggermente la sbarra verso il basso con le braccia tese.",
+      "Espirando, solleva le gambe tese arrotolando il bacino: il busto si inclina un po' indietro.",
+      "Continua finché le punte dei piedi toccano la sbarra tra le mani.",
+      "Scendi lentamente con le gambe tese fino alla posizione di partenza, frenando l'oscillazione.",
+      "Se non arrivi alla sbarra, porta le ginocchia al petto e alza progressivamente i piedi nelle settimane."
+    ],
+    "errors": [
+      "Usare un grande slancio (kipping) per arrivare: l'addome lavora poco e la spalla si stressa.",
+      "Piegare le ginocchia all'ultimo per toccare: accorci l'esercizio senza accorgertene.",
+      "Lasciarsi cadere giù: perdi la fase di discesa e inizi a dondolare."
+    ],
+    "why": "Esercizio avanzato che costruisce grande forza di flessione del tronco e controllo del corpo, utile in clinch e in tutte le azioni di ginocchio.",
+    "figure": [
+      {
+        "label": "Appeso",
+        "people": [
+          {
+            "pose": "core/appeso",
+            "air": 22
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ]
+      },
+      {
+        "label": "Piedi alla sbarra",
+        "people": [
+          {
+            "pose": "core/toes-to-bar",
+            "air": 40
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": -8,
+            "dy": -14,
+            "bend": 6
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -12375,6 +23102,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 10 per lato",
     "details": "Supino con braccia verso il soffitto e ginocchia a 90°, distendi braccio e gamba opposti espirando e torna al centro. Insegna a mantenere il core stabile mentre gli arti si muovono, come quando si calcia e si para. La lombare deve restare incollata a terra per tutto l'esercizio.",
+    "setup": "Sdraiati sulla schiena con le braccia tese verso il soffitto, sopra le spalle. Solleva le gambe con anche e ginocchia piegate a 90°: cosce verticali, tibie parallele al pavimento.",
+    "steps": [
+      "Schiaccia la lombare contro il pavimento e contrai l'addome: questa aderenza non deve cambiare mai.",
+      "Espirando lentamente, distendi il braccio destro all'indietro oltre la testa e la gamba sinistra in avanti, fino a pochi centimetri da terra.",
+      "Fermati un istante con braccio e gamba allungati senza toccare il pavimento.",
+      "Inspirando, riporta braccio e gamba al centro nella posizione di partenza.",
+      "Ripeti con braccio sinistro e gamba destra, alternando con ritmo lento."
+    ],
+    "errors": [
+      "Lombare che si stacca da terra mentre gli arti si allungano: perdi la stabilità che stai allenando.",
+      "Muovere braccio e gamba dello stesso lato: il lavoro di coordinazione si perde.",
+      "Andare veloce: diventa un esercizio di gambe e non di controllo."
+    ],
+    "why": "Insegna a tenere il core stabile mentre braccia e gambe si muovono, come quando calci e intanto pari con le mani.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "core/dead-bug"
+          }
+        ]
+      },
+      {
+        "label": "Braccio e gamba opposti",
+        "people": [
+          {
+            "pose": "core/dead-bug-esteso"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot2",
+            "dx": 12,
+            "dy": 4,
+            "bend": -4
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12385,6 +23152,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 10 per lato, tenuta 2 s",
     "details": "A quattro zampe, mani sotto le spalle e ginocchia sotto le anche, estendi braccio e gamba opposti fino all'allineamento e tieni 2 secondi. Migliora stabilità lombare ed equilibrio, utili nei calci in appoggio su una gamba. Non ruotare il bacino e non inarcare la schiena.",
+    "setup": "A quattro zampe: mani a terra sotto le spalle, ginocchia sotto le anche, dorso dei piedi appoggiato. Schiena piatta come un tavolo e sguardo a terra.",
+    "steps": [
+      "Contrai l'addome come per prepararti a un colpo, senza cambiare la curva della schiena.",
+      "Espirando, distendi in avanti il braccio destro e indietro la gamba sinistra, fino a portarli in linea con il busto.",
+      "Tieni 2 secondi: bacino parallelo al pavimento, braccio e gamba allungati come se qualcuno li tirasse in direzioni opposte.",
+      "Inspirando, riporta mano e ginocchio a terra sotto spalla e anca.",
+      "Ripeti con braccio sinistro e gamba destra, alternando lentamente."
+    ],
+    "errors": [
+      "Bacino che ruota e gamba che sale verso l'esterno: il core non sta stabilizzando.",
+      "Gamba portata troppo in alto con la schiena inarcata: carichi la lombare.",
+      "Fare in fretta senza tenere la posizione: l'equilibrio non viene allenato."
+    ],
+    "why": "Migliora stabilità della zona lombare ed equilibrio, utili quando stai in appoggio su una gamba per calciare o per parare.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "core/quadrupedia"
+          }
+        ]
+      },
+      {
+        "label": "Braccio e gamba tesi",
+        "people": [
+          {
+            "pose": "core/bird-dog"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12395,6 +23194,45 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 12 ripetizioni",
     "details": "Supino con braccia oltre la testa, solleva insieme busto e gambe tese cercando di toccare i piedi con le mani, poi scendi lento. Sviluppa forza e potenza dell'intera catena addominale. Espira salendo e controlla la discesa; se la lombare soffre, piega le ginocchia.",
+    "setup": "Sdraiati sulla schiena con le gambe tese e unite e le braccia tese oltre la testa, appoggiate a terra. Lombare schiacciata verso il pavimento.",
+    "steps": [
+      "Contrai l'addome e stacca leggermente braccia e gambe da terra per partire in tensione.",
+      "Espirando con forza, solleva insieme busto e gambe tese, portando le mani verso i piedi.",
+      "In alto il corpo forma una V e sei in equilibrio sui glutei: cerca di toccare le tibie o le punte dei piedi.",
+      "Scendi lentamente e insieme con busto e gambe, in circa 2 secondi, fino a sfiorare il pavimento.",
+      "Se la lombare soffre o non riesci a salire, piega le ginocchia durante la salita."
+    ],
+    "errors": [
+      "Salire con lo slancio delle braccia: l'addome lavora solo all'inizio.",
+      "Busto e gambe che non salgono insieme: il movimento diventa un crunch o un sollevamento gambe.",
+      "Lasciarsi ricadere giù: la schiena sbatte e perdi la parte eccentrica."
+    ],
+    "why": "Sviluppa forza e potenza di tutta la catena addominale, che lavora sempre insieme quando colpisci e quando incassi.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "core/supino-braccia-dietro"
+          }
+        ]
+      },
+      {
+        "label": "Chiusura a V",
+        "people": [
+          {
+            "pose": "core/v-up"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 10,
+            "dy": -6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12404,7 +23242,56 @@ export const exercises: Exercise[] = [
     "description": "Ruota per addominali, rotolata in avanti e ritorno.",
     "equipment": "Ab wheel",
     "dose": "3 × 8–10 ripetizioni",
-    "details": "In ginocchio con la ruota sotto le spalle, rotola in avanti allungando il corpo con addome e glutei contratti e torna indietro tirando con il core. Costruisce una forte resistenza all'estensione, utile per reggere colpi e spinte. Fermati prima che la lombare si inarchi: l'escursione cresce col tempo."
+    "details": "In ginocchio con la ruota sotto le spalle, rotola in avanti allungando il corpo con addome e glutei contratti e torna indietro tirando con il core. Costruisce una forte resistenza all'estensione, utile per reggere colpi e spinte. Fermati prima che la lombare si inarchi: l'escursione cresce col tempo.",
+    "setup": "In ginocchio su un tappetino, con la ruota a terra sotto le spalle e le mani sulle impugnature, braccia tese. Anche sopra le ginocchia.",
+    "steps": [
+      "Contrai addome e glutei e porta il bacino leggermente in dentro, come per chiudere la pancia.",
+      "Fai rotolare la ruota in avanti lentamente: le anche scendono in avanti insieme alle spalle e il corpo si allunga.",
+      "Vai avanti solo finché riesci a tenere la schiena dritta, senza che la pancia cada verso il pavimento.",
+      "Tirando con l'addome, non con le braccia, riporta la ruota verso le ginocchia fino alla posizione di partenza.",
+      "Respira: inspira mentre vai avanti, espira con forza mentre torni."
+    ],
+    "errors": [
+      "Lombare che si inarca nell'allungamento: la schiena prende tutto il carico.",
+      "Tornare indietro spingendo il sedere in alto: lavorano le spalle e le anche, non l'addome.",
+      "Allungarsi troppo presto oltre le proprie capacità: rischio di cadere di faccia o di farsi male alla schiena."
+    ],
+    "why": "Costruisce una forte resistenza all'estensione del tronco, utile per reggere colpi e spinte senza 'aprirsi'. L'escursione cresce col tempo: non forzarla.",
+    "figure": [
+      {
+        "label": "In ginocchio",
+        "people": [
+          {
+            "pose": "core/ab-wheel-partenza"
+          }
+        ],
+        "props": [
+          {
+            "type": "plate"
+          }
+        ]
+      },
+      {
+        "label": "Allungamento",
+        "people": [
+          {
+            "pose": "core/ab-wheel-esteso"
+          }
+        ],
+        "props": [
+          {
+            "type": "plate"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 20,
+            "dy": -2
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "core--pallof-press",
@@ -12414,6 +23301,61 @@ export const exercises: Exercise[] = [
     "equipment": "Elastico",
     "dose": "3 × 10 per lato, tenuta 2 s",
     "details": "In piedi di fianco all'ancoraggio, elastico al petto, spingi le mani in avanti e tieni senza lasciare che il busto ruoti verso il punto di attacco. Allena l'anti-rotazione, cioè la capacità di restare stabile quando un colpo o una spinta cerca di girarti. Piedi in larghezza spalle, glutei attivi.",
+    "setup": "Elastico fissato all'altezza del petto. Mettiti in piedi di fianco all'ancoraggio, a una distanza in cui l'elastico è già teso. Piedi alla larghezza delle spalle, ginocchia leggermente piegate, mani che tengono l'elastico unite al centro del petto.",
+    "steps": [
+      "Contrai addome e glutei: l'elastico cerca di girarti verso l'ancoraggio e tu non glielo permetti.",
+      "Espirando, spingi le mani dritte in avanti fino ad avere le braccia tese davanti allo sterno.",
+      "Tieni 2-3 secondi a braccia tese: le mani restano al centro, non scivolano verso il punto di attacco.",
+      "Riporta lentamente le mani al petto e ripeti.",
+      "Finita la serie girati e lavora con l'altro fianco verso l'ancoraggio."
+    ],
+    "errors": [
+      "Busto e anche che ruotano verso l'elastico: perdi proprio il lavoro di anti-rotazione.",
+      "Elastico troppo debole o troppo vicino: non senti nessuna resistenza.",
+      "Spalle che salgono e schiena inarcata: lavora la parte alta del corpo, non il core."
+    ],
+    "why": "Allena l'anti-rotazione, cioè la capacità di restare stabile quando un colpo o una spinta in clinch cercano di farti girare.",
+    "figure": [
+      {
+        "label": "Mani al petto",
+        "people": [
+          {
+            "pose": "core/pallof-petto"
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 8,
+            "y": 44
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 24,
+            "dy": 0
+          }
+        ]
+      },
+      {
+        "label": "Spinta e tenuta",
+        "people": [
+          {
+            "pose": "core/pallof-spinta"
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 8,
+            "y": 44
+          }
+        ]
+      }
+    ],
     "tool": "elastico"
   },
   {
@@ -12423,7 +23365,65 @@ export const exercises: Exercise[] = [
     "description": "Rotazione diagonale dall'alto al basso al cavo.",
     "equipment": "Cavo",
     "dose": "3 × 10 per lato",
-    "details": "Cavo in alto, presa con due mani, tira in diagonale verso l'anca opposta ruotando busto e piede posteriore come in un colpo. Sviluppa potenza rotazionale trasferibile a gomitate e ganci discendenti. Il movimento parte da gambe e anche: non tirare solo con le braccia."
+    "details": "Cavo in alto, presa con due mani, tira in diagonale verso l'anca opposta ruotando busto e piede posteriore come in un colpo. Sviluppa potenza rotazionale trasferibile a gomitate e ganci discendenti. Il movimento parte da gambe e anche: non tirare solo con le braccia.",
+    "setup": "Cavo fissato in alto, sopra la spalla. Mettiti di fianco alla macchina a un passo di distanza, piedi più larghi delle spalle e ginocchia leggermente piegate. Afferra la maniglia con due mani sopra la spalla più vicina al cavo, braccia quasi tese.",
+    "steps": [
+      "Parti con busto e spalle girati verso il cavo, peso sul piede vicino alla macchina.",
+      "Spingi con le gambe e ruota le anche verso il lato opposto: il movimento comincia dal basso, come in un colpo.",
+      "Tira la maniglia in diagonale, dall'alto verso l'esterno dell'anca opposta, con le braccia quasi tese che seguono il busto.",
+      "Mentre tiri, ruota il piede posteriore sull'avampiede e scarica il peso sulla gamba lontana dal cavo.",
+      "Espira con forza nella tirata, poi torna su lentamente controllando il cavo e ripeti; finite le ripetizioni cambia lato."
+    ],
+    "errors": [
+      "Tirare solo con le braccia a busto fermo: perdi il lavoro rotatorio del tronco.",
+      "Piedi piantati senza ruotare: la torsione scarica tutta sulla lombare.",
+      "Lasciar tornare il cavo di colpo: perdi il controllo e la parte eccentrica."
+    ],
+    "why": "Sviluppa potenza rotazionale dalle gambe al busto, la stessa catena di gomitate discendenti e ganci.",
+    "figure": [
+      {
+        "label": "Mani in alto",
+        "people": [
+          {
+            "pose": "core/woodchop-alto",
+            "x": 8
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 8,
+            "y": 6
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 60,
+            "dy": 60,
+            "bend": -14
+          }
+        ]
+      },
+      {
+        "label": "Tirata in basso",
+        "people": [
+          {
+            "pose": "core/woodchop-basso",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 8,
+            "y": 6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "core--woodchop-inverso",
@@ -12432,7 +23432,65 @@ export const exercises: Exercise[] = [
     "description": "Rotazione diagonale dal basso verso l'alto.",
     "equipment": "Cavo",
     "dose": "3 × 10 per lato",
-    "details": "Cavo in basso, tira dall'esterno del ginocchio verso l'alto in diagonale oltre la spalla opposta, ruotando anche e piede. Riproduce la catena del montante e della gomitata ascendente. Mantieni le braccia quasi tese e la schiena lunga, senza piegarti in avanti."
+    "details": "Cavo in basso, tira dall'esterno del ginocchio verso l'alto in diagonale oltre la spalla opposta, ruotando anche e piede. Riproduce la catena del montante e della gomitata ascendente. Mantieni le braccia quasi tese e la schiena lunga, senza piegarti in avanti.",
+    "setup": "Cavo fissato in basso, vicino al pavimento. Mettiti di fianco alla macchina, piedi più larghi delle spalle, piega le ginocchia e afferra la maniglia con due mani all'esterno del ginocchio più vicino al cavo.",
+    "steps": [
+      "Parti accosciato a metà, busto girato verso il cavo e schiena lunga, peso sul piede vicino alla macchina.",
+      "Spingi con le gambe e ruota le anche verso il lato opposto: il movimento nasce dal basso.",
+      "Porta le mani in diagonale verso l'alto, oltre la spalla opposta, con le braccia quasi tese.",
+      "Alla fine sei quasi in piedi, girato dall'altra parte, con il piede posteriore ruotato sull'avampiede come in un montante.",
+      "Espira con forza in salita, poi torna giù lentamente frenando il cavo; finite le ripetizioni cambia lato."
+    ],
+    "errors": [
+      "Piegarsi in avanti con la schiena curva per prendere la maniglia: la lombare si carica.",
+      "Sollevare con le braccia piegate: diventa un esercizio di spalle.",
+      "Non ruotare il piede posteriore: le anche si bloccano e la torsione va sulla schiena."
+    ],
+    "why": "Riproduce la catena del montante e della gomitata ascendente: forza che parte dalle gambe e sale ruotando attraverso il tronco.",
+    "figure": [
+      {
+        "label": "Mani in basso",
+        "people": [
+          {
+            "pose": "core/woodchop-inv-basso",
+            "x": 8
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 8,
+            "y": 134
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 55,
+            "dy": -60,
+            "bend": 14
+          }
+        ]
+      },
+      {
+        "label": "Diagonale in alto",
+        "people": [
+          {
+            "pose": "core/woodchop-inv-alto",
+            "x": 0
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 8,
+            "y": 134
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "core--palla-medica-sull-addome",
@@ -12442,6 +23500,52 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "3 × 10 cadute, recupero 30 s",
     "details": "Supino con addome contratto, il compagno lascia cadere la palla dall'altezza del petto; espira con forza al momento dell'impatto. Condiziona l'addome a ricevere colpi, come tradizione nelle palestre thai. Inizia da altezze basse e palla leggera, evitando lo sterno e le costole basse.",
+    "setup": "Sdraiati sulla schiena con le ginocchia piegate e i piedi a terra, mani accanto al viso o lungo i fianchi. Il compagno è in piedi accanto al tuo bacino e tiene una palla medica leggera con due mani all'altezza del suo petto, sopra la tua pancia.",
+    "steps": [
+      "Prima di ogni lancio il compagno dice 'via' o fa un segnale: tu inspira dal naso.",
+      "Contrai l'addome come un muro: pancia dura, lombare appoggiata, mento leggermente verso il petto.",
+      "Il compagno lascia cadere la palla, senza spingerla, sulla parte centrale dell'addome, sopra l'ombelico.",
+      "Al momento dell'impatto espira con forza dalla bocca ('tss') senza mollare la contrazione.",
+      "Il compagno riprende la palla e aspetta che tu sia di nuovo pronto prima del lancio successivo.",
+      "Si parte da altezze basse e palla leggera; si sale di altezza o di peso solo quando l'impatto è ben tollerato."
+    ],
+    "errors": [
+      "Addome rilassato al momento dell'impatto: il colpo arriva sugli organi e fa male.",
+      "Trattenere il fiato invece di espirare: dopo pochi impatti resti senza aria.",
+      "Palla che cade sullo sterno o sulle costole basse: rischio di farsi male."
+    ],
+    "why": "Condiziona l'addome a ricevere i colpi, come si fa da sempre nelle palestre thailandesi. Il compagno deve mirare solo alla pancia, mai a sterno e costole.",
+    "figure": [
+      {
+        "label": "Impatto, espira",
+        "people": [
+          {
+            "pose": "core/supino-ginocchia",
+            "x": -12
+          },
+          {
+            "pose": "core/lascia-palla",
+            "flip": true,
+            "partner": true,
+            "x": 30
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "who": 1
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "who": 1,
+            "dx": 0,
+            "dy": 26
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -12452,6 +23556,47 @@ export const exercises: Exercise[] = [
     "equipment": "Compagno",
     "dose": "3 × 30 s, recupero 30 s",
     "details": "In piedi in guardia con addome contratto, il compagno colpisce con pugni leggeri e controllati; espira a ogni colpo ricevuto. Abitua a incassare al corpo mantenendo la respirazione e la posizione. L'intensità resta sempre bassa e progressiva: niente colpi al fegato o al plesso a piena forza.",
+    "setup": "In piedi in guardia, uno di fronte all'altro a distanza di pugno. Chi riceve tiene le mani alte, i gomiti stretti e l'addome contratto; chi colpisce indossa i guantoni.",
+    "steps": [
+      "Chi riceve inspira dal naso e contrae addome e obliqui, abbassando leggermente il mento e chiudendo un po' le spalle.",
+      "Il compagno tira pugni leggeri e controllati alla parte centrale dell'addome, uno alla volta, con ritmo regolare.",
+      "A ogni colpo chi riceve espira con forza dalla bocca ('tss') nel momento esatto dell'impatto.",
+      "Chi riceve resta in posizione: non arretra, non abbassa le mani, non si piega.",
+      "Si inizia molto piano e si aumenta l'intensità solo di poco e solo se chi riceve è d'accordo; poi si cambiano i ruoli."
+    ],
+    "errors": [
+      "Espirare in ritardo o trattenere il fiato: il colpo 'entra' e toglie il respiro.",
+      "Abbassare i gomiti per proteggersi: in combattimento lasci scoperto il viso.",
+      "Compagno che colpisce forte o al fegato e al plesso solare: si rischia di farsi male sul serio."
+    ],
+    "why": "Abitua a incassare al corpo mantenendo respirazione e posizione. L'intensità resta sempre bassa e progressiva: niente colpi a piena forza su fegato o plesso solare.",
+    "figure": [
+      {
+        "label": "Colpo leggero, espira",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": -34,
+            "gloves": true
+          },
+          {
+            "pose": "core/pugno-corpo",
+            "flip": true,
+            "partner": true,
+            "gloves": true,
+            "x": 34,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "hip",
+                "dx": 6,
+                "dy": -12
+              }
+            }
+          }
+        ]
+      }
+    ],
     "tool": "compagno"
   },
   {
@@ -12462,6 +23607,39 @@ export const exercises: Exercise[] = [
     "equipment": "Compagno",
     "dose": "3 × 10 colpi ricevuti",
     "details": "In piedi o in plank con addome bloccato, il compagno appoggia teep leggeri e progressivi sulla pancia; espira a ogni contatto. Insegna a reggere la spinta del teep senza perdere equilibrio. Il compagno deve controllare il colpo con la pianta del piede, mai con la punta.",
+    "setup": "Chi riceve sta in piedi in guardia (o in plank sugli avambracci nella versione più facile), con l'addome contratto. Il compagno si mette davanti a distanza di teep.",
+    "steps": [
+      "Chi riceve inspira e contrae l'addome, con le mani alte, il mento basso e il peso ben distribuito sulle gambe.",
+      "Il compagno solleva il ginocchio e appoggia il teep sulla pancia con la pianta del piede, spingendo piano.",
+      "Al contatto chi riceve espira con forza ('tss') e resta fermo, senza arretrare né piegarsi.",
+      "Il compagno ritira la gamba e riparte con il teep successivo dopo un attimo di pausa.",
+      "La spinta aumenta poco alla volta solo se chi riceve resta stabile; poi si cambiano i ruoli."
+    ],
+    "errors": [
+      "Compagno che colpisce con la punta del piede: il colpo entra in profondità e può far male.",
+      "Chi riceve si piega in avanti o arretra: perde equilibrio e posizione.",
+      "Addome rilassato o respiro trattenuto al contatto."
+    ],
+    "why": "Insegna a reggere la spinta del teep senza perdere equilibrio, così puoi restare a distanza utile per rispondere. Il compagno controlla sempre il colpo con la pianta del piede.",
+    "figure": [
+      {
+        "label": "Teep controllato",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": -36,
+            "gloves": true
+          },
+          {
+            "pose": "teep-spinta",
+            "flip": true,
+            "partner": true,
+            "gloves": true,
+            "x": 34
+          }
+        ]
+      }
+    ],
     "tool": "compagno"
   },
   {
@@ -12472,6 +23650,52 @@ export const exercises: Exercise[] = [
     "equipment": "Compagno",
     "dose": "3 × 8 contatti controllati",
     "details": "Supino o in piedi con addome contratto, il compagno porta il ginocchio sulla pancia con pressione dosata; espira e resta rigido. Prepara a sopportare le ginocchiate del clinch. Massimo controllo: si parte da semplici appoggi del ginocchio e si aumenta solo gradualmente.",
+    "setup": "Chi riceve sta in piedi in guardia con l'addome contratto, oppure sdraiato sulla schiena con le ginocchia piegate. Il compagno si mette in posizione di clinch o accanto a lui, pronto a portare il ginocchio.",
+    "steps": [
+      "Chi riceve inspira e contrae l'addome, gomiti stretti e mani alte (da sdraiato: lombare a terra e mento verso il petto).",
+      "Il compagno porta il ginocchio sulla pancia con un appoggio lento e una pressione dosata, senza colpire.",
+      "Al contatto chi riceve espira con forza e resta rigido come un muro.",
+      "Il compagno toglie il ginocchio e aspetta un attimo prima del successivo.",
+      "Si aumenta la pressione solo poco alla volta e solo se chi riceve è d'accordo; poi si cambiano i ruoli."
+    ],
+    "errors": [
+      "Ginocchiate vere e veloci fin dall'inizio: il rischio di farsi male è alto.",
+      "Ginocchio che arriva sulle costole basse o sullo sterno invece che sulla pancia.",
+      "Chi riceve si piega in avanti o trattiene il respiro."
+    ],
+    "why": "Prepara a sopportare le ginocchiate del clinch. Serve il massimo controllo: si parte da semplici appoggi del ginocchio e si aumenta solo gradualmente.",
+    "figure": [
+      {
+        "label": "Ginocchio appoggiato",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": -28,
+            "gloves": true
+          },
+          {
+            "pose": "core/ginocchiata",
+            "flip": true,
+            "partner": true,
+            "x": 26,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "head",
+                "dx": -6,
+                "dy": -2
+              },
+              "hand2": {
+                "who": 0,
+                "at": "head",
+                "dx": -8,
+                "dy": 3
+              }
+            }
+          }
+        ]
+      }
+    ],
     "tool": "compagno"
   },
   {
@@ -12482,6 +23706,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 12 per lato",
     "details": "In plank sulle mani, porta il ginocchio verso il gomito opposto ruotando leggermente il bacino, poi riporta la gamba indietro. Rinforza obliqui e flessori dell'anca con un gesto simile alla ginocchiata diagonale. Le spalle restano sopra le mani e i fianchi non salgono troppo.",
+    "setup": "Mettiti in plank sulle mani: mani sotto le spalle, braccia tese, corpo dritto dalla testa ai talloni, piedi alla larghezza delle anche.",
+    "steps": [
+      "Contrai addome e glutei e fissa le spalle sopra le mani.",
+      "Stacca il piede destro e porta il ginocchio in diagonale verso il gomito sinistro, ruotando leggermente il bacino.",
+      "Fermati un attimo con il ginocchio vicino al gomito ed espira con forza.",
+      "Riporta la gamba indietro e appoggia il piede nella posizione di partenza, corpo di nuovo dritto.",
+      "Ripeti con il ginocchio sinistro verso il gomito destro, alternando con ritmo controllato."
+    ],
+    "errors": [
+      "Spalle che vanno indietro rispetto alle mani: perdi l'appoggio stabile e il core lavora meno.",
+      "Sedere che sale molto in alto a ogni ginocchio: l'esercizio diventa facile.",
+      "Fare il movimento di fretta, senza ruotare il bacino: perdi il lavoro degli obliqui."
+    ],
+    "why": "Rinforza obliqui e flessori dell'anca con un gesto simile alla ginocchiata diagonale, mentre il tronco resta stabile sulle braccia.",
+    "figure": [
+      {
+        "label": "Plank sulle mani",
+        "people": [
+          {
+            "pose": "core/plank-mani"
+          }
+        ]
+      },
+      {
+        "label": "Ginocchio al gomito",
+        "people": [
+          {
+            "pose": "core/plank-ginocchio"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 14,
+            "dy": -4,
+            "bend": -4
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12492,6 +23756,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 10 ripetizioni",
     "details": "Dal plank sugli avambracci sali sulle mani una alla volta e poi torna giù, alternando il braccio che parte per primo. Allena la stabilità del tronco sotto carichi che cambiano, rinforzando anche spalle e tricipiti. Allarga leggermente i piedi e tieni il bacino fermo, senza ondeggiare.",
+    "setup": "Mettiti in plank sugli avambracci: gomiti sotto le spalle, corpo dritto dalla testa ai talloni. Apri i piedi un po' più larghi delle anche per stabilizzare il bacino.",
+    "steps": [
+      "Metti la mano destra a terra sotto la spalla destra e spingi fino a distendere il braccio.",
+      "Metti la mano sinistra sotto la spalla sinistra e distendi anche quel braccio: ora sei in plank sulle mani.",
+      "Torna giù appoggiando prima l'avambraccio destro e poi il sinistro.",
+      "Alla ripetizione successiva parti con l'altro braccio, così i lati lavorano in modo uguale.",
+      "Muoviti con ritmo calmo, respirando, e tieni il bacino fermo come se avessi un bicchiere sulla schiena."
+    ],
+    "errors": [
+      "Bacino che ondeggia di lato a ogni cambio: il core non sta lavorando.",
+      "Sedere alto per rendere tutto più facile: perdi la linea dritta del corpo.",
+      "Mani troppo avanti rispetto alle spalle: carichi i polsi e le spalle."
+    ],
+    "why": "Allena la stabilità del tronco sotto carichi che cambiano, rinforzando anche spalle e tricipiti che reggono la guardia e i colpi.",
+    "figure": [
+      {
+        "label": "Avambracci",
+        "people": [
+          {
+            "pose": "plank"
+          }
+        ]
+      },
+      {
+        "label": "Mani",
+        "people": [
+          {
+            "pose": "core/plank-mani"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12501,7 +23797,40 @@ export const exercises: Exercise[] = [
     "description": "Plank laterale con la gamba superiore su una panca.",
     "equipment": "Panca",
     "dose": "3 × 20 s per lato",
-    "details": "Plank laterale sull'avambraccio con la gamba superiore appoggiata sulla panca (ginocchio o caviglia) e quella inferiore sollevata. Rinforza adduttori e obliqui, proteggendo l'inguine nei calci e nelle prese. Principianti: appoggio al ginocchio e tempi brevi."
+    "details": "Plank laterale sull'avambraccio con la gamba superiore appoggiata sulla panca (ginocchio o caviglia) e quella inferiore sollevata. Rinforza adduttori e obliqui, proteggendo l'inguine nei calci e nelle prese. Principianti: appoggio al ginocchio e tempi brevi.",
+    "setup": "Sdraiati su un fianco accanto a una panca. Appoggia l'avambraccio a terra con il gomito sotto la spalla e metti la gamba di sopra sulla panca: il ginocchio per la versione facile, la caviglia per quella difficile.",
+    "steps": [
+      "Spingi la gamba di sopra contro la panca e solleva l'anca da terra.",
+      "Porta il corpo in linea dritta da spalla a piede: anca alta, busto girato di lato.",
+      "Solleva la gamba di sotto e avvicinala alla panca, sotto quella appoggiata.",
+      "Tieni la posizione stringendo l'interno coscia della gamba sulla panca, respirando con regolarità.",
+      "Finito il tempo appoggia l'anca a terra e cambia lato."
+    ],
+    "errors": [
+      "Anca che scende verso terra: il carico va sulla spalla e sull'inguine senza controllo.",
+      "Busto che ruota in avanti: perdi il lavoro di fianco e adduttori.",
+      "Partire con la caviglia sulla panca quando non sei pronto: rischio di stirare l'inguine."
+    ],
+    "why": "Rinforza adduttori e obliqui, proteggendo l'inguine nei calci, nei cambi di guardia e nelle prese. Chi è all'inizio usa l'appoggio al ginocchio e tempi brevi.",
+    "figure": [
+      {
+        "label": "Gamba sulla panca",
+        "people": [
+          {
+            "pose": "core/copenhagen",
+            "x": 36
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 32,
+            "w": 36,
+            "h": 25
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "core--suitcase-carry",
@@ -12511,6 +23840,36 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "3 × 30 m per lato",
     "details": "Kettlebell pesante in una mano, cammina a passo normale con spalle livellate e busto perfettamente verticale. Allena gli obliqui a resistere all'inclinazione laterale, utile in clinch quando l'avversario tira da un lato. Non piegarti verso il carico e non alzare la spalla.",
+    "setup": "Kettlebell pesante a terra accanto al piede. Piegando le ginocchia con la schiena dritta, prendila con una mano e alzati: braccio teso lungo il fianco, l'altra mano libera.",
+    "steps": [
+      "In piedi dritto, spalle alla stessa altezza e busto perfettamente verticale: il peso non deve tirarti di lato.",
+      "Contrai l'addome e il fianco opposto al peso, come per resistere a qualcuno che ti spinge.",
+      "Cammina a passo normale e regolare, guardando avanti, per la distanza o il tempo indicati.",
+      "La spalla del lato del peso resta bassa e indietro, senza alzarsi verso l'orecchio.",
+      "Appoggia la kettlebell piegando le ginocchia, cambia mano e ripeti il percorso."
+    ],
+    "errors": [
+      "Piegarsi verso il carico: gli obliqui non lavorano e la schiena si storce.",
+      "Spalla che sale verso l'orecchio: si affatica il trapezio invece del fianco.",
+      "Camminare in fretta con passi irregolari: il peso dondola e il controllo si perde."
+    ],
+    "why": "Allena gli obliqui a resistere all'inclinazione laterale, come in clinch quando l'avversario ti tira da un lato.",
+    "figure": [
+      {
+        "label": "Busto verticale",
+        "people": [
+          {
+            "pose": "core/carry"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -12521,6 +23880,37 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s, recupero 20 s",
     "details": "A quattro zampe con mani sotto le spalle e ginocchia sotto le anche, sollevale di qualche centimetro e tieni con schiena piatta. Attiva il core profondo insieme a spalle e quadricipiti in una posizione simile all'uscita da terra. Respira con calma senza perdere la tensione addominale.",
+    "setup": "A quattro zampe: mani a terra sotto le spalle, ginocchia sotto le anche, piedi appoggiati sulle punte. Schiena piatta e sguardo a terra poco davanti alle mani.",
+    "steps": [
+      "Contrai l'addome e spingi il pavimento con le mani, come per allontanarlo.",
+      "Solleva le ginocchia di 3-5 cm da terra senza muovere nient'altro: anche e spalle restano alla stessa altezza.",
+      "Tieni la schiena piatta come un tavolo: non alzare il sedere e non lasciar cadere la pancia.",
+      "Respira con calma dal naso mantenendo la tensione addominale per tutto il tempo indicato.",
+      "Alla fine riappoggia le ginocchia lentamente."
+    ],
+    "errors": [
+      "Sedere che sale in alto: il carico passa alle spalle e il core lavora poco.",
+      "Ginocchia sollevate troppo: diventa un'altra posizione e perdi la tensione.",
+      "Trattenere il respiro: la tenuta dura poco e le spalle si irrigidiscono."
+    ],
+    "why": "Attiva il core profondo insieme a spalle e quadricipiti in una posizione simile a quella da cui ci si rialza da terra dopo una caduta.",
+    "figure": [
+      {
+        "label": "Ginocchia sollevate",
+        "people": [
+          {
+            "pose": "core/bear-plank"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 0,
+            "dy": -10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12531,6 +23921,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 10 per lato",
     "details": "In plank sulle mani, porta un ginocchio al petto in 2–3 secondi, fai una pausa e riportalo indietro, alternando. La lentezza aumenta il lavoro del core e il controllo del bacino, utile per ginocchiate pulite. Il bacino resta basso e la schiena non si arrotonda.",
+    "setup": "Mettiti in plank sulle mani: mani sotto le spalle, braccia tese, corpo dritto dalla testa ai talloni, piedi alla larghezza delle anche.",
+    "steps": [
+      "Contrai l'addome e fissa le spalle sopra le mani.",
+      "Stacca un piede e porta il ginocchio verso il petto lentamente, in 2-3 secondi, senza alzare il sedere.",
+      "Fermati un secondo con il ginocchio sotto il petto ed espira con forza.",
+      "Riporta la gamba indietro altrettanto lentamente e appoggia il piede.",
+      "Ripeti con l'altra gamba, alternando: il bacino resta basso e fermo."
+    ],
+    "errors": [
+      "Andare veloce come nel mountain climber classico: perdi il lavoro di controllo.",
+      "Sedere che sale a ogni ginocchio: il core si scarica.",
+      "Schiena che si arrotonda o spalle che arretrano dietro le mani."
+    ],
+    "why": "La lentezza aumenta il lavoro del core e il controllo del bacino: è la base per ginocchiate pulite, portate con l'anca e non con la schiena.",
+    "figure": [
+      {
+        "label": "Plank sulle mani",
+        "people": [
+          {
+            "pose": "core/plank-mani"
+          }
+        ]
+      },
+      {
+        "label": "Ginocchio al petto, lento",
+        "people": [
+          {
+            "pose": "core/plank-ginocchio"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 14,
+            "dy": -2,
+            "bend": -4
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12541,6 +23971,40 @@ export const exercises: Exercise[] = [
     "equipment": "Parallele",
     "dose": "4 × 10–20 s",
     "details": "Mani sulle parallele o a terra, spingi le spalle in basso, solleva il corpo e tieni le gambe tese parallele al suolo. Sviluppa forza isometrica di addome e flessori dell'anca, oltre alla stabilità delle spalle. Se è troppo difficile, tieni le ginocchia piegate (tuck sit).",
+    "setup": "Siediti tra le parallele (basse o parallettes) con le gambe tese davanti a te e afferra le impugnature accanto ai fianchi. Puoi farlo anche a terra con le mani appoggiate accanto ai glutei.",
+    "steps": [
+      "Distendi le braccia e spingi le spalle verso il basso, lontano dalle orecchie.",
+      "Solleva il bacino dal suolo spingendo forte con le mani.",
+      "Contrai l'addome e solleva le gambe tese e unite fino a portarle parallele al pavimento: il corpo forma una L.",
+      "Tieni le punte dei piedi allungate, il busto dritto e lo sguardo avanti, respirando corto.",
+      "Se è troppo difficile tieni le ginocchia piegate al petto (tuck sit) e distendi le gambe poco alla volta."
+    ],
+    "errors": [
+      "Spalle alzate verso le orecchie: le spalle soffrono e la tenuta dura poco.",
+      "Gambe che scendono e talloni che toccano terra: l'addome si scarica.",
+      "Busto che si ingobbisce in avanti."
+    ],
+    "why": "Sviluppa forza isometrica di addome e flessori dell'anca, oltre a stabilità delle spalle: i muscoli che tengono alto il ginocchio in ginocchiate e teep.",
+    "figure": [
+      {
+        "label": "Corpo a L",
+        "people": [
+          {
+            "pose": "core/l-sit",
+            "x": 0,
+            "air": 16
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 72,
+            "w": 16,
+            "h": 16
+          }
+        ]
+      }
+    ],
     "tool": "sbarra"
   },
   {
@@ -12550,7 +24014,67 @@ export const exercises: Exercise[] = [
     "description": "Corpo rigido sollevato tenendo la panca dietro la testa.",
     "equipment": "Panca",
     "dose": "3 × 5 ripetizioni",
-    "details": "Supino sulla panca con le mani che tengono il bordo dietro la testa, solleva il corpo rigido fino alla verticale e scendi lentamente tenendo una linea retta. Esercizio avanzato di forza totale del core. Il peso poggia sulle spalle, non sul collo; inizia con la sola fase eccentrica."
+    "details": "Supino sulla panca con le mani che tengono il bordo dietro la testa, solleva il corpo rigido fino alla verticale e scendi lentamente tenendo una linea retta. Esercizio avanzato di forza totale del core. Il peso poggia sulle spalle, non sul collo; inizia con la sola fase eccentrica.",
+    "setup": "Sdraiati sulla schiena su una panca robusta e afferra con le mani il bordo della panca (o un appoggio fisso) dietro la testa. Gambe tese e unite.",
+    "steps": [
+      "Contrai tutto il corpo: addome, glutei e gambe diventano un unico blocco rigido.",
+      "Solleva gambe e bacino fino a portare il corpo quasi in verticale, appoggiato solo sulle spalle e sulla parte alta della schiena, non sul collo.",
+      "Da qui scendi lentamente, in 3-5 secondi, tenendo il corpo dritto come una tavola dalle spalle ai piedi.",
+      "Fermati prima che il bacino si pieghi o che la schiena si inarchi, poi risali o appoggia.",
+      "All'inizio fai solo la discesa lenta: sali con le ginocchia piegate e scendi a corpo teso."
+    ],
+    "errors": [
+      "Bacino che si piega a metà discesa: il corpo non è più rigido e l'addome si scarica.",
+      "Peso sul collo invece che sulle spalle: rischio di farsi male.",
+      "Lasciarsi cadere giù: perdi tutto il controllo, che è il senso dell'esercizio."
+    ],
+    "why": "Esercizio avanzato di forza totale del core. Il peso poggia sempre sulle spalle, mai sul collo; se non sei pronto inizia dalla sola fase di discesa.",
+    "figure": [
+      {
+        "label": "Corpo in verticale",
+        "people": [
+          {
+            "pose": "core/dragon-flag-alto",
+            "x": -14,
+            "air": 26
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 10,
+            "w": 76,
+            "h": 26
+          }
+        ]
+      },
+      {
+        "label": "Discesa rigida",
+        "people": [
+          {
+            "pose": "core/dragon-flag-discesa",
+            "x": -14,
+            "air": 26
+          }
+        ],
+        "props": [
+          {
+            "type": "bench",
+            "x": 10,
+            "w": 76,
+            "h": 26
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 20,
+            "dy": 16,
+            "bend": -8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "core--rotazioni-con-elastico-in-guardia",
@@ -12560,6 +24084,66 @@ export const exercises: Exercise[] = [
     "equipment": "Elastico",
     "dose": "3 × 15 per lato",
     "details": "In guardia con l'elastico ancorato di lato, ruota busto, anca e piede come nel gancio portando l'elastico davanti a te, poi torna controllando. Rinforza la rotazione specifica del colpo. Mantieni la guardia alta con la mano libera e ruota sull'avampiede.",
+    "setup": "Elastico fissato all'altezza del petto. Mettiti in guardia di fianco all'ancoraggio, con l'elastico nella mano più lontana dal punto di attacco e già un po' teso. L'altra mano resta alta a coprire il viso.",
+    "steps": [
+      "Parti in guardia: mento basso, peso sugli avampiedi, spalle leggermente girate verso l'ancoraggio.",
+      "Ruota insieme piede, anca e spalla come in un gancio: il piede gira sull'avampiede e il tallone va verso l'esterno.",
+      "Porta l'elastico davanti a te con il braccio piegato a circa 90°, gomito all'altezza del pugno.",
+      "Espira con forza sulla rotazione e fermati un attimo con il busto girato.",
+      "Torna in guardia lentamente frenando l'elastico; finita la serie cambia lato e mano."
+    ],
+    "errors": [
+      "Tirare solo con il braccio a busto fermo: alleni la spalla e non la rotazione.",
+      "Piede piatto che non ruota: la torsione finisce sul ginocchio e sulla schiena.",
+      "Mano libera che si abbassa: perdi la guardia proprio come in combattimento."
+    ],
+    "why": "Rinforza la rotazione specifica del colpo, quella che porta la forza delle gambe fino al pugno in ganci e gomitate.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true,
+            "x": 4
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 6,
+            "y": 56
+          }
+        ]
+      },
+      {
+        "label": "Rotazione da gancio",
+        "people": [
+          {
+            "pose": "core/gancio-elastico",
+            "gloves": true,
+            "x": 4
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 6,
+            "y": 56
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -4,
+            "dy": 14,
+            "bend": -10
+          }
+        ]
+      }
+    ],
     "tool": "elastico"
   },
   {
@@ -12570,6 +24154,69 @@ export const exercises: Exercise[] = [
     "equipment": "Palla medica",
     "dose": "3 × 10 lanci",
     "details": "Supino con la palla sul petto, sali esplosivo con il sit-up e lancia la palla al compagno in piedi, riprendila e torna giù controllando. Sviluppa potenza del tronco e velocità di risalita. Espira con forza durante il lancio e scegli un peso che permetta un gesto veloce.",
+    "setup": "Sdraiati sulla schiena con le ginocchia piegate e i piedi a terra, palla medica tenuta con due mani sul petto. Il compagno è in piedi davanti ai tuoi piedi a 2-3 metri, mani pronte a ricevere.",
+    "steps": [
+      "Inspira e contrai l'addome con la palla appoggiata sul petto.",
+      "Sali di scatto con il sit-up: la spinta parte dall'addome, il busto si arrotola velocemente.",
+      "Mentre il busto sale, spingi la palla dal petto verso il compagno come un passaggio a due mani, espirando con forza.",
+      "Il compagno riceve e ti ripassa la palla; prendila al petto stando seduto.",
+      "Torna giù controllando la discesa, appoggia le scapole e riparti esplosivo."
+    ],
+    "errors": [
+      "Lanciare dopo essere arrivato su, separando i due gesti: perdi la catena addome-braccia.",
+      "Palla troppo pesante: la risalita diventa lenta e non alleni la potenza.",
+      "Lasciarsi cadere all'indietro: schiena e testa sbattono a terra."
+    ],
+    "why": "Sviluppa potenza del tronco e velocità di risalita, utili per colpire forte e per rialzarsi in fretta.",
+    "figure": [
+      {
+        "label": "Palla al petto",
+        "people": [
+          {
+            "pose": "core/supino-palla-petto",
+            "x": -36
+          },
+          {
+            "pose": "core/in-piedi-braccia-alte",
+            "flip": true,
+            "partner": true,
+            "x": 58
+          }
+        ],
+        "props": [
+          {
+            "type": "medball"
+          }
+        ]
+      },
+      {
+        "label": "Su e lancio",
+        "people": [
+          {
+            "pose": "core/seduto-lancio",
+            "x": -36
+          },
+          {
+            "pose": "core/in-piedi-braccia-alte",
+            "flip": true,
+            "partner": true,
+            "x": 58
+          }
+        ],
+        "props": [
+          {
+            "type": "medball"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 24,
+            "dy": -6
+          }
+        ]
+      }
+    ],
     "tool": "palla-medica"
   },
   {
@@ -12580,6 +24227,50 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 15 ripetizioni, tenuta 2 s",
     "details": "A pancia in giù, solleva insieme braccia, petto e gambe contraendo glutei e lombari, tieni 2 secondi e scendi. Rinforza la catena posteriore che bilancia il lavoro addominale e protegge la schiena. Sguardo verso il basso per non iperestendere il collo.",
+    "setup": "Sdraiati a pancia in giù con le gambe tese e le braccia tese in avanti oltre la testa, palmi verso terra. Fronte vicina al pavimento.",
+    "steps": [
+      "Contrai glutei e lombari.",
+      "Solleva insieme braccia, petto e gambe di qualche centimetro da terra: resta appoggiato solo sulla pancia.",
+      "Allunga braccia e gambe in direzioni opposte, come se qualcuno ti tirasse per mani e piedi.",
+      "Tieni 2 secondi con lo sguardo verso il basso, respirando.",
+      "Scendi lentamente e appoggia tutto prima della ripetizione successiva."
+    ],
+    "errors": [
+      "Alzare la testa e guardare avanti: il collo si iperestende.",
+      "Salire di slancio molto in alto: la lombare si carica troppo.",
+      "Gambe piegate: lavorano poco i glutei."
+    ],
+    "why": "Rinforza la catena posteriore che bilancia il lavoro addominale e protegge la schiena in clinch, calci e cadute.",
+    "figure": [
+      {
+        "label": "A pancia in giù",
+        "people": [
+          {
+            "pose": "core/prono"
+          }
+        ]
+      },
+      {
+        "label": "Braccia e gambe su",
+        "people": [
+          {
+            "pose": "core/superman"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -12
+          },
+          {
+            "at": "foot",
+            "dx": 0,
+            "dy": -12
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12589,7 +24280,65 @@ export const exercises: Exercise[] = [
     "description": "Sollevamento del busto alla panca per lombari.",
     "equipment": "Panca",
     "dose": "3 × 15 ripetizioni",
-    "details": "Alla panca lombare con anche appoggiate, scendi con schiena neutra e risali fino all'allineamento del corpo contraendo glutei e lombari. Rafforza la schiena per sostenere clinch, calci e cadute. Non salire oltre la linea del corpo: evita l'iperestensione."
+    "details": "Alla panca lombare con anche appoggiate, scendi con schiena neutra e risali fino all'allineamento del corpo contraendo glutei e lombari. Rafforza la schiena per sostenere clinch, calci e cadute. Non salire oltre la linea del corpo: evita l'iperestensione.",
+    "setup": "Sistema la panca per lombari in modo che il cuscinetto sia appena sotto le anche: il bacino deve poter piegarsi liberamente. Talloni bloccati sotto il supporto, braccia incrociate sul petto.",
+    "steps": [
+      "Parti con il corpo dritto, dalla testa ai talloni, addome e glutei contratti.",
+      "Inspirando, piegati in avanti alle anche e scendi con la schiena neutra, senza arrotondarla, finché senti tirare dietro le cosce.",
+      "Espirando, risali stringendo glutei e lombari fino a riportare il corpo in linea.",
+      "Fermati quando busto e gambe sono allineati: non andare oltre inarcando la schiena.",
+      "Muoviti con ritmo lento e regolare, circa 2 secondi in discesa e 2 in salita."
+    ],
+    "errors": [
+      "Salire oltre la linea del corpo inarcando la schiena: la lombare si comprime.",
+      "Arrotondare la schiena in discesa: il carico va sui dischi invece che sui muscoli.",
+      "Cuscinetto troppo alto sulla pancia: il bacino non si piega e il movimento diventa piccolo."
+    ],
+    "why": "Rafforza schiena e glutei, che sostengono la postura in clinch, la spinta dei calci e le cadute.",
+    "figure": [
+      {
+        "label": "Discesa",
+        "people": [
+          {
+            "pose": "core/lombari-giu",
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 68,
+            "w": 12,
+            "h": 44
+          }
+        ]
+      },
+      {
+        "label": "Corpo in linea",
+        "people": [
+          {
+            "pose": "core/lombari-su",
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 68,
+            "w": 12,
+            "h": 44
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": -10,
+            "dy": -20,
+            "bend": 8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "core--windshield-wiper",
@@ -12599,6 +24348,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 10 per lato",
     "details": "Supino con braccia aperte a terra e gambe unite verso il soffitto, abbassale lentamente su un lato e poi sull'altro senza toccare terra. Rinforza gli obliqui in allungamento e il controllo rotatorio. Le spalle restano a terra; principianti con ginocchia piegate.",
+    "setup": "Sdraiati sulla schiena con le braccia aperte a terra a croce, palmi giù. Solleva le gambe tese e unite fino alla verticale, sopra le anche.",
+    "steps": [
+      "Schiaccia le spalle e le braccia a terra: sono la tua ancora.",
+      "Inspirando, abbassa lentamente le gambe unite verso un lato, come il tergicristallo, ruotando il bacino.",
+      "Fermati prima che le gambe tocchino terra e prima che la spalla opposta si stacchi.",
+      "Espirando, riporta le gambe al centro usando gli obliqui.",
+      "Ripeti verso l'altro lato, alternando con movimento lento e continuo."
+    ],
+    "errors": [
+      "Spalla opposta che si solleva: la rotazione si scarica sulla schiena.",
+      "Lasciar cadere le gambe di lato: perdi il controllo, che è la parte utile.",
+      "Gambe che si separano: l'esercizio perde stabilità. Se è troppo difficile, piega le ginocchia."
+    ],
+    "why": "Rinforza gli obliqui anche in allungamento e migliora il controllo della rotazione del bacino, alla base di calci e cambi di guardia.",
+    "figure": [
+      {
+        "label": "Gambe al soffitto",
+        "people": [
+          {
+            "pose": "core/supino-gambe-verticali"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": -20,
+            "dy": 18,
+            "bend": 10
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12609,6 +24390,43 @@ export const exercises: Exercise[] = [
     "equipment": "Manubrio",
     "dose": "3 × 15 per lato",
     "details": "In piedi con il manubrio in una mano, inclina il busto lateralmente verso il carico e risali contraendo l'obliquo opposto. Rinforza i fianchi, la zona colpita da ganci al corpo e calci circolari. Movimento solo laterale: non ruotare e non piegarti in avanti.",
+    "setup": "In piedi con i piedi alla larghezza delle anche e le ginocchia morbide. Tieni il manubrio in una mano lungo il fianco, braccio teso; l'altra mano dietro la testa o sul fianco.",
+    "steps": [
+      "Parti con il busto dritto e le spalle allineate, addome contratto.",
+      "Inspirando, inclina il busto di lato verso il manubrio, facendolo scendere lungo la coscia.",
+      "Scendi solo finché senti allungare il fianco opposto, senza ruotare e senza piegarti in avanti.",
+      "Espirando, risali contraendo l'obliquo del lato opposto al peso fino a tornare dritto.",
+      "Finita la serie cambia mano e lato."
+    ],
+    "errors": [
+      "Ruotare il busto o piegarsi in avanti: perdi il lavoro laterale degli obliqui.",
+      "Usare due manubri, uno per mano: i pesi si bilanciano e l'esercizio non serve.",
+      "Scendere e salire di slancio: la schiena si affatica."
+    ],
+    "why": "Rinforza i fianchi, la zona colpita da ganci al corpo e calci circolari, e aiuta a restare dritti quando l'avversario tira in clinch.",
+    "figure": [
+      {
+        "label": "Manubrio lungo la coscia",
+        "people": [
+          {
+            "pose": "core/side-bend"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": 16
+          }
+        ]
+      }
+    ],
     "tool": "manubri"
   },
   {
@@ -12619,6 +24437,42 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s, recupero 20 s",
     "details": "Supino con mani sotto i glutei, gambe tese sollevate di pochi centimetri, batti alternatamente le gambe con ritmo veloce e ampiezza ridotta. Allena la resistenza della parte bassa dell'addome. La lombare resta premuta a terra: se si stacca, alza un po' le gambe.",
+    "setup": "Sdraiati sulla schiena con le gambe tese e unite e le mani sotto i glutei, palmi verso il basso. Schiaccia la lombare a terra e solleva le gambe di 10-20 cm.",
+    "steps": [
+      "Contrai l'addome e tieni la testa appoggiata o leggermente sollevata, mento verso il petto.",
+      "Alza una gamba di circa 20-30 cm mentre l'altra scende senza toccare terra.",
+      "Inverti subito: le gambe 'sbattono' su e giù alternate, come quando nuoti a stile libero.",
+      "Movimento veloce e corto, gambe tese e punte allungate.",
+      "Respira con regolarità per tutto il tempo; se la lombare si stacca, alza un po' le gambe."
+    ],
+    "errors": [
+      "Lombare inarcata: la schiena lavora al posto dell'addome basso.",
+      "Gambe piegate o movimenti molto ampi: l'esercizio perde ritmo e controllo.",
+      "Trattenere il fiato: ti stanchi prima senza allenare la resistenza."
+    ],
+    "why": "Allena la resistenza della parte bassa dell'addome e dei flessori dell'anca, che tengono pronte le gambe per teep e ginocchiate fino all'ultima ripresa.",
+    "figure": [
+      {
+        "label": "Gambe alternate",
+        "people": [
+          {
+            "pose": "core/flutter"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot2",
+            "dx": 0,
+            "dy": -12
+          },
+          {
+            "at": "foot",
+            "dx": 4,
+            "dy": 12
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12629,6 +24483,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 30 s, recupero 20 s",
     "details": "Supino con gambe tese sollevate, incrociale orizzontalmente alternando la gamba sopra, con movimento continuo e controllato. Coinvolge addome basso e adduttori, migliorando la resistenza del core. Mantieni la lombare a terra e respira in modo regolare.",
+    "setup": "Sdraiati sulla schiena con le mani sotto i glutei e la lombare schiacciata a terra. Solleva le gambe tese e unite di 15-20 cm.",
+    "steps": [
+      "Contrai l'addome e allunga le punte dei piedi.",
+      "Apri leggermente le gambe in orizzontale, verso l'esterno, mantenendole sollevate.",
+      "Chiudile incrociandole: la destra passa sopra la sinistra.",
+      "Riaprile e incrociale di nuovo, questa volta con la sinistra sopra.",
+      "Continua con movimento fluido e controllato, respirando regolarmente."
+    ],
+    "errors": [
+      "Lombare che si stacca da terra: il carico passa sulla schiena.",
+      "Gambe che si abbassano fino a toccare terra: l'addome si riposa.",
+      "Movimento di slancio veloce e scomposto: perdi il controllo dell'adduzione."
+    ],
+    "why": "Coinvolge addome basso e adduttori e migliora la resistenza del core, utile per tenere le gambe forti e pronte nei calci e nelle prese.",
+    "figure": [
+      {
+        "label": "Gambe che si incrociano",
+        "people": [
+          {
+            "pose": "core/supino-gambe-sollevate"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 0,
+            "dy": 10,
+            "bend": 8
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12639,6 +24525,47 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 20 ripetizioni (10 per lato)",
     "details": "Dal sit-up risali ruotando il busto per portare il gomito verso il ginocchio opposto, alternando i lati ad ogni ripetizione. Unisce flessione e rotazione, come nella catena di ganci e gomitate. Espira in salita e ruota con le spalle, non solo con il gomito.",
+    "setup": "Sdraiati sulla schiena con le ginocchia piegate e i piedi a terra (bloccati da un compagno o sotto un supporto se necessario). Mani dietro le orecchie senza intrecciare le dita.",
+    "steps": [
+      "Contrai l'addome ed espirando inizia a salire arrotolando la schiena.",
+      "A metà salita ruota il busto e porta il gomito destro verso il ginocchio sinistro: girano le spalle, non solo il gomito.",
+      "In alto fermati un istante con il busto ruotato.",
+      "Torna al centro e scendi lentamente, appoggiando le scapole.",
+      "Alla ripetizione successiva ruota dall'altra parte, gomito sinistro verso ginocchio destro."
+    ],
+    "errors": [
+      "Tirare la testa con le mani: il collo si affatica.",
+      "Chiudere solo il gomito senza ruotare il busto: gli obliqui lavorano poco.",
+      "Lasciarsi cadere in discesa: perdi metà del lavoro e la schiena batte."
+    ],
+    "why": "Unisce flessione e rotazione del tronco, la stessa catena che dà forza a ganci e gomitate.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "core/supino-mani-testa"
+          }
+        ]
+      },
+      {
+        "label": "Gomito al ginocchio",
+        "people": [
+          {
+            "pose": "core/situp-torsione",
+            "x": -30
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 14,
+            "dy": 8,
+            "bend": -6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12649,6 +24576,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 8 per lato, tenuta 3 s",
     "details": "In plank sulle mani, solleva insieme un braccio in avanti e la gamba opposta indietro, tieni 3 secondi e cambia. Sfida la stabilità anti-rotazionale su soli due appoggi, utile all'equilibrio nei calci. Bacino parallelo al suolo e piedi un po' larghi per iniziare.",
+    "setup": "Mettiti in plank sulle mani: mani sotto le spalle, braccia tese, corpo dritto. Per cominciare apri i piedi un po' più larghi delle anche.",
+    "steps": [
+      "Contrai addome e glutei e sposta un po' il peso sulla mano sinistra e sul piede destro.",
+      "Solleva insieme il braccio destro teso in avanti e la gamba sinistra tesa indietro, fino all'altezza del corpo.",
+      "Tieni 3 secondi con il bacino parallelo al pavimento, senza ruotare.",
+      "Riappoggia mano e piede con controllo e torna in plank.",
+      "Cambia: braccio sinistro e gamba destra, alternando."
+    ],
+    "errors": [
+      "Bacino che ruota verso il lato della gamba alzata: perdi il lavoro anti-rotazione.",
+      "Sollevare braccio e gamba dello stesso lato: l'equilibrio diventa impossibile e la forma si rompe.",
+      "Gamba portata troppo in alto con la schiena inarcata."
+    ],
+    "why": "Sfida la stabilità del tronco su soli due appoggi, utile all'equilibrio quando calci o resti su una gamba in clinch.",
+    "figure": [
+      {
+        "label": "Plank sulle mani",
+        "people": [
+          {
+            "pose": "core/plank-mani"
+          }
+        ]
+      },
+      {
+        "label": "Braccio e gamba opposti",
+        "people": [
+          {
+            "pose": "core/plank-braccio-gamba"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12659,6 +24618,54 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 8 ripetizioni",
     "details": "Da in piedi scendi accosciato, rotola indietro sulla schiena arrotondata con ginocchia al petto, poi sfrutta lo slancio per tornare in piedi senza mani. Allena coordinazione, forza addominale e capacità di rialzarsi dopo una caduta. Mento al petto per proteggere la testa.",
+    "setup": "In piedi su un tappetino o una superficie morbida, con spazio libero dietro di te. Piedi alla larghezza delle anche, braccia in avanti.",
+    "steps": [
+      "Scendi accosciato piegando le ginocchia fino a sederti quasi sui talloni.",
+      "Porta il mento al petto, arrotonda la schiena e rotola indietro tenendo le ginocchia al petto, fino alle scapole.",
+      "Senza fermarti, usa lo slancio per rotolare in avanti: porta le braccia avanti e i piedi vicini ai glutei.",
+      "Appena i piedi toccano terra, sposta il peso in avanti e spingi con le gambe per tornare in piedi senza usare le mani.",
+      "Se all'inizio non ci riesci, aiutati con una mano a terra e togli l'aiuto poco alla volta."
+    ],
+    "errors": [
+      "Testa che va indietro e colpisce il pavimento: il mento deve stare sempre al petto.",
+      "Schiena dritta durante il rotolamento: si 'batte' invece di rotolare.",
+      "Piedi lontani dal sedere al ritorno: non riesci a rialzarti senza mani."
+    ],
+    "why": "Allena coordinazione, forza addominale e capacità di rialzarsi rapidamente dopo una caduta o una spazzata.",
+    "figure": [
+      {
+        "label": "Accosciato",
+        "people": [
+          {
+            "pose": "core/accosciato"
+          }
+        ]
+      },
+      {
+        "label": "Rotola, mento al petto",
+        "people": [
+          {
+            "pose": "core/rotolato"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 16,
+            "dy": 10,
+            "bend": -10
+          }
+        ]
+      },
+      {
+        "label": "In piedi senza mani",
+        "people": [
+          {
+            "pose": "in-piedi"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12669,6 +24676,48 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 16 ripetizioni (8 per lato)",
     "details": "A ogni risalita del sit-up tira una gomitata orizzontale ruotando il busto, alternando i lati e tornando giù controllato. Collega la flessione addominale alla rotazione della gomitata. Mantieni l'altra mano in guardia ed espira su ogni colpo.",
+    "setup": "Sdraiati sulla schiena con le ginocchia piegate e i piedi a terra (bloccati da un compagno o sotto un supporto se servono). Mani in guardia vicino al viso.",
+    "steps": [
+      "Espirando, sali con il sit-up fino a sederti, mani sempre in guardia.",
+      "In cima tira una gomitata orizzontale: alza il gomito all'altezza della spalla e ruota il busto, facendolo passare davanti al viso.",
+      "La mano dell'altro braccio resta incollata alla guancia.",
+      "Riporta il braccio in guardia e scendi controllando, in circa 2 secondi.",
+      "Alla risalita successiva tira la gomitata con l'altro braccio; espira con un 'tss' su ogni colpo."
+    ],
+    "errors": [
+      "Gomitata solo di braccio, senza ruotare il busto: perdi il legame con l'addome.",
+      "Abbassare la mano libera: resti scoperto.",
+      "Lasciarsi cadere giù dopo il colpo: la schiena batte e l'addome non lavora in discesa."
+    ],
+    "why": "Collega la flessione dell'addome alla rotazione della gomitata, il colpo corto del clinch e della media distanza.",
+    "figure": [
+      {
+        "label": "Giù in guardia",
+        "people": [
+          {
+            "pose": "core/supino-guardia",
+            "x": -30
+          }
+        ]
+      },
+      {
+        "label": "Su e gomitata",
+        "people": [
+          {
+            "pose": "core/seduto-gomitata",
+            "x": -36
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 4,
+            "dy": -2,
+            "bend": 0
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12679,6 +24728,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 15 ripetizioni",
     "details": "Seduto con mani a terra dietro di te e busto inclinato, porta le ginocchia al petto avvicinando il busto e poi distendi le gambe senza toccare terra. Rinforza addome e flessori dell'anca nel gesto della ginocchiata. Schiena lunga, senza ingobbirsi.",
+    "setup": "Seduto a terra con le mani appoggiate dietro di te, dita verso i glutei, e il busto inclinato indietro. Gambe tese davanti, sollevate di qualche centimetro.",
+    "steps": [
+      "Contrai l'addome e tieni la schiena lunga, petto aperto.",
+      "Espirando, porta le ginocchia verso il petto e allo stesso tempo avvicina il busto alle ginocchia.",
+      "Fermati un attimo con le ginocchia vicino al petto.",
+      "Inspirando, distendi le gambe in avanti e riporta indietro il busto, senza far toccare terra ai piedi.",
+      "Continua con ritmo regolare e controllato."
+    ],
+    "errors": [
+      "Schiena curva e spalle chiuse: lavori male e carichi la lombare.",
+      "Piedi che toccano terra a ogni ripetizione: l'addome si riposa.",
+      "Movimento di slancio con le braccia: il lavoro passa dalle braccia, non dal core."
+    ],
+    "why": "Rinforza addome e flessori dell'anca nello stesso gesto della ginocchiata: tirare su il ginocchio e chiudere il busto.",
+    "figure": [
+      {
+        "label": "Gambe distese",
+        "people": [
+          {
+            "pose": "core/seduto-mani-dietro"
+          }
+        ]
+      },
+      {
+        "label": "Ginocchia al petto",
+        "people": [
+          {
+            "pose": "core/seduto-ginocchia-petto"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": -10,
+            "dy": -4,
+            "bend": 4
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -12688,7 +24777,46 @@ export const exercises: Exercise[] = [
     "description": "Avambracci sulla fitball, piccoli cerchi tenendo il plank.",
     "equipment": "Fitball",
     "dose": "3 × 10 cerchi per senso",
-    "details": "Avambracci sulla fitball e corpo in plank, disegna piccoli cerchi con i gomiti in un senso e poi nell'altro mantenendo il corpo rigido. Aumenta molto la richiesta di stabilità del core in condizioni instabili. Cerchi piccoli e controllati: la lombare non deve cedere."
+    "details": "Avambracci sulla fitball e corpo in plank, disegna piccoli cerchi con i gomiti in un senso e poi nell'altro mantenendo il corpo rigido. Aumenta molto la richiesta di stabilità del core in condizioni instabili. Cerchi piccoli e controllati: la lombare non deve cedere.",
+    "setup": "Appoggia gli avambracci su una fitball, mani unite e gomiti sotto le spalle. Distendi le gambe dietro, sulle punte dei piedi, con i piedi un po' più larghi delle anche: il corpo è in plank.",
+    "steps": [
+      "Contrai addome e glutei: il corpo deve essere dritto come una tavola.",
+      "Disegna con i gomiti piccoli cerchi sulla palla, come se mescolassi una pentola.",
+      "Fai alcuni giri in senso orario, poi altrettanti in senso antiorario.",
+      "Il bacino resta fermo e alla stessa altezza: si muovono solo le braccia.",
+      "Respira corto e regolare; se la schiena cede, fai cerchi più piccoli o appoggia le ginocchia."
+    ],
+    "errors": [
+      "Cerchi troppo grandi: la lombare si inarca e cede.",
+      "Bacino che oscilla insieme alle braccia: il core non sta stabilizzando.",
+      "Sedere alto per facilitarsi il lavoro."
+    ],
+    "why": "Aumenta molto la richiesta di stabilità del core su un appoggio instabile, come quando in clinch l'avversario ti strattona.",
+    "figure": [
+      {
+        "label": "Avambracci sulla palla",
+        "people": [
+          {
+            "pose": "core/plank-palla",
+            "air": 14
+          }
+        ],
+        "props": [
+          {
+            "type": "medball",
+            "at": "elbow"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": 10,
+            "dy": 0,
+            "bend": 10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "core--landmine-rotazioni",
@@ -12698,6 +24826,56 @@ export const exercises: Exercise[] = [
     "equipment": "Bilanciere",
     "dose": "3 × 10 per lato",
     "details": "Bilanciere ancorato a terra, presa con due mani sopra la testa, portalo verso un fianco ruotando busto e piedi e poi verso l'altro, con braccia quasi tese. Sviluppa potenza rotazionale con controllo, trasferibile a ganci e calci. Il movimento parte dalle anche; carico moderato.",
+    "setup": "Bilanciere con un'estremità fissata a terra in un angolo o in un supporto landmine. In piedi davanti all'altra estremità, piedi alla larghezza delle spalle: afferrala con due mani sovrapposte davanti alla fronte, braccia quasi tese.",
+    "steps": [
+      "Contrai addome e glutei: il bilanciere è in alto davanti a te.",
+      "Ruota anche e busto verso destra e porta l'estremità del bilanciere verso il fianco destro, con le braccia quasi tese.",
+      "Mentre ruoti, gira il piede sinistro sull'avampiede come in un calcio o in un gancio.",
+      "Risali passando per il centro in alto, controllando il peso.",
+      "Prosegui verso il fianco sinistro, ruotando il piede destro; continua alternando con ritmo controllato."
+    ],
+    "errors": [
+      "Muovere solo con le braccia: perdi il lavoro rotatorio di anche e busto.",
+      "Piedi piantati: la torsione si scarica sulla lombare e sulle ginocchia.",
+      "Carico troppo pesante: il movimento diventa a strappi."
+    ],
+    "why": "Sviluppa potenza rotazionale con controllo, trasferibile a ganci e calci circolari. Il movimento parte dalle anche e il carico resta moderato.",
+    "figure": [
+      {
+        "label": "Bilanciere in alto",
+        "people": [
+          {
+            "pose": "core/landmine-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "plate"
+          }
+        ]
+      },
+      {
+        "label": "Verso il fianco",
+        "people": [
+          {
+            "pose": "core/landmine-fianco"
+          }
+        ],
+        "props": [
+          {
+            "type": "plate"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -20,
+            "bend": 10
+          }
+        ]
+      }
+    ],
     "tool": "bilanciere"
   },
   {
@@ -12708,6 +24886,65 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "3 × 3 per lato",
     "details": "Da sdraiato con la kettlebell a braccio teso sopra la spalla, passa per gomito, mano, ponte e affondo fino in piedi, poi torna giù invertendo i passaggi. Allena stabilità di spalla e core in tutte le posizioni, anche quelle di rialzata da terra. Sguardo sempre sulla kettlebell; movimenti lenti.",
+    "setup": "Sdraiato sulla schiena con la kettlebell nella mano destra, braccio teso verso il soffitto sopra la spalla. Ginocchio destro piegato con il piede a terra; gamba sinistra tesa e braccio sinistro a terra a 45° dal corpo.",
+    "steps": [
+      "Guarda la kettlebell: lo sguardo resta su di lei per tutto l'esercizio.",
+      "Spingi con il piede destro e rotola sul gomito sinistro, poi distendi il braccio e sali sulla mano sinistra.",
+      "Solleva il bacino in un ponte, porta la gamba sinistra indietro sotto di te e appoggia il ginocchio a terra.",
+      "Raddrizza il busto sollevando la mano da terra: sei in affondo con il ginocchio sinistro giù e la kettlebell in alto.",
+      "Spingi con le gambe e alzati in piedi, braccio sempre teso sopra la spalla.",
+      "Torna giù invertendo gli stessi passaggi, lentamente; poi cambia lato."
+    ],
+    "errors": [
+      "Braccio che si piega o kettlebell che si sposta in avanti: la spalla perde stabilità.",
+      "Distogliere lo sguardo dalla kettlebell: perdi il controllo del peso.",
+      "Passaggi fatti di fretta: è un esercizio lento in cui conta ogni posizione."
+    ],
+    "why": "Allena stabilità di spalla e core in tutte le posizioni, comprese quelle per rialzarsi da terra. Inizia leggero o senza peso e muoviti lento.",
+    "figure": [
+      {
+        "label": "A terra",
+        "people": [
+          {
+            "pose": "core/tgu-supino"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Su sulla mano",
+        "people": [
+          {
+            "pose": "core/tgu-mano"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "In piedi",
+        "people": [
+          {
+            "pose": "core/tgu-in-piedi"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -12718,6 +24955,38 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "5 × 10 espirazioni forzate",
     "details": "In guardia, inspira dal naso ed espira con forza dalla bocca (suono 'tsss') contraendo di colpo addome e obliqui, come all'arrivo di un colpo. Insegna a sincronizzare respiro e contrazione, la vera difesa contro i colpi al corpo. Non trattenere il respiro: l'espirazione accompagna sempre la contrazione.",
+    "setup": "In piedi in guardia: mani alte, mento basso, gomiti stretti ai fianchi, ginocchia morbide, peso sugli avampiedi.",
+    "steps": [
+      "Inspira dal naso in modo rapido e calmo, senza alzare le spalle.",
+      "Espira con forza dalla bocca con un suono secco ('tsss') e nello stesso istante contrai di colpo addome e obliqui.",
+      "Durante l'espirazione chiudi leggermente le spalle e abbassa ancora un po' il mento, come se arrivasse un colpo al corpo.",
+      "Rilassa per un attimo e ripeti, con ritmo regolare.",
+      "Quando il gesto è automatico, abbinalo a pugni e calci in shadow: espira e contrai su ogni colpo."
+    ],
+    "errors": [
+      "Trattenere il fiato mentre contrai: ti stanchi in fretta e un colpo ti toglie l'aria.",
+      "Espirazione lunga e molle: la contrazione arriva tardi e debole.",
+      "Abbassare le mani mentre respiri: in combattimento resti scoperto."
+    ],
+    "why": "Insegna a sincronizzare respiro e contrazione, la vera difesa contro i colpi al corpo. Non trattenere mai il respiro: l'espirazione accompagna sempre la contrazione.",
+    "figure": [
+      {
+        "label": "Espira e contrai",
+        "people": [
+          {
+            "pose": "core/respiro-guardia",
+            "gloves": true
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -12,
+            "dy": -6
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -23136,7 +35405,92 @@ export const toolExercises: Exercise[] = [
     "dose": "5 × 5, recupero 90 s",
     "details": "Da due kettlebell a terra esegui un clean in rack e subito una spinta sopra la testa, poi riporta giù con controllo. Costruisce forza su tutto il corpo e capacità di ripetere sforzi intensi come negli scambi. Cura la tecnica del clean prima di aumentare il carico.",
     "equipment": "Kettlebell",
-    "tool": "kettlebell"
+    "tool": "kettlebell",
+    "setup": "Due kettlebell a terra tra i piedi, uno per lato, con le maniglie allineate. Piedi alla larghezza delle anche: piega le anche portando il sedere indietro, schiena dritta, e afferra le maniglie con le braccia tese.",
+    "steps": [
+      "Tira le kettlebell leggermente indietro tra le gambe, poi spingi le anche in avanti con decisione: il peso parte dalle gambe e dai glutei, non dalle braccia.",
+      "Mentre le kettlebell salgono tienile vicine al corpo e infila le mani nelle maniglie: le ricevi in rack, cioè appoggiate sull'esterno degli avambracci, con i gomiti stretti contro le costole e i polsi dritti.",
+      "Fermati un istante in rack: ginocchia distese, glutei e addome stretti, respira.",
+      "Spingi le kettlebell sopra la testa fino a braccia distese, con i bicipiti vicino alle orecchie. Espira durante la spinta e non inarcare la zona lombare.",
+      "Riporta le kettlebell in rack piegando i gomiti con controllo, poi lasciale scendere tra le gambe piegando le anche e riparti dal clean."
+    ],
+    "errors": [
+      "Tirare il clean con le braccia: le kettlebell sbattono sugli avambracci e ti stanchi le spalle prima delle gambe.",
+      "Gomiti larghi in rack: perdi stabilità e la spinta parte da una posizione debole.",
+      "Inarcare la schiena nella spinta: il carico finisce sulla zona lombare invece che su spalle e addome."
+    ],
+    "why": "Costruisce forza su tutto il corpo e la capacità di ripetere sforzi intensi come negli scambi. Impara bene il clean con un peso leggero prima di aumentare il carico.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "attrezzi-2/kb-stacco"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          },
+          {
+            "type": "kettlebell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 8,
+            "dy": -40,
+            "bend": -10
+          }
+        ]
+      },
+      {
+        "label": "Rack",
+        "people": [
+          {
+            "pose": "attrezzi-2/rack-doppio"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          },
+          {
+            "type": "kettlebell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -34
+          }
+        ]
+      },
+      {
+        "label": "Spinta in alto",
+        "people": [
+          {
+            "pose": "attrezzi-2/press-doppio"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          },
+          {
+            "type": "kettlebell",
+            "at": "hand2"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "kettlebell--swing-a-mani-alterne",
@@ -23146,7 +35500,59 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 20, recupero 45 s",
     "details": "Esegui lo swing a un braccio e, nel punto più alto quando il peso è leggero, passalo rapidamente all'altra mano. Allena velocità di anche e mani, coordinazione e reattività. Fai il passaggio solo all'altezza del petto e tieni la kettlebell sotto controllo.",
     "equipment": "Kettlebell",
-    "tool": "kettlebell"
+    "tool": "kettlebell",
+    "setup": "Kettlebell a terra circa 30 cm davanti a te, piedi poco più larghi delle spalle. Piega le anche e afferra la maniglia con una sola mano, braccio teso; l'altro braccio è libero vicino al fianco.",
+    "steps": [
+      "Lancia la kettlebell indietro tra le gambe: avambraccio contro l'interno coscia, sedere indietro, schiena dritta, ginocchia appena piegate.",
+      "Spingi le anche in avanti con forza ed espira: sono glutei e femorali a far salire il peso, il braccio fa solo da corda.",
+      "Quando la kettlebell arriva all'altezza del petto è per un attimo senza peso: in quel momento avvicina la mano libera e passale la maniglia.",
+      "La nuova mano accompagna la discesa: lascia ricadere la kettlebell tra le gambe e piega di nuovo le anche.",
+      "Ripeti cambiando mano a ogni ripetizione, con un ritmo costante e la mano libera sempre vicina al corpo."
+    ],
+    "errors": [
+      "Fare il passaggio troppo in alto o troppo in basso: la kettlebell è pesante, scivola e rischi di farla cadere.",
+      "Ruotare il busto verso il braccio che tiene il peso: perdi la spinta d'anca e carichi la schiena.",
+      "Alzare il peso con la spalla invece che con le anche."
+    ],
+    "why": "Allena velocità di anche e mani, coordinazione e reattività. Fai il passaggio solo all'altezza del petto e tieni la kettlebell sempre sotto controllo, con spazio libero attorno a te.",
+    "figure": [
+      {
+        "label": "Carica a un braccio",
+        "people": [
+          {
+            "pose": "attrezzi-2/swing1-carica"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 50,
+            "dy": -40,
+            "bend": -15
+          }
+        ]
+      },
+      {
+        "label": "Cambio mano",
+        "people": [
+          {
+            "pose": "attrezzi-2/swing1-cambio"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "kettlebell--long-cycle-a-tempo",
@@ -23156,7 +35562,73 @@ export const toolExercises: Exercise[] = [
     "dose": "3 riprese da 3 min, recupero 1 min",
     "details": "Ripeti clean e push press a ritmo costante, cambiando mano quando necessario, senza appoggiare il peso. Simula lo sforzo continuo di una ripresa e allena la respirazione sotto carico. Scegli un peso moderato e mantieni ritmo regolare invece di partire troppo veloce.",
     "equipment": "Kettlebell",
-    "tool": "kettlebell"
+    "tool": "kettlebell",
+    "setup": "Una kettlebell a terra tra i piedi, piedi alla larghezza delle anche. Scegli un peso moderato che puoi muovere a lungo senza appoggiarlo.",
+    "steps": [
+      "Clean: fai oscillare la kettlebell tra le gambe e, con una spinta d'anca, portala in rack sull'esterno dell'avambraccio, gomito stretto al fianco.",
+      "Dal rack piega brevemente le ginocchia (pochi centimetri, busto verticale) e distendile di scatto: la spinta delle gambe lancia la kettlebell verso l'alto.",
+      "Completa con il braccio fino a gomito disteso sopra la testa, bicipite vicino all'orecchio. Fermati un istante in alto.",
+      "Riporta la kettlebell in rack, poi lasciala scendere tra le gambe e attacca subito il clean successivo, senza posarla.",
+      "Respira a ogni fase: un respiro in rack, uno in alto. Cambia mano quando serve con un passaggio controllato durante l'oscillazione.",
+      "Mantieni lo stesso ritmo dall'inizio alla fine: meglio regolare che veloce all'inizio e spento dopo un minuto."
+    ],
+    "errors": [
+      "Partire troppo veloce: a metà tempo finisci il fiato e la tecnica crolla.",
+      "Trattenere il respiro: il cuore sale e non riesci a recuperare tra una ripetizione e l'altra.",
+      "Spingere solo con la spalla senza il piegamento delle gambe: la spalla si stanca subito."
+    ],
+    "why": "Simula lo sforzo continuo di una ripresa e allena la respirazione sotto carico. Usa un peso moderato e fermati se la presa o la lombare cedono.",
+    "figure": [
+      {
+        "label": "Rack",
+        "people": [
+          {
+            "pose": "attrezzi-2/rack-uno"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Piegamento",
+        "people": [
+          {
+            "pose": "attrezzi-2/dip-rack"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -14
+          }
+        ]
+      },
+      {
+        "label": "Braccio disteso",
+        "people": [
+          {
+            "pose": "attrezzi-2/jerk-uno"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "kettlebell--farmer-carry-doppio",
@@ -23166,7 +35638,48 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 30 m, recupero 60 s",
     "details": "Afferra due kettlebell pesanti, spalle basse e indietro, e cammina con passi corti mantenendo il busto eretto. Rinforza presa, trapezi e tronco, essenziali per controllare l'avversario nel clinch. Non lasciare che le spalle salgano verso le orecchie.",
     "equipment": "Kettlebell",
-    "tool": "kettlebell"
+    "tool": "kettlebell",
+    "setup": "Due kettlebell pesanti a terra ai lati dei piedi. Piega le gambe con la schiena dritta, afferra le maniglie al centro e alzati in piedi come in uno stacco.",
+    "steps": [
+      "In piedi, braccia distese lungo i fianchi e kettlebell che non toccano le gambe. Porta le spalle basse e leggermente indietro, petto aperto.",
+      "Stringi forte le maniglie e contrai l'addome come per incassare un colpo.",
+      "Cammina in avanti con passi corti e controllati, appoggiando bene tutto il piede. Il busto resta verticale e le kettlebell non oscillano.",
+      "Guarda avanti, mento neutro, respira regolare senza trattenere il fiato.",
+      "Alla fine del percorso fermati, piega le gambe e appoggia le kettlebell a terra con la schiena dritta."
+    ],
+    "errors": [
+      "Spalle che salgono verso le orecchie: il carico finisce sul collo e perdi stabilità.",
+      "Inclinarsi in avanti o di lato: la schiena lavora male e cammini storto.",
+      "Passi lunghi e veloci: le kettlebell oscillano e la presa cede prima."
+    ],
+    "why": "Rinforza presa, trapezi e tronco, essenziali per controllare l'avversario nel clinch. Appoggia i pesi appena la presa sta per cedere, non lasciarli cadere sui piedi.",
+    "figure": [
+      {
+        "label": "Cammina dritto",
+        "people": [
+          {
+            "pose": "attrezzi-2/cammina-carico"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          },
+          {
+            "type": "kettlebell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 30,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "kettlebell--rack-carry-con-affondi",
@@ -23176,7 +35689,66 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 per gamba, recupero 75 s",
     "details": "Con due kettlebell in rack, avanza in affondo portando il ginocchio posteriore vicino a terra e risali spingendo con la gamba anteriore. Rinforza gambe e tronco per mantenere la postura e spingere nel clinch. Gomiti stretti e busto verticale per tutto il movimento.",
     "equipment": "Kettlebell",
-    "tool": "kettlebell"
+    "tool": "kettlebell",
+    "setup": "Porta due kettlebell in rack davanti al petto: appoggiate sull'esterno degli avambracci, gomiti stretti contro le costole, polsi dritti. In piedi, piedi alla larghezza delle anche.",
+    "steps": [
+      "Fai un passo lungo in avanti con una gamba e appoggia tutto il piede.",
+      "Scendi in verticale piegando entrambe le ginocchia, finché il ginocchio posteriore arriva vicino a terra senza toccarlo. Il ginocchio anteriore resta sopra il piede.",
+      "Busto verticale, gomiti stretti: le kettlebell non devono scendere né tirarti in avanti.",
+      "Risali spingendo con il tallone della gamba anteriore e porta avanti la gamba posteriore per il passo successivo.",
+      "Continua alternando le gambe, inspira in discesa ed espira in salita."
+    ],
+    "errors": [
+      "Busto che cade in avanti: il carico va sulla schiena e le kettlebell scivolano dal rack.",
+      "Ginocchio anteriore che rientra verso l'interno: sovraccarichi il ginocchio.",
+      "Passo troppo corto: il ginocchio va oltre la punta e la gamba posteriore lavora poco."
+    ],
+    "why": "Rinforza gambe e tronco per mantenere la postura e spingere nel clinch.",
+    "figure": [
+      {
+        "label": "Rack in piedi",
+        "people": [
+          {
+            "pose": "attrezzi-2/rack-doppio"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          },
+          {
+            "type": "kettlebell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Affondo",
+        "people": [
+          {
+            "pose": "attrezzi-2/affondo-rack"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          },
+          {
+            "type": "kettlebell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -22
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--montante-con-elastico",
@@ -23186,7 +35758,63 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 per lato, recupero 45 s",
     "details": "Ancora l'elastico in basso dietro di te e impugnalo in guardia. Spingi dal piede posteriore, ruota l'anca e porta il montante verso l'alto, tornando subito in guardia. Sviluppa potenza nei colpi corti al corpo e al mento; non sbilanciarti in avanti e mantieni il mento protetto.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Fissa l'elastico in basso dietro di te (a un palo o sotto il piede posteriore) e impugnalo con la mano posteriore. Mettiti in guardia: mani alte, mento basso, l'elastico deve essere già leggermente teso.",
+    "steps": [
+      "Abbassa appena le ginocchia e porta il pugno posteriore poco sotto il mento, gomito vicino alle costole.",
+      "Spingi con l'avampiede posteriore e ruota l'anca in avanti: il piede gira sulla punta e il tallone si alza.",
+      "Fai salire il pugno in verticale, palmo verso di te, fino all'altezza del mento di un avversario immaginario davanti a te. Il braccio resta piegato a circa 90°.",
+      "Espira con forza nel momento del colpo; la mano anteriore resta incollata alla guancia.",
+      "Torna subito in guardia controllando il ritorno dell'elastico, poi riparti."
+    ],
+    "errors": [
+      "Caricare il colpo abbassando la mano: apri il viso e il colpo si vede arrivare.",
+      "Sbilanciarsi in avanti dietro al pugno: perdi equilibrio e resti esposto al contrattacco.",
+      "Distendere il braccio come uno slancio: diventa una spinta e non un montante corto."
+    ],
+    "why": "Sviluppa potenza nei colpi corti al corpo e al mento. Controlla che l'elastico sia ben fissato prima di iniziare.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia"
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand2",
+            "x": 22,
+            "y": 139
+          }
+        ]
+      },
+      {
+        "label": "Montante",
+        "people": [
+          {
+            "pose": "attrezzi-2/montante"
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand2",
+            "x": 22,
+            "y": 139
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand2",
+            "dx": 3,
+            "dy": -15,
+            "bend": 6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--gancio-con-elastico",
@@ -23196,7 +35824,63 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 per lato, recupero 45 s",
     "details": "In guardia, con l'elastico ancorato di lato all'altezza delle spalle, chiudi il gancio ruotando piede, anca e spalla insieme. Rientra controllando l'elastico. Rinforza la catena rotazionale del gancio; il gomito resta all'altezza del pugno e la mano opposta copre il viso.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Elastico ancorato a un palo di lato, all'altezza delle spalle, dalla parte opposta al bersaglio. Impugnalo con la mano che colpisce e mettiti in guardia di fianco al palo, abbastanza lontano da avere l'elastico teso.",
+    "steps": [
+      "Parti in guardia: mani alte, mento basso, gomiti stretti.",
+      "Ruota insieme piede, anca e spalla del lato che colpisce: il piede gira sull'avampiede come per schiacciare una sigaretta.",
+      "Il braccio si apre come un uncino: gomito all'altezza del pugno, braccio piegato a circa 90°, pugno che chiude orizzontale davanti a te.",
+      "Fermati con il pugno davanti al viso dell'avversario immaginario; non andare oltre la linea del corpo.",
+      "Rientra in guardia lentamente, controllando la tensione dell'elastico, e ripeti."
+    ],
+    "errors": [
+      "Gomito più basso del pugno: il colpo diventa un montante storto e perde forza.",
+      "Colpire solo con il braccio senza ruotare il piede: carichi la spalla e il gancio è debole.",
+      "Abbassare la mano che non colpisce: lasci il viso scoperto."
+    ],
+    "why": "Rinforza la catena rotazionale del gancio; il gomito resta all'altezza del pugno e la mano opposta copre sempre il viso.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia"
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 8,
+            "y": 64
+          }
+        ]
+      },
+      {
+        "label": "Gancio chiuso",
+        "people": [
+          {
+            "pose": "attrezzi-2/gancio"
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 8,
+            "y": 64
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 14,
+            "dy": 4,
+            "bend": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--calcio-circolare-con-elastico-alla-caviglia",
@@ -23206,7 +35890,65 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 8 per lato, recupero 60 s",
     "details": "Elastico leggero attorno alla caviglia e ancorato dietro di te a terra. Esegui il calcio circolare a media altezza ruotando sul piede d'appoggio e richiama la gamba in guardia. Allena l'anca a calciare con potenza; usa una resistenza leggera per non alterare la traiettoria tecnica.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Elastico leggero attorno alla caviglia della gamba posteriore, ancorato dietro di te vicino a terra. Mettiti in guardia con l'elastico appena teso.",
+    "steps": [
+      "Fai un piccolo passo in diagonale verso l'esterno con il piede anteriore, punta verso fuori.",
+      "Sali sull'avampiede della gamba d'appoggio e ruota il tallone verso il bersaglio: è questa rotazione che fa girare le anche.",
+      "Lancia la gamba posteriore quasi tesa a media altezza (fianco), colpendo con la parte bassa della tibia.",
+      "Il braccio dello stesso lato scende indietro per bilanciare; l'altra mano resta alta davanti al viso.",
+      "Richiama la gamba lungo la stessa traiettoria e rimetti il piede in guardia, controllando l'elastico che tira indietro."
+    ],
+    "errors": [
+      "Elastico troppo forte: cambi la traiettoria del calcio e impari un gesto sbagliato.",
+      "Piede d'appoggio piatto: le anche non ruotano e il calcio perde potenza.",
+      "Lasciare che l'elastico riporti indietro la gamba di colpo: il ginocchio subisce lo strattone."
+    ],
+    "why": "Allena l'anca a calciare con potenza. Usa una resistenza leggera, così la traiettoria resta quella del calcio vero.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": -5
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "foot2",
+            "x": 8,
+            "y": 139
+          }
+        ]
+      },
+      {
+        "label": "Calcio a media altezza",
+        "people": [
+          {
+            "pose": "calcio-circolare",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "foot",
+            "x": 8,
+            "y": 139
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 22,
+            "dy": 18,
+            "bend": 16
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--teep-posteriore-con-elastico-in-vita",
@@ -23216,7 +35958,64 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 8 per lato, recupero 60 s",
     "details": "Cintura elastica in vita trattenuta da un compagno o ancorata alle spalle. Porta il ginocchio al petto e spingi il teep in avanti spostando il bacino, poi rientra in guardia. Insegna a proiettare il peso nel calcio frontale; tieni il busto dritto e non piegarti indietro.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Cintura elastica in vita, trattenuta da un compagno alle tue spalle o ancorata a un palo dietro di te. Mettiti in guardia con l'elastico già teso.",
+    "steps": [
+      "Solleva il ginocchio della gamba posteriore fino all'altezza della cintura, punta del piede in alto, mani alte.",
+      "Distendi la gamba in avanti e spingi con la pianta o l'avampiede verso l'addome del bersaglio immaginario.",
+      "Mentre spingi porta il bacino in avanti contro la resistenza dell'elastico: il peso del corpo deve entrare nel calcio.",
+      "Ritira subito la gamba piegando il ginocchio e torna in guardia, senza farti tirare indietro dall'elastico.",
+      "Il compagno tiene una tensione costante, senza strattonare, e si sposta con te se avanzi."
+    ],
+    "errors": [
+      "Piegarsi indietro con il busto per arrivare lontano: la spinta resta senza peso e perdi l'equilibrio.",
+      "Calciare a gamba tesa senza caricare il ginocchio: diventa uno slancio debole.",
+      "Abbassare le mani mentre la gamba si distende."
+    ],
+    "why": "Insegna a proiettare il peso del corpo nel teep; tieni il busto dritto e non piegarti indietro.",
+    "figure": [
+      {
+        "label": "Ginocchio su",
+        "people": [
+          {
+            "pose": "teep-carica",
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hip",
+            "x": 6,
+            "y": 96
+          }
+        ]
+      },
+      {
+        "label": "Spinta d'anca",
+        "people": [
+          {
+            "pose": "teep-spinta",
+            "x": -25
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hip",
+            "x": 6,
+            "y": 96
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 18,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--sprint-in-guardia-con-elastico-in-vita",
@@ -23226,7 +36025,52 @@ export const toolExercises: Exercise[] = [
     "dose": "6 × 5 s, recupero 40 s",
     "details": "Il compagno trattiene l'elastico agganciato in vita. Parti dalla guardia con passi corti ed esplosivi in avanti per 3-4 metri, mantenendo le mani alte. Migliora l'entrata per chiudere la distanza sull'avversario; spingi con l'avampiede e non alzare il busto.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Elastico agganciato alla cintura in vita; il compagno è dietro di te e lo tiene con due mani, piedi ben piantati. Tu sei in guardia, con l'elastico già teso.",
+    "steps": [
+      "Inclina leggermente il busto in avanti mantenendo le mani alte e il mento basso.",
+      "Parti con passi corti ed esplosivi spingendo forte con l'avampiede, per 3-4 metri.",
+      "Le braccia restano in guardia, non le usi per correre: lavorano solo gambe e anche.",
+      "A fine tratto fermati in guardia stabile, poi torna indietro camminando e riparti.",
+      "Il compagno resiste con una tensione costante e lo accompagna senza strattoni, lasciandoti avanzare."
+    ],
+    "errors": [
+      "Alzare il busto e correre dritti come in uno sprint: perdi la guardia e la spinta.",
+      "Passi lunghi sui talloni: sei lento e sbilanciato in entrata.",
+      "Il compagno che lascia l'elastico di colpo: rischi di cadere in avanti."
+    ],
+    "why": "Migliora l'entrata per chiudere la distanza sull'avversario: spingi con l'avampiede e non alzare il busto.",
+    "figure": [
+      {
+        "label": "Entrata contro resistenza",
+        "people": [
+          {
+            "pose": "attrezzi-2/sprint-guardia",
+            "x": 30
+          },
+          {
+            "pose": "attrezzi-2/trattiene",
+            "x": -50,
+            "partner": true
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hip",
+            "x": 63.9,
+            "y": 45.0
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 30,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--rilascio-rapido-del-jab-con-elastico",
@@ -23236,7 +36080,65 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 15 s per lato, recupero 30 s",
     "details": "Elastico leggero ancorato davanti a te all'altezza delle spalle, impugnato con la mano anteriore. Esegui jab rapidi concentrandoti sul ritorno veloce della mano in guardia, contro la tensione. Rende il jab più rapido a rientrare e meno contrabile; non lasciar cadere il gomito.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Elastico leggero ancorato davanti a te all'altezza delle spalle. Impugnalo con la mano anteriore e mettiti in guardia a una distanza in cui l'elastico è appena teso quando la mano è al viso.",
+    "steps": [
+      "Parti in guardia: mani alte, mento basso, gomiti stretti.",
+      "Lancia il jab dritto in avanti all'altezza del viso, ruotando il pugno con il palmo verso il basso alla fine e la spalla che sale a proteggere il mento.",
+      "Appena il braccio è disteso tira subito indietro la mano lungo la stessa linea, più veloce dell'andata.",
+      "La mano torna esattamente alla guancia, in guardia, e solo allora parte il jab successivo.",
+      "Mantieni un ritmo rapido e regolare, espirando brevemente a ogni colpo."
+    ],
+    "errors": [
+      "Lasciar cadere il gomito o la mano al ritorno: il jab rientra basso e ti espone al contro.",
+      "Elastico troppo duro: il colpo rallenta e la spalla si irrigidisce.",
+      "Spingere il busto in avanti dietro il jab: perdi la guardia e l'equilibrio."
+    ],
+    "why": "Rende il jab più rapido a rientrare e meno facile da contrare; non lasciar cadere il gomito.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 152,
+            "y": 64
+          }
+        ]
+      },
+      {
+        "label": "Jab e ritorno",
+        "people": [
+          {
+            "pose": "attrezzi-2/jab",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 152,
+            "y": 64
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -24,
+            "dy": 4,
+            "bend": -8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--spostamenti-laterali-con-elastico-alle-ginocchia",
@@ -23246,7 +36148,47 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 m per lato, recupero 30 s",
     "details": "Miniband sopra le ginocchia, piedi alla larghezza delle spalle, in guardia bassa. Muoviti lateralmente con passi corti senza unire i piedi e senza perdere tensione. Attiva i glutei e stabilizza le ginocchia nel footwork; non far collassare le ginocchia verso l'interno.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Miniband sopra le ginocchia, piedi alla larghezza delle spalle. Piega leggermente le ginocchia e mettiti in guardia bassa, mani alte: la band deve essere già in tensione.",
+    "steps": [
+      "Fai un passo corto di lato con il piede che va nella direzione dello spostamento, spingendo il ginocchio verso l'esterno contro la band.",
+      "Avvicina l'altro piede quanto basta per tornare alla larghezza delle spalle: i piedi non si toccano mai.",
+      "Resta basso e alla stessa altezza per tutto il tragitto, senza saltellare.",
+      "Mani in guardia e sguardo avanti, come se l'avversario fosse davanti a te.",
+      "Percorri il tratto in una direzione, poi torna dall'altra con la stessa tecnica."
+    ],
+    "errors": [
+      "Ginocchia che crollano verso l'interno: i glutei non lavorano e sovraccarichi le ginocchia.",
+      "Unire i piedi a ogni passo: perdi la tensione e la base, come se ti facessi spingere sul ring.",
+      "Alzarti e abbassarti a ogni passo: diventi lento e prevedibile."
+    ],
+    "why": "Attiva i glutei e stabilizza le ginocchia nel footwork laterale.",
+    "figure": [
+      {
+        "label": "Guardia bassa, band tesa",
+        "people": [
+          {
+            "pose": "attrezzi-2/guardia-bassa"
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "knee",
+            "x": 71.9,
+            "y": 108.2
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 16,
+            "dy": 0,
+            "bend": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--pivot-con-elastico-in-vita",
@@ -23256,7 +36198,48 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 30 s per lato, recupero 30 s",
     "details": "Il compagno tiene l'elastico in vita da un lato. Esegui pivot sul piede anteriore e uscite d'angolo contro la tensione, tornando sempre in guardia. Allena gli angoli per uscire dalla linea d'attacco; ruota sull'avampiede e mantieni le mani alte.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Elastico agganciato in vita; il compagno lo tiene da un lato, a qualche metro, in modo che tiri di fianco. Tu sei in guardia con l'elastico teso.",
+    "steps": [
+      "Sali sull'avampiede anteriore e ruota il corpo di circa 90° facendo girare il piede posteriore attorno a quello anteriore, come una porta sui cardini.",
+      "Le mani restano alte e il mento basso durante tutta la rotazione.",
+      "Alla fine del pivot sei di nuovo in guardia, rivolto verso il nuovo angolo, con i piedi alla stessa distanza di prima.",
+      "Alterna pivot e piccole uscite d'angolo (un passo in diagonale), tornando sempre in guardia stabile.",
+      "Il compagno mantiene la tensione costante e si sposta con te, senza strattonare."
+    ],
+    "errors": [
+      "Ruotare sul tallone: sei lento e perdi l'equilibrio.",
+      "Abbassare le mani durante il giro: in combattimento è il momento in cui vieni colpito.",
+      "Farsi trascinare dall'elastico: i piedi si incrociano e perdi la guardia."
+    ],
+    "why": "Allena gli angoli per uscire dalla linea d'attacco; ruota sull'avampiede e tieni le mani alte.",
+    "figure": [
+      {
+        "label": "Pivot sull'avampiede",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": 10
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hip",
+            "x": 6,
+            "y": 68.1
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot2",
+            "dx": 36,
+            "dy": 8,
+            "bend": -14
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--face-pull-con-elastico",
@@ -23266,7 +36249,64 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 15, recupero 45 s",
     "details": "Elastico ancorato all'altezza degli occhi, prendilo con presa prona. Tira verso il viso aprendo i gomiti e ruotando le mani verso l'esterno, poi torna lento. Bilancia il lavoro di spinta dei pugni e protegge le spalle; non inarcare la schiena.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Elastico ancorato davanti a te all'altezza degli occhi. Prendilo con presa prona (palmi in basso), braccia tese, e fai un passo indietro finché è teso. Piedi alla larghezza delle anche, ginocchia morbide.",
+    "steps": [
+      "Stringi addome e glutei e tieni il busto fermo.",
+      "Tira l'elastico verso il viso portando i gomiti in alto e verso l'esterno, all'altezza delle spalle.",
+      "Alla fine ruota le mani verso l'esterno e indietro, come per mostrare i bicipiti: le mani arrivano ai lati della testa e le scapole si stringono.",
+      "Fermati un secondo in questa posizione, espirando.",
+      "Torna lentamente alle braccia tese controllando l'elastico, senza farti tirare in avanti."
+    ],
+    "errors": [
+      "Inarcare la schiena e tirare indietro con il corpo: il lavoro scappa dalle spalle alla zona lombare.",
+      "Gomiti bassi: diventa un rematore e lavorano poco le spalle posteriori.",
+      "Ritorno veloce: perdi metà del lavoro utile."
+    ],
+    "why": "Bilancia il lavoro di spinta dei pugni e protegge le spalle; non inarcare la schiena.",
+    "figure": [
+      {
+        "label": "Braccia tese",
+        "people": [
+          {
+            "pose": "attrezzi-2/face-pull-tesa",
+            "x": -25
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 155,
+            "y": 46
+          }
+        ]
+      },
+      {
+        "label": "Gomiti alti",
+        "people": [
+          {
+            "pose": "attrezzi-2/face-pull-tirata",
+            "x": -15
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 155,
+            "y": 46
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": -6,
+            "dy": -8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--rotazioni-esterne-con-elastico",
@@ -23276,7 +36316,48 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 15 per lato, recupero 30 s",
     "details": "Elastico ancorato all'altezza del gomito, gomito piegato a 90° e attaccato al fianco. Ruota l'avambraccio verso l'esterno e torna lentamente. Rinforza la cuffia dei rotatori, sollecitata da pugni e clinch; usa una resistenza leggera e non staccare il gomito.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Elastico ancorato di lato all'altezza del gomito. Mettiti in piedi di fianco all'ancoraggio, prendi l'elastico con la mano più lontana, gomito piegato a 90° e attaccato al fianco, avambraccio davanti alla pancia.",
+    "steps": [
+      "Metti un asciugamano arrotolato tra gomito e fianco se ti aiuta a tenerlo fermo.",
+      "Ruota l'avambraccio verso l'esterno, come una porta che si apre, tenendo il gomito incollato al fianco e il polso dritto.",
+      "Fermati quando senti che la spalla è al limite comodo della rotazione, senza ruotare il busto.",
+      "Torna lentamente in 2-3 secondi alla posizione di partenza.",
+      "Finita la serie girati e lavora l'altro braccio."
+    ],
+    "errors": [
+      "Staccare il gomito dal fianco: lavora il deltoide e non la cuffia dei rotatori.",
+      "Ruotare il busto per aiutarti: il movimento sembra ampio ma la spalla non lavora.",
+      "Elastico troppo forte: compensi e rischi di irritare la spalla."
+    ],
+    "why": "Rinforza la cuffia dei rotatori, sollecitata da pugni e clinch. Usa una resistenza leggera e lavora senza dolore.",
+    "figure": [
+      {
+        "label": "Gomito al fianco",
+        "people": [
+          {
+            "pose": "attrezzi-2/gomito-al-fianco",
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 150,
+            "y": 51.5
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -4,
+            "dy": -4,
+            "bend": -18
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--pull-apart-con-elastico",
@@ -23286,7 +36367,39 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 20, recupero 30 s",
     "details": "In piedi, elastico tenuto davanti al petto con braccia tese. Aprilo fino a toccare il petto stringendo le scapole, poi torna lento. Migliora la postura in guardia e la tenuta delle spalle nei round lunghi; non alzare le spalle verso le orecchie.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "In piedi, piedi alla larghezza delle anche. Tieni l'elastico davanti al petto con le braccia tese all'altezza delle spalle, mani alla larghezza delle spalle, palmi in basso.",
+    "steps": [
+      "Abbassa le spalle lontano dalle orecchie e contrai leggermente l'addome.",
+      "Apri le braccia di lato tenendole tese, finché l'elastico tocca il petto.",
+      "In fondo al movimento stringi le scapole come per tenere una matita tra di esse, ed espira.",
+      "Torna lentamente con le braccia davanti, senza perdere del tutto la tensione dell'elastico."
+    ],
+    "errors": [
+      "Spalle che salgono verso le orecchie: lavorano i trapezi invece delle spalle posteriori.",
+      "Piegare i gomiti: il movimento diventa più facile e meno utile.",
+      "Inarcare la schiena per finire il movimento."
+    ],
+    "why": "Migliora la postura in guardia e la tenuta delle spalle nei round lunghi.",
+    "figure": [
+      {
+        "label": "Apri fino al petto",
+        "people": [
+          {
+            "pose": "attrezzi-2/braccia-avanti",
+            "x": -10
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -26,
+            "dy": 0,
+            "bend": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--ponte-glutei-con-miniband",
@@ -23296,7 +36409,45 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 15, recupero 30 s",
     "details": "Supino, piedi a terra, miniband sopra le ginocchia. Spingi le ginocchia verso l'esterno e solleva il bacino stringendo i glutei, pausa di 1 s in alto. Attiva anca e glutei prima di calci e ginocchiate e protegge la zona lombare; non iperestendere la schiena.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Supino a terra, ginocchia piegate e piedi appoggiati alla larghezza delle anche, talloni a circa 30 cm dai glutei. Miniband sopra le ginocchia, braccia lungo i fianchi.",
+    "steps": [
+      "Spingi le ginocchia verso l'esterno contro la band, così che restino allineate con i piedi.",
+      "Premi sui talloni e solleva il bacino stringendo i glutei, finché spalle, anche e ginocchia sono in linea.",
+      "Fermati 1 secondo in alto con i glutei contratti e l'addome stretto, senza inarcare la schiena.",
+      "Scendi lentamente vertebra dopo vertebra fino a sfiorare il pavimento con il sedere, poi risali."
+    ],
+    "errors": [
+      "Salire troppo in alto inarcando la schiena: lavora la zona lombare invece dei glutei.",
+      "Ginocchia che si chiudono verso l'interno: perdi l'attivazione dei glutei laterali.",
+      "Spingere con le punte dei piedi: lavorano i quadricipiti più dei glutei."
+    ],
+    "why": "Attiva anca e glutei prima di calci e ginocchiate e protegge la zona lombare.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "attrezzi-2/ponte-giu"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -20
+          }
+        ]
+      },
+      {
+        "label": "Bacino su",
+        "people": [
+          {
+            "pose": "attrezzi-2/ponte-su"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--clamshell-con-elastico",
@@ -23306,7 +36457,39 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 15 per lato, recupero 30 s",
     "details": "Sdraiato sul fianco, ginocchia piegate e miniband sopra le ginocchia. Apri il ginocchio superiore mantenendo i piedi uniti e il bacino fermo. Rinforza il medio gluteo, chiave per stabilità sul piede d'appoggio nei calci; il bacino non deve ruotare all'indietro.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Sdraiato sul fianco, con la testa appoggiata sul braccio a terra. Anche piegate a circa 45° e ginocchia a 90°, piedi uniti; miniband sopra le ginocchia.",
+    "steps": [
+      "Allinea spalle e anche una sopra l'altra e appoggia la mano libera sul fianco per sentire che il bacino non si muove.",
+      "Tenendo i piedi uniti, apri il ginocchio superiore verso l'alto contro la band, come una conchiglia che si apre.",
+      "Sali solo finché il bacino resta fermo; fermati un secondo stringendo il gluteo laterale.",
+      "Richiudi lentamente il ginocchio senza lasciar sbattere le gambe.",
+      "Finita la serie girati sull'altro fianco."
+    ],
+    "errors": [
+      "Bacino che ruota all'indietro per aprire di più: il gluteo medio smette di lavorare.",
+      "Staccare i piedi: l'esercizio cambia e perde efficacia.",
+      "Movimento veloce e a scatti: lavori di slancio invece che di forza."
+    ],
+    "why": "Rinforza il medio gluteo, chiave per la stabilità sul piede d'appoggio nei calci; il bacino non deve ruotare all'indietro.",
+    "figure": [
+      {
+        "label": "Apri il ginocchio",
+        "people": [
+          {
+            "pose": "attrezzi-2/fianco-clamshell"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 2,
+            "dy": -18,
+            "bend": -6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--chop-diagonale-con-elastico",
@@ -23316,7 +36499,65 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 per lato, recupero 45 s",
     "details": "Elastico ancorato in alto di lato, prendilo con due mani. Tira in diagonale verso l'anca opposta ruotando busto e piedi, poi risali controllando. Rinforza la rotazione di busto usata in gomitate e ganci; mantieni le braccia quasi tese e il core contratto.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Elastico ancorato in alto di lato. Mettiti di fianco all'ancoraggio, piedi poco più larghi delle spalle, e prendi l'elastico con due mani sopra la spalla più vicina all'ancoraggio, braccia quasi tese.",
+    "steps": [
+      "Contrai l'addome come per incassare un colpo.",
+      "Tira l'elastico in diagonale verso il basso, fino all'anca opposta, tenendo le braccia quasi tese.",
+      "Mentre tiri ruota il busto e fai girare il piede posteriore sull'avampiede, piegando un po' le ginocchia: la forza parte dalle gambe.",
+      "Espira con decisione durante la tirata.",
+      "Risali lentamente lungo la stessa diagonale controllando l'elastico, poi ripeti. Finita la serie cambia lato."
+    ],
+    "errors": [
+      "Tirare solo con le braccia piegandole: il busto non ruota e il core lavora poco.",
+      "Piedi fermi e piatti: la rotazione si scarica sulla schiena.",
+      "Farsi riportare su di scatto dall'elastico: perdi il controllo e il lavoro eccentrico."
+    ],
+    "why": "Rinforza la rotazione di busto usata in gomitate e ganci; tieni le braccia quasi tese e il core contratto.",
+    "figure": [
+      {
+        "label": "Mani in alto",
+        "people": [
+          {
+            "pose": "attrezzi-2/chop-alto",
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 150,
+            "y": 8
+          }
+        ]
+      },
+      {
+        "label": "Diagonale in basso",
+        "people": [
+          {
+            "pose": "attrezzi-2/chop-basso",
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 150,
+            "y": 8
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -14,
+            "dy": 10,
+            "bend": 8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--dead-bug-con-elastico",
@@ -23326,7 +36567,65 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 8 per lato, recupero 30 s",
     "details": "Supino, elastico ancorato dietro la testa e tenuto a braccia tese sopra il petto. Distendi una gamba alla volta mantenendo le braccia ferme contro la tensione. Allena la stabilità del tronco per incassare e calciare; la zona lombare resta schiacciata a terra.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Supino a terra con l'elastico ancorato dietro la testa, vicino al pavimento. Tienilo con due mani a braccia tese sopra il petto; anche e ginocchia piegate a 90°, tibie parallele al pavimento.",
+    "steps": [
+      "Schiaccia la zona lombare a terra contraendo l'addome: deve restare appoggiata per tutto l'esercizio.",
+      "Tira leggermente l'elastico verso le gambe e tieni le braccia ferme in questa posizione.",
+      "Distendi lentamente una gamba in avanti fino a sfiorare il pavimento con il tallone, espirando.",
+      "Riporta la gamba a 90° e ripeti con l'altra, alternando.",
+      "Muoviti piano: se la schiena si stacca da terra riduci l'ampiezza."
+    ],
+    "errors": [
+      "Zona lombare che si inarca quando la gamba scende: il carico va sulla schiena.",
+      "Braccia che si muovono verso la testa seguendo l'elastico: perdi la tensione del core.",
+      "Trattenere il fiato: l'addome si gonfia invece di stabilizzare."
+    ],
+    "why": "Allena la stabilità del tronco per incassare e calciare; la zona lombare resta schiacciata a terra.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "attrezzi-2/dead-bug-su",
+            "x": 10
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 11.0,
+            "y": 139
+          }
+        ]
+      },
+      {
+        "label": "Gamba distesa",
+        "people": [
+          {
+            "pose": "attrezzi-2/dead-bug-estesa",
+            "x": 10
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 11.0,
+            "y": 139
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 18,
+            "dy": 4,
+            "bend": -8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--tirata-del-collo-in-clinch-con-elastico",
@@ -23336,7 +36635,64 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 12, recupero 45 s",
     "details": "Elastico ancorato in alto davanti a te, mani giunte come nella presa al collo. Tira verso il petto con i gomiti stretti, abbassando il baricentro, e risali lento. Rinforza la presa e la tirata per spezzare la postura dell'avversario; tieni i gomiti chiusi e la schiena dritta.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Elastico ancorato in alto davanti a te, più in alto della tua testa. Prendilo con le mani una sopra l'altra, come nella presa alla nuca del clinch (mai dita intrecciate), braccia distese in avanti e verso l'alto.",
+    "steps": [
+      "Fai un passo indietro finché l'elastico è teso; piedi alla larghezza delle spalle, anche avanti, schiena dritta.",
+      "Tira le mani verso il petto chiudendo i gomiti verso il centro, come se portassi giù la testa dell'avversario.",
+      "Mentre tiri piega un po' le ginocchia e abbassa il baricentro: la tirata viene dal peso del corpo, non solo dalle braccia.",
+      "Espira con forza alla fine della tirata, con le mani all'altezza del petto e i gomiti stretti.",
+      "Risali lentamente lasciando tornare l'elastico sotto controllo, senza aprire i gomiti."
+    ],
+    "errors": [
+      "Gomiti larghi: in clinch l'avversario infila le braccia dentro e rompe la presa.",
+      "Piegare la schiena in avanti invece delle ginocchia: perdi la postura dominante.",
+      "Intrecciare le dita: abitudine pericolosa che in sparring o gara porta a infortuni alle dita."
+    ],
+    "why": "Rinforza la presa e la tirata per spezzare la postura dell'avversario in clinch; tieni i gomiti chiusi e la schiena dritta.",
+    "figure": [
+      {
+        "label": "Braccia in alto",
+        "people": [
+          {
+            "pose": "attrezzi-2/tirata-alta",
+            "x": -15
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 150,
+            "y": 6
+          }
+        ]
+      },
+      {
+        "label": "Tirata al petto",
+        "people": [
+          {
+            "pose": "attrezzi-2/tirata-petto",
+            "x": -15
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 150,
+            "y": 6
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -4,
+            "dy": 14
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "elastico--ripresa-colpi-con-elastico-in-vita",
@@ -23346,7 +36702,76 @@ export const toolExercises: Exercise[] = [
     "dose": "3 riprese da 3 min, recupero 1 min",
     "details": "Il compagno trattiene l'elastico in vita mentre esegui combinazioni di pugni, calci e ginocchiate avanzando. Mantieni ritmo costante e pressione per tutta la ripresa. Allena la resistenza alla pressione in avanti tipica della Muay Thai; non sacrificare la tecnica alla fatica.",
     "equipment": "Elastici",
-    "tool": "elastico"
+    "tool": "elastico",
+    "setup": "Elastico agganciato alla cintura in vita; il compagno è dietro di te e lo tiene con due mani, piedi ben piantati. Tu sei in guardia con i guantoni o le fasce, elastico teso.",
+    "steps": [
+      "Al via avanza a passi corti lanciando combinazioni di 2-4 colpi: pugni, calci circolari, teep e ginocchiate.",
+      "Ogni colpo parte da una guardia corretta e finisce in guardia: mani alte, mento basso.",
+      "Spingi con l'avampiede posteriore per avanzare contro la resistenza; tra una combinazione e l'altra non fermarti, muovi i piedi.",
+      "Respira a ogni colpo con un'espirazione breve e mantieni lo stesso ritmo per tutta la ripresa.",
+      "Il compagno resiste con tensione costante, senza strattonare, e cammina dietro di te quando avanzi."
+    ],
+    "errors": [
+      "Lasciare che la fatica rovini la tecnica: i calci diventano spinte e le mani scendono.",
+      "Inclinarsi troppo in avanti per vincere l'elastico: perdi l'equilibrio e la potenza dei colpi.",
+      "Partire a tutta velocità: a metà ripresa ti spegni."
+    ],
+    "why": "Allena la resistenza alla pressione in avanti tipica della Muay Thai; non sacrificare la tecnica alla fatica.",
+    "figure": [
+      {
+        "label": "Pugni avanzando",
+        "people": [
+          {
+            "pose": "attrezzi-2/diretto",
+            "x": 28,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/trattiene",
+            "x": -52,
+            "partner": true
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hip",
+            "x": 61.9,
+            "y": 45.0
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 22,
+            "dy": 0
+          }
+        ]
+      },
+      {
+        "label": "Ginocchiata",
+        "people": [
+          {
+            "pose": "attrezzi-2/ginocchiata",
+            "x": 28,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/trattiene",
+            "x": -52,
+            "partner": true
+          }
+        ],
+        "props": [
+          {
+            "type": "band",
+            "at": "hip",
+            "x": 61.9,
+            "y": 45.0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pao--parata-del-calcio-e-risposta",
@@ -23356,7 +36781,93 @@ export const toolExercises: Exercise[] = [
     "dose": "3 riprese da 2 min, 1 min recupero",
     "details": "Il partner simula un calcio basso o al corpo con il pao; l'atleta alza la tibia con guardia chiusa e rientra con diretto-calcio. Allena la risposta automatica dopo la difesa, decisiva per vincere gli scambi. Errore comune: abbassare le mani mentre si alza la gamba.",
     "equipment": "Pao",
-    "tool": "pao"
+    "tool": "pao",
+    "setup": "In coppia, a distanza di calcio. L'atleta è in guardia; il partner tiene un pao per mano e lo usa per simulare un calcio basso o al corpo, alternando il lato senza preavviso.",
+    "steps": [
+      "Il partner fa partire il pao verso la coscia o il fianco dell'atleta, come se fosse un calcio circolare.",
+      "L'atleta alza la gamba dal lato attaccato piegando il ginocchio, tibia verticale e punta del piede verso il basso, ginocchio leggermente aperto verso l'esterno: il pao si ferma contro la tibia.",
+      "Durante la parata le mani restano alte e chiuse davanti al viso, il gomito del lato della gamba alzata scende a coprire il fianco.",
+      "Appena il piede torna a terra l'atleta risponde subito con diretto e calcio circolare sui pao che il partner ripresenta.",
+      "Dopo la risposta l'atleta torna in guardia; il partner cambia lato e ritmo per non essere prevedibile."
+    ],
+    "errors": [
+      "Abbassare le mani mentre si alza la gamba: in combattimento arriva il pugno al viso.",
+      "Parare con il piede o la coscia invece che con la tibia: fa male e non ferma il calcio.",
+      "Fermarsi dopo la parata: l'avversario mantiene l'iniziativa."
+    ],
+    "why": "Allena la risposta automatica dopo la difesa, decisiva per vincere gli scambi. Il partner simula il calcio con forza moderata.",
+    "figure": [
+      {
+        "label": "Parata con la tibia",
+        "people": [
+          {
+            "pose": "attrezzi-2/parata",
+            "x": -25,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/pao-avanza",
+            "x": 36,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dx": 4,
+                "dy": 16
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          }
+        ]
+      },
+      {
+        "label": "Risposta: calcio",
+        "people": [
+          {
+            "pose": "calcio-circolare",
+            "x": -42,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/pao-stance",
+            "x": 40,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dx": 22,
+                "dy": 4
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 20,
+            "dy": 18,
+            "bend": 14
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pao--ginocchiate-dal-clinch-ai-pao",
@@ -23366,7 +36877,87 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 30 s, 30 s recupero",
     "details": "L'atleta controlla il collo del partner, che tiene i pao sovrapposti davanti all'addome; tira ginocchiate alternate spingendo le anche avanti e tirando giù la testa. Costruisce potenza e controllo nel corpo a corpo. Il partner protegge bene l'addome; non piegare la schiena all'indietro.",
     "equipment": "Pao",
-    "tool": "pao"
+    "tool": "pao",
+    "setup": "In coppia, a distanza di clinch. Il partner tiene i due pao sovrapposti davanti all'addome, gomiti stretti. L'atleta afferra la sua nuca con le mani una sopra l'altra (mai dita intrecciate), gomiti chiusi e avambracci contro le clavicole.",
+    "steps": [
+      "L'atleta tira la testa del partner leggermente verso il basso usando il peso del corpo, mantenendo il proprio busto alto e le anche avanti.",
+      "Sale sull'avampiede della gamba d'appoggio e porta su il ginocchio opposto con la punta del piede rivolta in basso.",
+      "Colpisce il pao con la punta del ginocchio spingendo le anche in avanti, mentre tira la testa verso il ginocchio.",
+      "Riappoggia il piede e alterna subito con l'altra gamba, mantenendo la presa salda.",
+      "Il partner incassa assorbendo con le gambe piegate e resta compatto, senza spingere contro."
+    ],
+    "errors": [
+      "Piegare la schiena all'indietro: il ginocchio perde forza e la tua postura diventa debole.",
+      "Gomiti larghi nella presa: il partner può rompere il clinch.",
+      "Colpire con la coscia invece che con la punta del ginocchio."
+    ],
+    "why": "Costruisce potenza e controllo nel corpo a corpo. Il partner protegge bene l'addome con i pao e l'atleta tira la nuca con gradualità.",
+    "figure": [
+      {
+        "label": "Ginocchiata in presa",
+        "people": [
+          {
+            "pose": "attrezzi-2/ginocchiata",
+            "x": -28,
+            "gloves": true,
+            "reach": {
+              "hand": {
+                "who": 1,
+                "at": "head",
+                "dx": -6,
+                "dy": -3
+              },
+              "hand2": {
+                "who": 1,
+                "at": "head",
+                "dx": -8,
+                "dy": 2
+              }
+            }
+          },
+          {
+            "pose": "attrezzi-2/pao-addome",
+            "x": 36,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dx": 6,
+                "dy": -6
+              },
+              "hand2": {
+                "who": 0,
+                "at": "knee",
+                "dx": 8,
+                "dy": 4
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          },
+          {
+            "type": "pad",
+            "at": "hand2",
+            "who": 1
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 14,
+            "dy": -10,
+            "bend": 6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pao--raffica-di-ginocchiate-20-s",
@@ -23376,7 +36967,135 @@ export const toolExercises: Exercise[] = [
     "dose": "6 × 20 s, 40 s recupero",
     "details": "Il partner tiene i pao uniti davanti al busto; l'atleta afferra i bordi e alterna ginocchiate senza fermarsi, mantenendo il ritmo fino all'ultimo secondo. Simula le fasi finali di ripresa in cui si deve continuare a segnare. Errore: perdere l'appoggio sull'avampiede e caricare sul tallone.",
     "equipment": "Pao",
-    "tool": "pao"
+    "tool": "pao",
+    "setup": "In coppia, molto vicini. Il partner tiene i pao uniti davanti al busto, gomiti stretti e un piede dietro per assorbire. L'atleta afferra i bordi superiori dei pao con le due mani.",
+    "steps": [
+      "Al via l'atleta porta su il ginocchio, punta del piede in basso, e colpisce il centro dei pao spingendo le anche avanti.",
+      "Appena il piede tocca terra parte l'altro ginocchio: le ginocchiate si alternano senza pause, come una corsa sul posto molto potente.",
+      "Il peso resta sull'avampiede della gamba d'appoggio, mai sul tallone; il busto resta alto.",
+      "Le mani tirano leggermente i pao verso il ginocchio per dare più forza a ogni colpo.",
+      "Mantieni lo stesso ritmo fino all'ultimo secondo, respirando corto a ogni ginocchiata. Il partner tiene i pao fermi e compatti."
+    ],
+    "errors": [
+      "Perdere l'appoggio sull'avampiede e caricare sul tallone: le ginocchiate diventano lente e deboli.",
+      "Piegarsi in avanti sui pao: colpisci con la coscia e non spingi con le anche.",
+      "Rallentare nelle ultime ripetizioni invece di spingere fino alla fine."
+    ],
+    "why": "Simula le fasi finali di ripresa in cui si deve continuare a segnare.",
+    "figure": [
+      {
+        "label": "Ginocchio destro",
+        "people": [
+          {
+            "pose": "attrezzi-2/ginocchiata",
+            "x": -28,
+            "gloves": true,
+            "reach": {
+              "hand": {
+                "who": 1,
+                "at": "hand",
+                "dx": 0,
+                "dy": -12
+              },
+              "hand2": {
+                "who": 1,
+                "at": "hand2",
+                "dx": 0,
+                "dy": -12
+              }
+            }
+          },
+          {
+            "pose": "attrezzi-2/pao-busto",
+            "x": 34,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dx": 6,
+                "dy": -6
+              },
+              "hand2": {
+                "who": 0,
+                "at": "knee",
+                "dx": 8,
+                "dy": 4
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          },
+          {
+            "type": "pad",
+            "at": "hand2",
+            "who": 1
+          }
+        ]
+      },
+      {
+        "label": "Ginocchio sinistro",
+        "people": [
+          {
+            "pose": "attrezzi-2/ginocchiata-2",
+            "x": -28,
+            "gloves": true,
+            "reach": {
+              "hand": {
+                "who": 1,
+                "at": "hand",
+                "dx": 0,
+                "dy": -12
+              },
+              "hand2": {
+                "who": 1,
+                "at": "hand2",
+                "dx": 0,
+                "dy": -12
+              }
+            }
+          },
+          {
+            "pose": "attrezzi-2/pao-busto",
+            "x": 34,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee2",
+                "dx": 6,
+                "dy": -6
+              },
+              "hand2": {
+                "who": 0,
+                "at": "knee2",
+                "dx": 8,
+                "dy": 4
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          },
+          {
+            "type": "pad",
+            "at": "hand2",
+            "who": 1
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pao--calcio-circolare-singolo-esplosivo",
@@ -23386,7 +37105,86 @@ export const toolExercises: Exercise[] = [
     "dose": "5 × 5 per lato, 1 min recupero",
     "details": "Da guardia ferma l'atleta ruota il piede d'appoggio e calcia attraverso il pao con anca e spalla, poi torna subito in guardia. Ogni calcio è un colpo da KO, con recupero completo tra le serie. Il partner tiene il pao saldo e incassa col corpo; errore comune: caricare il calcio in modo visibile.",
     "equipment": "Pao",
-    "tool": "pao"
+    "tool": "pao",
+    "setup": "In coppia, a distanza di calcio. Il partner tiene il pao saldo contro il fianco dal lato del calcio, gomito chiuso dietro il pao e gambe piegate. L'atleta è in guardia ferma.",
+    "steps": [
+      "L'atleta parte da guardia ferma, senza caricare: nessun passo o movimento che anticipi il calcio.",
+      "Ruota di scatto sull'avampiede della gamba d'appoggio, tallone verso il bersaglio, e lancia la gamba posteriore.",
+      "Calcia attraverso il pao con la parte bassa della tibia, come per passarci dentro: anca e spalla ruotano insieme nel colpo.",
+      "Il braccio dello stesso lato scende indietro, l'altra mano resta alta davanti al viso.",
+      "Dopo l'impatto torna subito in guardia. Recupera completamente prima del calcio successivo: ogni calcio è al massimo.",
+      "Il partner incassa assorbendo con il corpo, senza andare incontro al calcio."
+    ],
+    "errors": [
+      "Caricare il calcio in modo visibile (passo, spalla che arretra): l'avversario lo legge e lo blocca.",
+      "Piede d'appoggio piatto: le anche non ruotano e il calcio si ferma in superficie.",
+      "Calciare senza recuperare tra le ripetizioni: diventa resistenza e perdi esplosività."
+    ],
+    "why": "Allena il calcio da KO, partendo da fermo. Il partner tiene il pao ben aderente al corpo per non farsi male al braccio.",
+    "figure": [
+      {
+        "label": "Guardia ferma",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": -25,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/pao-stance",
+            "x": 40,
+            "flip": true,
+            "partner": true
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          }
+        ]
+      },
+      {
+        "label": "Attraverso il pao",
+        "people": [
+          {
+            "pose": "calcio-circolare",
+            "x": -42,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/pao-stance",
+            "x": 40,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dx": 22,
+                "dy": 4
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 20,
+            "dy": 18,
+            "bend": 14
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pao--schivata-del-pao-e-contro",
@@ -23396,7 +37194,85 @@ export const toolExercises: Exercise[] = [
     "dose": "3 riprese da 2 min, 1 min recupero",
     "details": "Il partner fa partire un gancio largo con il pao; l'atleta piega le gambe e passa sotto, poi risale con gancio-diretto sui pao già ripresentati. Insegna a restare a distanza utile dopo la difesa. Errore: piegarsi in avanti col busto invece di flettere le ginocchia, esponendo il viso.",
     "equipment": "Pao",
-    "tool": "pao"
+    "tool": "pao",
+    "setup": "In coppia, a distanza di pugno. Il partner tiene un pao per mano; l'atleta è in guardia, mani alte e mento basso.",
+    "steps": [
+      "Il partner lancia un gancio largo con il pao all'altezza della testa dell'atleta, a velocità controllata.",
+      "L'atleta piega le ginocchia e scende sotto la traiettoria, busto quasi dritto e sguardo sul partner, mani sempre alte.",
+      "Risale subito spingendo con le gambe e usa la risalita per lanciare il contrattacco: gancio e diretto.",
+      "Il partner, appena finito il suo gancio, ripresenta i pao all'altezza del viso per ricevere i colpi.",
+      "L'atleta resta a distanza utile dopo la combinazione e torna in guardia; si ripete cambiando il lato del gancio."
+    ],
+    "errors": [
+      "Piegarsi in avanti con il busto invece di flettere le ginocchia: esponi il viso alla ginocchiata.",
+      "Abbassare le mani durante la schivata.",
+      "Scappare indietro dopo la schivata: perdi la distanza per il contrattacco."
+    ],
+    "why": "Insegna a schivare restando a distanza utile per rispondere. Il partner lancia il gancio con il pao piano e sopra la testa abbassata.",
+    "figure": [
+      {
+        "label": "Passa sotto",
+        "people": [
+          {
+            "pose": "attrezzi-2/schivata",
+            "x": -22,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/pao-gancio",
+            "x": 34,
+            "flip": true,
+            "partner": true
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": -4,
+            "dy": 16,
+            "bend": 8
+          }
+        ]
+      },
+      {
+        "label": "Contro di gancio",
+        "people": [
+          {
+            "pose": "attrezzi-2/gancio",
+            "x": -28,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/pao-testa",
+            "x": 34,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "hand",
+                "dx": 8,
+                "dy": 0
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pao--uscita-laterale-e-calcio",
@@ -23406,7 +37282,105 @@ export const toolExercises: Exercise[] = [
     "dose": "4 riprese da 2 min, 1 min recupero",
     "details": "Il partner avanza spingendo con i pao; l'atleta fa un passo diagonale fuori linea, ruota sul piede avanti e calcia il pao presentato sul fianco aperto. Serve a non farsi chiudere alle corde. Errore comune: indietreggiare in linea retta invece di cambiare angolo.",
     "equipment": "Pao",
-    "tool": "pao"
+    "tool": "pao",
+    "setup": "In coppia, a distanza media. Il partner ha un pao per mano e cammina in avanti verso l'atleta, che è in guardia.",
+    "steps": [
+      "Il partner avanza spingendo con i pao, come un avversario che vuole chiuderti alle corde.",
+      "L'atleta non indietreggia in linea retta: fa un passo in diagonale fuori dalla sua linea con il piede anteriore, uscendo verso il lato aperto.",
+      "Ruota sull'avampiede anteriore per rimettersi di fronte al fianco del partner, mani alte.",
+      "Il partner si ferma e presenta un pao sul fianco aperto.",
+      "L'atleta calcia subito con un calcio circolare sul pao, poi torna in guardia e si ricomincia."
+    ],
+    "errors": [
+      "Indietreggiare in linea retta invece di cambiare angolo: finisci alle corde.",
+      "Passo laterale troppo lungo: perdi l'equilibrio e il calcio arriva in ritardo.",
+      "Calciare prima di essere girato verso il bersaglio: il calcio va a vuoto."
+    ],
+    "why": "Serve a non farsi chiudere alle corde e a punire chi avanza senza controllo.",
+    "figure": [
+      {
+        "label": "Il partner avanza",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": -28,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/pao-avanza",
+            "x": 30,
+            "flip": true,
+            "partner": true
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          },
+          {
+            "type": "pad",
+            "at": "hand2",
+            "who": 1
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 14,
+            "dy": -8,
+            "bend": -14
+          },
+          {
+            "at": "hip",
+            "dx": -18,
+            "dy": 0,
+            "bend": 0,
+            "who": 1
+          }
+        ]
+      },
+      {
+        "label": "Fuori linea e calcio",
+        "people": [
+          {
+            "pose": "calcio-circolare",
+            "x": -42,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/pao-stance",
+            "x": 40,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dx": 22,
+                "dy": 4
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 20,
+            "dy": 18,
+            "bend": 14
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pao--pressione-all-angolo-ai-pao",
@@ -23416,7 +37390,121 @@ export const toolExercises: Exercise[] = [
     "dose": "3 riprese da 3 min, 1 min recupero",
     "details": "Il partner arretra lentamente presentando i pao; l'atleta avanza a passi corti con combinazioni di 3-4 colpi senza pause e chiude con ginocchiata quando arriva all'angolo. Allena il ritmo di pressione tipico dei fighter aggressivi. Errore: avanzare con il mento alto e la guardia aperta.",
     "equipment": "Pao",
-    "tool": "pao"
+    "tool": "pao",
+    "setup": "In coppia al centro del ring o della sala. Il partner ha un pao per mano e arretra lentamente verso un angolo; l'atleta è in guardia davanti a lui.",
+    "steps": [
+      "Il partner arretra a passi lenti presentando i pao per pugni, calci e ginocchiate.",
+      "L'atleta avanza a passi corti, senza incrociare i piedi, e lancia combinazioni di 3-4 colpi senza pause tra una e l'altra.",
+      "Ogni combinazione finisce con un passo avanti per tagliare la strada al partner, mani alte e mento basso.",
+      "Quando il partner arriva all'angolo, l'atleta chiude con una ginocchiata (o presa al collo e ginocchiata) sui pao davanti all'addome.",
+      "Si torna al centro e si ricomincia, mantenendo la pressione per tutta la ripresa."
+    ],
+    "errors": [
+      "Avanzare con il mento alto e la guardia aperta: chi arretra ti colpisce in contro.",
+      "Passi lunghi e piedi incrociati: perdi equilibrio e potenza.",
+      "Fermarsi tra le combinazioni: il partner riprende spazio."
+    ],
+    "why": "Allena il ritmo di pressione tipico dei fighter aggressivi. Il partner arretra guardando dove va.",
+    "figure": [
+      {
+        "label": "Avanza e colpisci",
+        "people": [
+          {
+            "pose": "attrezzi-2/diretto",
+            "x": -32,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/pao-arretra",
+            "x": 34,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "hand2",
+                "dx": 8,
+                "dy": 0
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 20,
+            "dy": 0
+          }
+        ]
+      },
+      {
+        "label": "All'angolo: ginocchiata",
+        "people": [
+          {
+            "pose": "attrezzi-2/ginocchiata",
+            "x": -12,
+            "gloves": true,
+            "reach": {
+              "hand": {
+                "who": 1,
+                "at": "head",
+                "dx": -6,
+                "dy": -3
+              },
+              "hand2": {
+                "who": 1,
+                "at": "head",
+                "dx": -8,
+                "dy": 2
+              }
+            }
+          },
+          {
+            "pose": "attrezzi-2/pao-addome",
+            "x": 46,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dx": 6,
+                "dy": -6
+              },
+              "hand2": {
+                "who": 0,
+                "at": "knee",
+                "dx": 8,
+                "dy": 4
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          },
+          {
+            "type": "pad",
+            "at": "hand2",
+            "who": 1
+          },
+          {
+            "type": "line",
+            "x": 154
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pao--gancio-al-corpo-e-calcio-basso",
@@ -23426,7 +37514,93 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 10 per lato, 45 s recupero",
     "details": "Il partner tiene un pao al fianco per il gancio, poi abbassa l'altro sulla coscia; l'atleta lega i due colpi senza riposizionarsi, sfruttando la rotazione del gancio per caricare il calcio. Apre la guardia avversaria in basso. Errore: rialzarsi tra i due colpi perdendo velocità.",
     "equipment": "Pao",
-    "tool": "pao"
+    "tool": "pao",
+    "setup": "In coppia, a distanza corta. Il partner tiene un pao contro il fianco (per il gancio al fegato) e l'altro pronto più in basso; l'atleta è in guardia.",
+    "steps": [
+      "L'atleta piega leggermente le ginocchia e lancia il gancio al corpo con la mano anteriore sul pao al fianco, gomito vicino al corpo e rotazione di anca e piede.",
+      "Il partner, appena ricevuto il gancio, abbassa l'altro pao all'esterno della coscia.",
+      "Senza rialzarsi né riposizionare i piedi, l'atleta sfrutta la rotazione del gancio per caricare il calcio basso con la gamba avanti.",
+      "Calcia la coscia del pao con la parte bassa della tibia, ruotando sull'avampiede d'appoggio, mani alte.",
+      "Torna in guardia e ripeti: i due colpi devono uscire come un unico movimento."
+    ],
+    "errors": [
+      "Rialzarsi tra i due colpi: perdi velocità e l'avversario ha il tempo di reagire.",
+      "Abbassare la mano opposta durante il gancio al corpo.",
+      "Calciare con il collo del piede invece che con la tibia."
+    ],
+    "why": "Apre la guardia avversaria in basso: il gancio al fegato fa abbassare le braccia e il calcio arriva sulla coscia scoperta.",
+    "figure": [
+      {
+        "label": "Gancio al fegato",
+        "people": [
+          {
+            "pose": "attrezzi-2/gancio-corpo",
+            "x": -24,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/pao-stance",
+            "x": 34,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "hand",
+                "dx": 8,
+                "dy": 0
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          }
+        ]
+      },
+      {
+        "label": "Calcio basso",
+        "people": [
+          {
+            "pose": "attrezzi-2/calcio-basso",
+            "x": -40,
+            "gloves": true
+          },
+          {
+            "pose": "attrezzi-2/pao-stance",
+            "x": 34,
+            "flip": true,
+            "partner": true,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "ankle",
+                "dx": 2,
+                "dy": 0
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "pad",
+            "at": "hand",
+            "who": 1
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 16,
+            "dy": 20,
+            "bend": 12
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--clean-con-manubri",
@@ -23436,7 +37610,66 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 5 ripetizioni, recupero 90 s",
     "details": "Parti con manubri sopra le ginocchia, anche indietro; estendi di colpo anche e ginocchia e ricevi i pesi sulle spalle con i gomiti avanti. Sviluppa la tripla estensione che spinge ginocchiate e calci. Mantieni la schiena neutra e non tirare con le braccia.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "In piedi con un manubrio per mano, piedi alla larghezza delle anche. Piega le anche portando il sedere indietro finché i manubri arrivano appena sopra le ginocchia: schiena neutra, braccia distese, spalle sopra i manubri.",
+    "steps": [
+      "Contrai l'addome e tieni lo sguardo avanti, a qualche metro da te.",
+      "Distendi di colpo anche, ginocchia e caviglie insieme, come in un salto: i manubri salgono grazie alla spinta delle gambe.",
+      "Alla fine della spinta alza le spalle e tira i gomiti in alto, tenendo i manubri vicini al corpo.",
+      "Ruota rapidamente i gomiti sotto e avanti e ricevi i manubri sulle spalle, piegando un po' le ginocchia per assorbire.",
+      "Alzati in piedi, poi riporta i manubri sopra le ginocchia con controllo e riparti."
+    ],
+    "errors": [
+      "Tirare con le braccia invece che con le gambe: il movimento diventa lento e sforzi i gomiti.",
+      "Schiena arrotondata nella posizione di partenza: il carico finisce sulla zona lombare.",
+      "Ricevere i manubri a gambe tese: il colpo arriva su schiena e polsi."
+    ],
+    "why": "Sviluppa la tripla estensione di anche, ginocchia e caviglie che spinge ginocchiate e calci.",
+    "figure": [
+      {
+        "label": "Sopra le ginocchia",
+        "people": [
+          {
+            "pose": "attrezzi-2/hang-db"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 6,
+            "dy": -18
+          }
+        ]
+      },
+      {
+        "label": "Manubri sulle spalle",
+        "people": [
+          {
+            "pose": "attrezzi-2/rack-spalle-db"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--jump-squat-con-manubri",
@@ -23446,7 +37679,67 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 6 ripetizioni, recupero 90 s",
     "details": "Con manubri leggeri lungo i fianchi scendi a mezzo squat e salta più in alto possibile, atterrando morbido e ripartendo. Migliora la reattività delle gambe per entrare ed uscire dalla distanza. Usa carichi bassi (10-20% del peso corporeo) e ginocchia allineate all'atterraggio.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "In piedi con un manubrio leggero per mano lungo i fianchi (circa il 10-20% del tuo peso in totale), piedi alla larghezza delle spalle e punte leggermente aperte.",
+    "steps": [
+      "Scendi a mezzo squat spingendo il sedere indietro e piegando le ginocchia, busto inclinato in avanti e schiena dritta. Le braccia restano distese lungo i fianchi.",
+      "Senza fermarti a lungo, spingi forte con le gambe e salta il più in alto possibile, distendendo anche, ginocchia e caviglie.",
+      "In aria tieni i manubri vicini al corpo: non devono oscillare.",
+      "Atterra prima sull'avampiede e poi sul tallone, piegando le ginocchia per ammortizzare in silenzio, e riparti con il salto successivo.",
+      "Espira nella spinta, inspira in discesa."
+    ],
+    "errors": [
+      "Ginocchia che cadono verso l'interno all'atterraggio: il ginocchio subisce il carico.",
+      "Atterrare a gambe tese o sui talloni: il colpo arriva su ginocchia e schiena.",
+      "Usare manubri pesanti: il salto si abbassa e perdi esplosività."
+    ],
+    "why": "Migliora la reattività delle gambe per entrare e uscire dalla distanza. Carichi bassi e atterraggi morbidi, con ginocchia allineate ai piedi.",
+    "figure": [
+      {
+        "label": "Mezzo squat",
+        "people": [
+          {
+            "pose": "attrezzi-2/squat-db-fianchi"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -28
+          }
+        ]
+      },
+      {
+        "label": "Salto",
+        "people": [
+          {
+            "pose": "attrezzi-2/salto-db",
+            "air": 22
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--push-press-con-manubri",
@@ -23456,7 +37749,65 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 6 ripetizioni, recupero 90 s",
     "details": "Manubri alle spalle, fai un breve piegamento di ginocchia e spingi esplosivo trasferendo la forza dalle gambe alle braccia fino a braccia distese. Insegna a collegare gambe e spalle come nel pugno. Evita di inarcare la zona lombare, glutei e addome contratti.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "In piedi, piedi alla larghezza delle anche. Tieni i manubri sulle spalle, gomiti leggermente avanti, polsi dritti. Glutei e addome contratti.",
+    "steps": [
+      "Piega le ginocchia di pochi centimetri, rapidamente, tenendo il busto verticale e il peso su tutto il piede.",
+      "Senza fermarti in basso distendi le gambe di scatto: la spinta delle gambe fa partire i manubri verso l'alto.",
+      "Continua con le braccia fino a gomiti distesi sopra la testa, bicipiti vicino alle orecchie. Espira durante la spinta.",
+      "Riporta i manubri sulle spalle con controllo, piegando appena le ginocchia per assorbire, e riparti."
+    ],
+    "errors": [
+      "Piegarsi troppo in basso come in uno squat: perdi l'effetto elastico e rallenti.",
+      "Inarcare la zona lombare in alto: il carico va sulla schiena invece che su spalle e addome.",
+      "Spingere prima con le braccia e poi con le gambe: la forza non si collega."
+    ],
+    "why": "Insegna a collegare la spinta delle gambe a quella delle spalle, come nel pugno.",
+    "figure": [
+      {
+        "label": "Piegamento",
+        "people": [
+          {
+            "pose": "attrezzi-2/dip-db"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -14
+          }
+        ]
+      },
+      {
+        "label": "Braccia distese",
+        "people": [
+          {
+            "pose": "attrezzi-2/press-doppio"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--swing-con-manubrio",
@@ -23466,7 +37817,59 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 15 ripetizioni, recupero 60 s",
     "details": "Tieni un manubrio per una testa, porta il peso tra le gambe piegando le anche e chiudi di scatto i glutei facendolo salire all'altezza del petto. Allena la spinta d'anca usata in ginocchiate e teep. Il movimento è delle anche, non uno squat né un sollevamento di braccia.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "Piedi poco più larghi delle spalle, un manubrio tenuto a due mani per una testina, con l'altra testina rivolta verso il basso. Piega le anche, schiena dritta, braccia tese.",
+    "steps": [
+      "Porta il manubrio indietro tra le gambe spingendo il sedere indietro: avambracci contro l'interno delle cosce, ginocchia solo leggermente piegate.",
+      "Chiudi di scatto i glutei e spingi le anche in avanti: il manubrio sale per la spinta delle anche, non per le braccia.",
+      "In alto sei dritto come in piedi, glutei e addome stretti, con il manubrio all'altezza del petto e le braccia rilassate.",
+      "Lascia ricadere il manubrio, piega di nuovo le anche quando gli avambracci toccano le cosce e ricomincia.",
+      "Espira con decisione a ogni spinta d'anca."
+    ],
+    "errors": [
+      "Fare uno squat invece di piegare le anche: il sedere deve andare indietro, non in basso.",
+      "Sollevare il manubrio con le spalle o le braccia.",
+      "Schiena che si arrotonda in basso o si inarca all'indietro in alto."
+    ],
+    "why": "Allena la spinta d'anca usata in ginocchiate e teep. Tieni saldo il manubrio e lavora con spazio libero davanti e dietro.",
+    "figure": [
+      {
+        "label": "Carica tra le gambe",
+        "people": [
+          {
+            "pose": "swing-carica"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 50,
+            "dy": -40,
+            "bend": -15
+          }
+        ]
+      },
+      {
+        "label": "Spinta d'anca",
+        "people": [
+          {
+            "pose": "swing-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--stacco-rumeno-con-manubri",
@@ -23476,7 +37879,65 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 8 ripetizioni, recupero 2 min",
     "details": "In piedi con manubri davanti alle cosce, spingi le anche indietro facendo scivolare i pesi lungo le gambe fino a metà tibia, poi risali stringendo i glutei. Rinforza femorali e glutei, base di calci potenti e protezione dagli infortuni. Schiena neutra, ginocchia leggermente flesse.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "In piedi, piedi alla larghezza delle anche, un manubrio per mano davanti alle cosce con i palmi verso di te. Ginocchia leggermente piegate, spalle indietro, addome contratto.",
+    "steps": [
+      "Spingi le anche indietro come per chiudere una porta con il sedere, mantenendo le ginocchia nella stessa leggera flessione.",
+      "Fai scivolare i manubri lungo le gambe, vicini alle cosce e poi alle tibie: il busto si inclina in avanti con la schiena dritta.",
+      "Scendi finché i manubri arrivano a metà tibia o finché senti tirare forte i femorali senza arrotondare la schiena.",
+      "Risali spingendo le anche in avanti e stringendo i glutei, fino a tornare dritto. Espira in salita."
+    ],
+    "errors": [
+      "Schiena che si arrotonda in basso: il carico passa dai femorali alla zona lombare.",
+      "Piegare molto le ginocchia: diventa uno squat e i femorali lavorano poco.",
+      "Manubri lontani dalle gambe: la leva aumenta e la schiena soffre."
+    ],
+    "why": "Rinforza femorali e glutei, base di calci potenti e protezione dagli infortuni.",
+    "figure": [
+      {
+        "label": "In piedi",
+        "people": [
+          {
+            "pose": "attrezzi-2/in-piedi-pesi"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Anche indietro",
+        "people": [
+          {
+            "pose": "attrezzi-2/rdl"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -16,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--goblet-squat-pesante",
@@ -23486,7 +37947,57 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 6 ripetizioni, recupero 2 min",
     "details": "Tieni un manubrio pesante verticale contro il petto, scendi tra le ginocchia mantenendo il busto alto e risali spingendo con tutto il piede. Costruisce gambe forti per la base e la stabilità in clinch. Ginocchia in linea con le punte e talloni sempre a terra.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "In piedi, piedi poco più larghi delle spalle con le punte leggermente aperte. Tieni un manubrio pesante in verticale contro il petto, con le mani a coppa sotto la testina superiore e i gomiti verso il basso.",
+    "steps": [
+      "Inspira e contrai l'addome.",
+      "Scendi piegando le ginocchia e portando il sedere indietro e in basso, tra le ginocchia, con il busto alto e il manubrio sempre contro il petto.",
+      "Scendi finché le cosce sono almeno parallele al pavimento, talloni a terra e ginocchia in linea con le punte dei piedi.",
+      "Risali spingendo con tutto il piede, espirando, fino a tornare dritto."
+    ],
+    "errors": [
+      "Talloni che si alzano: il peso va sulle ginocchia e perdi equilibrio.",
+      "Ginocchia che cadono verso l'interno.",
+      "Busto che crolla in avanti e manubrio che si allontana dal petto: la schiena si arrotonda."
+    ],
+    "why": "Costruisce gambe forti per la base e per la stabilità nel clinch.",
+    "figure": [
+      {
+        "label": "Manubrio al petto",
+        "people": [
+          {
+            "pose": "attrezzi-2/goblet-in-piedi"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Squat profondo",
+        "people": [
+          {
+            "pose": "attrezzi-2/goblet-squat"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -22
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--step-up-con-manubri",
@@ -23496,7 +38007,79 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 6 per gamba, recupero 90 s",
     "details": "Appoggia un piede intero sul box, spingi con quella gamba fino in piedi senza darti slancio con la gamba a terra, poi scendi controllato. Sviluppa forza unilaterale per la gamba d'appoggio nei calci. Ginocchio stabile sopra il piede, senza cedimenti verso l'interno.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "Box o panca stabile davanti a te, alto più o meno quanto il ginocchio. Un manubrio pesante per mano lungo i fianchi; appoggia sul box tutto il piede di una gamba.",
+    "steps": [
+      "Porta il peso sulla gamba che è sul box, busto dritto o leggermente inclinato in avanti.",
+      "Spingi con il tallone della gamba sul box fino a distenderla del tutto, senza darti slancio con il piede a terra.",
+      "In cima sei in piedi stabile; la gamba libera può salire con il ginocchio in avanti, come per una ginocchiata.",
+      "Scendi lentamente, appoggiando a terra prima l'avampiede della gamba libera, controllando con la gamba sul box.",
+      "Fai tutte le ripetizioni con una gamba, poi cambia."
+    ],
+    "errors": [
+      "Spingersi con la gamba a terra: la gamba che deve lavorare fa metà fatica.",
+      "Ginocchio che cede verso l'interno durante la salita.",
+      "Lasciarsi cadere giù dal box: perdi la parte di discesa e carichi le articolazioni."
+    ],
+    "why": "Sviluppa forza su una gamba sola, quella che regge tutto il peso durante i calci. Usa un box stabile che non scivoli.",
+    "figure": [
+      {
+        "label": "Piede sul box",
+        "people": [
+          {
+            "pose": "attrezzi-2/step-su"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          },
+          {
+            "type": "box",
+            "x": 70,
+            "w": 44,
+            "h": 30
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 4,
+            "dy": -24
+          }
+        ]
+      },
+      {
+        "label": "In piedi sul box",
+        "people": [
+          {
+            "pose": "attrezzi-2/step-in-cima",
+            "air": 30
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          },
+          {
+            "type": "box",
+            "x": 48,
+            "w": 44,
+            "h": 30
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--rematore-in-plank-con-manubri",
@@ -23506,7 +38089,65 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 8 per lato, recupero 60 s",
     "details": "In plank alto sulle mani appoggiate ai manubri, piedi larghi, tira un manubrio al fianco senza ruotare il bacino, poi alterna. Allena la stabilità antirotazione del tronco che protegge e trasmette la forza nei colpi. Bacino fermo e parallelo al suolo per tutta la serie.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "Due manubri a terra, paralleli, alla larghezza delle spalle. Mettiti in plank alto con le mani sulle impugnature, braccia distese sotto le spalle e piedi più larghi delle anche.",
+    "steps": [
+      "Corpo in linea dalla testa ai talloni: glutei e addome stretti.",
+      "Spingi forte un manubrio contro il pavimento e tira l'altro verso il fianco, gomito vicino al corpo e diretto verso il soffitto.",
+      "Il bacino resta fermo e parallelo al pavimento, senza ruotare verso il braccio che tira. Espira durante la tirata.",
+      "Riappoggia il manubrio con controllo e alterna il lato."
+    ],
+    "errors": [
+      "Bacino che ruota o si alza a ogni tirata: perdi il lavoro antirotazione.",
+      "Piedi troppo stretti: l'equilibrio diventa difficile e compensi con la schiena.",
+      "Schiena che si inarca e pancia che scende."
+    ],
+    "why": "Allena la stabilità del tronco contro la rotazione, che protegge e trasmette la forza nei colpi. Usa manubri esagonali che non rotolano.",
+    "figure": [
+      {
+        "label": "Plank sui manubri",
+        "people": [
+          {
+            "pose": "attrezzi-2/plank-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Tirata al fianco",
+        "people": [
+          {
+            "pose": "attrezzi-2/plank-rematore"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -2,
+            "dy": -16
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--dead-bug-con-manubri",
@@ -23516,7 +38157,66 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 per lato, recupero 45 s",
     "details": "Supino con manubri leggeri sopra il petto e anche e ginocchia a 90°, abbassa un braccio e la gamba opposta senza staccare la zona lombare, poi torna. Rinforza il controllo addominale profondo utile per incassare e colpire. Espira durante l'estensione e mantieni la schiena incollata a terra.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "Supino a terra, un manubrio leggero per mano a braccia tese sopra il petto. Anche e ginocchia piegate a 90°, tibie parallele al pavimento.",
+    "steps": [
+      "Schiaccia la zona lombare a terra contraendo l'addome: deve restare appoggiata per tutto l'esercizio.",
+      "Abbassa lentamente un braccio all'indietro oltre la testa e, insieme, distendi la gamba opposta in avanti, fino a sfiorare il pavimento.",
+      "Espira mentre ti distendi, senza staccare la schiena.",
+      "Riporta braccio e gamba al centro e ripeti con l'altra coppia, alternando."
+    ],
+    "errors": [
+      "Zona lombare che si stacca e si inarca: il carico va sulla schiena.",
+      "Muovere braccio e gamba dello stesso lato: perdi il lavoro di coordinazione e stabilità.",
+      "Andare veloci: l'addome non controlla più il movimento."
+    ],
+    "why": "Rinforza il controllo addominale profondo utile per incassare e colpire.",
+    "figure": [
+      {
+        "label": "Partenza",
+        "people": [
+          {
+            "pose": "attrezzi-2/dead-bug-su"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Braccio e gamba opposti",
+        "people": [
+          {
+            "pose": "attrezzi-2/dead-bug-contro"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot2",
+            "dx": 14,
+            "dy": 4,
+            "bend": -8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--russian-twist-con-manubrio",
@@ -23526,7 +38226,44 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 20 tocchi, recupero 45 s",
     "details": "Seduto con busto inclinato indietro e piedi sollevati o appoggiati, ruota il tronco portando il manubrio da un fianco all'altro. Allena gli obliqui coinvolti nei ganci e nei calci circolari. Ruota dalle spalle e dal torace, non solo con le braccia, schiena lunga.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "Seduto a terra con le ginocchia piegate. Inclina il busto indietro di circa 45° con la schiena lunga e tieni un manubrio con due mani davanti al petto. Piedi appoggiati a terra o, per renderlo più difficile, sollevati.",
+    "steps": [
+      "Contrai l'addome e allunga la schiena, petto aperto: non devi crollare con le spalle.",
+      "Ruota il tronco da un lato portando il manubrio vicino al fianco; spalle e torace girano insieme alle braccia.",
+      "Torna al centro e ruota dall'altro lato, con un ritmo controllato.",
+      "Espira a ogni rotazione e tieni le gambe ferme: non devono oscillare da una parte all'altra."
+    ],
+    "errors": [
+      "Muovere solo le braccia: il busto resta fermo e gli obliqui non lavorano.",
+      "Schiena arrotondata: il carico finisce sulla zona lombare.",
+      "Andare veloci di slancio: perdi il controllo e il lavoro muscolare."
+    ],
+    "why": "Allena gli obliqui coinvolti nei ganci e nei calci circolari.",
+    "figure": [
+      {
+        "label": "Ruota il busto",
+        "people": [
+          {
+            "pose": "attrezzi-2/russian"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -10,
+            "dy": 10,
+            "bend": 16
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--woodchop-con-manubrio",
@@ -23536,7 +38273,59 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 per lato, recupero 60 s",
     "details": "Parti con il manubrio sopra la spalla, porta il peso in diagonale verso il ginocchio opposto ruotando il busto e piegando le gambe, poi risali controllato. Riproduce la catena di rotazione di gomitate e calci. Pivota il piede posteriore e mantieni la schiena neutra.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "In piedi, piedi poco più larghi delle spalle. Tieni un manubrio con due mani sopra una spalla, braccia quasi tese, busto ruotato verso quel lato.",
+    "steps": [
+      "Contrai l'addome e tieni la schiena neutra.",
+      "Porta il manubrio in diagonale verso il basso, fino all'esterno del ginocchio opposto, ruotando il busto e piegando le gambe.",
+      "Durante la discesa fai girare il piede posteriore sull'avampiede, come nella rotazione di un colpo.",
+      "Espira mentre scendi, poi risali lentamente lungo la stessa diagonale fino sopra la spalla.",
+      "Finita la serie cambia lato."
+    ],
+    "errors": [
+      "Arrotondare la schiena in basso invece di piegare le gambe.",
+      "Piedi piantati senza ruotare: la torsione si scarica sulla zona lombare.",
+      "Tirare il manubrio solo con le braccia: il busto non ruota."
+    ],
+    "why": "Riproduce la catena di rotazione di gomitate e calci; pivota il piede posteriore e mantieni la schiena neutra.",
+    "figure": [
+      {
+        "label": "Sopra la spalla",
+        "people": [
+          {
+            "pose": "attrezzi-2/chop-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Verso il ginocchio",
+        "people": [
+          {
+            "pose": "attrezzi-2/chop-basso-db"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -12,
+            "dy": 14,
+            "bend": 6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--uppercut-con-manubri-leggeri",
@@ -23546,7 +38335,66 @@ export const toolExercises: Exercise[] = [
     "dose": "6 × 20 s, recupero 40 s",
     "details": "In guardia con manubri leggerissimi, esegui montanti alternati rapidi spingendo con gambe e anche, riportando subito le mani al viso. Migliora velocità e resistenza delle spalle nei colpi dal basso. Non bloccare il gomito e non usare carichi elevati per non alterare la tecnica.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "In guardia, con un manubrio da 1-2 kg per mano tenuto come il pugno chiuso, mani al viso, mento basso.",
+    "steps": [
+      "Piega leggermente le ginocchia e porta un pugno poco sotto il mento, gomito vicino alle costole.",
+      "Spingi con la gamba dello stesso lato e ruota l'anca: il pugno sale in verticale, palmo verso di te, braccio piegato a circa 90°.",
+      "Riporta subito la mano al viso mentre parte il montante dell'altra mano.",
+      "Alterna le mani a ritmo rapido, espirando a ogni colpo, senza perdere la guardia."
+    ],
+    "errors": [
+      "Distendere il braccio e bloccare il gomito: con il peso sovraccarichi l'articolazione.",
+      "Usare manubri pesanti: il colpo rallenta e la tecnica cambia.",
+      "Colpire solo con il braccio senza gambe e anche."
+    ],
+    "why": "Migliora velocità e resistenza delle spalle nei colpi dal basso. Carichi sempre leggeri per non alterare la tecnica.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Montante",
+        "people": [
+          {
+            "pose": "attrezzi-2/montante"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand2",
+            "dx": 3,
+            "dy": -15,
+            "bend": 6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--punch-out-a-gancio-con-manubri",
@@ -23556,7 +38404,66 @@ export const toolExercises: Exercise[] = [
     "dose": "6 × 20 s, recupero 40 s",
     "details": "Con manubri da 1-2 kg in guardia, alterna ganci corti con gomito all'altezza del pugno, ruotando busto e piede. Rinforza la rapidità della rotazione e la tenuta delle spalle nei ganci. Movimento controllato in chiusura per non sovraccaricare il gomito.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "In guardia, con un manubrio da 1-2 kg per mano, mani al viso, gomiti stretti, mento basso.",
+    "steps": [
+      "Apri il braccio come un uncino: gomito all'altezza del pugno e braccio piegato a circa 90°.",
+      "Chiudi il gancio corto davanti a te ruotando insieme piede, anca e spalla dello stesso lato.",
+      "Ferma il colpo davanti al viso dell'avversario immaginario, senza andare oltre la linea del corpo.",
+      "Riporta la mano in guardia e alterna con l'altro braccio, a ritmo veloce ma controllato. Espira a ogni gancio."
+    ],
+    "errors": [
+      "Gomito basso: il gancio diventa un colpo a metà tra montante e gancio.",
+      "Frenare di colpo a fine movimento con il braccio teso: sovraccarichi il gomito.",
+      "Abbassare la mano che non colpisce."
+    ],
+    "why": "Rinforza la rapidità della rotazione e la tenuta delle spalle nei ganci. Chiudi il movimento con controllo per non sovraccaricare il gomito.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Gancio corto",
+        "people": [
+          {
+            "pose": "attrezzi-2/gancio"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 14,
+            "dy": 4,
+            "bend": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--complesso-manubri-a-circuito",
@@ -23566,7 +38473,78 @@ export const toolExercises: Exercise[] = [
     "dose": "5 round × 6 per esercizio, 90 s",
     "details": "Con manubri medi esegui di seguito rematore, clean, distensione e squat senza appoggiare i pesi, poi recupera. Simula lo sforzo continuo di un round con il cuore alto. Scegli un carico che consenta tecnica pulita fino all'ultima ripetizione.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "In piedi, piedi alla larghezza delle anche, un manubrio medio per mano. Scegli un carico che ti permetta di eseguire tutta la sequenza con tecnica pulita fino all'ultima ripetizione.",
+    "steps": [
+      "Rematore: piega le anche con la schiena dritta e tira i manubri verso i fianchi, gomiti indietro vicino al corpo.",
+      "Clean: dalla stessa posizione distendi di scatto anche e ginocchia e ricevi i manubri sulle spalle.",
+      "Distensione: spingi i manubri sopra la testa fino a braccia tese, addome contratto, poi riportali sulle spalle.",
+      "Squat: con i manubri sulle spalle scendi con le cosce parallele al pavimento e risali.",
+      "Riporta i manubri lungo le gambe e ricomincia la sequenza senza appoggiarli. Respira a ogni passaggio.",
+      "Finito il giro, appoggia i manubri e recupera."
+    ],
+    "errors": [
+      "Scegliere un peso troppo alto: la tecnica crolla negli ultimi esercizi.",
+      "Schiena arrotondata nel rematore o nel clean.",
+      "Trattenere il respiro: il cuore sale e non arrivi alla fine."
+    ],
+    "why": "Simula lo sforzo continuo di un round con il cuore alto.",
+    "figure": [
+      {
+        "label": "Rematore",
+        "people": [
+          {
+            "pose": "attrezzi-2/rematore-db"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Distensione",
+        "people": [
+          {
+            "pose": "attrezzi-2/press-doppio"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Squat",
+        "people": [
+          {
+            "pose": "attrezzi-2/squat-db-spalle"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--burpee-con-manubri",
@@ -23576,7 +38554,77 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 40 s, recupero 40 s",
     "details": "Mani sui manubri, porta i piedi indietro, esegui un piegamento, torna in squat e alza i manubri sopra la testa. Allena la capacità di rialzarsi e lavorare sotto fatica come negli ultimi round. Usa manubri esagonali per stabilità e polsi dritti a terra.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "Due manubri esagonali a terra, paralleli, alla larghezza delle spalle. In piedi davanti a loro, piedi alla larghezza delle anche.",
+    "steps": [
+      "Accovacciati e appoggia le mani sulle impugnature, polsi dritti.",
+      "Salta o porta i piedi indietro in plank alto: corpo in linea, glutei e addome stretti.",
+      "Esegui un piegamento portando il petto verso terra, gomiti vicini al corpo, e risali.",
+      "Riporta i piedi vicino alle mani con un salto, in squat, schiena dritta.",
+      "Alzati spingendo con le gambe e porta i manubri sopra la testa a braccia tese. Riabbassali e ricomincia."
+    ],
+    "errors": [
+      "Schiena che crolla nel plank: carichi la zona lombare.",
+      "Polsi piegati sui manubri: rischi dolore e distorsioni.",
+      "Sollevare i manubri da terra con la schiena arrotondata invece che con le gambe."
+    ],
+    "why": "Allena la capacità di rialzarsi e lavorare sotto fatica come negli ultimi round. Usa manubri esagonali che non rotolano.",
+    "figure": [
+      {
+        "label": "Plank e piegamento",
+        "people": [
+          {
+            "pose": "attrezzi-2/plank-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Squat",
+        "people": [
+          {
+            "pose": "attrezzi-2/squat-db-fianchi"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      },
+      {
+        "label": "Spinta in alto",
+        "people": [
+          {
+            "pose": "attrezzi-2/press-doppio"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--halo-con-manubrio",
@@ -23586,7 +38634,58 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 8 per senso, recupero 30 s",
     "details": "In piedi o in ginocchio, tieni un manubrio leggero per le testine e descrivi cerchi lenti attorno alla testa, vicino al collo. Mobilizza spalle e scapole sollecitate da guardia e pugni. Addome contratto e busto fermo, senza compensare inarcando la schiena.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "In piedi (o in ginocchio), piedi alla larghezza delle anche. Tieni un manubrio leggero in verticale per le testine, davanti al petto, gomiti piegati.",
+    "steps": [
+      "Contrai addome e glutei: il busto resta fermo per tutto l'esercizio.",
+      "Porta il manubrio verso una spalla e poi dietro la testa, vicino al collo, facendo girare i gomiti.",
+      "Completa il cerchio passando dall'altra spalla e torna davanti al petto.",
+      "Muoviti lentamente, respirando regolare; dopo alcuni giri cambia senso."
+    ],
+    "errors": [
+      "Inarcare la schiena quando il manubrio passa dietro la testa: compensi con la zona lombare.",
+      "Cerchi troppo larghi e lontani dalla testa: le spalle si caricano senza mobilizzarsi.",
+      "Usare un peso pesante: il movimento diventa rigido."
+    ],
+    "why": "Mobilizza spalle e scapole sollecitate da guardia e pugni. Fai attenzione a non urtare la testa.",
+    "figure": [
+      {
+        "label": "Davanti al petto",
+        "people": [
+          {
+            "pose": "attrezzi-2/halo-davanti"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Dietro la testa",
+        "people": [
+          {
+            "pose": "attrezzi-2/halo-dietro"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 22,
+            "dy": -4,
+            "bend": -14
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--rotazioni-esterne-con-manubrio",
@@ -23596,7 +38695,45 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 15 per lato, recupero 30 s",
     "details": "Sdraiato sul fianco con gomito a 90° appoggiato al busto, ruota l'avambraccio verso l'alto sollevando un manubrio leggero, poi torna lento. Rinforza la cuffia dei rotatori e previene infortuni da pugni ripetuti. Carico molto leggero e movimento lento, senza dolore.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "Sdraiato su un fianco, testa appoggiata sul braccio a terra. Il braccio di sopra ha il gomito piegato a 90° e appoggiato al fianco, con l'avambraccio davanti alla pancia e un manubrio molto leggero in mano.",
+    "steps": [
+      "Metti un asciugamano arrotolato tra gomito e fianco se ti aiuta a tenerlo fermo.",
+      "Ruota l'avambraccio verso l'alto, sollevando il manubrio, tenendo il gomito attaccato al fianco.",
+      "Fermati quando l'avambraccio punta verso il soffitto o prima, se senti fastidio.",
+      "Scendi lentamente in 2-3 secondi alla posizione di partenza.",
+      "Finita la serie girati e lavora l'altro braccio."
+    ],
+    "errors": [
+      "Staccare il gomito dal fianco: lavora il deltoide invece della cuffia dei rotatori.",
+      "Ruotare il busto all'indietro per aiutarti.",
+      "Usare un peso troppo alto: la spalla compensa e rischi di irritarla."
+    ],
+    "why": "Rinforza la cuffia dei rotatori e previene infortuni da pugni ripetuti. Carico molto leggero, movimento lento e senza dolore.",
+    "figure": [
+      {
+        "label": "Avambraccio in alto",
+        "people": [
+          {
+            "pose": "attrezzi-2/fianco-rotazione"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 12,
+            "dy": 14,
+            "bend": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "manubri--shrug-e-tirata-in-clinch-con-manubri",
@@ -23606,7 +38743,66 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 12 ripetizioni, recupero 60 s",
     "details": "Con manubri pesanti ai fianchi esegui una scrollata delle spalle, poi tira i pesi verso il petto con gomiti alti e torna giù controllato. Rinforza trapezi, collo e braccia per controllare la testa dell'avversario nel clinch. Non ruotare le spalle e mantieni il collo neutro.",
     "equipment": "Manubri",
-    "tool": "manubri"
+    "tool": "manubri",
+    "setup": "In piedi, piedi alla larghezza delle anche, un manubrio pesante per mano lungo i fianchi, palmi verso le cosce. Addome contratto, collo neutro.",
+    "steps": [
+      "Scrollata: alza le spalle in verticale verso le orecchie, senza piegare i gomiti, e tienile su per un istante.",
+      "Abbassa le spalle con controllo.",
+      "Tirata: tira i manubri vicino al corpo fino all'altezza del petto, con i gomiti che salgono più in alto delle mani.",
+      "Riporta giù i manubri lentamente lungo le gambe e ripeti la sequenza. Espira in salita."
+    ],
+    "errors": [
+      "Ruotare le spalle in cerchio durante la scrollata: stressi l'articolazione senza benefici.",
+      "Spingere la testa in avanti o indietro: sovraccarichi il collo.",
+      "Darsi slancio con le gambe o con la schiena."
+    ],
+    "why": "Rinforza trapezi, collo e braccia per controllare la testa dell'avversario nel clinch.",
+    "figure": [
+      {
+        "label": "Scrollata",
+        "people": [
+          {
+            "pose": "attrezzi-2/in-piedi-pesi"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": -12,
+            "dy": -14,
+            "bend": -4
+          }
+        ]
+      },
+      {
+        "label": "Tirata al petto",
+        "people": [
+          {
+            "pose": "attrezzi-2/tirata-alta-db"
+          }
+        ],
+        "props": [
+          {
+            "type": "dumbbell",
+            "at": "hand"
+          },
+          {
+            "type": "dumbbell",
+            "at": "hand2"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sbarra--pull-up-esplosive-al-petto",
@@ -23616,7 +38812,58 @@ export const toolExercises: Exercise[] = [
     "dose": "5 × 4 ripetizioni, recupero 90 s",
     "details": "Parti da appeso a braccia tese e tira con la massima intenzione fino a toccare la sbarra con il petto, poi scendi controllato. Sviluppa la potenza di tirata utile per strappare la guardia e controllare la testa in clinch. Interrompi la serie quando la velocità cala.",
     "equipment": "Sbarra e parallele",
-    "tool": "sbarra"
+    "tool": "sbarra",
+    "setup": "Appeso alla sbarra con presa prona (palmi in avanti), mani poco più larghe delle spalle, braccia distese. Gambe unite o incrociate dietro, addome contratto.",
+    "steps": [
+      "Abbassa le spalle lontano dalle orecchie per attivare la schiena, senza piegare le braccia.",
+      "Tira con la massima velocità e intenzione portando i gomiti verso i fianchi e il petto alla sbarra.",
+      "Arriva a toccare la sbarra con la parte alta del petto, spalle basse e petto aperto. Espira nella tirata.",
+      "Scendi controllato fino alle braccia distese, poi riparti con la stessa velocità.",
+      "Interrompi la serie appena la velocità cala."
+    ],
+    "errors": [
+      "Darsi slancio con le gambe o il bacino: tiri di meno e rischi la schiena.",
+      "Fermarsi con il mento alla sbarra: manca la parte finale della tirata.",
+      "Lasciarsi cadere in discesa: sovraccarichi gomiti e spalle."
+    ],
+    "why": "Sviluppa la potenza di tirata utile per strappare la guardia e controllare la testa in clinch. Interrompi la serie quando la velocità cala.",
+    "figure": [
+      {
+        "label": "Appeso",
+        "people": [
+          {
+            "pose": "attrezzi-2/appeso",
+            "air": 8
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": 0,
+            "dy": -26
+          }
+        ]
+      },
+      {
+        "label": "Petto alla sbarra",
+        "people": [
+          {
+            "pose": "attrezzi-2/petto-sbarra",
+            "air": 50
+          }
+        ],
+        "props": [
+          {
+            "type": "pullbar"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sbarra--trazioni-a-presa-larga",
@@ -26344,7 +41591,46 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 15 m per lato, recupero 60 s",
     "details": "In posizione bassa, afferra il sandbag a terra e trascinalo lateralmente con passi incrociati e spinta delle gambe. Rinforza la presa e la capacità di tirare l'avversario fuori equilibrio. Mantieni il petto aperto e la schiena piatta durante il tiro.",
     "equipment": "Sandbag",
-    "tool": "sandbag"
+    "tool": "sandbag",
+    "setup": "Sandbag a terra davanti a te. Piedi più larghi delle spalle, ginocchia piegate e sedere basso, schiena piatta e petto aperto. Afferra il sandbag con entrambe le mani dalle maniglie o stringendo la tela.",
+    "steps": [
+      "Stringi la presa e tira le scapole indietro: le braccia restano quasi tese, sono il gancio, non il motore.",
+      "Fai un passo laterale incrociando la gamba esterna davanti all'altra, restando basso con il bacino alla stessa altezza.",
+      "Spingi forte con la gamba che resta indietro e trascina il sandbag di lato, vicino ai piedi, senza sollevarlo da terra.",
+      "Riporta i piedi alla larghezza di partenza, sistema la presa e ripeti il passo incrociato nella stessa direzione.",
+      "Arrivato in fondo cambia lato e torna indietro. Respira a ogni passo, espirando quando tiri."
+    ],
+    "errors": [
+      "Tirare con la schiena arrotondata: così carichi la zona lombare invece delle gambe.",
+      "Alzarsi in piedi a ogni passo: perdi la postura bassa che serve a sbilanciare.",
+      "Tirare solo con le braccia: si stancano subito avambracci e bicipiti e il sandbag si ferma."
+    ],
+    "why": "Rinforza presa e gambe nella posizione bassa da cui tiri l'avversario fuori equilibrio in clinch.",
+    "figure": [
+      {
+        "label": "Presa bassa e tirata",
+        "people": [
+          {
+            "pose": "attrezzi-4/presa-bassa",
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -38,
+            "dy": 0,
+            "bend": 6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sandbag--sandbag-sbilanciamento-in-clinch",
@@ -26354,7 +41640,59 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 30 s, recupero 45 s",
     "details": "Abbraccia il sandbag in alto come in una presa al collo e ruotalo con forza da un lato all'altro pivotando sui piedi. Riproduce i cambi di direzione per sbilanciare l'avversario prima di ginocchiate o proiezioni. Gira con anche e piedi, non solo con le braccia.",
     "equipment": "Sandbag",
-    "tool": "sandbag"
+    "tool": "sandbag",
+    "setup": "In piedi, piedi alla larghezza delle spalle, ginocchia morbide. Abbraccia il sandbag in alto contro il petto, con gli avambracci sopra come se tenessi la testa e le spalle dell'avversario.",
+    "steps": [
+      "Stringi il sandbag al petto con i gomiti chiusi: non deve muoversi rispetto al tuo busto.",
+      "Ruota con forza verso destra girando insieme anche e spalle; il piede posteriore ruota sull'avampiede e il tallone si alza.",
+      "Porta il sandbag verso il fianco destro e leggermente in basso, come per far cadere l'avversario di lato.",
+      "Torna al centro senza fermarti e ruota dall'altra parte, pivotando sull'altro piede.",
+      "Tieni un ritmo deciso ma controllato: espira a ogni rotazione e non perdere mai l'equilibrio."
+    ],
+    "errors": [
+      "Girare solo con le braccia e le spalle: così il colpo di rotazione non ha forza e carichi la schiena.",
+      "Piedi incollati a terra: le ginocchia si torcono invece di girare con le anche.",
+      "Allontanare il sandbag dal petto: perdi il controllo, come quando l'avversario si libera dalla presa."
+    ],
+    "why": "Riproduce gli sbilanciamenti in clinch che aprono la strada a ginocchiate e proiezioni. Usa un carico che puoi controllare senza strattoni alla schiena.",
+    "figure": [
+      {
+        "label": "Abbraccio alto",
+        "people": [
+          {
+            "pose": "attrezzi-4/abbraccio-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Rotazione al fianco",
+        "people": [
+          {
+            "pose": "attrezzi-4/rotazione-fianco"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -10,
+            "dy": 24,
+            "bend": -12
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sandbag--sandbag-knee-strike",
@@ -26364,7 +41702,59 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 20 s, recupero 40 s",
     "details": "Tieni il sandbag con presa alta davanti al petto, tiralo verso di te e colpiscilo con ginocchiate alternate estendendo l'anca. Allena il tempismo tra tirata delle braccia e ginocchiata come nel clinch reale. Resta sull'avampiede della gamba d'appoggio e controlla l'equilibrio.",
     "equipment": "Sandbag",
-    "tool": "sandbag"
+    "tool": "sandbag",
+    "setup": "In piedi in guardia, piedi alla larghezza delle anche. Tieni il sandbag davanti al petto con presa alta, le mani sopra come se avessi agganciato le spalle dell'avversario.",
+    "steps": [
+      "Sali sull'avampiede della gamba d'appoggio e porta le anche in avanti.",
+      "Tira il sandbag verso il basso e verso di te con le braccia mentre sollevi il ginocchio dell'altra gamba.",
+      "Colpisci il sandbag con il ginocchio, punta del piede rivolta in basso, spingendo l'anca in avanti nell'impatto: il busto si inclina appena indietro.",
+      "Riappoggia il piede e riporta il sandbag all'altezza del petto.",
+      "Alterna le gambe con ritmo regolare, espirando forte a ogni ginocchiata."
+    ],
+    "errors": [
+      "Piegarsi in avanti verso il sandbag: così la ginocchiata perde la spinta delle anche.",
+      "Restare con il tallone d'appoggio a terra: perdi altezza e potenza.",
+      "Tenere il sandbag fermo invece di tirarlo: non alleni il tempismo tra tirata e ginocchiata."
+    ],
+    "why": "Allena la coordinazione tra tirata delle braccia e ginocchiata, il gesto base del clinch.",
+    "figure": [
+      {
+        "label": "Presa alta",
+        "people": [
+          {
+            "pose": "attrezzi-4/abbraccio-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Tirata e ginocchiata",
+        "people": [
+          {
+            "pose": "attrezzi-4/ginocchiata-tirata"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 8,
+            "dy": -22,
+            "bend": 8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sandbag--sandbag-russian-twist",
@@ -26374,7 +41764,59 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 20 tocchi, recupero 45 s",
     "details": "Seduto con busto inclinato indietro e piedi a terra o sollevati, porta il sandbag da un fianco all'altro ruotando il tronco. Rinforza gli obliqui che generano e assorbono i colpi rotazionali. Mantieni la schiena dritta e ruota il busto, non solo le braccia.",
     "equipment": "Sandbag",
-    "tool": "sandbag"
+    "tool": "sandbag",
+    "setup": "Seduto a terra, ginocchia piegate e talloni appoggiati. Inclina il busto indietro di circa 45° con la schiena dritta e tieni il sandbag con due mani davanti all'ombelico.",
+    "steps": [
+      "Stringi gli addominali e trova l'equilibrio sui glutei: il petto resta aperto.",
+      "Ruota il busto verso destra portando il sandbag accanto al fianco, quasi a sfiorare il pavimento. Spalle e sandbag girano insieme.",
+      "Torna al centro controllando il movimento, senza slancio.",
+      "Ruota verso sinistra fino a portare il sandbag accanto all'altro fianco.",
+      "Espira a ogni rotazione. Quando sei sicuro puoi sollevare i piedi da terra per rendere l'esercizio più difficile."
+    ],
+    "errors": [
+      "Muovere solo le braccia da un lato all'altro: il busto resta fermo e gli obliqui non lavorano.",
+      "Schiena curva e spalle chiuse: così il carico finisce sulla zona lombare.",
+      "Andare veloci rimbalzando: perdi il controllo e il sandbag ti trascina."
+    ],
+    "why": "Rinforza gli obliqui che generano la rotazione di ganci e calci circolari e che assorbono i colpi al fianco.",
+    "figure": [
+      {
+        "label": "Centro",
+        "people": [
+          {
+            "pose": "attrezzi-4/seduto-v"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Rotazione al fianco",
+        "people": [
+          {
+            "pose": "attrezzi-4/seduto-v-lato"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "shoulder",
+            "dx": -6,
+            "dy": 18,
+            "bend": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sandbag--sandbag-dead-bug",
@@ -26384,7 +41826,57 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 per lato, recupero 45 s",
     "details": "Supino, tieni il sandbag sopra il petto a braccia tese e abbassa alternatamente le gambe estese verso il pavimento senza staccare la lombare. Costruisce un core anti-estensione stabile per incassare e calciare. Espira mentre allunghi la gamba e fermati prima che la schiena si inarchi.",
     "equipment": "Sandbag",
-    "tool": "sandbag"
+    "tool": "sandbag",
+    "setup": "Sdraiato a pancia in su. Tieni il sandbag sopra il petto a braccia tese verso il soffitto e solleva le gambe tese in verticale. La zona lombare è appoggiata al pavimento.",
+    "steps": [
+      "Schiaccia la parte bassa della schiena contro il pavimento e stringi gli addominali: è la posizione da mantenere sempre.",
+      "Espirando, abbassa lentamente una gamba tesa verso il pavimento, senza toccarlo.",
+      "Fermati appena senti che la schiena vuole staccarsi da terra: quello è il tuo limite.",
+      "Inspira e riporta la gamba in verticale con lo stesso controllo.",
+      "Ripeti con l'altra gamba. Il sandbag resta fermo sopra il petto, braccia tese."
+    ],
+    "errors": [
+      "Schiena che si inarca mentre la gamba scende: così lavora la zona lombare e non l'addome.",
+      "Far oscillare il sandbag: perdi la stabilità del tronco che l'esercizio vuole costruire.",
+      "Scendere di colpo con la gamba: diventa slancio e non controllo."
+    ],
+    "why": "Costruisce un tronco che resiste all'estensione, utile per incassare i colpi al corpo e calciare senza perdere la postura.",
+    "figure": [
+      {
+        "label": "Gambe in verticale",
+        "people": [
+          {
+            "pose": "attrezzi-4/dead-bug-su"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag"
+          }
+        ]
+      },
+      {
+        "label": "Una gamba scende",
+        "people": [
+          {
+            "pose": "attrezzi-4/dead-bug-giu"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 14,
+            "dy": 16,
+            "bend": -8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sandbag--sandbag-getup",
@@ -26394,7 +41886,72 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 3 per lato, recupero 90 s",
     "details": "Sdraiato con il sandbag su una spalla, alzati in piedi nel modo più fluido possibile e poi torna giù controllato. Allena stabilità totale e capacità di rialzarsi sotto carico dopo una caduta. Procedi lentamente e usa un peso moderato per proteggere la spalla.",
     "equipment": "Sandbag",
-    "tool": "sandbag"
+    "tool": "sandbag",
+    "setup": "Sdraiato a pancia in su con il sandbag appoggiato su una spalla, tenuto fermo con il braccio dello stesso lato. Ginocchia piegate e piedi a terra.",
+    "steps": [
+      "Stringi il sandbag alla spalla e mettiti seduto appoggiando a terra la mano libera.",
+      "Porta indietro e sotto di te la gamba del lato della mano libera e appoggia il ginocchio a terra: sei in mezzo inginocchio con il busto dritto.",
+      "Dal mezzo inginocchio spingi con il piede davanti e alzati in piedi, come in un affondo.",
+      "In piedi stringi glutei e addome con il sandbag ancora stabile sulla spalla.",
+      "Torna giù facendo gli stessi passaggi al contrario, lentamente. A metà delle ripetizioni cambia spalla."
+    ],
+    "errors": [
+      "Rialzarsi di scatto rotolando: il sandbag scivola e la spalla si carica male.",
+      "Busto piegato in avanti in mezzo inginocchio: perdi l'equilibrio e la schiena si carica.",
+      "Lasciare cadere il peso nella discesa: è la parte che allena di più il controllo."
+    ],
+    "why": "Allena a rialzarsi stabili e sotto carico dopo una caduta o una proiezione. Usa un peso moderato e procedi lentamente per proteggere la spalla.",
+    "figure": [
+      {
+        "label": "A terra",
+        "people": [
+          {
+            "pose": "attrezzi-4/supino-spalla"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "shoulder"
+          }
+        ]
+      },
+      {
+        "label": "Mezzo inginocchio",
+        "people": [
+          {
+            "pose": "attrezzi-4/mezzo-inginocchio"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "shoulder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -28
+          }
+        ]
+      },
+      {
+        "label": "In piedi",
+        "people": [
+          {
+            "pose": "attrezzi-4/in-piedi-spalla"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "shoulder"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sandbag--sandbag-bent-over-row",
@@ -26404,7 +41961,59 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 10 ripetizioni, recupero 75 s",
     "details": "Busto inclinato in avanti a schiena piatta, tira il sandbag verso l'ombelico portando i gomiti indietro e poi abbassalo controllato. Rinforza dorsali e presa utili per tirare e controllare in clinch. Non dare slanci con il busto durante la tirata.",
     "equipment": "Sandbag",
-    "tool": "sandbag"
+    "tool": "sandbag",
+    "setup": "In piedi con il sandbag tenuto dalle maniglie a braccia tese. Piedi alla larghezza delle anche, ginocchia leggermente piegate, busto inclinato in avanti quasi parallelo al pavimento con la schiena piatta.",
+    "steps": [
+      "Lascia pendere il sandbag sotto le spalle a braccia tese, sguardo a terra un po' avanti.",
+      "Tira il sandbag verso l'ombelico portando i gomiti indietro e vicini ai fianchi.",
+      "In alto stringi le scapole tra loro per un istante.",
+      "Abbassa il sandbag lentamente fino a distendere di nuovo le braccia.",
+      "Espira mentre tiri, inspira mentre scendi. Il busto resta fermo per tutta la serie."
+    ],
+    "errors": [
+      "Dare slancio alzando il busto: così lavora la schiena invece dei dorsali.",
+      "Schiena che si arrotonda: carichi la zona lombare.",
+      "Gomiti larghi e tirata verso il petto: lavorano le spalle più dei dorsali."
+    ],
+    "why": "Rinforza dorsali e presa che servono per tirare e controllare l'avversario in clinch.",
+    "figure": [
+      {
+        "label": "Braccia tese",
+        "people": [
+          {
+            "pose": "attrezzi-4/rematore-giu"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Tirata all'ombelico",
+        "people": [
+          {
+            "pose": "attrezzi-4/rematore-su"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "elbow",
+            "dx": -6,
+            "dy": -18,
+            "bend": 6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sandbag--sandbag-push-press",
@@ -26414,7 +42023,56 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 6 ripetizioni, recupero 90 s",
     "details": "Con il sandbag in posizione rack, piega leggermente le ginocchia e spingi in modo esplosivo portandolo sopra la testa a braccia tese. Collega gambe e spalle come nei pugni dritti con trasferimento di peso. Blocca il core in alto senza inarcare la schiena.",
     "equipment": "Sandbag",
-    "tool": "sandbag"
+    "tool": "sandbag",
+    "setup": "In piedi, piedi alla larghezza delle spalle. Sandbag in posizione rack: appoggiato davanti alle spalle e sul petto, gomiti avanti, mani sotto il sandbag.",
+    "steps": [
+      "Stringi gli addominali e i glutei: il busto resta dritto per tutto il movimento.",
+      "Piega leggermente le ginocchia di pochi centimetri, veloce, senza portare il sedere indietro.",
+      "Spingi subito con le gambe in modo esplosivo e usa quella spinta per lanciare il sandbag sopra la testa.",
+      "Distendi completamente le braccia: in alto il sandbag è sopra la testa, orecchie tra le braccia.",
+      "Riporta il sandbag in rack piegando un poco le ginocchia per ammortizzare. Espira durante la spinta."
+    ],
+    "errors": [
+      "Inarcare la schiena in alto: così il carico passa sulla zona lombare.",
+      "Piegamento troppo profondo o lento: diventa uno squat e la spinta si perde.",
+      "Spingere solo con le braccia: non colleghi gambe e spalle."
+    ],
+    "why": "Collega la spinta delle gambe alla spinta delle spalle, come nei pugni dritti con trasferimento di peso.",
+    "figure": [
+      {
+        "label": "Rack e piegamento",
+        "people": [
+          {
+            "pose": "attrezzi-4/rack-dip"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -34
+          }
+        ]
+      },
+      {
+        "label": "Spinta in alto",
+        "people": [
+          {
+            "pose": "attrezzi-4/press-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sandbag--sandbag-lateral-step-up",
@@ -26424,7 +42082,66 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 8 per lato, recupero 60 s",
     "details": "Con il sandbag abbracciato, sali lateralmente su un box basso spingendo con la gamba vicina e scendi controllato. Migliora forza unilaterale e stabilità per i cambi di direzione sul ring. Il ginocchio non deve crollare verso l'interno.",
     "equipment": "Sandbag",
-    "tool": "sandbag"
+    "tool": "sandbag",
+    "setup": "In piedi di fianco a un box basso, a circa mezzo passo. Abbraccia il sandbag contro il petto (bear hug), gomiti stretti e busto dritto.",
+    "steps": [
+      "Appoggia sul box tutto il piede della gamba vicina, con il ginocchio in linea con la punta.",
+      "Spingi con il tallone della gamba sul box e sali: la gamba a terra aiuta il meno possibile.",
+      "In alto distendi del tutto anca e ginocchio e porta l'altro piede accanto, restando dritto.",
+      "Scendi lentamente con la gamba esterna, sempre di lato, controllando il ginocchio della gamba sul box.",
+      "Fai tutte le ripetizioni da un lato e poi cambia. Espira mentre sali."
+    ],
+    "errors": [
+      "Ginocchio che crolla verso l'interno: così sovraccarichi il ginocchio.",
+      "Darsi la spinta con la gamba a terra: la gamba sul box lavora meno.",
+      "Piegarsi in avanti con il sandbag: perdi l'equilibrio e la schiena si carica."
+    ],
+    "why": "Sviluppa forza su una gamba e stabilità del ginocchio per i cambi di direzione sul ring.",
+    "figure": [
+      {
+        "label": "Piede sul box",
+        "people": [
+          {
+            "pose": "attrezzi-4/step-laterale",
+            "x": -22
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 76,
+            "w": 34,
+            "h": 24
+          },
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "In alto",
+        "people": [
+          {
+            "pose": "attrezzi-4/su-rialzo",
+            "x": 12,
+            "air": 24
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 66,
+            "w": 50,
+            "h": 24
+          },
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sandbag--sandbag-shuffle-in-guardia",
@@ -26434,7 +42151,44 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 20 s, recupero 40 s",
     "details": "In guardia bassa con il sandbag stretto al petto, esegui passi laterali veloci senza incrociare i piedi, cambiando direzione al comando. Sviluppa gambe reattive e footwork sotto carico. Resta sull'avampiede e mantieni l'altezza del bacino costante.",
     "equipment": "Sandbag",
-    "tool": "sandbag"
+    "tool": "sandbag",
+    "setup": "In guardia bassa, ginocchia piegate e peso sugli avampiedi. Stringi il sandbag al petto con entrambe le braccia, gomiti chiusi. Lo spazio di lavoro è di 3-4 passi per lato.",
+    "steps": [
+      "Spingi con il piede opposto alla direzione e fai un passo laterale corto con il piede che guida.",
+      "Fai seguire subito l'altro piede, senza incrociarlo e senza unire i piedi: la distanza tra i piedi resta uguale.",
+      "Continua con passi rapidi e leggeri, il bacino sempre alla stessa altezza.",
+      "Al comando, o dopo 3-4 passi, frena sul piede esterno e cambia direzione di scatto.",
+      "Respira in modo regolare e tieni il busto fermo: si muovono solo le gambe."
+    ],
+    "errors": [
+      "Incrociare o unire i piedi: in combattimento perderesti l'equilibrio a un colpo.",
+      "Saltellare in alto: perdi velocità e la posizione bassa.",
+      "Cadere sui talloni: i cambi di direzione diventano lenti."
+    ],
+    "why": "Rende le gambe reattive nel footwork laterale anche sotto carico e fatica.",
+    "figure": [
+      {
+        "label": "Guardia bassa",
+        "people": [
+          {
+            "pose": "attrezzi-4/guardia-bassa-sb"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 34,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "sandbag--sandbag-complex-da-round",
@@ -26444,7 +42198,72 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 3 min, recupero 1 min",
     "details": "Esegui senza sosta un clean, uno squat e un press con il sandbag, ripetendo la sequenza a ritmo sostenuto per tutto il round. Riproduce la fatica muscolare e respiratoria di un match. Scegli un carico leggero e interrompi se la tecnica si deteriora.",
     "equipment": "Sandbag",
-    "tool": "sandbag"
+    "tool": "sandbag",
+    "setup": "Sandbag a terra tra i piedi, piedi alla larghezza delle spalle. Usa un sandbag leggero: deve restare gestibile per tutto il round.",
+    "steps": [
+      "Clean: piega le anche, afferra il sandbag, distendi le gambe di scatto e portalo al petto, gomiti sotto.",
+      "Squat: con il sandbag al petto scendi finché le cosce sono parallele al pavimento, schiena dritta, e risali spingendo sui talloni.",
+      "Press: dalla posizione eretta spingi il sandbag sopra la testa a braccia tese, senza inarcare la schiena.",
+      "Riporta il sandbag al petto e poi a terra controllandolo, e ricomincia subito la sequenza.",
+      "Tieni un ritmo costante che riesci a mantenere fino alla fine del round. Espira in ogni fase di spinta."
+    ],
+    "errors": [
+      "Partire troppo forte: a metà round la tecnica crolla e la schiena si carica.",
+      "Schiena arrotondata nel clean quando si è stanchi: così rischi la zona lombare.",
+      "Saltare la discesa controllata e far cadere il sandbag: perdi metà del lavoro."
+    ],
+    "why": "Riproduce la fatica muscolare e respiratoria di un round. Scegli un carico leggero e fermati se la tecnica peggiora.",
+    "figure": [
+      {
+        "label": "Clean",
+        "people": [
+          {
+            "pose": "attrezzi-4/presa-bassa"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": -6,
+            "dy": -34,
+            "bend": -8
+          }
+        ]
+      },
+      {
+        "label": "Squat",
+        "people": [
+          {
+            "pose": "attrezzi-4/squat-frontale"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Press",
+        "people": [
+          {
+            "pose": "attrezzi-4/press-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "sandbag"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--ribaltamento-esplosivo-a-ripetizioni-rapide",
@@ -26454,7 +42273,55 @@ export const toolExercises: Exercise[] = [
     "dose": "5 × 4 ribaltamenti, recupero 90 s",
     "details": "Parti accosciato con il petto vicino al pneumatico e le mani sotto il bordo, poi estendi anche e ginocchia di scatto e spingi con le mani. Sviluppa la tripla estensione che dà potenza a ginocchiate e calci. Schiena neutra: tira con le gambe, non con la zona lombare.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Pneumatico a terra davanti a te. Piedi alla larghezza delle spalle a pochi centimetri dalla gomma, accosciati con il petto vicino al bordo e le mani sotto il bordo, palmi rivolti in alto.",
+    "steps": [
+      "Schiena dritta, sguardo avanti, petto appoggiato o quasi alla gomma: le braccia sono tese e fanno solo da gancio.",
+      "Spingi di scatto con le gambe in avanti e in alto, distendendo insieme caviglie, ginocchia e anche: è la tripla estensione.",
+      "Quando il pneumatico si alza all'altezza delle anche, entra con un passo e porta le mani davanti, palmi sulla gomma.",
+      "Spingi con le braccia in avanti per ribaltarlo, come in una doppia spinta.",
+      "Raggiungi subito il pneumatico, riaccosciati con la stessa tecnica e riparti senza perdere tempo. Espira a ogni spinta."
+    ],
+    "errors": [
+      "Tirare con la schiena curva invece di spingere con le gambe: così rischi la zona lombare.",
+      "Partire con i piedi lontani dal pneumatico: la spinta va in alto e non in avanti, e la schiena si carica.",
+      "Tirare con i bicipiti a braccia piegate: rischi lesioni al bicipite."
+    ],
+    "why": "Sviluppa la tripla estensione esplosiva che dà potenza a ginocchiate e calci. Schiena sempre neutra: tirano le gambe, non la zona lombare.",
+    "figure": [
+      {
+        "label": "Presa sotto il bordo",
+        "people": [
+          {
+            "pose": "attrezzi-4/presa-pneumatico",
+            "x": -36
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 74
+          }
+        ]
+      },
+      {
+        "label": "Spinta e ribaltamento",
+        "people": [
+          {
+            "pose": "attrezzi-4/spinta-pneumatico",
+            "x": -30
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 24,
+            "dy": -10,
+            "bend": 10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--ribaltamento-pesante-a-bassa-ripetizione",
@@ -26464,7 +42331,56 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 3 ribaltamenti, recupero 2 min",
     "details": "Usa un pneumatico impegnativo e cura l'aggancio: mani in supinazione, petto contro la gomma, piedi larghi come le spalle. Costruisce la forza di base che regge il clinch e la stabilità sui colpi. Fermati se la schiena si arrotonda e recupera completamente tra le serie.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Pneumatico pesante a terra. Piedi larghi come le spalle, vicini alla gomma. Accosciati, appoggia il petto contro il pneumatico e infila le dita sotto il bordo con i palmi in alto (presa in supinazione).",
+    "steps": [
+      "Sistema bene l'aggancio: petto contro la gomma, schiena piatta, braccia tese. Prendi aria e blocca l'addome.",
+      "Spingi con le gambe in avanti contro il pneumatico, lentamente ma con forza continua, finché il bordo si stacca e sale.",
+      "Distendi le anche e accompagna la gomma con il petto fino all'altezza della vita.",
+      "Fai un passo avanti, gira le mani e spingi a braccia tese per farlo ricadere dall'altra parte.",
+      "Fermati, respira e rimettiti in posizione con calma prima della ripetizione successiva."
+    ],
+    "errors": [
+      "Iniziare con la schiena arrotondata: con questo carico la zona lombare è a rischio.",
+      "Stare lontano dal pneumatico e tirarlo verso l'alto: il peso finisce su schiena e braccia.",
+      "Strappare con le braccia piegate: rischi la lesione del bicipite."
+    ],
+    "why": "Costruisce la forza di base che regge il clinch e rende stabili sui colpi. Fermati se la schiena si arrotonda e recupera completamente tra le serie.",
+    "figure": [
+      {
+        "label": "Petto contro la gomma",
+        "people": [
+          {
+            "pose": "attrezzi-4/presa-pneumatico",
+            "x": -36
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 74,
+            "w": 64
+          }
+        ]
+      },
+      {
+        "label": "Spinta delle gambe",
+        "people": [
+          {
+            "pose": "attrezzi-4/spinta-pneumatico",
+            "x": -30
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 24,
+            "dy": -10,
+            "bend": 10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--ribaltamento-piu-sprawl",
@@ -26474,7 +42390,55 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 6 ribaltamenti, recupero 60 s",
     "details": "Ribalta il pneumatico, raggiungilo e fai subito uno sprawl portando le anche a terra, poi rialzati in guardia. Allena il passaggio da sforzo massimale a reazione difensiva, tipico del combattimento. Atterra sullo sprawl con le anche basse e la testa alta, senza crollare sulla schiena.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Pneumatico a terra davanti a te, accosciato con petto vicino alla gomma e mani sotto il bordo, come per un normale ribaltamento.",
+    "steps": [
+      "Ribalta il pneumatico con la spinta delle gambe e delle anche, poi con le braccia.",
+      "Raggiungilo con due passi rapidi, tornando in guardia.",
+      "Fai subito uno sprawl: appoggia le mani a terra, lancia le gambe indietro e porta le anche verso il pavimento.",
+      "Nello sprawl testa e petto restano alti e le anche pesano a terra, come per schiacciare chi prova a prenderti le gambe.",
+      "Riporta i piedi sotto di te e rialzati direttamente in guardia, poi riaggancia il pneumatico e riparti."
+    ],
+    "errors": [
+      "Cadere a pancia a terra con la schiena inarcata: così sbatti la zona lombare e non controlli nulla.",
+      "Testa bassa nello sprawl: in combattimento ti ritrovi con l'avversario sopra.",
+      "Rialzarsi lentamente o appoggiando le ginocchia: perdi il passaggio rapido alla difesa."
+    ],
+    "why": "Allena il passaggio da uno sforzo massimale a una reazione difensiva immediata, come quando l'avversario cerca di prenderti le gambe.",
+    "figure": [
+      {
+        "label": "Ribaltamento",
+        "people": [
+          {
+            "pose": "attrezzi-4/spinta-pneumatico",
+            "x": -30
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 24,
+            "dy": -10,
+            "bend": 10
+          }
+        ]
+      },
+      {
+        "label": "Sprawl",
+        "people": [
+          {
+            "pose": "attrezzi-4/sprawl"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -4,
+            "dy": 16
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--ribaltamento-piu-combinazione",
@@ -26484,7 +42448,56 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 5 ribaltamenti, recupero 60 s",
     "details": "Ribalta il pneumatico, torna in guardia e lancia jab-diretto-calcio circolare a vuoto con tecnica completa. Insegna a mantenere precisione e guardia anche sotto fatica muscolare. Non sacrificare la forma dei colpi per velocizzare: guardia alta e rientro del calcio.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Pneumatico a terra davanti a te, accosciato in posizione di ribaltamento. Lascia spazio libero di lato per la combinazione.",
+    "steps": [
+      "Ribalta il pneumatico con una spinta completa di gambe e braccia.",
+      "Torna subito in guardia: mani alte, mento basso, peso leggero sull'avampiede posteriore.",
+      "Lancia il jab con il braccio davanti e il diretto con il braccio dietro, ruotando il piede posteriore.",
+      "Chiudi con un calcio circolare con la gamba posteriore, colpendo con la tibia e ruotando sull'avampiede d'appoggio.",
+      "Riporta la gamba in guardia, poi raggiungi il pneumatico e ricomincia."
+    ],
+    "errors": [
+      "Abbassare le mani quando sei stanco: in combattimento arriva il contrattacco.",
+      "Calciare con il piede d'appoggio piatto: le anche non ruotano e il calcio è debole.",
+      "Accorciare la combinazione per fare più ribaltamenti: perdi lo scopo dell'esercizio."
+    ],
+    "why": "Insegna a mantenere precisione e guardia anche sotto fatica muscolare, come negli ultimi round.",
+    "figure": [
+      {
+        "label": "Ribaltamento",
+        "people": [
+          {
+            "pose": "attrezzi-4/spinta-pneumatico",
+            "x": -30
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 24,
+            "dy": -10,
+            "bend": 10
+          }
+        ]
+      },
+      {
+        "label": "Calcio circolare",
+        "people": [
+          {
+            "pose": "calcio-circolare"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 25,
+            "dy": 18,
+            "bend": 18
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--martellata-diagonale-alternata",
@@ -26494,7 +42507,65 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 colpi per lato, recupero 60 s",
     "details": "In posizione semi-laterale, porta la mazza sopra la spalla e colpisci il pneumatico in diagonale ruotando busto e anche, alternando i lati. Rafforza la catena rotatoria che genera potenza nei ganci e nei calci circolari. Fai scorrere la mano alta sul manico e tieni il core contratto all'impatto.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "In piedi in posizione semi-laterale davanti al pneumatico, a una distanza in cui la testa della mazza cade al centro della gomma. Piedi più larghi delle spalle, mano dietro in fondo al manico e mano davanti vicino alla testa della mazza.",
+    "steps": [
+      "Porta la mazza sopra la spalla dal lato della mano davanti, con la testa della mazza dietro di te.",
+      "Ruota busto e anche verso il pneumatico e scarica la mazza in diagonale, dall'alto in basso.",
+      "Mentre scende, fai scorrere la mano davanti lungo il manico fino all'altra mano.",
+      "All'impatto piega leggermente le ginocchia, stringi l'addome ed espira con forza.",
+      "Controlla il rimbalzo, porta la mazza sopra l'altra spalla cambiando la mano davanti e colpisci dal lato opposto."
+    ],
+    "errors": [
+      "Colpire solo con le braccia: la forza non arriva dalla rotazione del corpo.",
+      "Schiena curva all'impatto: assorbi il contraccolpo con la zona lombare.",
+      "Perdere il controllo del rimbalzo: la mazza può tornare verso di te."
+    ],
+    "why": "Rafforza la catena di rotazione che dà potenza a ganci e calci circolari. Lascia spazio libero intorno e controlla sempre la mazza.",
+    "figure": [
+      {
+        "label": "Mazza sulla spalla",
+        "people": [
+          {
+            "pose": "attrezzi-4/mazza-spalla",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 88
+          },
+          {
+            "type": "stick",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Colpo in diagonale",
+        "people": [
+          {
+            "pose": "attrezzi-4/mazza-impatto",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 88
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 28,
+            "dy": 34,
+            "bend": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--martellata-verticale-overhead",
@@ -26504,7 +42575,65 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 8 colpi, recupero 75 s",
     "details": "Piedi larghi, solleva la mazza sopra la testa e scaricala al centro del pneumatico con anche e addominali, piegando leggermente le ginocchia. Sviluppa la potenza di flessione del tronco utile per gomiti discendenti e ginocchiate. Guarda il punto di impatto e controlla il rimbalzo della mazza.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "In piedi di fronte al pneumatico, piedi più larghi delle spalle, a una distanza in cui la testa della mazza cade al centro della gomma. Impugna il manico con le mani vicine, in fondo.",
+    "steps": [
+      "Porta la mazza sopra la testa, braccia quasi tese, petto aperto.",
+      "Scarica il colpo dritto verso il centro del pneumatico contraendo addominali e anche, come se ti chiudessi in avanti.",
+      "Piega leggermente le ginocchia nell'impatto e tieni lo sguardo sul punto da colpire.",
+      "Espira con forza nel colpo.",
+      "Controlla il rimbalzo della mazza e riportala sopra la testa per il colpo successivo."
+    ],
+    "errors": [
+      "Inarcare molto la schiena in alto: la zona lombare si carica.",
+      "Colpire a gambe tese e piegando solo la schiena: perdi potenza e rischi la schiena.",
+      "Guardare altrove: la mazza colpisce il bordo e rimbalza in modo imprevedibile."
+    ],
+    "why": "Sviluppa la potenza di chiusura del tronco usata nei gomiti discendenti e nelle ginocchiate. Controlla sempre il rimbalzo della mazza.",
+    "figure": [
+      {
+        "label": "Mazza in alto",
+        "people": [
+          {
+            "pose": "attrezzi-4/mazza-alta",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 88
+          },
+          {
+            "type": "stick",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Colpo al centro",
+        "people": [
+          {
+            "pose": "attrezzi-4/mazza-impatto",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 88
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 28,
+            "dy": 34,
+            "bend": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--martellate-a-tempo-tabata",
@@ -26514,7 +42643,65 @@ export const toolExercises: Exercise[] = [
     "dose": "8 × 20 s lavoro / 10 s pausa",
     "details": "Colpisci il pneumatico alternando i lati senza fermarti per 20 secondi, poi recupera 10 secondi tenendo la mazza a terra. Riproduce la richiesta lattacida degli scambi intensi a fine round. Abbassa la velocità se la tecnica peggiora: la mazza deve sempre restare sotto controllo.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "In piedi in posizione semi-laterale davanti al pneumatico, mazza in mano e piedi più larghi delle spalle. Tieni un timer a vista.",
+    "steps": [
+      "Al via colpisci il pneumatico in diagonale, alternando destra e sinistra, alla massima velocità che riesci a controllare.",
+      "Ogni colpo parte dalla rotazione di anche e busto; la mano davanti scorre sul manico.",
+      "Espira a ogni colpo e piega leggermente le ginocchia all'impatto.",
+      "Al segnale di recupero appoggia la testa della mazza a terra e respira profondamente.",
+      "Riparti al via successivo con la stessa tecnica, anche se sei stanco."
+    ],
+    "errors": [
+      "Colpi scomposti quando arriva la fatica: la mazza rimbalza fuori controllo.",
+      "Tenere la mazza in mano sollevata durante il recupero: non recuperi.",
+      "Trattenere il fiato: la fatica arriva prima."
+    ],
+    "why": "Riproduce lo sforzo intenso degli scambi a fine round. Se la tecnica peggiora abbassa la velocità: la mazza deve restare sempre sotto controllo.",
+    "figure": [
+      {
+        "label": "Carica",
+        "people": [
+          {
+            "pose": "attrezzi-4/mazza-spalla",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 88
+          },
+          {
+            "type": "stick",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Colpo veloce",
+        "people": [
+          {
+            "pose": "attrezzi-4/mazza-impatto",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 88
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 28,
+            "dy": 34,
+            "bend": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--martellata-a-tre-minuti",
@@ -26524,7 +42711,65 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 3 min, recupero 1 min",
     "details": "Colpisci a ritmo regolare alternando i lati, cambiando la guardia dei piedi ogni 30 secondi. Costruisce la resistenza di spalle, avambracci e core per mantenere i colpi pesanti per tutto il round. Respira a ogni colpo e mantieni la presa salda ma non contratta.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "In piedi davanti al pneumatico in posizione semi-laterale, mazza in mano, piedi più larghi delle spalle. Il lavoro dura quanto un round.",
+    "steps": [
+      "Colpisci a ritmo regolare alternando i lati, un colpo ogni secondo o poco più.",
+      "Ogni colpo nasce dalla rotazione di anche e busto; le braccia guidano la mazza.",
+      "Ogni 30 secondi cambia la posizione dei piedi, come se cambiassi guardia.",
+      "Respira a ogni colpo: espira all'impatto, inspira mentre carichi.",
+      "Tieni la presa salda ma non stretta al massimo, per non bruciare gli avambracci troppo presto."
+    ],
+    "errors": [
+      "Partire forte e crollare a metà: l'obiettivo è un ritmo costante fino alla fine.",
+      "Presa troppo contratta: avambracci bloccati e colpi sempre più deboli.",
+      "Lavorare sempre con la stessa guardia: un lato si stanca e l'altro non si allena."
+    ],
+    "why": "Costruisce la resistenza di spalle, avambracci e core per portare colpi pesanti per tutto il round.",
+    "figure": [
+      {
+        "label": "Carica",
+        "people": [
+          {
+            "pose": "attrezzi-4/mazza-spalla",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 88
+          },
+          {
+            "type": "stick",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Colpo regolare",
+        "people": [
+          {
+            "pose": "attrezzi-4/mazza-impatto",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 88
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 28,
+            "dy": 34,
+            "bend": -10
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--martellata-dalla-guardia",
@@ -26534,7 +42779,67 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 8 colpi per lato, recupero 60 s",
     "details": "Parti in guardia Muay Thai, ruota il piede posteriore e colpisci il pneumatico lateralmente come in un gancio largo, poi torna in guardia. Collega la rotazione dell'anca alla trasmissione di forza tipica dei colpi circolari. Ritorna sempre in posizione bilanciata prima del colpo successivo.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "In guardia Muay Thai accanto al pneumatico, mazza impugnata bassa con le mani vicine, a una distanza in cui la testa della mazza arriva sulla gomma.",
+    "steps": [
+      "Parti in guardia: piedi sfalsati, ginocchia morbide, peso leggero sull'avampiede posteriore.",
+      "Ruota il piede posteriore sull'avampiede e porta avanti l'anca, come nel diretto o nel gancio.",
+      "Lascia che la rotazione trascini la mazza in un arco largo e laterale fino al pneumatico, come in un gancio largo.",
+      "All'impatto stringi l'addome ed espira.",
+      "Torna in guardia bilanciata prima di caricare il colpo successivo."
+    ],
+    "errors": [
+      "Colpire con il piede posteriore piatto: le anche non ruotano e la forza viene dalle braccia.",
+      "Restare sbilanciati dopo il colpo: in combattimento resti scoperto.",
+      "Arco troppo stretto e verticale: diventa un'altra martellata e non alleni il gesto circolare."
+    ],
+    "why": "Collega la rotazione dell'anca alla trasmissione della forza tipica dei colpi circolari. Lascia spazio libero attorno a te.",
+    "figure": [
+      {
+        "label": "In guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 88
+          }
+        ]
+      },
+      {
+        "label": "Rotazione e colpo",
+        "people": [
+          {
+            "pose": "attrezzi-4/mazza-laterale",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 88
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 22,
+            "dy": 30,
+            "bend": -12
+          },
+          {
+            "at": "foot2",
+            "dx": 6,
+            "dy": -10,
+            "bend": -6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--martellata-in-ginocchio",
@@ -26544,7 +42849,65 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 colpi per lato, recupero 60 s",
     "details": "Inginocchiati davanti al pneumatico su un tappetino e colpisci in diagonale usando solo la rotazione del busto. Elimina l'aiuto delle gambe e rafforza obliqui e stabilità del core per il clinch e i colpi. Mantieni il busto eretto e non iperestendere la zona lombare.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "In ginocchio su un tappetino davanti al pneumatico, ginocchia alla larghezza delle anche e busto dritto. Impugna la mazza corta, con le mani vicino alla testa.",
+    "steps": [
+      "Stringi glutei e addome: il busto resta dritto e il bacino non va indietro.",
+      "Porta la mazza sopra una spalla ruotando il busto.",
+      "Colpisci il pneumatico in diagonale usando solo la rotazione del tronco e la chiusura dell'addome.",
+      "Espira all'impatto e controlla il rimbalzo.",
+      "Riporta la mazza sull'altra spalla e colpisci dal lato opposto."
+    ],
+    "errors": [
+      "Sedersi sui talloni: perdi la posizione e lavorano meno gli addominali.",
+      "Inarcare la schiena caricando il colpo: la zona lombare va in sofferenza.",
+      "Colpire solo di braccia: il tronco non lavora."
+    ],
+    "why": "Togliendo le gambe isola obliqui e stabilità del tronco, utili in clinch e nei colpi rotatori. Usa sempre un tappetino sotto le ginocchia.",
+    "figure": [
+      {
+        "label": "Carica in ginocchio",
+        "people": [
+          {
+            "pose": "attrezzi-4/inginocchiato-alto",
+            "x": -25
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 74
+          },
+          {
+            "type": "stick",
+            "at": "hand"
+          }
+        ]
+      },
+      {
+        "label": "Rotazione del busto",
+        "people": [
+          {
+            "pose": "attrezzi-4/inginocchiato-colpo",
+            "x": -25
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 74
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 18,
+            "dy": 20,
+            "bend": -8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--salti-dentro-e-fuori-dal-pneumatico",
@@ -26554,7 +42917,63 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 20 s, recupero 40 s",
     "details": "Posiziona il pneumatico a terra e salta a piedi uniti dentro il foro e poi fuori, in avanti, lateralmente e indietro. Migliora reattività dei piedi e cambi di direzione utili negli spostamenti sul ring. Atterra sugli avampiedi con ginocchia morbide e tocchi rapidi al suolo.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Pneumatico steso a terra. In piedi davanti al bordo, piedi uniti, ginocchia morbide, braccia in guardia o libere per aiutarti.",
+    "steps": [
+      "Salta a piedi uniti dentro il foro del pneumatico, atterrando sugli avampiedi.",
+      "Senza fermarti rimbalza fuori dalla parte opposta.",
+      "Ripeti poi lateralmente: dentro dal fianco destro, fuori dal fianco sinistro.",
+      "Infine all'indietro, guardando sempre davanti a te.",
+      "Tocchi al suolo brevissimi, come se il pavimento scottasse; respira con regolarità."
+    ],
+    "errors": [
+      "Atterrare sui talloni a gambe tese: il colpo arriva su ginocchia e schiena.",
+      "Fermarsi a ogni atterraggio: si perde la reattività.",
+      "Inciampare sul bordo per salti troppo bassi: alza le ginocchia quanto basta."
+    ],
+    "why": "Rende i piedi reattivi e pronti ai cambi di direzione sul ring.",
+    "figure": [
+      {
+        "label": "Fuori",
+        "people": [
+          {
+            "pose": "attrezzi-4/atterraggio",
+            "x": -45
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 72,
+            "w": 64
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 46,
+            "dy": -10,
+            "bend": 14
+          }
+        ]
+      },
+      {
+        "label": "Dentro",
+        "people": [
+          {
+            "pose": "attrezzi-4/atterraggio",
+            "x": 10
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 52,
+            "w": 64
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--box-jump-sul-pneumatico",
@@ -26564,7 +42983,64 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 6 salti, recupero 75 s",
     "details": "Da in piedi, carica con un piegamento rapido e salta atterrando sul bordo o al centro di un pneumatico pesante, poi scendi camminando. Sviluppa l'esplosività delle gambe per entrate, ginocchiate in salto e calci. Atterra stabile con le ginocchia allineate alle punte dei piedi.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "In piedi a circa mezzo metro da un pneumatico pesante e stabile, piedi alla larghezza delle anche.",
+    "steps": [
+      "Carica con un piegamento rapido: sedere indietro, ginocchia piegate, braccia portate indietro.",
+      "Salta lanciando le braccia in avanti e in alto, distendendo anche, ginocchia e caviglie.",
+      "Atterra a piedi uniti sul bordo o al centro del pneumatico, ginocchia piegate e allineate alle punte.",
+      "Stabilizzati in piedi sopra il pneumatico.",
+      "Scendi camminando, non saltando, e torna in posizione per il salto successivo."
+    ],
+    "errors": [
+      "Ginocchia che cadono verso l'interno all'atterraggio: così rischi il ginocchio.",
+      "Atterrare rigidi a gambe tese: l'impatto arriva su ginocchia e schiena.",
+      "Scendere saltando all'indietro: carico inutile su tendini e caviglie."
+    ],
+    "why": "Sviluppa l'esplosività delle gambe per entrate, ginocchiate in salto e calci. Usa un pneumatico pesante che non si muova sotto i piedi.",
+    "figure": [
+      {
+        "label": "Carica",
+        "people": [
+          {
+            "pose": "mezzo-squat",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 80,
+            "w": 60
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 40,
+            "dy": -22,
+            "bend": 12
+          }
+        ]
+      },
+      {
+        "label": "Atterraggio sopra",
+        "people": [
+          {
+            "pose": "attrezzi-4/atterraggio",
+            "x": 20,
+            "air": 14
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 66,
+            "w": 70
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--step-up-sul-pneumatico-con-ginocchiata",
@@ -26574,7 +43050,77 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 per gamba, recupero 60 s",
     "details": "Sali sul bordo del pneumatico con una gamba spingendo col tallone e porta l'altra in ginocchiata alta, tirando le braccia verso il basso. Rafforza la gamba d'appoggio e la catena della ginocchiata. Controlla la discesa e tieni il bacino stabile senza ruotare.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "In piedi davanti a un pneumatico steso, a mezzo passo dal bordo. Mani in guardia davanti al viso.",
+    "steps": [
+      "Appoggia un piede sul bordo del pneumatico, tutto il piede, con il ginocchio in linea con la punta.",
+      "Spingi con il tallone del piede sul pneumatico e sali distendendo la gamba.",
+      "Mentre sali, porta il ginocchio dell'altra gamba in alto davanti a te e tira le mani verso il basso, come se tirassi giù la testa dell'avversario.",
+      "Tieni il bacino fermo e sali sull'avampiede della gamba d'appoggio nella ginocchiata.",
+      "Scendi controllando con la stessa gamba con cui hai fatto la ginocchiata, poi ripeti. Espira nella ginocchiata."
+    ],
+    "errors": [
+      "Spingersi con la gamba a terra: la gamba sul pneumatico lavora meno.",
+      "Ruotare il bacino o piegarsi in avanti nella ginocchiata: perdi equilibrio e potenza.",
+      "Scendere di colpo: le ginocchia assorbono male."
+    ],
+    "why": "Rafforza la gamba d'appoggio e la catena della ginocchiata, insieme all'equilibrio su un piede.",
+    "figure": [
+      {
+        "label": "Piede sul bordo",
+        "people": [
+          {
+            "pose": "attrezzi-4/passo-su-gomma",
+            "x": -25
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 72,
+            "w": 60
+          }
+        ]
+      },
+      {
+        "label": "Su e ginocchiata",
+        "people": [
+          {
+            "pose": "attrezzi-4/ginocchiata-alta",
+            "x": 0,
+            "air": 14,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dx": 2,
+                "dy": -8
+              },
+              "hand2": {
+                "who": 0,
+                "at": "knee",
+                "dx": 6,
+                "dy": -10
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 48,
+            "w": 60
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 6,
+            "dy": -20
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--ginocchiate-sul-pneumatico-verticale",
@@ -26584,7 +43130,67 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 30 s, recupero 45 s",
     "details": "Tieni un pneumatico leggero in verticale contro un muro o un compagno, aggancialo con presa da clinch e alterna ginocchiate dritte con spinta delle anche. Allena il ritmo e la potenza delle ginocchiate in presa. Resta alto sulle punte e tira il bersaglio verso di te mentre colpisci.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Il compagno tiene un pneumatico leggero in piedi davanti a sé, ben stretto, oppure lo appoggia contro un muro. Mettiti di fronte a distanza di clinch e aggancia il bordo superiore con entrambe le mani.",
+    "steps": [
+      "Stringi la presa come in un clinch: gomiti stretti, anche avanti, busto alto.",
+      "Sali sull'avampiede della gamba d'appoggio.",
+      "Tira il pneumatico verso di te e intanto porta il ginocchio in avanti e in alto, spingendo con l'anca.",
+      "Colpisci la gomma con il ginocchio, punta del piede rivolta verso il basso, ed espira.",
+      "Rimetti giù il piede e alterna le gambe a ritmo costante. Il compagno resta fermo e assorbe i colpi piegando un poco le ginocchia."
+    ],
+    "errors": [
+      "Spingere via il pneumatico invece di tirarlo: perdi la distanza e la ginocchiata si accorcia.",
+      "Tallone d'appoggio a terra: la ginocchiata perde altezza e potenza.",
+      "Busto piegato in avanti: lavora la schiena e non l'anca."
+    ],
+    "why": "Allena ritmo e potenza delle ginocchiate in presa. Il compagno tiene il pneumatico lontano dal proprio corpo per non prendere colpi.",
+    "figure": [
+      {
+        "label": "Tirata e ginocchiata",
+        "people": [
+          {
+            "pose": "attrezzi-4/ginocchiata-tirata",
+            "x": -32,
+            "reach": {
+              "hand": {
+                "who": 1,
+                "at": "hand",
+                "dx": -4,
+                "dy": -4
+              },
+              "hand2": {
+                "who": 1,
+                "at": "hand",
+                "dx": -2,
+                "dy": -2
+              }
+            }
+          },
+          {
+            "pose": "attrezzi-4/regge-pneu",
+            "flip": true,
+            "partner": true,
+            "x": 44
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand",
+            "who": 1
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 8,
+            "dy": -16,
+            "bend": 6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--spinta-del-pneumatico-in-clinch",
@@ -26594,7 +43200,45 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 15 m, recupero 60 s",
     "details": "Abbraccia il pneumatico in piedi, abbassa il baricentro e spingilo a piccoli passi come se portassi l'avversario alle corde. Sviluppa la forza delle gambe e della postura necessaria per dominare il clinch. Tieni la schiena dritta, la testa alta e i passi corti e potenti.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Pneumatico in piedi sul battistrada davanti a te. Abbraccialo dall'alto con entrambe le braccia, petto vicino alla gomma, piedi sfalsati e ginocchia piegate.",
+    "steps": [
+      "Abbassa il baricentro: anche basse, schiena dritta, testa alta.",
+      "Spingi con la gamba dietro e fai un passo corto e potente in avanti.",
+      "Fai avanzare il pneumatico facendolo rotolare o strisciare, sempre stretto contro il petto.",
+      "Continua con passi corti e rapidi sotto il baricentro, come se portassi l'avversario alle corde.",
+      "Respira in modo regolare e non alzarti tra un passo e l'altro."
+    ],
+    "errors": [
+      "Testa bassa e schiena curva: in clinch l'avversario ti piega e ti controlla.",
+      "Passi lunghi: le gambe restano dietro e perdi la spinta.",
+      "Spingere con le braccia distese: la forza delle gambe non arriva al pneumatico."
+    ],
+    "why": "Sviluppa la forza di gambe e postura che serve per dominare il clinch e spingere l'avversario.",
+    "figure": [
+      {
+        "label": "Spinta a passi corti",
+        "people": [
+          {
+            "pose": "attrezzi-4/spinta-bassa",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "barbell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 32,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--trascinamento-del-pneumatico-all-indietro",
@@ -26604,7 +43248,52 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 20 m, recupero 60 s",
     "details": "Lega una corda al pneumatico, impugnala con le braccia tese e cammina all'indietro a passi brevi spingendo con l'avampiede. Rafforza i quadricipiti e le ginocchia, utili per mantenere la posizione e i teep. Mantieni anche basse e busto leggermente inclinato in avanti.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Corda ben legata al pneumatico. Mettiti di fronte al pneumatico, a corda tesa, impugnandola con entrambe le mani a braccia distese. Anche basse, ginocchia piegate, busto leggermente inclinato in avanti.",
+    "steps": [
+      "Tendi la corda e blocca l'addome; le braccia restano tese per tutto il tempo.",
+      "Fai un passo corto all'indietro appoggiando l'avampiede.",
+      "Spingi con la gamba davanti, distendendo il ginocchio, per far scivolare il pneumatico verso di te.",
+      "Continua a passi brevi e regolari, sempre con le anche basse.",
+      "Respira in modo regolare e controlla lo spazio alle tue spalle."
+    ],
+    "errors": [
+      "Tirare con le braccia piegate: lavorano le braccia e non le gambe.",
+      "Alzarsi con il busto e le anche: perdi la spinta dei quadricipiti.",
+      "Passi lunghi sui talloni: il movimento diventa scomposto."
+    ],
+    "why": "Rinforza quadricipiti e ginocchia, utili per mantenere la posizione e per la spinta del teep. Controlla che dietro di te non ci sia nessuno.",
+    "figure": [
+      {
+        "label": "Passi indietro",
+        "people": [
+          {
+            "pose": "attrezzi-4/tira-indietro",
+            "x": -35
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 112,
+            "w": 44
+          },
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 118,
+            "y": 130
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -30,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--sprint-trainando-il-pneumatico",
@@ -26614,7 +43303,52 @@ export const toolExercises: Exercise[] = [
     "dose": "6 × 15 m, recupero 90 s",
     "details": "Fissa il pneumatico a una cintura con una corda e sprinta in avanti con spinta potente delle braccia e busto inclinato. Migliora la potenza di accelerazione per entrare a distanza di colpo. Usa un pneumatico leggero per non perdere la meccanica di corsa.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Pneumatico leggero legato con una corda a una cintura in vita. Mettiti in posizione di partenza da sprint, con la corda tesa dietro di te.",
+    "steps": [
+      "Inclina il busto in avanti dalle caviglie, non piegandoti in vita.",
+      "Parti spingendo forte con la gamba dietro e portando il ginocchio davanti in alto.",
+      "Muovi le braccia con forza, gomiti piegati a 90°, mano davanti all'altezza del viso e mano dietro vicino al fianco.",
+      "Fai appoggi rapidi sull'avampiede sotto il bacino e mantieni l'inclinazione per tutto lo sprint.",
+      "Alla fine rallenta gradualmente e torna camminando per recuperare."
+    ],
+    "errors": [
+      "Pneumatico troppo pesante: la corsa si spezza e perdi la meccanica dello sprint.",
+      "Busto dritto o piegato in vita: la spinta va in alto e non in avanti.",
+      "Appoggiare i talloni: freni a ogni passo."
+    ],
+    "why": "Migliora l'accelerazione per entrare in un attimo a distanza di colpo. Usa un pneumatico leggero per non rovinare la tecnica di corsa.",
+    "figure": [
+      {
+        "label": "Sprint inclinato",
+        "people": [
+          {
+            "pose": "attrezzi-4/sprint-traino",
+            "x": 20
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 6,
+            "w": 40
+          },
+          {
+            "type": "band",
+            "at": "hip",
+            "x": 30,
+            "y": 128
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 30,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--tiro-della-corda-col-pneumatico",
@@ -26624,7 +43358,52 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 15 m, recupero 60 s",
     "details": "In semi-squat, tira la corda legata al pneumatico mano dopo mano finché arriva ai tuoi piedi. Rafforza presa, dorsali e bicipiti, fondamentali per controllare la testa dell'avversario nel clinch. Non arrotondare la schiena e tieni le gambe ben piantate.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Pneumatico a qualche metro davanti a te, legato a una corda. In semi-squat con i piedi ben piantati alla larghezza delle spalle, afferra la corda con entrambe le mani, braccia tese.",
+    "steps": [
+      "Blocca la posizione: anche basse, schiena dritta, petto aperto. Le gambe restano ferme per tutto l'esercizio.",
+      "Tira la corda con una mano portando il gomito indietro vicino al fianco.",
+      "Allunga l'altra mano in avanti e afferra la corda più avanti, poi tira anche con quella.",
+      "Continua a tirare mano dopo mano, senza far mollare la corda, finché il pneumatico arriva ai tuoi piedi.",
+      "Espira a ogni tirata e lascia la corda che hai tirato a terra accanto a te."
+    ],
+    "errors": [
+      "Arrotondare la schiena per tirare di più: così carichi la zona lombare.",
+      "Alzarti e tirare con il peso del corpo all'indietro: lavorano poco le braccia e i dorsali.",
+      "Mollare la presa tra una mano e l'altra: il pneumatico si ferma e perdi tensione."
+    ],
+    "why": "Rinforza presa, dorsali e bicipiti, fondamentali per controllare la testa dell'avversario in clinch.",
+    "figure": [
+      {
+        "label": "Tirata mano dopo mano",
+        "people": [
+          {
+            "pose": "attrezzi-4/tiro-corda",
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 116,
+            "w": 40
+          },
+          {
+            "type": "band",
+            "at": "hand",
+            "x": 120,
+            "y": 130
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand2",
+            "dx": -16,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--calcio-basso-sul-pneumatico",
@@ -26634,7 +43413,71 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 10 per gamba, recupero 60 s",
     "details": "Fissa un pneumatico in verticale e colpisci con la tibia in calcio basso, ruotando completamente il piede d'appoggio e l'anca. Rinforza il condizionamento e la meccanica del calcio basso. Inizia con intensità moderata e proteggi la tibia con un paratibia se sei principiante.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Pneumatico fissato in verticale (a un palo o legato a una struttura) all'altezza della coscia. Mettiti in guardia a distanza di calcio basso: lo raggiungi con la tibia, non con il piede.",
+    "steps": [
+      "Fai un piccolo passo in diagonale verso l'esterno con il piede anteriore, punta verso fuori.",
+      "Sali sull'avampiede della gamba d'appoggio e ruota il tallone verso il bersaglio: le anche girano con il calcio.",
+      "Lancia la gamba posteriore in un arco basso, ginocchio solo leggermente piegato, e colpisci la gomma con la parte bassa della tibia.",
+      "Il braccio dello stesso lato scende indietro per bilanciare; l'altra mano resta alta a coprire il viso.",
+      "Riporta subito la gamba e torna in guardia prima del calcio successivo."
+    ],
+    "errors": [
+      "Piede d'appoggio piatto: le anche non ruotano e colpisci solo di gamba.",
+      "Colpire con il piede o la caviglia: fa male e rischi lesioni.",
+      "Partire troppo forte senza abitudine: la tibia si infiamma."
+    ],
+    "why": "Condiziona la tibia e consolida la meccanica del calcio basso. Inizia con intensità moderata e, se sei principiante, usa un paratibia.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "x": -30,
+            "gloves": true
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 116,
+            "w": 5,
+            "h": 78
+          }
+        ]
+      },
+      {
+        "label": "Tibia sulla gomma",
+        "people": [
+          {
+            "pose": "attrezzi-4/calcio-basso",
+            "x": -40,
+            "gloves": true
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 116,
+            "w": 5,
+            "h": 78
+          },
+          {
+            "type": "barbell",
+            "at": "foot"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 20,
+            "dy": 12,
+            "bend": 12
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--teep-sul-pneumatico",
@@ -26644,7 +43487,70 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 10 per gamba, recupero 45 s",
     "details": "Da guardia, solleva il ginocchio e spingi il pneumatico con la pianta del piede estendendo l'anca, poi riporta subito la gamba in guardia. Allena velocità e precisione del teep per gestire la distanza. Concentrati sul rientro rapido e non sbilanciarti in avanti.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Pneumatico appeso o fissato in verticale all'altezza dell'addome. Mettiti in guardia a distanza di teep, mani alte.",
+    "steps": [
+      "Solleva il ginocchio della gamba anteriore fino alla cintura, punta del piede verso l'alto, mani in guardia.",
+      "Distendi la gamba e spingi il pneumatico con la pianta o l'avampiede, portando l'anca in avanti.",
+      "Il colpo è secco: spingi e ritira subito, senza lasciare la gamba distesa.",
+      "Riporta il piede a terra nella posizione di guardia, in equilibrio.",
+      "Ripeti a ritmo rapido, cambiando gamba quando indicato. Espira a ogni spinta."
+    ],
+    "errors": [
+      "Calciare a gamba tesa senza sollevare il ginocchio: il teep diventa uno slancio senza forza.",
+      "Sbilanciarsi in avanti verso il pneumatico: in gara l'avversario ti afferra la gamba.",
+      "Abbassare le mani durante il calcio: resti scoperto."
+    ],
+    "why": "Allena la velocità e la precisione del teep per gestire la distanza e fermare chi avanza.",
+    "figure": [
+      {
+        "label": "Ginocchio su",
+        "people": [
+          {
+            "pose": "teep-carica",
+            "x": -20,
+            "gloves": true
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 122,
+            "w": 5,
+            "h": 100
+          }
+        ]
+      },
+      {
+        "label": "Spinta con la pianta",
+        "people": [
+          {
+            "pose": "teep-spinta",
+            "x": -40,
+            "gloves": true
+          }
+        ],
+        "props": [
+          {
+            "type": "box",
+            "x": 122,
+            "w": 5,
+            "h": 100
+          },
+          {
+            "type": "barbell",
+            "at": "foot"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 26,
+            "dy": -2
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--plank-con-mani-sul-pneumatico",
@@ -26654,7 +43560,62 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 40 s, recupero 30 s",
     "details": "Appoggia le mani sul bordo del pneumatico in posizione di plank e tocca alternativamente la spalla opposta senza ruotare il bacino. Rafforza la stabilità del tronco che protegge dai colpi al corpo. Allinea testa, schiena e talloni e respira regolarmente.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "Mani appoggiate sul bordo di un pneumatico steso, alla larghezza delle spalle e sotto le spalle. Gambe distese indietro sulle punte dei piedi, corpo in linea dalla testa ai talloni.",
+    "steps": [
+      "Stringi glutei e addome: il bacino non deve cedere né salire.",
+      "Allarga un po' i piedi per avere più stabilità.",
+      "Stacca una mano e tocca la spalla opposta, senza far ruotare il bacino.",
+      "Riappoggia la mano sul bordo e ripeti con l'altra.",
+      "Movimento lento e controllato, respiro regolare, testa in linea con la schiena."
+    ],
+    "errors": [
+      "Bacino che ruota a ogni tocco: il core non lavora per stabilizzare.",
+      "Schiena inarcata e pancia verso terra: carichi la zona lombare.",
+      "Toccare la spalla di fretta: diventa un movimento a scatti e perdi il controllo."
+    ],
+    "why": "Rafforza la stabilità del tronco che protegge dai colpi al corpo e mantiene la postura nei colpi.",
+    "figure": [
+      {
+        "label": "Plank sul bordo",
+        "people": [
+          {
+            "pose": "attrezzi-4/plank-alto",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 92,
+            "w": 56
+          }
+        ]
+      },
+      {
+        "label": "Tocco spalla",
+        "people": [
+          {
+            "pose": "attrezzi-4/plank-tocco",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 92,
+            "w": 56
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 0,
+            "dy": -14
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "pneumatico--affondi-laterali-con-salto-sul-pneumatico",
@@ -26664,7 +43625,47 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 8 per lato, recupero 45 s",
     "details": "In piedi accanto al pneumatico, porta una gamba sopra il bordo in affondo laterale profondo, poi scavalca e ripeti dall'altro lato. Migliora la mobilità delle anche e degli adduttori per calci più alti. Scendi lentamente e tieni il ginocchio allineato alla punta del piede.",
     "equipment": "Pneumatico e mazza",
-    "tool": "pneumatico"
+    "tool": "pneumatico",
+    "setup": "In piedi di fianco a un pneumatico steso, a circa un passo dal bordo. Mani in guardia o unite davanti al petto.",
+    "steps": [
+      "Apri la gamba vicina di lato e appoggiala oltre il bordo, dentro il pneumatico.",
+      "Scendi lentamente in affondo laterale piegando quel ginocchio e spingendo il sedere indietro; l'altra gamba resta tesa e senti allungare l'interno coscia.",
+      "Spingi con la gamba piegata e scavalca il pneumatico portando il peso dall'altra parte.",
+      "Atterra oltre il bordo opposto e scendi nello stesso affondo dall'altro lato.",
+      "Continua avanti e indietro con ritmo fluido, respirando in modo regolare."
+    ],
+    "errors": [
+      "Ginocchio che va verso l'interno nell'affondo: così sovraccarichi il ginocchio.",
+      "Scendere di colpo: l'adduttore si stira invece di allungarsi.",
+      "Busto che crolla in avanti: perdi la mobilità delle anche che l'esercizio vuole allenare."
+    ],
+    "why": "Migliora la mobilità di anche e adduttori, utile per calci più alti e spostamenti laterali.",
+    "figure": [
+      {
+        "label": "Affondo oltre il bordo",
+        "people": [
+          {
+            "pose": "attrezzi-4/affondo-gomma",
+            "x": -5
+          }
+        ],
+        "props": [
+          {
+            "type": "tire",
+            "x": 72,
+            "w": 60
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 36,
+            "dy": -8,
+            "bend": 12
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--scaletta-ickey-shuffle",
@@ -26674,7 +43675,57 @@ export const toolExercises: Exercise[] = [
     "dose": "4 passaggi, recupero 30 s",
     "details": "Avanza lungo la scaletta con due appoggi dentro e uno fuori, alternando lato, sugli avampiedi e con la guardia alta. Allena il ritmo di piedi necessario per cambiare angolo senza perdere equilibrio. Mantieni il busto stabile e lo sguardo avanti, non sui piedi.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "Scaletta stesa a terra alla tua sinistra o destra, tu all'inizio, in guardia leggera sugli avampiedi con le mani alte.",
+    "steps": [
+      "Appoggia il primo piede dentro il primo quadrato, poi l'altro piede accanto, sempre dentro.",
+      "Porta subito fuori dalla scaletta, di lato, il primo piede che era entrato: il ritmo è dentro-dentro-fuori.",
+      "Il piede che è rimasto dentro diventa quello che entra nel quadrato successivo, così il lato si alterna a ogni passo.",
+      "Avanza così fino in fondo con appoggi rapidi e leggeri sugli avampiedi, contando il ritmo 1-2-3.",
+      "Busto fermo, mani in guardia, sguardo avanti e non sui piedi. Respira in modo regolare."
+    ],
+    "errors": [
+      "Guardare i piedi: in combattimento perdi di vista l'avversario.",
+      "Appoggiare i talloni: il ritmo rallenta e i piedi diventano pesanti.",
+      "Abbassare le mani per bilanciarti: perdi l'abitudine alla guardia."
+    ],
+    "why": "Allena il ritmo dei piedi per cambiare angolo restando in equilibrio e in guardia.",
+    "figure": [
+      {
+        "label": "Dentro",
+        "people": [
+          {
+            "pose": "attrezzi-4/passo-scaletta"
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ]
+      },
+      {
+        "label": "Fuori e avanti",
+        "people": [
+          {
+            "pose": "attrezzi-4/passo-scaletta-2",
+            "x": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 30,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--scaletta-in-guardia-avanti-indietro",
@@ -26684,7 +43735,67 @@ export const toolExercises: Exercise[] = [
     "dose": "4 passaggi, recupero 30 s",
     "details": "In guardia ortodossa, avanza di un quadrato con passo-scivolato e arretra di mezzo, percorrendo tutta la scaletta. Riproduce l'entrata e l'uscita dalla distanza di colpo tipica del ring. Piedi mai incrociati, peso centrato e mani al volto per tutto il tempo.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "In guardia ortodossa (piede sinistro avanti) all'inizio della scaletta, con la scaletta davanti a te. Mani al volto, mento basso, peso centrato.",
+    "steps": [
+      "Avanza di un quadrato con un passo scivolato: si muove prima il piede davanti, poi il piede dietro lo segue della stessa misura.",
+      "Arretra di mezzo quadrato con il passo inverso: prima il piede dietro, poi quello davanti.",
+      "Ripeti avanti uno, indietro mezzo, per tutta la scaletta, mantenendo sempre la stessa distanza tra i piedi.",
+      "Spingi con l'avampiede del piede opposto alla direzione: dietro per avanzare, davanti per arretrare.",
+      "Mani al volto e busto fermo per tutto il percorso; respira a ogni passo."
+    ],
+    "errors": [
+      "Incrociare o unire i piedi: in combattimento perdi l'equilibrio al primo colpo.",
+      "Saltellare invece di scivolare: il bacino sale e scende e perdi stabilità.",
+      "Spostare il peso tutto in avanti: non riesci a uscire in fretta."
+    ],
+    "why": "Riproduce l'entrata e l'uscita dalla distanza di colpo, come sul ring.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true,
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ]
+      },
+      {
+        "label": "Avanti uno, indietro mezzo",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true,
+            "x": 10
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot",
+            "dx": 24,
+            "dy": -4,
+            "bend": 6
+          },
+          {
+            "at": "foot2",
+            "dx": -14,
+            "dy": -4,
+            "bend": -6
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--scaletta-con-switch-kick",
@@ -26694,7 +43805,61 @@ export const toolExercises: Exercise[] = [
     "dose": "5 passaggi per lato, recupero 40 s",
     "details": "Percorri la scaletta con due appoggi rapidi per quadrato restando in guardia, poi all'uscita esegui uno switch e un calcio circolare al sacco o a vuoto. Collega la rapidità di piedi a un colpo potente, come quando si chiude una sequenza nel ring. Il calcio deve partire senza pause dopo l'ultimo appoggio.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "Scaletta a terra davanti a te e, in fondo, un sacco o uno spazio libero per calciare. Parti in guardia all'inizio della scaletta.",
+    "steps": [
+      "Percorri la scaletta con due appoggi rapidi per quadrato, sugli avampiedi, mani in guardia.",
+      "All'uscita fai lo switch: un piccolo saltello in cui i piedi si scambiano, il piede dietro va avanti e quello davanti va indietro.",
+      "Senza pause, sali sull'avampiede della gamba ora davanti e ruota il tallone verso il bersaglio.",
+      "Lancia il calcio circolare con la gamba ora dietro, colpendo con la tibia e ruotando le anche; il braccio dello stesso lato scende indietro, l'altra mano protegge il viso.",
+      "Ritorna in guardia, cammina all'inizio della scaletta e ripeti alternando il lato."
+    ],
+    "errors": [
+      "Fermarsi tra l'ultimo appoggio e il calcio: perdi lo slancio che l'esercizio vuole allenare.",
+      "Switch troppo alto e lento: in combattimento l'avversario lo legge.",
+      "Calciare con il piede d'appoggio piatto: le anche non ruotano."
+    ],
+    "why": "Collega la rapidità di piedi a un calcio potente, come quando chiudi una sequenza sul ring.",
+    "figure": [
+      {
+        "label": "Due appoggi",
+        "people": [
+          {
+            "pose": "attrezzi-4/passo-scaletta",
+            "x": -30
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ]
+      },
+      {
+        "label": "Switch e calcio",
+        "people": [
+          {
+            "pose": "calcio-circolare",
+            "gloves": true,
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 25,
+            "dy": 18,
+            "bend": 18
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--scaletta-carioca",
@@ -26704,7 +43869,43 @@ export const toolExercises: Exercise[] = [
     "dose": "4 passaggi per lato, recupero 30 s",
     "details": "Muoviti lateralmente lungo la scaletta incrociando il piede davanti e poi dietro, ruotando le anche in modo controllato e restando sugli avampiedi. Migliora la mobilità delle anche e la coordinazione utili per le rotazioni dei calci. Spalle rivolte avanti, sono le anche a lavorare.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "In piedi di fianco all'inizio della scaletta, piedi alla larghezza delle anche, sugli avampiedi. Spalle rivolte avanti, mani in guardia.",
+    "steps": [
+      "Fai un passo laterale con il piede che guida lungo la scaletta.",
+      "Incrocia l'altro piede davanti al primo, ruotando le anche ma tenendo le spalle ferme.",
+      "Fai un altro passo laterale con il piede che guida.",
+      "Incrocia ora l'altro piede dietro, sempre ruotando le anche.",
+      "Continua alternando davanti e dietro fino alla fine, poi torna indietro guidando con l'altro piede."
+    ],
+    "errors": [
+      "Girare anche le spalle: le anche non lavorano e perdi l'orientamento.",
+      "Andare sui talloni: il movimento diventa lento e rigido.",
+      "Passi troppo lunghi: perdi l'equilibrio e il ritmo."
+    ],
+    "why": "Migliora la mobilità delle anche e la coordinazione per le rotazioni dei calci.",
+    "figure": [
+      {
+        "label": "Piedi incrociati",
+        "people": [
+          {
+            "pose": "attrezzi-4/incrocio"
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 30,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--scaletta-pivot-e-jab-cross",
@@ -26714,7 +43915,68 @@ export const toolExercises: Exercise[] = [
     "dose": "4 passaggi, recupero 40 s",
     "details": "Avanza in guardia nella scaletta e ogni due quadrati esegui un pivot sul piede anteriore di 90°, chiudendo con jab-cross. Insegna a cambiare angolo dopo l'attacco per uscire dalla linea dell'avversario. Ruota sull'avampiede, mai sul tallone, e ritrova subito la guardia.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "In guardia all'inizio della scaletta, con la scaletta davanti a te. Mani alte, mento basso.",
+    "steps": [
+      "Avanza nella scaletta con passi scivolati, un quadrato alla volta, restando in guardia.",
+      "Ogni due quadrati fai un pivot: sali sull'avampiede del piede davanti e ruota di 90° portando dietro il piede posteriore con un arco.",
+      "Appena hai finito la rotazione sei di nuovo in guardia e lanci jab e diretto: jab con il braccio davanti, diretto ruotando il piede dietro.",
+      "Riporta subito le mani al volto e riprendi ad avanzare.",
+      "Alterna il lato della rotazione se lo chiede l'allenatore. Espira a ogni colpo."
+    ],
+    "errors": [
+      "Ruotare sul tallone: il pivot è lento e perdi l'equilibrio.",
+      "Colpire prima di aver ritrovato la guardia: i pugni non hanno base.",
+      "Abbassare le mani durante il pivot: resti scoperto proprio quando cambi angolo."
+    ],
+    "why": "Insegna a cambiare angolo per uscire dalla linea dell'avversario e contrattaccare subito.",
+    "figure": [
+      {
+        "label": "Pivot sull'avampiede",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true,
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "foot2",
+            "dx": 24,
+            "dy": -6,
+            "bend": 12
+          }
+        ]
+      },
+      {
+        "label": "Jab-cross",
+        "people": [
+          {
+            "pose": "attrezzi-4/diretto",
+            "gloves": true,
+            "x": -30
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 18,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--quadrato-di-coni-con-colpi",
@@ -26724,7 +43986,61 @@ export const toolExercises: Exercise[] = [
     "dose": "4 giri, recupero 45 s",
     "details": "Disponi quattro coni a quadrato di 4 m; corri da un cono all'altro e a ogni vertice esegui una combinazione da 3 colpi in guardia. Simula il ritmo di spostamento-attacco di un round, abbinando velocità di piedi ed esplosività delle mani. Arriva al cono già in posizione, senza passi di assestamento.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "Quattro coni a quadrato con lato di circa 4 metri. Parti in guardia vicino a un cono.",
+    "steps": [
+      "Corri veloce verso il cono successivo, mani a mezza altezza, busto leggermente inclinato.",
+      "Negli ultimi due passi rallenta e arriva al cono già in guardia, piedi sfalsati e mento basso.",
+      "Lancia subito una combinazione di 3 colpi (per esempio jab-diretto-gancio) con rotazione delle anche.",
+      "Riparti verso il cono successivo appena chiusa la combinazione.",
+      "Completa il giro e cambia senso di marcia quando indicato. Espira a ogni colpo."
+    ],
+    "errors": [
+      "Arrivare al cono di corsa e fare passi di assestamento: perdi il tempo d'attacco.",
+      "Colpi senza rotazione per la fretta: sono veloci ma non fanno male.",
+      "Correre con le mani basse e il mento alto: abitudine pericolosa sul ring."
+    ],
+    "why": "Simula il ritmo spostamento-attacco di un round, unendo velocità dei piedi ed esplosività delle mani.",
+    "figure": [
+      {
+        "label": "Scatto al cono",
+        "people": [
+          {
+            "pose": "attrezzi-4/corsa",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 130
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 30,
+            "dy": 0
+          }
+        ]
+      },
+      {
+        "label": "Combinazione",
+        "people": [
+          {
+            "pose": "attrezzi-4/diretto",
+            "gloves": true,
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 30
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--angoli-a-v-con-calcio",
@@ -26734,7 +44050,69 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 6 ripetizioni, recupero 45 s",
     "details": "Posiziona due coni a V a 2-3 m davanti a te; scatta in diagonale verso uno, torna al centro e calcia di circolare dal lato opposto, poi alterna. Allena l'uscita d'angolo e il contrattacco immediato, fondamentale contro un avversario che avanza. Mantieni il baricentro basso nei cambi di direzione.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "Due coni a V a 2-3 metri davanti a te, uno in diagonale a destra e uno a sinistra. Parti in guardia nel punto della V.",
+    "steps": [
+      "Scatta in diagonale verso un cono con passi rapidi e corti, baricentro basso.",
+      "Frena sul cono con il piede esterno e torna subito al centro, sempre in guardia.",
+      "Appena arrivato al centro lancia un calcio circolare dal lato opposto a quello da cui sei uscito, colpendo con la tibia e ruotando sull'avampiede d'appoggio.",
+      "Torna in guardia e ripeti verso l'altro cono.",
+      "Alterna i lati con ritmo continuo, espirando nel calcio."
+    ],
+    "errors": [
+      "Alzarsi nei cambi di direzione: diventi lento e instabile.",
+      "Calciare dallo stesso lato in cui ti sei mosso: non alleni il contrattacco d'angolo.",
+      "Fermarsi prima del calcio: in combattimento perdi l'occasione."
+    ],
+    "why": "Allena a uscire d'angolo e contrattaccare subito, fondamentale contro un avversario che avanza.",
+    "figure": [
+      {
+        "label": "Uscita al cono",
+        "people": [
+          {
+            "pose": "attrezzi-4/corsa",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 130
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 30,
+            "dy": 4
+          }
+        ]
+      },
+      {
+        "label": "Calcio al rientro",
+        "people": [
+          {
+            "pose": "calcio-circolare",
+            "gloves": true,
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 20
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 25,
+            "dy": 18,
+            "bend": 18
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--reazione-al-cono-chiamato",
@@ -26744,7 +44122,59 @@ export const toolExercises: Exercise[] = [
     "dose": "5 × 20 s, recupero 40 s",
     "details": "Disponi 4-5 coni colorati attorno all'atleta in guardia; il partner chiama un colore e l'atleta scatta, tocca il cono e torna al centro. Sviluppa il tempo di reazione e la decisione rapida che servono per rispondere agli attacchi. Resta sugli avampiedi pronto a partire in ogni direzione.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "4-5 coni colorati in cerchio attorno all'atleta, a 2-3 metri. L'atleta è al centro in guardia; il compagno sta fuori dal cerchio, dove l'atleta lo vede.",
+    "steps": [
+      "L'atleta resta in guardia sugli avampiedi, ginocchia morbide, pronto a partire in ogni direzione.",
+      "Il compagno chiama un colore all'improvviso, variando i tempi tra un richiamo e l'altro.",
+      "L'atleta scatta verso il cono giusto, lo tocca con la mano piegando le gambe, non la schiena.",
+      "Torna subito al centro e si rimette in guardia, pronto al richiamo successivo.",
+      "Il compagno non chiama a ritmo fisso e a volte può ripetere lo stesso colore per sorprendere."
+    ],
+    "errors": [
+      "Partire prima di aver capito il colore: alleni l'anticipo sbagliato e non la decisione.",
+      "Restare sui talloni al centro: la partenza è lenta.",
+      "Piegarsi di schiena per toccare il cono: perdi equilibrio e tempo per tornare."
+    ],
+    "why": "Sviluppa il tempo di reazione e la decisione rapida che servono per rispondere agli attacchi.",
+    "figure": [
+      {
+        "label": "Pronto al richiamo",
+        "people": [
+          {
+            "pose": "attrezzi-4/pronto",
+            "x": -40
+          },
+          {
+            "pose": "attrezzi-4/chiama",
+            "flip": true,
+            "partner": true,
+            "x": 58
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 12
+          }
+        ]
+      },
+      {
+        "label": "Scatto e tocco",
+        "people": [
+          {
+            "pose": "attrezzi-4/tocco-cono",
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 114
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--ostacoli-frontali-con-ginocchiata",
@@ -26754,7 +44184,76 @@ export const toolExercises: Exercise[] = [
     "dose": "4 serie da 5 ostacoli, recupero 60 s",
     "details": "Salta a piedi uniti una fila di 5 ostacoli bassi con contatti brevi e reattivi, poi all'arrivo esegui una ginocchiata esplosiva tirando le mani verso il basso. Sviluppa la reattività delle caviglie e la potenza delle anche usate nel clinch. Atterra morbido e rimbalza subito, senza fermarti tra un ostacolo e l'altro.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "Fila di 5 ostacoli bassi a circa un passo l'uno dall'altro. Parti davanti al primo, piedi uniti, mani in guardia.",
+    "steps": [
+      "Salta il primo ostacolo a piedi uniti, portando le ginocchia in alto quanto basta.",
+      "Atterra sugli avampiedi con le ginocchia morbide e riparti subito: il contatto con il suolo deve essere brevissimo.",
+      "Continua così fino all'ultimo ostacolo, mantenendo lo stesso ritmo.",
+      "All'arrivo sali sull'avampiede di una gamba e porta una ginocchiata esplosiva con l'altra, tirando le mani verso il basso come se tirassi giù la testa dell'avversario.",
+      "Torna camminando all'inizio e ripeti alternando la gamba della ginocchiata."
+    ],
+    "errors": [
+      "Fermarsi tra un ostacolo e l'altro: alleni la forza ma non la reattività.",
+      "Atterrare sui talloni: il colpo arriva su ginocchia e schiena.",
+      "Ginocchiata senza tirata delle mani: non alleni il gesto completo del clinch."
+    ],
+    "why": "Sviluppa la reattività delle caviglie e la potenza delle anche usate nel clinch.",
+    "figure": [
+      {
+        "label": "Salto a piedi uniti",
+        "people": [
+          {
+            "pose": "attrezzi-4/salto-raccolto",
+            "x": 0,
+            "air": 24
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 80
+          },
+          {
+            "type": "cone",
+            "x": 30
+          },
+          {
+            "type": "cone",
+            "x": 130
+          }
+        ]
+      },
+      {
+        "label": "Ginocchiata all'arrivo",
+        "people": [
+          {
+            "pose": "attrezzi-4/ginocchiata-giu",
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "knee",
+                "dx": 2,
+                "dy": -8
+              },
+              "hand2": {
+                "who": 0,
+                "at": "knee",
+                "dx": 6,
+                "dy": -10
+              }
+            }
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 6,
+            "dy": -20
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--ostacoli-monopodalici",
@@ -26764,7 +44263,54 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 5 ostacoli per gamba, recupero 60 s",
     "details": "Supera una fila di ostacoli bassi saltando sempre sullo stesso piede, con le braccia in guardia e il ginocchio stabile in atterraggio. Rinforza la gamba d'appoggio, decisiva per stabilità e potenza nei calci. Controlla l'atterraggio: ginocchio allineato al piede, mai verso l'interno.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "Fila di ostacoli bassi a circa un passo l'uno dall'altro. Parti davanti al primo, in equilibrio su un piede, braccia in guardia.",
+    "steps": [
+      "Piega leggermente il ginocchio della gamba d'appoggio e salta oltre il primo ostacolo restando sullo stesso piede.",
+      "Atterra sull'avampiede con il ginocchio morbido e allineato alla punta del piede.",
+      "Stabilizzati un istante e salta l'ostacolo successivo.",
+      "L'altra gamba resta sollevata e ferma, le braccia restano in guardia.",
+      "Arrivato in fondo, torna camminando e ripeti con l'altra gamba."
+    ],
+    "errors": [
+      "Ginocchio che cade verso l'interno all'atterraggio: così rischi il ginocchio.",
+      "Atterrare sul tallone a gamba tesa: carichi caviglia e ginocchio.",
+      "Agitare le braccia per stare in equilibrio: perdi la guardia."
+    ],
+    "why": "Rinforza la gamba d'appoggio, decisiva per stabilità e potenza nei calci. Se perdi il controllo dell'atterraggio, accorcia la distanza tra gli ostacoli.",
+    "figure": [
+      {
+        "label": "Salto su un piede",
+        "people": [
+          {
+            "pose": "attrezzi-4/saltello-un-piede",
+            "air": 22
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 80
+          },
+          {
+            "type": "cone",
+            "x": 30
+          },
+          {
+            "type": "cone",
+            "x": 130
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 30,
+            "dy": -6,
+            "bend": 8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--ostacoli-in-guardia-laterale-con-step",
@@ -26774,7 +44320,51 @@ export const toolExercises: Exercise[] = [
     "dose": "4 passaggi per lato, recupero 30 s",
     "details": "Disponi gli ostacoli in fila e superali lateralmente con passo-scivolato alto, restando in guardia e senza incrociare i piedi. Migliora il controllo degli spostamenti laterali per girare attorno all'avversario. Ginocchia alte ma busto fermo, le mani non devono scendere.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "Ostacoli bassi in fila a circa un passo l'uno dall'altro. Mettiti di fianco al primo, in guardia, con la fila alla tua destra o sinistra.",
+    "steps": [
+      "Solleva in alto il ginocchio del piede che guida e scavalca di lato il primo ostacolo.",
+      "Fai seguire l'altro piede con lo stesso movimento alto, senza incrociare e senza unire i piedi.",
+      "Prosegui ostacolo dopo ostacolo con ritmo regolare, sugli avampiedi.",
+      "Busto fermo e mani al volto: si muovono solo le gambe.",
+      "In fondo torna indietro guidando con l'altro piede."
+    ],
+    "errors": [
+      "Abbassare le mani per bilanciarti: perdi la guardia proprio negli spostamenti.",
+      "Inclinare il busto di lato per alzare la gamba: perdi l'equilibrio.",
+      "Incrociare i piedi: in combattimento un colpo ti fa cadere."
+    ],
+    "why": "Migliora il controllo degli spostamenti laterali per girare attorno all'avversario restando protetto.",
+    "figure": [
+      {
+        "label": "Ginocchio alto in guardia",
+        "people": [
+          {
+            "pose": "attrezzi-4/passo-laterale-alto",
+            "gloves": true,
+            "x": -10
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 112
+          },
+          {
+            "type": "cone",
+            "x": 30
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 20,
+            "dy": -6,
+            "bend": 8
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--zig-zag-di-coni-con-teep",
@@ -26784,7 +44374,66 @@ export const toolExercises: Exercise[] = [
     "dose": "4 passaggi, recupero 40 s",
     "details": "Disponi 6 coni a zig-zag a 2 m di distanza; arriva a ogni cono in guardia ed esegui un teep con la gamba anteriore prima di ripartire. Allena a gestire la distanza con il teep mentre ci si muove, come per fermare un avversario aggressivo. Spingi con l'anca e richiama subito la gamba.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "Sei coni a zig-zag a circa 2 metri l'uno dall'altro. Parti in guardia vicino al primo cono.",
+    "steps": [
+      "Spostati verso il cono successivo con passi in guardia, senza incrociare i piedi.",
+      "Arriva al cono già in posizione e solleva il ginocchio della gamba davanti fino alla cintura.",
+      "Distendi la gamba e spingi con la pianta o l'avampiede in avanti, portando l'anca nel colpo.",
+      "Richiama subito la gamba e appoggia il piede in guardia.",
+      "Riparti verso il cono successivo cambiando direzione. Espira a ogni teep."
+    ],
+    "errors": [
+      "Calciare senza alzare prima il ginocchio: il teep diventa uno slancio senza spinta.",
+      "Lasciare la gamba distesa: in gara l'avversario la afferra.",
+      "Arrivare al cono sbilanciato: il teep perde precisione."
+    ],
+    "why": "Allena a gestire la distanza con il teep mentre ti muovi, per fermare un avversario aggressivo.",
+    "figure": [
+      {
+        "label": "Arrivo al cono",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true,
+            "x": -20
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 30
+          },
+          {
+            "type": "cone",
+            "x": 120
+          }
+        ]
+      },
+      {
+        "label": "Teep",
+        "people": [
+          {
+            "pose": "teep-spinta",
+            "gloves": true,
+            "x": -30
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 20
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 28,
+            "dy": -2
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--scaletta-con-sprawl",
@@ -26794,7 +44443,56 @@ export const toolExercises: Exercise[] = [
     "dose": "4 passaggi, recupero 45 s",
     "details": "Percorri la scaletta con passi rapidi in guardia; quando il partner batte le mani esegui uno sprawl, rialzati e prosegui. Abitua a reagire a un tentativo di presa o a un cambio di livello mantenendo il ritmo. Rialzati direttamente in guardia, senza appoggiare le ginocchia.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "Scaletta a terra davanti a te. Parti in guardia all'inizio; il compagno sta di lato alla scaletta, dove ti vede.",
+    "steps": [
+      "Percorri la scaletta con due appoggi rapidi per quadrato, sugli avampiedi, mani in guardia.",
+      "Quando il compagno batte le mani, fermati e fai subito uno sprawl: mani a terra, gambe lanciate indietro, anche verso il pavimento.",
+      "Nello sprawl tieni testa e petto alti e le anche pesanti a terra.",
+      "Riporta i piedi sotto di te con un salto e rialzati direttamente in guardia, senza appoggiare le ginocchia.",
+      "Riprendi subito i passi rapidi. Il compagno varia i tempi del battito di mani."
+    ],
+    "errors": [
+      "Cadere a pancia in giù con la schiena inarcata: sbatti la zona lombare.",
+      "Rialzarsi appoggiando le ginocchia: perdi tempo e la posizione.",
+      "Perdere il ritmo dei passi dopo lo sprawl: l'esercizio diventa a pezzi."
+    ],
+    "why": "Abitua a reagire a un tentativo di presa o a un cambio di livello senza perdere ritmo e guardia.",
+    "figure": [
+      {
+        "label": "Passi rapidi",
+        "people": [
+          {
+            "pose": "attrezzi-4/passo-scaletta"
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ]
+      },
+      {
+        "label": "Sprawl al comando",
+        "people": [
+          {
+            "pose": "attrezzi-4/sprawl"
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": -4,
+            "dy": 16
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--scaletta-shuffle-dentro-fuori-resistenza",
@@ -26804,7 +44502,57 @@ export const toolExercises: Exercise[] = [
     "dose": "3 × 2 min, recupero 1 min",
     "details": "Percorri avanti e indietro la scaletta con passi dentro-fuori continui per tutta la durata, guardia alta e respirazione regolare. Costruisce la resistenza delle gambe a restare leggere fino alla fine del round. Mantieni lo stesso ritmo dall'inizio alla fine, senza appesantire l'appoggio.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "Scaletta a terra davanti a te. Parti in guardia all'inizio, sugli avampiedi, mani alte.",
+    "steps": [
+      "Entra nel primo quadrato con un piede e poi con l'altro, poi esci con entrambi dai lati: il ritmo è dentro-dentro-fuori-fuori.",
+      "Avanza così un quadrato alla volta fino alla fine della scaletta.",
+      "In fondo torna indietro con lo stesso schema, senza fermarti.",
+      "Mantieni per tutto il round lo stesso ritmo e appoggi leggeri sugli avampiedi.",
+      "Respira in modo regolare e tieni le mani alte anche quando la fatica cresce."
+    ],
+    "errors": [
+      "Partire veloce e rallentare a metà: l'obiettivo è un ritmo costante.",
+      "Appesantire l'appoggio sui talloni quando arriva la stanchezza: i piedi si incollano a terra.",
+      "Abbassare le mani: alla fine del round è proprio lì che servono."
+    ],
+    "why": "Costruisce la resistenza delle gambe per restare leggero fino alla fine del round.",
+    "figure": [
+      {
+        "label": "Dentro",
+        "people": [
+          {
+            "pose": "attrezzi-4/passo-scaletta"
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ]
+      },
+      {
+        "label": "Fuori",
+        "people": [
+          {
+            "pose": "attrezzi-4/passo-scaletta-2",
+            "x": 12
+          }
+        ],
+        "props": [
+          {
+            "type": "ladder"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 30,
+            "dy": 0
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "coni-scaletta--cerchio-di-coni-in-clinch",
@@ -26814,7 +44562,80 @@ export const toolExercises: Exercise[] = [
     "dose": "4 × 30 s, recupero 45 s",
     "details": "Disponi i coni in cerchio di circa 3 m; in clinch con un partner, guida lo spostamento attorno al cerchio ruotando e sbilanciando senza uscire dai coni. Allena il controllo del corpo e i passi corti necessari per dominare il clinch. Gomiti stretti, testa alta e passi brevi sotto il baricentro.",
     "equipment": "Coni e scaletta",
-    "tool": "coni-scaletta"
+    "tool": "coni-scaletta",
+    "setup": "Coni in cerchio di circa 3 metri di diametro. In coppia al centro, in clinch: chi guida ha la presa al collo con le mani sovrapposte sulla nuca del compagno, mai con le dita intrecciate.",
+    "steps": [
+      "Chi guida stringe i gomiti, tiene le anche avanti e la testa alta.",
+      "Si sposta con passi corti sotto il baricentro e fa girare il compagno attorno al cerchio, ruotando sul piede davanti.",
+      "Ogni pochi passi cambia direzione di colpo per sbilanciarlo, senza uscire dai coni.",
+      "Il compagno resiste in modo moderato, cerca di restare dritto e di riprendere la posizione.",
+      "Dopo il tempo indicato si cambiano i ruoli. Respirate in modo regolare."
+    ],
+    "errors": [
+      "Gomiti larghi: il compagno infila le braccia e rompe la presa.",
+      "Passi lunghi e incrociati: perdi l'equilibrio e il controllo.",
+      "Tirare la testa del compagno con strattoni: rischi di fargli male al collo."
+    ],
+    "why": "Allena il controllo del corpo e i passi corti che servono per dominare il clinch. Tirate con gradualità, il collo del compagno va rispettato.",
+    "figure": [
+      {
+        "label": "Clinch nel cerchio",
+        "people": [
+          {
+            "pose": "plum",
+            "x": -28,
+            "reach": {
+              "hand": {
+                "who": 1,
+                "at": "head",
+                "dx": -7,
+                "dy": -3
+              },
+              "hand2": {
+                "who": 1,
+                "at": "head",
+                "dx": -9,
+                "dy": 2
+              }
+            }
+          },
+          {
+            "pose": "piegato-in-clinch",
+            "flip": true,
+            "partner": true,
+            "x": 44,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "elbow"
+              },
+              "hand2": {
+                "who": 0,
+                "at": "elbow2"
+              }
+            }
+          }
+        ],
+        "props": [
+          {
+            "type": "cone",
+            "x": 12
+          },
+          {
+            "type": "cone",
+            "x": 150
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 30,
+            "dy": 4,
+            "bend": 10
+          }
+        ]
+      }
+    ]
   }
 ];
 
