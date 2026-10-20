@@ -25,11 +25,11 @@ export interface Pose {
   leg2: Leg;
 }
 
-export type Joint = "hand" | "hand2" | "elbow" | "elbow2" | "foot" | "foot2" | "knee" | "knee2" | "hip" | "shoulder" | "head";
+export type Joint =
+  | "hand" | "hand2" | "elbow" | "elbow2" | "foot" | "foot2" | "ankle" | "ankle2" | "knee" | "knee2" | "hip" | "shoulder" | "head";
 
 export type Prop =
-  | { type: "kettlebell" | "dumbbell" | "medball" | "plate"; at?: Joint }
-  | { type: "barbell"; at?: Joint }
+  | { type: "kettlebell" | "dumbbell" | "medball" | "plate" | "barbell" | "sandbag" | "stick"; at?: Joint; who?: number }
   | { type: "box"; x: number; w?: number; h?: number }
   | { type: "bench"; x: number; w?: number; h?: number }
   | { type: "bag"; x: number }
@@ -38,8 +38,6 @@ export type Prop =
   | { type: "cone"; x: number }
   /** Pao o colpitore tenuto in mano (di solito dal compagno: who 1). */
   | { type: "pad"; at?: Joint; who?: number }
-  | { type: "sandbag"; at?: Joint }
-  | { type: "stick"; at?: Joint }
   | { type: "tire"; x: number; w?: number }
   | { type: "ladder" }
   /** Corda dalle mani verso un ancoraggio a destra, ondulata per la battle rope. */
@@ -102,7 +100,7 @@ const down = (o: P, a: number, len: number): P => [o[0] + Math.sin(rad(a)) * len
 /** Come down ma con 0 = verso l'alto (busto, testa). */
 const up = (o: P, a: number, len: number): P => [o[0] + Math.sin(rad(a)) * len, o[1] - Math.cos(rad(a)) * len];
 
-type Skeleton = Record<Joint | "elbow" | "elbow2" | "ankle" | "ankle2" | "neck", P>;
+type Skeleton = Record<Joint | "neck", P>;
 
 function skeleton(p: Pose): Skeleton {
   const hip: P = [0, 0];
@@ -219,9 +217,11 @@ function drawProp(pr: Prop, main: Skeleton, all: Skeleton[]): string {
       return `<line x1="10" y1="${f(y)}" x2="${W - 10}" y2="${f(y)}" stroke="${C.prop}" stroke-width="4" stroke-linecap="round"/>`;
     }
     case "rope": {
+      // Corda sotto i piedi: scende davanti, passa sotto le punte e risale dietro.
       const a = s.hand, b = s.hand2;
       const low = Math.max(s.foot[1], s.foot2[1]) + 3;
-      return `<path d="M${f(a[0])} ${f(a[1])} C${f(a[0] + 30)} ${f(low + 10)} ${f(b[0] - 30)} ${f(low + 10)} ${f(b[0])} ${f(b[1])}" fill="none" stroke="${C.shorts}" stroke-width="1.8"/>`;
+      const front = Math.max(s.foot[0], s.foot2[0]) + 16, back = Math.min(s.ankle[0], s.ankle2[0]) - 16;
+      return `<path d="M${f(a[0])} ${f(a[1])} C${f(front + 4)} ${f(a[1] + 25)} ${f(front)} ${f(low)} ${f((front + back) / 2)} ${f(low)} C${f(back)} ${f(low)} ${f(back - 4)} ${f(b[1] + 25)} ${f(b[0])} ${f(b[1])}" fill="none" stroke="${C.shorts}" stroke-width="1.8"/>`;
     }
     case "pad": {
       const [x, y] = at(pr.at);
