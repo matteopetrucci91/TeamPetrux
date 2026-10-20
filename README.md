@@ -80,3 +80,10 @@ npm run preview   # la prova in locale
 - `src/lib/doses.ts` – dosaggi personalizzati
 - `src/lib/storage.ts` – salvataggio in localStorage
 - `src/index.css` – stile e colori (rosso `#A51931`, bianco, blu `#2D2A4A`)
+
+## Sul telefono (iPhone)
+
+L'app è una PWA: si installa dal browser, senza App Store, e dopo la prima apertura funziona anche senza internet.
+A ogni push su `develop` la GitHub Action "Pubblica app" la pubblica su GitHub Pages
+(https://matteopetrucci91.github.io/TeamPetrux/). Su iPhone: apri il link in Safari, Condividi › "Aggiungi alla schermata Home".
+I dati restano nel telefono (separati da quelli del PC): per spostare il calendario usa "Scarica backup" / "Carica backup".
