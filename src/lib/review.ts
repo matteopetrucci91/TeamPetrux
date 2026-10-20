@@ -82,23 +82,27 @@ export function reviewWorkout(list: readonly Exercise[], settings: LessonSetting
   else if (phases.at(-1) !== "mobilita") add("warn", "La mobilità è meglio come ultimo esercizio, per defaticare.", 4);
   else add("ok", "Chiude con mobilità per defaticare.");
 
-  // 6. Varietà
-  let run = 1;
-  let longest = 1;
-  for (let i = 1; i < list.length; i++) {
-    run = list[i].category === list[i - 1].category ? run + 1 : 1;
-    longest = Math.max(longest, run);
+  // 6. Varietà: più di 20 min di fila sulla stessa categoria stancano la testa
+  // (la tecnica no: i colpi e le combinazioni in fila sono il cuore della lezione)
+  let run = 0;
+  let runMin = 0;
+  let longest = 0;
+  for (let i = 0; i < list.length; i++) {
+    const same = i > 0 && list[i].category === list[i - 1].category;
+    run = same ? run + 1 : 1;
+    runMin = same ? runMin + mins[i] : mins[i];
+    if (list[i].category !== "tecnica" && run >= 4 && runMin > 20) longest = Math.max(longest, run);
   }
   const toolCount = new Map<string, number>();
   list.forEach((e) => e.tool && !SHARED_TOOLS.has(e.tool) && toolCount.set(e.tool, (toolCount.get(e.tool) ?? 0) + 1));
   const crowded = [...toolCount.entries()].filter(([, n]) => n > 3);
-  if (longest >= 4) add("warn", `Ci sono ${longest} esercizi di fila della stessa categoria: alterna un po' di più.`, 5);
+  if (longest) add("warn", `Ci sono ${longest} esercizi di fila della stessa categoria: alterna un po' di più.`, 5);
   if (crowded.length) add(
       "warn",
       `Troppi esercizi con ${crowded.map(([t, n]) => `${toolById.get(t as never)?.label.toLowerCase() ?? t} (${n})`).join(", ")}: in palestra può creare file d'attesa.`,
       4,
     );
-  if (longest < 4 && !crowded.length) add("ok", "Buona varietà di esercizi e attrezzi.");
+  if (!longest && !crowded.length) add("ok", "Buona varietà di esercizi e attrezzi.");
 
   // 7. Numero di esercizi
   if (list.length < 4) add("warn", `Solo ${list.length} esercizi: la lezione rischia di essere monotona.`, 8);

@@ -7,7 +7,6 @@ export interface DoseParts {
   sets: number;
   amount: string;
   side: string;
-  rest: string;
 }
 
 export const KINDS: { value: DoseKind; label: string }[] = [
@@ -30,11 +29,22 @@ export const AMOUNTS: Record<DoseKind, string[]> = {
 
 export const SIDES = ["", "per lato", "per gamba", "per braccio"];
 
-export const RESTS = ["", "10 s", "15 s", "20 s", "30 s", "45 s", "60 s", "90 s", "2 min", "3 min"];
+/** Recupero fisso tra le serie e tra un esercizio e l'altro. */
+export const REST = "recupero 1 min";
+
+/** Dosaggio di default: una ripresa della durata scelta per la lezione. */
+export const defaultDose = (round: number) => `1 ripresa da ${round} min, ${REST}`;
+
+/** Sostituisce qualsiasi recupero scritto nel dosaggio con quello fisso di 1 min. */
+export const withRest = (dose: string) =>
+  `${dose
+    .replace(/\s+/g, " ")
+    .replace(/,?\s*(?:recupero (?:di )?[\d.,–-]+ ?(?:min|s)|[\d.,–-]+ ?(?:min|s) (?:di )?recupero)/g, "")
+    .trim()}, ${REST}`;
 
 export function composeDose(p: DoseParts): string {
   const side = p.side ? ` ${p.side}` : "";
-  const rest = p.rest ? `, recupero ${p.rest}` : "";
+  const rest = `, ${REST}`;
   switch (p.kind) {
     case "riprese":
       return `${p.sets} ${p.sets === 1 ? "ripresa" : "riprese"} da ${p.amount}${side}${rest}`;
@@ -51,24 +61,20 @@ const nearest = (list: string[], value: string) => (list.includes(value) ? value
 export function parseDose(dose: string): DoseParts {
   const d = dose.replace(/\s+/g, " ");
   const side = SIDES.find((s) => s && d.includes(s)) ?? "";
-  const restMatch = d.match(/recupero (\d+ (?:s|min))/) ?? d.match(/(\d+ (?:s|min)) recupero/);
-  const restRaw = restMatch?.[1].replace(/^1 min$/, "60 s");
-  const rest = restRaw ? nearest(RESTS, restRaw) : "";
   const first = d.match(/^(\d+)/);
   const sets = first ? Math.min(12, Math.max(1, parseInt(first[1], 10))) : 3;
 
   const rounds = d.match(/ripres[ae] da (\d+ min)/);
-  if (rounds) return { kind: "riprese", sets, amount: nearest(AMOUNTS.riprese, rounds[1]), side, rest };
+  if (rounds) return { kind: "riprese", sets, amount: nearest(AMOUNTS.riprese, rounds[1]), side };
   const dist = d.match(/× (\d+ m)\b/);
-  if (dist) return { kind: "distanza", sets, amount: nearest(AMOUNTS.distanza, dist[1]), side, rest };
+  if (dist) return { kind: "distanza", sets, amount: nearest(AMOUNTS.distanza, dist[1]), side };
   const time = d.match(/× (\d+ (?:s|min))\b/);
-  if (time) return { kind: "tempo", sets, amount: nearest(AMOUNTS.tempo, time[1]), side, rest };
+  if (time) return { kind: "tempo", sets, amount: nearest(AMOUNTS.tempo, time[1]), side };
   const reps = d.match(/× (\d+)/);
   return {
     kind: "ripetizioni",
     sets,
     amount: reps ? nearest(AMOUNTS.ripetizioni, reps[1]) : "10",
     side,
-    rest: rest || "60 s",
   };
 }

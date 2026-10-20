@@ -6,7 +6,6 @@ import {
   composeDose,
   KINDS,
   parseDose,
-  RESTS,
   SETS,
   SIDES,
   type DoseKind,
@@ -44,7 +43,7 @@ function Select({
 const opts = (list: string[], empty = "—") =>
   list.map((v) => ({ value: v, label: v || empty }));
 
-/** Dosaggio con modifica tramite menu a tendina (serie, quantità, lati, recupero). */
+/** Dosaggio con modifica tramite menu a tendina (serie, quantità, lati); il recupero è sempre 1 min. */
 function DoseEditor({ e, round }: { e: Exercise; round: RoundMinutes }) {
   const { setDose } = useDoses();
   const { dose, minutes, custom } = doseFor(e, round);
@@ -78,7 +77,6 @@ function DoseEditor({ e, round }: { e: Exercise; round: RoundMinutes }) {
             onChange={(v) => update({ amount: v })}
           />
           <Select label="Lati" value={parts.side} options={opts(SIDES, "nessuno")} onChange={(v) => update({ side: v })} />
-          <Select label="Recupero" value={parts.rest} options={opts(RESTS, "nessuno")} onChange={(v) => update({ rest: v })} />
         </div>
         <p className="dose-preview">
           <span className="dose">{preview}</span>
@@ -105,7 +103,7 @@ function DoseEditor({ e, round }: { e: Exercise; round: RoundMinutes }) {
                 setParts(null);
               }}
             >
-              Ripristina originale
+              Torna a 1 ripresa
             </button>
           )}
         </div>
@@ -121,6 +119,7 @@ function DoseEditor({ e, round }: { e: Exercise; round: RoundMinutes }) {
       <button className="edit" onClick={() => setParts(parseDose(dose))} aria-label="Modifica dosaggio">
         ✎ Modifica
       </button>
+      {!custom && <small className="dose-hint">Nel catalogo: {e.dose}</small>}
     </p>
   );
 }

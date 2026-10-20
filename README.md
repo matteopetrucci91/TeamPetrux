@@ -10,20 +10,22 @@ App Muay Thai per strutturare gli allenamenti: scegli una categoria e ottieni es
   I primi 10 minuti sono sempre di riscaldamento.
 - **Categorie**: tocchi una categoria e vedi la lista completa dei suoi esercizi, con la ricerca per nome
   e il tempo della tua lezione in alto. "+ Aggiungi alla lezione" lo mette al posto giusto nella scaletta.
-- Ogni esercizio ha il **dosaggio** (ripetizioni, serie, tempo o riprese), il tempo stimato e una **descrizione estesa**.
-  I lavori a riprese da 2–3 min seguono la durata della ripresa scelta.
+- Ogni esercizio ha il **dosaggio**, il tempo stimato e una **descrizione estesa**. Di default ogni esercizio è
+  **1 ripresa da 2 o 3 min** (come scelto per la lezione) e il **recupero è sempre di 1 min**, tra le serie e tra un
+  esercizio e l'altro. Sotto c'è il dosaggio suggerito dal catalogo ("Nel catalogo: …") come riferimento.
 - **Esercizi per attrezzo**: corpo libero, compagno, palla medica, corda, kettlebell, elastici, sacco, pao, bilanciere, manubri,
   sbarra e parallele, battle rope, sandbag, pneumatico e mazza, coni e scaletta, ognuno con almeno 24 esercizi.
   Funzionano come le categorie (lista completa, ricerca, torna indietro).
   Negli esercizi delle categorie, l'attrezzo è un collegamento alla lista di quell'attrezzo.
 - **Dosaggio modificabile**: con "✎ Modifica" scegli dai menu a tendina tipo (ripetizioni, tempo,
-  riprese, distanza), serie, quantità, lati e recupero, così non si sbaglia a scrivere;
-  restano salvati, valgono ovunque e contano nella stima del tempo. "Ripristina originale" torna a quello del catalogo.
+  riprese, distanza), serie, quantità e lati, così non si sbaglia a scrivere (il recupero resta 1 min);
+  restano salvati, valgono ovunque e contano nella stima del tempo. "Torna a 1 ripresa" rimette quello di default.
 - **Crea allenamento**: aggiungi gli esercizi dalle categorie con "+ Aggiungi all'allenamento", riordinali e toglili;
   oppure **⚡ Crea lezione automatica** compone la lezione in ordine logico: riscaldamento, tecnica, velocità o footwork,
   clinch, condizionamento, forza, core e mobilità per defaticare.
   Il **Controllo qualità** dà un voto su 100 e consigli: tempo, peso della tecnica, condizionamento, forza o core,
-  ordine logico (tecnica prima dei lavori stancanti), defaticamento finale, varietà e numero di esercizi.
+  ordine logico (tecnica prima dei lavori stancanti), defaticamento finale, varietà (non più di 20 min di fila sulla
+  stessa categoria, tecnica esclusa) e numero di esercizi.
   Le regole sono nell'app (src/lib/review.ts): gratis e funziona anche offline.
   Con **⬇ Scarica PDF dell'allenamento** salvi la lezione completa (impostazioni, riscaldamento, esercizi con dosaggio,
   tempo e descrizione, totale) da stampare o tenere sul telefono.

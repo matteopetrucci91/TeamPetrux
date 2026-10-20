@@ -91,16 +91,20 @@ export function generateLesson(settings: LessonSettings, fixed: readonly Exercis
     return m;
   };
 
-  // primo giro: ogni blocco la sua quota (meno quello che c'è già), l'avanzo passa al successivo
-  BLOCKS.forEach((b, i) => {
-    const have = totalMinutes(blocks[i], round);
-    const budget = Math.round(b.share * total) + carry - have;
-    carry = budget > 0 ? budget - fill(i, budget, Math.max(0, 3 - blocks[i].length)) : 0;
+  // primo giro: ogni blocco la sua quota (meno quello che c'è già), l'avanzo passa al successivo;
+  // il defaticamento si riserva per primo, così c'è sempre posto per chiudere la lezione
+  const last = BLOCKS.length - 1;
+  const quota = (i: number) => Math.round(BLOCKS[i].share * total) - totalMinutes(blocks[i], round);
+  if (quota(last) > 0) fill(last, quota(last), 1);
+  BLOCKS.forEach((_, i) => {
+    if (i === last) return;
+    const budget = quota(i) + carry;
+    carry = budget > 0 ? budget - fill(i, budget, Infinity) : 0;
   });
-  // secondo giro: il tempo rimasto va a tecnica, condizionamento e clinch
+  // secondo giro: il tempo rimasto va a tecnica, condizionamento, clinch e velocità
   for (const i of [0, 3, 2, 1]) {
-    if (total - used < 3) break;
-    fill(i, total - used, 4 - blocks[i].length);
+    if (total - used < 2) break;
+    fill(i, total - used, Infinity);
   }
   return blocks.flat();
 }

@@ -1054,3 +1054,4 @@ h1, h2, h3 { letter-spacing: -0.01em; }
 .pick-icon { display: grid; place-items: center; flex: none; width: 30px; height: 30px; font-size: 1.3rem; }
 .menu-icon { display: inline-grid; place-items: center; height: 24px; }
 .step-n, .icon { line-height: 1; display: grid; place-items: center; padding: 0; }
+.exercise .dose-hint { flex-basis: 100%; color: var(--muted); font-size: 0.8rem; }
