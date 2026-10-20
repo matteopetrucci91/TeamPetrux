@@ -71,7 +71,7 @@ npm run preview   # la prova in locale
 
 ## Struttura
 
-- `src/App.tsx` – stato dell'app e scelta della pagina (indirizzi `#/`, `#/categoria/...`, `#/allenamento`, `#/impostazioni`)
+- `src/App.tsx` – stato dell'app e scelta della pagina (indirizzi `#/home`, `#/categoria/...`, `#/allenamento`, `#/impostazioni`)
 - `src/pages/` – le pagine (anche `#/attrezzi` e `#/attrezzo/...`); `src/components/` – menu, impostazioni, riepilogo tempi, scheda esercizio
 - `src/lib/plan.ts` – esercizi che stanno nel tempo e lezione automatica
 - `src/data/exercises.ts` – catalogo esercizi (generato dal catalogo del progetto, non modificarlo a mano)
