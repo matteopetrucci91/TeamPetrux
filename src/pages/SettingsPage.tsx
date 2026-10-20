@@ -11,7 +11,7 @@ export function SettingsPage({
   return (
     <div className="page">
       <Topbar
-        back={{ href: hrefFor({ page: "categorie" }), label: "Categorie" }}
+        back={{ href: hrefFor({ page: "home" }), label: "Home" }}
         route="impostazioni"
         workoutCount={workoutCount}
         title="Impostazioni lezione"

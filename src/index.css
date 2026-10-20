@@ -1055,3 +1055,21 @@ h1, h2, h3 { letter-spacing: -0.01em; }
 .menu-icon { display: inline-grid; place-items: center; height: 24px; }
 .step-n, .icon { line-height: 1; display: grid; place-items: center; padding: 0; }
 .exercise .dose-hint { flex-basis: 100%; color: var(--muted); font-size: 0.8rem; }
+
+/* Icone dei riquadri della home: al centro del quadrato (prima ereditavano la colonna del testo) */
+.cta-row .cta .cta-icon {
+  display: grid;
+  place-items: center;
+  flex-direction: unset;
+  gap: 0;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* Frecce disegnate: sempre al centro del cerchio */
+.icon { display: inline-grid; place-items: center; padding: 0; }
+.chev { display: block; width: 9px; height: 9px; border: solid currentColor; border-width: 0 2.5px 2.5px 0; }
+.chev.left { transform: translateX(1.5px) rotate(135deg); }
+.chev.right { transform: translateX(-1.5px) rotate(-45deg); }
+.chev.up { transform: translateY(1.5px) rotate(-135deg); }
+.chev.down { transform: translateY(-1.5px) rotate(45deg); }

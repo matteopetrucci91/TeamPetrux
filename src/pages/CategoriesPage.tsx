@@ -9,7 +9,7 @@ export function CategoriesPage({ workoutCount }: { workoutCount: number }) {
   return (
     <div className="page">
       <Topbar
-        route="categorie"
+        route="home"
         workoutCount={workoutCount}
         showLogo
         title="Allenamento Muay Thai"

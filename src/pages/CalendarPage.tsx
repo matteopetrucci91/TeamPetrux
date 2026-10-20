@@ -122,18 +122,18 @@ export function CalendarPage({ workoutCount, date }: { workoutCount: number; dat
       <Topbar
         route="calendario"
         workoutCount={workoutCount}
-        back={{ href: hrefFor({ page: "categorie" }), label: "Categorie" }}
+        back={{ href: hrefFor({ page: "home" }), label: "Home" }}
         title="Calendario lezioni"
         subtitle="Orari delle lezioni e presenze."
       />
       <main>
         <section className="calendar">
           <header className="cal-head">
-            <button className="icon" onClick={() => shift(-1)} aria-label="Mese precedente">‹</button>
+            <button className="icon" onClick={() => shift(-1)} aria-label="Mese precedente"><span className="chev left" aria-hidden="true" /></button>
             <h2>
               {MONTHS[view.m]} <span>{view.y}</span>
             </h2>
-            <button className="icon" onClick={() => shift(1)} aria-label="Mese successivo">›</button>
+            <button className="icon" onClick={() => shift(1)} aria-label="Mese successivo"><span className="chev right" aria-hidden="true" /></button>
             <button className="pill today-btn" onClick={() => select(today)}>Oggi</button>
           </header>
           <div className="cal-grid" role="grid">

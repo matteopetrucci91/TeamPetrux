@@ -46,7 +46,7 @@ export function ListPage({
         title={title}
         eyebrow={eyebrow}
         subtitle={subtitle}
-        back={{ href: hrefFor({ page: "categorie" }), label: "Categorie" }}
+        back={{ href: hrefFor({ page: "home" }), label: "Home" }}
       />
       <main>
         <SettingsPanel settings={settings} onSettings={onSettings} compact />

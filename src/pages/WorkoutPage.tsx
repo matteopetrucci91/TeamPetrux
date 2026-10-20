@@ -145,7 +145,7 @@ export function WorkoutPage({
         <Topbar
           route="allenamento"
           workoutCount={0}
-          back={{ href: hrefFor({ page: "categorie" }), label: "Categorie" }}
+          back={{ href: hrefFor({ page: "home" }), label: "Home" }}
           title="Crea allenamento"
           subtitle="Prepariamo insieme la lezione di oggi."
         />
@@ -203,7 +203,7 @@ export function WorkoutPage({
       <Topbar
         route="allenamento"
         workoutCount={list.length}
-        back={{ href: hrefFor({ page: "categorie" }), label: "Categorie" }}
+        back={{ href: hrefFor({ page: "home" }), label: "Home" }}
         title="La tua lezione"
         subtitle={`${lessonLabel(settings)} · ${paceLabel(settings)} · ${list.length} esercizi`}
       />
@@ -285,8 +285,8 @@ export function WorkoutPage({
                     collapsed
                     actions={
                       <>
-                        <button className="icon" onClick={() => move(i, -1)} disabled={i === 0} aria-label="Sposta su">↑</button>
-                        <button className="icon" onClick={() => move(i, 1)} disabled={i === list.length - 1} aria-label="Sposta giù">↓</button>
+                        <button className="icon" onClick={() => move(i, -1)} disabled={i === 0} aria-label="Sposta su"><span className="chev up" aria-hidden="true" /></button>
+                        <button className="icon" onClick={() => move(i, 1)} disabled={i === list.length - 1} aria-label="Sposta giù"><span className="chev down" aria-hidden="true" /></button>
                         <button
                           className="pill remove"
                           onClick={() => {
