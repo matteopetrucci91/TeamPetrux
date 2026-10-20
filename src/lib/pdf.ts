@@ -103,7 +103,13 @@ export async function downloadWorkoutPdf(list: readonly Exercise[], settings: Le
     const meta = [cat, e.equipment].filter(Boolean).join("  ·  ");
     item(i + 1, e.name, meta, `${dose}   (~${minutes} min${custom ? ", dosaggio personalizzato" : ""})`, [
       e.description,
-      e.details,
+      ...(e.steps?.length
+        ? [
+            ...(e.setup ? [`Partenza: ${e.setup}`] : []),
+            ...e.steps.map((st, k) => `${k + 1}. ${st}`),
+            ...(e.errors?.length ? [`Da evitare: ${e.errors.join(" ")}`] : []),
+          ]
+        : [e.details]),
     ]);
   });
 

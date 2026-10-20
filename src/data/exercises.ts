@@ -1,5 +1,7 @@
 // Catalogo esercizi Muay Thai — generato, 523 esercizi in 10 categorie e 195 in più per attrezzo.
 
+import type { Frame } from "../lib/figure";
+
 export type CategoryId = "forza-esplosiva" | "forza-massimale" | "forza-resistente" | "velocita" | "resistenza" | "tecnica" | "mobilita" | "core" | "agilita" | "clinch";
 
 export type ToolId = "corpo-libero" | "compagno" | "palla-medica" | "corda" | "kettlebell" | "elastico" | "sacco" | "pao" | "bilanciere" | "manubri" | "sbarra" | "battle-rope" | "sandbag" | "pneumatico" | "coni-scaletta";
@@ -28,6 +30,16 @@ export interface Exercise {
   dose: string;
   /** Spiegazione estesa: esecuzione, punti chiave e utilità per la Muay Thai. */
   details: string;
+  /** Posizione di partenza. */
+  setup?: string;
+  /** Esecuzione passo per passo. */
+  steps?: string[];
+  /** Errori da evitare. */
+  errors?: string[];
+  /** A cosa serve nella Muay Thai. */
+  why?: string;
+  /** Figure dell'esecuzione, una per fase (vedi src/lib/figure.ts). */
+  figure?: Frame[];
   equipment?: string;
   /** Gruppo per attrezzo (palla medica, corda, ...), se l'esercizio usa uno di quelli. */
   tool?: ToolId;
@@ -98,6 +110,46 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "4 × 5 ripetizioni, recupero 90 s",
     "details": "Piedi alla larghezza delle spalle, scendi a mezzo squat, fermati un istante e salta il più in alto possibile con slancio delle braccia. Atterra sull'avampiede con ginocchia allineate alle punte e ammortizza. Sviluppa la spinta delle gambe che sta alla base di calci, ginocchiate e spostamenti rapidi.",
+    "setup": "In piedi, piedi alla larghezza delle spalle con le punte leggermente aperte, peso distribuito su tutta la pianta, braccia lungo i fianchi.",
+    "steps": [
+      "Scendi a mezzo squat: spingi il sedere indietro e piega le ginocchia finché le cosce sono a circa 45° rispetto al pavimento. Busto inclinato in avanti, schiena dritta, braccia portate indietro.",
+      "Fermati un istante in basso (circa 1 secondo) per togliere il rimbalzo: la spinta deve venire solo dai muscoli.",
+      "Salta il più in alto possibile spingendo forte con le gambe e lanciando le braccia in alto: anche, ginocchia e caviglie si distendono insieme.",
+      "In aria il corpo è dritto e le punte dei piedi guardano in basso.",
+      "Atterra prima sull'avampiede e poi sul tallone, piegando le ginocchia per ammortizzare in silenzio. Rimettiti in piedi, respira e ripeti."
+    ],
+    "errors": [
+      "Ginocchia che cadono verso l'interno in salita o all'atterraggio.",
+      "Atterrare a gambe tese o sui talloni: il colpo arriva su ginocchia e schiena.",
+      "Fare le ripetizioni di fila senza pausa: diventa resistenza, non potenza."
+    ],
+    "why": "Sviluppa l'esplosività delle gambe che sta alla base di calci, ginocchiate e spostamenti rapidi sul ring.",
+    "figure": [
+      {
+        "label": "Mezzo squat",
+        "people": [
+          {
+            "pose": "mezzo-squat"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hip",
+            "dx": 0,
+            "dy": -30
+          }
+        ]
+      },
+      {
+        "label": "Salto",
+        "people": [
+          {
+            "pose": "salto",
+            "air": 24
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -285,6 +337,58 @@ export const exercises: Exercise[] = [
     "equipment": "Kettlebell",
     "dose": "4 × 10 ripetizioni, recupero 60 s",
     "details": "Con piedi oltre la larghezza delle spalle, piega le anche portando la kettlebell tra le gambe e spingi le anche in avanti con forza fino all'altezza del petto. Le braccia accompagnano, il lavoro lo fanno glutei e femorali; schiena sempre neutra. Sviluppa l'estensione d'anca esplosiva alla base di ginocchiate e calci.",
+    "setup": "Kettlebell a terra circa 30 cm davanti a te. Piedi poco più larghi delle spalle. Piega le anche, afferra la maniglia con entrambe le mani a braccia tese e inclina la kettlebell verso di te.",
+    "steps": [
+      "Lancia la kettlebell indietro tra le gambe, come un passaggio da football americano: avambracci contro l'interno delle cosce, sedere indietro, schiena dritta, ginocchia solo leggermente piegate.",
+      "Spingi le anche in avanti con forza ed estendi le gambe: sono glutei e femorali a far salire il peso, non le braccia.",
+      "In alto sei dritto come in piedi, glutei e addome stretti: la kettlebell arriva all'altezza del petto con le braccia tese e rilassate.",
+      "Lascia ricadere la kettlebell: quando gli avambracci toccano le cosce piega di nuovo le anche e ricomincia.",
+      "Espira con decisione a ogni spinta d'anca."
+    ],
+    "errors": [
+      "Fare uno squat invece di piegare le anche: le ginocchia vanno poco avanti, il sedere va indietro.",
+      "Sollevare il peso con le spalle o le braccia.",
+      "Schiena che si arrotonda in basso o si inarca all'indietro in alto."
+    ],
+    "why": "Allena l'estensione d'anca esplosiva, lo stesso gesto che dà potenza a ginocchiate, teep e calci circolari.",
+    "figure": [
+      {
+        "label": "Carica tra le gambe",
+        "people": [
+          {
+            "pose": "swing-carica"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ],
+        "arrows": [
+          {
+            "at": "hand",
+            "dx": 50,
+            "dy": -40,
+            "bend": -15
+          }
+        ]
+      },
+      {
+        "label": "Spinta d'anca",
+        "people": [
+          {
+            "pose": "swing-alto"
+          }
+        ],
+        "props": [
+          {
+            "type": "kettlebell",
+            "at": "hand"
+          }
+        ]
+      }
+    ],
     "tool": "kettlebell"
   },
   {
@@ -2739,6 +2843,63 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "4 × 10 per gamba al sacco",
     "details": "Esci leggermente in diagonale, sali sull'avampiede d'appoggio ruotando il tallone verso il bersaglio e colpisci con la tibia, il braccio dello stesso lato che scende a bilanciare. Il calcio principale della Muay Thai, rompe la guardia e consuma fiato. Errore comune: colpire con il collo del piede o non ruotare l'appoggio.",
+    "setup": "In guardia, a distanza da calcio (il sacco o il compagno è raggiungibile con la tibia, non con il piede). Si descrive il calcio con la gamba posteriore, quello più potente.",
+    "steps": [
+      "Fai un piccolo passo in diagonale verso l'esterno con il piede anteriore, punta verso fuori: ti apre l'angolo e prepara la rotazione.",
+      "Sali sull'avampiede della gamba d'appoggio e ruota il tallone verso il bersaglio: è questa rotazione che fa girare le anche.",
+      "Lancia la gamba posteriore quasi tesa, come una mazza da baseball, facendo ruotare tutto il corpo: il ginocchio è solo leggermente piegato.",
+      "Colpisci il fianco o le costole con la parte bassa della tibia, non con il piede. Nel momento dell'impatto la spalla del lato che calcia ruota in avanti.",
+      "Il braccio dello stesso lato della gamba scende indietro per bilanciare e dare forza; l'altra mano resta alta a coprire il viso.",
+      "Dopo l'impatto riporta la gamba indietro e torna subito in guardia."
+    ],
+    "errors": [
+      "Piede d'appoggio piatto e fermo: le anche non ruotano e il calcio perde potenza.",
+      "Colpire con il collo del piede: fa male e si rischia di romperlo.",
+      "Abbassare entrambe le mani durante il calcio."
+    ],
+    "why": "È il calcio principale della Muay Thai: rompe la guardia, fa male al corpo e porta via fiato all'avversario.",
+    "figure": [
+      {
+        "label": "Guardia",
+        "people": [
+          {
+            "pose": "guardia",
+            "gloves": true,
+            "x": -15
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Impatto con la tibia",
+        "people": [
+          {
+            "pose": "calcio-circolare",
+            "gloves": true,
+            "x": -40
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 25,
+            "dy": 18,
+            "bend": 18
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -2799,6 +2960,61 @@ export const exercises: Exercise[] = [
     "equipment": "Sacco",
     "dose": "3 × 12 per lato",
     "details": "Solleva il ginocchio anteriore al petto e distendi la gamba spingendo con la pianta o l'avampiede verso addome o anca, con l'anca che spinge in avanti. Controlla la distanza e interrompe l'attacco avversario. Ritira la gamba dopo l'impatto per non farla afferrare.",
+    "setup": "In guardia, a distanza da calcio. Il teep anteriore si tira con la gamba davanti, senza passo.",
+    "steps": [
+      "Solleva il ginocchio della gamba anteriore fino all'altezza della cintura, con la punta del piede rivolta in alto. Le mani restano alte in guardia.",
+      "Distendi la gamba in avanti e spingi con la pianta o l'avampiede verso l'addome o l'anca del bersaglio, come per chiudere una porta con un calcio.",
+      "Nel momento della spinta porta l'anca in avanti e il busto leggermente indietro: il peso del corpo deve entrare nel colpo.",
+      "Il piede d'appoggio resta piatto e si gira appena verso l'esterno per darti equilibrio.",
+      "Ritira subito la gamba piegando il ginocchio e appoggia il piede nella posizione di partenza, in guardia."
+    ],
+    "errors": [
+      "Calciare a gamba tesa senza sollevare prima il ginocchio: diventa uno slancio senza spinta.",
+      "Lasciare la gamba distesa dopo l'impatto: l'avversario la afferra.",
+      "Spingere solo con la gamba senza portare avanti l'anca."
+    ],
+    "why": "Tiene l'avversario alla distanza, interrompe i suoi attacchi e gli fa perdere equilibrio e ritmo.",
+    "figure": [
+      {
+        "label": "Ginocchio al petto",
+        "people": [
+          {
+            "pose": "teep-carica",
+            "gloves": true,
+            "x": -15
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ]
+      },
+      {
+        "label": "Spinta con la pianta",
+        "people": [
+          {
+            "pose": "teep-spinta",
+            "gloves": true,
+            "x": -38
+          }
+        ],
+        "props": [
+          {
+            "type": "bag",
+            "x": 118
+          }
+        ],
+        "arrows": [
+          {
+            "at": "knee",
+            "dx": 30,
+            "dy": -2
+          }
+        ]
+      }
+    ],
     "tool": "sacco"
   },
   {
@@ -3715,6 +3931,30 @@ export const exercises: Exercise[] = [
     "equipment": "Corpo libero",
     "dose": "3 × 45 s, recupero 20 s",
     "details": "Gomiti sotto le spalle, glutei e addome contratti, corpo rigido dalla testa ai talloni; respira corto senza perdere la tensione. Costruisce la base di stabilità che permette di trasmettere forza a pugni e calci. Non lasciare cadere il bacino: la zona lombare non deve inarcarsi.",
+    "setup": "A terra a pancia in giù. Appoggia gli avambracci paralleli tra loro, con i gomiti esattamente sotto le spalle e le mani aperte o chiuse a pugno. Distendi le gambe all'indietro e appoggiati sulle punte dei piedi, uniti o alla larghezza delle anche.",
+    "steps": [
+      "Stacca bacino e ginocchia da terra: il corpo deve formare una linea dritta dalla testa ai talloni, come una tavola.",
+      "Stringi i glutei e porta l'ombelico verso la colonna, come se dovessi ricevere un pugno allo stomaco.",
+      "Spingi il pavimento lontano con gli avambracci, così le scapole non collassano verso il basso.",
+      "Tieni il collo in linea con la schiena, sguardo a terra tra le mani.",
+      "Respira corto e regolare senza mai mollare la tensione, per tutto il tempo indicato."
+    ],
+    "errors": [
+      "Bacino che cade e schiena che si inarca: carichi la zona lombare invece degli addominali.",
+      "Sedere troppo alto, a piramide: l'esercizio diventa facile e non serve.",
+      "Trattenere il fiato o guardare avanti alzando la testa."
+    ],
+    "why": "Costruisce la stabilità del tronco che trasmette a pugni e calci la forza delle gambe e che protegge dai colpi al corpo.",
+    "figure": [
+      {
+        "label": "Corpo in linea",
+        "people": [
+          {
+            "pose": "plank"
+          }
+        ]
+      }
+    ],
     "tool": "corpo-libero"
   },
   {
@@ -4741,6 +4981,70 @@ export const exercises: Exercise[] = [
     "equipment": "Compagno",
     "dose": "4 × 1 min per atleta, 30 s cambio",
     "details": "Mani una sopra l'altra (mai dita intrecciate) dietro la nuca, avambracci stretti contro le clavicole e gomiti chiusi verso il centro. Tira la testa verso il tuo petto mantenendo le anche avanti. È la presa dominante del clinch: da qui arrivano ginocchiate e sbilanciamenti. Tira con gradualità, il collo del compagno va rispettato.",
+    "setup": "In coppia, in piedi uno di fronte all'altro a distanza di clinch. Chi fa la presa ha le anche avanti e la schiena dritta.",
+    "steps": [
+      "Porta entrambe le mani dietro la testa del compagno, sulla nuca (non sul collo), una sopra l'altra: palmo sul dorso dell'altra mano. Non intrecciare mai le dita.",
+      "Stringi i gomiti verso il centro e appoggia gli avambracci contro le sue clavicole: così controlli la distanza e lui non riesce ad avvicinarsi.",
+      "Tira la sua testa in basso verso il tuo petto usando il peso del corpo, non solo le braccia.",
+      "Tieni le tue anche avanti e il busto alto: lui si ritrova piegato e sbilanciato, tu sei dritto e stabile.",
+      "Mantieni la presa per il tempo indicato, poi cambiate ruolo."
+    ],
+    "errors": [
+      "Dita intrecciate dietro la testa: in gara rischi di romperle e la presa è debole.",
+      "Gomiti larghi: il compagno infila le braccia dentro e rompe la presa.",
+      "Busto piegato in avanti insieme a lui: perdi la posizione dominante."
+    ],
+    "why": "È la presa dominante del clinch: da qui partono ginocchiate e sbilanciamenti. Tira con gradualità, il collo del compagno va rispettato.",
+    "figure": [
+      {
+        "label": "Presa e tirata",
+        "people": [
+          {
+            "pose": "plum",
+            "x": -28,
+            "reach": {
+              "hand": {
+                "who": 1,
+                "at": "head",
+                "dx": -7,
+                "dy": -3
+              },
+              "hand2": {
+                "who": 1,
+                "at": "head",
+                "dx": -9,
+                "dy": 2
+              }
+            }
+          },
+          {
+            "pose": "piegato-in-clinch",
+            "flip": true,
+            "partner": true,
+            "x": 44,
+            "reach": {
+              "hand": {
+                "who": 0,
+                "at": "elbow"
+              },
+              "hand2": {
+                "who": 0,
+                "at": "elbow2"
+              }
+            }
+          }
+        ],
+        "arrows": [
+          {
+            "at": "head",
+            "dx": -16,
+            "dy": 12,
+            "who": 1,
+            "bend": 6
+          }
+        ]
+      }
+    ],
     "tool": "compagno"
   },
   {

@@ -14,6 +14,7 @@ import {
 import { useDoses } from "../lib/doses";
 import { estimateMinutes, type RoundMinutes } from "../lib/lesson";
 import { hrefFor } from "../lib/route";
+import { ExerciseHowTo } from "./ExerciseHowTo";
 
 function Select({
   label,
@@ -151,10 +152,10 @@ export function ExerciseCard({
         <h3>{e.name}</h3>
         <DoseEditor e={e} round={round} />
         <p className="summary">{e.description}</p>
-        {collapsed ? (
+        {collapsed || e.steps?.length ? (
           <details>
             <summary>Come si esegue</summary>
-            <p className="details">{e.details}</p>
+            <ExerciseHowTo e={e} />
           </details>
         ) : (
           <p className="details">{e.details}</p>

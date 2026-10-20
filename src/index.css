@@ -1073,3 +1073,18 @@ h1, h2, h3 { letter-spacing: -0.01em; }
 .chev.right { transform: translateX(-1.5px) rotate(-45deg); }
 .chev.up { transform: translateY(1.5px) rotate(-135deg); }
 .chev.down { transform: translateY(-1.5px) rotate(45deg); }
+
+/* Come si esegue: figure e spiegazione passo per passo. */
+.howto { margin-top: 8px; font-size: 0.9rem; line-height: 1.5; }
+.howto h4 { margin: 12px 0 4px; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--blue); }
+.howto p { margin: 0; }
+.howto ol, .howto ul { margin: 0; padding-left: 1.3em; display: flex; flex-direction: column; gap: 4px; }
+.howto .errors li::marker { content: "✗  "; color: var(--red); font-weight: 700; }
+.figure-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 200px)); gap: 8px; margin: 4px 0 2px; }
+.figure-frame { margin: 0; background: #f4f5f8; border: 1px solid #e3e4ec; border-radius: 10px; overflow: hidden; }
+.figure-img svg { display: block; width: 100%; height: auto; }
+.figure-frame figcaption { padding: 0 6px 6px; text-align: center; font-size: 0.78rem; font-weight: 600; color: #2d2a4a; }
+.figure-frame figcaption b {
+  display: inline-grid; place-items: center; width: 18px; height: 18px; margin-right: 2px;
+  border-radius: 50%; background: #a51931; color: #fff; font-size: 0.7rem;
+}
